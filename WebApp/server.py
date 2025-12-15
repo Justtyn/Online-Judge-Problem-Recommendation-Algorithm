@@ -455,6 +455,86 @@ details { border: 1px solid var(--border-color); border-radius: 8px; padding: 10
 summary { cursor: pointer; font-weight: 500; color: var(--text-main); }
 """
 
+FIG_INFO: dict[str, dict[str, str]] = {
+    "fig_level_hist.png": {
+        "title": "用户能力（level）分布",
+        "desc": "用于检查能力分层是否合理；一般应有差异与长尾，而不是全部集中在某个区间。",
+    },
+    "fig_perseverance_hist.png": {
+        "title": "用户坚持度（perseverance）分布",
+        "desc": "用于检查重试/坚持差异；不应全部接近 0 或 1。",
+    },
+    "fig_lang_dist.png": {
+        "title": "语言总体分布（按提交）",
+        "desc": "检查语言占比是否符合常识；也可支持“语言特征有效性”的论证。",
+    },
+    "fig_tag_dist.png": {
+        "title": "标签总体分布（题型占比）",
+        "desc": "检查 12 类题型分布是否合理，避免极端失衡影响训练。",
+    },
+    "fig_user_activity.png": {
+        "title": "用户活跃度分布（提交次数）",
+        "desc": "观察长尾：少数高活跃用户 + 大量低活跃用户通常更符合真实平台。",
+    },
+    "fig_difficulty_vs_ac.png": {
+        "title": "难度 vs 通过率（AC率）",
+        "desc": "关键合理性校验：难度越高，通过率应整体下降（负相关）。",
+    },
+    "fig_attemptno_vs_ac.png": {
+        "title": "尝试次数 vs 通过率（attempt_no）",
+        "desc": "观察多次尝试是否有“学习/纠错”效应；趋势应可解释。",
+    },
+    "fig_tag_acrate.png": {
+        "title": "各标签平均通过率（AC率）",
+        "desc": "对比不同题型的难度差异，证明“标签特征”有信息量。",
+    },
+    "fig_lang_acrate.png": {
+        "title": "各语言平均通过率（AC率）",
+        "desc": "对比不同语言的通过率差异，检验“语言特征”是否存在相关性。",
+    },
+    "fig_model_f1_compare.png": {
+        "title": "模型 F1 对比（时间切分）",
+        "desc": "主模型与对比模型的整体效果对比，用于“实验结果与分析”。",
+    },
+    "fig_cm_logreg.png": {"title": "混淆矩阵：逻辑回归", "desc": "查看 TP/FP/FN/TN 结构，结合 Precision/Recall 解释误差。"},
+    "fig_cm_tree.png": {"title": "混淆矩阵：决策树", "desc": "对比不同模型的错误类型，辅助分析过拟合/欠拟合。"},
+    "fig_cm_svm_or_knn.png": {"title": "混淆矩阵：SVM/KNN（对比）", "desc": "对比模型误判结构，判断是否需要更强特征或调参。"},
+    "fig_hitk_curve.png": {
+        "title": "Hit@K 曲线（命中=测试窗口内是否AC）",
+        "desc": "推荐评估主图：K 增大命中率通常上升；曲线形状反映边际收益。",
+    },
+    "fig_reco_difficulty_hist.png": {
+        "title": "推荐题难度分布（用户案例）",
+        "desc": "验证“成长型推荐”：推荐题难度应集中在适度区间，而非全易/全难。",
+    },
+    "fig_reco_coverage.png": {
+        "title": "推荐集中度与覆盖率",
+        "desc": "检查是否只推荐少数热门题；覆盖率越高，推荐越不易同质化。",
+    },
+}
+
+FIG_SECTIONS: list[tuple[str, list[str]]] = [
+    (
+        "A. 数据层可视化（训练前）",
+        [
+            "fig_level_hist.png",
+            "fig_perseverance_hist.png",
+            "fig_lang_dist.png",
+            "fig_tag_dist.png",
+            "fig_user_activity.png",
+            "fig_difficulty_vs_ac.png",
+            "fig_attemptno_vs_ac.png",
+            "fig_tag_acrate.png",
+            "fig_lang_acrate.png",
+        ],
+    ),
+    (
+        "B. 训练层可视化（训练后）",
+        ["fig_model_f1_compare.png", "fig_cm_logreg.png", "fig_cm_tree.png", "fig_cm_svm_or_knn.png"],
+    ),
+    ("C. 推荐评估（Top-K）", ["fig_hitk_curve.png", "fig_reco_difficulty_hist.png", "fig_reco_coverage.png"]),
+]
+
 
 class Handler(BaseHTTPRequestHandler):
     def _send(self, status: int, body: bytes, content_type: str) -> None:
@@ -484,14 +564,41 @@ class Handler(BaseHTTPRequestHandler):
 
         if p.path in {"/", "/index.html"}:
             figs = sorted([x.name for x in REPORTS_DIR.glob("fig_*.png")])
-            cards = []
-            for fn in figs:
-                cards.append(
+            figs_set = set(figs)
+
+            def render_card(fn: str) -> str:
+                info = FIG_INFO.get(fn, {"title": fn, "desc": "（未登记说明）"})
+                return (
                     f'<div class="card">'
-                    f'<div style="font-weight:600; margin-bottom:10px;">{html.escape(fn)}</div>'
+                    f'<div class="muted" style="font-family:monospace">{html.escape(fn)}</div>'
+                    f'<h3 style="margin:8px 0 6px">{html.escape(info["title"])}</h3>'
                     f'<a href="/reports/{html.escape(fn)}" target="_blank">'
                     f'<img src="/reports/{html.escape(fn)}" alt="{html.escape(fn)}" loading="lazy"></a>'
-                    f'</div>'
+                    f'<div class="muted">{html.escape(info["desc"])}</div>'
+                    f"</div>"
+                )
+
+            used: set[str] = set()
+            section_blocks: list[str] = []
+            for sec_title, order in FIG_SECTIONS:
+                present = [fn for fn in order if fn in figs_set]
+                used.update(present)
+                if not present:
+                    continue
+                section_blocks.append(
+                    f"<section style='margin-top:24px'>"
+                    f"<h2>{html.escape(sec_title)}</h2>"
+                    f"<div class='grid'>{''.join(render_card(fn) for fn in present)}</div>"
+                    f"</section>"
+                )
+
+            others = [fn for fn in figs if fn not in used]
+            if others:
+                section_blocks.append(
+                    f"<section style='margin-top:24px'>"
+                    f"<h2>其他图表</h2>"
+                    f"<div class='grid'>{''.join(render_card(fn) for fn in others)}</div>"
+                    f"</section>"
                 )
             body = f"""
 <!doctype html>
@@ -515,11 +622,11 @@ class Handler(BaseHTTPRequestHandler):
         </header>
 
         <main>
-            <h2>📊 离线分析报表</h2>
-            <p class="muted" style="margin-bottom: 20px">系统自动生成的分析图表 (位于 Reports 目录)</p>
-            <div class="grid">
-                {''.join(cards) if cards else '<div class="card muted">暂无图表，请先运行分析脚本。</div>'}
+            <div class="card">
+                <h2 style="margin-top:0">📊 图表说明</h2>
+                <p class="muted">A 类用于证明“数据分布合理/符合常识”；B 类用于展示模型效果与误差类型；C 类用于推荐评估（Hit@K、覆盖率、案例）。</p>
             </div>
+            {''.join(section_blocks) if figs else '<div class="card muted">暂无图表，请先运行分析脚本。</div>'}
         </main>
     </div>
 </body>

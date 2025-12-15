@@ -144,3 +144,36 @@
 - [x] 所有 CSV：`CleanData/students_derived.csv`、`FeatureData/train_samples.csv`、`Models/metrics.csv`、`Reports/recommendations_topk.csv`
 - [ ] 所有图：第 3–6 步图表齐全、命名固定、可直接插入报告
 - [ ] 一键运行入口（建议）：`python -m ...` 或 `make all`（可选，但强烈推荐）
+
+---
+
+## Backlog：丰富优化建议（先记 TODO，暂不实现）
+
+### P0（优先级最高：可复现 & 可信度）
+
+- [ ] 固化依赖：新增 `requirements.txt`（或 `pyproject.toml`）并区分“核心/可选”依赖（当前 README 里为手动安装）
+- [ ] 统一流水线 CLI：给 `03_derive_students.py`、`04_build_features.py`、`05_train_eval.py`、`06_recommend_eval.py`、`07_make_eda_plots.py` 增加 `argparse`（输入/输出路径、随机种子、切分比例、成长区间等）
+- [ ] 统一 schema/口径：抽出 `CleanData/*.csv` 的字段规范（类型/范围/主外键）为集中定义（如 `Utils/schema.py`），并让校验与特征构造复用
+- [ ] 防数据泄漏检查：为时间切分（按 `submission_id`）增加“特征仅依赖历史”的一致性检查/报告（尤其 `attempt_no`、用户历史统计类特征）
+- [ ] 概率质量评估：在 `05_train_eval.py` 增加 `ROC-AUC/PR-AUC/Brier score/校准曲线`，并写入 `Models/metrics.csv`
+
+### P1（推荐效果 & 评估完善）
+
+- [ ] 推荐指标扩展：在 `06_recommend_eval.py` 增加 `Recall@K / MAP@K / NDCG@K`（保留现有 `Hit@K/Precision@K`）
+- [ ] 候选集口径更细：区分“未做过”与“做过但未 AC”，分别推荐与评估；训练负样本按用户分层/下采样
+- [ ] 成长型推荐自适应：把固定概率区间（如 `[0.4,0.7]`）改成按 `level` 动态调整，并输出不同 `level` 分桶的指标曲线
+- [ ] 多样性/去同质化：加入 `intra-list diversity`（基于标签距离）、`novelty`（惩罚过热题），并用简单重排（MMR）提升覆盖与多样性
+- [ ] 冷启动策略：新用户/新题缺画像或缺标签时提供可解释 fallback（热门/难度阶梯/相似标签），并在 Web 端明确展示
+
+### P1（工程化 & 性能）
+
+- [ ] WebApp 复用离线模型：离线训练阶段保存 `Pipeline`（`joblib/pickle`），`WebApp/server.py` 只加载与推理，避免每次启动重新训练
+- [ ] 向量化特征构造：替换 `apply(axis=1)` 为向量化/映射计算，提升 `04_build_features.py` 对大数据量的速度与内存表现
+- [ ] 运行元信息沉淀：每次跑流水线输出 `Reports/run_manifest.json`（参数、输入行数、随机种子、cutoff、时间、git hash 等），便于写报告追溯
+
+### P2（代码质量 & 可维护性）
+
+- [ ] 抽公共函数：收敛重复的 `parse_json_list/parse_json_dict/setup_cn_font` 到 `Utils/common.py`，加类型标注
+- [ ] 最小测试集：引入 `pytest`，补少量快测（schema 校验、tags 解析、候选过滤不含已 AC、metrics 维度/列存在等）
+- [ ] 图表命名一致：统一 `fig_confusion_*.png` 与 `fig_cm_*.png` 的产物命名，避免报告引用混乱
+- [ ] 数据目录说明落地：明确 `OriginalData/` 缺失原因（数据不随仓库提交）与获取方式；强化“一键生成模拟数据”入口对齐 `Utils/generate_originaldata_sim.py`
