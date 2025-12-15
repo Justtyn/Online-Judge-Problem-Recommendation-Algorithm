@@ -6,7 +6,7 @@
 
 ## 0. 项目结构（先统一输出目录）
 
-- [ ] 新建输出目录（若不存在就创建）
+- [x] 新建输出目录（若不存在就创建）
   - `CleanData/`（派生画像等“干净表”）
   - `FeatureData/`（可直接训练的样本表）
   - `Models/`（模型与指标）
@@ -33,7 +33,7 @@
 
 ### 3.1 输出（必须）
 
-- [ ] 生成 `CleanData/students_derived.csv`
+- [x] 生成 `CleanData/students_derived.csv`
   - 最少字段：`student_id, level, perseverance, lang_pref, tag_pref`
   - 建议保留可解释的中间统计列（可选）：`attempts`, `unique_problems`, `ac_rate`, `avg_attempts_per_problem`
 
@@ -46,11 +46,11 @@
 
 ### 3.3 可视化（强烈建议，产物固定命名）
 
-- [ ] `Reports/fig_level_hist.png`：用户 `level` 分布直方图
-- [ ] `Reports/fig_perseverance_hist.png`：用户 `perseverance` 分布直方图
-- [ ] `Reports/fig_lang_dist.png`：语言总体分布柱状图（Python/C/C++/JS/JAVA/GO 等）
-- [ ] `Reports/fig_tag_dist.png`：标签总体分布柱状图（12 类题型占比）
-- [ ] `Reports/fig_user_activity.png`：用户做题量/提交量分布（长尾）
+- [x] `Reports/fig_level_hist.png`：用户 `level` 分布直方图
+- [x] `Reports/fig_perseverance_hist.png`：用户 `perseverance` 分布直方图
+- [x] `Reports/fig_lang_dist.png`：语言总体分布柱状图（Python/C/C++/JS/JAVA/GO 等）
+- [x] `Reports/fig_tag_dist.png`：标签总体分布柱状图（12 类题型占比）
+- [x] `Reports/fig_user_activity.png`：用户做题量/提交量分布（长尾）
 
 验收点：
 - [ ] 分布符合常识：做题量长尾明显；难题更少；常用语言占比较高
@@ -63,7 +63,7 @@
 
 ### 4.1 输出（必须）
 
-- [ ] 生成 `FeatureData/train_samples.csv`
+- [x] 生成 `FeatureData/train_samples.csv`
   - `y`：是否 AC（1/0）
   - `X`：建议包含
     - 用户画像：`level`, `perseverance`, `lang_pref`, `tag_pref`
@@ -74,10 +74,10 @@
 
 ### 4.2 可视化（强烈建议）
 
-- [ ] `Reports/fig_difficulty_vs_ac.png`：`difficulty` vs AC 率（难度越高通过率应下降）
-- [ ] `Reports/fig_attemptno_vs_ac.png`：`attempt_no` vs AC 率曲线
-- [ ] `Reports/fig_tag_acrate.png`：各标签平均 AC 率柱状图
-- [ ] `Reports/fig_lang_acrate.png`：各语言 AC 率柱状图
+- [x] `Reports/fig_difficulty_vs_ac.png`：`difficulty` vs AC 率（难度越高通过率应下降）
+- [x] `Reports/fig_attemptno_vs_ac.png`：`attempt_no` vs AC 率曲线
+- [x] `Reports/fig_tag_acrate.png`：各标签平均 AC 率柱状图（题目多标签已展开）
+- [x] `Reports/fig_lang_acrate.png`：各语言 AC 率柱状图
 
 验收点：
 - [ ] 样本表无空主键；`y` 分布不过度极端；可被 `pandas.read_csv` 直接读取训练
@@ -90,19 +90,19 @@
 
 ### 5.1 模型（建议 3 个，贴合课程）
 
-- [ ] Logistic Regression（主模型，输出可解释系数）
-- [ ] Decision Tree（对比，输出特征重要性）
-- [ ] SVM 或 KNN（二选一对比）
+- [x] Logistic Regression（主模型，输出可解释系数）
+- [x] Decision Tree（对比，输出特征重要性）
+- [x] SVM 或 KNN（二选一对比）
 
 ### 5.2 输出（必须）
 
-- [ ] `Models/metrics.csv`：每个模型的 `Accuracy/Precision/Recall/F1`（train/test 都建议记录）
+- [x] `Models/metrics.csv`：每个模型的 `Accuracy/Precision/Recall/F1`（train/test 都建议记录）
 - [ ] （可选）`Models/model_*.pkl`：保存训练好的模型/预处理器（pipeline）
 
 ### 5.3 可视化（强烈建议）
 
 - [ ] `Reports/fig_metrics_train_test.png`：训练集 vs 测试集 指标对比柱状图（判断过拟合）
-- [ ] `Reports/fig_cm_logreg.png`、`Reports/fig_cm_tree.png`、`Reports/fig_cm_svm_or_knn.png`：混淆矩阵 heatmap
+- [x] `Reports/fig_cm_logreg.png`、`Reports/fig_cm_tree.png`、`Reports/fig_cm_svm_or_knn.png`：混淆矩阵 heatmap
 - [ ] `Reports/fig_roc_logreg.png`：ROC 曲线（至少 Logistic）
 - [ ] `Reports/fig_coef_logreg.png` 或 `Reports/fig_importance_tree.png`：可解释性图（系数/重要性）
 
@@ -118,30 +118,29 @@
 
 ### 6.1 推荐产物（必须）
 
-- [ ] `Reports/recommendations_topk.csv`
+- [x] `Reports/recommendations_topk.csv`
   - 至少包含 20–50 个用户示例
   - 字段建议：`student_id, problem_id, score(p_ac), difficulty, tags, reason(optional)`
 
 ### 6.2 评估指标（必须）
 
-- [ ] 计算 `Hit@K` / `Precision@K`（K=1,3,5,10）
+- [x] 计算 `Hit@K` / `Precision@K`（K=1,3,5,10）
   - 评估集：时间切分后的测试窗口（用“后续是否 AC/是否尝试”做命中定义，按你报告口径固定）
 
 ### 6.3 可视化（建议）
 
-- [ ] `Reports/fig_hitk_curve.png`：Hit@K 随 K 变化曲线
-- [ ] `Reports/fig_reco_difficulty_hist.png`：用户案例推荐题难度分布（是否符合“成长型”）
-- [ ] `Reports/fig_reco_coverage.png`：覆盖率/集中度（避免只推荐少数热门题）
+- [x] `Reports/fig_hitk_curve.png`：Hit@K 随 K 变化曲线
+- [x] `Reports/fig_reco_difficulty_hist.png`：用户案例推荐题难度分布（是否符合“成长型”）
+- [x] `Reports/fig_reco_coverage.png`：覆盖率/集中度（避免只推荐少数热门题）
 
 验收点：
-- [ ] 推荐只从“用户未 AC（或未做过）”题集中选
-- [ ] 概率区间过滤与 Top-K 逻辑可复现（写成函数/脚本）
+- [x] 推荐只从“用户未 AC（或未做过）”题集中选
+- [x] 概率区间过滤与 Top-K 逻辑可复现（写成函数/脚本）
 
 ---
 
 ## 最终交付清单（写报告用）
 
-- [ ] 所有 CSV：`CleanData/students_derived.csv`、`FeatureData/train_samples.csv`、`Models/metrics.csv`、`Reports/recommendations_topk.csv`
+- [x] 所有 CSV：`CleanData/students_derived.csv`、`FeatureData/train_samples.csv`、`Models/metrics.csv`、`Reports/recommendations_topk.csv`
 - [ ] 所有图：第 3–6 步图表齐全、命名固定、可直接插入报告
 - [ ] 一键运行入口（建议）：`python -m ...` 或 `make all`（可选，但强烈推荐）
-
