@@ -687,7 +687,12 @@ def main() -> int:
     f.add_argument("--inplace", action="store_true")
     f.add_argument("--seed", type=int, default=42)
 
-    args = parser.parse_args()
+    # Backward-compatible mode: if user runs legacy flags without subcommand, assume "fill".
+    argv = sys.argv[1:]
+    if argv and argv[0] not in {"fill", "generate", "-h", "--help"}:
+        argv = ["fill"] + argv
+
+    args = parser.parse_args(argv)
     cmd = args.cmd or "fill"
 
     rng = random.Random(int(getattr(args, "seed", 42)))

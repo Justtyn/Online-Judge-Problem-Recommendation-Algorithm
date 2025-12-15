@@ -18,6 +18,7 @@
 - 校验原始数据一致性：`python Utils/validate_originaldata.py`
 - 输出校验报告：`python Utils/validate_originaldata.py --report Reports/validate_report.txt`
 - 查看脚本参数：`python Utils/<script>.py --help`
+- 本地 Web（展示图表 + 自定义推荐）：`python WebApp/server.py --port 8000`
 
 新增依赖请同步记录（例如 `requirements.txt`），并尽量让网络调用可选/可关闭。
 

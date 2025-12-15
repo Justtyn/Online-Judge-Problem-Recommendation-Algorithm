@@ -58,6 +58,29 @@ def setup_cn_font() -> None:
 setup_cn_font()
 
 
+def parse_json_dict(x) -> dict[str, float]:
+    if x is None:
+        return {}
+    if isinstance(x, dict):
+        return {str(k): float(v) for k, v in x.items()}
+    s = str(x).strip()
+    if not s or s.lower() == "nan":
+        return {}
+    try:
+        v = json.loads(s)
+    except Exception:
+        return {}
+    if not isinstance(v, dict):
+        return {}
+    out: dict[str, float] = {}
+    for k, val in v.items():
+        try:
+            out[str(k)] = float(val)
+        except Exception:
+            continue
+    return out
+
+
 def parse_json_list(x) -> list[str]:
     if pd.isna(x):
         return []
@@ -99,7 +122,7 @@ def main() -> int:
     ]
     col_to_idx = {c: i for i, c in enumerate(feature_cols)}
 
-    required = {"attempt_no", "difficulty_filled", "level", "perseverance"}
+    required = {"attempt_no", "difficulty_filled", "level", "perseverance", "lang_match", "tag_match"}
     missing = sorted(required - set(feature_cols))
     if missing:
         raise SystemExit(f"train_samples 缺少必要特征列：{missing}")
@@ -179,6 +202,7 @@ def main() -> int:
             j = tag_to_j.get(str(t))
             if j is not None:
                 problem_tags_mh[i, j] = 1
+    problem_tag_counts = problem_tags_mh.sum(axis=1).astype(np.float32)
 
     students = pd.read_csv(STUDENTS)
     students["user_id"] = pd.to_numeric(students["user_id"], errors="coerce").astype(int)
@@ -186,38 +210,33 @@ def main() -> int:
     students["perseverance"] = (
         pd.to_numeric(students["perseverance"], errors="coerce").fillna(0.0).astype(float)
     )
+    students["lang_pref_dict"] = students["lang_pref"].apply(parse_json_dict)
+    students["tag_pref_dict"] = students["tag_pref"].apply(parse_json_dict)
     user_features = students.set_index("user_id")[["level", "perseverance"]].to_dict("index")
+    user_lang_pref = students.set_index("user_id")["lang_pref_dict"].to_dict()
+    user_tag_pref = students.set_index("user_id")["tag_pref_dict"].to_dict()
 
-    if lang_names:
-        lang_counts = (
-            subs_train.groupby(["user_id", "language"]).size().reset_index(name="cnt")
-        )
-        lang_counts = lang_counts[lang_counts["language"].isin(set(lang_names))]
-        lang_pref = (
-            lang_counts.sort_values(["user_id", "cnt"], ascending=[True, False])
-            .drop_duplicates("user_id")
-            .set_index("user_id")["language"]
-            .to_dict()
-        )
-        global_lang = (
-            lang_counts.sort_values("cnt", ascending=False)["language"].iloc[0]
-            if len(lang_counts)
-            else (lang_names[0] if lang_names else "")
-        )
-    else:
-        lang_pref = {}
-        global_lang = ""
+    global_lang = lang_names[0] if lang_names else ""
 
-    def lang_vec_for_user(uid: int) -> np.ndarray:
+    def top_language_for_user(uid: int) -> tuple[str, float]:
+        pref = user_lang_pref.get(uid, {}) or {}
+        if not pref:
+            return global_lang, 0.0
+        best = None
+        best_p = -1.0
+        for l in lang_names:
+            p = float(pref.get(l, 0.0))
+            if p > best_p:
+                best_p = p
+                best = l
+        return (best or global_lang), max(0.0, float(best_p))
+
+    def lang_vec_for_choice(chosen: str) -> np.ndarray:
         if not lang_cols:
             return np.zeros((0,), dtype=np.float32)
-        chosen = str(lang_pref.get(uid, global_lang))
         v = np.zeros((len(lang_cols),), dtype=np.float32)
-        if chosen:
-            try:
-                v[lang_names.index(chosen)] = 1.0
-            except ValueError:
-                pass
+        if chosen and chosen in lang_names:
+            v[lang_names.index(chosen)] = 1.0
         return v
 
     numeric_idx = {
@@ -225,6 +244,8 @@ def main() -> int:
         "difficulty_filled": col_to_idx["difficulty_filled"],
         "level": col_to_idx["level"],
         "perseverance": col_to_idx["perseverance"],
+        "lang_match": col_to_idx["lang_match"],
+        "tag_match": col_to_idx["tag_match"],
     }
     lang_idx = [col_to_idx[c] for c in lang_cols]
     tag_idx = [col_to_idx[c] for c in tag_cols]
@@ -233,7 +254,10 @@ def main() -> int:
         feat = user_features.get(uid, {"level": 0.0, "perseverance": 0.0})
         level = float(feat["level"])
         perseverance = float(feat["perseverance"])
-        lvec = lang_vec_for_user(uid)
+        chosen_lang, chosen_lang_p = top_language_for_user(uid)
+        lvec = lang_vec_for_choice(chosen_lang)
+        tpref = user_tag_pref.get(uid, {}) or {}
+        tag_pref_vec = np.asarray([float(tpref.get(t, 0.0)) for t in tag_names], dtype=np.float32)
 
         solved = solved_map.get(uid, set())
         if solved:
@@ -261,6 +285,13 @@ def main() -> int:
             X[:, numeric_idx["difficulty_filled"]] = problem_diff[pos]
             X[:, numeric_idx["level"]] = level
             X[:, numeric_idx["perseverance"]] = perseverance
+            X[:, numeric_idx["lang_match"]] = float(chosen_lang_p)
+            if tag_idx:
+                tm_sum = (problem_tags_mh[pos].astype(np.float32) * tag_pref_vec).sum(axis=1)
+                tm_den = np.maximum(1.0, problem_tag_counts[pos])
+                X[:, numeric_idx["tag_match"]] = tm_sum / tm_den
+            else:
+                X[:, numeric_idx["tag_match"]] = 0.0
             if lang_idx:
                 X[:, lang_idx] = lvec
             if tag_idx:

@@ -18,3 +18,11 @@ This repository is used for the project code of the undergraduate final course r
 - `FeatureData/`：训练样本（`train_samples.csv`）
 - `Models/`：模型指标（`metrics.csv`）
 - `Reports/`：混淆矩阵、Hit@K 曲线、推荐结果等（`recommendations_topk.csv`、`reco_metrics.csv`、`fig_*.png`）
+
+## 前端可视化与自定义推荐（本地 Web）
+
+启动一个本地网页：展示 `Reports/` 的所有图，并支持自定义学生参数（level/perseverance/语言偏好/标签偏好）生成推荐列表。
+
+- 先确保训练样本已包含 `lang_match/tag_match`：`python 04_build_features.py`
+- 启动服务：`python WebApp/server.py --port 8000`
+- 打开：`http://127.0.0.1:8000`
