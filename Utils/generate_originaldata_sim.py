@@ -230,31 +230,31 @@ def generate_submissions_csv(
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Generate simulated students/submissions CSVs under OriginalData and add problem_id to problems.csv."
+        description="Generate simulated students/submissions CSVs under CleanData and add problem_id to problems.csv."
     )
     parser.add_argument(
         "--problems-csv",
-        default="OriginalData/problems.csv",
+        default="CleanData/problems.csv",
         help="Problems CSV (will be updated in-place to add problem_id only; title is unchanged)",
     )
     parser.add_argument(
         "--students-csv",
-        default="OriginalData/students.csv",
+        default="CleanData/students.csv",
         help="Output students.csv (placeholder columns filled with 0/{} as suggested)",
     )
     parser.add_argument(
         "--languages-csv",
-        default="OriginalData/languages.csv",
+        default="CleanData/languages.csv",
         help="Output languages.csv (id,name,desc lookup table)",
     )
     parser.add_argument(
         "--verdicts-csv",
-        default="OriginalData/verdicts.csv",
+        default="CleanData/verdicts.csv",
         help="Output verdicts.csv (id,name,desc lookup table)",
     )
     parser.add_argument(
         "--submissions-csv",
-        default="OriginalData/submissions.csv",
+        default="CleanData/submissions.csv",
         help="Output submissions.csv (simulated behavior logs)",
     )
     parser.add_argument("--n-students", type=int, default=1000, help="Number of students")

@@ -170,7 +170,7 @@ def _validate_rows(
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Merge labeled difficulty/tags into OriginalData/problems.csv"
+        description="Merge labeled difficulty/tags into CleanData/problems.csv"
     )
     parser.add_argument(
         "--labeled",
@@ -179,7 +179,7 @@ def main() -> int:
     )
     parser.add_argument(
         "--problems",
-        default="OriginalData/problems.csv",
+        default="CleanData/problems.csv",
         help="Original problems CSV to update.",
     )
     parser.add_argument(
@@ -190,8 +190,8 @@ def main() -> int:
     )
     parser.add_argument(
         "--allowed-tags-csv",
-        default="OriginalData/tags.csv",
-        help="CSV providing the allowed tag vocabulary (default: OriginalData/tags.csv).",
+        default="CleanData/tags.csv",
+        help="CSV providing the allowed tag vocabulary (default: CleanData/tags.csv).",
     )
     parser.add_argument(
         "--allowed-tags-column",
@@ -243,7 +243,7 @@ def main() -> int:
     )
     parser.add_argument(
         "--output",
-        default="OriginalData/problems_labeled.csv",
+        default="CleanData/problems_labeled.csv",
         help="Output CSV path (default writes a new file).",
     )
     parser.add_argument(

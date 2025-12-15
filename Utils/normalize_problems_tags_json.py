@@ -64,11 +64,11 @@ def write_csv(path: str, fieldnames: list[str], rows: list[dict[str, str]]) -> N
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Normalize OriginalData/problems.csv tags into JSON arrays."
+        description="Normalize CleanData/problems.csv tags into JSON arrays."
     )
-    parser.add_argument("--problems", default="OriginalData/problems.csv")
-    parser.add_argument("--tags", default="OriginalData/tags.csv", help="Tag whitelist CSV.")
-    parser.add_argument("--output", default="OriginalData/problems.json_tags.csv")
+    parser.add_argument("--problems", default="CleanData/problems.csv")
+    parser.add_argument("--tags", default="CleanData/tags.csv", help="Tag whitelist CSV.")
+    parser.add_argument("--output", default="CleanData/problems.json_tags.csv")
     parser.add_argument("--inplace", action="store_true", help="Overwrite --problems.")
     parser.add_argument("--dry-run", action="store_true", help="Do not write output.")
     parser.add_argument("--max-errors", type=int, default=50)

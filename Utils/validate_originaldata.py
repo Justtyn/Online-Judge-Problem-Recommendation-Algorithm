@@ -182,13 +182,13 @@ def validate_submissions(
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate OriginalData CSV integrity.")
-    parser.add_argument("--students", default="OriginalData/students.csv")
-    parser.add_argument("--problems", default="OriginalData/problems.csv")
-    parser.add_argument("--submissions", default="OriginalData/submissions.csv")
-    parser.add_argument("--languages", default="OriginalData/languages.csv")
-    parser.add_argument("--verdicts", default="OriginalData/verdicts.csv")
-    parser.add_argument("--tags", default="OriginalData/tags.csv")
+    parser = argparse.ArgumentParser(description="Validate CleanData CSV integrity.")
+    parser.add_argument("--students", default="CleanData/students.csv")
+    parser.add_argument("--problems", default="CleanData/problems.csv")
+    parser.add_argument("--submissions", default="CleanData/submissions.csv")
+    parser.add_argument("--languages", default="CleanData/languages.csv")
+    parser.add_argument("--verdicts", default="CleanData/verdicts.csv")
+    parser.add_argument("--tags", default="CleanData/tags.csv")
     parser.add_argument(
         "--accept-csv-tags",
         action="store_true",

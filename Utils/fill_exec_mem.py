@@ -119,17 +119,17 @@ def main() -> int:
     )
     parser.add_argument(
         "--problems",
-        default="OriginalData/problems.csv",
+        default="CleanData/problems.csv",
         help="Problems CSV containing problem_id,time_limit,memory_limit",
     )
     parser.add_argument(
         "--submissions",
-        default="OriginalData/submissions.csv",
+        default="CleanData/submissions.csv",
         help="Submissions CSV containing problem_id,verdict,exec_time_ms,mem_kb",
     )
     parser.add_argument(
         "--output",
-        default="OriginalData/submissions_filled.csv",
+        default="CleanData/submissions_filled.csv",
         help="Output CSV path (ignored if --inplace)",
     )
     parser.add_argument(
