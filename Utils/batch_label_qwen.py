@@ -1,9 +1,12 @@
 import argparse
+import concurrent.futures
 import csv
+import math
 import json
 import os
 import re
 import sys
+import threading
 import time
 import urllib.error
 import urllib.request
@@ -30,6 +33,12 @@ END_RE = re.compile(r"^<<<END:(request-(\d+))>>>$")
 
 class LabelParseError(ValueError):
     pass
+
+
+class LabelingError(RuntimeError):
+    def __init__(self, message: str, *, raw: str = ""):
+        super().__init__(message)
+        self.raw = raw
 
 
 def iter_prompt_blocks(path: str):
@@ -218,6 +227,57 @@ def call_with_retries(
     raise RuntimeError(f"Failed after retries: {last_err}")
 
 
+class RateLimiter:
+    def __init__(self, *, rpm: int, tpm: int, burst_seconds: float = 1.0):
+        self._rpm = int(rpm)
+        self._tpm = int(tpm)
+        self._burst_seconds = float(burst_seconds)
+        self._lock = threading.Lock()
+        self._last = time.monotonic()
+        self._req_rate = (float(self._rpm) / 60.0) if self._rpm > 0 else 0.0
+        self._tok_rate = (float(self._tpm) / 60.0) if self._tpm > 0 else 0.0
+        self._req_cap = (
+            max(1.0, self._req_rate * max(0.0, self._burst_seconds)) if self._rpm > 0 else 0.0
+        )
+        self._tok_cap = (
+            max(1.0, self._tok_rate * max(0.0, self._burst_seconds)) if self._tpm > 0 else 0.0
+        )
+        self._req_tokens = self._req_cap
+        self._tok_tokens = self._tok_cap
+
+    def acquire(self, *, requests: float = 1.0, tokens: float = 0.0) -> None:
+        while True:
+            sleep_s = 0.0
+            with self._lock:
+                now = time.monotonic()
+                elapsed = max(0.0, now - self._last)
+                self._last = now
+
+                if self._rpm > 0:
+                    req_cap = max(self._req_cap, float(requests))
+                    self._req_tokens = min(req_cap, self._req_tokens + elapsed * self._req_rate)
+                if self._tpm > 0:
+                    tok_cap = max(self._tok_cap, float(tokens))
+                    self._tok_tokens = min(tok_cap, self._tok_tokens + elapsed * self._tok_rate)
+
+                need_req = max(0.0, requests - self._req_tokens) if self._rpm > 0 else 0.0
+                need_tok = max(0.0, tokens - self._tok_tokens) if self._tpm > 0 else 0.0
+
+                if need_req <= 0.0 and need_tok <= 0.0:
+                    if self._rpm > 0:
+                        self._req_tokens -= requests
+                    if self._tpm > 0:
+                        self._tok_tokens -= tokens
+                    return
+
+                if self._rpm > 0 and need_req > 0.0:
+                    sleep_s = max(sleep_s, need_req / self._req_rate)
+                if self._tpm > 0 and need_tok > 0.0:
+                    sleep_s = max(sleep_s, need_tok / self._tok_rate)
+
+            time.sleep(min(1.0, max(0.01, sleep_s)))
+
+
 def write_csv(rows: list[dict], fieldnames: list[str], path: str) -> None:
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8-sig", newline="") as f:
@@ -266,6 +326,42 @@ def main() -> int:
     parser.add_argument("--timeout", type=int, default=60, help="Request timeout seconds")
     parser.add_argument("--max-retries", type=int, default=5, help="Max retries per request")
     parser.add_argument("--backoff", type=float, default=1.0, help="Retry backoff base seconds")
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=1,
+        help="Concurrent workers (threads). Increase to speed up within rate limits.",
+    )
+    parser.add_argument(
+        "--rpm",
+        type=int,
+        default=600,
+        help="Rate limit: requests per minute (0=disable).",
+    )
+    parser.add_argument(
+        "--tpm",
+        type=int,
+        default=1_000_000,
+        help="Rate limit: tokens per minute estimate (0=disable).",
+    )
+    parser.add_argument(
+        "--tpm-char-per-token",
+        type=float,
+        default=4.0,
+        help="Token estimate: chars per token (rough).",
+    )
+    parser.add_argument(
+        "--tpm-output-est",
+        type=int,
+        default=512,
+        help="Token estimate: expected output tokens per request.",
+    )
+    parser.add_argument(
+        "--burst-seconds",
+        type=float,
+        default=1.0,
+        help="Allow short bursts within this many seconds (default enforces ~RPM/60 and ~TPM/60).",
+    )
     parser.add_argument(
         "--repair-retries",
         type=int,
@@ -363,66 +459,123 @@ def main() -> int:
 
     system_prompt = "你是一个严格的输出器，只能输出用户要求的那一行 JSON，不能输出任何其它字符。"
 
-    updated = 0
-    for pos, i in enumerate(it, start=1):
-        if not tqdm:
-            width = 30
-            filled = int(width * pos / total) if total else width
-            bar = "#" * filled + "-" * (width - filled)
-            sys.stderr.write(f"\r[{bar}] {pos}/{total}")
-            sys.stderr.flush()
+    def estimate_tokens(user_prompt: str) -> int:
+        cpt = float(args.tpm_char_per_token) if args.tpm_char_per_token > 0 else 4.0
+        approx = (len(system_prompt) + len(user_prompt)) / cpt + float(args.tpm_output_est)
+        return max(1, int(math.ceil(approx)))
 
+    limiter = RateLimiter(rpm=args.rpm, tpm=args.tpm, burst_seconds=args.burst_seconds)
+    file_lock = threading.Lock()
+
+    def append_result_locked(path: str, obj: dict) -> None:
+        with file_lock:
+            append_result(path, obj)
+
+    def call_limited(prompt_text: str) -> str:
+        limiter.acquire(requests=1.0, tokens=float(estimate_tokens(prompt_text)))
+        return call_with_retries(
+            api_key=args.api_key,
+            base_url=args.base_url,
+            model=args.model,
+            prompt=prompt_text,
+            system=system_prompt,
+            timeout_s=args.timeout,
+            max_retries=args.max_retries,
+            backoff_s=args.backoff,
+        )
+
+    def label_one(i: int, request_id: str, prompt: str) -> tuple[int, int, list[str], str]:
+        content = ""
+        try:
+            content = call_limited(prompt)
+            try:
+                difficulty, tags = parse_label(content)
+            except LabelParseError:
+                repaired_output = content
+                for _ in range(max(0, args.repair_retries)):
+                    repaired_prompt = build_repair_prompt(prompt, repaired_output)
+                    repaired_output = call_limited(repaired_prompt)
+                    try:
+                        difficulty, tags = parse_label(repaired_output)
+                        content = repaired_output
+                        break
+                    except LabelParseError:
+                        continue
+                else:
+                    raise
+            return i, int(difficulty), tags, content
+        except Exception as e:
+            raise LabelingError(str(e), raw=content) from e
+
+    if args.index:
+        i = args.index
         row = rows[i - 1]
         _num, request_id, prompt = prompts[i - 1]
+        if request_id != f"request-{i}":
+            raise SystemExit(f"Prompt id mismatch at {i}: got {request_id}")
+        if i in results:
+            difficulty = int(results[i]["difficulty"])
+            tags = results[i]["tags"]
+        else:
+            i, difficulty, tags, content = label_one(i, request_id, prompt)
+            append_result_locked(
+                args.results,
+                {"i": i, "id": request_id, "difficulty": difficulty, "tags": tags, "raw": content},
+            )
+        row["difficulty"] = str(int(difficulty))
+        row["tags"] = json.dumps(tags, ensure_ascii=False, separators=(",", ":"))
+        print(json.dumps({"difficulty": int(difficulty), "tags": tags}, ensure_ascii=False))
+        write_csv(rows, fieldnames, out_csv)
+        return 0
 
+    updated = 0
+    processed = 0
+
+    if tqdm:
+        pbar = tqdm(total=total)
+    else:
+        pbar = None
+
+    def progress_tick(n: int = 1) -> None:
+        nonlocal processed
+        processed += n
+        if pbar:
+            pbar.update(n)
+        else:
+            if processed == 1 or processed == total or processed % 50 == 0:
+                sys.stderr.write(f"\r{processed}/{total}")
+                sys.stderr.flush()
+
+    pending: list[tuple[int, str, str]] = []
+    for i in indices:
+        row = rows[i - 1]
+        _num, request_id, prompt = prompts[i - 1]
         if request_id != f"request-{i}":
             raise SystemExit(f"Prompt id mismatch at {i}: got {request_id}")
 
         if args.skip_filled and (row.get("difficulty") or "").strip() and (row.get("tags") or "").strip():
+            progress_tick(1)
             continue
 
         if i in results:
-            difficulty = results[i]["difficulty"]
+            difficulty = int(results[i]["difficulty"])
             tags = results[i]["tags"]
-        else:
-            content = ""
-            try:
-                content = call_with_retries(
-                    api_key=args.api_key,
-                    base_url=args.base_url,
-                    model=args.model,
-                    prompt=prompt,
-                    system=system_prompt,
-                    timeout_s=args.timeout,
-                    max_retries=args.max_retries,
-                    backoff_s=args.backoff,
-                )
-                try:
-                    difficulty, tags = parse_label(content)
-                except LabelParseError:
-                    repaired_output = content
-                    for _ in range(max(0, args.repair_retries)):
-                        repaired_prompt = build_repair_prompt(prompt, repaired_output)
-                        repaired_output = call_with_retries(
-                            api_key=args.api_key,
-                            base_url=args.base_url,
-                            model=args.model,
-                            prompt=repaired_prompt,
-                            system=system_prompt,
-                            timeout_s=args.timeout,
-                            max_retries=args.max_retries,
-                            backoff_s=args.backoff,
-                        )
-                        try:
-                            difficulty, tags = parse_label(repaired_output)
-                            content = repaired_output
-                            break
-                        except LabelParseError:
-                            continue
-                    else:
-                        raise
+            row["difficulty"] = str(int(difficulty))
+            row["tags"] = json.dumps(tags, ensure_ascii=False, separators=(",", ":"))
+            updated += 1
+            if args.save_every > 0 and updated % args.save_every == 0:
+                write_csv(rows, fieldnames, out_csv)
+            progress_tick(1)
+            continue
 
-                append_result(
+        pending.append((i, request_id, prompt))
+
+    max_workers = max(1, int(args.workers))
+    if max_workers == 1:
+        for i, request_id, prompt in pending:
+            try:
+                i, difficulty, tags, content = label_one(i, request_id, prompt)
+                append_result_locked(
                     args.results,
                     {
                         "i": i,
@@ -432,30 +585,76 @@ def main() -> int:
                         "raw": content,
                     },
                 )
+                row = rows[i - 1]
+                row["difficulty"] = str(int(difficulty))
+                row["tags"] = json.dumps(tags, ensure_ascii=False, separators=(",", ":"))
+                updated += 1
+                if args.save_every > 0 and updated % args.save_every == 0:
+                    write_csv(rows, fieldnames, out_csv)
             except Exception as e:
-                append_result(
+                raw = e.raw if isinstance(e, LabelingError) else ""
+                append_result_locked(
                     args.errors,
-                    {
-                        "i": i,
-                        "id": request_id,
-                        "error": str(e),
-                        "raw": content,
-                    },
+                    {"i": i, "id": request_id, "error": str(e), "raw": raw},
                 )
-                continue
+            finally:
+                progress_tick(1)
+    else:
+        iterator = iter(pending)
+        in_flight: dict[concurrent.futures.Future, tuple[int, str, str]] = {}
 
-        row["difficulty"] = str(int(difficulty))
-        row["tags"] = json.dumps(tags, ensure_ascii=False, separators=(",", ":"))
-        updated += 1
+        def submit_next(ex: concurrent.futures.ThreadPoolExecutor) -> bool:
+            try:
+                item = next(iterator)
+            except StopIteration:
+                return False
+            i, request_id, prompt = item
+            fut = ex.submit(label_one, i, request_id, prompt)
+            in_flight[fut] = item
+            return True
 
-        if args.index:
-            print(json.dumps({"difficulty": int(difficulty), "tags": tags}, ensure_ascii=False))
-            break
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as ex:
+            for _ in range(max_workers * 2):
+                if not submit_next(ex):
+                    break
 
-        if args.save_every > 0 and updated % args.save_every == 0:
-            write_csv(rows, fieldnames, out_csv)
+            while in_flight:
+                done, _ = concurrent.futures.wait(
+                    in_flight.keys(), return_when=concurrent.futures.FIRST_COMPLETED
+                )
+                for fut in done:
+                    i, request_id, prompt = in_flight.pop(fut)
+                    try:
+                        _i, difficulty, tags, content = fut.result()
+                        append_result_locked(
+                            args.results,
+                            {
+                                "i": i,
+                                "id": request_id,
+                                "difficulty": difficulty,
+                                "tags": tags,
+                                "raw": content,
+                            },
+                        )
+                        row = rows[i - 1]
+                        row["difficulty"] = str(int(difficulty))
+                        row["tags"] = json.dumps(tags, ensure_ascii=False, separators=(",", ":"))
+                        updated += 1
+                        if args.save_every > 0 and updated % args.save_every == 0:
+                            write_csv(rows, fieldnames, out_csv)
+                    except Exception as e:
+                        raw = e.raw if isinstance(e, LabelingError) else ""
+                        append_result_locked(
+                            args.errors,
+                            {"i": i, "id": request_id, "error": str(e), "raw": raw},
+                        )
+                    finally:
+                        progress_tick(1)
+                        submit_next(ex)
 
-    if not tqdm:
+    if pbar:
+        pbar.close()
+    if not pbar:
         sys.stderr.write("\n")
     write_csv(rows, fieldnames, out_csv)
     return 0
