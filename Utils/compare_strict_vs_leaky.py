@@ -8,18 +8,26 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+os.environ.setdefault("XDG_CACHE_HOME", str(Path(".cache").resolve()))
+os.environ.setdefault("MPLCONFIGDIR", str(Path(".cache/matplotlib").resolve()))
+Path(os.environ["MPLCONFIGDIR"]).mkdir(parents=True, exist_ok=True)
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from sklearn.calibration import calibration_curve
 from sklearn.dummy import DummyClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
     accuracy_score,
+    auc,
+    average_precision_score,
     brier_score_loss,
     f1_score,
     precision_score,
+    precision_recall_curve,
     recall_score,
     roc_auc_score,
+    roc_curve,
 )
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
@@ -295,6 +303,64 @@ def eval_models(df: pd.DataFrame, split: Split) -> pd.DataFrame:
     return pd.DataFrame(rows).sort_values(["model"])
 
 
+def fit_logreg_probs(df: pd.DataFrame, split: Split) -> tuple[np.ndarray, np.ndarray]:
+    y = df["ac"].astype(int).to_numpy()
+    X = df.drop(columns=["ac", "submission_id", "user_id", "problem_id"]).copy()
+    for c in X.columns:
+        if X[c].dtype == bool:
+            X[c] = X[c].astype(int)
+    X_train, X_test = X[split.train_mask], X[split.test_mask]
+    y_train, y_test = y[split.train_mask], y[split.test_mask]
+
+    model = Pipeline(
+        [
+            ("scaler", StandardScaler(with_mean=False)),
+            ("clf", LogisticRegression(max_iter=300, random_state=42)),
+        ]
+    )
+    model.fit(X_train.to_numpy(dtype=np.float32), y_train)
+    prob = model.predict_proba(X_test.to_numpy(dtype=np.float32))[:, 1].astype(np.float64)
+    return y_test.astype(int), prob
+
+
+def brier_decomposition(y_true: np.ndarray, prob: np.ndarray, *, n_bins: int = 10) -> dict[str, float]:
+    y = np.asarray(y_true, dtype=np.int32)
+    p = np.asarray(prob, dtype=np.float64)
+    p = np.clip(p, 0.0, 1.0)
+    if len(p) == 0:
+        return {
+            "brier": float("nan"),
+            "reliability": float("nan"),
+            "resolution": float("nan"),
+            "uncertainty": float("nan"),
+        }
+
+    base = float(y.mean())
+    uncertainty = base * (1.0 - base)
+    brier = float(np.mean((p - y) ** 2))
+
+    bins = np.linspace(0.0, 1.0, int(n_bins) + 1)
+    idx = np.digitize(p, bins[1:-1], right=True)
+    reliability = 0.0
+    resolution = 0.0
+    for b in range(int(n_bins)):
+        m = idx == b
+        if not np.any(m):
+            continue
+        w = float(m.mean())
+        p_bar = float(p[m].mean())
+        o_bar = float(y[m].mean())
+        reliability += w * (p_bar - o_bar) ** 2
+        resolution += w * (o_bar - base) ** 2
+
+    return {
+        "brier": brier,
+        "reliability": float(reliability),
+        "resolution": float(resolution),
+        "uncertainty": float(uncertainty),
+    }
+
+
 def compare_feature_stats(strict_df: pd.DataFrame, leaky_df: pd.DataFrame) -> pd.DataFrame:
     cols = ["difficulty_filled", "attempt_no", "level", "perseverance", "lang_match", "tag_match"]
     rows: list[dict] = []
@@ -330,8 +396,6 @@ def main() -> int:
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    os.environ.setdefault("MPLCONFIGDIR", str((out_dir / ".cache_matplotlib").resolve()))
-    Path(os.environ["MPLCONFIGDIR"]).mkdir(parents=True, exist_ok=True)
 
     strict_df = pd.read_csv(args.strict, low_memory=False)
     strict_df["submission_id"] = pd.to_numeric(strict_df["submission_id"], errors="coerce").astype(int)
@@ -758,6 +822,98 @@ def main() -> int:
         except Exception:
             pass
 
+        f.write("## 5) 概率质量诊断（ROC/PR/校准/Brier 分解）\n\n")
+
+        y_strict, p_strict = fit_logreg_probs(strict_df, split)
+        y_leaky, p_leaky = fit_logreg_probs(leaky_df, split)
+
+        # ROC curve
+        fpr_s, tpr_s, _ = roc_curve(y_strict, p_strict)
+        fpr_l, tpr_l, _ = roc_curve(y_leaky, p_leaky)
+        roc_auc_s = float(auc(fpr_s, tpr_s))
+        roc_auc_l = float(auc(fpr_l, tpr_l))
+        pd.DataFrame(
+            {
+                "fpr_strict": pd.Series(fpr_s),
+                "tpr_strict": pd.Series(tpr_s),
+                "fpr_leaky": pd.Series(fpr_l),
+                "tpr_leaky": pd.Series(tpr_l),
+            }
+        ).to_csv(out_dir / "compare_roc_curve.csv", index=False, encoding="utf-8-sig")
+        plt.figure(figsize=(6.5, 4.4))
+        plt.plot(fpr_s, tpr_s, lw=2, label=f"strict (AUC={roc_auc_s:.4f})")
+        plt.plot(fpr_l, tpr_l, lw=2, label=f"leaky (AUC={roc_auc_l:.4f})")
+        plt.plot([0, 1], [0, 1], "--", color="#94a3b8", lw=1)
+        plt.title("ROC curve (logreg)")
+        plt.xlabel("False Positive Rate")
+        plt.ylabel("True Positive Rate")
+        plt.grid(True, alpha=0.3)
+        plt.legend(frameon=False)
+        plt.tight_layout()
+        plt.savefig(out_dir / "fig_compare_roc.png", dpi=200)
+        plt.close()
+
+        # Precision-Recall curve
+        prec_s, rec_s, _ = precision_recall_curve(y_strict, p_strict)
+        prec_l, rec_l, _ = precision_recall_curve(y_leaky, p_leaky)
+        ap_s = float(average_precision_score(y_strict, p_strict))
+        ap_l = float(average_precision_score(y_leaky, p_leaky))
+        pd.DataFrame(
+            {
+                "precision_strict": pd.Series(prec_s),
+                "recall_strict": pd.Series(rec_s),
+                "precision_leaky": pd.Series(prec_l),
+                "recall_leaky": pd.Series(rec_l),
+            }
+        ).to_csv(out_dir / "compare_pr_curve.csv", index=False, encoding="utf-8-sig")
+        plt.figure(figsize=(6.5, 4.4))
+        plt.plot(rec_s, prec_s, lw=2, label=f"strict (AP={ap_s:.4f})")
+        plt.plot(rec_l, prec_l, lw=2, label=f"leaky (AP={ap_l:.4f})")
+        plt.title("Precision-Recall curve (logreg)")
+        plt.xlabel("Recall")
+        plt.ylabel("Precision")
+        plt.grid(True, alpha=0.3)
+        plt.legend(frameon=False)
+        plt.tight_layout()
+        plt.savefig(out_dir / "fig_compare_pr.png", dpi=200)
+        plt.close()
+
+        # Calibration curve (reliability diagram)
+        frac_s, mean_s = calibration_curve(y_strict, p_strict, n_bins=10, strategy="uniform")
+        frac_l, mean_l = calibration_curve(y_leaky, p_leaky, n_bins=10, strategy="uniform")
+        pd.DataFrame(
+            {
+                "mean_pred_strict": pd.Series(mean_s),
+                "frac_pos_strict": pd.Series(frac_s),
+                "mean_pred_leaky": pd.Series(mean_l),
+                "frac_pos_leaky": pd.Series(frac_l),
+            }
+        ).to_csv(out_dir / "compare_calibration_curve.csv", index=False, encoding="utf-8-sig")
+        plt.figure(figsize=(6.5, 4.4))
+        plt.plot([0, 1], [0, 1], "--", color="#94a3b8", lw=1, label="perfect")
+        plt.plot(mean_s, frac_s, marker="o", lw=2, label="strict")
+        plt.plot(mean_l, frac_l, marker="o", lw=2, label="leaky")
+        plt.title("Calibration curve (logreg)")
+        plt.xlabel("Mean predicted probability")
+        plt.ylabel("Fraction of positives")
+        plt.grid(True, alpha=0.3)
+        plt.legend(frameon=False)
+        plt.tight_layout()
+        plt.savefig(out_dir / "fig_compare_calibration.png", dpi=200)
+        plt.close()
+
+        # Brier decomposition
+        bd_s = brier_decomposition(y_strict, p_strict, n_bins=10)
+        bd_l = brier_decomposition(y_leaky, p_leaky, n_bins=10)
+        cal_metrics = pd.DataFrame(
+            [
+                {"variant": "strict", "roc_auc": roc_auc_s, "ap": ap_s, **bd_s},
+                {"variant": "leaky", "roc_auc": roc_auc_l, "ap": ap_l, **bd_l},
+            ]
+        )
+        cal_metrics.to_csv(out_dir / "compare_calibration_metrics.csv", index=False, encoding="utf-8-sig")
+        w_table(cal_metrics)
+
         f.write("## 结论建议（如何判断“是否失真”）\n\n")
         f.write("- 如果 leaky 显著高于 strict，说明旧口径存在“看未来”的时间泄漏，评估被抬高。\n")
         f.write("- strict 指标更接近线上真实可用效果；推荐评估也应优先看 strict 版本。\n")
@@ -766,6 +922,8 @@ def main() -> int:
     print("Wrote", report_path)
     print("Wrote", out_dir / "compare_feature_stats.csv")
     print("Wrote", out_dir / "compare_model_metrics.csv")
+    print("Wrote", out_dir / "compare_reco_metrics.csv")
+    print("Wrote", out_dir / "compare_calibration_metrics.csv")
     return 0
 
 

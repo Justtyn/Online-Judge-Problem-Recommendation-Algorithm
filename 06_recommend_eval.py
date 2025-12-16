@@ -24,6 +24,7 @@ TAGS = "CleanData/tags.csv"
 TRAIN_SAMPLES = "FeatureData/train_samples.csv"
 
 OUT_RECO = "Reports/recommendations_topk.csv"
+OUT_RECO_COMPARE = "Reports/recommendations_topk_compare.csv"
 OUT_METRICS = "Reports/reco_metrics.csv"
 FIG_HITK = "Reports/fig_hitk_curve.png"
 FIG_CASE_DIFF = "Reports/fig_reco_difficulty_hist.png"
@@ -38,6 +39,14 @@ GROWTH_MAX_P = 0.7
 
 CHUNK_SIZE = 2048
 RANDOM_SEED = 42
+
+STRATEGIES = (
+    "model_maxprob",
+    "model_growth",
+    "popular_train",
+    "easy_first",
+    "random",
+)
 
 
 def setup_cn_font() -> None:
@@ -104,11 +113,28 @@ def parse_json_list(x) -> list[str]:
 def ensure_dir(path: str) -> None:
     Path(path).parent.mkdir(parents=True, exist_ok=True)
 
+def ndcg_at_k(rec_pids: list[int], gt: set[int], k: int) -> float:
+    k = int(k)
+    if k <= 0:
+        return 0.0
+    if not gt:
+        return 0.0
+    dcg = 0.0
+    for i, pid in enumerate(rec_pids[:k]):
+        if pid in gt:
+            dcg += 1.0 / math.log2(i + 2.0)
+    ideal = 0.0
+    for i in range(min(k, len(gt))):
+        ideal += 1.0 / math.log2(i + 2.0)
+    return float(dcg / ideal) if ideal > 0 else 0.0
+
 
 def main() -> int:
     np.random.seed(RANDOM_SEED)
+    rng = np.random.default_rng(RANDOM_SEED)
 
     ensure_dir(OUT_RECO)
+    ensure_dir(OUT_RECO_COMPARE)
     ensure_dir(OUT_METRICS)
     ensure_dir(FIG_HITK)
     ensure_dir(FIG_CASE_DIFF)
@@ -161,6 +187,8 @@ def main() -> int:
     subs_train = subs[subs["submission_id"] <= cutoff_id].copy()
     subs_test = subs[subs["submission_id"] > cutoff_id].copy()
 
+    users_with_test = {int(x) for x in subs_test["user_id"].unique().tolist()}
+
     solved_before = (
         subs_train[subs_train["ac"] == 1][["user_id", "problem_id"]].drop_duplicates()
     )
@@ -179,6 +207,7 @@ def main() -> int:
     test_ac_map: dict[int, set[int]] = {}
     for uid, g in test_ac.groupby("user_id"):
         test_ac_map[int(uid)] = set(g["problem_id"].astype(int).tolist())
+    users_with_test_ac = set(test_ac_map.keys())
 
     problems = pd.read_csv(PROBLEMS)
     problems["problem_id"] = pd.to_numeric(problems["problem_id"], errors="coerce").astype(int)
@@ -192,6 +221,7 @@ def main() -> int:
 
     problem_ids = problems["problem_id"].to_numpy(dtype=np.int32)
     problem_diff = problems["difficulty_filled"].to_numpy(dtype=np.int32)
+    pid_to_diff = dict(zip(problems["problem_id"].astype(int), problems["difficulty_filled"].astype(int), strict=False))
 
     tag_to_j = {t: j for j, t in enumerate(tag_names)}
     problem_tags_mh = np.zeros((len(problems), len(tag_names)), dtype=np.uint8)
@@ -203,6 +233,21 @@ def main() -> int:
             if j is not None:
                 problem_tags_mh[i, j] = 1
     problem_tag_counts = problem_tags_mh.sum(axis=1).astype(np.float32)
+
+    # --- Baselines (train-only; no peeking at test) ---
+    pop_ac = subs_train[subs_train["ac"] == 1].groupby("problem_id").size()
+    if len(pop_ac) == 0:
+        pop_ac = subs_train.groupby("problem_id").size()
+    pop_count = pop_ac.to_dict()
+
+    popular_ranked = sorted(
+        [int(pid) for pid in problems["problem_id"].astype(int).tolist()],
+        key=lambda pid: (-int(pop_count.get(int(pid), 0)), int(pid)),
+    )
+    easy_ranked = sorted(
+        [int(pid) for pid in problems["problem_id"].astype(int).tolist()],
+        key=lambda pid: (int(pid_to_diff.get(int(pid), diff_median)), -int(pop_count.get(int(pid), 0)), int(pid)),
+    )
 
     # 严格无泄漏：用户画像/偏好只用训练窗口（subs_train）统计得到
     up = subs_train.groupby(["user_id", "problem_id"], as_index=False).agg(
@@ -353,110 +398,208 @@ def main() -> int:
         in_band = (probs_arr >= GROWTH_MIN_P) & (probs_arr <= GROWTH_MAX_P)
         band_idx = np.nonzero(in_band)[0]
 
-        chosen: list[int] = []
+        # growth-band first (current default)
+        chosen_growth: list[int] = []
         chosen_set: set[int] = set()
-
         if len(band_idx):
             take = band_idx[np.argsort(probs_arr[band_idx])[::-1]].tolist()
             for i in take:
                 pid = int(pids_arr[i])
                 if pid in chosen_set:
                     continue
-                chosen.append(i)
+                chosen_growth.append(i)
                 chosen_set.add(pid)
-                if len(chosen) >= MAX_K:
+                if len(chosen_growth) >= MAX_K:
                     break
-
-        if len(chosen) < MAX_K:
+        if len(chosen_growth) < MAX_K:
             all_order = np.argsort(probs_arr)[::-1]
             for i in all_order.tolist():
                 pid = int(pids_arr[i])
                 if pid in chosen_set:
                     continue
-                chosen.append(i)
+                chosen_growth.append(i)
                 chosen_set.add(pid)
-                if len(chosen) >= MAX_K:
+                if len(chosen_growth) >= MAX_K:
                     break
 
-        recs: list[dict] = []
-        for rank, i in enumerate(chosen, start=1):
-            recs.append(
+        # max-prob top-k
+        chosen_max = np.argsort(probs_arr)[::-1][:MAX_K].tolist()
+
+        def rows_from_idx(chosen_idx: list[int], *, strategy: str) -> list[dict]:
+            recs: list[dict] = []
+            for rank, i in enumerate(chosen_idx, start=1):
+                recs.append(
+                    {
+                        "strategy": strategy,
+                        "user_id": uid,
+                        "rank": rank,
+                        "problem_id": int(pids_arr[i]),
+                        "p_ac": float(probs_arr[i]),
+                        "difficulty": int(diffs_arr[i]),
+                        "in_growth_band": int(in_band[i]),
+                    }
+                )
+            return recs
+
+        return rows_from_idx(chosen_max, strategy="model_maxprob") + rows_from_idx(
+            chosen_growth, strategy="model_growth"
+        )
+
+    def baseline_recommend(uid: int, ranked: list[int], *, strategy: str) -> list[dict]:
+        solved = solved_map.get(uid, set())
+        out: list[dict] = []
+        for pid in ranked:
+            if pid in solved:
+                continue
+            out.append(
                 {
+                    "strategy": strategy,
                     "user_id": uid,
-                    "rank": rank,
-                    "problem_id": int(pids_arr[i]),
-                    "p_ac": float(probs_arr[i]),
-                    "difficulty": int(diffs_arr[i]),
-                    "in_growth_band": int(in_band[i]),
+                    "rank": len(out) + 1,
+                    "problem_id": int(pid),
+                    "p_ac": float("nan"),
+                    "difficulty": int(pid_to_diff.get(int(pid), diff_median)),
+                    "in_growth_band": 0,
                 }
             )
-        return recs
+            if len(out) >= MAX_K:
+                break
+        return out
+
+    def random_recommend(uid: int) -> list[dict]:
+        solved = solved_map.get(uid, set())
+        cand = [int(pid) for pid in problems["problem_id"].astype(int).tolist() if int(pid) not in solved]
+        if not cand:
+            return []
+        if len(cand) <= MAX_K:
+            picks = cand
+        else:
+            picks = rng.choice(np.asarray(cand, dtype=np.int32), size=MAX_K, replace=False).astype(int).tolist()
+        out: list[dict] = []
+        for rank, pid in enumerate(picks, start=1):
+            out.append(
+                {
+                    "strategy": "random",
+                    "user_id": uid,
+                    "rank": rank,
+                    "problem_id": int(pid),
+                    "p_ac": float("nan"),
+                    "difficulty": int(pid_to_diff.get(int(pid), diff_median)),
+                    "in_growth_band": 0,
+                }
+            )
+        return out
 
     users = sorted(user_features.keys())
-    all_recs: list[dict] = []
-    users_with_test = {int(x) for x in subs_test["user_id"].unique().tolist()}
+    reco_compare_rows: list[dict] = []
+    reco_growth_rows: list[dict] = []
+    rec_pids_by_strategy: dict[str, dict[int, list[int]]] = {s: {} for s in STRATEGIES}
 
     for i, uid in enumerate(users, start=1):
-        all_recs.extend(recommend_for_user(int(uid)))
+        uid = int(uid)
+        model_rows = recommend_for_user(uid)
+        pop_rows = baseline_recommend(uid, popular_ranked, strategy="popular_train")
+        easy_rows = baseline_recommend(uid, easy_ranked, strategy="easy_first")
+        rand_rows = random_recommend(uid)
+
+        all_rows = model_rows + pop_rows + easy_rows + rand_rows
+        reco_compare_rows.extend(all_rows)
+
+        # keep old output: model_growth only
+        for r in model_rows:
+            if r["strategy"] == "model_growth":
+                reco_growth_rows.append(
+                    {
+                        "user_id": r["user_id"],
+                        "rank": r["rank"],
+                        "problem_id": r["problem_id"],
+                        "p_ac": r["p_ac"],
+                        "difficulty": r["difficulty"],
+                        "in_growth_band": r["in_growth_band"],
+                    }
+                )
+
+        # index by strategy for metrics
+        for s in STRATEGIES:
+            pids = [int(r["problem_id"]) for r in all_rows if r["strategy"] == s]
+            rec_pids_by_strategy[s][uid] = pids
+
         if i % 50 == 0:
             print(f"scored users: {i}/{len(users)}")
 
-    reco_df = pd.DataFrame(all_recs).sort_values(["user_id", "rank"])
+    reco_df = pd.DataFrame(reco_growth_rows).sort_values(["user_id", "rank"])
     reco_df.to_csv(OUT_RECO, index=False, encoding="utf-8-sig")
     print(f"Wrote {OUT_RECO} rows={len(reco_df)} users={reco_df['user_id'].nunique()}")
 
+    reco_cmp_df = pd.DataFrame(reco_compare_rows).sort_values(["strategy", "user_id", "rank"])
+    reco_cmp_df.to_csv(OUT_RECO_COMPARE, index=False, encoding="utf-8-sig")
+    print(f"Wrote {OUT_RECO_COMPARE} rows={len(reco_cmp_df)}")
+
     # metrics
-    rows = []
-    for k in KS:
-        hits = []
-        precs = []
-        hits_active = []
-        precs_active = []
+    metric_rows: list[dict] = []
+    for strategy in STRATEGIES:
+        for k in KS:
+            hits = []
+            precs = []
+            hits_active = []
+            precs_active = []
+            recalls_ac = []
+            ndcgs_ac = []
 
-        for uid in users:
-            rec_k = reco_df[(reco_df["user_id"] == uid) & (reco_df["rank"] <= k)][
-                "problem_id"
-            ].astype(int)
-            rec_set = set(rec_k.tolist())
-            gt = test_ac_map.get(int(uid), set())
-            inter = len(rec_set & gt)
-            hit = 1 if inter > 0 else 0
-            prec = inter / float(k)
-            hits.append(hit)
-            precs.append(prec)
+            for uid in users:
+                uid = int(uid)
+                rec_pids = rec_pids_by_strategy[strategy].get(uid, [])
+                topk = rec_pids[: int(k)]
+                rec_set = set(topk)
+                gt = test_ac_map.get(uid, set())
+                inter = len(rec_set & gt)
+                hit = 1 if inter > 0 else 0
+                prec = inter / float(k)
+                hits.append(hit)
+                precs.append(prec)
 
-            if uid in users_with_test:
-                hits_active.append(hit)
-                precs_active.append(prec)
+                if uid in users_with_test:
+                    hits_active.append(hit)
+                    precs_active.append(prec)
 
-        rows.append(
-            {
-                "k": int(k),
-                "hit_at_k_all": float(np.mean(hits)) if hits else 0.0,
-                "precision_at_k_all": float(np.mean(precs)) if precs else 0.0,
-                "hit_at_k_active": float(np.mean(hits_active)) if hits_active else 0.0,
-                "precision_at_k_active": float(np.mean(precs_active)) if precs_active else 0.0,
-                "users_all": int(len(users)),
-                "users_active": int(len(users_with_test)),
-                "growth_band": f"[{GROWTH_MIN_P},{GROWTH_MAX_P}]",
-                "cutoff_submission_id": int(cutoff_id),
-            }
-        )
+                if uid in users_with_test_ac and gt:
+                    recalls_ac.append(inter / float(len(gt)))
+                    ndcgs_ac.append(ndcg_at_k(topk, gt, int(k)))
 
-    metrics_df = pd.DataFrame(rows)
+            metric_rows.append(
+                {
+                    "strategy": strategy,
+                    "k": int(k),
+                    "hit_at_k_all": float(np.mean(hits)) if hits else 0.0,
+                    "precision_at_k_all": float(np.mean(precs)) if precs else 0.0,
+                    "hit_at_k_active": float(np.mean(hits_active)) if hits_active else 0.0,
+                    "precision_at_k_active": float(np.mean(precs_active)) if precs_active else 0.0,
+                    "recall_at_k_ac_users": float(np.mean(recalls_ac)) if recalls_ac else 0.0,
+                    "ndcg_at_k_ac_users": float(np.mean(ndcgs_ac)) if ndcgs_ac else 0.0,
+                    "users_all": int(len(users)),
+                    "users_active": int(len(users_with_test)),
+                    "users_with_test_ac": int(len(users_with_test_ac)),
+                    "growth_band": f"[{GROWTH_MIN_P},{GROWTH_MAX_P}]",
+                    "cutoff_submission_id": int(cutoff_id),
+                    "random_seed": int(RANDOM_SEED),
+                }
+            )
+
+    metrics_df = pd.DataFrame(metric_rows).sort_values(["strategy", "k"])
     metrics_df.to_csv(OUT_METRICS, index=False, encoding="utf-8-sig")
     print(f"Wrote {OUT_METRICS}")
 
     # Hit@K curve
     plt.figure()
-    plt.plot(metrics_df["k"], metrics_df["hit_at_k_active"], marker="o", label="Hit@K (active users)")
-    plt.plot(metrics_df["k"], metrics_df["hit_at_k_all"], marker="o", label="Hit@K (all users)")
-    plt.title("Hit@K 随 K 变化（命中=测试窗口内是否AC）")
+    for strategy in STRATEGIES:
+        sub = metrics_df[metrics_df["strategy"] == strategy].sort_values("k")
+        plt.plot(sub["k"], sub["hit_at_k_active"], marker="o", label=strategy)
+    plt.title("Hit@K 随 K 变化（策略对比；命中=测试窗口内是否AC）")
     plt.xlabel("K")
-    plt.ylabel("Hit@K")
+    plt.ylabel("Hit@K (active users)")
     plt.xticks(list(KS))
     plt.grid(True, alpha=0.3)
-    plt.legend(["Hit@K（活跃用户）", "Hit@K（全量用户）"])
+    plt.legend(frameon=False, fontsize=9)
     plt.tight_layout()
     plt.savefig(FIG_HITK, dpi=200)
     plt.close()
