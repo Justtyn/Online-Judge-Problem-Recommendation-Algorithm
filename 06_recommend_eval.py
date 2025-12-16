@@ -1,4 +1,5 @@
 import json
+import math
 import os
 import re
 from pathlib import Path
@@ -19,7 +20,6 @@ from sklearn.preprocessing import StandardScaler
 
 SUBMISSIONS = "CleanData/submissions.csv"
 PROBLEMS = "CleanData/problems.csv"
-STUDENTS = "CleanData/students_derived.csv"
 TAGS = "CleanData/tags.csv"
 TRAIN_SAMPLES = "FeatureData/train_samples.csv"
 
@@ -204,17 +204,61 @@ def main() -> int:
                 problem_tags_mh[i, j] = 1
     problem_tag_counts = problem_tags_mh.sum(axis=1).astype(np.float32)
 
-    students = pd.read_csv(STUDENTS)
-    students["user_id"] = pd.to_numeric(students["user_id"], errors="coerce").astype(int)
-    students["level"] = pd.to_numeric(students["level"], errors="coerce").fillna(0.0).astype(float)
-    students["perseverance"] = (
-        pd.to_numeric(students["perseverance"], errors="coerce").fillna(0.0).astype(float)
+    # 严格无泄漏：用户画像/偏好只用训练窗口（subs_train）统计得到
+    up = subs_train.groupby(["user_id", "problem_id"], as_index=False).agg(
+        n_attempts=("submission_id", "count"),
+        solved=("ac", "max"),
     )
-    students["lang_pref_dict"] = students["lang_pref"].apply(parse_json_dict)
-    students["tag_pref_dict"] = students["tag_pref"].apply(parse_json_dict)
-    user_features = students.set_index("user_id")[["level", "perseverance"]].to_dict("index")
-    user_lang_pref = students.set_index("user_id")["lang_pref_dict"].to_dict()
-    user_tag_pref = students.set_index("user_id")["tag_pref_dict"].to_dict()
+    up = up.merge(problems[["problem_id", "difficulty_filled"]], on="problem_id", how="left")
+    up["difficulty_filled"] = pd.to_numeric(up["difficulty_filled"], errors="coerce").fillna(diff_median).astype(int)
+    up["diff_norm"] = up["difficulty_filled"].astype(float) / 10.0
+
+    num = (up["solved"].astype(float) * up["diff_norm"]).groupby(up["user_id"]).sum()
+    den = up["diff_norm"].groupby(up["user_id"]).sum()
+    level_s = (num / (den + 1e-9)).fillna(0.0).clip(0.0, 1.0)
+
+    avg_attempts_per_problem = (up.groupby("user_id")["n_attempts"].mean()).fillna(0.0).astype(float)
+    p95 = float(np.percentile(avg_attempts_per_problem.values, 95)) if len(avg_attempts_per_problem) else 1.0
+    denom_p = math.log1p(p95) if p95 > 0 else 1.0
+    perseverance_s = (np.log1p(avg_attempts_per_problem) / (denom_p if denom_p > 0 else 1.0)).clip(0.0, 1.0)
+
+    lang_counts = subs_train.groupby(["user_id", "language"]).size().reset_index(name="cnt")
+    lang_tab = lang_counts.pivot_table(index="user_id", columns="language", values="cnt", fill_value=0)
+    lang_tab = lang_tab.div(lang_tab.sum(axis=1).replace(0, 1), axis=0)
+    user_lang_pref: dict[int, dict[str, float]] = {}
+    for uid, row in lang_tab.iterrows():
+        d: dict[str, float] = {}
+        for l in lang_names:
+            v = float(row.get(l, 0.0))
+            if v > 0:
+                d[l] = v
+        user_lang_pref[int(uid)] = d
+
+    # tag_pref：按训练窗内做过的题（去重到 user-problem）统计其 tags_norm
+    pid_to_tags_norm = {
+        int(pid): (lst if isinstance(lst, list) else [])
+        for pid, lst in zip(problems["problem_id"].astype(int), problems["tags_norm"].tolist())
+    }
+    tag_rows: list[tuple[int, str]] = []
+    for uid, pid in up[["user_id", "problem_id"]].itertuples(index=False):
+        for t in pid_to_tags_norm.get(int(pid), []):
+            tag_rows.append((int(uid), str(t)))
+    if tag_rows:
+        tag_df = pd.DataFrame(tag_rows, columns=["user_id", "tag"])
+        tag_counts = tag_df.groupby(["user_id", "tag"]).size().reset_index(name="cnt")
+        tag_tab = tag_counts.pivot_table(index="user_id", columns="tag", values="cnt", fill_value=0)
+        tag_tab = tag_tab.div(tag_tab.sum(axis=1).replace(0, 1), axis=0)
+        user_tag_pref = {
+            int(uid): {t: float(row.get(t, 0.0)) for t in tag_names if float(row.get(t, 0.0)) > 0}
+            for uid, row in tag_tab.iterrows()
+        }
+    else:
+        user_tag_pref = {}
+
+    user_features = {
+        int(uid): {"level": float(level_s.get(uid, 0.0)), "perseverance": float(perseverance_s.get(uid, 0.0))}
+        for uid in sorted(set(subs_train["user_id"].astype(int).tolist()))
+    }
 
     global_lang = lang_names[0] if lang_names else ""
 
@@ -348,7 +392,7 @@ def main() -> int:
             )
         return recs
 
-    users = sorted(students["user_id"].astype(int).tolist())
+    users = sorted(user_features.keys())
     all_recs: list[dict] = []
     users_with_test = {int(x) for x in subs_test["user_id"].unique().tolist()}
 
