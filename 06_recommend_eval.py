@@ -396,31 +396,26 @@ def main() -> int:
         diffs_arr = np.asarray(all_diffs, dtype=np.int32)
 
         in_band = (probs_arr >= GROWTH_MIN_P) & (probs_arr <= GROWTH_MAX_P)
-        band_idx = np.nonzero(in_band)[0]
+        target_p = float(GROWTH_MIN_P + 0.20 * (GROWTH_MAX_P - GROWTH_MIN_P))
+        dist_to_band = np.where(
+            in_band,
+            0.0,
+            np.minimum(np.abs(probs_arr - float(GROWTH_MIN_P)), np.abs(probs_arr - float(GROWTH_MAX_P))),
+        ).astype(np.float32)
+        dist_to_target = np.abs(probs_arr - float(target_p)).astype(np.float32)
 
-        # growth-band first (current default)
-        chosen_growth: list[int] = []
-        chosen_set: set[int] = set()
-        if len(band_idx):
-            take = band_idx[np.argsort(probs_arr[band_idx])[::-1]].tolist()
-            for i in take:
-                pid = int(pids_arr[i])
-                if pid in chosen_set:
-                    continue
-                chosen_growth.append(i)
-                chosen_set.add(pid)
-                if len(chosen_growth) >= MAX_K:
-                    break
-        if len(chosen_growth) < MAX_K:
-            all_order = np.argsort(probs_arr)[::-1]
-            for i in all_order.tolist():
-                pid = int(pids_arr[i])
-                if pid in chosen_set:
-                    continue
-                chosen_growth.append(i)
-                chosen_set.add(pid)
-                if len(chosen_growth) >= MAX_K:
-                    break
+        # growth-band first: 带内优先（默认更靠近下限、更有挑战）；带外按“离成长带最近”补齐
+        order_growth = np.lexsort(
+            (
+                pids_arr.astype(np.int32),
+                probs_arr.astype(np.float32),  # harder-first when tie
+                -diffs_arr.astype(np.int32),  # harder-first when tie
+                dist_to_target,
+                dist_to_band,
+                (~in_band).astype(np.int8),
+            )
+        )
+        chosen_growth = order_growth[:MAX_K].tolist()
 
         # max-prob top-k
         chosen_max = np.argsort(probs_arr)[::-1][:MAX_K].tolist()

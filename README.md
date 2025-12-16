@@ -69,6 +69,27 @@ python Utils/validate_originaldata.py
 python Utils/validate_originaldata.py --report Reports/validate_report.txt
 ```
 
+### 2.5）诊断/校验：为什么推荐偏“全是难度 1”
+
+当你发现某些学生提交了不少中等题，但 Top‑K 却被低难度“刷屏”时，可用诊断脚本输出量化证据（含候选集按难度的 `P(AC)` 分布、Top‑K 列表、以及可失败的校验 flags）：
+
+```bash
+# 单个学生：输出文本报告 + 图表到 Reports/
+python Utils/diagnose_reco_bias.py --user-id 104 --cutoff-pct 0.50 --min-p 0.40 --max-p 0.70 --k 10 --plot
+
+# 单个学生：命中指定 flags 则退出码=2（便于接 CI/批处理）
+python Utils/diagnose_reco_bias.py --user-id 104 --fail-on easy_bias_vs_history,score_plateau_topk
+
+# 批量扫描（默认扫所有有 submissions 的用户）：输出 CSV；可用 --fail-if-any 作为“全局校验”
+python Utils/diagnose_reco_bias.py --scan --max-users 300 --fail-if-any
+```
+
+默认产物：
+- `Reports/diag_user_<user_id>.txt`
+- `Reports/fig_diag_user_<user_id>_reco_diff_hist.png`
+- `Reports/fig_diag_user_<user_id>_candidate_p_by_diff.png`
+- `Reports/diag_scan_users.csv`（scan 模式）
+
 ### 3）运行推荐算法流水线（03 → 06）
 
 ```bash

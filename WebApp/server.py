@@ -207,6 +207,65 @@ class Recommender:
         plt.close(fig)
         return base64.b64encode(buf.getvalue()).decode("ascii")
 
+    @staticmethod
+    def _rank_by_growth_band(
+            cand_idx: np.ndarray,
+            *,
+            score: np.ndarray,
+            difficulty: np.ndarray,
+            tag_match: np.ndarray | None,
+            in_band: np.ndarray,
+            min_p: float,
+            max_p: float,
+            target_alpha: float = 0.20,
+    ) -> np.ndarray:
+        if len(cand_idx) == 0:
+            return cand_idx
+
+        min_p = float(min_p)
+        max_p = float(max_p)
+        if max_p < min_p:
+            min_p, max_p = max_p, min_p
+
+        target_alpha = float(max(0.0, min(1.0, target_alpha)))
+        target_p = min_p + target_alpha * (max_p - min_p)
+
+        score = np.nan_to_num(score.astype(np.float32), nan=0.0, posinf=1.0, neginf=0.0)
+        difficulty = difficulty.astype(np.int32, copy=False)
+        in_band = in_band.astype(bool, copy=False)
+
+        dist_to_band = np.where(
+            in_band,
+            0.0,
+            np.minimum(np.abs(score - min_p), np.abs(score - max_p)),
+        ).astype(np.float32)
+        dist_to_target = np.abs(score - float(target_p)).astype(np.float32)
+
+        if tag_match is None:
+            tag_key = np.zeros((len(cand_idx),), dtype=np.float32)
+        else:
+            tag_key = -np.nan_to_num(tag_match.astype(np.float32), nan=0.0)[cand_idx]
+
+        order = np.lexsort(
+            (
+                # tie-breaker (stable/deterministic)
+                np.asarray(cand_idx, dtype=np.int32),
+                # 更有挑战：同条件下优先更低的 P(AC)
+                score[cand_idx],
+                # 更贴合偏好：tag_match 越大越优先
+                tag_key,
+                # 更有挑战：难度越高越优先
+                -difficulty[cand_idx],
+                # 成长带内：优先靠近目标成功率（默认偏向下限）
+                dist_to_target[cand_idx],
+                # 带外补齐：优先离成长带最近
+                dist_to_band[cand_idx],
+                # 成长带优先（0=带内,1=带外）
+                (~in_band[cand_idx]).astype(np.int8),
+            )
+        )
+        return cand_idx[order]
+
     def _user_cutoff_id(self, user_id: int, pct: float) -> int:
         user_df = self._subs_by_user.get(int(user_id))
         if user_df is None or user_df.empty:
@@ -328,11 +387,16 @@ class Recommender:
         if len(idx_all) == 0:
             raise RuntimeError(f"user_id={user_id} 已 AC 全部题目或无候选集")
 
-        idx_band = idx_all[in_band[idx_all]]
-        idx_other = idx_all[~in_band[idx_all]]
-        idx_band_sorted = idx_band[np.argsort(score[idx_band])[::-1]]
-        idx_other_sorted = idx_other[np.argsort(score[idx_other])[::-1]]
-        picks = np.concatenate([idx_band_sorted, idx_other_sorted], axis=0)[:k]
+        ranked = self._rank_by_growth_band(
+            idx_all,
+            score=score,
+            difficulty=self.problem_diff,
+            tag_match=tag_match,
+            in_band=in_band,
+            min_p=min_p,
+            max_p=max_p,
+        )
+        picks = ranked[:k]
 
         rec_rows: list[dict] = []
         for rank, i in enumerate(picks.tolist(), start=1):
@@ -577,13 +641,20 @@ class Recommender:
         df["tags"] = self.problems["tags_list"].apply(lambda x: ",".join(x[:2]) if isinstance(x, list) else "")
         df["score"] = score
         df["language"] = chosen_lang
-        df = df.sort_values("score", ascending=False)
-
-        band = df[(df["score"] >= min_p) & (df["score"] <= max_p)]
-        if len(band) >= k:
-            out = band.head(k).copy()
-        else:
-            out = pd.concat([band, df[~df.index.isin(band.index)]], axis=0).head(k).copy()
+        in_band = (df["score"].to_numpy(dtype=np.float32) >= float(min_p)) & (
+            df["score"].to_numpy(dtype=np.float32) <= float(max_p)
+        )
+        tag_match_vec = base[:, self.numeric_idx["tag_match"]].astype(np.float32)
+        ranked = self._rank_by_growth_band(
+            np.arange(len(df), dtype=np.int32),
+            score=df["score"].to_numpy(dtype=np.float32),
+            difficulty=self.problem_diff,
+            tag_match=tag_match_vec,
+            in_band=in_band,
+            min_p=min_p,
+            max_p=max_p,
+        )
+        out = df.iloc[ranked[:k]].copy()
 
         fig = plt.figure(figsize=(8, 5))
         plt.style.use('ggplot')  # 使用更好看的绘图风格
@@ -1611,7 +1682,7 @@ class Handler(BaseHTTPRequestHandler):
                 <input id="k" type="range" min="1" max="50" step="1" value="10">
                 <output id="k_out">10</output>
               </div>
-              <div class="help">输出 Top‑K 推荐列表长度。若成长带内题不足，会自动用高分题补齐。</div>
+                    <div class="help">输出 Top‑K 推荐列表长度。若成长带内题不足，会自动用“最接近成长带”的题补齐。</div>
             </div>
             <div>
               <label>成长带成功率下限（min_p）</label>
@@ -2217,7 +2288,7 @@ refresh();
                             </div>
                         </div>
                     </div>
-                    <div class="help">优先推荐预测通过率 <span class="mono">P(AC)</span> 落在 [min_p, max_p] 的题：既不过难也不过易；若带内题不足会用高分题补齐。</div>
+                    <div class="help">优先推荐预测通过率 <span class="mono">P(AC)</span> 落在 [min_p, max_p] 的题：既不过难也不过易；若带内题不足会用“最接近成长带”的题补齐。</div>
 
                     <div style="margin-top:1.5rem">
                         <label>融合策略（语言偏好如何作用）</label>
@@ -2437,7 +2508,7 @@ document.getElementById("btn_reset").addEventListener("click", ()=>{{
             </div>
             <ul class="modal-ul" style="margin-top:10px">
               <li>成长带（ZPD）：优先挑选预测通过率在区间内的题，兼顾“可命中”与“有挑战”。</li>
-              <li>若成长带内题不足，会按预测概率从高到低补齐 Top‑K。</li>
+              <li>若成长带内题不足，会按与成长带的距离从近到远补齐 Top‑K。</li>
             </ul>
         </div>
         <div class="card" style="text-align:center">
