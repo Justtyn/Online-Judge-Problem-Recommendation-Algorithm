@@ -13,15 +13,13 @@ os.environ.setdefault("XDG_CACHE_HOME", str(Path(".cache").resolve()))
 os.environ.setdefault("MPLCONFIGDIR", str(Path(".cache/matplotlib").resolve()))
 Path(os.environ["MPLCONFIGDIR"]).mkdir(parents=True, exist_ok=True)
 
+import joblib
 import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
 
 
 def setup_cn_font() -> None:
@@ -45,6 +43,8 @@ ROOT = Path(__file__).resolve().parents[1]
 REPORTS_DIR = ROOT / "Reports"
 CLEANDATA_DIR = ROOT / "CleanData"
 FEATUREDATA_DIR = ROOT / "FeatureData"
+MODELS_DIR = ROOT / "Models"
+PIPELINE_PATH = MODELS_DIR / "pipeline_logreg.joblib"
 
 
 def parse_json_dict(s: str) -> dict[str, float]:
@@ -67,6 +67,8 @@ def parse_json_dict(s: str) -> dict[str, float]:
 
 
 def normalize_dist(keys: list[str], d: dict[str, float]) -> dict[str, float]:
+    if not keys:
+        return {}
     vals = {k: max(0.0, float(d.get(k, 0.0))) for k in keys}
     s = sum(vals.values())
     if s <= 0:
@@ -76,23 +78,38 @@ def normalize_dist(keys: list[str], d: dict[str, float]) -> dict[str, float]:
 
 class Recommender:
     def __init__(self) -> None:
-        self.train_samples = pd.read_csv(FEATUREDATA_DIR / "train_samples.csv")
-        for col in ("submission_id", "user_id", "problem_id"):
-            if col in self.train_samples.columns:
-                self.train_samples[col] = pd.to_numeric(self.train_samples[col], errors="coerce")
+        if not PIPELINE_PATH.exists():
+            raise RuntimeError(
+                f"找不到离线模型文件：{PIPELINE_PATH}\n"
+                f"请先运行：\n"
+                f"  python 04_build_features.py\n"
+                f"  python 05_train_eval.py\n"
+                f"以生成并保存 `Models/pipeline_logreg.joblib`。"
+            )
 
-        self.feature_cols = [
-            c
-            for c in self.train_samples.columns
-            if c not in {"ac", "submission_id", "user_id", "problem_id"}
-        ]
+        artifact = joblib.load(PIPELINE_PATH)
+        if isinstance(artifact, dict) and "pipeline" in artifact:
+            self.model = artifact["pipeline"]
+            self.feature_cols = list(artifact.get("feature_cols") or [])
+        else:
+            self.model = artifact
+            self.feature_cols = []
+
+        if not self.feature_cols:
+            train_samples = pd.read_csv(FEATUREDATA_DIR / "train_samples.csv")
+            self.feature_cols = [
+                c
+                for c in train_samples.columns
+                if c not in {"ac", "submission_id", "user_id", "problem_id"}
+            ]
+
         self.col_to_idx = {c: i for i, c in enumerate(self.feature_cols)}
 
         required = {"attempt_no", "difficulty_filled", "level", "perseverance", "lang_match", "tag_match"}
         missing = sorted(required - set(self.feature_cols))
         if missing:
             raise RuntimeError(
-                f"train_samples.csv 缺少列 {missing}；请先运行 `python 04_build_features.py` 重新生成。"
+                f"离线模型/特征不匹配：缺少特征列 {missing}；请重新运行 `python 04_build_features.py` 与 `python 05_train_eval.py`。"
             )
 
         self.lang_cols = [c for c in self.feature_cols if c.startswith("lang_")]
@@ -111,24 +128,12 @@ class Recommender:
             "tag_match": self.col_to_idx["tag_match"],
         }
 
-        X = self.train_samples[self.feature_cols].to_numpy(dtype=np.float32)
-        y = self.train_samples["ac"].astype(int).to_numpy()
-        self.model = Pipeline(
-            [
-                ("scaler", StandardScaler(with_mean=False)),
-                ("clf", LogisticRegression(max_iter=300, random_state=42)),
-            ]
-        )
-        self.model.fit(X, y)
-
         self.problems = pd.read_csv(CLEANDATA_DIR / "problems.csv")
         self.problems["problem_id"] = pd.to_numeric(self.problems["problem_id"], errors="coerce").astype(int)
         self.problems["difficulty"] = pd.to_numeric(self.problems["difficulty"], errors="coerce")
         diff_median = int(np.nanmedian(self.problems["difficulty"])) if self.problems["difficulty"].notna().any() else 5
         self.problems["difficulty_filled"] = self.problems["difficulty"].fillna(diff_median).astype(int)
 
-        tags_df = pd.read_csv(CLEANDATA_DIR / "tags.csv")
-        self.tag_vocab = tags_df["tag_name"].astype(str).tolist()
         self.tag_to_j = {t: j for j, t in enumerate(self.tag_names)}
 
         def parse_tags_cell(x) -> list[str]:
@@ -638,7 +643,11 @@ class Handler(BaseHTTPRequestHandler):
         if p.path == "/custom":
             global RECO
             if RECO is None:
-                RECO = Recommender()
+                try:
+                    RECO = Recommender()
+                except Exception as e:
+                    self._send(500, f"WebApp 初始化失败：{e}".encode("utf-8"), "text/plain; charset=utf-8")
+                    return
             tag_opts = "".join(
                 f'<option value="{html.escape(t)}">{html.escape(t)}</option>' for t in RECO.tag_names
             )
@@ -889,7 +898,11 @@ document.getElementById("btn_random").addEventListener("click", () => {{
 
         global RECO
         if RECO is None:
-            RECO = Recommender()
+            try:
+                RECO = Recommender()
+            except Exception as e:
+                self._send(500, f"WebApp 初始化失败：{e}".encode("utf-8"), "text/plain; charset=utf-8")
+                return
 
         length = int(self.headers.get("Content-Length") or "0")
         raw = self.rfile.read(length).decode("utf-8", errors="replace")

@@ -40,7 +40,9 @@
 ```bash
 python -m venv .venv && source .venv/bin/activate
 python -m pip install -U pip
-python -m pip install pandas numpy scikit-learn matplotlib
+python -m pip install -r requirements.txt
+# （可选）开发/测试/Notebook
+# python -m pip install -r requirements-optional.txt
 ```
 
 ### 2）准备输入数据（`CleanData/*.csv`）
@@ -104,7 +106,9 @@ python WebApp/server.py --port 8000
 - `http://127.0.0.1:8000/custom`（自定义推荐）
 
 注意：
-- WebApp 会从 `FeatureData/train_samples.csv` 读取特征并在启动后训练一个 Logistic Regression（用于在线打分），因此请先运行 `python 04_build_features.py`。
+- WebApp 只负责加载离线训练好的 `Pipeline` 并推理；请先运行：
+  - `python 04_build_features.py`
+  - `python 05_train_eval.py`（会保存 `Models/pipeline_logreg.joblib`）
 
 ---
 

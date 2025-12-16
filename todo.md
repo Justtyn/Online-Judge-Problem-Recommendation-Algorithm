@@ -151,7 +151,7 @@
 
 ### P0（优先级最高：可复现 & 可信度）
 
-- [ ] 固化依赖：新增 `requirements.txt`（或 `pyproject.toml`）并区分“核心/可选”依赖（当前 README 里为手动安装）
+- [x] 固化依赖：新增 `requirements.txt`（或 `pyproject.toml`）并区分“核心/可选”依赖（当前 README 里为手动安装）
 - [ ] 统一流水线 CLI：给 `03_derive_students.py`、`04_build_features.py`、`05_train_eval.py`、`06_recommend_eval.py`、`07_make_eda_plots.py` 增加 `argparse`（输入/输出路径、随机种子、切分比例、成长区间等）
 - [ ] 统一 schema/口径：抽出 `CleanData/*.csv` 的字段规范（类型/范围/主外键）为集中定义（如 `Utils/schema.py`），并让校验与特征构造复用
 - [ ] 防数据泄漏检查：为时间切分（按 `submission_id`）增加“特征仅依赖历史”的一致性检查/报告（尤其 `attempt_no`、用户历史统计类特征）
@@ -167,7 +167,7 @@
 
 ### P1（工程化 & 性能）
 
-- [ ] WebApp 复用离线模型：离线训练阶段保存 `Pipeline`（`joblib/pickle`），`WebApp/server.py` 只加载与推理，避免每次启动重新训练
+- [x] WebApp 复用离线模型：离线训练阶段保存 `Pipeline`（`joblib/pickle`），`WebApp/server.py` 只加载与推理，避免每次启动重新训练
 - [ ] 向量化特征构造：替换 `apply(axis=1)` 为向量化/映射计算，提升 `04_build_features.py` 对大数据量的速度与内存表现
 - [ ] 运行元信息沉淀：每次跑流水线输出 `Reports/run_manifest.json`（参数、输入行数、随机种子、cutoff、时间、git hash 等），便于写报告追溯
 

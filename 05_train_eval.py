@@ -5,7 +5,9 @@ os.environ.setdefault("XDG_CACHE_HOME", str(Path(".cache").resolve()))
 os.environ.setdefault("MPLCONFIGDIR", str(Path(".cache/matplotlib").resolve()))
 Path(os.environ["MPLCONFIGDIR"]).mkdir(parents=True, exist_ok=True)
 
-import pandas as pd, numpy as np
+import joblib
+import numpy as np
+import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -36,12 +38,15 @@ setup_cn_font()
 
 DATA = "FeatureData/train_samples.csv"
 OUT_METRICS = "Models/metrics.csv"
+OUT_PIPELINE = "Models/pipeline_logreg.joblib"
 OUT_DIR = "Reports"
+RANDOM_SEED = 42
 
 df = pd.read_csv(DATA)
 y = df["ac"].astype(int).values
 id_order = df["submission_id"].values
 X = df.drop(columns=["ac", "submission_id", "user_id", "problem_id"])
+feature_cols = list(X.columns)
 
 # boolean -> int
 for c in X.columns:
@@ -57,9 +62,16 @@ X_train, X_test = X.iloc[:split], X.iloc[split:]
 y_train, y_test = y[:split], y[split:]
 
 models = {
-  "logreg": Pipeline([("scaler", StandardScaler(with_mean=False)), ("clf", LogisticRegression(max_iter=200))]),
-  "tree": DecisionTreeClassifier(max_depth=10, random_state=42),
-  "svm_linear": Pipeline([("scaler", StandardScaler(with_mean=False)), ("clf", LinearSVC())]),
+  "logreg": Pipeline(
+      [
+          ("scaler", StandardScaler(with_mean=False)),
+          ("clf", LogisticRegression(max_iter=300, random_state=RANDOM_SEED)),
+      ]
+  ),
+  "tree": DecisionTreeClassifier(max_depth=10, random_state=RANDOM_SEED),
+  "svm_linear": Pipeline(
+      [("scaler", StandardScaler(with_mean=False)), ("clf", LinearSVC(random_state=RANDOM_SEED))]
+  ),
 }
 
 rows=[]
@@ -78,6 +90,26 @@ metrics = pd.DataFrame(rows).sort_values("f1", ascending=False)
 Path(OUT_METRICS).parent.mkdir(parents=True, exist_ok=True)
 metrics.to_csv(OUT_METRICS, index=False, encoding="utf-8-sig")
 print(metrics)
+
+# 保存离线 Pipeline（供 WebApp 直接加载与推理）
+final_logreg = Pipeline(
+    [
+        ("scaler", StandardScaler(with_mean=False)),
+        ("clf", LogisticRegression(max_iter=300, random_state=RANDOM_SEED)),
+    ]
+)
+final_logreg.fit(X.to_numpy(dtype=np.float32), y.astype(int))
+Path(OUT_PIPELINE).parent.mkdir(parents=True, exist_ok=True)
+joblib.dump(
+    {
+        "pipeline": final_logreg,
+        "feature_cols": feature_cols,
+        "random_seed": RANDOM_SEED,
+        "train_rows": int(len(X)),
+    },
+    OUT_PIPELINE,
+)
+print("Saved pipeline to", OUT_PIPELINE)
 
 # confusion matrices
 Path(OUT_DIR).mkdir(parents=True, exist_ok=True)
