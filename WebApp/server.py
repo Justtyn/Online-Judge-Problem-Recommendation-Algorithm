@@ -217,7 +217,7 @@ class Recommender:
         return int(ids[idx])
 
     def _profile_from_history(
-        self, user_df: pd.DataFrame, cutoff_id: int
+            self, user_df: pd.DataFrame, cutoff_id: int
     ) -> tuple[float, float, dict[str, float], dict[str, float], set[int], dict[int, int]]:
         hist = user_df[user_df["submission_id"] <= int(cutoff_id)]
         if hist.empty:
@@ -262,13 +262,13 @@ class Recommender:
         return level, perseverance, lang_pref, tag_pref, solved, attempt_next_map
 
     def recommend_for_user_history(
-        self,
-        *,
-        user_id: int,
-        cutoff_pct: float,
-        k: int,
-        min_p: float,
-        max_p: float,
+            self,
+            *,
+            user_id: int,
+            cutoff_pct: float,
+            k: int,
+            min_p: float,
+            max_p: float,
     ) -> tuple[dict, list[dict]]:
         user_id = int(user_id)
         user_df = self._subs_by_user.get(user_id)
@@ -276,7 +276,8 @@ class Recommender:
             raise RuntimeError(f"user_id={user_id} 不存在或无 submissions")
 
         cutoff_id = self._user_cutoff_id(user_id, cutoff_pct)
-        level, perseverance, lang_pref, tag_pref, solved, attempt_next_map = self._profile_from_history(user_df, cutoff_id)
+        level, perseverance, lang_pref, tag_pref, solved, attempt_next_map = self._profile_from_history(user_df,
+                                                                                                        cutoff_id)
 
         k = int(max(1, min(50, k)))
         min_p = float(max(0.0, min(1.0, min_p)))
@@ -362,13 +363,13 @@ class Recommender:
         return meta, rec_rows
 
     def student_dashboard_payload(
-        self,
-        *,
-        user_id: int,
-        cutoff_pct: float,
-        k: int,
-        min_p: float,
-        max_p: float,
+            self,
+            *,
+            user_id: int,
+            cutoff_pct: float,
+            k: int,
+            min_p: float,
+            max_p: float,
     ) -> dict:
         user_id = int(user_id)
         user_df = self._subs_by_user.get(user_id)
@@ -603,109 +604,179 @@ class Recommender:
 
 RECO: Recommender | None = None
 
-# 优化的 CSS，现代化设计
+# ----------------------------------------------------------------------------
+# 现代化 CSS 样式 (支持深色模式)
+# ----------------------------------------------------------------------------
 STYLE_CSS = """
 :root {
-    --primary-color: #2563eb;
-    --primary-hover: #1d4ed8;
-    --bg-color: #f8fafc;
-    --card-bg: #ffffff;
-    --text-main: #1e293b;
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --primary-light: rgba(59, 130, 246, 0.1);
+
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-input: #ffffff;
+
+    --text-main: #0f172a;
     --text-muted: #64748b;
-    --border-color: #e2e8f0;
-    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --text-inverse: #ffffff;
+
+    --border: #e2e8f0;
+    --border-hover: #cbd5e1;
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --radius: 12px;
+
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-body: #0f172a;
+        --bg-card: #1e293b;
+        --bg-input: #334155;
+
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+
+        --border: #334155;
+        --border-hover: #475569;
+
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+        --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+    }
+}
+
+/* 强制覆盖深色模式的类 (JS toggle) */
+html.dark-mode {
+    --bg-body: #0f172a;
+    --bg-card: #1e293b;
+    --bg-input: #334155;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border: #334155;
+    --border-hover: #475569;
+}
+html.light-mode {
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-input: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --border-hover: #cbd5e1;
 }
 
 body {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-    background-color: var(--bg-color);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-body);
     color: var(--text-main);
+    line-height: 1.6;
     margin: 0;
     padding: 20px;
-    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 16px;
 }
 
-h1, h2, h3 {
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    color: #0f172a;
-    margin-bottom: 1rem;
+/* Header */
+header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-h1 { font-size: 1.875rem; margin-top: 2rem; }
-h2 { font-size: 1.5rem; margin-top: 1.5rem; }
+h1 { font-size: 1.8rem; font-weight: 700; margin: 0; letter-spacing: -0.025em; }
+h2 { font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem; }
+h3 { font-size: 1.1rem; font-weight: 600; margin: 0 0 1rem; }
 
 a {
-    color: var(--primary-color);
+    color: var(--primary);
     text-decoration: none;
+    font-weight: 500;
     transition: color 0.2s;
 }
+a:hover { color: var(--primary-hover); }
 
-a:hover {
-    color: var(--primary-hover);
-    text-decoration: underline;
+/* Components */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s, border-color 0.3s;
 }
 
-/* Card Styling */
-.card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius);
-    padding: 24px;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.2s, box-shadow 0.2s;
-    margin-bottom: 24px;
+.card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
 }
 
-.card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-    margin: 10px auto;
+.subgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Non-home pages: full-width blocks stacked vertically */
+body.page-student .grid,
+body.page-custom .grid {
+    grid-template-columns: 1fr;
+}
+body.page-student .subgrid,
+body.page-custom .subgrid {
+    grid-template-columns: 1fr;
 }
 
 /* Form Elements */
 label {
     display: block;
+    font-size: 0.9rem;
     font-weight: 500;
-    margin: 0 0 8px;
-    color: #334155;
-    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
 }
 
-input[type="text"], textarea, select {
+input[type="text"], input[type="number"], select, textarea {
     width: 100%;
-    padding: 10px 12px;
-    border: 1px solid var(--border-color);
+    padding: 0.6rem 0.8rem;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
     border-radius: 8px;
-    font-size: 14px;
-    background: #fff;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 0.95rem;
     box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-input[type="text"]:focus, textarea:focus, select:focus {
+input:focus, select:focus, textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
 }
 
-/* Custom Range Slider */
+/* Range Slider */
 input[type=range] {
     -webkit-appearance: none;
     width: 100%;
@@ -713,210 +784,508 @@ input[type=range] {
     margin: 10px 0;
 }
 input[type=range]:focus { outline: none; }
+
+/* Webkit Slider */
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: var(--border);
+    border-radius: 99px;
+    transition: background 0.2s;
+}
 input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
     height: 18px;
     width: 18px;
     border-radius: 50%;
-    background: var(--primary-color);
+    background: var(--primary);
     cursor: pointer;
-    margin-top: -7px;
+    -webkit-appearance: none;
+    margin-top: -6px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    border: 2px solid var(--bg-card);
+    transition: transform 0.1s;
 }
-input[type=range]::-webkit-slider-runnable-track {
+input[type=range]:focus::-webkit-slider-thumb {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+/* Firefox Slider */
+input[type=range]::-moz-range-track {
     width: 100%;
-    height: 4px;
+    height: 6px;
     cursor: pointer;
-    background: #cbd5e1;
-    border-radius: 2px;
+    background: var(--border);
+    border-radius: 99px;
+}
+input[type=range]::-moz-range-thumb {
+    height: 18px;
+    width: 18px;
+    border: 2px solid var(--bg-card);
+    border-radius: 50%;
+    background: var(--primary);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 /* Buttons */
-button {
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+
+button, .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 0.6rem 1.2rem;
     border-radius: 8px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.95rem;
     cursor: pointer;
     transition: all 0.2s;
-    border: none;
+    border: 1px solid transparent;
+    text-decoration: none;
 }
 
-button[type="submit"] {
-    background-color: var(--primary-color);
+button[type="submit"], .btn-primary {
+    background-color: var(--primary);
     color: white;
 }
-button[type="submit"]:hover {
+button[type="submit"]:hover, .btn-primary:hover {
     background-color: var(--primary-hover);
-    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 4px 12px var(--primary-light);
 }
 
 .btn-secondary {
-    background-color: #fff;
+    background-color: var(--bg-card);
     color: var(--text-main);
-    border: 1px solid var(--border-color);
+    border-color: var(--border);
 }
 .btn-secondary:hover {
-    background-color: #f1f5f9;
-    border-color: #cbd5e1;
+    background-color: var(--bg-body);
+    border-color: var(--border-hover);
 }
 
-.actions {
-    display: flex;
-    gap: 12px;
-    margin-top: 24px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border-color);
+/* Tables */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
 }
-
-/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 th {
-    background-color: #f1f5f9;
+    background-color: var(--bg-body);
     font-weight: 600;
     text-align: left;
     padding: 12px 16px;
-    color: #475569;
-    border-bottom: 2px solid var(--border-color);
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
 }
 td {
     padding: 12px 16px;
-    border-bottom: 1px solid var(--border-color);
-    vertical-align: middle;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-main);
 }
-tr:hover td {
-    background-color: #f8fafc;
+tr:last-child td { border-bottom: none; }
+tr:hover td { background-color: var(--primary-light); }
+
+/* Visuals */
+.chart-container {
+    background: white; /* 保持图表底色为白，确保Matplotlib渲染清晰 */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Utility */
-.muted { color: var(--text-muted); font-size: 0.875rem; line-height: 1.4; margin-top: 4px; }
-.row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-.row output { font-family: monospace; font-weight: 600; color: var(--primary-color); width: 45px; text-align: right; }
-.pill { display: inline-block; padding: 2px 8px; font-size: 12px; border-radius: 99px; background: #e2e8f0; color: #475569; font-weight: 600; }
-.subgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
-.header-actions { margin-bottom: 20px; display: flex; align-items: center; gap: 15px; font-size: 0.95rem; }
-details { border: 1px solid var(--border-color); border-radius: 8px; padding: 10px; background: #fafafa; }
-summary { cursor: pointer; font-weight: 500; color: var(--text-main); }
+/* Utils */
+.muted { color: var(--text-muted); font-size: 0.85rem; }
+.help { margin-top: 6px; color: var(--text-muted); font-size: 0.85rem; }
+.viz-img { width: 100%; height: 360px; object-fit: contain; }
+.viz-img-lg { width: 100%; height: 320px; object-fit: contain; }
+.multiselect { min-height: 210px; }
+.row { display: flex; align-items: center; gap: 10px; }
+.row output { font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--primary); width: 45px; text-align: right; }
+.pill {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    border-radius: 99px;
+    background: var(--bg-body);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-weight: 600;
+}
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-muted);
+    padding: 0;
+}
+.theme-toggle:hover {
+    background-color: var(--bg-body);
+    color: var(--primary);
+}
+
+details {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.8rem;
+    background: var(--bg-body);
+}
+details summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-main);
+    user-select: none;
+}
+details[open] { background: var(--bg-card); }
+
+/* Home: dashboard */
+.toolbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: end;
+}
+.toolbar .left {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 1rem;
+}
+.toolbar .right {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.toolbar-simple {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.toolbar-simple .topline {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.toolbar-simple .filters {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+}
+.fig-summary {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 2px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-body);
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.chip.primary { border-color: rgba(59,130,246,0.35); background: rgba(59,130,246,0.12); color: var(--primary-hover); }
+.chip.success { border-color: rgba(34,197,94,0.35); background: rgba(34,197,94,0.12); color: var(--success); }
+.chip.warn { border-color: rgba(245,158,11,0.35); background: rgba(245,158,11,0.12); color: var(--warning); }
+.chip.danger { border-color: rgba(239,68,68,0.35); background: rgba(239,68,68,0.12); color: var(--danger); }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+.card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.btn-sm { padding: 0.45rem 0.75rem; font-size: 0.85rem; border-radius: 10px; }
+.img-frame {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin: 10px 0;
+}
+.fig-card h3 { margin: 0.35rem 0 0.5rem; }
+.fig-meta { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.8rem;
+}
+.section-header h2 { margin: 0; }
+.section-desc { margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem; }
+.sticky { position: sticky; top: 12px; z-index: 20; }
+.hidden { display: none !important; }
+
+/* Modal (home: click image -> large view + explanation) */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    z-index: 999;
+}
+.modal {
+    width: min(1180px, 100%);
+    max-height: min(92vh, 980px);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+}
+.modal-header h3 { margin: 6px 0 2px; }
+.modal-close {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 1;
+}
+.modal-close:hover { color: var(--text-main); border-color: var(--border-hover); }
+.modal-body {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 0;
+    min-height: 0;
+}
+.modal-left {
+    background: #fff;
+    border-right: 1px solid var(--border);
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+}
+.modal-left img {
+    width: 100%;
+    height: 100%;
+    max-height: 78vh;
+    object-fit: contain;
+}
+.modal-right {
+    padding: 14px 16px;
+    overflow: auto;
+}
+.modal-right h4 { margin: 0 0 8px; font-size: 1rem; }
+.modal-ul { margin: 8px 0 0; padding-left: 18px; color: var(--text-muted); font-size: 0.9rem; }
+.modal-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.img-button {
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: zoom-in;
+}
+@media (max-width: 920px) {
+    .modal-body { grid-template-columns: 1fr; }
+    .modal-left { border-right: none; border-bottom: 1px solid var(--border); }
+}
 """
 
 FIG_INFO: dict[str, dict[str, object]] = {
+    # A. 数据层（训练前）
     "fig_level_hist.png": {
-        "title": "用户能力（level）分布",
-        "summary": "用于验证“能力画像”是否合理，以及是否存在异常（全 0 / 全 1 / 过度集中）。",
+        "title": "level 分布（能力画像是否有区分度）",
+        "name": "level_hist",
+        "section": "A",
+        "tags": ["画像", "合理性检查"],
+        "summary": "用来检验能力画像 level 是否能把用户区分开（而不是全部挤在 0 或 1）。",
         "how": [
-            "横轴是 level（0~1），纵轴是人数；越靠右表示能力越强。",
-            "如果大部分用户集中在很窄的区间，说明画像区分度不足；如果两端极端多，可能是归一化/公式问题。",
+            "横轴是 level（0~1）：越靠右代表越强；纵轴是人数。",
+            "如果图像非常“尖”（几乎都在同一段），说明画像区分度不足或归一化不合理。",
         ],
         "tips": [
-            "结合 fig_user_activity.png 看：低活跃用户占比高时，level 可能更不稳定。",
-            "若 level 几乎不随时间变化，可能存在“看未来”的时间泄漏（需要严格按历史计算画像）。",
+            "低活跃用户占比高会让画像更噪（可结合 fig_user_activity.png 理解）。",
         ],
     },
     "fig_perseverance_hist.png": {
-        "title": "用户坚持度（perseverance）分布",
-        "summary": "用于验证“坚持/重试”画像是否有差异，以及是否过度饱和到 0 或 1。",
+        "title": "perseverance 分布（坚持/重试画像）",
+        "name": "perseverance_hist",
+        "section": "A",
+        "tags": ["画像", "合理性检查"],
+        "summary": "用来观察用户坚持度（重试倾向）的差异，避免全部接近 0 或 1。",
         "how": [
-            "横轴是 perseverance（0~1），纵轴是人数；数值越大表示平均重试/坚持更强。",
-            "如果大量用户都接近 1，说明归一化尺度可能太小或分母设置不合理。",
-        ],
-        "tips": [
-            "perseverance 通常受 attempt_no 分布影响，建议对照 fig_attemptno_vs_ac.png 解释。",
+            "横轴是 perseverance（0~1）：越大表示更愿意重试/更“耐心”。",
+            "如果大量用户都接近 1，通常是归一化尺度设置过小导致饱和。",
         ],
     },
     "fig_lang_dist.png": {
-        "title": "语言总体分布（按提交）",
-        "summary": "用于证明语言数据分布符合常识，并说明“语言特征”可能有区分信息。",
+        "title": "语言分布（按提交次数）",
+        "name": "language_dist",
+        "section": "A",
+        "tags": ["数据分布", "特征有效性"],
+        "summary": "检查语言总体占比是否符合常识，也用于说明语言特征有“可学习”的差异。",
         "how": [
-            "横轴是语言，纵轴是提交次数。",
-            "如果某些语言几乎为 0，可能是数据缺失/语言白名单不匹配；会导致 one-hot 特征弱或无效。",
+            "柱越高表示该语言提交越多；极端偏斜可能影响模型（某些语言 one-hot 近似无样本）。",
         ],
     },
     "fig_tag_dist.png": {
-        "title": "标签总体分布（题型占比）",
-        "summary": "用于检查题型空间是否失衡；极端失衡会让模型更偏向少数标签。",
+        "title": "标签分布（题型占比）",
+        "name": "tag_dist",
+        "section": "A",
+        "tags": ["数据分布", "特征有效性"],
+        "summary": "检查题库题型是否极端失衡；过度失衡会让模型/推荐更同质化。",
         "how": [
-            "横轴是标签，纵轴是出现次数（题目标签出现）。",
-            "少数标签特别高会造成训练样本集中，推荐也容易同质化。",
+            "柱越高表示该标签出现越多；如果少数标签压倒性占比，需要在报告里说明影响。",
         ],
     },
     "fig_user_activity.png": {
-        "title": "用户活跃度分布（提交次数）",
-        "summary": "用于展示平台常见长尾：少数高活跃用户 + 大量低活跃用户。",
+        "title": "用户活跃度分布（提交次数长尾）",
+        "name": "user_activity",
+        "section": "A",
+        "tags": ["数据分布", "长尾"],
+        "summary": "展示典型长尾：少数高活跃用户贡献大量提交，大量用户只有少量记录。",
         "how": [
-            "横轴是提交次数，纵轴是人数；通常会出现明显长尾。",
-            "低活跃用户多时，画像/偏好统计更不稳定，推荐更难做得很准。",
+            "横轴是提交次数，纵轴是人数；长尾越明显，冷启动/画像稳定性问题越突出。",
         ],
     },
     "fig_difficulty_vs_ac.png": {
-        "title": "难度 vs 通过率（AC率）",
-        "summary": "关键合理性校验：难度越高，AC 率应整体下降（负相关）。",
+        "title": "难度 vs AC 率（合理性校验）",
+        "name": "difficulty_vs_ac",
+        "section": "A",
+        "tags": ["合理性检查", "难度口径"],
+        "summary": "检验难度标注是否可信：通常难度越高，AC 率应整体下降。",
         "how": [
-            "横轴是难度（1~10），纵轴是通过率（0~1）。",
-            "如果曲线不降反升或剧烈抖动，可能是 difficulty 标注不可靠或数据量不足。",
+            "横轴是难度（1~10），纵轴是 AC 率（0~1）。",
+            "如果不降反升或大幅抖动，可能是 difficulty 质量/样本量问题。",
         ],
     },
     "fig_attemptno_vs_ac.png": {
-        "title": "尝试次数 vs 通过率（attempt_no）",
-        "summary": "用于解释“多次尝试与通过率”的关系，帮助理解 attempt_no 特征的作用。",
+        "title": "尝试次数 vs AC 率（学习/难度效应）",
+        "name": "attemptno_vs_ac",
+        "section": "A",
+        "tags": ["特征解释", "学习效应"],
+        "summary": "解释 attempt_no 与成功率关系：可能存在“越试越会”，也可能是“难题才会多次尝试”。",
         "how": [
             "横轴是 attempt_no（第几次尝试），纵轴是 AC 率。",
-            "如果 attempt_no 越大 AC 率越高，说明有学习/纠错效应；反之可能表示越难的题需要更多尝试。",
+            "趋势需要结合业务解释：上升=学习效应；下降=更难题带来更多尝试。",
         ],
     },
     "fig_tag_acrate.png": {
-        "title": "各标签平均通过率（AC率）",
-        "summary": "用于证明不同题型的难度差异，以及标签特征与 AC 的相关性。",
+        "title": "不同标签的平均 AC 率（题型差异）",
+        "name": "tag_acrate",
+        "section": "A",
+        "tags": ["特征有效性"],
+        "summary": "展示不同题型的平均通过率差异，用于说明标签特征有信息量。",
         "how": [
-            "横轴是标签，纵轴是平均 AC 率。",
-            "如果所有标签 AC 率几乎一样，说明标签区分信息较弱或统计口径有问题。",
+            "若所有标签 AC 率几乎相同，说明标签区分信息较弱或统计口径有误。",
         ],
     },
     "fig_lang_acrate.png": {
-        "title": "各语言平均通过率（AC率）",
-        "summary": "用于检验“语言特征”是否与通过率存在相关性（并不表示因果）。",
+        "title": "不同语言的平均 AC 率（相关性，不是因果）",
+        "name": "lang_acrate",
+        "section": "A",
+        "tags": ["特征有效性"],
+        "summary": "检查语言与通过率是否有关联（更多反映用户群体/题目选择偏差，不建议因果解读）。",
         "how": [
-            "横轴是语言，纵轴是平均 AC 率。",
-            "差异过大可能来自用户群体差异（强者偏某语言）或题目选择偏差，不建议做因果解读。",
+            "差异存在不代表“某语言更强”，而可能是强者更偏好某语言。",
         ],
     },
+    # B. 训练层（训练后）
     "fig_model_f1_compare.png": {
         "title": "模型 F1 对比（时间切分）",
-        "summary": "用于对比多个模型在测试窗口的整体分类质量（兼顾 Precision 与 Recall）。",
+        "name": "model_f1_compare",
+        "section": "B",
+        "tags": ["模型评估"],
+        "summary": "比较多个模型的整体分类效果（F1 兼顾 precision 与 recall）。",
         "how": [
-            "柱越高表示该模型对“是否 AC”预测更稳定。",
-            "如果不同模型差距很小，通常说明特征决定了上限；可考虑特征改进或更贴近推荐目标的建模方式。",
+            "柱越高表示在测试窗口更稳定；差距很小通常说明特征决定了上限。",
         ],
     },
+    # C. 推荐评估
     "fig_hitk_curve.png": {
-        "title": "Hit@K 曲线（多策略对比）",
-        "summary": "用于对比不同推荐策略的命中率：K 越大通常越容易命中，但边际收益会下降。",
+        "title": "Hit@K 对比曲线（多策略）",
+        "name": "hitk_compare",
+        "section": "C",
+        "tags": ["推荐评估", "对比实验"],
+        "summary": "对比不同推荐策略的命中率：看 model 是否明显高于 random，以及与 popular_train 的差距。",
         "how": [
-            "横轴是 K（推荐列表长度），纵轴是 Hit@K（测试窗口内是否命中过至少 1 道最终 AC 的题）。",
-            "重点看：model vs random 是否显著更高（证明模型有效）；popular_train 的位置可作为强基线参照。",
-            "growth 策略可能牺牲部分命中率以换取更适度的学习题目（需要结合难度分布图解释）。",
+            "横轴是 K（推荐列表长度），纵轴是 Hit@K（测试窗内是否命中过至少 1 道最终 AC 的题）。",
+            "重点：model vs random（证明有效）；popular_train 是强基线（热门题）参照。",
+        ],
+        "tips": [
+            "growth 策略可能牺牲部分命中率以换取更适度的学习题目，可结合难度分布图解释。",
         ],
     },
     "fig_reco_difficulty_hist.png": {
-        "title": "推荐题难度分布（用户案例）",
-        "summary": "用于解释推荐列表的“难度结构”，尤其是成长带（ZPD）策略是否在推“刚好够得着”的题。",
+        "title": "推荐题难度分布（单用户案例）",
+        "name": "reco_difficulty_hist",
+        "section": "C",
+        "tags": ["推荐解释", "成长带"],
+        "summary": "检查推荐列表的难度结构是否“不过易也不过难”。",
         "how": [
-            "横轴是难度（1~10），纵轴是推荐题数量。",
-            "如果全部集中在最低难度，推荐缺挑战；如果全部集中在最高难度，命中与可学习性都会差。",
+            "如果全部偏低：缺挑战；全部偏高：命中与可学习性都差。",
         ],
     },
     "fig_reco_coverage.png": {
-        "title": "推荐集中度与覆盖率",
-        "summary": "用于判断推荐是否过度集中在少数热门题（同质化），以及整体覆盖率。",
+        "title": "推荐集中度与覆盖率（Top20 题被推荐次数）",
+        "name": "reco_coverage",
+        "section": "C",
+        "tags": ["多样性", "同质化"],
+        "summary": "检查是否总推荐少数热门题（同质化）；标题中 coverage 越高说明覆盖越广。",
         "how": [
-            "柱状图展示 Top20 被推荐次数最多的题；标题里有 coverage（覆盖率）。",
-            "如果 Top20 柱子极高且 coverage 很低，说明推荐同质化严重；可用候选过滤/多样性重排改进。",
+            "Top20 柱子越集中且越高，说明推荐更同质化；coverage 越低说明推荐范围更窄。",
         ],
     },
 }
@@ -925,18 +1294,29 @@ FIG_INFO: dict[str, dict[str, object]] = {
 def _html_ul(items: list[str]) -> str:
     if not items:
         return ""
-    return "<ul style='margin:8px 0 0; padding-left:18px'>" + "".join(
+    return "<ul style='margin:8px 0 0; padding-left:18px; font-size:0.9rem; color:var(--text-muted)'>" + "".join(
         f"<li>{html.escape(x)}</li>" for x in items if str(x).strip()
     ) + "</ul>"
 
 
 def get_fig_info(filename: str) -> dict[str, object]:
     if filename in FIG_INFO:
-        return FIG_INFO[filename]
+        info = dict(FIG_INFO[filename])
+    else:
+        info = {}
+
+    # Common defaults
+    info.setdefault("title", filename)
+    info.setdefault("name", filename.removeprefix("fig_").removesuffix(".png"))
+    info.setdefault("section", "Z")
+    info.setdefault("tags", [])
+    info.setdefault("summary", "图表：用于展示训练数据、模型评估或推荐效果。")
+    info.setdefault("how", [])
+    info.setdefault("tips", [])
 
     # Confusion matrix family
     if filename.startswith("fig_cm_") or filename.startswith("fig_confusion_"):
-        name = filename.removeprefix("fig_cm_").removeprefix("fig_confusion_").removesuffix(".png")
+        name = filename.removesuffix(".png").removeprefix("fig_cm_").removeprefix("fig_confusion_")
         title_map = {
             "logreg": "逻辑回归",
             "tree": "决策树",
@@ -944,19 +1324,24 @@ def get_fig_info(filename: str) -> dict[str, object]:
             "svm_or_knn": "SVM/KNN（对比）",
         }
         model_name = title_map.get(name, name)
-        return {
-            "title": f"混淆矩阵：{model_name}",
-            "summary": "用于拆解模型错误类型（把 AC 当作正类），帮助解释 Precision/Recall 为什么会这样。",
-            "how": [
-                "矩阵对角线越高越好：左上=真负（预测未AC且确实未AC），右下=真正（预测AC且确实AC）。",
-                "右上=假正（误报AC，影响 Precision）；左下=假负（漏报AC，影响 Recall）。",
-            ],
-            "tips": [
-                "如果假负很多：模型保守，可能需要更强特征或调阈值；如果假正很多：模型过于乐观。",
-            ],
-        }
+        info.update(
+            {
+                "title": f"混淆矩阵：{model_name}",
+                "name": f"cm_{name}",
+                "section": "B",
+                "tags": ["模型评估", "误差分析"],
+                "summary": "把 AC 当作正类，拆解 TP/FP/FN/TN，解释 Precision/Recall 的来源。",
+                "how": [
+                    "对角线越高越好：左上=真负（预测未AC且确实未AC），右下=真正（预测AC且确实AC）。",
+                    "右上=假正（误报AC，Precision 下降），左下=假负（漏报AC，Recall 下降）。",
+                ],
+                "tips": [
+                    "假负多：模型偏保守；假正多：模型偏乐观。可通过特征/阈值/模型调整改善。",
+                ],
+            }
+        )
 
-    # Compare figures (strict vs leaky)
+    # strict vs leaky comparison figures
     if filename.startswith("fig_compare_"):
         key = filename.removesuffix(".png").removeprefix("fig_compare_")
         title_map = {
@@ -966,86 +1351,157 @@ def get_fig_info(filename: str) -> dict[str, object]:
             "pr": "PR 曲线对比（strict vs leaky）",
             "calibration": "校准曲线对比（strict vs leaky）",
         }
-        title = title_map.get(key, f"对比图：{key}")
-        return {
-            "title": title,
-            "summary": "用于判断旧口径是否“失真”（leaky 看未来会抬高指标），strict 更接近真实可部署效果。",
-            "how": [
-                "如果 leaky 明显高于 strict：说明过去评估被时间泄漏抬高；报告应以 strict 为准。",
-                "如果两者接近：说明时间泄漏影响不大，模型/特征更可信。",
-            ],
-            "tips": [
-                "ROC/PR 侧重排序能力；校准曲线侧重概率是否可信（是否过于乐观/保守）。",
-            ],
-        }
+        info.update(
+            {
+                "title": title_map.get(key, f"对比图：{key}"),
+                "name": f"compare_{key}",
+                "section": "D",
+                "tags": ["对比实验", "无泄漏验证"],
+                "summary": "对比 strict（可部署口径）与 leaky（看未来口径）；若 leaky 明显更高则过去评估失真。",
+                "how": [
+                    "strict 更接近上线真实效果；报告结论应以 strict 为准。",
+                    "ROC/PR 看排序能力；校准曲线看概率是否可信（是否过于乐观/保守）。",
+                ],
+            }
+        )
 
-    # Generic fallback based on filename patterns
-    if "acrate" in filename or "vs_ac" in filename:
-        return {
-            "title": filename,
-            "summary": "用于查看某个因素（难度/尝试次数/语言/标签）与 AC 率的关系，帮助验证特征是否有信息量。",
-            "how": [
-                "先看横轴是什么特征，纵轴通常是 AC 率（0~1）。",
-                "趋势是否符合直觉：难度升高通过率下降；标签/语言差异应可解释。",
-            ],
-        }
-    if "hist" in filename or "dist" in filename:
-        return {
-            "title": filename,
-            "summary": "分布图：用于检查数据是否符合常识、是否存在异常值/极端集中。",
-            "how": [
-                "看横轴变量的取值范围，纵轴是数量/人数。",
-                "重点关注：是否长尾、是否异常尖峰、是否出现不可能的取值。",
-            ],
-        }
-    if "coverage" in filename:
-        return {
-            "title": filename,
-            "summary": "用于检查推荐是否同质化（是否总推荐少数题），以及覆盖率是否足够。",
-            "how": [
-                "Top20 柱越高且越集中，说明推荐越同质化；覆盖率越高表示推荐更分散。",
-            ],
-        }
+    # Recommendation evaluation figure defaults
+    if "reco_" in filename or "hitk" in filename:
+        info.setdefault("section", "C")
 
-    return {
-        "title": filename,
-        "summary": "未登记说明：建议先看图的标题与坐标轴含义，再结合上下游图表做解释。",
-        "how": [
-            "若是训练相关图：结合 Models/metrics.csv 的指标理解好坏。",
-            "若是推荐相关图：结合 Reports/reco_metrics.csv 的 Hit@K/Precision@K/Recall@K/NDCG@K 理解好坏。",
-        ],
+    # Data distribution defaults
+    if any(x in filename for x in ("_hist", "_dist", "vs_ac", "acrate")):
+        info.setdefault("section", "A")
+
+    # Friendly fallback explanations by pattern (only when not provided)
+    if not info.get("how"):
+        if any(x in filename for x in ("_hist", "_dist")):
+            info["summary"] = info.get("summary") or "分布图：用于检查数据是否符合常识，以及是否存在异常集中/长尾。"
+            info["how"] = [
+                "先看横轴变量的取值范围（是否有异常值/不可能的取值）。",
+                "再看纵轴数量分布（是否长尾、是否异常尖峰、是否过度集中）。",
+            ]
+        elif "vs_ac" in filename or "acrate" in filename:
+            info["summary"] = info.get("summary") or "相关性图：用于查看某个因素与 AC 率的关系，验证特征是否有信息量。"
+            info["how"] = [
+                "横轴是特征（难度/尝试次数/语言/标签等），纵轴通常是 AC 率（0~1）。",
+                "趋势是否可解释：难度升高通过率下降；不同语言/标签存在差异。",
+            ]
+        elif "coverage" in filename:
+            info["summary"] = info.get("summary") or "覆盖率/集中度图：用于判断推荐是否同质化（是否总推荐少数题）。"
+            info["how"] = [
+                "Top20 柱越高且越集中，说明推荐越同质化；coverage 越高表示推荐更分散。",
+            ]
+
+    return info
+
+
+FIG_SECTION_INFO: dict[str, dict[str, str]] = {
+    "A": {
+        "title": "A. 数据层（训练前）",
+        "desc": "先证明数据与口径合理：分布符合常识、特征与 AC 率有可解释关联。",
+    },
+    "B": {
+        "title": "B. 训练层（训练后）",
+        "desc": "再展示模型效果与错误类型：F1 对比 + 混淆矩阵解释 precision/recall。",
+    },
+    "C": {
+        "title": "C. 推荐评估（Top‑K）",
+        "desc": "最后展示推荐效果：多策略对比（model / popular / random），并用案例与覆盖率解释推荐形态。",
+    },
+    "D": {
+        "title": "D. 严格无泄漏对比（strict vs leaky）",
+        "desc": "用于证明评估不失真：leaky 看未来会抬高指标，strict 更接近真实可部署效果。",
+    },
+    "Z": {"title": "其他图表", "desc": "未归类图表。"},
+}
+
+FIG_CANONICAL: dict[str, str] = {
+    # duplicates from older scripts
+    "fig_confusion_logreg.png": "fig_cm_logreg.png",
+    "fig_confusion_tree.png": "fig_cm_tree.png",
+    "fig_confusion_svm_linear.png": "fig_cm_svm_linear.png",
+}
+
+
+# ----------------------------------------------------------------------------
+# 共享 HTML 头部/尾部 (含 Dark Mode JS)
+# ----------------------------------------------------------------------------
+HTML_HEAD = """
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OJ 推荐系统</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script>
+    // 深色模式逻辑
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const sys = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && sys)) {
+        document.documentElement.classList.add('dark-mode');
+      } else {
+        document.documentElement.classList.add('light-mode');
+      }
+    })();
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark-mode')) {
+        html.classList.remove('dark-mode');
+        html.classList.add('light-mode');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.remove('light-mode');
+        html.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      }
     }
+  </script>
+</head>
+<body>
+  <div class="container">
+"""
 
-FIG_SECTIONS: list[tuple[str, list[str]]] = [
-    (
-        "A. 数据层可视化（训练前）",
-        [
-            "fig_level_hist.png",
-            "fig_perseverance_hist.png",
-            "fig_lang_dist.png",
-            "fig_tag_dist.png",
-            "fig_user_activity.png",
-            "fig_difficulty_vs_ac.png",
-            "fig_attemptno_vs_ac.png",
-            "fig_tag_acrate.png",
-            "fig_lang_acrate.png",
-        ],
-    ),
-    (
-        "B. 训练层可视化（训练后）",
-        [
-            "fig_model_f1_compare.png",
-            "fig_cm_logreg.png",
-            "fig_cm_tree.png",
-            "fig_cm_svm_or_knn.png",
-            "fig_cm_svm_linear.png",
-            "fig_confusion_logreg.png",
-            "fig_confusion_tree.png",
-            "fig_confusion_svm_linear.png",
-        ],
-    ),
-    ("C. 推荐评估（Top-K）", ["fig_hitk_curve.png", "fig_reco_difficulty_hist.png", "fig_reco_coverage.png"]),
-]
+HTML_HEADER_NAV = """
+    <header>
+      <div style="display:flex; align-items:center; gap:12px;">
+         <div style="font-size:24px;">🧠</div>
+         <div>
+            <h1 style="margin:0; font-size:1.5rem;">OJ 数据分析与推荐</h1>
+         </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:20px;">
+        <nav style="display:flex; gap:15px;">
+           <a href="/">首页大盘</a>
+           <a href="/student">学生画像</a>
+           <a href="/custom">自定义推荐</a>
+        </nav>
+        <button class="theme-toggle" onclick="toggleTheme()" title="切换深色/浅色模式">
+           ◑
+        </button>
+      </div>
+    </header>
+"""
+
+HTML_FOOTER = """
+    <footer style="margin-top:40px; padding-top:20px; border-top:1px solid var(--border); text-align:center; color:var(--text-muted); font-size:0.85rem;">
+        &copy; 2024 Intelligent OJ Recommender System
+    </footer>
+  </div> <!-- end container -->
+</body>
+</html>
+"""
+
+
+def html_head(page: str) -> str:
+    page = (page or "").strip().lower() or "page"
+    safe = "".join(ch for ch in page if (ch.isalnum() or ch in {"-", "_"}))
+    if not safe:
+        safe = "page"
+    return HTML_HEAD.replace("<body>", f'<body class="page page-{safe}">', 1)
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -1059,10 +1515,13 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:
         global RECO
         p = urlparse(self.path)
+
+        # 静态 CSS
         if p.path == "/static/style.css":
             self._send(200, STYLE_CSS.encode("utf-8"), "text/css; charset=utf-8")
             return
 
+        # API: Student Data
         if p.path == "/api/student":
             if RECO is None:
                 try:
@@ -1072,19 +1531,14 @@ class Handler(BaseHTTPRequestHandler):
                     return
 
             q = parse_qs(p.query or "")
-
-            def q1(name: str, default: str = "") -> str:
-                v = q.get(name, [])
-                return v[0] if v else default
-
             try:
-                user_id = int(q1("user_id", "1"))
-                pct = float(q1("pct", "0.5"))
-                k = int(q1("k", "10"))
-                min_p = float(q1("min_p", "0.4"))
-                max_p = float(q1("max_p", "0.7"))
+                user_id = int(q.get("user_id", ["1"])[0])
+                pct = float(q.get("pct", ["0.5"])[0])
+                k = int(q.get("k", ["10"])[0])
+                min_p = float(q.get("min_p", ["0.4"])[0])
+                max_p = float(q.get("max_p", ["0.7"])[0])
             except Exception:
-                self._send(400, "参数格式错误".encode("utf-8"), "text/plain; charset=utf-8")
+                self._send(400, "参数错误".encode("utf-8"), "text/plain; charset=utf-8")
                 return
 
             try:
@@ -1103,196 +1557,240 @@ class Handler(BaseHTTPRequestHandler):
             self._send(200, body, "application/json; charset=utf-8")
             return
 
+        # Page: Student Dashboard
         if p.path == "/student":
-            body = """
-<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>单学生动态展示 - OJ系统</title>
-  <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-  <div class="container">
-    <div style="margin-bottom: 20px;">
-      <a href="/" style="font-size: 14px;">&larr; 返回首页</a>
-      <span style="margin: 0 10px; color:#ccc">|</span>
-      <a href="/custom" style="font-size: 14px;">自定义推荐</a>
-    </div>
+            if RECO is None:
+                try:
+                    RECO = Recommender()
+                except Exception as e:
+                    self._send(500, f"WebApp 初始化失败：{e}".encode("utf-8"), "text/plain; charset=utf-8")
+                    return
 
-    <h1>👤 单学生动态展示</h1>
-    <div class="card">
-      <div class="subgrid">
-        <div>
-          <label for="user_id">user_id</label>
-          <input id="user_id" type="text" value="1" placeholder="例如 1">
-          <div class="muted">从 <span style="font-family:monospace">CleanData/submissions.csv</span> 选择存在的 user_id。</div>
-        </div>
-        <div>
-          <label for="pct">时间点（按该学生提交序列百分位）</label>
-          <div class="row">
-            <input id="pct" type="range" min="0" max="1" step="0.01" value="0.50">
-            <output id="pct_out">0.50</output>
+            user_ids = sorted([int(x) for x in RECO._subs_by_user.keys()]) if getattr(RECO, "_subs_by_user", None) else []
+            if not user_ids:
+                user_ids = [1]
+            default_uid = 1 if 1 in user_ids else user_ids[0]
+            user_opts = "".join(
+                f'<option value="{uid}"{" selected" if uid == default_uid else ""}>{uid}</option>' for uid in user_ids
+            )
+
+            body = f"""
+{html_head("student")}
+{HTML_HEADER_NAV}
+
+    <div class="grid">
+        <!-- Controls -->
+        <div class="card">
+          <h3>👤 学生筛选</h3>
+          <div style="margin-bottom:1rem;">
+            <label for="user_id">选择学生（user_id）</label>
+            <select id="user_id">{user_opts}</select>
+            <div class="help">提示：可在下拉框中键入数字快速定位；也可用下面输入框过滤列表。</div>
+            <input id="user_filter" type="text" placeholder="过滤 user_id（例如：12 / 1001 / 42）" style="margin-top:10px;">
+            <div style="display:flex; gap:10px; margin-top:10px;">
+                <button id="refresh_btn" class="btn-primary" style="flex:1;">分析</button>
+            </div>
           </div>
-          <div class="muted">0=最早，1=最新；用于生成 cutoff_submission_id。</div>
+          <div class="muted" id="status">准备就绪</div>
         </div>
-        <div>
-          <label for="k">Top K</label>
-          <div class="row">
-            <input id="k" type="range" min="1" max="50" step="1" value="10">
-            <output id="k_out">10</output>
-          </div>
-        </div>
-        <div>
-          <label>ZPD 区间</label>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+
+        <div class="card">
+          <h3>⚙️ 推荐参数</h3>
+          <div class="subgrid">
             <div>
-              <label style="font-size:12px">min_p</label>
+              <label>历史切片比例（Cutoff Pct）</label>
+              <div class="row">
+                <input id="pct" type="range" min="0" max="1" step="0.01" value="0.50">
+                <output id="pct_out">0.50</output>
+              </div>
+              <div class="help">把该学生提交序列的前 <span class="mono">pct</span> 作为“历史”，用来重算画像与推荐；越大越接近“当前”。</div>
+            </div>
+            <div>
+              <label>推荐数量（Top K）</label>
+              <div class="row">
+                <input id="k" type="range" min="1" max="50" step="1" value="10">
+                <output id="k_out">10</output>
+              </div>
+              <div class="help">输出 Top‑K 推荐列表长度。若成长带内题不足，会自动用高分题补齐。</div>
+            </div>
+            <div>
+              <label>成长带成功率下限（min_p）</label>
               <div class="row">
                 <input id="min_p" type="range" min="0" max="1" step="0.01" value="0.40">
                 <output id="min_p_out">0.40</output>
               </div>
+              <div class="help">只优先推荐预测通过率 <span class="mono">P(AC)</span> ≥ min_p 的题，避免太难。</div>
             </div>
             <div>
-              <label style="font-size:12px">max_p</label>
+              <label>成长带成功率上限（max_p）</label>
               <div class="row">
                 <input id="max_p" type="range" min="0" max="1" step="0.01" value="0.70">
                 <output id="max_p_out">0.70</output>
               </div>
+              <div class="help">只优先推荐 <span class="mono">P(AC)</span> ≤ max_p 的题，避免“太容易刷分”。</div>
             </div>
           </div>
-          <div class="muted">优先挑选 P(AC) 落在区间内的题目，不足再用高分补齐。</div>
         </div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">📊 用户画像快照（按历史重算）</h3>
+      <div class="help">说明：下列画像/偏好仅使用 cutoff 之前的历史提交重算（不看未来），避免展示“看起来很准但其实把未来算进来了”的时间泄漏。</div>
+      <div class="muted" id="meta" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:10px;">
+        请点击“分析”加载数据...
       </div>
-      <div class="actions">
-        <button class="btn-secondary" id="refresh_btn" type="button">刷新</button>
-        <div class="muted" id="status" style="align-self:center"></div>
-      </div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+          <h3>时间轴与成长轨迹</h3>
+          <div class="chart-container"><img id="img_timeline" class="viz-img" alt="Timeline"></div>
+          <div class="help">红点=未 AC，绿点=AC；蓝色竖线=历史切片点；蓝色星标=推荐题难度（落在切片点之后）。</div>
+        </div>
+        <div class="card">
+          <h3>能力雷达对比</h3>
+          <div class="chart-container"><img id="img_radar" class="viz-img" alt="Radar"></div>
+          <div class="help">对比“历史行为偏好”与“推荐列表”在语言/标签维度上的形状差异，用于解释推荐是否贴合该学生。</div>
+        </div>
     </div>
 
     <div class="card">
-      <h2 style="margin-top:0">📌 当前状态</h2>
-      <div class="muted" id="meta"></div>
+        <h3>难度阶梯与 P(AC)</h3>
+        <div class="chart-container"><img id="img_ladder" class="viz-img" alt="Ladder"></div>
+        <div class="help">按难度阶梯展示题目预测通过率：通常期望“成长带（0.4~0.7）”附近有较多可选题。</div>
     </div>
 
     <div class="card">
-      <h2 style="margin-top:0">1) 时间轴散点</h2>
-      <img id="img_timeline" style="width:100%; max-width:1100px" alt="timeline_scatter">
-    </div>
-
-    <div class="card">
-      <h2 style="margin-top:0">2) 雷达对比（历史 vs 推荐）</h2>
-      <img id="img_radar" style="width:100%; max-width:1100px" alt="radar_compare">
-    </div>
-
-    <div class="card">
-      <h2 style="margin-top:0">3) 难度阶梯（推荐列表）</h2>
-      <img id="img_ladder" style="width:100%; max-width:1100px" alt="difficulty_ladder">
-    </div>
-
-    <div class="card" style="padding:0; overflow:hidden;">
-      <div style="padding:24px 24px 0"><h2 style="margin:0">Top-K 推荐列表</h2></div>
-      <div style="overflow-x:auto; padding: 16px 24px 24px;">
+      <h3>📋 推荐题目列表</h3>
+      <div class="table-wrapper">
         <table>
           <thead>
             <tr>
-              <th width="60">Rank</th>
-              <th width="90">Problem</th>
-              <th>Title</th>
+              <th width="50">#</th>
+              <th width="80">ID</th>
+              <th>题目名称</th>
               <th width="80">难度</th>
-              <th>Tags</th>
-              <th width="90">Language</th>
-              <th width="90">P(AC)</th>
-              <th width="90">In ZPD</th>
+              <th>核心标签</th>
+              <th width="100">语言</th>
+              <th width="100">预测通过率</th>
+              <th width="80">ZPD</th>
             </tr>
           </thead>
           <tbody id="reco_rows"></tbody>
         </table>
       </div>
     </div>
-  </div>
 
 <script>
-function bindOut(id, outId, fmt) {
+function bindOut(id, outId, fmt) {{
   const el = document.getElementById(id);
   const out = document.getElementById(outId);
   const update = () => out.textContent = fmt(el.value);
   el.addEventListener("input", update);
   update();
-}
+}}
 bindOut("pct","pct_out",(v)=>Number(v).toFixed(2));
 bindOut("k","k_out",(v)=>String(v));
 bindOut("min_p","min_p_out",(v)=>Number(v).toFixed(2));
 bindOut("max_p","max_p_out",(v)=>Number(v).toFixed(2));
 
-function esc(s) {
+function esc(s) {{
   return String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
-}
+}}
 
-async function refresh() {
+async function refresh() {{
   const status = document.getElementById("status");
-  status.textContent = "加载中...";
-  const user_id = document.getElementById("user_id").value.trim() || "1";
+  const btn = document.getElementById("refresh_btn");
+  status.textContent = "正在计算...";
+  btn.disabled = true;
+  btn.textContent = "计算中...";
+
+  const user_id = String(document.getElementById("user_id").value || "").trim() || "1";
   const pct = document.getElementById("pct").value;
   const k = document.getElementById("k").value;
   const min_p = document.getElementById("min_p").value;
   const max_p = document.getElementById("max_p").value;
 
-  const url = `/api/student?user_id=${encodeURIComponent(user_id)}&pct=${encodeURIComponent(pct)}&k=${encodeURIComponent(k)}&min_p=${encodeURIComponent(min_p)}&max_p=${encodeURIComponent(max_p)}`;
-  let data;
-  try {
+  const url = `/api/student?user_id=${{encodeURIComponent(user_id)}}&pct=${{encodeURIComponent(pct)}}&k=${{encodeURIComponent(k)}}&min_p=${{encodeURIComponent(min_p)}}&max_p=${{encodeURIComponent(max_p)}}`;
+
+  try {{
     const resp = await fetch(url);
     const text = await resp.text();
     if(!resp.ok) throw new Error(text);
-    data = JSON.parse(text);
-  } catch (e) {
-    status.textContent = "失败：" + (e && e.message ? e.message : e);
-    return;
-  }
+    const data = JSON.parse(text);
 
-  const m = data.meta || {};
-  document.getElementById("meta").innerHTML =
-    `<div><b>user_id</b>: ${m.user_id} &nbsp; <b>cutoff</b>: ${m.cutoff_submission_id} (pct=${Number(m.cutoff_pct).toFixed(2)})</div>` +
-    `<div><b>hist_submissions</b>: ${m.hist_submissions} &nbsp; <b>hist_solved</b>: ${m.hist_solved}</div>` +
-    `<div><b>level</b>: ${Number(m.level).toFixed(3)} &nbsp; <b>perseverance</b>: ${Number(m.perseverance).toFixed(3)} &nbsp; <b>top_language</b>: ${esc(m.top_language)}</div>` +
-    `<div><b>ZPD</b>: [${Number((m.zpd||[])[0] ?? 0).toFixed(2)}, ${Number((m.zpd||[])[1] ?? 1).toFixed(2)}]</div>`;
+    // Render Meta
+    const m = data.meta || {{}};
+    document.getElementById("meta").innerHTML =
+      `<div><span class="muted">切片点 submission_id（时间近似）：</span> <b>${{m.cutoff_submission_id}}</b></div>` +
+      `<div><span class="muted">历史提交数：</span> <b>${{m.hist_submissions}}</b></div>` +
+      `<div><span class="muted">历史已 AC 题数：</span> <b>${{m.hist_solved}}</b></div>` +
+      `<div><span class="muted">能力 level（0~1）：</span> <b>${{Number(m.level).toFixed(3)}}</b></div>` +
+      `<div><span class="muted">坚持度 perseverance（0~1）：</span> <b>${{Number(m.perseverance).toFixed(3)}}</b></div>` +
+      `<div><span class="muted">历史常用语言：</span> <b>${{esc(m.top_language)}}</b></div>` +
+      `<div><span class="muted">成长带（P(AC)）：</span> <b>[${{Number((m.zpd||[])[0] ?? 0).toFixed(2)}}, ${{Number((m.zpd||[])[1] ?? 0).toFixed(2)}}]</b></div>`;
 
-  const imgs = data.images || {};
-  document.getElementById("img_timeline").src = "data:image/png;base64," + (imgs.timeline_scatter || "");
-  document.getElementById("img_radar").src = "data:image/png;base64," + (imgs.radar_compare || "");
-  document.getElementById("img_ladder").src = "data:image/png;base64," + (imgs.difficulty_ladder || "");
+    // Render Images
+    const imgs = data.images || {{}};
+    document.getElementById("img_timeline").src = "data:image/png;base64," + (imgs.timeline_scatter || "");
+    document.getElementById("img_radar").src = "data:image/png;base64," + (imgs.radar_compare || "");
+    document.getElementById("img_ladder").src = "data:image/png;base64," + (imgs.difficulty_ladder || "");
 
-  const rows = data.recommendations || [];
-  const tbody = document.getElementById("reco_rows");
-  tbody.innerHTML = rows.map(r => {
-    const p = Number(r.p_ac);
-    const scoreStyle = p >= 0.7 ? "color:#166534;font-weight:700" : (p >= 0.4 ? "color:#ca8a04;font-weight:700" : "color:#b91c1c;font-weight:700");
-    return `<tr>` +
-      `<td>${r.rank}</td>` +
-      `<td style="font-family:monospace;color:#666">#${r.problem_id}</td>` +
-      `<td>${esc(r.title)}</td>` +
-      `<td><span class="pill">${r.difficulty}</span></td>` +
-      `<td class="muted">${esc(r.tags)}</td>` +
-      `<td>${esc(r.language)}</td>` +
-      `<td style="${scoreStyle}">${p.toFixed(4)}</td>` +
-      `<td>${r.in_growth_band ? "1" : "0"}</td>` +
-    `</tr>`;
-  }).join("");
+    // Render Table
+    const rows = data.recommendations || [];
+    const tbody = document.getElementById("reco_rows");
+    tbody.innerHTML = rows.map(r => {{
+      const p = Number(r.p_ac);
+      const scoreClass = p >= 0.7 ? "color:var(--success)" : (p >= 0.4 ? "color:var(--warning)" : "color:var(--danger)");
+      return `<tr>` +
+        `<td>${{r.rank}}</td>` +
+        `<td style="font-family:monospace" class="muted">#${{r.problem_id}}</td>` +
+        `<td>${{esc(r.title)}}</td>` +
+        `<td><span class="pill">${{r.difficulty}}</span></td>` +
+        `<td class="muted" style="font-size:0.85em">${{esc(r.tags)}}</td>` +
+        `<td>${{esc(r.language)}}</td>` +
+        `<td style="font-weight:700;${{scoreClass}}">${{p.toFixed(3)}}</td>` +
+        `<td>${{r.in_growth_band ? "✅" : ""}}</td>` +
+      `</tr>`;
+    }}).join("");
 
-  status.textContent = "完成";
-}
+    status.textContent = "计算完成";
+  }} catch (e) {{
+    status.textContent = "错误：" + (e.message || e);
+  }} finally {{
+    btn.disabled = false;
+    btn.textContent = "分析";
+  }}
+}}
 
 document.getElementById("refresh_btn").addEventListener("click", refresh);
+document.getElementById("user_id").addEventListener("change", refresh);
 ["pct","k","min_p","max_p"].forEach(id => document.getElementById(id).addEventListener("change", refresh));
+
+// dropdown filter
+document.getElementById("user_filter").addEventListener("input", () => {{
+  const q = String(document.getElementById("user_filter").value || "").trim();
+  const sel = document.getElementById("user_id");
+  const opts = Array.from(sel.options || []);
+  for (const o of opts) {{
+    o.hidden = !!q && !String(o.value).includes(q);
+  }}
+  // if current selection hidden, jump to first visible
+  const cur = sel.options[sel.selectedIndex];
+  if (cur && cur.hidden) {{
+    const first = opts.find(x => !x.hidden);
+    if (first) sel.value = first.value;
+  }}
+}});
+// Auto load on first view
 refresh();
 </script>
-</body>
-</html>
+{HTML_FOOTER}
 """.encode("utf-8")
             self._send(200, body, "text/html; charset=utf-8")
             return
 
+        # Serve Images
         if p.path.startswith("/reports/"):
             name = p.path.removeprefix("/reports/").lstrip("/")
             if "/" in name or ".." in name or not name.endswith(".png"):
@@ -1305,100 +1803,307 @@ refresh();
             self._send(200, path.read_bytes(), "image/png")
             return
 
+        # Page: Index (Visualizations)
         if p.path in {"/", "/index.html"}:
             figs = sorted([x.name for x in REPORTS_DIR.glob("fig_*.png")])
             figs_set = set(figs)
 
-            def render_card(fn: str) -> str:
+            # canonicalize (hide duplicates)
+            canonical_figs: list[str] = []
+            for fn in figs:
+                if FIG_CANONICAL.get(fn, fn) != fn and FIG_CANONICAL.get(fn, fn) in figs_set:
+                    continue
+                canonical_figs.append(fn)
+
+            def render_fig_card(fn: str) -> str:
                 info = get_fig_info(fn)
                 title = str(info.get("title") or fn)
+                name = str(info.get("name") or fn.removeprefix("fig_").removesuffix(".png"))
                 summary = str(info.get("summary") or "")
-                how = info.get("how") if isinstance(info.get("how"), list) else []
-                tips = info.get("tips") if isinstance(info.get("tips"), list) else []
-                details = ""
-                blocks: list[str] = []
-                if how:
-                    blocks.append("<div class='muted' style='margin-top:6px'>如何理解：</div>" + _html_ul([str(x) for x in how]))
-                if tips:
-                    blocks.append("<div class='muted' style='margin-top:8px'>常见解读/提示：</div>" + _html_ul([str(x) for x in tips]))
-                if blocks:
-                    details = (
-                        "<details style='margin-top:10px'>"
-                        "<summary>展开：这张图怎么看</summary>"
-                        + "".join(blocks)
-                        + "</details>"
-                    )
-                return (
-                    f'<div class="card">'
-                    f'<div class="muted" style="font-family:monospace">{html.escape(fn)}</div>'
-                    f'<h3 style="margin:8px 0 6px">{html.escape(title)}</h3>'
-                    f'<a href="/reports/{html.escape(fn)}" target="_blank">'
-                    f'<img src="/reports/{html.escape(fn)}" alt="{html.escape(fn)}" loading="lazy"></a>'
-                    f'<div class="muted">{html.escape(summary)}</div>'
-                    f"{details}"
-                    f"</div>"
-                )
+                section = str(info.get("section") or "Z")
 
-            used: set[str] = set()
-            section_blocks: list[str] = []
-            for sec_title, order in FIG_SECTIONS:
-                present = [fn for fn in order if fn in figs_set]
-                used.update(present)
-                if not present:
-                    continue
-                section_blocks.append(
-                    f"<section style='margin-top:24px'>"
-                    f"<h2>{html.escape(sec_title)}</h2>"
-                    f"<div class='grid'>{''.join(render_card(fn) for fn in present)}</div>"
-                    f"</section>"
-                )
+                chip = "chip"
+                if section == "A":
+                    chip += " primary"
+                elif section == "B":
+                    chip += " success"
+                elif section == "C":
+                    chip += " warn"
+                elif section == "D":
+                    chip += " danger"
 
-            others = [fn for fn in figs if fn not in used]
-            if others:
-                section_blocks.append(
-                    f"<section style='margin-top:24px'>"
-                    f"<h2>其他图表</h2>"
-                    f"<div class='grid'>{''.join(render_card(fn) for fn in others)}</div>"
-                    f"</section>"
-                )
+                return f"""
+                <div class="card fig-card" data-fn="{html.escape(fn)}" data-title="{html.escape(title)}" data-section="{html.escape(section)}" data-name="{html.escape(name)}">
+                  <div class="fig-meta" style="margin-bottom:6px">
+                    <span class="{chip}">{html.escape(FIG_SECTION_INFO.get(section, FIG_SECTION_INFO['Z'])['title'].split('.')[0])}</span>
+                    <span class="chip mono">{html.escape(name)}</span>
+                  </div>
+                  <h3>{html.escape(title)}</h3>
+                  <div class="img-frame">
+                    <button type="button" class="img-button" onclick="openFigModal('{html.escape(fn)}')" title="点击查看大图与解读">
+                      <img src="/reports/{html.escape(fn)}" loading="lazy" alt="{html.escape(fn)}">
+                    </button>
+                  </div>
+                  <div class="muted fig-summary">{html.escape(summary)}</div>
+                </div>
+                """
+
+            # group by section
+            sec_to_figs: dict[str, list[str]] = {k: [] for k in FIG_SECTION_INFO.keys()}
+            for fn in canonical_figs:
+                sec = str(get_fig_info(fn).get("section") or "Z")
+                if sec not in sec_to_figs:
+                    sec_to_figs[sec] = []
+                sec_to_figs[sec].append(fn)
+
+            section_order = ["A", "B", "C", "D", "Z"]
+            sections_html = ""
+            total = len(canonical_figs)
+            if total == 0:
+                sections_html = '<div class="card muted" style="text-align:center; padding:40px;">暂无图表文件，请先运行分析脚本生成 Reports/fig_*.png。</div>'
+            else:
+                for sec in section_order:
+                    fns = sec_to_figs.get(sec, [])
+                    if not fns:
+                        continue
+                    meta = FIG_SECTION_INFO.get(sec, FIG_SECTION_INFO["Z"])
+                    sections_html += f"""
+                    <section data-sec="{sec}" id="sec-{sec}">
+                      <div class="section-header">
+                        <div>
+                          <h2>{html.escape(meta['title'])}</h2>
+                          <div class="section-desc">{html.escape(meta['desc'])}</div>
+                        </div>
+                        <div class="chip mono">count: {len(fns)}</div>
+                      </div>
+                      <div class="grid">
+                        {''.join(render_fig_card(fn) for fn in fns)}
+                      </div>
+                    </section>
+                    """
+
+            # build meta for modal rendering (json serializable)
+            fig_meta: dict[str, dict[str, object]] = {}
+            for fn in canonical_figs:
+                info = get_fig_info(fn)
+                fig_meta[fn] = {
+                    "title": str(info.get("title") or fn),
+                    "name": str(info.get("name") or fn.removeprefix("fig_").removesuffix(".png")),
+                    "section": str(info.get("section") or "Z"),
+                    "tags": [str(x) for x in (info.get("tags") or [])] if isinstance(info.get("tags"), list) else [],
+                    "summary": str(info.get("summary") or ""),
+                    "how": [str(x) for x in (info.get("how") or [])] if isinstance(info.get("how"), list) else [],
+                    "tips": [str(x) for x in (info.get("tips") or [])] if isinstance(info.get("tips"), list) else [],
+                }
+
             body = f"""
-<!doctype html>
-<html lang="zh-CN">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OJ 可视化与推荐系统</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-    <div class="container">
-        <header style="border-bottom: 1px solid #e2e8f0; margin-bottom: 30px; padding-bottom: 20px;">
-            <h1>OJ 数据可视化与题目推荐</h1>
-            <div class="header-actions">
-                <a href="/custom" style="display:inline-flex; align-items:center; background:var(--primary-color); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-                    <span>👉 进入个性化题目推荐</span>
-                </a>
-                <a href="/student" style="display:inline-flex; align-items:center; background:#fff; color:var(--primary-color); padding:10px 20px; border-radius:8px; text-decoration:none; border:1px solid var(--border-color);">
-                    <span>📈 单学生动态展示</span>
-                </a>
-                <span class="muted">基于机器学习模型的智能推荐系统</span>
+{html_head("home")}
+{HTML_HEADER_NAV}
+    <div class="card sticky">
+      <div class="toolbar-simple">
+        <div class="topline">
+          <div>
+            <h2 style="margin:0 0 6px">📈 首页大盘</h2>
+            <div class="muted">搜索图表并点击图片查看解读（支持大图/要点/提示）。</div>
+          </div>
+          <div class="chip mono">总图数: {total}</div>
+        </div>
+        <div class="filters">
+          <div>
+            <label for="q">搜索（标题/短名/文件名）</label>
+            <input id="q" type="text" placeholder="例如：difficulty / hitk / cm / calibration ...">
+          </div>
+          <details>
+            <summary>筛选与跳转</summary>
+            <div style="margin-top:10px">
+              <div class="muted" style="margin-bottom:10px">
+                命名约定：<span class="mono">fig_*</span> 图表；<span class="mono">fig_cm_*</span> 混淆矩阵；<span class="mono">fig_compare_*</span> strict vs leaky 对比。
+              </div>
+              <div class="muted" style="margin-bottom:10px">
+                快速跳转：
+                <a class="mono" href="#sec-A">A</a> /
+                <a class="mono" href="#sec-B">B</a> /
+                <a class="mono" href="#sec-C">C</a> /
+                <a class="mono" href="#sec-D">D</a>
+              </div>
+              <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+                <span class="chip"><input id="fA" type="checkbox" checked style="margin-right:6px">A</span>
+                <span class="chip"><input id="fB" type="checkbox" checked style="margin-right:6px">B</span>
+                <span class="chip"><input id="fC" type="checkbox" checked style="margin-right:6px">C</span>
+                <span class="chip"><input id="fD" type="checkbox" checked style="margin-right:6px">D</span>
+                <span class="chip"><input id="fZ" type="checkbox" checked style="margin-right:6px">其他</span>
+                <button class="btn btn-secondary btn-sm" type="button" onclick="resetFilters()">重置</button>
+              </div>
             </div>
-        </header>
-
-        <main>
-            <div class="card">
-                <h2 style="margin-top:0">📊 图表说明</h2>
-                <p class="muted">A 类用于证明“数据分布合理/符合常识”；B 类用于展示模型效果与误差类型；C 类用于推荐评估（Hit@K、覆盖率、案例）。</p>
-            </div>
-            {''.join(section_blocks) if figs else '<div class="card muted">暂无图表，请先运行分析脚本。</div>'}
-        </main>
+          </details>
+        </div>
+      </div>
     </div>
-</body>
-</html>
+
+    <div id="sections">
+      {sections_html}
+    </div>
+
+    <div id="fig_modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-label="图表大图与解读">
+      <div class="modal">
+        <div class="modal-header">
+          <div style="min-width:0">
+            <div class="fig-meta" style="margin-bottom:6px">
+              <span id="modal_chip" class="chip">Z</span>
+              <span id="modal_name" class="chip mono"></span>
+              <span id="modal_tags" style="display:flex; gap:6px; flex-wrap:wrap;"></span>
+            </div>
+            <h3 id="modal_title"></h3>
+            <div id="modal_path" class="muted mono"></div>
+          </div>
+          <button class="modal-close" type="button" onclick="closeFigModal()" title="关闭">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-left">
+            <img id="modal_img" alt="figure">
+          </div>
+          <div class="modal-right">
+            <div style="margin-bottom:14px">
+              <h4>这张图的作用</h4>
+              <div id="modal_summary" class="muted"></div>
+            </div>
+            <div style="margin-bottom:14px">
+              <h4>这张图怎么看</h4>
+              <ul id="modal_how" class="modal-ul"></ul>
+            </div>
+            <div id="modal_tips_block" style="margin-bottom:14px">
+              <h4>提示 / 常见误读</h4>
+              <ul id="modal_tips" class="modal-ul"></ul>
+            </div>
+            <div class="modal-actions">
+              <a id="modal_open" class="btn btn-secondary btn-sm" target="_blank" rel="noreferrer">新窗口打开</a>
+              <a id="modal_download" class="btn btn-secondary btn-sm" download>下载图片</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.FIG_META = {json.dumps(fig_meta, ensure_ascii=False, separators=(",", ":"))};
+
+      function copyText(t) {{
+        try {{
+          navigator.clipboard.writeText(t);
+        }} catch (e) {{
+          const ta = document.createElement('textarea');
+          ta.value = t;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          ta.remove();
+        }}
+      }}
+
+      function resetFilters() {{
+        document.getElementById('q').value = '';
+        ['fA','fB','fC','fD','fZ'].forEach(id => document.getElementById(id).checked = true);
+        applyFilters();
+      }}
+
+      function applyFilters() {{
+        const q = (document.getElementById('q').value || '').trim().toLowerCase();
+        const allow = {{
+          'A': document.getElementById('fA').checked,
+          'B': document.getElementById('fB').checked,
+          'C': document.getElementById('fC').checked,
+          'D': document.getElementById('fD').checked,
+          'Z': document.getElementById('fZ').checked,
+        }};
+
+        const cards = Array.from(document.querySelectorAll('.fig-card'));
+        for (const c of cards) {{
+          const sec = c.getAttribute('data-section') || 'Z';
+          const text = (c.getAttribute('data-title') || '') + ' ' + (c.getAttribute('data-name') || '') + ' ' + (c.getAttribute('data-fn') || '');
+          const ok = (allow[sec] ?? true) && (!q || text.toLowerCase().includes(q));
+          c.classList.toggle('hidden', !ok);
+        }}
+
+        // hide empty sections
+        const sections = Array.from(document.querySelectorAll('#sections section'));
+        for (const s of sections) {{
+          const any = s.querySelector('.fig-card:not(.hidden)');
+          s.classList.toggle('hidden', !any);
+        }}
+      }}
+
+      document.getElementById('q').addEventListener('input', applyFilters);
+      ['fA','fB','fC','fD','fZ'].forEach(id => document.getElementById(id).addEventListener('change', applyFilters));
+      applyFilters();
+
+      function _escHtml(s) {{
+        return String(s || "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
+      }}
+      function _chipClass(section) {{
+        if (section === 'A') return 'chip primary';
+        if (section === 'B') return 'chip success';
+        if (section === 'C') return 'chip warn';
+        if (section === 'D') return 'chip danger';
+        return 'chip';
+      }}
+      function openFigModal(fn) {{
+        const meta = (window.FIG_META || {{}})[fn] || {{}};
+        const title = meta.title || fn;
+        const name = meta.name || fn.replace(/^fig_/, '').replace(/\\.png$/, '');
+        const section = meta.section || 'Z';
+        const tags = Array.isArray(meta.tags) ? meta.tags : [];
+        const how = Array.isArray(meta.how) ? meta.how : [];
+        const tips = Array.isArray(meta.tips) ? meta.tips : [];
+
+        const overlay = document.getElementById('fig_modal');
+        const chip = document.getElementById('modal_chip');
+        chip.className = _chipClass(section);
+        chip.textContent = section;
+
+        document.getElementById('modal_name').textContent = name;
+        document.getElementById('modal_title').textContent = title;
+        document.getElementById('modal_path').textContent = `Reports/${{fn}}`;
+        document.getElementById('modal_img').src = `/reports/${{fn}}`;
+        document.getElementById('modal_summary').textContent = meta.summary || '（暂无说明）';
+
+        const tagWrap = document.getElementById('modal_tags');
+        tagWrap.innerHTML = tags.slice(0, 8).map(t => `<span class="chip">${{_escHtml(t)}}</span>`).join('');
+
+        const howEl = document.getElementById('modal_how');
+        howEl.innerHTML = (how.length ? how : ['（暂无具体解读条目）']).map(x => `<li>${{_escHtml(x)}}</li>`).join('');
+
+        const tipsBlock = document.getElementById('modal_tips_block');
+        const tipsEl = document.getElementById('modal_tips');
+        tipsEl.innerHTML = tips.map(x => `<li>${{_escHtml(x)}}</li>`).join('');
+        tipsBlock.style.display = tips.length ? '' : 'none';
+
+        const openA = document.getElementById('modal_open');
+        const dlA = document.getElementById('modal_download');
+        openA.href = `/reports/${{fn}}`;
+        dlA.href = `/reports/${{fn}}`;
+
+        overlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }}
+      function closeFigModal() {{
+        const overlay = document.getElementById('fig_modal');
+        overlay.classList.add('hidden');
+        document.body.style.overflow = '';
+      }}
+      document.getElementById('fig_modal').addEventListener('click', (e) => {{
+        if (e.target && e.target.id === 'fig_modal') closeFigModal();
+      }});
+      document.addEventListener('keydown', (e) => {{
+        if (e.key === 'Escape') closeFigModal();
+      }});
+    </script>
+
+{HTML_FOOTER}
 """.encode("utf-8")
             self._send(200, body, "text/html; charset=utf-8")
             return
 
+        # Page: Custom Recommendation Form
         if p.path == "/custom":
             if RECO is None:
                 try:
@@ -1406,244 +2111,182 @@ refresh();
                 except Exception as e:
                     self._send(500, f"WebApp 初始化失败：{e}".encode("utf-8"), "text/plain; charset=utf-8")
                     return
-            tag_opts = "".join(
-                f'<option value="{html.escape(t)}">{html.escape(t)}</option>' for t in RECO.tag_names
-            )
-            lang_opts = "".join(
-                f'<option value="{html.escape(l)}">{html.escape(l)}</option>' for l in RECO.lang_names
-            )
+
+            tag_opts = "".join(f'<option value="{html.escape(t)}">{html.escape(t)}</option>' for t in RECO.tag_names)
+            lang_opts = "".join(f'<option value="{html.escape(l)}">{html.escape(l)}</option>' for l in RECO.lang_names)
+
             body = f"""
-<!doctype html>
-<html lang="zh-CN">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自定义学生推荐 - OJ系统</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-    <div class="container">
-        <div style="margin-bottom: 20px;">
-            <a href="/" style="font-size: 14px;">&larr; 返回首页</a>
-            <span style="margin: 0 10px; color:#ccc">|</span>
-            <a href="/student" style="font-size: 14px;">单学生动态展示</a>
-        </div>
+{html_head("custom")}
+{HTML_HEADER_NAV}
 
-        <h1>🎯 自定义参数推荐</h1>
-        <p class="muted" style="margin-bottom: 30px;">调整以下参数来模拟不同的学生画像，系统将推荐最合适的题目。</p>
-
-        <form method="post" action="/custom">
-            <div class="card">
-                <h3>基础能力画像</h3>
-                <div class="subgrid">
-                    <div>
-                        <label for="level">能力水平 (Level)</label>
+    <form method="post" action="/custom">
+        <div class="grid">
+            <!-- Left Column: User Profile -->
+            <div>
+                <div class="card">
+                    <h3>🎭 模拟用户画像</h3>
+                    <div style="margin-bottom:1.2rem;">
+                        <label>能力水平（level）</label>
                         <div class="row">
+                            <span class="muted" style="font-size:0.8rem">新手</span>
                             <input id="level" name="level" type="range" min="0" max="1" step="0.01" value="0.50">
+                            <span class="muted" style="font-size:0.8rem">专家</span>
                             <output id="level_out">0.50</output>
                         </div>
-                        <div class="muted">
-                            <span class="pill">0.0</span> 新手 
-                            <span style="float:right"><span class="pill">1.0</span> 大神</span>
-                        </div>
+                        <div class="help">0~1 归一化能力值：越大越强（这里只是模拟输入，用于体验推荐逻辑）。</div>
                     </div>
-                    <div>
-                        <label for="perseverance">坚持度 (Perseverance)</label>
+                    <div style="margin-bottom:1.2rem;">
+                        <label>坚持度（perseverance）</label>
                         <div class="row">
+                             <span class="muted" style="font-size:0.8rem">易弃</span>
                             <input id="perseverance" name="perseverance" type="range" min="0" max="1" step="0.01" value="0.60">
+                             <span class="muted" style="font-size:0.8rem">坚韧</span>
                             <output id="perseverance_out">0.60</output>
                         </div>
-                        <div class="muted">
-                            <span class="pill">低</span> 易放弃 
-                            <span style="float:right"><span class="pill">高</span> 坚韧</span>
-                        </div>
+                        <div class="help">0~1 归一化坚持度：越大表示更愿意在同题多次尝试（影响“需要重试”的题是否适合）。</div>
                     </div>
                     <div>
-                        <label for="attempt_no">当前尝试次数</label>
+                        <label>当前尝试次数（attempt_no）</label>
                         <div class="row">
                             <input id="attempt_no" name="attempt_no" type="range" min="1" max="10" step="1" value="1">
                             <output id="attempt_no_out">1</output>
                         </div>
+                        <div class="help">同一题第几次尝试：一般尝试次数越多，后续 AC 概率越高（模型会学到这个趋势）。</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>💻 技术偏好</h3>
+                    <div class="subgrid">
+                        <div>
+                            <label>首选语言</label>
+                            <select id="lang_top" name="lang_top">{lang_opts}</select>
+                            <div class="help">用于模拟“最常用/最擅长”的语言偏好。</div>
+                        </div>
+                        <div>
+                            <label>语言权重</label>
+                            <div class="row">
+                                <input id="lang_strength" name="lang_strength" type="range" min="0.5" max="0.95" step="0.01" value="0.70">
+                                <output id="lang_strength_out">0.70</output>
+                            </div>
+                            <div class="help">越高表示越偏向首选语言；剩余权重会平均分给其他语言。</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:1.5rem">
+                         <label>感兴趣的题型标签（多选）</label>
+                         <select id="tag_selected" name="tag_selected" multiple size="8" class="multiselect">{tag_opts}</select>
+                         <div class="help">按住 Ctrl/⌘ 可多选；不选表示“无明显题型偏好”（会均匀分配）。</div>
+                         <div class="row" style="margin-top:10px">
+                            <span style="font-size:0.8rem" class="muted">标签权重</span>
+                            <input id="tag_strength" name="tag_strength" type="range" min="0.5" max="0.95" step="0.01" value="0.70">
+                            <output id="tag_strength_out">0.70</output>
+                         </div>
+                         <div class="help">越高表示越集中在所选标签；越低表示更“均衡探索”。</div>
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <h3>推荐偏好设置</h3>
-                <div class="subgrid">
-                    <div>
-                        <label>推荐数量 (Top K)</label>
+            <!-- Right Column: Algorithm Config -->
+            <div>
+                <div class="card">
+                    <h3>⚙️ 推荐配置</h3>
+                    <div style="margin-bottom:1.2rem;">
+                        <label>推荐数量（Top K）</label>
                         <div class="row">
                             <input id="k" name="k" type="range" min="1" max="50" step="1" value="10">
                             <output id="k_out">10</output>
                         </div>
+                        <div class="help">输出 Top‑K 推荐列表长度。</div>
                     </div>
-                    <div>
-                        <label>成功率区间 (Zone of Proximal Development)</label>
-                        <div class="muted" style="margin-bottom:10px;">优先推荐预测 AC 概率在此区间的题目</div>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                            <div>
-                                <label style="font-size:12px;">Min Probability</label>
-                                <div class="row">
-                                    <input id="min_p" name="min_p" type="range" min="0" max="1" step="0.01" value="0.40">
-                                    <output id="min_p_out">0.40</output>
-                                </div>
-                            </div>
-                            <div>
-                                <label style="font-size:12px;">Max Probability</label>
-                                <div class="row">
-                                    <input id="max_p" name="max_p" type="range" min="0" max="1" step="0.01" value="0.70">
-                                    <output id="max_p_out">0.70</output>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="subgrid">
-                <div class="card">
-                    <h3>💻 编程语言偏好</h3>
-                    <div style="margin-bottom:15px;">
-                        <label>主用语言</label>
-                        <select id="lang_top" name="lang_top">{lang_opts}</select>
-                    </div>
-                    <div>
-                        <label>偏好强度 (权重)</label>
-                        <div class="row">
-                            <input id="lang_strength" name="lang_strength" type="range" min="0.50" max="0.95" step="0.01" value="0.70">
-                            <output id="lang_strength_out">0.70</output>
+                    <label>成长带：成功率区间（ZPD）</label>
+                    <div style="background:var(--bg-body); padding:10px; border-radius:8px; border:1px solid var(--border);">
+                        <div style="margin-bottom:8px">
+                            <label style="font-size:0.8rem">下限（min_p）</label>
+                            <div class="row">
+                                <input id="min_p" name="min_p" type="range" min="0" max="1" step="0.01" value="0.40">
+                                <output id="min_p_out">0.40</output>
+                            </div>
+                        </div>
+                        <div>
+                            <label style="font-size:0.8rem">上限（max_p）</label>
+                            <div class="row">
+                                <input id="max_p" name="max_p" type="range" min="0" max="1" step="0.01" value="0.70">
+                                <output id="max_p_out">0.70</output>
+                            </div>
                         </div>
                     </div>
-                    <details style="margin-top:15px">
-                        <summary>高级：自定义 JSON 分布</summary>
-                        <div style="margin-top:10px">
-                            <textarea id="lang_json" name="lang_json" rows="3" placeholder='{{"Python":0.6,"C++":0.2,"JAVA":0.2}}'></textarea>
-                            <div class="muted">填写后将覆盖上方设置。</div>
-                        </div>
-                    </details>
+                    <div class="help">优先推荐预测通过率 <span class="mono">P(AC)</span> 落在 [min_p, max_p] 的题：既不过难也不过易；若带内题不足会用高分题补齐。</div>
+
+                    <div style="margin-top:1.5rem">
+                        <label>融合策略（语言偏好如何作用）</label>
+                        <select name="mode">
+                            <option value="expected" selected>期望值（标准：按语言权重加权）</option>
+                            <option value="best">强项优先（激进：仅看最擅长语言）</option>
+                        </select>
+                        <div class="help">期望值：同时考虑多语言偏好；强项优先：更像“用最强语言去做题”的上限视角。</div>
+                    </div>
                 </div>
 
                 <div class="card">
-                    <h3>🏷️ 算法标签偏好</h3>
-                    <div style="margin-bottom:15px;">
-                        <label>感兴趣的标签 (按住 Ctrl 多选)</label>
-                        <select id="tag_selected" name="tag_selected" multiple size="5" style="height: 120px;">{tag_opts}</select>
-                    </div>
-                    <div>
-                        <label>偏好强度 (总权重)</label>
-                        <div class="row">
-                            <input id="tag_strength" name="tag_strength" type="range" min="0.50" max="0.95" step="0.01" value="0.70">
-                            <output id="tag_strength_out">0.70</output>
+                    <h3>🚀 执行操作</h3>
+                    <div class="actions" style="border:none; margin:0; padding:0; flex-direction:column;">
+                        <button type="submit" style="width:100%; padding:1rem; font-size:1.1rem;">生成推荐列表</button>
+                        <div style="display:flex; gap:10px; width:100%;">
+                            <button type="button" class="btn-secondary" id="btn_random" style="flex:1">🎲 随机参数</button>
+                            <button type="button" class="btn-secondary" id="btn_reset" style="flex:1">🔄 重置</button>
                         </div>
                     </div>
+
                     <details style="margin-top:15px">
-                        <summary>高级：自定义 JSON 分布</summary>
+                        <summary>高级: JSON 注入</summary>
                         <div style="margin-top:10px">
-                            <textarea id="tag_json" name="tag_json" rows="3" placeholder='{{"dp":0.4,"graph":0.3,"tree":0.3}}'></textarea>
-                            <div class="muted">填写后将覆盖上方设置。</div>
+                             <label>语言权重 JSON（会覆盖上方“首选语言/语言权重”）</label>
+                             <textarea id="lang_json" name="lang_json" rows="2" placeholder='{{"Python":0.9}}'></textarea>
+                             <label style="margin-top:10px">标签权重 JSON（会覆盖上方“多选标签/标签权重”）</label>
+                             <textarea id="tag_json" name="tag_json" rows="2" placeholder='{{"dp":0.5}}'></textarea>
                         </div>
                     </details>
                 </div>
             </div>
-
-            <div class="card">
-                <h3>高级策略</h3>
-                <div>
-                    <label>语言评分融合模式</label>
-                    <select name="mode">
-                        <option value="expected" selected>期望分数模式 (推荐：按概率加权)</option>
-                        <option value="best">最大分数模式 (激进：取最擅长语言的分数)</option>
-                    </select>
-                    <div class="muted">注：依赖 `lang_match` 和 `tag_match` 特征训练的模型。</div>
-                </div>
-
-                <div class="actions">
-                    <button type="submit">✨ 生成推荐列表</button>
-                    <button type="button" class="btn-secondary" id="btn_random">🎲 随机生成参数</button>
-                    <button type="button" class="btn-secondary" id="btn_reset">🔄 重置</button>
-                </div>
-            </div>
-        </form>
-    </div>
+        </div>
+    </form>
 
 <script>
-function bindRange(id) {{
-  const el = document.getElementById(id);
-  const out = document.getElementById(id + "_out");
-  if(!el || !out) return;
-  const sync = () => out.textContent = Number(el.value).toFixed(el.step && el.step.includes(".") ? 2 : 0);
-  el.addEventListener("input", sync);
-  sync();
-}}
-
-// Initialize all sliders
-["level","perseverance","attempt_no","k","min_p","max_p","lang_strength","tag_strength"].forEach(bindRange);
-
-function clampMinMax() {{
-  const minEl = document.getElementById("min_p");
-  const maxEl = document.getElementById("max_p");
-  if (Number(minEl.value) > Number(maxEl.value)) {{
-    // Swap values if min > max
-    const tmp = minEl.value;
-    minEl.value = maxEl.value;
-    maxEl.value = tmp;
-    // Update displays manually since input event didn't fire
-    document.getElementById("min_p_out").textContent = Number(minEl.value).toFixed(2);
-    document.getElementById("max_p_out").textContent = Number(maxEl.value).toFixed(2);
-  }}
-}}
-document.getElementById("min_p").addEventListener("change", clampMinMax);
-document.getElementById("max_p").addEventListener("change", clampMinMax);
-
-document.getElementById("btn_reset").addEventListener("click", () => {{
-  document.getElementById("level").value = "0.50";
-  document.getElementById("perseverance").value = "0.60";
-  document.getElementById("attempt_no").value = "1";
-  document.getElementById("k").value = "10";
-  document.getElementById("min_p").value = "0.40";
-  document.getElementById("max_p").value = "0.70";
-  document.getElementById("lang_strength").value = "0.70";
-  document.getElementById("tag_strength").value = "0.70";
-  document.getElementById("lang_json").value = "";
-  document.getElementById("tag_json").value = "";
-
-  // Reset Selects
-  document.getElementById("lang_top").selectedIndex = 0;
-  const tagSel = document.getElementById("tag_selected");
-  for(let i=0; i<tagSel.options.length; i++) tagSel.options[i].selected = false;
-
-  // Trigger updates for sliders
-  ["level","perseverance","attempt_no","k","min_p","max_p","lang_strength","tag_strength"].forEach((id)=>{{
+function bind(id) {{
     const el = document.getElementById(id);
-    if(el) el.dispatchEvent(new Event("input"));
-  }});
+    const out = document.getElementById(id+"_out");
+    if(el && out) {{
+        el.addEventListener("input", ()=>out.textContent = Number(el.value).toFixed(el.step.includes(".")?2:0));
+    }}
+}}
+["level","perseverance","attempt_no","k","min_p","max_p","lang_strength","tag_strength"].forEach(bind);
+
+document.getElementById("min_p").addEventListener("change", function(){{
+    const max = document.getElementById("max_p");
+    if(Number(this.value) > Number(max.value)) max.value = this.value;
+    max.dispatchEvent(new Event("input"));
 }});
 
-document.getElementById("btn_random").addEventListener("click", () => {{
-  const r = (a,b)=> (Number(a) + Math.random()*(b-a)).toFixed(2);
-  document.getElementById("level").value = r(0.05, 0.95);
-  document.getElementById("perseverance").value = r(0.05, 0.95);
-  document.getElementById("attempt_no").value = String(1 + Math.floor(Math.random()*4));
-  document.getElementById("k").value = String(5 + Math.floor(Math.random()*11));
-  const minp = Number(r(0.25, 0.60));
-  const maxp = Number(r(minp, 0.85));
-  document.getElementById("min_p").value = minp.toFixed(2);
-  document.getElementById("max_p").value = maxp.toFixed(2);
-  document.getElementById("lang_strength").value = r(0.55, 0.90);
-  document.getElementById("tag_strength").value = r(0.55, 0.90);
-  document.getElementById("lang_json").value = "";
-  document.getElementById("tag_json").value = "";
+document.getElementById("btn_random").addEventListener("click", ()=>{{
+    const r = (min,max) => (Math.random()*(max-min)+min).toFixed(2);
+    document.getElementById("level").value = r(0.1, 0.9);
+    document.getElementById("perseverance").value = r(0.1, 0.9);
+    document.getElementById("k").value = Math.floor(Math.random()*15)+5;
+    document.getElementById("min_p").value = r(0.3, 0.5);
+    document.getElementById("max_p").value = r(0.6, 0.85);
 
-  // Trigger updates
-  ["level","perseverance","attempt_no","k","min_p","max_p","lang_strength","tag_strength"].forEach((id)=>{{
-    const el = document.getElementById(id);
-    if(el) el.dispatchEvent(new Event("input"));
-  }});
+    // Trigger updates
+    document.querySelectorAll("input[type=range]").forEach(e => e.dispatchEvent(new Event("input")));
+}});
+
+document.getElementById("btn_reset").addEventListener("click", ()=>{{
+    document.querySelector("form").reset();
+    setTimeout(()=>document.querySelectorAll("input[type=range]").forEach(e => e.dispatchEvent(new Event("input"))), 10);
 }});
 </script>
-</body>
-</html>
+{HTML_FOOTER}
 """.encode("utf-8")
             self._send(200, body, "text/html; charset=utf-8")
             return
@@ -1740,76 +2383,92 @@ document.getElementById("btn_random").addEventListener("click", () => {{
             return
 
         rows = []
-        for _, r in out.iterrows():
+        for i, r in out.iterrows():
             score_val = float(r['score'])
-            # 简单的分数颜色标记
-            score_style = "color:#166534; font-weight:bold;" if score_val > 0.6 else "color:#ca8a04;"
+            score_style = "color:var(--success)" if score_val > 0.6 else (
+                "color:var(--warning)" if score_val > 0.4 else "color:var(--danger)")
 
             rows.append(
                 "<tr>"
-                f"<td style='font-family:monospace; color:#666;'>#{int(r['problem_id'])}</td>"
-                f"<td style='font-weight:500'>{html.escape(str(r.get('title') or ''))}</td>"
+                f"<td class='muted'>#{int(r['problem_id'])}</td>"
+                f"<td style='font-weight:600'>{html.escape(str(r.get('title') or ''))}</td>"
                 f"<td><span class='pill'>{int(r['difficulty_filled'])}</span></td>"
                 f"<td class='muted'>{html.escape(str(r.get('tags') or ''))}</td>"
                 f"<td>{html.escape(str(r.get('language') or ''))}</td>"
-                f"<td style='{score_style}'>{score_val:.4f}</td>"
+                f"<td style='font-weight:700;{score_style}'>{score_val:.3f}</td>"
                 "</tr>"
             )
 
+        lang_top = ""
+        if lang_pref:
+            try:
+                lang_top = max(lang_pref.items(), key=lambda kv: float(kv[1]))[0]
+            except Exception:
+                lang_top = ""
+        top_tags = ""
+        if tag_pref:
+            try:
+                top_tags = "、".join([k for k, v in sorted(tag_pref.items(), key=lambda kv: float(kv[1]), reverse=True)[:3] if float(v) > 0])
+            except Exception:
+                top_tags = ""
+        mode_cn = "强项优先（取最大）" if mode == "best" else "期望值（按权重加权）"
+
         body = f"""
-<!doctype html>
-<html lang="zh-CN">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>推荐结果 - OJ系统</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-    <div class="container">
-        <div style="margin-bottom: 20px;">
-            <a href="/custom" style="font-size: 14px;">&larr; 返回修改参数</a>
-            <span style="margin: 0 10px; color:#ccc">|</span>
-            <a href="/" style="font-size: 14px;">首页</a>
+{html_head("custom")}
+{HTML_HEADER_NAV}
+
+    <div style="margin-bottom:20px">
+       <a href="/custom" class="btn btn-secondary">&larr; 调整参数</a>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>⚙️ 推荐上下文</h3>
+            <div class="help">说明：本页仅做“参数 → 推荐结果”的可解释展示。模型来自离线训练产物 <span class="mono">Models/pipeline_logreg.joblib</span>，Web 端只加载并推理。</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:0.9rem; color:var(--text-muted); margin-top:10px;">
+                <div>能力 level（0~1）：<b style="color:var(--text-main)">{level:.2f}</b></div>
+                <div>坚持度 perseverance（0~1）：<b style="color:var(--text-main)">{perseverance:.2f}</b></div>
+                <div>尝试次数 attempt_no：<b style="color:var(--text-main)">{attempt_no}</b></div>
+                <div>推荐数量 Top‑K：<b style="color:var(--text-main)">{k}</b></div>
+                <div>成长带 P(AC)：<b style="color:var(--text-main)">[{min_p:.2f}, {max_p:.2f}]</b></div>
+                <div>融合策略：<b style="color:var(--text-main)">{html.escape(mode_cn)}</b></div>
+                <div>首选语言（权重最高）：<b style="color:var(--text-main)">{html.escape(lang_top)}</b></div>
+                <div>主要标签（Top3）：<b style="color:var(--text-main)">{html.escape(top_tags) if top_tags else "（未指定）"}</b></div>
+            </div>
+            <ul class="modal-ul" style="margin-top:10px">
+              <li>成长带（ZPD）：优先挑选预测通过率在区间内的题，兼顾“可命中”与“有挑战”。</li>
+              <li>若成长带内题不足，会按预测概率从高到低补齐 Top‑K。</li>
+            </ul>
         </div>
-
-        <h1>🚀 推荐题目列表</h1>
-
-        <div class="card" style="display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start;">
-            <div style="flex:1; min-width:300px;">
-                <h3>参数概览</h3>
-                <div class="muted" style="line-height:1.8">
-                    <div><b>Level:</b> {level:.3f} &nbsp; <b>Perseverance:</b> {perseverance:.3f}</div>
-                    <div><b>Attempt No:</b> {attempt_no} &nbsp; <b>Top K:</b> {k}</div>
-                    <div><b>ZPD Range:</b> [{min_p:.2f}, {max_p:.2f}]</div>
-                    <div><b>Mode:</b> {html.escape(mode)}</div>
-                </div>
-            </div>
-            <div style="flex:1; min-width:300px; text-align:center;">
-                 <img src="data:image/png;base64,{img_b64}" alt="difficulty_hist" style="max-height:200px; border:1px solid #eee;">
-            </div>
-        </div>
-
-        <div class="card" style="padding:0; overflow:hidden;">
-            <div style="overflow-x:auto;">
-                <table>
-                  <thead>
-                    <tr>
-                        <th width="80">ID</th>
-                        <th>题目名称</th>
-                        <th width="80">难度</th>
-                        <th>标签</th>
-                        <th width="100">推荐语言</th>
-                        <th width="100">AC 概率</th>
-                    </tr>
-                  </thead>
-                  <tbody>{''.join(rows)}</tbody>
-                </table>
-            </div>
+        <div class="card" style="text-align:center">
+             <h3>推荐难度分布</h3>
+             <div class="chart-container">
+                <img class="viz-img-lg" src="data:image/png;base64,{img_b64}" alt="推荐难度分布">
+             </div>
+             <div class="help">柱越高表示推荐题在该难度更集中，用于检查“是否符合成长带预期”。</div>
         </div>
     </div>
-</body>
-</html>
+
+    <div class="card">
+        <h3>📋 推荐结果</h3>
+        <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                    <th width="80">ID</th>
+                    <th>题目名称</th>
+                    <th width="80">难度</th>
+                    <th>标签</th>
+                    <th width="120">推荐语言</th>
+                    <th width="120">预测通过率</th>
+                </tr>
+              </thead>
+              <tbody>{''.join(rows)}</tbody>
+            </table>
+        </div>
+    </div>
+
+{HTML_FOOTER}
 """.encode("utf-8")
         self._send(200, body, "text/html; charset=utf-8")
 
