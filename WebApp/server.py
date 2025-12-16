@@ -3,6 +3,7 @@ import base64
 import html
 import io
 import json
+import math
 import os
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -45,6 +46,7 @@ CLEANDATA_DIR = ROOT / "CleanData"
 FEATUREDATA_DIR = ROOT / "FeatureData"
 MODELS_DIR = ROOT / "Models"
 PIPELINE_PATH = MODELS_DIR / "pipeline_logreg.joblib"
+RANDOM_SEED = 42
 
 
 def parse_json_dict(s: str) -> dict[str, float]:
@@ -130,6 +132,8 @@ class Recommender:
 
         self.problems = pd.read_csv(CLEANDATA_DIR / "problems.csv")
         self.problems["problem_id"] = pd.to_numeric(self.problems["problem_id"], errors="coerce").astype(int)
+        if "title" not in self.problems.columns:
+            self.problems["title"] = ""
         self.problems["difficulty"] = pd.to_numeric(self.problems["difficulty"], errors="coerce")
         diff_median = int(np.nanmedian(self.problems["difficulty"])) if self.problems["difficulty"].notna().any() else 5
         self.problems["difficulty_filled"] = self.problems["difficulty"].fillna(diff_median).astype(int)
@@ -152,8 +156,14 @@ class Recommender:
             return parts
 
         self.problems["tags_list"] = self.problems["tags"].apply(parse_tags_cell)
+        self.problems["tags2"] = self.problems["tags_list"].apply(
+            lambda x: [str(t) for t in (x[:2] if isinstance(x, list) else [])]
+        )
         self.problem_ids = self.problems["problem_id"].to_numpy(dtype=np.int32)
         self.problem_diff = self.problems["difficulty_filled"].to_numpy(dtype=np.int32)
+        self.problem_title = self.problems["title"].astype(str).fillna("").to_numpy(dtype=object)
+        self.problem_tags2 = self.problems["tags2"].to_list()
+        self.pid_to_i = {int(pid): i for i, pid in enumerate(self.problem_ids.tolist())}
         self.problem_tags_mh = np.zeros((len(self.problems), len(self.tag_names)), dtype=np.uint8)
         for i, tags_list in enumerate(self.problems["tags_list"].tolist()):
             if not isinstance(tags_list, list):
@@ -163,6 +173,342 @@ class Recommender:
                 if j is not None:
                     self.problem_tags_mh[i, j] = 1
         self.problem_tag_counts = self.problem_tags_mh.sum(axis=1).astype(np.float32)
+
+        self._subs = pd.read_csv(CLEANDATA_DIR / "submissions.csv", low_memory=False)
+        for col in ("submission_id", "user_id", "problem_id", "attempt_no", "ac"):
+            if col in self._subs.columns:
+                self._subs[col] = pd.to_numeric(self._subs[col], errors="coerce")
+        self._subs["submission_id"] = self._subs["submission_id"].fillna(0).astype(int)
+        self._subs["user_id"] = self._subs["user_id"].fillna(0).astype(int)
+        self._subs["problem_id"] = self._subs["problem_id"].fillna(0).astype(int)
+        self._subs["attempt_no"] = self._subs["attempt_no"].fillna(1).astype(int)
+        self._subs["ac"] = self._subs["ac"].fillna(0).astype(int)
+        if "language" not in self._subs.columns:
+            self._subs["language"] = ""
+        self._subs["language"] = self._subs["language"].astype(str).fillna("")
+
+        self._subs = self._subs.sort_values(["user_id", "submission_id"]).reset_index(drop=True)
+        self._subs_by_user: dict[int, pd.DataFrame] = {
+            int(uid): g[["submission_id", "problem_id", "language", "attempt_no", "ac"]].copy()
+            for uid, g in self._subs.groupby("user_id", sort=False)
+            if int(uid) > 0
+        }
+
+        # perseverance 归一化用固定分母（全量用户的 avg_attempts_per_problem 的 P95）
+        up = self._subs.groupby(["user_id", "problem_id"], as_index=False).agg(n_attempts=("submission_id", "count"))
+        avg_attempts = up.groupby("user_id")["n_attempts"].mean()
+        p95 = float(np.percentile(avg_attempts.values, 95)) if len(avg_attempts) else 1.0
+        self._perseverance_denom = math.log1p(p95) if p95 > 0 else 1.0
+
+    @staticmethod
+    def _fig_to_b64(fig: plt.Figure) -> str:
+        buf = io.BytesIO()
+        fig.savefig(buf, format="png", dpi=160, bbox_inches="tight")
+        plt.close(fig)
+        return base64.b64encode(buf.getvalue()).decode("ascii")
+
+    def _user_cutoff_id(self, user_id: int, pct: float) -> int:
+        user_df = self._subs_by_user.get(int(user_id))
+        if user_df is None or user_df.empty:
+            raise RuntimeError(f"user_id={user_id} 没有 submissions 记录")
+        pct = float(max(0.0, min(1.0, pct)))
+        ids = user_df["submission_id"].to_numpy(dtype=np.int64)
+        idx = int(round(pct * (len(ids) - 1))) if len(ids) > 1 else 0
+        return int(ids[idx])
+
+    def _profile_from_history(
+        self, user_df: pd.DataFrame, cutoff_id: int
+    ) -> tuple[float, float, dict[str, float], dict[str, float], set[int], dict[int, int]]:
+        hist = user_df[user_df["submission_id"] <= int(cutoff_id)]
+        if hist.empty:
+            return 0.0, 0.0, {}, {}, set(), {}
+
+        solved = set(hist.loc[hist["ac"] == 1, "problem_id"].astype(int).tolist())
+        attempts = hist.groupby("problem_id").size().astype(int)
+        attempt_next_map = {int(pid): int(n) + 1 for pid, n in attempts.items()}
+
+        up = hist.groupby("problem_id", as_index=False).agg(
+            n_attempts=("submission_id", "count"),
+            solved=("ac", "max"),
+        )
+        up["difficulty_filled"] = up["problem_id"].map(
+            lambda pid: int(self.problem_diff[self.pid_to_i[int(pid)]]) if int(pid) in self.pid_to_i else 5
+        )
+        up["diff_norm"] = up["difficulty_filled"].astype(float) / 10.0
+        num = float((up["solved"].astype(float) * up["diff_norm"]).sum())
+        den = float(up["diff_norm"].sum())
+        level = float(num / (den + 1e-9))
+        level = float(max(0.0, min(1.0, level)))
+
+        avg_attempts = float(up["n_attempts"].mean()) if len(up) else 0.0
+        perseverance = math.log1p(avg_attempts) / self._perseverance_denom if self._perseverance_denom > 0 else 0.0
+        perseverance = float(max(0.0, min(1.0, perseverance)))
+
+        # lang pref
+        lang_counts = hist.groupby("language").size().to_dict()
+        lang_pref = {l: float(lang_counts.get(l, 0.0)) for l in self.lang_names}
+        lang_pref = normalize_dist(self.lang_names, lang_pref)
+
+        # tag pref（按做过的题的 tags2 计数）
+        tag_counts: dict[str, float] = {t: 0.0 for t in self.tag_names}
+        for pid in up["problem_id"].astype(int).tolist():
+            i = self.pid_to_i.get(int(pid))
+            if i is None:
+                continue
+            for t in self.problem_tags2[i]:
+                if t in tag_counts:
+                    tag_counts[t] += 1.0
+        tag_pref = normalize_dist(self.tag_names, tag_counts)
+        return level, perseverance, lang_pref, tag_pref, solved, attempt_next_map
+
+    def recommend_for_user_history(
+        self,
+        *,
+        user_id: int,
+        cutoff_pct: float,
+        k: int,
+        min_p: float,
+        max_p: float,
+    ) -> tuple[dict, list[dict]]:
+        user_id = int(user_id)
+        user_df = self._subs_by_user.get(user_id)
+        if user_df is None or user_df.empty:
+            raise RuntimeError(f"user_id={user_id} 不存在或无 submissions")
+
+        cutoff_id = self._user_cutoff_id(user_id, cutoff_pct)
+        level, perseverance, lang_pref, tag_pref, solved, attempt_next_map = self._profile_from_history(user_df, cutoff_id)
+
+        k = int(max(1, min(50, k)))
+        min_p = float(max(0.0, min(1.0, min_p)))
+        max_p = float(max(0.0, min(1.0, max_p)))
+        if max_p < min_p:
+            min_p, max_p = max_p, min_p
+
+        chosen_lang = ""
+        if self.lang_names:
+            chosen_lang = max(self.lang_names, key=lambda l: float(lang_pref.get(l, 0.0)))
+
+        attempt_no_vec = np.ones((len(self.problem_ids),), dtype=np.float32)
+        for pid, next_no in attempt_next_map.items():
+            i = self.pid_to_i.get(int(pid))
+            if i is not None:
+                attempt_no_vec[i] = float(max(1, min(10, int(next_no))))
+
+        solved_mask = (
+            np.isin(self.problem_ids, np.fromiter((int(x) for x in solved), dtype=np.int32))
+            if solved
+            else np.zeros((len(self.problem_ids),), dtype=bool)
+        )
+        candidate_mask = ~solved_mask
+
+        tag_pref_vec = np.asarray([float(tag_pref.get(t, 0.0)) for t in self.tag_names], dtype=np.float32)
+        tm_sum = (self.problem_tags_mh.astype(np.float32) * tag_pref_vec).sum(axis=1)
+        tm_den = np.maximum(1.0, self.problem_tag_counts)
+        tag_match = (tm_sum / tm_den).astype(np.float32)
+
+        X = np.zeros((len(self.problem_ids), len(self.feature_cols)), dtype=np.float32)
+        X[:, self.numeric_idx["attempt_no"]] = attempt_no_vec
+        X[:, self.numeric_idx["difficulty_filled"]] = self.problem_diff.astype(np.float32)
+        X[:, self.numeric_idx["level"]] = float(level)
+        X[:, self.numeric_idx["perseverance"]] = float(perseverance)
+        X[:, self.numeric_idx["tag_match"]] = tag_match
+        X[:, self.tag_idx] = self.problem_tags_mh.astype(np.float32)
+
+        lang_match_val = float(lang_pref.get(chosen_lang, 0.0)) if chosen_lang else 0.0
+        X[:, self.numeric_idx["lang_match"]] = lang_match_val
+        if self.lang_idx and chosen_lang in self.lang_names:
+            X[:, self.lang_idx] = 0.0
+            X[:, self.lang_idx[self.lang_names.index(chosen_lang)]] = 1.0
+
+        score = self.model.predict_proba(X)[:, 1].astype(np.float32)
+        in_band = (score >= float(min_p)) & (score <= float(max_p))
+
+        idx_all = np.where(candidate_mask)[0]
+        if len(idx_all) == 0:
+            raise RuntimeError(f"user_id={user_id} 已 AC 全部题目或无候选集")
+
+        idx_band = idx_all[in_band[idx_all]]
+        idx_other = idx_all[~in_band[idx_all]]
+        idx_band_sorted = idx_band[np.argsort(score[idx_band])[::-1]]
+        idx_other_sorted = idx_other[np.argsort(score[idx_other])[::-1]]
+        picks = np.concatenate([idx_band_sorted, idx_other_sorted], axis=0)[:k]
+
+        rec_rows: list[dict] = []
+        for rank, i in enumerate(picks.tolist(), start=1):
+            rec_rows.append(
+                {
+                    "rank": int(rank),
+                    "problem_id": int(self.problem_ids[i]),
+                    "title": str(self.problem_title[i] or ""),
+                    "difficulty": int(self.problem_diff[i]),
+                    "tags": ",".join(self.problem_tags2[i]) if i < len(self.problem_tags2) else "",
+                    "p_ac": float(score[i]),
+                    "language": chosen_lang,
+                    "in_growth_band": int(bool(in_band[i])),
+                }
+            )
+
+        meta = {
+            "user_id": int(user_id),
+            "cutoff_pct": float(cutoff_pct),
+            "cutoff_submission_id": int(cutoff_id),
+            "hist_submissions": int((user_df["submission_id"] <= int(cutoff_id)).sum()),
+            "hist_solved": int(len(solved)),
+            "level": float(level),
+            "perseverance": float(perseverance),
+            "top_language": str(chosen_lang),
+            "zpd": [float(min_p), float(max_p)],
+        }
+        return meta, rec_rows
+
+    def student_dashboard_payload(
+        self,
+        *,
+        user_id: int,
+        cutoff_pct: float,
+        k: int,
+        min_p: float,
+        max_p: float,
+    ) -> dict:
+        user_id = int(user_id)
+        user_df = self._subs_by_user.get(user_id)
+        if user_df is None or user_df.empty:
+            raise RuntimeError(f"user_id={user_id} 不存在或无 submissions")
+
+        meta, rec_rows = self.recommend_for_user_history(
+            user_id=user_id,
+            cutoff_pct=cutoff_pct,
+            k=k,
+            min_p=min_p,
+            max_p=max_p,
+        )
+        cutoff_id = int(meta["cutoff_submission_id"])
+
+        hist = user_df[user_df["submission_id"] <= cutoff_id].copy()
+        if not hist.empty:
+            hist["difficulty"] = hist["problem_id"].map(
+                lambda pid: int(self.problem_diff[self.pid_to_i[int(pid)]]) if int(pid) in self.pid_to_i else 5
+            )
+        else:
+            hist["difficulty"] = []
+
+        # 1) 时间轴散点：历史提交（难度 vs 时间）+ cutoff + 推荐题难度点
+        fig, ax = plt.subplots(figsize=(10, 4.2))
+        ax.set_title(f"时间轴散点：user_id={user_id}（历史提交难度 & 推荐题难度）")
+        if not hist.empty:
+            ok = hist["ac"].astype(int).to_numpy() == 1
+            x = hist["submission_id"].to_numpy(dtype=np.int64)
+            y = hist["difficulty"].to_numpy(dtype=np.int32)
+            ax.scatter(x[~ok], y[~ok], s=14, alpha=0.35, c="#ef4444", label="未AC")
+            ax.scatter(x[ok], y[ok], s=14, alpha=0.35, c="#22c55e", label="AC")
+        ax.axvline(cutoff_id, color="#2563eb", lw=2, alpha=0.9, label="cutoff")
+        reco_diffs = [int(r["difficulty"]) for r in rec_rows]
+        if reco_diffs:
+            ax.scatter(
+                np.full((len(reco_diffs),), cutoff_id, dtype=np.int64),
+                np.asarray(reco_diffs, dtype=np.int32),
+                marker="*",
+                s=140,
+                c="#1d4ed8",
+                edgecolors="white",
+                linewidths=0.8,
+                label="推荐Top-K",
+                zorder=5,
+            )
+        ax.set_xlabel("submission_id（时间近似）")
+        ax.set_ylabel("题目难度（1-10）")
+        ax.set_yticks(range(1, 11))
+        ax.grid(True, alpha=0.25, linestyle="--")
+        ax.legend(loc="upper left", ncols=4, frameon=False)
+        timeline_b64 = self._fig_to_b64(fig)
+
+        # 2) 雷达对比：语言&标签（历史 vs 推荐）
+        hist_lang_counts = hist.groupby("language").size().to_dict() if not hist.empty else {}
+        hist_lang = np.asarray([float(hist_lang_counts.get(l, 0.0)) for l in self.lang_names], dtype=np.float32)
+        hist_lang = hist_lang / (hist_lang.sum() if hist_lang.sum() > 0 else 1.0)
+
+        hist_tag_counts = {t: 0.0 for t in self.tag_names}
+        if not hist.empty:
+            for pid in hist["problem_id"].astype(int).unique().tolist():
+                i = self.pid_to_i.get(int(pid))
+                if i is None:
+                    continue
+                for t in self.problem_tags2[i]:
+                    if t in hist_tag_counts:
+                        hist_tag_counts[t] += 1.0
+        hist_tag = np.asarray([float(hist_tag_counts.get(t, 0.0)) for t in self.tag_names], dtype=np.float32)
+        hist_tag = hist_tag / (hist_tag.sum() if hist_tag.sum() > 0 else 1.0)
+
+        reco_lang = np.zeros((len(self.lang_names),), dtype=np.float32)
+        if self.lang_names and meta.get("top_language") in self.lang_names:
+            reco_lang[self.lang_names.index(str(meta["top_language"]))] = 1.0
+
+        reco_tag_counts = {t: 0.0 for t in self.tag_names}
+        for r in rec_rows:
+            pid = int(r["problem_id"])
+            i = self.pid_to_i.get(pid)
+            if i is None:
+                continue
+            for t in self.problem_tags2[i]:
+                if t in reco_tag_counts:
+                    reco_tag_counts[t] += 1.0
+        reco_tag = np.asarray([float(reco_tag_counts.get(t, 0.0)) for t in self.tag_names], dtype=np.float32)
+        reco_tag = reco_tag / (reco_tag.sum() if reco_tag.sum() > 0 else 1.0)
+
+        def radar(ax, labels: list[str], v1: np.ndarray, v2: np.ndarray, title: str) -> None:
+            n = len(labels)
+            if n == 0:
+                ax.set_axis_off()
+                return
+            angles = np.linspace(0, 2 * np.pi, n, endpoint=False)
+            angles = np.concatenate([angles, angles[:1]])
+            v1c = np.concatenate([v1, v1[:1]])
+            v2c = np.concatenate([v2, v2[:1]])
+            ax.plot(angles, v1c, color="#2563eb", lw=2, label="历史")
+            ax.fill(angles, v1c, color="#2563eb", alpha=0.10)
+            ax.plot(angles, v2c, color="#f59e0b", lw=2, label="推荐Top-K")
+            ax.fill(angles, v2c, color="#f59e0b", alpha=0.10)
+            ax.set_xticks(angles[:-1])
+            ax.set_xticklabels(labels, fontsize=9)
+            ax.set_yticks([0.2, 0.4, 0.6, 0.8])
+            ax.set_yticklabels(["0.2", "0.4", "0.6", "0.8"], fontsize=8)
+            ax.set_title(title, pad=14)
+            ax.grid(True, alpha=0.25)
+
+        fig = plt.figure(figsize=(10, 4.6))
+        ax1 = fig.add_subplot(1, 2, 1, projection="polar")
+        radar(ax1, self.lang_names, hist_lang, reco_lang, "雷达对比：语言分布")
+        ax2 = fig.add_subplot(1, 2, 2, projection="polar")
+        radar(ax2, self.tag_names, hist_tag, reco_tag, "雷达对比：标签分布")
+        ax1.legend(loc="lower left", bbox_to_anchor=(-0.05, -0.25), frameon=False, ncols=2)
+        radar_b64 = self._fig_to_b64(fig)
+
+        # 3) 难度阶梯：按推荐 rank 展示 difficulty & P(AC)
+        ranks = np.asarray([int(r["rank"]) for r in rec_rows], dtype=np.int32)
+        diffs = np.asarray([int(r["difficulty"]) for r in rec_rows], dtype=np.int32)
+        ps = np.asarray([float(r["p_ac"]) for r in rec_rows], dtype=np.float32)
+        fig, ax = plt.subplots(figsize=(10, 4.2))
+        ax.set_title("难度阶梯：推荐列表（rank→difficulty，并用颜色表示 P(AC)）")
+        ax.plot(ranks, diffs, color="#334155", lw=1.5, alpha=0.7)
+        sc = ax.scatter(ranks, diffs, c=ps, cmap="viridis", s=80, edgecolors="white", linewidths=0.6)
+        ax.set_xlabel("推荐 rank（1=最高分）")
+        ax.set_ylabel("题目难度（1-10）")
+        ax.set_yticks(range(1, 11))
+        ax.set_xticks(ranks.tolist())
+        ax.grid(True, alpha=0.25, linestyle="--")
+        cb = fig.colorbar(sc, ax=ax, fraction=0.03, pad=0.02)
+        cb.set_label("P(AC)")
+        ladder_b64 = self._fig_to_b64(fig)
+
+        return {
+            "meta": meta,
+            "images": {
+                "timeline_scatter": timeline_b64,
+                "radar_compare": radar_b64,
+                "difficulty_ladder": ladder_b64,
+            },
+            "recommendations": rec_rows,
+        }
 
     def recommend(
             self,
@@ -550,9 +896,240 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def do_GET(self) -> None:
+        global RECO
         p = urlparse(self.path)
         if p.path == "/static/style.css":
             self._send(200, STYLE_CSS.encode("utf-8"), "text/css; charset=utf-8")
+            return
+
+        if p.path == "/api/student":
+            if RECO is None:
+                try:
+                    RECO = Recommender()
+                except Exception as e:
+                    self._send(500, f"WebApp 初始化失败：{e}".encode("utf-8"), "text/plain; charset=utf-8")
+                    return
+
+            q = parse_qs(p.query or "")
+
+            def q1(name: str, default: str = "") -> str:
+                v = q.get(name, [])
+                return v[0] if v else default
+
+            try:
+                user_id = int(q1("user_id", "1"))
+                pct = float(q1("pct", "0.5"))
+                k = int(q1("k", "10"))
+                min_p = float(q1("min_p", "0.4"))
+                max_p = float(q1("max_p", "0.7"))
+            except Exception:
+                self._send(400, "参数格式错误".encode("utf-8"), "text/plain; charset=utf-8")
+                return
+
+            try:
+                payload = RECO.student_dashboard_payload(
+                    user_id=user_id,
+                    cutoff_pct=pct,
+                    k=k,
+                    min_p=min_p,
+                    max_p=max_p,
+                )
+            except Exception as e:
+                self._send(500, f"生成失败：{e}".encode("utf-8"), "text/plain; charset=utf-8")
+                return
+
+            body = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+            self._send(200, body, "application/json; charset=utf-8")
+            return
+
+        if p.path == "/student":
+            body = """
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>单学生动态展示 - OJ系统</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <div style="margin-bottom: 20px;">
+      <a href="/" style="font-size: 14px;">&larr; 返回首页</a>
+      <span style="margin: 0 10px; color:#ccc">|</span>
+      <a href="/custom" style="font-size: 14px;">自定义推荐</a>
+    </div>
+
+    <h1>👤 单学生动态展示</h1>
+    <div class="card">
+      <div class="subgrid">
+        <div>
+          <label for="user_id">user_id</label>
+          <input id="user_id" type="text" value="1" placeholder="例如 1">
+          <div class="muted">从 <span style="font-family:monospace">CleanData/submissions.csv</span> 选择存在的 user_id。</div>
+        </div>
+        <div>
+          <label for="pct">时间点（按该学生提交序列百分位）</label>
+          <div class="row">
+            <input id="pct" type="range" min="0" max="1" step="0.01" value="0.50">
+            <output id="pct_out">0.50</output>
+          </div>
+          <div class="muted">0=最早，1=最新；用于生成 cutoff_submission_id。</div>
+        </div>
+        <div>
+          <label for="k">Top K</label>
+          <div class="row">
+            <input id="k" type="range" min="1" max="50" step="1" value="10">
+            <output id="k_out">10</output>
+          </div>
+        </div>
+        <div>
+          <label>ZPD 区间</label>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <div>
+              <label style="font-size:12px">min_p</label>
+              <div class="row">
+                <input id="min_p" type="range" min="0" max="1" step="0.01" value="0.40">
+                <output id="min_p_out">0.40</output>
+              </div>
+            </div>
+            <div>
+              <label style="font-size:12px">max_p</label>
+              <div class="row">
+                <input id="max_p" type="range" min="0" max="1" step="0.01" value="0.70">
+                <output id="max_p_out">0.70</output>
+              </div>
+            </div>
+          </div>
+          <div class="muted">优先挑选 P(AC) 落在区间内的题目，不足再用高分补齐。</div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn-secondary" id="refresh_btn" type="button">刷新</button>
+        <div class="muted" id="status" style="align-self:center"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0">📌 当前状态</h2>
+      <div class="muted" id="meta"></div>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0">1) 时间轴散点</h2>
+      <img id="img_timeline" style="width:100%; max-width:1100px" alt="timeline_scatter">
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0">2) 雷达对比（历史 vs 推荐）</h2>
+      <img id="img_radar" style="width:100%; max-width:1100px" alt="radar_compare">
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0">3) 难度阶梯（推荐列表）</h2>
+      <img id="img_ladder" style="width:100%; max-width:1100px" alt="difficulty_ladder">
+    </div>
+
+    <div class="card" style="padding:0; overflow:hidden;">
+      <div style="padding:24px 24px 0"><h2 style="margin:0">Top-K 推荐列表</h2></div>
+      <div style="overflow-x:auto; padding: 16px 24px 24px;">
+        <table>
+          <thead>
+            <tr>
+              <th width="60">Rank</th>
+              <th width="90">Problem</th>
+              <th>Title</th>
+              <th width="80">难度</th>
+              <th>Tags</th>
+              <th width="90">Language</th>
+              <th width="90">P(AC)</th>
+              <th width="90">In ZPD</th>
+            </tr>
+          </thead>
+          <tbody id="reco_rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+<script>
+function bindOut(id, outId, fmt) {
+  const el = document.getElementById(id);
+  const out = document.getElementById(outId);
+  const update = () => out.textContent = fmt(el.value);
+  el.addEventListener("input", update);
+  update();
+}
+bindOut("pct","pct_out",(v)=>Number(v).toFixed(2));
+bindOut("k","k_out",(v)=>String(v));
+bindOut("min_p","min_p_out",(v)=>Number(v).toFixed(2));
+bindOut("max_p","max_p_out",(v)=>Number(v).toFixed(2));
+
+function esc(s) {
+  return String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
+}
+
+async function refresh() {
+  const status = document.getElementById("status");
+  status.textContent = "加载中...";
+  const user_id = document.getElementById("user_id").value.trim() || "1";
+  const pct = document.getElementById("pct").value;
+  const k = document.getElementById("k").value;
+  const min_p = document.getElementById("min_p").value;
+  const max_p = document.getElementById("max_p").value;
+
+  const url = `/api/student?user_id=${encodeURIComponent(user_id)}&pct=${encodeURIComponent(pct)}&k=${encodeURIComponent(k)}&min_p=${encodeURIComponent(min_p)}&max_p=${encodeURIComponent(max_p)}`;
+  let data;
+  try {
+    const resp = await fetch(url);
+    const text = await resp.text();
+    if(!resp.ok) throw new Error(text);
+    data = JSON.parse(text);
+  } catch (e) {
+    status.textContent = "失败：" + (e && e.message ? e.message : e);
+    return;
+  }
+
+  const m = data.meta || {};
+  document.getElementById("meta").innerHTML =
+    `<div><b>user_id</b>: ${m.user_id} &nbsp; <b>cutoff</b>: ${m.cutoff_submission_id} (pct=${Number(m.cutoff_pct).toFixed(2)})</div>` +
+    `<div><b>hist_submissions</b>: ${m.hist_submissions} &nbsp; <b>hist_solved</b>: ${m.hist_solved}</div>` +
+    `<div><b>level</b>: ${Number(m.level).toFixed(3)} &nbsp; <b>perseverance</b>: ${Number(m.perseverance).toFixed(3)} &nbsp; <b>top_language</b>: ${esc(m.top_language)}</div>` +
+    `<div><b>ZPD</b>: [${Number((m.zpd||[])[0] ?? 0).toFixed(2)}, ${Number((m.zpd||[])[1] ?? 1).toFixed(2)}]</div>`;
+
+  const imgs = data.images || {};
+  document.getElementById("img_timeline").src = "data:image/png;base64," + (imgs.timeline_scatter || "");
+  document.getElementById("img_radar").src = "data:image/png;base64," + (imgs.radar_compare || "");
+  document.getElementById("img_ladder").src = "data:image/png;base64," + (imgs.difficulty_ladder || "");
+
+  const rows = data.recommendations || [];
+  const tbody = document.getElementById("reco_rows");
+  tbody.innerHTML = rows.map(r => {
+    const p = Number(r.p_ac);
+    const scoreStyle = p >= 0.7 ? "color:#166534;font-weight:700" : (p >= 0.4 ? "color:#ca8a04;font-weight:700" : "color:#b91c1c;font-weight:700");
+    return `<tr>` +
+      `<td>${r.rank}</td>` +
+      `<td style="font-family:monospace;color:#666">#${r.problem_id}</td>` +
+      `<td>${esc(r.title)}</td>` +
+      `<td><span class="pill">${r.difficulty}</span></td>` +
+      `<td class="muted">${esc(r.tags)}</td>` +
+      `<td>${esc(r.language)}</td>` +
+      `<td style="${scoreStyle}">${p.toFixed(4)}</td>` +
+      `<td>${r.in_growth_band ? "1" : "0"}</td>` +
+    `</tr>`;
+  }).join("");
+
+  status.textContent = "完成";
+}
+
+document.getElementById("refresh_btn").addEventListener("click", refresh);
+["pct","k","min_p","max_p"].forEach(id => document.getElementById(id).addEventListener("change", refresh));
+refresh();
+</script>
+</body>
+</html>
+""".encode("utf-8")
+            self._send(200, body, "text/html; charset=utf-8")
             return
 
         if p.path.startswith("/reports/"):
@@ -622,6 +1199,9 @@ class Handler(BaseHTTPRequestHandler):
                 <a href="/custom" style="display:inline-flex; align-items:center; background:var(--primary-color); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
                     <span>👉 进入个性化题目推荐</span>
                 </a>
+                <a href="/student" style="display:inline-flex; align-items:center; background:#fff; color:var(--primary-color); padding:10px 20px; border-radius:8px; text-decoration:none; border:1px solid var(--border-color);">
+                    <span>📈 单学生动态展示</span>
+                </a>
                 <span class="muted">基于机器学习模型的智能推荐系统</span>
             </div>
         </header>
@@ -641,7 +1221,6 @@ class Handler(BaseHTTPRequestHandler):
             return
 
         if p.path == "/custom":
-            global RECO
             if RECO is None:
                 try:
                     RECO = Recommender()
@@ -667,6 +1246,8 @@ class Handler(BaseHTTPRequestHandler):
     <div class="container">
         <div style="margin-bottom: 20px;">
             <a href="/" style="font-size: 14px;">&larr; 返回首页</a>
+            <span style="margin: 0 10px; color:#ccc">|</span>
+            <a href="/student" style="font-size: 14px;">单学生动态展示</a>
         </div>
 
         <h1>🎯 自定义参数推荐</h1>
