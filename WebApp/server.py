@@ -806,63 +806,215 @@ details { border: 1px solid var(--border-color); border-radius: 8px; padding: 10
 summary { cursor: pointer; font-weight: 500; color: var(--text-main); }
 """
 
-FIG_INFO: dict[str, dict[str, str]] = {
+FIG_INFO: dict[str, dict[str, object]] = {
     "fig_level_hist.png": {
         "title": "用户能力（level）分布",
-        "desc": "用于检查能力分层是否合理；一般应有差异与长尾，而不是全部集中在某个区间。",
+        "summary": "用于验证“能力画像”是否合理，以及是否存在异常（全 0 / 全 1 / 过度集中）。",
+        "how": [
+            "横轴是 level（0~1），纵轴是人数；越靠右表示能力越强。",
+            "如果大部分用户集中在很窄的区间，说明画像区分度不足；如果两端极端多，可能是归一化/公式问题。",
+        ],
+        "tips": [
+            "结合 fig_user_activity.png 看：低活跃用户占比高时，level 可能更不稳定。",
+            "若 level 几乎不随时间变化，可能存在“看未来”的时间泄漏（需要严格按历史计算画像）。",
+        ],
     },
     "fig_perseverance_hist.png": {
         "title": "用户坚持度（perseverance）分布",
-        "desc": "用于检查重试/坚持差异；不应全部接近 0 或 1。",
+        "summary": "用于验证“坚持/重试”画像是否有差异，以及是否过度饱和到 0 或 1。",
+        "how": [
+            "横轴是 perseverance（0~1），纵轴是人数；数值越大表示平均重试/坚持更强。",
+            "如果大量用户都接近 1，说明归一化尺度可能太小或分母设置不合理。",
+        ],
+        "tips": [
+            "perseverance 通常受 attempt_no 分布影响，建议对照 fig_attemptno_vs_ac.png 解释。",
+        ],
     },
     "fig_lang_dist.png": {
         "title": "语言总体分布（按提交）",
-        "desc": "检查语言占比是否符合常识；也可支持“语言特征有效性”的论证。",
+        "summary": "用于证明语言数据分布符合常识，并说明“语言特征”可能有区分信息。",
+        "how": [
+            "横轴是语言，纵轴是提交次数。",
+            "如果某些语言几乎为 0，可能是数据缺失/语言白名单不匹配；会导致 one-hot 特征弱或无效。",
+        ],
     },
     "fig_tag_dist.png": {
         "title": "标签总体分布（题型占比）",
-        "desc": "检查 12 类题型分布是否合理，避免极端失衡影响训练。",
+        "summary": "用于检查题型空间是否失衡；极端失衡会让模型更偏向少数标签。",
+        "how": [
+            "横轴是标签，纵轴是出现次数（题目标签出现）。",
+            "少数标签特别高会造成训练样本集中，推荐也容易同质化。",
+        ],
     },
     "fig_user_activity.png": {
         "title": "用户活跃度分布（提交次数）",
-        "desc": "观察长尾：少数高活跃用户 + 大量低活跃用户通常更符合真实平台。",
+        "summary": "用于展示平台常见长尾：少数高活跃用户 + 大量低活跃用户。",
+        "how": [
+            "横轴是提交次数，纵轴是人数；通常会出现明显长尾。",
+            "低活跃用户多时，画像/偏好统计更不稳定，推荐更难做得很准。",
+        ],
     },
     "fig_difficulty_vs_ac.png": {
         "title": "难度 vs 通过率（AC率）",
-        "desc": "关键合理性校验：难度越高，通过率应整体下降（负相关）。",
+        "summary": "关键合理性校验：难度越高，AC 率应整体下降（负相关）。",
+        "how": [
+            "横轴是难度（1~10），纵轴是通过率（0~1）。",
+            "如果曲线不降反升或剧烈抖动，可能是 difficulty 标注不可靠或数据量不足。",
+        ],
     },
     "fig_attemptno_vs_ac.png": {
         "title": "尝试次数 vs 通过率（attempt_no）",
-        "desc": "观察多次尝试是否有“学习/纠错”效应；趋势应可解释。",
+        "summary": "用于解释“多次尝试与通过率”的关系，帮助理解 attempt_no 特征的作用。",
+        "how": [
+            "横轴是 attempt_no（第几次尝试），纵轴是 AC 率。",
+            "如果 attempt_no 越大 AC 率越高，说明有学习/纠错效应；反之可能表示越难的题需要更多尝试。",
+        ],
     },
     "fig_tag_acrate.png": {
         "title": "各标签平均通过率（AC率）",
-        "desc": "对比不同题型的难度差异，证明“标签特征”有信息量。",
+        "summary": "用于证明不同题型的难度差异，以及标签特征与 AC 的相关性。",
+        "how": [
+            "横轴是标签，纵轴是平均 AC 率。",
+            "如果所有标签 AC 率几乎一样，说明标签区分信息较弱或统计口径有问题。",
+        ],
     },
     "fig_lang_acrate.png": {
         "title": "各语言平均通过率（AC率）",
-        "desc": "对比不同语言的通过率差异，检验“语言特征”是否存在相关性。",
+        "summary": "用于检验“语言特征”是否与通过率存在相关性（并不表示因果）。",
+        "how": [
+            "横轴是语言，纵轴是平均 AC 率。",
+            "差异过大可能来自用户群体差异（强者偏某语言）或题目选择偏差，不建议做因果解读。",
+        ],
     },
     "fig_model_f1_compare.png": {
         "title": "模型 F1 对比（时间切分）",
-        "desc": "主模型与对比模型的整体效果对比，用于“实验结果与分析”。",
+        "summary": "用于对比多个模型在测试窗口的整体分类质量（兼顾 Precision 与 Recall）。",
+        "how": [
+            "柱越高表示该模型对“是否 AC”预测更稳定。",
+            "如果不同模型差距很小，通常说明特征决定了上限；可考虑特征改进或更贴近推荐目标的建模方式。",
+        ],
     },
-    "fig_cm_logreg.png": {"title": "混淆矩阵：逻辑回归", "desc": "查看 TP/FP/FN/TN 结构，结合 Precision/Recall 解释误差。"},
-    "fig_cm_tree.png": {"title": "混淆矩阵：决策树", "desc": "对比不同模型的错误类型，辅助分析过拟合/欠拟合。"},
-    "fig_cm_svm_or_knn.png": {"title": "混淆矩阵：SVM/KNN（对比）", "desc": "对比模型误判结构，判断是否需要更强特征或调参。"},
     "fig_hitk_curve.png": {
-        "title": "Hit@K 曲线（命中=测试窗口内是否AC）",
-        "desc": "推荐评估主图：K 增大命中率通常上升；曲线形状反映边际收益。",
+        "title": "Hit@K 曲线（多策略对比）",
+        "summary": "用于对比不同推荐策略的命中率：K 越大通常越容易命中，但边际收益会下降。",
+        "how": [
+            "横轴是 K（推荐列表长度），纵轴是 Hit@K（测试窗口内是否命中过至少 1 道最终 AC 的题）。",
+            "重点看：model vs random 是否显著更高（证明模型有效）；popular_train 的位置可作为强基线参照。",
+            "growth 策略可能牺牲部分命中率以换取更适度的学习题目（需要结合难度分布图解释）。",
+        ],
     },
     "fig_reco_difficulty_hist.png": {
         "title": "推荐题难度分布（用户案例）",
-        "desc": "验证“成长型推荐”：推荐题难度应集中在适度区间，而非全易/全难。",
+        "summary": "用于解释推荐列表的“难度结构”，尤其是成长带（ZPD）策略是否在推“刚好够得着”的题。",
+        "how": [
+            "横轴是难度（1~10），纵轴是推荐题数量。",
+            "如果全部集中在最低难度，推荐缺挑战；如果全部集中在最高难度，命中与可学习性都会差。",
+        ],
     },
     "fig_reco_coverage.png": {
         "title": "推荐集中度与覆盖率",
-        "desc": "检查是否只推荐少数热门题；覆盖率越高，推荐越不易同质化。",
+        "summary": "用于判断推荐是否过度集中在少数热门题（同质化），以及整体覆盖率。",
+        "how": [
+            "柱状图展示 Top20 被推荐次数最多的题；标题里有 coverage（覆盖率）。",
+            "如果 Top20 柱子极高且 coverage 很低，说明推荐同质化严重；可用候选过滤/多样性重排改进。",
+        ],
     },
 }
+
+
+def _html_ul(items: list[str]) -> str:
+    if not items:
+        return ""
+    return "<ul style='margin:8px 0 0; padding-left:18px'>" + "".join(
+        f"<li>{html.escape(x)}</li>" for x in items if str(x).strip()
+    ) + "</ul>"
+
+
+def get_fig_info(filename: str) -> dict[str, object]:
+    if filename in FIG_INFO:
+        return FIG_INFO[filename]
+
+    # Confusion matrix family
+    if filename.startswith("fig_cm_") or filename.startswith("fig_confusion_"):
+        name = filename.removeprefix("fig_cm_").removeprefix("fig_confusion_").removesuffix(".png")
+        title_map = {
+            "logreg": "逻辑回归",
+            "tree": "决策树",
+            "svm_linear": "线性 SVM",
+            "svm_or_knn": "SVM/KNN（对比）",
+        }
+        model_name = title_map.get(name, name)
+        return {
+            "title": f"混淆矩阵：{model_name}",
+            "summary": "用于拆解模型错误类型（把 AC 当作正类），帮助解释 Precision/Recall 为什么会这样。",
+            "how": [
+                "矩阵对角线越高越好：左上=真负（预测未AC且确实未AC），右下=真正（预测AC且确实AC）。",
+                "右上=假正（误报AC，影响 Precision）；左下=假负（漏报AC，影响 Recall）。",
+            ],
+            "tips": [
+                "如果假负很多：模型保守，可能需要更强特征或调阈值；如果假正很多：模型过于乐观。",
+            ],
+        }
+
+    # Compare figures (strict vs leaky)
+    if filename.startswith("fig_compare_"):
+        key = filename.removesuffix(".png").removeprefix("fig_compare_")
+        title_map = {
+            "hitk": "Hit@K 对比（strict vs leaky）",
+            "precisionk": "Precision@K 对比（strict vs leaky）",
+            "roc": "ROC 曲线对比（strict vs leaky）",
+            "pr": "PR 曲线对比（strict vs leaky）",
+            "calibration": "校准曲线对比（strict vs leaky）",
+        }
+        title = title_map.get(key, f"对比图：{key}")
+        return {
+            "title": title,
+            "summary": "用于判断旧口径是否“失真”（leaky 看未来会抬高指标），strict 更接近真实可部署效果。",
+            "how": [
+                "如果 leaky 明显高于 strict：说明过去评估被时间泄漏抬高；报告应以 strict 为准。",
+                "如果两者接近：说明时间泄漏影响不大，模型/特征更可信。",
+            ],
+            "tips": [
+                "ROC/PR 侧重排序能力；校准曲线侧重概率是否可信（是否过于乐观/保守）。",
+            ],
+        }
+
+    # Generic fallback based on filename patterns
+    if "acrate" in filename or "vs_ac" in filename:
+        return {
+            "title": filename,
+            "summary": "用于查看某个因素（难度/尝试次数/语言/标签）与 AC 率的关系，帮助验证特征是否有信息量。",
+            "how": [
+                "先看横轴是什么特征，纵轴通常是 AC 率（0~1）。",
+                "趋势是否符合直觉：难度升高通过率下降；标签/语言差异应可解释。",
+            ],
+        }
+    if "hist" in filename or "dist" in filename:
+        return {
+            "title": filename,
+            "summary": "分布图：用于检查数据是否符合常识、是否存在异常值/极端集中。",
+            "how": [
+                "看横轴变量的取值范围，纵轴是数量/人数。",
+                "重点关注：是否长尾、是否异常尖峰、是否出现不可能的取值。",
+            ],
+        }
+    if "coverage" in filename:
+        return {
+            "title": filename,
+            "summary": "用于检查推荐是否同质化（是否总推荐少数题），以及覆盖率是否足够。",
+            "how": [
+                "Top20 柱越高且越集中，说明推荐越同质化；覆盖率越高表示推荐更分散。",
+            ],
+        }
+
+    return {
+        "title": filename,
+        "summary": "未登记说明：建议先看图的标题与坐标轴含义，再结合上下游图表做解释。",
+        "how": [
+            "若是训练相关图：结合 Models/metrics.csv 的指标理解好坏。",
+            "若是推荐相关图：结合 Reports/reco_metrics.csv 的 Hit@K/Precision@K/Recall@K/NDCG@K 理解好坏。",
+        ],
+    }
 
 FIG_SECTIONS: list[tuple[str, list[str]]] = [
     (
@@ -881,7 +1033,16 @@ FIG_SECTIONS: list[tuple[str, list[str]]] = [
     ),
     (
         "B. 训练层可视化（训练后）",
-        ["fig_model_f1_compare.png", "fig_cm_logreg.png", "fig_cm_tree.png", "fig_cm_svm_or_knn.png"],
+        [
+            "fig_model_f1_compare.png",
+            "fig_cm_logreg.png",
+            "fig_cm_tree.png",
+            "fig_cm_svm_or_knn.png",
+            "fig_cm_svm_linear.png",
+            "fig_confusion_logreg.png",
+            "fig_confusion_tree.png",
+            "fig_confusion_svm_linear.png",
+        ],
     ),
     ("C. 推荐评估（Top-K）", ["fig_hitk_curve.png", "fig_reco_difficulty_hist.png", "fig_reco_coverage.png"]),
 ]
@@ -1149,14 +1310,32 @@ refresh();
             figs_set = set(figs)
 
             def render_card(fn: str) -> str:
-                info = FIG_INFO.get(fn, {"title": fn, "desc": "（未登记说明）"})
+                info = get_fig_info(fn)
+                title = str(info.get("title") or fn)
+                summary = str(info.get("summary") or "")
+                how = info.get("how") if isinstance(info.get("how"), list) else []
+                tips = info.get("tips") if isinstance(info.get("tips"), list) else []
+                details = ""
+                blocks: list[str] = []
+                if how:
+                    blocks.append("<div class='muted' style='margin-top:6px'>如何理解：</div>" + _html_ul([str(x) for x in how]))
+                if tips:
+                    blocks.append("<div class='muted' style='margin-top:8px'>常见解读/提示：</div>" + _html_ul([str(x) for x in tips]))
+                if blocks:
+                    details = (
+                        "<details style='margin-top:10px'>"
+                        "<summary>展开：这张图怎么看</summary>"
+                        + "".join(blocks)
+                        + "</details>"
+                    )
                 return (
                     f'<div class="card">'
                     f'<div class="muted" style="font-family:monospace">{html.escape(fn)}</div>'
-                    f'<h3 style="margin:8px 0 6px">{html.escape(info["title"])}</h3>'
+                    f'<h3 style="margin:8px 0 6px">{html.escape(title)}</h3>'
                     f'<a href="/reports/{html.escape(fn)}" target="_blank">'
                     f'<img src="/reports/{html.escape(fn)}" alt="{html.escape(fn)}" loading="lazy"></a>'
-                    f'<div class="muted">{html.escape(info["desc"])}</div>'
+                    f'<div class="muted">{html.escape(summary)}</div>'
+                    f"{details}"
                     f"</div>"
                 )
 
