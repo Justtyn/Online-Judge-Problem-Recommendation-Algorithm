@@ -113,6 +113,7 @@ def parse_json_list(x) -> list[str]:
 def ensure_dir(path: str) -> None:
     Path(path).parent.mkdir(parents=True, exist_ok=True)
 
+
 def ndcg_at_k(rec_pids: list[int], gt: set[int], k: int) -> float:
     k = int(k)
     if k <= 0:
@@ -362,7 +363,7 @@ def main() -> int:
         all_diffs: list[int] = []
 
         for start in range(0, len(cand_pos), CHUNK_SIZE):
-            pos = cand_pos[start : start + CHUNK_SIZE]
+            pos = cand_pos[start: start + CHUNK_SIZE]
             pids = problem_ids[pos]
 
             attempt_no = np.fromiter(

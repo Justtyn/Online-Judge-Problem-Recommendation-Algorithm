@@ -9,6 +9,7 @@ import joblib
 import numpy as np
 import pandas as pd
 import matplotlib
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from sklearn.pipeline import Pipeline
@@ -16,7 +17,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import LinearSVC
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, \
+    ConfusionMatrixDisplay
 
 
 def setup_cn_font() -> None:
@@ -57,24 +59,24 @@ for c in X.columns:
 order = np.argsort(id_order)
 X = X.iloc[order].reset_index(drop=True)
 y = y[order]
-split = int(len(X)*0.8)
+split = int(len(X) * 0.8)
 X_train, X_test = X.iloc[:split], X.iloc[split:]
 y_train, y_test = y[:split], y[split:]
 
 models = {
-  "logreg": Pipeline(
-      [
-          ("scaler", StandardScaler(with_mean=False)),
-          ("clf", LogisticRegression(max_iter=300, random_state=RANDOM_SEED)),
-      ]
-  ),
-  "tree": DecisionTreeClassifier(max_depth=10, random_state=RANDOM_SEED),
-  "svm_linear": Pipeline(
-      [("scaler", StandardScaler(with_mean=False)), ("clf", LinearSVC(random_state=RANDOM_SEED))]
-  ),
+    "logreg": Pipeline(
+        [
+            ("scaler", StandardScaler(with_mean=False)),
+            ("clf", LogisticRegression(max_iter=300, random_state=RANDOM_SEED)),
+        ]
+    ),
+    "tree": DecisionTreeClassifier(max_depth=10, random_state=RANDOM_SEED),
+    "svm_linear": Pipeline(
+        [("scaler", StandardScaler(with_mean=False)), ("clf", LinearSVC(random_state=RANDOM_SEED))]
+    ),
 }
 
-rows=[]
+rows = []
 for name, model in models.items():
     model.fit(X_train, y_train)
     pred = model.predict(X_test)
@@ -115,7 +117,7 @@ print("Saved pipeline to", OUT_PIPELINE)
 Path(OUT_DIR).mkdir(parents=True, exist_ok=True)
 for name, model in models.items():
     pred = model.predict(X_test)
-    cm = confusion_matrix(y_test, pred, labels=[0,1])
+    cm = confusion_matrix(y_test, pred, labels=[0, 1])
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=["未AC", "AC"])
     fig, ax = plt.subplots()
     disp.plot(ax=ax, values_format="d")
