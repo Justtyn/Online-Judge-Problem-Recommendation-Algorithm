@@ -18,11 +18,11 @@
 ├── Reports/          # 图表、推荐结果、评估指标（写报告直接引用）
 ├── Utils/            # 数据校验、抓取/解析、标注、模拟数据等小工具
 ├── WebApp/           # 本地 Web：展示图表 + 自定义推荐
-├── 03_derive_students.py
-├── 04_build_features.py
-├── 05_train_eval.py
-├── 06_recommend_eval.py
-└── 07_make_eda_plots.py
+├── 01_derive_students.py
+├── 02_build_features.py
+├── 03_train_eval.py
+├── 04_recommend_eval.py
+└── 05_make_eda_plots.py
 ```
 
 说明：
@@ -92,12 +92,14 @@ python Utils/diagnose_reco_bias.py --scan --max-users 300 --fail-if-any
 
 ### 3）运行推荐算法流水线（03 → 06）
 
+说明：以下脚本默认以仓库根目录为基准解析 `CleanData/FeatureData/Models/Reports` 路径，因此可以在任意工作目录运行。
+
 ```bash
-python 03_derive_students.py      # 画像：CleanData/students_derived.csv
-python 04_build_features.py       # 样本：FeatureData/train_samples.csv
-python 05_train_eval.py           # 模型：Models/metrics.csv + Reports/fig_cm_*.png
-python 06_recommend_eval.py       # 推荐：Reports/recommendations_topk.csv + Reports/reco_metrics.csv
-python 07_make_eda_plots.py       # EDA：Reports/fig_*.png（用于写报告的“分布合理性”图）
+python 01_derive_students.py      # 画像：CleanData/students_derived.csv
+python 02_build_features.py       # 样本：FeatureData/train_samples.csv
+python 03_train_eval.py           # 模型：Models/metrics.csv + Reports/fig_cm_*.png
+python 04_recommend_eval.py       # 推荐：Reports/recommendations_topk.csv + Reports/reco_metrics.csv
+python 05_make_eda_plots.py       # EDA：Reports/fig_*.png（用于写报告的“分布合理性”图）
 ```
 
 关键产物（路径固定，便于引用）：
@@ -129,8 +131,8 @@ python WebApp/server.py --port 8000
 
 注意：
 - WebApp 只负责加载离线训练好的 `Pipeline` 并推理；请先运行：
-  - `python 04_build_features.py`
-  - `python 05_train_eval.py`（会保存 `Models/pipeline_logreg.joblib`）
+  - `python 02_build_features.py`
+  - `python 03_train_eval.py`（会保存 `Models/pipeline_logreg.joblib`）
 
 ---
 
@@ -169,7 +171,7 @@ python WebApp/server.py --port 8000
 
 ## 方法概览（画像 → 特征 → 模型 → 推荐）
 
-### 学生画像（`03_derive_students.py`）
+### 学生画像（`01_derive_students.py`）
 
 输出 `CleanData/students_derived.csv`，核心字段：
 - `level`：能力（0–1），按“做对题目的难度加权表现”归一化
@@ -177,7 +179,7 @@ python WebApp/server.py --port 8000
 - `lang_pref`：语言偏好分布（JSON 字典，键为语言名、值为占比）
 - `tag_pref`：标签偏好分布（JSON 字典，键为标签、值为占比）
 
-### 训练样本（`04_build_features.py`）
+### 训练样本（`02_build_features.py`）
 
 输出 `FeatureData/train_samples.csv`，一行一条提交：
 - `y`：`ac`（0/1）
@@ -191,7 +193,7 @@ python WebApp/server.py --port 8000
 - `tag_match`：题目标签与用户历史标签偏好的匹配程度
 - 画像/偏好类特征按“该提交之前的历史”计算，避免时间泄漏
 
-### 模型训练与评估（`05_train_eval.py`）
+### 模型训练与评估（`03_train_eval.py`）
 
 采用按 `submission_id` 排序后的时间切分（默认 80%/20%）：
 - `logreg`：Logistic Regression（带 `StandardScaler(with_mean=False)`）
@@ -203,7 +205,7 @@ python WebApp/server.py --port 8000
 - `Reports/fig_cm_*.png`：各模型混淆矩阵
 - `Reports/fig_model_f1_compare.png`：F1 对比图
 
-### Top‑K 推荐与评估（`06_recommend_eval.py`）
+### Top‑K 推荐与评估（`04_recommend_eval.py`）
 
 推荐思路：
 - 先训练一个 `P(AC)` 模型（Logistic Regression）
@@ -245,7 +247,7 @@ python WebApp/server.py --port 8000
 ## 常见问题（Troubleshooting）
 
 1) `train_samples.csv 缺少列 ...`  
-先确认你运行了 `python 04_build_features.py`，并且 `CleanData/tags.csv`、`CleanData/languages.csv` 与数据一致。
+先确认你运行了 `python 02_build_features.py`，并且 `CleanData/tags.csv`、`CleanData/languages.csv` 与数据一致。
 
 2) `problems.tags` 是逗号分隔还是 JSON？  
 推荐 JSON 数组字符串；若是逗号分隔，校验时加 `--accept-csv-tags`，或使用 `python Utils/normalize_problems_tags_json.py --inplace` 统一格式。

@@ -2,8 +2,12 @@ import argparse
 import csv
 import json
 import os
+from pathlib import Path
 from collections.abc import Iterable
 from typing import Any
+
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def read_set(path: str, key: str) -> set[str]:
@@ -183,12 +187,12 @@ def validate_submissions(
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Validate CleanData CSV integrity.")
-    parser.add_argument("--students", default="CleanData/students.csv")
-    parser.add_argument("--problems", default="CleanData/problems.csv")
-    parser.add_argument("--submissions", default="CleanData/submissions.csv")
-    parser.add_argument("--languages", default="CleanData/languages.csv")
-    parser.add_argument("--verdicts", default="CleanData/verdicts.csv")
-    parser.add_argument("--tags", default="CleanData/tags.csv")
+    parser.add_argument("--students", default=str(ROOT / "CleanData/students.csv"))
+    parser.add_argument("--problems", default=str(ROOT / "CleanData/problems.csv"))
+    parser.add_argument("--submissions", default=str(ROOT / "CleanData/submissions.csv"))
+    parser.add_argument("--languages", default=str(ROOT / "CleanData/languages.csv"))
+    parser.add_argument("--verdicts", default=str(ROOT / "CleanData/verdicts.csv"))
+    parser.add_argument("--tags", default=str(ROOT / "CleanData/tags.csv"))
     parser.add_argument(
         "--accept-csv-tags",
         action="store_true",
@@ -247,4 +251,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

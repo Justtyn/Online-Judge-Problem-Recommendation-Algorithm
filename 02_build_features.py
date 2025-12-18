@@ -6,19 +6,22 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-PROBLEMS = "CleanData/problems.csv"
-SUBS = "CleanData/submissions_clean.csv"  # 兼容：也可能叫 submissions.csv
-TAGS = "CleanData/tags.csv"
-LANGS = "CleanData/languages.csv"
-OUT = "FeatureData/train_samples.csv"
+ROOT = Path(__file__).resolve().parent
+
+PROBLEMS = ROOT / "CleanData/problems.csv"
+SUBS = ROOT / "CleanData/submissions.csv"
+SUBS_COMPAT = ROOT / "CleanData/submissions_clean.csv"
+TAGS = ROOT / "CleanData/tags.csv"
+LANGS = ROOT / "CleanData/languages.csv"
+OUT = ROOT / "FeatureData/train_samples.csv"
 RANDOM_SEED = 42
 
 
-def first_existing_path(*candidates: str) -> str:
+def first_existing_path(*candidates: Path) -> Path:
     for p in candidates:
-        if Path(p).exists():
+        if p.exists():
             return p
-    raise FileNotFoundError(f"找不到输入文件，候选路径：{candidates!r}")
+    raise FileNotFoundError(f"找不到输入文件，候选路径：{[str(c) for c in candidates]!r}")
 
 
 def parse_json_list(x: object) -> list[str]:
@@ -47,7 +50,7 @@ def main() -> int:
     np.random.seed(RANDOM_SEED)
 
     problems = pd.read_csv(PROBLEMS)
-    subs = pd.read_csv(first_existing_path(SUBS, "CleanData/submissions.csv"), low_memory=False)
+    subs = pd.read_csv(first_existing_path(SUBS, SUBS_COMPAT), low_memory=False)
     tags = pd.read_csv(TAGS)
     langs = pd.read_csv(LANGS)
 
@@ -185,9 +188,9 @@ def main() -> int:
         axis=1,
     )
 
-    Path(OUT).parent.mkdir(parents=True, exist_ok=True)
+    OUT.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(OUT, index=False, encoding="utf-8-sig")
-    print("Wrote", OUT, "rows=", len(out), "cols=", out.shape[1])
+    print("Wrote", str(OUT), "rows=", len(out), "cols=", out.shape[1])
     return 0
 
 

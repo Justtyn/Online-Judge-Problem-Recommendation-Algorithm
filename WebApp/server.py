@@ -84,8 +84,8 @@ class Recommender:
             raise RuntimeError(
                 f"找不到离线模型文件：{PIPELINE_PATH}\n"
                 f"请先运行：\n"
-                f"  python 04_build_features.py\n"
-                f"  python 05_train_eval.py\n"
+                f"  python 02_build_features.py\n"
+                f"  python 03_train_eval.py\n"
                 f"以生成并保存 `Models/pipeline_logreg.joblib`。"
             )
 
@@ -111,7 +111,7 @@ class Recommender:
         missing = sorted(required - set(self.feature_cols))
         if missing:
             raise RuntimeError(
-                f"离线模型/特征不匹配：缺少特征列 {missing}；请重新运行 `python 04_build_features.py` 与 `python 05_train_eval.py`。"
+                f"离线模型/特征不匹配：缺少特征列 {missing}；请重新运行 `python 02_build_features.py` 与 `python 03_train_eval.py`。"
             )
 
         self.lang_cols = [c for c in self.feature_cols if c.startswith("lang_")]

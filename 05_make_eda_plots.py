@@ -3,8 +3,10 @@ import os
 import re
 from pathlib import Path
 
-os.environ.setdefault("XDG_CACHE_HOME", str(Path(".cache").resolve()))
-os.environ.setdefault("MPLCONFIGDIR", str(Path(".cache/matplotlib").resolve()))
+ROOT = Path(__file__).resolve().parent
+
+os.environ.setdefault("XDG_CACHE_HOME", str((ROOT / ".cache").resolve()))
+os.environ.setdefault("MPLCONFIGDIR", str((ROOT / ".cache/matplotlib").resolve()))
 Path(os.environ["MPLCONFIGDIR"]).mkdir(parents=True, exist_ok=True)
 
 import matplotlib
@@ -14,13 +16,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-SUBMISSIONS = "CleanData/submissions.csv"
-PROBLEMS = "CleanData/problems.csv"
-STUDENTS_DERIVED = "CleanData/students_derived.csv"
-TAGS = "CleanData/tags.csv"
-LANGS = "CleanData/languages.csv"
+SUBMISSIONS = ROOT / "CleanData/submissions.csv"
+PROBLEMS = ROOT / "CleanData/problems.csv"
+STUDENTS_DERIVED = ROOT / "CleanData/students_derived.csv"
+TAGS = ROOT / "CleanData/tags.csv"
+LANGS = ROOT / "CleanData/languages.csv"
 
-OUT_DIR = "Reports"
+OUT_DIR = ROOT / "Reports"
 
 
 def setup_cn_font() -> None:
@@ -61,15 +63,15 @@ def parse_json_list(x) -> list[str]:
     return [p.strip().strip('"').strip("'") for p in parts if p.strip()]
 
 
-def save_fig(path: str) -> None:
-    Path(path).parent.mkdir(parents=True, exist_ok=True)
+def save_fig(path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
     plt.tight_layout()
     plt.savefig(path, dpi=200)
     plt.close()
 
 
 def main() -> int:
-    Path(OUT_DIR).mkdir(parents=True, exist_ok=True)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     subs = pd.read_csv(SUBMISSIONS)
     subs["user_id"] = pd.to_numeric(subs["user_id"], errors="coerce").astype(int)
@@ -102,14 +104,14 @@ def main() -> int:
     plt.title("用户能力（level）分布")
     plt.xlabel("level（0-1）")
     plt.ylabel("人数")
-    save_fig(f"{OUT_DIR}/fig_level_hist.png")
+    save_fig(OUT_DIR / "fig_level_hist.png")
 
     plt.figure()
     plt.hist(students["perseverance"], bins=20, edgecolor="black")
     plt.title("用户坚持度（perseverance）分布")
     plt.xlabel("perseverance（0-1）")
     plt.ylabel("人数")
-    save_fig(f"{OUT_DIR}/fig_perseverance_hist.png")
+    save_fig(OUT_DIR / "fig_perseverance_hist.png")
 
     lang_counts = subs.groupby("language").size().sort_values(ascending=False)
     if len(lang_counts):
@@ -120,7 +122,7 @@ def main() -> int:
         plt.xlabel("语言")
         plt.ylabel("提交次数")
         plt.xticks(rotation=30, ha="right")
-        save_fig(f"{OUT_DIR}/fig_lang_dist.png")
+        save_fig(OUT_DIR / "fig_lang_dist.png")
 
     tag_rows = []
     for lst in problems["tags_list"].tolist():
@@ -138,7 +140,7 @@ def main() -> int:
     plt.xlabel("标签")
     plt.ylabel("出现次数")
     plt.xticks(rotation=45, ha="right")
-    save_fig(f"{OUT_DIR}/fig_tag_dist.png")
+    save_fig(OUT_DIR / "fig_tag_dist.png")
 
     user_sub_cnt = subs.groupby("user_id").size().rename("submissions")
     user_prob_cnt = subs.groupby("user_id")["problem_id"].nunique().rename("unique_problems")
@@ -148,7 +150,7 @@ def main() -> int:
     plt.title("用户活跃度：人均提交次数分布")
     plt.xlabel("提交次数")
     plt.ylabel("人数")
-    save_fig(f"{OUT_DIR}/fig_user_activity.png")
+    save_fig(OUT_DIR / "fig_user_activity.png")
 
     # ---- Step 4 plots ----
     sp = subs.merge(
@@ -166,7 +168,7 @@ def main() -> int:
     plt.ylim(0, 1)
     plt.xticks(range(1, 11))
     plt.grid(True, alpha=0.3)
-    save_fig(f"{OUT_DIR}/fig_difficulty_vs_ac.png")
+    save_fig(OUT_DIR / "fig_difficulty_vs_ac.png")
 
     att = sp.copy()
     att["attempt_bucket"] = att["attempt_no"].clip(upper=10)
@@ -179,7 +181,7 @@ def main() -> int:
     plt.ylim(0, 1)
     plt.xticks(range(1, 11))
     plt.grid(True, alpha=0.3)
-    save_fig(f"{OUT_DIR}/fig_attemptno_vs_ac.png")
+    save_fig(OUT_DIR / "fig_attemptno_vs_ac.png")
 
     lang_ac = sp[sp["language"].isin(lang_set)].groupby("language")["ac"].mean()
     lang_ac = lang_ac.reindex([l for l in lang_vocab if l in lang_ac.index], fill_value=np.nan)
@@ -190,7 +192,7 @@ def main() -> int:
     plt.ylabel("通过率")
     plt.ylim(0, 1)
     plt.xticks(rotation=30, ha="right")
-    save_fig(f"{OUT_DIR}/fig_lang_acrate.png")
+    save_fig(OUT_DIR / "fig_lang_acrate.png")
 
     # explode tags per submission (multi-label)
     t_rows = []
@@ -211,7 +213,7 @@ def main() -> int:
         plt.ylabel("通过率")
         plt.ylim(0, 1)
         plt.xticks(rotation=45, ha="right")
-        save_fig(f"{OUT_DIR}/fig_tag_acrate.png")
+        save_fig(OUT_DIR / "fig_tag_acrate.png")
 
     print("已生成图表到", OUT_DIR)
     return 0

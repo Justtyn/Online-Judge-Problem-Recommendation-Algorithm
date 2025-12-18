@@ -1,8 +1,10 @@
 import os
 from pathlib import Path
 
-os.environ.setdefault("XDG_CACHE_HOME", str(Path(".cache").resolve()))
-os.environ.setdefault("MPLCONFIGDIR", str(Path(".cache/matplotlib").resolve()))
+ROOT = Path(__file__).resolve().parent
+
+os.environ.setdefault("XDG_CACHE_HOME", str((ROOT / ".cache").resolve()))
+os.environ.setdefault("MPLCONFIGDIR", str((ROOT / ".cache/matplotlib").resolve()))
 Path(os.environ["MPLCONFIGDIR"]).mkdir(parents=True, exist_ok=True)
 
 import joblib
@@ -38,10 +40,10 @@ def setup_cn_font() -> None:
 
 setup_cn_font()
 
-DATA = "FeatureData/train_samples.csv"
-OUT_METRICS = "Models/metrics.csv"
-OUT_PIPELINE = "Models/pipeline_logreg.joblib"
-OUT_DIR = "Reports"
+DATA = ROOT / "FeatureData/train_samples.csv"
+OUT_METRICS = ROOT / "Models/metrics.csv"
+OUT_PIPELINE = ROOT / "Models/pipeline_logreg.joblib"
+OUT_DIR = ROOT / "Reports"
 RANDOM_SEED = 42
 
 df = pd.read_csv(DATA)
@@ -89,7 +91,7 @@ for name, model in models.items():
     })
 
 metrics = pd.DataFrame(rows).sort_values("f1", ascending=False)
-Path(OUT_METRICS).parent.mkdir(parents=True, exist_ok=True)
+OUT_METRICS.parent.mkdir(parents=True, exist_ok=True)
 metrics.to_csv(OUT_METRICS, index=False, encoding="utf-8-sig")
 print(metrics)
 
@@ -101,7 +103,7 @@ final_logreg = Pipeline(
     ]
 )
 final_logreg.fit(X.to_numpy(dtype=np.float32), y.astype(int))
-Path(OUT_PIPELINE).parent.mkdir(parents=True, exist_ok=True)
+OUT_PIPELINE.parent.mkdir(parents=True, exist_ok=True)
 joblib.dump(
     {
         "pipeline": final_logreg,
@@ -114,7 +116,7 @@ joblib.dump(
 print("Saved pipeline to", OUT_PIPELINE)
 
 # confusion matrices
-Path(OUT_DIR).mkdir(parents=True, exist_ok=True)
+OUT_DIR.mkdir(parents=True, exist_ok=True)
 for name, model in models.items():
     pred = model.predict(X_test)
     cm = confusion_matrix(y_test, pred, labels=[0, 1])
@@ -124,10 +126,10 @@ for name, model in models.items():
     title_map = {"logreg": "逻辑回归", "tree": "决策树", "svm_linear": "线性SVM"}
     ax.set_title(f"混淆矩阵：{title_map.get(name, name)}")
     plt.tight_layout()
-    fig.savefig(f"{OUT_DIR}/fig_confusion_{name}.png", dpi=200)
-    fig.savefig(f"{OUT_DIR}/fig_cm_{name}.png", dpi=200)
+    fig.savefig(OUT_DIR / f"fig_confusion_{name}.png", dpi=200)
+    fig.savefig(OUT_DIR / f"fig_cm_{name}.png", dpi=200)
     if name == "svm_linear":
-        fig.savefig(f"{OUT_DIR}/fig_cm_svm_or_knn.png", dpi=200)
+        fig.savefig(OUT_DIR / "fig_cm_svm_or_knn.png", dpi=200)
     plt.close(fig)
 
 # model compare
@@ -137,5 +139,5 @@ plt.title("模型F1对比（时间切分）")
 plt.xlabel("模型")
 plt.ylabel("F1")
 plt.tight_layout()
-plt.savefig(f"{OUT_DIR}/fig_model_f1_compare.png", dpi=200)
+plt.savefig(OUT_DIR / "fig_model_f1_compare.png", dpi=200)
 plt.close()

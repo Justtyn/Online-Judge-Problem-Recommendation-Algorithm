@@ -4,8 +4,10 @@ import os
 import re
 from pathlib import Path
 
-os.environ.setdefault("XDG_CACHE_HOME", str(Path(".cache").resolve()))
-os.environ.setdefault("MPLCONFIGDIR", str(Path(".cache/matplotlib").resolve()))
+ROOT = Path(__file__).resolve().parent
+
+os.environ.setdefault("XDG_CACHE_HOME", str((ROOT / ".cache").resolve()))
+os.environ.setdefault("MPLCONFIGDIR", str((ROOT / ".cache/matplotlib").resolve()))
 Path(os.environ["MPLCONFIGDIR"]).mkdir(parents=True, exist_ok=True)
 
 import matplotlib
@@ -18,17 +20,17 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
-SUBMISSIONS = "CleanData/submissions.csv"
-PROBLEMS = "CleanData/problems.csv"
-TAGS = "CleanData/tags.csv"
-TRAIN_SAMPLES = "FeatureData/train_samples.csv"
+SUBMISSIONS = ROOT / "CleanData/submissions.csv"
+PROBLEMS = ROOT / "CleanData/problems.csv"
+TAGS = ROOT / "CleanData/tags.csv"
+TRAIN_SAMPLES = ROOT / "FeatureData/train_samples.csv"
 
-OUT_RECO = "Reports/recommendations_topk.csv"
-OUT_RECO_COMPARE = "Reports/recommendations_topk_compare.csv"
-OUT_METRICS = "Reports/reco_metrics.csv"
-FIG_HITK = "Reports/fig_hitk_curve.png"
-FIG_CASE_DIFF = "Reports/fig_reco_difficulty_hist.png"
-FIG_COVERAGE = "Reports/fig_reco_coverage.png"
+OUT_RECO = ROOT / "Reports/recommendations_topk.csv"
+OUT_RECO_COMPARE = ROOT / "Reports/recommendations_topk_compare.csv"
+OUT_METRICS = ROOT / "Reports/reco_metrics.csv"
+FIG_HITK = ROOT / "Reports/fig_hitk_curve.png"
+FIG_CASE_DIFF = ROOT / "Reports/fig_reco_difficulty_hist.png"
+FIG_COVERAGE = ROOT / "Reports/fig_reco_coverage.png"
 
 TIME_SPLIT = 0.8
 KS = (1, 3, 5, 10)
@@ -110,8 +112,8 @@ def parse_json_list(x) -> list[str]:
     return [p.strip().strip('"').strip("'") for p in parts if p.strip()]
 
 
-def ensure_dir(path: str) -> None:
-    Path(path).parent.mkdir(parents=True, exist_ok=True)
+def ensure_dir(path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
 
 
 def ndcg_at_k(rec_pids: list[int], gt: set[int], k: int) -> float:
