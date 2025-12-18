@@ -1,6 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"""
+Utils/tk_html_to_csv.py
+
+用途
+- 将题库网页（HTML）解析为结构化 CSV（题目列表/题面/样例/限制等），用于后续：
+  - 生成标注请求（`Utils/csv_to_requests.py`）
+  - 合并标注结果到 problems（`Utils/merge_labels_into_originaldata_problems.py`）
+
+输入
+- 题库 HTML 文件或目录（具体以 CLI 参数为准）
+
+输出
+- `tk_problems.csv`（默认）：包含题目基础信息与正文文本字段
+
+说明
+- 该脚本是“离线解析器”，不依赖网络；核心是把 HTML 转成干净的纯文本字段。
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -15,6 +33,8 @@ from typing import Iterable, Optional
 
 
 class _HTMLTextExtractor(HTMLParser):
+    """将 HTML 片段抽取为较干净的纯文本（保留必要的换行/分隔符）。"""
+
     def __init__(self) -> None:
         super().__init__(convert_charrefs=False)
         self._chunks: list[str] = []
@@ -65,12 +85,14 @@ class _HTMLTextExtractor(HTMLParser):
 
 
 def _html_fragment_to_text(fragment: str) -> str:
+    """将 HTML 片段解析为纯文本（调用 _HTMLTextExtractor）。"""
     parser = _HTMLTextExtractor()
     parser.feed(fragment)
     return parser.text()
 
 
 def _decode_html_bytes(data: bytes) -> str:
+    """按常见编码（utf-8/utf-8-sig/gb18030）解码 HTML bytes。"""
     for enc in ("utf-8", "utf-8-sig", "gb18030"):
         try:
             return data.decode(enc)
@@ -89,7 +111,7 @@ def _extract_section_html(html: str, section_name: str) -> str:
     m = re.search(rf"<h2>\s*{re.escape(section_name)}\s*</h2>", html, flags=re.IGNORECASE)
     if not m:
         return ""
-    after = html[m.end() :]
+    after = html[m.end():]
     candidates: list[int] = []
 
     next_h2 = re.search(r"<h2>\s*[^<]+?\s*</h2>", after, flags=re.IGNORECASE)
@@ -176,6 +198,7 @@ class ProblemRow:
 
 
 def parse_problem_html(path: Path) -> ProblemRow:
+    """解析单个题目 HTML 文件为结构化 ProblemRow。"""
     html = _decode_html_bytes(path.read_bytes())
 
     title = _extract_problem_title(html)
@@ -200,6 +223,8 @@ def parse_problem_html(path: Path) -> ProblemRow:
 
 
 def iter_html_files(input_dir: Path) -> Iterable[Path]:
+    """遍历目录下的 .html 文件（按文件名排序，保证输出稳定）。"""
+
     def sort_key(path: Path):
         stem = path.stem
         if stem.isdigit():
@@ -212,6 +237,7 @@ def iter_html_files(input_dir: Path) -> Iterable[Path]:
 
 
 def write_csv(rows: Iterable[ProblemRow], output_csv: Path) -> None:
+    """写出题目列表 CSV（utf-8-sig，便于 Excel 直接打开）。"""
     fieldnames = [
         "title",
         "description",
@@ -233,6 +259,7 @@ def write_csv(rows: Iterable[ProblemRow], output_csv: Path) -> None:
 
 
 def main() -> int:
+    """CLI 入口：解析题库 HTML（文件或目录）并输出 tk_problems.csv。"""
     ap = argparse.ArgumentParser(description="Parse TK题库 HTML files into a CSV.")
     ap.add_argument("--input-dir", type=Path, default=Path("TK题库"), help="Directory containing .html files")
     ap.add_argument("--output", type=Path, default=Path("tk_problems.csv"), help="Output CSV path")

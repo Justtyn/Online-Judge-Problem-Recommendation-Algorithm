@@ -1,3 +1,20 @@
+"""
+Utils/diagnose_reco_bias.py
+
+用途
+- 诊断“推荐结果偏简单/被难度 1 刷屏”等问题，并提供可量化的证据与可失败的校验 flags。
+- 支持两种模式：
+  - 单用户：输出文本报告到 `Reports/diag/`，并可选输出图表到 `Reports/fig/`
+  - 扫描：批量扫描多用户，输出汇总 CSV（便于批处理或接 CI）
+
+典型用法
+- 单用户：`python Utils/diagnose_reco_bias.py --user-id 104 --plot`
+- 扫描：`python Utils/diagnose_reco_bias.py --scan --max-users 300 --fail-if-any`
+
+说明
+- 该脚本复用 `WebApp.server.Recommender` 的推理与画像逻辑，以保证诊断与 Web 端行为一致。
+"""
+
 import argparse
 import math
 import os
@@ -21,8 +38,9 @@ import pandas as pd
 
 from WebApp.server import Recommender
 
-
 REPORTS_DIR = ROOT / "Reports"
+REPORTS_FIG_DIR = REPORTS_DIR / "fig"
+REPORTS_DIAG_DIR = REPORTS_DIR / "diag"
 
 
 @dataclass(frozen=True)
@@ -44,6 +62,7 @@ class Diagnosis:
 
 
 def _parse_user_list(s: str) -> list[int]:
+    """解析逗号分隔的 user_id 列表字符串。"""
     s = (s or "").strip()
     if not s:
         return []
@@ -60,6 +79,7 @@ def _parse_user_list(s: str) -> list[int]:
 
 
 def _safe_quantile(x: np.ndarray, q: float) -> float:
+    """对数组做安全分位数计算（自动过滤 NaN/inf；空则返回 nan）。"""
     x = np.asarray(x, dtype=np.float32)
     x = x[np.isfinite(x)]
     if len(x) == 0:
@@ -83,13 +103,18 @@ def _difficulty_for_pids(reco: Recommender, pids: np.ndarray) -> np.ndarray:
 
 
 def _compute_user_scores(
-    reco: Recommender,
-    *,
-    user_id: int,
-    cutoff_pct: float,
-    min_p: float,
-    max_p: float,
+        reco: Recommender,
+        *,
+        user_id: int,
+        cutoff_pct: float,
+        min_p: float,
+        max_p: float,
 ) -> dict:
+    """
+    计算某用户在 cutoff 切片点下的候选集分数、成长带命中与辅助向量。
+
+    返回的字典仅用于诊断（含候选 mask / score 分布），不作为稳定 API。
+    """
     user_id = int(user_id)
     user_df = reco._subs_by_user.get(user_id)
     if user_df is None or user_df.empty:
@@ -155,17 +180,20 @@ def _compute_user_scores(
 
 
 def _diagnose_one(
-    reco: Recommender,
-    *,
-    user_id: int,
-    cutoff_pct: float,
-    k: int,
-    min_p: float,
-    max_p: float,
-    plot: bool,
-    out_dir: Path,
+        reco: Recommender,
+        *,
+        user_id: int,
+        cutoff_pct: float,
+        k: int,
+        min_p: float,
+        max_p: float,
+        plot: bool,
+        out_dir: Path,
 ) -> tuple[Diagnosis, str, list[Path]]:
+    # out_dir：文本/表格诊断输出目录（默认 Reports/diag）
     out_dir.mkdir(parents=True, exist_ok=True)
+    # 图表统一输出到 Reports/fig（便于 WebApp 统一展示与引用）
+    REPORTS_FIG_DIR.mkdir(parents=True, exist_ok=True)
 
     debug = _compute_user_scores(reco, user_id=user_id, cutoff_pct=cutoff_pct, min_p=min_p, max_p=max_p)
     user_df: pd.DataFrame = debug["user_df"]
@@ -206,12 +234,12 @@ def _diagnose_one(
 
     flags: list[str] = []
     if (
-        len(hist_solved_diff) >= 10
-        and math.isfinite(hist_solved_median)
-        and hist_solved_median >= 4.0
-        and len(rec_diffs) >= max(5, int(k))
-        and reco_median_diff <= 2.0
-        and reco_easy_share >= 0.8
+            len(hist_solved_diff) >= 10
+            and math.isfinite(hist_solved_median)
+            and hist_solved_median >= 4.0
+            and len(rec_diffs) >= max(5, int(k))
+            and reco_median_diff <= 2.0
+            and reco_easy_share >= 0.8
     ):
         flags.append("easy_bias_vs_history")
     if math.isfinite(reco_score_std) and reco_score_std < 1e-4:
@@ -264,7 +292,7 @@ def _diagnose_one(
     for r in rec_rows:
         report_lines.append(
             f"  rank={int(r['rank']):02d} pid={int(r['problem_id'])} diff={int(r['difficulty'])} "
-            f"p_ac={float(r['p_ac']):.3f} in_band={int(r['in_growth_band'])} tags={r.get('tags','')}"
+            f"p_ac={float(r['p_ac']):.3f} in_band={int(r['in_growth_band'])} tags={r.get('tags', '')}"
         )
     report_lines.append("")
     report_lines.append("Candidate P(AC) stats by difficulty (candidates=not solved before cutoff):")
@@ -303,7 +331,7 @@ def _diagnose_one(
         ax.set_ylabel("count")
         ax.set_xticks(range(1, 11))
         ax.grid(True, alpha=0.25, linestyle="--")
-        p1 = out_dir / f"fig_diag_user_{int(user_id)}_reco_diff_hist.png"
+        p1 = REPORTS_FIG_DIR / f"fig_diag_user_{int(user_id)}_reco_diff_hist.png"
         fig.savefig(p1, dpi=180, bbox_inches="tight")
         plt.close(fig)
         fig_paths.append(p1)
@@ -326,7 +354,7 @@ def _diagnose_one(
             ax.set_ylim(0.0, 1.0)
             ax.grid(True, alpha=0.25, linestyle="--")
             ax.legend(frameon=False, ncols=3, loc="upper right")
-            p2 = out_dir / f"fig_diag_user_{int(user_id)}_candidate_p_by_diff.png"
+            p2 = REPORTS_FIG_DIR / f"fig_diag_user_{int(user_id)}_candidate_p_by_diff.png"
             fig.savefig(p2, dpi=180, bbox_inches="tight")
             plt.close(fig)
             fig_paths.append(p2)
@@ -351,14 +379,14 @@ def _diagnose_one(
 
 
 def _scan_users(
-    reco: Recommender,
-    *,
-    user_ids: list[int],
-    cutoff_pct: float,
-    k: int,
-    min_p: float,
-    max_p: float,
-    max_users: int,
+        reco: Recommender,
+        *,
+        user_ids: list[int],
+        cutoff_pct: float,
+        k: int,
+        min_p: float,
+        max_p: float,
+        max_users: int,
 ) -> pd.DataFrame:
     rows: list[dict] = []
     for n, uid in enumerate(user_ids[: max(0, int(max_users))], start=1):
@@ -408,6 +436,7 @@ def _scan_users(
 
 
 def main() -> int:
+    """CLI 入口：单用户诊断或批量 scan，并输出到 Reports/diag 与 Reports/fig。"""
     ap = argparse.ArgumentParser(description="诊断“推荐偏简单/全是难度1”的原因，并提供可失败的校验模式。")
     ap.add_argument("--user-id", type=int, default=0, help="单个 user_id（与 --users/--scan 互斥）")
     ap.add_argument("--users", type=str, default="", help="逗号分隔 user_id 列表，例如：104,208,999")
@@ -417,8 +446,8 @@ def main() -> int:
     ap.add_argument("--min-p", type=float, default=0.40, help="成长带下限 min_p")
     ap.add_argument("--max-p", type=float, default=0.70, help="成长带上限 max_p")
     ap.add_argument("--k", type=int, default=10, help="Top-K")
-    ap.add_argument("--plot", action="store_true", help="单用户模式输出图表到 Reports/")
-    ap.add_argument("--out", type=str, default="", help="输出路径（单用户=txt；scan=csv；默认写入 Reports/）")
+    ap.add_argument("--plot", action="store_true", help="单用户模式输出图表到 Reports/fig/")
+    ap.add_argument("--out", type=str, default="", help="输出路径（单用户=txt；scan=csv；默认写入 Reports/diag/）")
     ap.add_argument(
         "--fail-on",
         type=str,
@@ -429,7 +458,7 @@ def main() -> int:
     args = ap.parse_args()
 
     reco = Recommender()
-    out_dir = REPORTS_DIR
+    out_dir = REPORTS_DIAG_DIR
 
     fail_set = set([x.strip() for x in (args.fail_on or "").split(",") if x.strip()])
 

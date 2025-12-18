@@ -1,3 +1,28 @@
+"""
+Utils/compare_strict_vs_leaky.py
+
+用途
+- 对比“严格无泄漏（strict）”与“存在时间泄漏（leaky）”两种特征口径在：
+  - 特征分布（均值/中位数/P95/标准差）
+  - 分类模型效果（Accuracy/Precision/Recall/F1/ROC-AUC/Brier 等）
+  - 推荐离线评估（Hit@K/Precision@K 等）
+  上的差异，帮助解释“为何随机/泄漏口径会虚高指标”。
+
+输入（默认）
+- strict 数据：`FeatureData/train_samples.csv`
+- submissions：`CleanData/submissions.csv`
+- problems：`CleanData/problems.csv`
+- students_derived：`CleanData/students_derived.csv`
+- tags / languages：`CleanData/tags.csv` / `CleanData/languages.csv`
+
+输出（默认）
+- 表格/报告：`Reports/compare/compare_*.csv` 与 `Reports/compare/*.md`
+- 图表：`Reports/fig/fig_compare_*.png`（ROC/PR/校准曲线、Hit@K 曲线等）
+
+说明
+- 该脚本需要 `matplotlib` 与 `scikit-learn`；并强制使用 Agg 后端以支持无 GUI 环境运行。
+"""
+
 import argparse
 import json
 import math
@@ -8,10 +33,12 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+
 os.environ.setdefault("XDG_CACHE_HOME", str(Path(".cache").resolve()))
 os.environ.setdefault("MPLCONFIGDIR", str(Path(".cache/matplotlib").resolve()))
 Path(os.environ["MPLCONFIGDIR"]).mkdir(parents=True, exist_ok=True)
 import matplotlib
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from sklearn.calibration import calibration_curve
@@ -36,6 +63,11 @@ from sklearn.tree import DecisionTreeClassifier
 
 
 def parse_json_list(x: object) -> list[str]:
+    """
+    将“可能是 JSON 字符串/分隔字符串/None”的单元格解析为字符串列表。
+
+    主要用于 problems.tags 等字段的兼容解析。
+    """
     if x is None:
         return []
     if isinstance(x, float) and np.isnan(x):
@@ -58,6 +90,11 @@ def parse_json_list(x: object) -> list[str]:
 
 
 def parse_json_dict(x: object) -> dict[str, float]:
+    """
+    将 “JSON 字符串 / dict / 空值” 解析为 {str: float}。
+
+    主要用于 students_derived 的 lang_pref/tag_pref 等字段。
+    """
     if x is None:
         return {}
     if isinstance(x, float) and np.isnan(x):
@@ -89,6 +126,7 @@ def parse_json_dict(x: object) -> dict[str, float]:
 
 
 def stat_series(s: pd.Series) -> dict[str, float]:
+    """对数值序列计算 mean/p50/p95/std（自动丢弃 NaN/inf）。"""
     x = pd.to_numeric(s, errors="coerce")
     x = x.replace([np.inf, -np.inf], np.nan).dropna()
     if len(x) == 0:
@@ -109,6 +147,7 @@ class Split:
 
 
 def time_split_by_submission_id(df: pd.DataFrame, *, frac: float) -> Split:
+    """按 submission_id 升序做时间切分（前 frac 为训练窗，后 1-frac 为测试窗）。"""
     order = np.argsort(df["submission_id"].to_numpy(dtype=np.int64))
     split = int(len(order) * float(frac))
     split = max(1, min(len(order) - 1, split))
@@ -119,13 +158,19 @@ def time_split_by_submission_id(df: pd.DataFrame, *, frac: float) -> Split:
 
 
 def build_leaky_dataset(
-    *,
-    submissions_csv: str,
-    problems_csv: str,
-    students_derived_csv: str,
-    tags_csv: str,
-    languages_csv: str,
+        *,
+        submissions_csv: str,
+        problems_csv: str,
+        students_derived_csv: str,
+        tags_csv: str,
+        languages_csv: str,
 ) -> pd.DataFrame:
+    """
+    构造“泄漏口径”的训练样本。
+
+    特征口径
+    - 用户画像/偏好基于全量 submissions 统计（等价于“看到了未来”），用于与 strict 口径对比。
+    """
     subs = pd.read_csv(submissions_csv, low_memory=False)
     problems = pd.read_csv(problems_csv, low_memory=False)
     students = pd.read_csv(students_derived_csv, low_memory=False)
@@ -238,6 +283,7 @@ def build_leaky_dataset(
 
 
 def build_models() -> dict[str, object]:
+    """构建用于对比的基线模型集合（logreg/svm/tree）。"""
     return {
         "logreg": Pipeline(
             [
@@ -253,6 +299,7 @@ def build_models() -> dict[str, object]:
 
 
 def eval_models(df: pd.DataFrame, split: Split) -> pd.DataFrame:
+    """在给定时间切分下训练各模型并输出指标表。"""
     y = df["ac"].astype(int).to_numpy()
     X = df.drop(columns=["ac", "submission_id", "user_id", "problem_id"]).copy()
     for c in X.columns:
@@ -304,6 +351,7 @@ def eval_models(df: pd.DataFrame, split: Split) -> pd.DataFrame:
 
 
 def fit_logreg_probs(df: pd.DataFrame, split: Split) -> tuple[np.ndarray, np.ndarray]:
+    """训练 logreg 并返回测试集 (y_true, p_ac) 用于画 ROC/PR/校准曲线。"""
     y = df["ac"].astype(int).to_numpy()
     X = df.drop(columns=["ac", "submission_id", "user_id", "problem_id"]).copy()
     for c in X.columns:
@@ -324,6 +372,14 @@ def fit_logreg_probs(df: pd.DataFrame, split: Split) -> tuple[np.ndarray, np.nda
 
 
 def brier_decomposition(y_true: np.ndarray, prob: np.ndarray, *, n_bins: int = 10) -> dict[str, float]:
+    """
+    Brier Score 分解：reliability / resolution / uncertainty。
+
+    说明
+    - reliability：预测概率与真实频率的偏差（越小越好）
+    - resolution：模型把样本分成不同风险层级的能力（越大越好）
+    - uncertainty：标签本身的不确定性（由 base rate 决定）
+    """
     y = np.asarray(y_true, dtype=np.int32)
     p = np.asarray(prob, dtype=np.float64)
     p = np.clip(p, 0.0, 1.0)
@@ -362,6 +418,7 @@ def brier_decomposition(y_true: np.ndarray, prob: np.ndarray, *, n_bins: int = 1
 
 
 def compare_feature_stats(strict_df: pd.DataFrame, leaky_df: pd.DataFrame) -> pd.DataFrame:
+    """对比 strict/leaky 在核心特征上的分布统计（逐特征输出两行）。"""
     cols = ["difficulty_filled", "attempt_no", "level", "perseverance", "lang_match", "tag_match"]
     rows: list[dict] = []
     for c in cols:
@@ -373,16 +430,19 @@ def compare_feature_stats(strict_df: pd.DataFrame, leaky_df: pd.DataFrame) -> pd
 
 
 def per_user_level_variance(df: pd.DataFrame) -> pd.Series:
+    """计算每个用户 level 的时间标准差（用于衡量画像是否“动态”）。"""
     g = df.groupby("user_id")["level"]
     return g.std(ddof=0)
 
 
 def per_user_pers_variance(df: pd.DataFrame) -> pd.Series:
+    """计算每个用户 perseverance 的时间标准差（用于衡量画像是否“动态”）。"""
     g = df.groupby("user_id")["perseverance"]
     return g.std(ddof=0)
 
 
 def main() -> int:
+    """CLI 入口：生成 strict vs leaky 的对比表格/图表/markdown 报告。"""
     parser = argparse.ArgumentParser(description="Compare strict (no-leak) vs leaky features and metrics.")
     parser.add_argument("--strict", default="FeatureData/train_samples.csv", help="Strict dataset CSV path")
     parser.add_argument("--submissions", default="CleanData/submissions.csv")
@@ -390,12 +450,15 @@ def main() -> int:
     parser.add_argument("--students-derived", default="CleanData/students_derived.csv")
     parser.add_argument("--tags", default="CleanData/tags.csv")
     parser.add_argument("--languages", default="CleanData/languages.csv")
-    parser.add_argument("--out-dir", default="Reports")
+    # 表格/报告类产物输出到 Reports/compare；图表统一输出到 Reports/fig（便于 WebApp 展示）。
+    parser.add_argument("--out-dir", default="Reports/compare")
     parser.add_argument("--time-split", type=float, default=0.8)
     args = parser.parse_args()
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
+    fig_dir = (out_dir.parent / "fig").resolve()
+    fig_dir.mkdir(parents=True, exist_ok=True)
 
     strict_df = pd.read_csv(args.strict, low_memory=False)
     strict_df["submission_id"] = pd.to_numeric(strict_df["submission_id"], errors="coerce").astype(int)
@@ -454,18 +517,18 @@ def main() -> int:
         return "\n".join(out_lines) + "\n\n"
 
     def compute_reco_metrics(
-        *,
-        variant: str,
-        df: pd.DataFrame,
-        split: Split,
-        submissions_csv: str,
-        problems_csv: str,
-        tags_csv: str,
-        students_derived_csv: str,
-        growth_min_p: float = 0.4,
-        growth_max_p: float = 0.7,
-        ks: tuple[int, ...] = (1, 3, 5, 10),
-        chunk_size: int = 2048,
+            *,
+            variant: str,
+            df: pd.DataFrame,
+            split: Split,
+            submissions_csv: str,
+            problems_csv: str,
+            tags_csv: str,
+            students_derived_csv: str,
+            growth_min_p: float = 0.4,
+            growth_max_p: float = 0.7,
+            ks: tuple[int, ...] = (1, 3, 5, 10),
+            chunk_size: int = 2048,
     ) -> pd.DataFrame:
         subs = pd.read_csv(submissions_csv, low_memory=False)
         subs["submission_id"] = pd.to_numeric(subs["submission_id"], errors="coerce").astype(int)
@@ -554,7 +617,8 @@ def main() -> int:
             students = pd.read_csv(students_derived_csv, low_memory=False)
             students["user_id"] = pd.to_numeric(students["user_id"], errors="coerce").astype(int)
             students["level"] = pd.to_numeric(students["level"], errors="coerce").fillna(0.0).astype(float)
-            students["perseverance"] = pd.to_numeric(students["perseverance"], errors="coerce").fillna(0.0).astype(float)
+            students["perseverance"] = pd.to_numeric(students["perseverance"], errors="coerce").fillna(0.0).astype(
+                float)
             students["lang_pref_dict"] = students["lang_pref"].apply(parse_json_dict)
             students["tag_pref_dict"] = students["tag_pref"].apply(parse_json_dict)
             user_level = students.set_index("user_id")["level"].to_dict()
@@ -567,7 +631,8 @@ def main() -> int:
                 solved=("ac", "max"),
             )
             up = up.merge(problems[["problem_id", "difficulty_filled"]], on="problem_id", how="left")
-            up["difficulty_filled"] = pd.to_numeric(up["difficulty_filled"], errors="coerce").fillna(diff_median).astype(int)
+            up["difficulty_filled"] = pd.to_numeric(up["difficulty_filled"], errors="coerce").fillna(
+                diff_median).astype(int)
             up["diff_norm"] = up["difficulty_filled"].astype(float) / 10.0
             num = (up["solved"].astype(float) * up["diff_norm"]).groupby(up["user_id"]).sum()
             den = up["diff_norm"].groupby(up["user_id"]).sum()
@@ -576,7 +641,8 @@ def main() -> int:
             avg_attempts_per_problem = (up.groupby("user_id")["n_attempts"].mean()).fillna(0.0).astype(float)
             p95 = float(np.percentile(avg_attempts_per_problem.values, 95)) if len(avg_attempts_per_problem) else 1.0
             denom_p = math.log1p(p95) if p95 > 0 else 1.0
-            user_pers = (np.log1p(avg_attempts_per_problem) / (denom_p if denom_p > 0 else 1.0)).clip(0.0, 1.0).to_dict()
+            user_pers = (np.log1p(avg_attempts_per_problem) / (denom_p if denom_p > 0 else 1.0)).clip(0.0,
+                                                                                                      1.0).to_dict()
 
             lang_counts = subs_train.groupby(["user_id", "language"]).size().reset_index(name="cnt")
             lang_tab = lang_counts.pivot_table(index="user_id", columns="language", values="cnt", fill_value=0)
@@ -669,7 +735,9 @@ def main() -> int:
                 probs[start:end] = model.predict_proba(X)[:, 1].astype(np.float32)
 
             in_band = (probs >= growth_min_p) & (probs <= growth_max_p)
-            candidate_mask = ~np.isin(pids_arr, np.fromiter((int(x) for x in solved), dtype=np.int32)) if solved else np.ones((len(pids_arr),), dtype=bool)
+            candidate_mask = ~np.isin(pids_arr,
+                                      np.fromiter((int(x) for x in solved), dtype=np.int32)) if solved else np.ones(
+                (len(pids_arr),), dtype=bool)
             candidate_idx = np.where(candidate_mask)[0]
             band_idx = candidate_idx[in_band[candidate_idx]]
             other_idx = candidate_idx[~in_band[candidate_idx]]
@@ -805,7 +873,7 @@ def main() -> int:
             plt.grid(True, alpha=0.3)
             plt.legend(frameon=False)
             plt.tight_layout()
-            plt.savefig(out_dir / "fig_compare_hitk.png", dpi=200)
+            plt.savefig(fig_dir / "fig_compare_hitk.png", dpi=200)
             plt.close()
 
             plt.figure(figsize=(6.5, 4.0))
@@ -817,7 +885,7 @@ def main() -> int:
             plt.grid(True, alpha=0.3)
             plt.legend(frameon=False)
             plt.tight_layout()
-            plt.savefig(out_dir / "fig_compare_precisionk.png", dpi=200)
+            plt.savefig(fig_dir / "fig_compare_precisionk.png", dpi=200)
             plt.close()
         except Exception:
             pass
@@ -850,7 +918,7 @@ def main() -> int:
         plt.grid(True, alpha=0.3)
         plt.legend(frameon=False)
         plt.tight_layout()
-        plt.savefig(out_dir / "fig_compare_roc.png", dpi=200)
+        plt.savefig(fig_dir / "fig_compare_roc.png", dpi=200)
         plt.close()
 
         # Precision-Recall curve
@@ -875,7 +943,7 @@ def main() -> int:
         plt.grid(True, alpha=0.3)
         plt.legend(frameon=False)
         plt.tight_layout()
-        plt.savefig(out_dir / "fig_compare_pr.png", dpi=200)
+        plt.savefig(fig_dir / "fig_compare_pr.png", dpi=200)
         plt.close()
 
         # Calibration curve (reliability diagram)
@@ -899,7 +967,7 @@ def main() -> int:
         plt.grid(True, alpha=0.3)
         plt.legend(frameon=False)
         plt.tight_layout()
-        plt.savefig(out_dir / "fig_compare_calibration.png", dpi=200)
+        plt.savefig(fig_dir / "fig_compare_calibration.png", dpi=200)
         plt.close()
 
         # Brier decomposition

@@ -1,3 +1,20 @@
+"""
+Utils/normalize_problems_tags_json.py
+
+用途
+- 将 `CleanData/problems.csv` 中的 `tags` 字段统一规范为“JSON 数组字符串”：
+  - 兼容输入为 JSON 数组字符串 / 逗号分隔字符串
+  - 过滤不在 `CleanData/tags.csv(tag_name)` 白名单中的标签
+  - 去重并保持顺序（stable unique）
+
+典型使用
+- 仅检查：`python Utils/normalize_problems_tags_json.py --in CleanData/problems.csv --tags CleanData/tags.csv`
+- 原地写回：`python Utils/normalize_problems_tags_json.py --in CleanData/problems.csv --tags CleanData/tags.csv --inplace`
+
+说明
+- 该脚本只处理 tags 字段格式与白名单一致性，不会推断新标签。
+"""
+
 import argparse
 import csv
 import json
@@ -6,6 +23,7 @@ from typing import Any
 
 
 def read_allowed_tags(path: str) -> set[str]:
+    """从 tags.csv 读取白名单集合（tag_name 列）。"""
     with open(path, "r", encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f)
         if not reader.fieldnames or "tag_name" not in reader.fieldnames:
@@ -21,6 +39,13 @@ def read_allowed_tags(path: str) -> set[str]:
 
 
 def parse_tags_cell(cell: str) -> list[str] | None:
+    """
+    解析 problems.tags 单元格。
+
+    返回
+    - `list[str]`：解析成功（可能为空列表）
+    - `None`：解析失败（通常表示 JSON 格式不合法或结构不是字符串数组）
+    """
     s = (cell or "").strip()
     if not s:
         return []
@@ -36,6 +61,7 @@ def parse_tags_cell(cell: str) -> list[str] | None:
 
 
 def unique_keep_order(xs: list[str]) -> list[str]:
+    """去重但保持首次出现顺序（stable unique）。"""
     seen: set[str] = set()
     out: list[str] = []
     for x in xs:
@@ -47,6 +73,7 @@ def unique_keep_order(xs: list[str]) -> list[str]:
 
 
 def parse_int(s: str) -> int | None:
+    """安全解析 int；失败返回 None。"""
     try:
         return int(str(s).strip())
     except Exception:
@@ -54,6 +81,7 @@ def parse_int(s: str) -> int | None:
 
 
 def write_csv(path: str, fieldnames: list[str], rows: list[dict[str, str]]) -> None:
+    """原子写 CSV（先写 tmp 再 replace）。"""
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
@@ -63,6 +91,7 @@ def write_csv(path: str, fieldnames: list[str], rows: list[dict[str, str]]) -> N
 
 
 def main() -> int:
+    """CLI 入口：规范化 problems.tags 并输出/写回。"""
     parser = argparse.ArgumentParser(
         description="Normalize CleanData/problems.csv tags into JSON arrays."
     )
@@ -148,4 +177,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

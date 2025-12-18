@@ -1,3 +1,26 @@
+"""
+Utils/validate_originaldata.py
+
+用途
+- 校验 `CleanData/*.csv` 的一致性与关键字段约束，作为流水线的“输入门禁”：
+  - submissions 的外键：user_id/problem_id/language/verdict 必须能在对应表中找到
+  - `ac` 与 `verdict=="AC"` 必须等价
+  - attempt_no 必须为正整数，并且同一 (user_id, problem_id) 下严格递增
+  - problems 的 difficulty 必须在 1~10；tags 必须符合 JSON 数组或（可选）逗号分隔格式
+
+输入（默认）
+- `CleanData/students.csv`
+- `CleanData/problems.csv`
+- `CleanData/submissions.csv`
+- `CleanData/languages.csv`
+- `CleanData/verdicts.csv`
+- `CleanData/tags.csv`
+
+输出
+- 标准输出：OK/FAILED 与部分错误示例
+- 可选 `--report`：将全部错误写入文本文件（建议路径：`Reports/validate/validate_report.txt`）
+"""
+
 import argparse
 import csv
 import json
@@ -6,11 +29,11 @@ from pathlib import Path
 from collections.abc import Iterable
 from typing import Any
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def read_set(path: str, key: str) -> set[str]:
+    """读取 CSV 的某列并返回非空值集合（用于外键白名单校验）。"""
     out: set[str] = set()
     with open(path, "r", encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f)
@@ -24,6 +47,7 @@ def read_set(path: str, key: str) -> set[str]:
 
 
 def iter_rows(path: str) -> Iterable[tuple[int, dict[str, str]]]:
+    """按行迭代 CSV，返回 (line_no, row_dict)；line_no 从 2 开始（跳过表头）。"""
     with open(path, "r", encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f)
         if not reader.fieldnames:
@@ -33,6 +57,7 @@ def iter_rows(path: str) -> Iterable[tuple[int, dict[str, str]]]:
 
 
 def parse_int(s: str) -> int | None:
+    """安全解析 int；失败返回 None。"""
     try:
         return int(str(s).strip())
     except Exception:
@@ -40,13 +65,14 @@ def parse_int(s: str) -> int | None:
 
 
 def validate_problems(
-    *,
-    problems_csv: str,
-    allowed_tags: set[str],
-    accept_csv_tags: bool,
-    max_errors: int,
-    errors: list[str],
+        *,
+        problems_csv: str,
+        allowed_tags: set[str],
+        accept_csv_tags: bool,
+        max_errors: int,
+        errors: list[str],
 ) -> None:
+    """校验 problems.csv 的 difficulty/tags 字段（范围、格式、白名单）。"""
     for line_no, row in iter_rows(problems_csv):
         pid = (row.get("problem_id") or "").strip() or f"line {line_no}"
 
@@ -105,15 +131,16 @@ def validate_problems(
 
 
 def validate_submissions(
-    *,
-    submissions_csv: str,
-    students_user_ids: set[str],
-    problems_ids: set[str],
-    language_names: set[str],
-    verdict_names: set[str],
-    max_errors: int,
-    errors: list[str],
+        *,
+        submissions_csv: str,
+        students_user_ids: set[str],
+        problems_ids: set[str],
+        language_names: set[str],
+        verdict_names: set[str],
+        max_errors: int,
+        errors: list[str],
 ) -> None:
+    """校验 submissions.csv 的外键一致性、ac/verdict 等价、attempt_no 递增约束。"""
     last_attempt: dict[tuple[str, str], int] = {}
     for line_no, row in iter_rows(submissions_csv):
         sid = (row.get("submission_id") or "").strip() or f"line {line_no}"
@@ -186,6 +213,7 @@ def validate_submissions(
 
 
 def main() -> int:
+    """CLI 入口：校验 CleanData 表的一致性，可选输出报告文件。"""
     parser = argparse.ArgumentParser(description="Validate CleanData CSV integrity.")
     parser.add_argument("--students", default=str(ROOT / "CleanData/students.csv"))
     parser.add_argument("--problems", default=str(ROOT / "CleanData/problems.csv"))

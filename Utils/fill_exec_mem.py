@@ -1,3 +1,24 @@
+"""
+Utils/fill_exec_mem.py
+
+用途
+- 为提交记录（通常是 `CleanData/submissions.csv`）补齐/生成运行时间与内存字段，例如：
+  - `exec_time_ms`：运行时间（毫秒）
+  - `mem_kb`：内存（KB）
+- 适用于只有 AC/WA 等结果，但缺少资源消耗的日志数据；也可用于生成更“像真实 OJ”的模拟日志。
+
+输入（常见）
+- submissions.csv：至少包含 `submission_id/problem_id/language/verdict/ac` 等
+- problems.csv（可选）：用于读取 time_limit/memory_limit 等约束，生成更合理的资源分布
+
+输出
+- 更新后的 submissions.csv（或写到新文件，取决于 CLI 参数）
+
+说明
+- 该脚本属于“数据补全/模拟工具”，不影响主流水线核心逻辑；建议在跑模型前固定随机种子，
+  以便可复现。
+"""
+
 import argparse
 import csv
 import json
@@ -11,16 +32,19 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass
 from typing import Any
 
-
 TIME_RE = re.compile(r"([0-9]*\.?[0-9]+)\s*([a-zA-Z]+)?")
 MEM_RE = re.compile(r"([0-9]*\.?[0-9]+)\s*([a-zA-Z]+)?")
-
 
 LANGUAGES = ["Python", "C", "C++", "JS", "JAVA", "GO"]
 VERDICTS = ["AC", "WA", "TLE", "RE", "CE"]
 
 
 def parse_time_limit_ms(s: str) -> int:
+    """
+    解析题目 time_limit 字段为毫秒。
+
+    兼容输入示例：`"1 Sec"` / `"1s"` / `"1000ms"` / 空值。
+    """
     s = (s or "").strip()
     if not s:
         return 1000
@@ -37,6 +61,11 @@ def parse_time_limit_ms(s: str) -> int:
 
 
 def parse_memory_limit_kb(s: str) -> int:
+    """
+    解析题目 memory_limit 字段为 KB。
+
+    兼容输入示例：`"128 MB"` / `"65536KB"` / 空值。
+    """
     s = (s or "").strip()
     if not s:
         return 128 * 1024
@@ -70,6 +99,7 @@ def _parse_int(s: Any) -> int | None:
 
 
 def parse_json_list_cell(x: Any) -> list[str]:
+    """解析 list/tags 类字段为字符串列表（兼容 JSON 列表或常见分隔字符串）。"""
     if x is None:
         return []
     s = str(x).strip()
@@ -173,10 +203,10 @@ def load_students_user_ids(students_csv: str) -> list[int]:
 
 
 def try_load_profiles(
-    *,
-    students_csv: str,
-    tag_vocab: list[str],
-    lang_vocab: list[str],
+        *,
+        students_csv: str,
+        tag_vocab: list[str],
+        lang_vocab: list[str],
 ) -> tuple[list[StudentProfile], bool]:
     with open(students_csv, "r", encoding="utf-8-sig", newline="") as f:
         r = csv.DictReader(f)
@@ -241,11 +271,11 @@ def try_load_profiles(
 
 
 def generate_profiles(
-    rng: random.Random,
-    user_ids: list[int],
-    *,
-    tag_vocab: list[str],
-    lang_vocab: list[str],
+        rng: random.Random,
+        user_ids: list[int],
+        *,
+        tag_vocab: list[str],
+        lang_vocab: list[str],
 ) -> list[StudentProfile]:
     profiles: list[StudentProfile] = []
     for uid in user_ids:
@@ -286,8 +316,8 @@ def generate_profiles(
 
 
 def write_students_derived(
-    path: str,
-    profiles: list[StudentProfile],
+        path: str,
+        profiles: list[StudentProfile],
 ) -> None:
     os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
     tmp = path + ".tmp"
@@ -308,9 +338,9 @@ def write_students_derived(
 
 
 def load_problems(
-    *,
-    problems_csv: str,
-    allowed_tags: set[str],
+        *,
+        problems_csv: str,
+        allowed_tags: set[str],
 ) -> list[Problem]:
     out: list[Problem] = []
     with open(problems_csv, "r", encoding="utf-8-sig", newline="") as f:
@@ -364,14 +394,14 @@ def sample_language(rng: random.Random, profile: StudentProfile, lang_vocab: lis
 
 
 def pick_problem_for_user(
-    rng: random.Random,
-    profile: StudentProfile,
-    *,
-    all_problem_ids: list[int],
-    problems_by_tag: dict[str, list[int]],
-    already_attempted: set[int],
-    explore_rate: float,
-    tag_vocab: list[str],
+        rng: random.Random,
+        profile: StudentProfile,
+        *,
+        all_problem_ids: list[int],
+        problems_by_tag: dict[str, list[int]],
+        already_attempted: set[int],
+        explore_rate: float,
+        tag_vocab: list[str],
 ) -> int | None:
     for _ in range(50):
         if rng.random() < explore_rate:
@@ -387,10 +417,10 @@ def pick_problem_for_user(
 
 
 def verdict_for_failure(
-    rng: random.Random,
-    *,
-    diff: float,
-    lang_match: float,
+        rng: random.Random,
+        *,
+        diff: float,
+        lang_match: float,
 ) -> str:
     # Base: WA 0.70, TLE 0.15, RE 0.10, CE 0.05 (with mild adjustments)
     wa = 0.70
@@ -403,13 +433,18 @@ def verdict_for_failure(
 
 
 def generate_exec_mem(
-    rng: random.Random,
-    *,
-    verdict: str,
-    time_limit_ms: int,
-    memory_limit_kb: int,
-    diff: float,
+        rng: random.Random,
+        *,
+        verdict: str,
+        time_limit_ms: int,
+        memory_limit_kb: int,
+        diff: float,
 ) -> tuple[int, int]:
+    """
+    生成 (exec_time_ms, mem_kb)。
+
+    目标：让资源消耗与题目限制、判题结果、题目难度粗相关（不追求真实，只要“看起来合理”）。
+    """
     tl = max(1, int(time_limit_ms))
     ml = max(1, int(memory_limit_kb))
 
@@ -438,23 +473,23 @@ def generate_exec_mem(
 
 
 def generate_submissions(
-    *,
-    rng: random.Random,
-    problems: list[Problem],
-    profiles: list[StudentProfile],
-    lang_vocab: list[str],
-    tag_vocab: list[str],
-    output_csv: str,
-    target_rows: int,
-    explore_rate: float,
-    max_attempts: int,
-    a: float,
-    b: float,
-    c: float,
-    d: float,
-    e: float,
-    bias: float,
-    noise: float,
+        *,
+        rng: random.Random,
+        problems: list[Problem],
+        profiles: list[StudentProfile],
+        lang_vocab: list[str],
+        tag_vocab: list[str],
+        output_csv: str,
+        target_rows: int,
+        explore_rate: float,
+        max_attempts: int,
+        a: float,
+        b: float,
+        c: float,
+        d: float,
+        e: float,
+        bias: float,
+        noise: float,
 ) -> None:
     os.makedirs(os.path.dirname(os.path.abspath(output_csv)), exist_ok=True)
     tmp = output_csv + ".tmp"
@@ -597,13 +632,18 @@ def generate_submissions(
 
 
 def fill_exec_mem_inplace_or_copy(
-    *,
-    rng: random.Random,
-    problems_csv: str,
-    submissions_csv: str,
-    output_csv: str,
-    inplace: bool,
+        *,
+        rng: random.Random,
+        problems_csv: str,
+        submissions_csv: str,
+        output_csv: str,
+        inplace: bool,
 ) -> None:
+    """
+    读取 submissions.csv，补齐 exec_time_ms/mem_kb，并写回（原地或写到新文件）。
+
+    注意：该函数会写文件；在已有真实数据时建议先备份或使用 --output 指定新路径。
+    """
     limits: dict[int, tuple[int, int]] = {}
     with open(problems_csv, "r", encoding="utf-8-sig", newline="") as f:
         r = csv.DictReader(f)
@@ -652,6 +692,7 @@ def fill_exec_mem_inplace_or_copy(
 
 
 def main() -> int:
+    """CLI 入口：生成相关的 submissions 数据，或为既有 submissions 补齐 exec/mem 字段。"""
     parser = argparse.ArgumentParser(
         description=(
             "Generate a correlated OJ submissions dataset (recommended), or fill exec_time_ms/mem_kb for an existing file."

@@ -1,3 +1,23 @@
+"""
+Utils/generate_originaldata_sim.py
+
+用途
+- 生成一套“可跑通全链路”的模拟数据（题目/学生/提交/语言/判题结果/标签），用于：
+  - 没有真实数据时快速复现实验
+  - 对脚本与评估口径做 smoke test（保证 01~05 流水线能运行）
+
+输出（默认写入 `CleanData/`）
+- problems.csv / students.csv / submissions.csv / languages.csv / verdicts.csv / tags.csv
+
+模拟原则（简化版）
+- 难度：1~10 的整数
+- 标签：从项目白名单中抽取 1~2 个
+- 提交：由“用户能力 × 题目难度 × 多次尝试学习效应”生成 AC 概率，再采样 verdict/ac
+
+注意
+- 该脚本会写文件；在已有真实数据时请避免覆盖，或使用自定义输出路径。
+"""
+
 import argparse
 import csv
 import json
@@ -7,22 +27,24 @@ import random
 import sys
 import time
 
-
 LANGUAGES = ["Python", "C", "C++", "JS", "JAVA", "GO"]
 VERDICTS_FAIL = ["WA", "TLE", "RE", "CE"]
 VERDICTS_ALL = ["AC", "WA", "TLE", "RE", "CE"]
 
 
 def sigmoid(x: float) -> float:
+    """标准 sigmoid，用于把线性分数映射为概率。"""
     return 1.0 / (1.0 + math.exp(-x))
 
 
 def ensure_parent_dir(path: str) -> None:
+    """确保输出文件所在目录存在。"""
     parent = os.path.dirname(os.path.abspath(path))
     os.makedirs(parent, exist_ok=True)
 
 
 def read_problem_difficulties(problems_csv: str) -> list[float]:
+    """读取 problems.csv 的 difficulty 并归一化到 [0,1]（缺失则用 0.5）。"""
     diffs: list[float] = []
     with open(problems_csv, "r", encoding="utf-8-sig", newline="") as f:
         r = csv.DictReader(f)
@@ -38,6 +60,11 @@ def read_problem_difficulties(problems_csv: str) -> list[float]:
 
 
 def add_problem_ids_inplace(problems_csv: str, *, dry_run: bool) -> int:
+    """
+    按行号为 problems.csv 补齐 problem_id（原地写回）。
+
+    返回：处理的题目行数（dry_run 时只统计不写回）。
+    """
     with open(problems_csv, "r", encoding="utf-8-sig", newline="") as f:
         r = csv.DictReader(f)
         if not r.fieldnames:
@@ -112,26 +139,35 @@ def write_verdicts_csv(verdicts_csv: str, *, dry_run: bool) -> None:
 
 
 def choose_weighted(rng: random.Random, items: list[str], weights: list[float]) -> str:
+    """按权重随机抽样一个元素（包装 rng.choices 以便统一接口）。"""
     return rng.choices(items, weights=weights, k=1)[0]
 
 
 def generate_submissions_csv(
-    submissions_csv: str,
-    *,
-    n_submissions: int,
-    n_students: int,
-    n_problems: int,
-    problem_difficulty01: list[float],
-    rng: random.Random,
-    dry_run: bool,
+        submissions_csv: str,
+        *,
+        n_submissions: int,
+        n_students: int,
+        n_problems: int,
+        problem_difficulty01: list[float],
+        rng: random.Random,
+        dry_run: bool,
 ) -> None:
+    """
+    生成 submissions.csv（模拟日志）。
+
+    设计目标：让提交行为具备
+    - 用户活跃度长尾
+    - 难度与通过率负相关
+    - 尝试次数与通过率正相关（学习效应）
+    """
     ensure_parent_dir(submissions_csv)
 
     user_ability = [rng.betavariate(2.0, 2.0) for _ in range(n_students + 1)]
     user_perseverance = [rng.betavariate(2.0, 2.0) for _ in range(n_students + 1)]
     user_lang_weights = [
-        None
-    ] + [[rng.random() + 0.1 for _ in LANGUAGES] for _ in range(n_students)]
+                            None
+                        ] + [[rng.random() + 0.1 for _ in LANGUAGES] for _ in range(n_students)]
 
     attempt_no: dict[tuple[int, int], int] = {}
     solved: set[tuple[int, int]] = set()
@@ -229,6 +265,7 @@ def generate_submissions_csv(
 
 
 def main() -> int:
+    """CLI 入口：生成一套最小可运行的 CleanData 数据集。"""
     parser = argparse.ArgumentParser(
         description="Generate simulated students/submissions CSVs under CleanData and add problem_id to problems.csv."
     )

@@ -42,6 +42,7 @@ setup_cn_font()
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORTS_DIR = ROOT / "Reports"
+REPORTS_FIG_DIR = REPORTS_DIR / "fig"
 CLEANDATA_DIR = ROOT / "CleanData"
 FEATUREDATA_DIR = ROOT / "FeatureData"
 MODELS_DIR = ROOT / "Models"
@@ -1128,7 +1129,6 @@ details[open] { background: var(--bg-card); }
 }
 .section-header h2 { margin: 0; }
 .section-desc { margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem; }
-.sticky { position: sticky; top: 12px; z-index: 20; }
 .hidden { display: none !important; }
 
 /* Modal (home: click image -> large view + explanation) */
@@ -1863,11 +1863,24 @@ refresh();
 
         # Serve Images
         if p.path.startswith("/reports/"):
-            name = p.path.removeprefix("/reports/").lstrip("/")
-            if "/" in name or ".." in name or not name.endswith(".png"):
+            rel = p.path.removeprefix("/reports/").lstrip("/")
+            rel_path = Path(rel)
+            if rel_path.is_absolute() or ".." in rel_path.parts or rel_path.suffix.lower() != ".png":
                 self._send(404, b"not found", "text/plain; charset=utf-8")
                 return
-            path = REPORTS_DIR / name
+
+            # 兼容：旧版 `/reports/<fig_*.png>`（默认从 Reports/fig/ 下取）
+            if len(rel_path.parts) == 1:
+                path = REPORTS_FIG_DIR / rel_path.name
+                if not path.exists():
+                    path = REPORTS_DIR / rel_path.name
+            else:
+                # 仅允许访问 Reports/fig/ 下的图片，避免目录穿越与误暴露其它文件
+                if rel_path.parts[0] != "fig":
+                    self._send(404, b"not found", "text/plain; charset=utf-8")
+                    return
+                path = REPORTS_DIR / rel_path
+
             if not path.exists():
                 self._send(404, b"not found", "text/plain; charset=utf-8")
                 return
@@ -1876,7 +1889,7 @@ refresh();
 
         # Page: Index (Visualizations)
         if p.path in {"/", "/index.html"}:
-            figs = sorted([x.name for x in REPORTS_DIR.glob("fig_*.png")])
+            figs = sorted([x.name for x in REPORTS_FIG_DIR.glob("fig_*.png")])
             figs_set = set(figs)
 
             # canonicalize (hide duplicates)
@@ -1912,7 +1925,7 @@ refresh();
                   <h3>{html.escape(title)}</h3>
                   <div class="img-frame">
                     <button type="button" class="img-button" onclick="openFigModal('{html.escape(fn)}')" title="点击查看大图与解读">
-                      <img src="/reports/{html.escape(fn)}" loading="lazy" alt="{html.escape(fn)}">
+                      <img src="/reports/fig/{html.escape(fn)}" loading="lazy" alt="{html.escape(fn)}">
                     </button>
                   </div>
                   <div class="muted fig-summary">{html.escape(summary)}</div>
@@ -1931,7 +1944,7 @@ refresh();
             sections_html = ""
             total = len(canonical_figs)
             if total == 0:
-                sections_html = '<div class="card muted" style="text-align:center; padding:40px;">暂无图表文件，请先运行分析脚本生成 Reports/fig_*.png。</div>'
+                sections_html = '<div class="card muted" style="text-align:center; padding:40px;">暂无图表文件，请先运行分析脚本生成 Reports/fig/fig_*.png。</div>'
             else:
                 for sec in section_order:
                     fns = sec_to_figs.get(sec, [])
@@ -1970,7 +1983,7 @@ refresh();
             body = f"""
 {html_head("home")}
 {HTML_HEADER_NAV}
-    <div class="card sticky">
+    <div class="card">
       <div class="toolbar-simple">
         <div class="topline">
           <div>
@@ -2133,8 +2146,8 @@ refresh();
 
         document.getElementById('modal_name').textContent = name;
         document.getElementById('modal_title').textContent = title;
-        document.getElementById('modal_path').textContent = `Reports/${{fn}}`;
-        document.getElementById('modal_img').src = `/reports/${{fn}}`;
+        document.getElementById('modal_path').textContent = `Reports/fig/${{fn}}`;
+        document.getElementById('modal_img').src = `/reports/fig/${{fn}}`;
         document.getElementById('modal_summary').textContent = meta.summary || '（暂无说明）';
 
         const tagWrap = document.getElementById('modal_tags');
@@ -2150,8 +2163,8 @@ refresh();
 
         const openA = document.getElementById('modal_open');
         const dlA = document.getElementById('modal_download');
-        openA.href = `/reports/${{fn}}`;
-        dlA.href = `/reports/${{fn}}`;
+        openA.href = `/reports/fig/${{fn}}`;
+        dlA.href = `/reports/fig/${{fn}}`;
 
         overlay.classList.remove('hidden');
         document.body.style.overflow = 'hidden';

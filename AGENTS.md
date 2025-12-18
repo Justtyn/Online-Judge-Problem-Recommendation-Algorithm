@@ -16,7 +16,7 @@
 
 - 创建并激活虚拟环境：`python -m venv .venv && source .venv/bin/activate`
 - 校验原始数据一致性：`python Utils/validate_originaldata.py`
-- 输出校验报告：`python Utils/validate_originaldata.py --report Reports/validate_report.txt`
+- 输出校验报告：`python Utils/validate_originaldata.py --report Reports/validate/validate_report.txt`
 - 查看脚本参数：`python Utils/<script>.py --help`
 - 本地 Web（展示图表 + 自定义推荐）：`python WebApp/server.py --port 8000`
 
@@ -26,7 +26,7 @@
 
 - Python：4 空格缩进；函数/变量用 `snake_case`；优先使用类型标注（参考 `Utils/*.py`）。
 - 保持可复现：固定随机种子、避免隐式全局状态，优先“纯函数 + 小 CLI”。
-- 产物命名：`CleanData/*.csv`、`FeatureData/*.csv`、`Models/metrics.csv`、`Reports/fig_*.png`。
+- 产物命名：`CleanData/*.csv`、`FeatureData/*.csv`、`Models/metrics.csv`、`Reports/fig/fig_*.png`。
 
 ## 测试与验证
 
@@ -38,7 +38,7 @@
 ## 提交与 PR 规范
 
 - Commit：简短、祈使句风格；中英文均可（历史记录混用）。
-- PR：说明改动动机与影响；给出可复现命令（精确到 `python ...`）；涉及结果产物时列出路径（如 `Reports/fig_*.png`、`Models/metrics.csv`）。
+- PR：说明改动动机与影响；给出可复现命令（精确到 `python ...`）；涉及结果产物时列出路径（如 `Reports/fig/fig_*.png`、`Models/metrics.csv`）。
 
 ## 安全与配置
 

@@ -1,3 +1,25 @@
+"""
+Utils/merge_labels_into_originaldata_problems.py
+
+用途
+- 将批量标注得到的 `difficulty/tags` 合并回题目表（通常是 `CleanData/problems.csv`）。
+- 支持多种标注 CSV 字段名（如 problem_id/id/pid），并对合并结果做基础校验：
+  - difficulty 限制在 1~10
+  - tags 过滤到白名单（`CleanData/tags.csv`）
+
+常见输入
+- problems.csv：含 `problem_id` 以及题目文本字段
+- labeled.csv：来自 `Utils/batch_label_qwen.py` 等，含 `difficulty/tags`（tags 可以是 JSON 或逗号分隔）
+
+输出
+- 更新后的 problems.csv（可选择原地写回 or 写到新文件）
+- 可选校验报告（--validate-report）：把无法合并/字段异常写到文件，便于排查数据问题
+
+说明
+- 该脚本是“数据修订/合并工具”，建议在运行主流水线前完成，并配合
+  `python Utils/validate_originaldata.py` 做一致性检查。
+"""
+
 import argparse
 import csv
 import json
@@ -6,11 +28,11 @@ import random
 import re
 from typing import Any
 
-
 TITLE_ID_RE = re.compile(r"^\s*(\d+)\s*[:：]")
 
 
 def _read_csv_dicts(path: str) -> tuple[list[str], list[dict[str, str]]]:
+    """读取 CSV 为 (fieldnames, rows)，rows 为 dict 列表。"""
     with open(path, "r", encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f)
         fieldnames = list(reader.fieldnames or [])
@@ -19,6 +41,7 @@ def _read_csv_dicts(path: str) -> tuple[list[str], list[dict[str, str]]]:
 
 
 def _write_csv_dicts(path: str, fieldnames: list[str], rows: list[dict[str, str]]) -> None:
+    """原子写回 CSV（先写 .tmp 再 replace），避免中断导致半文件。"""
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8-sig", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
@@ -28,6 +51,13 @@ def _write_csv_dicts(path: str, fieldnames: list[str], rows: list[dict[str, str]
 
 
 def _parse_problem_id(labeled_row: dict[str, str]) -> str | None:
+    """
+    从标注行中提取 problem_id。
+
+    兼容
+    - 显式字段：problem_id / id / pid
+    - 兜底：从 title 的前缀形如 `123: ...` / `123：...` 解析
+    """
     for key in ("problem_id", "id", "pid"):
         v = (labeled_row.get(key) or "").strip()
         if v:
@@ -43,6 +73,12 @@ def _parse_problem_id(labeled_row: dict[str, str]) -> str | None:
 
 
 def _format_tags(tags_cell: str) -> str:
+    """
+    规范化 tags 字段为逗号分隔字符串（内部合并口径使用）。
+
+    - 若原值是 JSON 数组字符串：尽量转为逗号分隔（便于后续校验与过滤）
+    - 若解析失败：保留原值交给上层兜底/报错
+    """
     s = (tags_cell or "").strip()
     if not s:
         return ""
@@ -61,6 +97,7 @@ def _format_tags(tags_cell: str) -> str:
 
 
 def _load_allowed_tags(path: str, column: str | None) -> list[str]:
+    """读取 tags 白名单（默认列名 tag_name；也兼容 tag/name）。"""
     with open(path, "r", encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f)
         fieldnames = list(reader.fieldnames or [])
@@ -90,6 +127,7 @@ def _load_allowed_tags(path: str, column: str | None) -> list[str]:
 
 
 def _parse_tags_to_list(tags_cell: str) -> list[str]:
+    """解析 tags 字段为列表（支持 JSON 数组或逗号分隔）。"""
     s = (tags_cell or "").strip()
     if not s:
         return []
@@ -105,6 +143,7 @@ def _parse_tags_to_list(tags_cell: str) -> list[str]:
 
 
 def _difficulty_ok(s: str) -> bool:
+    """判断 difficulty 是否为 1~10 的整数。"""
     try:
         v = int(str(s).strip())
     except Exception:
@@ -113,12 +152,12 @@ def _difficulty_ok(s: str) -> bool:
 
 
 def _fill_missing_labels_in_row(
-    row: dict[str, str],
-    *,
-    rng: random.Random,
-    allowed_tags: list[str],
-    min_tags: int,
-    max_tags: int,
+        row: dict[str, str],
+        *,
+        rng: random.Random,
+        allowed_tags: list[str],
+        min_tags: int,
+        max_tags: int,
 ) -> bool:
     changed = False
 
@@ -139,11 +178,16 @@ def _fill_missing_labels_in_row(
 
 
 def _validate_rows(
-    rows: list[dict[str, str]],
-    *,
-    allowed_tag_set: set[str],
-    max_tags: int,
+        rows: list[dict[str, str]],
+        *,
+        allowed_tag_set: set[str],
+        max_tags: int,
 ) -> tuple[int, list[str]]:
+    """
+    对合并后的 problems 行做基础校验，返回 (error_count, error_messages)。
+
+    校验点：difficulty 范围、tags 是否为空/重复/超出白名单等。
+    """
     errors: list[str] = []
     for idx, r in enumerate(rows, start=1):
         pid = (r.get("problem_id") or "").strip() or f"row#{idx}"
@@ -169,6 +213,7 @@ def _validate_rows(
 
 
 def main() -> int:
+    """CLI 入口：合并标注结果到 problems，并可选生成校验报告。"""
     parser = argparse.ArgumentParser(
         description="Merge labeled difficulty/tags into CleanData/problems.csv"
     )

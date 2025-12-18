@@ -1,7 +1,22 @@
+"""
+Utils/csv_to_requests.py
+
+用途
+- 将题库 `CSV`（题目文本信息）转换为“逐题一条”的 JSONL 请求文件，便于后续调用
+  大模型接口批量标注 `difficulty/tags`。
+
+输出格式
+- 每行一个 JSON（request），并用 `<<<BEGIN:request-n>>>` / `<<<END:request-n>>>` 包住，
+  方便下游脚本（如 `Utils/batch_label_qwen.py`）做流式解析与断点续跑。
+
+注意
+- 本脚本只做“请求构造”，不发起任何网络请求。
+- 标签白名单与难度定义见 `PROMPT_TEMPLATE` 中的说明。
+"""
+
 import argparse
 import csv
 import json
-
 
 PROMPT_TEMPLATE = """你是 OJ 题目标签与难度评估器。请先完整阅读题目信息，然后根据题目核心解法与算法特征完成标注。
 
@@ -34,6 +49,7 @@ array_string, hash_map, two_pointers_sliding, stack_queue, linked_list, tree, gr
 
 
 def main() -> int:
+    """CLI 入口：读取题库 CSV，输出带 BEGIN/END 标记的 JSONL 请求文件。"""
     parser = argparse.ArgumentParser(
         description="Convert problems CSV into JSONL requests for /v1/chat/completions."
     )
@@ -59,7 +75,7 @@ def main() -> int:
     args = parser.parse_args()
 
     with open(args.input, "r", encoding="utf-8-sig", newline="") as f_in, open(
-        args.output, "w", encoding="utf-8", newline="\n"
+            args.output, "w", encoding="utf-8", newline="\n"
     ) as f_out:
         reader = csv.DictReader(f_in)
         for idx, row in enumerate(reader, start=1):

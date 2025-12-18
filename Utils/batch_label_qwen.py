@@ -1,3 +1,23 @@
+"""
+Utils/batch_label_qwen.py
+
+用途
+- 读取 `Utils/csv_to_requests.py` 生成的请求文件（带 <<<BEGIN/END>>> 标记），
+  调用 DashScope/Qwen 进行批量难度/标签标注，并把模型返回解析成结构化结果。
+
+输入
+- requests 文本文件：每个请求块形如：
+  - `<<<BEGIN:request-<n>>>` ... prompt ... `<<<END:request-<n>>>`
+
+输出
+- CSV：包含 `request_id / difficulty / tags / raw_response / ok / error` 等（具体以脚本参数为准）。
+
+注意
+- 该脚本会产生网络请求（默认使用 `urllib.request`）；在离线/受限网络环境中请勿运行。
+- 需要配置 API Key（通常通过环境变量提供），请勿把密钥写入仓库。
+- `ALLOWED_TAGS` 是项目内置标签白名单；模型输出若不在白名单内会被判为无效。
+"""
+
 import argparse
 import concurrent.futures
 import csv
@@ -10,7 +30,6 @@ import threading
 import time
 import urllib.error
 import urllib.request
-
 
 ALLOWED_TAGS = {
     "array_string",
@@ -32,16 +51,26 @@ END_RE = re.compile(r"^<<<END:(request-(\d+))>>>$")
 
 
 class LabelParseError(ValueError):
+    """模型输出解析失败（格式不符/字段缺失/标签不合法）。"""
     pass
 
 
 class LabelingError(RuntimeError):
+    """单条请求标注失败（网络/服务端/限流/解析失败等）。"""
+
     def __init__(self, message: str, *, raw: str = ""):
         super().__init__(message)
         self.raw = raw
 
 
 def iter_prompt_blocks(path: str):
+    """
+    读取 requests 文本文件并按 BEGIN/END 标记切分为请求块。
+
+    产出：迭代 (i: int, request_id: str, prompt: str)
+    - request_id 形如 `request-123`
+    - prompt 为 BEGIN/END 之间的原始文本（不含标记行）
+    """
     with open(path, "r", encoding="utf-8") as f:
         lines = f.read().splitlines()
 
@@ -55,7 +84,7 @@ def iter_prompt_blocks(path: str):
         begin = BEGIN_RE.match(line)
         if not begin:
             raise ValueError(
-                f"Invalid prompt file format at line {i+1}: expected BEGIN marker, got: {lines[i]!r}"
+                f"Invalid prompt file format at line {i + 1}: expected BEGIN marker, got: {lines[i]!r}"
             )
 
         request_id = begin.group(1)
@@ -70,7 +99,7 @@ def iter_prompt_blocks(path: str):
                 end_num = int(maybe_end.group(2))
                 if end_id != request_id or end_num != request_num:
                     raise ValueError(
-                        f"Mismatched END marker at line {i+1}: {lines[i]!r} (expected <<<END:{request_id}>>>)"
+                        f"Mismatched END marker at line {i + 1}: {lines[i]!r} (expected <<<END:{request_id}>>>)"
                     )
                 break
             content_lines.append(lines[i])
@@ -85,6 +114,7 @@ def iter_prompt_blocks(path: str):
 
 
 def load_results(path: str) -> dict[int, dict]:
+    """读取已存在的结果 JSONL（若存在），用于断点续跑去重。"""
     if not os.path.exists(path):
         return {}
     results: dict[int, dict] = {}
@@ -105,12 +135,14 @@ def load_results(path: str) -> dict[int, dict]:
 
 
 def append_result(path: str, obj: dict) -> None:
+    """以 JSONL 方式追加写入单条结果（便于中断后继续）。"""
     with open(path, "a", encoding="utf-8", newline="\n") as f:
         f.write(json.dumps(obj, ensure_ascii=False, separators=(",", ":")))
         f.write("\n")
 
 
 def strip_code_fences(s: str) -> str:
+    """去掉常见的 ```json ... ``` 代码块包裹，方便后续抽取 JSON。"""
     s = s.strip()
     if not s.startswith("```"):
         return s
@@ -121,13 +153,20 @@ def strip_code_fences(s: str) -> str:
 
 
 def parse_label(text: str) -> tuple[int, list[str]]:
+    """
+    解析模型输出为 (difficulty, tags)。
+
+    约束
+    - difficulty：1~10 的整数
+    - tags：1~2 个且必须在 `ALLOWED_TAGS` 白名单内
+    """
     s = strip_code_fences(text)
     s = s.strip()
     start = s.find("{")
     end = s.rfind("}")
     if start == -1 or end == -1 or end <= start:
         raise LabelParseError(f"Model output does not contain a JSON object: {text!r}")
-    candidate = s[start : end + 1]
+    candidate = s[start: end + 1]
     try:
         obj = json.loads(candidate)
     except json.JSONDecodeError as e:
@@ -152,14 +191,21 @@ def parse_label(text: str) -> tuple[int, list[str]]:
 
 
 def chat_completion(
-    *,
-    api_key: str,
-    base_url: str,
-    model: str,
-    prompt: str,
-    system: str,
-    timeout_s: int,
+        *,
+        api_key: str,
+        base_url: str,
+        model: str,
+        prompt: str,
+        system: str,
+        timeout_s: int,
 ) -> str:
+    """
+    发起一次 chat completion 请求并返回 assistant 文本内容。
+
+    说明
+    - 本函数只负责“单次请求 + 解析返回 JSON”；重试/限流在上层处理。
+    - base_url 形如 `https://dashscope.aliyuncs.com/compatible-mode/v1`
+    """
     url = base_url.rstrip("/") + "/chat/completions"
     payload = {
         "model": model,
@@ -186,16 +232,21 @@ def chat_completion(
 
 
 def call_with_retries(
-    *,
-    api_key: str,
-    base_url: str,
-    model: str,
-    prompt: str,
-    system: str,
-    timeout_s: int,
-    max_retries: int,
-    backoff_s: float,
+        *,
+        api_key: str,
+        base_url: str,
+        model: str,
+        prompt: str,
+        system: str,
+        timeout_s: int,
+        max_retries: int,
+        backoff_s: float,
 ) -> str:
+    """
+    包装网络调用：遇到临时错误时按指数退避重试。
+
+    返回：模型输出文本（尚未做结构化解析）。
+    """
     last_err: Exception | None = None
     for attempt in range(max_retries + 1):
         try:
@@ -222,12 +273,20 @@ def call_with_retries(
             if attempt >= max_retries:
                 raise RuntimeError(f"Network error: {e}") from e
 
-        time.sleep(backoff_s * (2**attempt))
+        time.sleep(backoff_s * (2 ** attempt))
 
     raise RuntimeError(f"Failed after retries: {last_err}")
 
 
 class RateLimiter:
+    """
+    简单的令牌桶限流器（线程安全）。
+
+    - rpm：requests per minute
+    - tpm：tokens per minute（可选，用于按输入长度粗略限流）
+    - burst_seconds：允许的突发窗口长度
+    """
+
     def __init__(self, *, rpm: int, tpm: int, burst_seconds: float = 1.0):
         self._rpm = int(rpm)
         self._tpm = int(tpm)
@@ -246,6 +305,7 @@ class RateLimiter:
         self._tok_tokens = self._tok_cap
 
     def acquire(self, *, requests: float = 1.0, tokens: float = 0.0) -> None:
+        """阻塞直到当前请求额度与 token 额度满足，随后扣减额度。"""
         while True:
             sleep_s = 0.0
             with self._lock:
@@ -290,13 +350,13 @@ def write_csv(rows: list[dict], fieldnames: list[str], path: str) -> None:
 def build_repair_prompt(original_prompt: str, bad_output: str) -> str:
     allowed = ", ".join(sorted(ALLOWED_TAGS))
     return (
-        original_prompt
-        + "\n\n【系统纠错】你刚才的输出不符合要求（例如包含不在可选列表内的标签、或不是一行 JSON）。\n"
-        + "【可选标签列表】（只能从中选择，不可自造，不可变形）：\n"
-        + allowed
-        + "\n\n【要求重申】只允许输出一行 JSON，只能包含 difficulty,tags 两个键；difficulty 为 1-10 整数；tags 为 1-2 个且必须来自可选列表；不得输出任何其它字符。\n"
-        + "你刚才的输出如下（仅供纠错参考）：\n"
-        + bad_output.strip()
+            original_prompt
+            + "\n\n【系统纠错】你刚才的输出不符合要求（例如包含不在可选列表内的标签、或不是一行 JSON）。\n"
+            + "【可选标签列表】（只能从中选择，不可自造，不可变形）：\n"
+            + allowed
+            + "\n\n【要求重申】只允许输出一行 JSON，只能包含 difficulty,tags 两个键；difficulty 为 1-10 整数；tags 为 1-2 个且必须来自可选列表；不得输出任何其它字符。\n"
+            + "你刚才的输出如下（仅供纠错参考）：\n"
+            + bad_output.strip()
     )
 
 
