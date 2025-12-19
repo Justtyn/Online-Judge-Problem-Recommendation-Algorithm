@@ -1,0 +1,6 @@
+﻿verdict_id,name,desc
+1,AC,Accepted
+2,WA,Wrong Answer
+3,TLE,Time Limit Exceeded
+4,RE,Runtime Error
+5,CE,Compilation Error
