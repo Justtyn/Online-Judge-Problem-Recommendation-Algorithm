@@ -1216,9 +1216,9 @@ details[open] { background: var(--bg-card); }
 
 FIG_INFO: dict[str, dict[str, object]] = {
     # A. 数据层（训练前）
-    "fig_level_hist.png": {
+    "fig_用户能力分布.png": {
         "title": "level 分布（能力画像是否有区分度）",
-        "name": "level_hist",
+        "name": "用户能力分布",
         "section": "A",
         "tags": ["画像", "合理性检查"],
         "summary": "用来检验能力画像 level 是否能把用户区分开（而不是全部挤在 0 或 1）。",
@@ -1227,12 +1227,12 @@ FIG_INFO: dict[str, dict[str, object]] = {
             "如果图像非常“尖”（几乎都在同一段），说明画像区分度不足或归一化不合理。",
         ],
         "tips": [
-            "低活跃用户占比高会让画像更噪（可结合 fig_user_activity.png 理解）。",
+            "低活跃用户占比高会让画像更噪（可结合 fig_用户活跃度分布.png 理解）。",
         ],
     },
-    "fig_perseverance_hist.png": {
+    "fig_用户坚持度分布.png": {
         "title": "perseverance 分布（坚持/重试画像）",
-        "name": "perseverance_hist",
+        "name": "用户坚持度分布",
         "section": "A",
         "tags": ["画像", "合理性检查"],
         "summary": "用来观察用户坚持度（重试倾向）的差异，避免全部接近 0 或 1。",
@@ -1241,9 +1241,9 @@ FIG_INFO: dict[str, dict[str, object]] = {
             "如果大量用户都接近 1，通常是归一化尺度设置过小导致饱和。",
         ],
     },
-    "fig_lang_dist.png": {
+    "fig_语言分布.png": {
         "title": "语言分布（按提交次数）",
-        "name": "language_dist",
+        "name": "语言分布",
         "section": "A",
         "tags": ["数据分布", "特征有效性"],
         "summary": "检查语言总体占比是否符合常识，也用于说明语言特征有“可学习”的差异。",
@@ -1251,9 +1251,9 @@ FIG_INFO: dict[str, dict[str, object]] = {
             "柱越高表示该语言提交越多；极端偏斜可能影响模型（某些语言 one-hot 近似无样本）。",
         ],
     },
-    "fig_tag_dist.png": {
+    "fig_标签分布.png": {
         "title": "标签分布（题型占比）",
-        "name": "tag_dist",
+        "name": "标签分布",
         "section": "A",
         "tags": ["数据分布", "特征有效性"],
         "summary": "检查题库题型是否极端失衡；过度失衡会让模型/推荐更同质化。",
@@ -1261,9 +1261,9 @@ FIG_INFO: dict[str, dict[str, object]] = {
             "柱越高表示该标签出现越多；如果少数标签压倒性占比，需要在报告里说明影响。",
         ],
     },
-    "fig_user_activity.png": {
+    "fig_用户活跃度分布.png": {
         "title": "用户活跃度分布（提交次数长尾）",
-        "name": "user_activity",
+        "name": "用户活跃度分布",
         "section": "A",
         "tags": ["数据分布", "长尾"],
         "summary": "展示典型长尾：少数高活跃用户贡献大量提交，大量用户只有少量记录。",
@@ -1271,9 +1271,9 @@ FIG_INFO: dict[str, dict[str, object]] = {
             "横轴是提交次数，纵轴是人数；长尾越明显，冷启动/画像稳定性问题越突出。",
         ],
     },
-    "fig_difficulty_vs_ac.png": {
+    "fig_难度-通过率.png": {
         "title": "难度 vs AC 率（合理性校验）",
-        "name": "difficulty_vs_ac",
+        "name": "难度-通过率",
         "section": "A",
         "tags": ["合理性检查", "难度口径"],
         "summary": "检验难度标注是否可信：通常难度越高，AC 率应整体下降。",
@@ -1282,9 +1282,9 @@ FIG_INFO: dict[str, dict[str, object]] = {
             "如果不降反升或大幅抖动，可能是 difficulty 质量/样本量问题。",
         ],
     },
-    "fig_attemptno_vs_ac.png": {
+    "fig_尝试次数-通过率.png": {
         "title": "尝试次数 vs AC 率（学习/难度效应）",
-        "name": "attemptno_vs_ac",
+        "name": "尝试次数-通过率",
         "section": "A",
         "tags": ["特征解释", "学习效应"],
         "summary": "解释 attempt_no 与成功率关系：可能存在“越试越会”，也可能是“难题才会多次尝试”。",
@@ -1293,9 +1293,9 @@ FIG_INFO: dict[str, dict[str, object]] = {
             "趋势需要结合业务解释：上升=学习效应；下降=更难题带来更多尝试。",
         ],
     },
-    "fig_tag_acrate.png": {
+    "fig_标签通过率.png": {
         "title": "不同标签的平均 AC 率（题型差异）",
-        "name": "tag_acrate",
+        "name": "标签通过率",
         "section": "A",
         "tags": ["特征有效性"],
         "summary": "展示不同题型的平均通过率差异，用于说明标签特征有信息量。",
@@ -1303,9 +1303,9 @@ FIG_INFO: dict[str, dict[str, object]] = {
             "若所有标签 AC 率几乎相同，说明标签区分信息较弱或统计口径有误。",
         ],
     },
-    "fig_lang_acrate.png": {
+    "fig_语言通过率.png": {
         "title": "不同语言的平均 AC 率（相关性，不是因果）",
-        "name": "lang_acrate",
+        "name": "语言通过率",
         "section": "A",
         "tags": ["特征有效性"],
         "summary": "检查语言与通过率是否有关联（更多反映用户群体/题目选择偏差，不建议因果解读）。",
@@ -1314,9 +1314,9 @@ FIG_INFO: dict[str, dict[str, object]] = {
         ],
     },
     # B. 训练层（训练后）
-    "fig_model_f1_compare.png": {
+    "fig_模型F1对比.png": {
         "title": "模型 F1 对比（时间切分）",
-        "name": "model_f1_compare",
+        "name": "模型F1对比",
         "section": "B",
         "tags": ["模型评估"],
         "summary": "比较多个模型的整体分类效果（F1 兼顾 precision 与 recall）。",
@@ -1325,9 +1325,9 @@ FIG_INFO: dict[str, dict[str, object]] = {
         ],
     },
     # C. 推荐评估
-    "fig_hitk_curve.png": {
+    "fig_命中率曲线.png": {
         "title": "Hit@K 对比曲线（多策略）",
-        "name": "hitk_compare",
+        "name": "命中率曲线",
         "section": "C",
         "tags": ["推荐评估", "对比实验"],
         "summary": "对比不同推荐策略的命中率：看 model 是否明显高于 random，以及与 popular_train 的差距。",
@@ -1339,9 +1339,9 @@ FIG_INFO: dict[str, dict[str, object]] = {
             "growth 策略可能牺牲部分命中率以换取更适度的学习题目，可结合难度分布图解释。",
         ],
     },
-    "fig_reco_difficulty_hist.png": {
+    "fig_推荐难度分布_单用户.png": {
         "title": "推荐题难度分布（单用户案例）",
-        "name": "reco_difficulty_hist",
+        "name": "推荐难度分布（单用户）",
         "section": "C",
         "tags": ["推荐解释", "成长带"],
         "summary": "检查推荐列表的难度结构是否“不过易也不过难”。",
@@ -1349,14 +1349,24 @@ FIG_INFO: dict[str, dict[str, object]] = {
             "如果全部偏低：缺挑战；全部偏高：命中与可学习性都差。",
         ],
     },
-    "fig_reco_coverage.png": {
+    "fig_推荐集中度与覆盖率.png": {
         "title": "推荐集中度与覆盖率（Top20 题被推荐次数）",
-        "name": "reco_coverage",
+        "name": "推荐集中度与覆盖率",
         "section": "C",
         "tags": ["多样性", "同质化"],
         "summary": "检查是否总推荐少数热门题（同质化）；标题中 coverage 越高说明覆盖越广。",
         "how": [
             "Top20 柱子越集中且越高，说明推荐更同质化；coverage 越低说明推荐范围更窄。",
+        ],
+    },
+    "fig_推荐难度分布.png": {
+        "title": "推荐题难度分布（全量推荐）",
+        "name": "推荐难度分布（全量）",
+        "section": "C",
+        "tags": ["推荐解释", "全量分布"],
+        "summary": "查看所有推荐题目的难度集中情况，判断整体是否偏易或偏难。",
+        "how": [
+            "柱越高表示该难度被推荐次数越多；若集中在极低/极高难度需排查偏置。",
         ],
     },
 }
@@ -1386,19 +1396,23 @@ def get_fig_info(filename: str) -> dict[str, object]:
     info.setdefault("tips", [])
 
     # Confusion matrix family
-    if filename.startswith("fig_cm_") or filename.startswith("fig_confusion_"):
-        name = filename.removesuffix(".png").removeprefix("fig_cm_").removeprefix("fig_confusion_")
+    if filename.startswith(("fig_cm_", "fig_confusion_", "fig_混淆矩阵_")):
+        raw = filename.removesuffix(".png")
+        for prefix in ("fig_cm_", "fig_confusion_", "fig_混淆矩阵_"):
+            if raw.startswith(prefix):
+                raw = raw.removeprefix(prefix)
+                break
         title_map = {
             "logreg": "逻辑回归",
             "tree": "决策树",
             "svm_linear": "线性 SVM",
             "svm_or_knn": "SVM/KNN（对比）",
         }
-        model_name = title_map.get(name, name)
+        model_name = title_map.get(raw, raw)
         info.update(
             {
                 "title": f"混淆矩阵：{model_name}",
-                "name": f"cm_{name}",
+                "name": f"cm_{raw}",
                 "section": "B",
                 "tags": ["模型评估", "误差分析"],
                 "summary": "把 AC 当作正类，拆解 TP/FP/FN/TN，解释 Precision/Recall 的来源。",
@@ -1436,8 +1450,31 @@ def get_fig_info(filename: str) -> dict[str, object]:
             }
         )
 
+    if filename.startswith("fig_严格vs泄漏_"):
+        key = filename.removesuffix(".png").removeprefix("fig_严格vs泄漏_")
+        title_map = {
+            "命中率曲线": "Hit@K 对比（strict vs leaky）",
+            "精确率曲线": "Precision@K 对比（strict vs leaky）",
+            "ROC曲线": "ROC 曲线对比（strict vs leaky）",
+            "PR曲线": "PR 曲线对比（strict vs leaky）",
+            "校准曲线": "校准曲线对比（strict vs leaky）",
+        }
+        info.update(
+            {
+                "title": title_map.get(key, f"对比图：{key}"),
+                "name": f"严格vs泄漏_{key}",
+                "section": "D",
+                "tags": ["对比实验", "无泄漏验证"],
+                "summary": "对比 strict（可部署口径）与 leaky（看未来口径）；若 leaky 明显更高则过去评估失真。",
+                "how": [
+                    "strict 更接近上线真实效果；报告结论应以 strict 为准。",
+                    "ROC/PR 看排序能力；校准曲线看概率是否可信（是否过于乐观/保守）。",
+                ],
+            }
+        )
+
     # Recommendation evaluation figure defaults
-    if "reco_" in filename or "hitk" in filename:
+    if "reco_" in filename or "hitk" in filename or "命中率曲线" in filename:
         info.setdefault("section", "C")
 
     # Data distribution defaults
@@ -1488,10 +1525,33 @@ FIG_SECTION_INFO: dict[str, dict[str, str]] = {
 }
 
 FIG_CANONICAL: dict[str, str] = {
-    # duplicates from older scripts
-    "fig_confusion_logreg.png": "fig_cm_logreg.png",
-    "fig_confusion_tree.png": "fig_cm_tree.png",
-    "fig_confusion_svm_linear.png": "fig_cm_svm_linear.png",
+    # 兼容旧英文命名：若中英文同时存在，优先展示中文
+    "fig_confusion_logreg.png": "fig_混淆矩阵_逻辑回归.png",
+    "fig_cm_logreg.png": "fig_混淆矩阵_逻辑回归.png",
+    "fig_confusion_tree.png": "fig_混淆矩阵_决策树.png",
+    "fig_cm_tree.png": "fig_混淆矩阵_决策树.png",
+    "fig_confusion_svm_linear.png": "fig_混淆矩阵_线性SVM.png",
+    "fig_cm_svm_linear.png": "fig_混淆矩阵_线性SVM.png",
+    "fig_cm_svm_or_knn.png": "fig_混淆矩阵_SVM或KNN.png",
+    "fig_model_f1_compare.png": "fig_模型F1对比.png",
+    "fig_hitk_curve.png": "fig_命中率曲线.png",
+    "fig_reco_coverage.png": "fig_推荐集中度与覆盖率.png",
+    "fig_reco_difficulty_hist.png": "fig_推荐难度分布_单用户.png",
+    "fig_level_hist.png": "fig_用户能力分布.png",
+    "fig_perseverance_hist.png": "fig_用户坚持度分布.png",
+    "fig_lang_dist.png": "fig_语言分布.png",
+    "fig_tag_dist.png": "fig_标签分布.png",
+    "fig_user_activity.png": "fig_用户活跃度分布.png",
+    "fig_difficulty_vs_ac.png": "fig_难度-通过率.png",
+    "fig_attemptno_vs_ac.png": "fig_尝试次数-通过率.png",
+    "fig_tag_acrate.png": "fig_标签通过率.png",
+    "fig_lang_acrate.png": "fig_语言通过率.png",
+    "fig_reco_difficulty_dist.png": "fig_推荐难度分布.png",
+    "fig_compare_hitk.png": "fig_严格vs泄漏_命中率曲线.png",
+    "fig_compare_precisionk.png": "fig_严格vs泄漏_精确率曲线.png",
+    "fig_compare_roc.png": "fig_严格vs泄漏_ROC曲线.png",
+    "fig_compare_pr.png": "fig_严格vs泄漏_PR曲线.png",
+    "fig_compare_calibration.png": "fig_严格vs泄漏_校准曲线.png",
 }
 
 
@@ -2001,7 +2061,7 @@ refresh();
             <summary>筛选与跳转</summary>
             <div style="margin-top:10px">
               <div class="muted" style="margin-bottom:10px">
-                命名约定：<span class="mono">fig_*</span> 图表；<span class="mono">fig_cm_*</span> 混淆矩阵；<span class="mono">fig_compare_*</span> strict vs leaky 对比。
+                命名约定：<span class="mono">fig_*</span> 图表；<span class="mono">fig_混淆矩阵_*</span> 混淆矩阵（兼容 <span class="mono">fig_cm_*</span>）；<span class="mono">fig_严格vs泄漏_*</span> 对比（兼容 <span class="mono">fig_compare_*</span>）。
               </div>
               <div class="muted" style="margin-bottom:10px">
                 快速跳转：

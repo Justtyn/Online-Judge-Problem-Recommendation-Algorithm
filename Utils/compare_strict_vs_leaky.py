@@ -17,7 +17,7 @@ Utils/compare_strict_vs_leaky.py
 
 输出（默认）
 - 表格/报告：`Reports/compare/compare_*.csv` 与 `Reports/compare/*.md`
-- 图表：`Reports/fig/fig_compare_*.png`（ROC/PR/校准曲线、Hit@K 曲线等）
+- 图表：`Reports/fig/fig_严格vs泄漏_*.png`（ROC/PR/校准曲线、Hit@K 曲线等）
 
 说明
 - 该脚本需要 `matplotlib` 与 `scikit-learn`；并强制使用 Agg 后端以支持无 GUI 环境运行。
@@ -34,8 +34,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-os.environ.setdefault("XDG_CACHE_HOME", str(Path(".cache").resolve()))
-os.environ.setdefault("MPLCONFIGDIR", str(Path(".cache/matplotlib").resolve()))
+ROOT = Path(__file__).resolve().parents[1]
+
+os.environ.setdefault("XDG_CACHE_HOME", str((ROOT / ".cache").resolve()))
+os.environ.setdefault("MPLCONFIGDIR", str((ROOT / ".cache/matplotlib").resolve()))
 Path(os.environ["MPLCONFIGDIR"]).mkdir(parents=True, exist_ok=True)
 import matplotlib
 
@@ -444,23 +446,29 @@ def per_user_pers_variance(df: pd.DataFrame) -> pd.Series:
 def main() -> int:
     """CLI 入口：生成 strict vs leaky 的对比表格/图表/markdown 报告。"""
     parser = argparse.ArgumentParser(description="Compare strict (no-leak) vs leaky features and metrics.")
-    parser.add_argument("--strict", default="FeatureData/train_samples.csv", help="Strict dataset CSV path")
-    parser.add_argument("--submissions", default="CleanData/submissions.csv")
-    parser.add_argument("--problems", default="CleanData/problems.csv")
-    parser.add_argument("--students-derived", default="CleanData/students_derived.csv")
-    parser.add_argument("--tags", default="CleanData/tags.csv")
-    parser.add_argument("--languages", default="CleanData/languages.csv")
+    parser.add_argument("--strict", default=str(ROOT / "FeatureData/train_samples.csv"), help="Strict dataset CSV path")
+    parser.add_argument("--submissions", default=str(ROOT / "CleanData/submissions.csv"))
+    parser.add_argument("--problems", default=str(ROOT / "CleanData/problems.csv"))
+    parser.add_argument("--students-derived", default=str(ROOT / "CleanData/students_derived.csv"))
+    parser.add_argument("--tags", default=str(ROOT / "CleanData/tags.csv"))
+    parser.add_argument("--languages", default=str(ROOT / "CleanData/languages.csv"))
     # 表格/报告类产物输出到 Reports/compare；图表统一输出到 Reports/fig（便于 WebApp 展示）。
-    parser.add_argument("--out-dir", default="Reports/compare")
+    parser.add_argument("--out-dir", default=str(ROOT / "Reports/compare"))
     parser.add_argument("--time-split", type=float, default=0.8)
     args = parser.parse_args()
 
-    out_dir = Path(args.out_dir)
+    def resolve_arg_path(p: str | Path) -> Path:
+        path = Path(p)
+        if not path.is_absolute():
+            path = (ROOT / path).resolve()
+        return path
+
+    out_dir = resolve_arg_path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     fig_dir = (out_dir.parent / "fig").resolve()
     fig_dir.mkdir(parents=True, exist_ok=True)
 
-    strict_df = pd.read_csv(args.strict, low_memory=False)
+    strict_df = pd.read_csv(resolve_arg_path(args.strict), low_memory=False)
     strict_df["submission_id"] = pd.to_numeric(strict_df["submission_id"], errors="coerce").astype(int)
     strict_df["user_id"] = pd.to_numeric(strict_df["user_id"], errors="coerce").astype(int)
     strict_df["problem_id"] = pd.to_numeric(strict_df["problem_id"], errors="coerce").astype(int)
@@ -469,11 +477,11 @@ def main() -> int:
     split = time_split_by_submission_id(strict_df, frac=float(args.time_split))
 
     leaky_df = build_leaky_dataset(
-        submissions_csv=args.submissions,
-        problems_csv=args.problems,
-        students_derived_csv=args.students_derived,
-        tags_csv=args.tags,
-        languages_csv=args.languages,
+        submissions_csv=str(resolve_arg_path(args.submissions)),
+        problems_csv=str(resolve_arg_path(args.problems)),
+        students_derived_csv=str(resolve_arg_path(args.students_derived)),
+        tags_csv=str(resolve_arg_path(args.tags)),
+        languages_csv=str(resolve_arg_path(args.languages)),
     )
 
     # align order by submission_id for fair split checks
@@ -873,7 +881,7 @@ def main() -> int:
             plt.grid(True, alpha=0.3)
             plt.legend(frameon=False)
             plt.tight_layout()
-            plt.savefig(fig_dir / "fig_compare_hitk.png", dpi=200)
+            plt.savefig(fig_dir / "fig_严格vs泄漏_命中率曲线.png", dpi=200)
             plt.close()
 
             plt.figure(figsize=(6.5, 4.0))
@@ -885,7 +893,7 @@ def main() -> int:
             plt.grid(True, alpha=0.3)
             plt.legend(frameon=False)
             plt.tight_layout()
-            plt.savefig(fig_dir / "fig_compare_precisionk.png", dpi=200)
+            plt.savefig(fig_dir / "fig_严格vs泄漏_精确率曲线.png", dpi=200)
             plt.close()
         except Exception:
             pass
@@ -918,7 +926,7 @@ def main() -> int:
         plt.grid(True, alpha=0.3)
         plt.legend(frameon=False)
         plt.tight_layout()
-        plt.savefig(fig_dir / "fig_compare_roc.png", dpi=200)
+        plt.savefig(fig_dir / "fig_严格vs泄漏_ROC曲线.png", dpi=200)
         plt.close()
 
         # Precision-Recall curve
@@ -943,7 +951,7 @@ def main() -> int:
         plt.grid(True, alpha=0.3)
         plt.legend(frameon=False)
         plt.tight_layout()
-        plt.savefig(fig_dir / "fig_compare_pr.png", dpi=200)
+        plt.savefig(fig_dir / "fig_严格vs泄漏_PR曲线.png", dpi=200)
         plt.close()
 
         # Calibration curve (reliability diagram)
@@ -967,7 +975,7 @@ def main() -> int:
         plt.grid(True, alpha=0.3)
         plt.legend(frameon=False)
         plt.tight_layout()
-        plt.savefig(fig_dir / "fig_compare_calibration.png", dpi=200)
+        plt.savefig(fig_dir / "fig_严格vs泄漏_校准曲线.png", dpi=200)
         plt.close()
 
         # Brier decomposition

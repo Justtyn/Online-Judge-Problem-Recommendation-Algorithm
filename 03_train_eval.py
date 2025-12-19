@@ -225,13 +225,12 @@ def plot_confusion_matrices(
         ax.set_title(f"混淆矩阵：{title_map.get(name, name)}")
         plt.tight_layout()
 
-        # 历史原因：报告/引用里可能同时使用两套命名，这里都保留，避免下游断链。
-        fig.savefig(out_dir / f"fig_confusion_{name}.png", dpi=200)
-        fig.savefig(out_dir / f"fig_cm_{name}.png", dpi=200)
+        model_label = title_map.get(name, name)
+        fig.savefig(out_dir / f"fig_混淆矩阵_{model_label}.png", dpi=200)
 
-        # 兼容既有报告里对该文件名的引用（svm 与 knn 早期做过对比，文件名保留）。
+        # 兼容既有报告里对该文件名的引用（svm 与 knn 早期做过对比）。
         if name == "svm_linear":
-            fig.savefig(out_dir / "fig_cm_svm_or_knn.png", dpi=200)
+            fig.savefig(out_dir / "fig_混淆矩阵_SVM或KNN.png", dpi=200)
 
         plt.close(fig)
 
@@ -245,7 +244,7 @@ def plot_model_f1_compare(metrics: pd.DataFrame, out_dir: Path) -> None:
     plt.xlabel("模型")
     plt.ylabel("F1")
     plt.tight_layout()
-    plt.savefig(out_dir / "fig_model_f1_compare.png", dpi=200)
+    plt.savefig(out_dir / "fig_模型F1对比.png", dpi=200)
     plt.close()
 
 

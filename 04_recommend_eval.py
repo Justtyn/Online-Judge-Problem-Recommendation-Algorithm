@@ -15,7 +15,7 @@
 - recommendations_topk_compare.csv：所有策略明细
 - reco_metrics.csv：指标汇总
 输出到 `Reports/fig/`：
-- fig_hitk_curve.png / fig_reco_coverage.png / fig_reco_difficulty_hist.png：图表
+- fig_命中率曲线.png / fig_推荐集中度与覆盖率.png / fig_推荐难度分布_单用户.png：图表
 """
 
 import json
@@ -51,9 +51,9 @@ TRAIN_SAMPLES = ROOT / "FeatureData/train_samples.csv"
 OUT_RECO = ROOT / "Reports/reco/recommendations_topk.csv"
 OUT_RECO_COMPARE = ROOT / "Reports/reco/recommendations_topk_compare.csv"
 OUT_METRICS = ROOT / "Reports/reco/reco_metrics.csv"
-FIG_HITK = ROOT / "Reports/fig/fig_hitk_curve.png"
-FIG_CASE_DIFF = ROOT / "Reports/fig/fig_reco_difficulty_hist.png"
-FIG_COVERAGE = ROOT / "Reports/fig/fig_reco_coverage.png"
+FIG_HITK = ROOT / "Reports/fig/fig_命中率曲线.png"
+FIG_CASE_DIFF = ROOT / "Reports/fig/fig_推荐难度分布_单用户.png"
+FIG_COVERAGE = ROOT / "Reports/fig/fig_推荐集中度与覆盖率.png"
 
 # 时间切分：按 submission_id 排序后前 80% 作为训练窗口
 TIME_SPLIT = 0.8

@@ -11,6 +11,7 @@
 - `CleanData/students_derived.csv`：学生画像派生字段（level/perseverance 等）
 - `CleanData/tags.csv`：标签词表（tag_name）
 - `CleanData/languages.csv`：语言词表（name）
+- `Reports/reco/recommendations_topk.csv`：推荐输出（可选，用于推荐难度分布）
 
 说明
 - 强制 matplotlib 使用 Agg 后端，保证在无 GUI 的环境可运行（如服务器/CI）。
@@ -44,6 +45,7 @@ PROBLEMS = ROOT / "CleanData/problems.csv"
 STUDENTS_DERIVED = ROOT / "CleanData/students_derived.csv"
 TAGS = ROOT / "CleanData/tags.csv"
 LANGS = ROOT / "CleanData/languages.csv"
+RECO_TOPK = ROOT / "Reports/reco/recommendations_topk.csv"
 
 # 图表统一收敛到 Reports/fig/
 OUT_DIR = ROOT / "Reports/fig"
@@ -179,14 +181,14 @@ def main() -> int:
     plt.title("用户能力（level）分布")
     plt.xlabel("level（0-1）")
     plt.ylabel("人数")
-    save_fig(OUT_DIR / "fig_level_hist.png")
+    save_fig(OUT_DIR / "fig_用户能力分布.png")
 
     plt.figure()
     plt.hist(students["perseverance"], bins=20, edgecolor="black")
     plt.title("用户坚持度（perseverance）分布")
     plt.xlabel("perseverance（0-1）")
     plt.ylabel("人数")
-    save_fig(OUT_DIR / "fig_perseverance_hist.png")
+    save_fig(OUT_DIR / "fig_用户坚持度分布.png")
 
     lang_counts = subs.groupby("language").size().sort_values(ascending=False)
     if len(lang_counts):
@@ -198,7 +200,7 @@ def main() -> int:
         plt.xlabel("语言")
         plt.ylabel("提交次数")
         plt.xticks(rotation=30, ha="right")
-        save_fig(OUT_DIR / "fig_lang_dist.png")
+        save_fig(OUT_DIR / "fig_语言分布.png")
 
     tag_rows = []
     for lst in problems["tags_list"].tolist():
@@ -216,7 +218,7 @@ def main() -> int:
     plt.xlabel("标签")
     plt.ylabel("出现次数")
     plt.xticks(rotation=45, ha="right")
-    save_fig(OUT_DIR / "fig_tag_dist.png")
+    save_fig(OUT_DIR / "fig_标签分布.png")
 
     user_sub_cnt = subs.groupby("user_id").size().rename("submissions")
     user_prob_cnt = subs.groupby("user_id")["problem_id"].nunique().rename("unique_problems")
@@ -226,7 +228,31 @@ def main() -> int:
     plt.title("用户活跃度：人均提交次数分布")
     plt.xlabel("提交次数")
     plt.ylabel("人数")
-    save_fig(OUT_DIR / "fig_user_activity.png")
+    save_fig(OUT_DIR / "fig_用户活跃度分布.png")
+
+    # 推荐题目难度分布（依赖 04_recommend_eval.py 输出）
+    if RECO_TOPK.exists():
+        reco = pd.read_csv(RECO_TOPK)
+        diff_col = None
+        if "difficulty" in reco.columns:
+            diff_col = "difficulty"
+        elif "problem_id" in reco.columns:
+            reco = reco.merge(
+                problems[["problem_id", "difficulty_filled"]],
+                on="problem_id",
+                how="left",
+            )
+            diff_col = "difficulty_filled"
+        if diff_col is not None:
+            reco_diff = pd.to_numeric(reco[diff_col], errors="coerce").dropna()
+            if len(reco_diff):
+                plt.figure()
+                plt.hist(reco_diff.astype(int), bins=np.arange(0.5, 10.6, 1), edgecolor="black")
+                plt.title("推荐题目难度分布（全量推荐）")
+                plt.xlabel("难度（1-10）")
+                plt.ylabel("数量")
+                plt.xticks(range(1, 11))
+                save_fig(OUT_DIR / "fig_推荐难度分布.png")
 
     # ---- 3) 因素 vs 通过率（AC率）类图表 ----
     sp = subs.merge(
@@ -244,7 +270,7 @@ def main() -> int:
     plt.ylim(0, 1)
     plt.xticks(range(1, 11))
     plt.grid(True, alpha=0.3)
-    save_fig(OUT_DIR / "fig_difficulty_vs_ac.png")
+    save_fig(OUT_DIR / "fig_难度-通过率.png")
 
     att = sp.copy()
     # attempt_no 可能有长尾：截断到 10 方便可视化（10 表示 “>=10”）
@@ -258,7 +284,7 @@ def main() -> int:
     plt.ylim(0, 1)
     plt.xticks(range(1, 11))
     plt.grid(True, alpha=0.3)
-    save_fig(OUT_DIR / "fig_attemptno_vs_ac.png")
+    save_fig(OUT_DIR / "fig_尝试次数-通过率.png")
 
     lang_ac = sp[sp["language"].isin(lang_set)].groupby("language")["ac"].mean()
     lang_ac = lang_ac.reindex([l for l in lang_vocab if l in lang_ac.index], fill_value=np.nan)
@@ -269,7 +295,7 @@ def main() -> int:
     plt.ylabel("通过率")
     plt.ylim(0, 1)
     plt.xticks(rotation=30, ha="right")
-    save_fig(OUT_DIR / "fig_lang_acrate.png")
+    save_fig(OUT_DIR / "fig_语言通过率.png")
 
     # 多标签：一个 submission 可能对应多个 tags；将 tags “展开”为多行再统计标签 AC 率
     t_rows = []
@@ -290,7 +316,7 @@ def main() -> int:
         plt.ylabel("通过率")
         plt.ylim(0, 1)
         plt.xticks(rotation=45, ha="right")
-        save_fig(OUT_DIR / "fig_tag_acrate.png")
+        save_fig(OUT_DIR / "fig_标签通过率.png")
 
     print("已生成图表到", OUT_DIR)
     return 0

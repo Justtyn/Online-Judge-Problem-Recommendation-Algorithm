@@ -17,7 +17,7 @@
 ├── FeatureData/      # 可直接训练的样本表（X + y）
 ├── Models/           # 模型评估指标（可扩展保存模型文件）
 ├── Reports/          # 报告产物（图表/表格/推荐结果/诊断）
-│   ├── fig/          # 所有图表（fig_*.png）
+│   ├── fig/          # 所有图表（fig_*.png，中文命名）
 │   ├── reco/         # 推荐输出（recommendations_topk*.csv, reco_metrics.csv）
 │   ├── diag/         # 诊断输出（diag_*.txt/csv）
 │   ├── compare/      # strict vs leaky 对比产物（compare_*.csv + md）
@@ -93,8 +93,8 @@ python Utils/diagnose_reco_bias.py --scan --max-users 300 --fail-if-any
 默认产物：
 - `Reports/diag/diag_user_<user_id>.txt`
 - `Reports/diag/diag_scan_users.csv`（scan 模式）
-- `Reports/fig/fig_diag_user_<user_id>_reco_diff_hist.png`
-- `Reports/fig/fig_diag_user_<user_id>_candidate_p_by_diff.png`
+- `Reports/fig/fig_诊断_用户<user_id>_推荐难度分布.png`
+- `Reports/fig/fig_诊断_用户<user_id>_候选题通过率-难度.png`
 
 ### 3）运行推荐算法流水线（03 → 06）
 
@@ -103,7 +103,7 @@ python Utils/diagnose_reco_bias.py --scan --max-users 300 --fail-if-any
 ```bash
 python 01_derive_students.py      # 画像：CleanData/students_derived.csv
 python 02_build_features.py       # 样本：FeatureData/train_samples.csv
-python 03_train_eval.py           # 模型：Models/metrics.csv + Reports/fig/fig_cm_*.png
+python 03_train_eval.py           # 模型：Models/metrics.csv + Reports/fig/fig_混淆矩阵_*.png
 python 04_recommend_eval.py       # 推荐：Reports/reco/recommendations_topk.csv + Reports/reco/reco_metrics.csv
 python 05_make_eda_plots.py       # EDA：Reports/fig/fig_*.png（用于写报告的“分布合理性”图）
 ```
@@ -300,7 +300,7 @@ python Utils/validate_originaldata.py --report Reports/validate/validate_report.
 - 离线指标通常与线性 SVM 接近，但概率可解释且便于做“成长带”过滤与校准分析
 
 可选：严格 vs 泄漏口径对比（解释“指标虚高”）  
-`python Utils/compare_strict_vs_leaky.py` → `Reports/compare/` + `Reports/fig/`
+`python Utils/compare_strict_vs_leaky.py` → `Reports/compare/` + `Reports/fig/`（fig_严格vs泄漏_*.png）
 
 ---
 
@@ -318,7 +318,7 @@ python Utils/validate_originaldata.py --report Reports/validate/validate_report.
 产物：
 - `Reports/reco/recommendations_topk.csv`
 - `Reports/reco/reco_metrics.csv`
-- `Reports/fig/fig_hitk_curve.png` 等
+- `Reports/fig/fig_命中率曲线.png` 等
 
 ---
 
@@ -399,8 +399,8 @@ python Utils/validate_originaldata.py --report Reports/validate/validate_report.
 
 产物：
 - `Models/metrics.csv`：Accuracy/Precision/Recall/F1
-- `Reports/fig/fig_cm_*.png`：各模型混淆矩阵
-- `Reports/fig/fig_model_f1_compare.png`：F1 对比图
+- `Reports/fig/fig_混淆矩阵_*.png`：各模型混淆矩阵
+- `Reports/fig/fig_模型F1对比.png`：F1 对比图
 
 ### Top‑K 推荐与评估（`04_recommend_eval.py`）
 
@@ -417,9 +417,9 @@ python Utils/validate_originaldata.py --report Reports/validate/validate_report.
 产物：
 - `Reports/reco/recommendations_topk.csv`：每个用户 Top‑K 推荐列表（含 `p_ac / difficulty / in_growth_band`）
 - `Reports/reco/reco_metrics.csv`：Hit@K/Precision@K（含全量用户与“活跃用户”两套口径）
-- `Reports/fig/fig_hitk_curve.png`：Hit@K 曲线
-- `Reports/fig/fig_reco_coverage.png`：覆盖率/集中度（是否只推荐少数热门题）
-- `Reports/fig/fig_reco_difficulty_hist.png`：单用户案例的推荐难度分布
+- `Reports/fig/fig_命中率曲线.png`：Hit@K 曲线
+- `Reports/fig/fig_推荐集中度与覆盖率.png`：覆盖率/集中度（是否只推荐少数热门题）
+- `Reports/fig/fig_推荐难度分布_单用户.png`：单用户案例的推荐难度分布
 
 ---
 

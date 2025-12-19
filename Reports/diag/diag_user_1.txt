@@ -1,0 +1,35 @@
+user_id=1 cutoff_pct=0.50 cutoff_submission_id=174851
+hist_submissions=175 hist_attempted_unique=101 hist_solved=55
+hist_attempted_median_diff=5.00 hist_solved_median_diff=4.00
+reco_k=10 reco_median_diff=2.00 reco_easy_share(<=2)=100.00% reco_in_band_share=100.00% reco_score_std=0.000000
+flags=easy_bias_vs_history,score_plateau_topk
+
+Top-K:
+  rank=01 pid=3294 diff=2 p_ac=0.461 in_band=1 tags=stack_queue
+  rank=02 pid=4380 diff=2 p_ac=0.461 in_band=1 tags=stack_queue
+  rank=03 pid=5117 diff=2 p_ac=0.461 in_band=1 tags=stack_queue
+  rank=04 pid=7937 diff=2 p_ac=0.461 in_band=1 tags=stack_queue
+  rank=05 pid=7955 diff=2 p_ac=0.461 in_band=1 tags=stack_queue
+  rank=06 pid=8482 diff=2 p_ac=0.461 in_band=1 tags=stack_queue
+  rank=07 pid=8707 diff=2 p_ac=0.461 in_band=1 tags=stack_queue
+  rank=08 pid=8750 diff=2 p_ac=0.461 in_band=1 tags=stack_queue
+  rank=09 pid=8809 diff=2 p_ac=0.461 in_band=1 tags=stack_queue
+  rank=10 pid=9168 diff=2 p_ac=0.461 in_band=1 tags=stack_queue
+
+Candidate P(AC) stats by difficulty (candidates=not solved before cutoff):
+  diff	N	in_band	p_min	p_q25	p_med	p_q75	p_max
+  1	1746	1746	0.529	0.535	0.536	0.536	0.545
+  2	2703	2703	0.432	0.438	0.439	0.439	0.630
+  3	542	0	0.340	0.345	0.347	0.354	0.387
+  4	1261	4	0.258	0.264	0.266	0.274	0.632
+  5	1830	2	0.191	0.196	0.202	0.208	0.537
+  6	1400	0	0.138	0.146	0.151	0.154	0.355
+  7	629	1	0.098	0.104	0.109	0.110	0.461
+  8	309	0	0.068	0.073	0.075	0.077	0.151
+  9	15	0	0.049	0.051	0.054	0.056	0.060
+  10	1	0	0.035	0.035	0.035	0.035	0.035
+
+解释：
+- 旧版会在成长带内按 P(AC) 从高到低选题，容易被“难度1但预测≈0.69”的题占满。
+- 现在 Web 端已改为：带内优先靠近下限（更有挑战），带外按“离成长带最近”补齐。
+- 该用户候选集中：最低难度 diff=1 的 p_med≈0.536；最高 diff=10 的 p_med≈0.035。

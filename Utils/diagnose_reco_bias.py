@@ -331,7 +331,7 @@ def _diagnose_one(
         ax.set_ylabel("count")
         ax.set_xticks(range(1, 11))
         ax.grid(True, alpha=0.25, linestyle="--")
-        p1 = REPORTS_FIG_DIR / f"fig_diag_user_{int(user_id)}_reco_diff_hist.png"
+        p1 = REPORTS_FIG_DIR / f"fig_诊断_用户{int(user_id)}_推荐难度分布.png"
         fig.savefig(p1, dpi=180, bbox_inches="tight")
         plt.close(fig)
         fig_paths.append(p1)
@@ -354,7 +354,7 @@ def _diagnose_one(
             ax.set_ylim(0.0, 1.0)
             ax.grid(True, alpha=0.25, linestyle="--")
             ax.legend(frameon=False, ncols=3, loc="upper right")
-            p2 = REPORTS_FIG_DIR / f"fig_diag_user_{int(user_id)}_candidate_p_by_diff.png"
+            p2 = REPORTS_FIG_DIR / f"fig_诊断_用户{int(user_id)}_候选题通过率-难度.png"
             fig.savefig(p2, dpi=180, bbox_inches="tight")
             plt.close(fig)
             fig_paths.append(p2)
