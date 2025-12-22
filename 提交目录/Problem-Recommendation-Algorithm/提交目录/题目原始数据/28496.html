@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1364621786" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 28496 --「ZJOI2015」幻想乡战略游戏</title><center><h2>28496: 「ZJOI2015」幻想乡战略游戏</h2><span class=green>Time Limit: </span>4 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>1&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='submitpage.php?id=28496'>Submit</a>][<a href='problemstatus.php?id=28496'>Status</a>][<a href='bbs.php?pid=28496'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=28496'>下载FPS0元</a>][<a onclick='$(this).load("cart.php?add=28496");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=28496'>下载测试数据0元</a>][66080kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><div class="ui bottom attached segment font-content">
+	<div>
+		<p>
+			傲娇少女幽香正在玩一个非常有趣的战略类游戏，本来这个游戏的地图其实还不算太大，幽香还能管得过来，但是不知道为什么现在的网游厂商把游戏的地图越做越大，以至于幽香一眼根本看不过来，更别说和别人打仗了。 在打仗之前，幽香现在面临一个非常基本的管理问题需要解决。 整个地图是一个树结构，一共有 <span class="katex"><span class="katex-mathml">nn</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span> 块空地，这些空地被 <span class="katex"><span class="katex-mathml">n−1n-1</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span> 条带权边连接起来，使得每两个点之间有一条唯一的路径将它们连接起来。
+		</p>
+		<p>
+			在游戏中，幽香可能在空地上增加或者减少一些军队。同时，幽香可以在一个空地上放置一个补给站。 如果补给站在点 <span class="katex"><span class="katex-mathml">uu</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">u</span></span></span></span> 上，并且空地 <span class="katex"><span class="katex-mathml">vv</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">v</span></span></span></span> 上有 <span class="katex"><span class="katex-mathml">dvd_v</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">d</span><span class="vlist"><span><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;"></span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">v</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;"></span></span></span></span></span></span></span></span> 个单位的军队，那么幽香每天就要花费 <span class="katex"><span class="katex-mathml">dv⋅dist(u,v)d_v \cdot \text{dist}(u,v)</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">d</span><span class="vlist"><span><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;"></span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">v</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;"></span></span></span></span></span><span class="mbin">⋅</span><span class="text mord textstyle uncramped"><span class="mord mathrm">d</span><span class="mord mathrm">i</span><span class="mord mathrm">s</span><span class="mord mathrm">t</span></span><span class="mopen">(</span><span class="mord mathit">u</span><span class="mpunct">,</span><span class="mord mathit">v</span><span class="mclose">)</span></span></span></span> 的金钱来补给这些军队。由于幽香需要补给所有的军队，因此幽香总共就要花费为 <span class="katex"><span class="katex-mathml">∑(dv⋅dist(u,v))\sum (d_v \cdot \text{dist}(u,v))</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.25001em;"></span><span class="base textstyle uncramped"><span class="op-symbol small-op mop">∑</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">d</span><span class="vlist"><span><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;"></span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">v</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;"></span></span></span></span></span><span class="mbin">⋅</span><span class="text mord textstyle uncramped"><span class="mord mathrm">d</span><span class="mord mathrm">i</span><span class="mord mathrm">s</span><span class="mord mathrm">t</span></span><span class="mopen">(</span><span class="mord mathit">u</span><span class="mpunct">,</span><span class="mord mathit">v</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span>，其中<span class="katex"><span class="katex-mathml">1≤v≤N1 \leq v \leq N</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.13597em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mrel">≤</span><span class="mord mathit">v</span><span class="mrel">≤</span><span class="mord mathit">N</span></span></span></span>)的代价，<span class="katex"><span class="katex-mathml">dist(u,v)\text{dist}(u,v)</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="text mord textstyle uncramped"><span class="mord mathrm">d</span><span class="mord mathrm">i</span><span class="mord mathrm">s</span><span class="mord mathrm">t</span></span><span class="mopen">(</span><span class="mord mathit">u</span><span class="mpunct">,</span><span class="mord mathit">v</span><span class="mclose">)</span></span></span></span> 表示 <span class="katex"><span class="katex-mathml">uu</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">u</span></span></span></span> 个 <span class="katex"><span class="katex-mathml">vv</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">v</span></span></span></span> 在树上的距离（唯一路径的权和）。 因为游戏的规定，幽香只能选择一个空地作为补给站。在游戏的过程中，幽香可能会在某些空地上制造一些军队，也可能会减少某些空地上的军队，进行了这样的操作以后，出于经济上的考虑，幽香往往可以移动他的补给站从而省一些钱。但是由于这个游戏的地图是在太大了，幽香无法轻易的进行最优的安排，你能帮帮她吗？ 你可以假定一开始所有空地上都没有军队。
+		</p>
+	</div>
+</div></div><h2>Input</h2><div class=content><div class="ui bottom attached segment font-content">
+	<div>
+		<p>
+			第一行两个数 <span class="katex"><span class="katex-mathml">nn</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span> 和 <span class="katex"><span class="katex-mathml">QQ</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">Q</span></span></span></span> 分别表示树的点数和幽香操作的个数，其中点从 <span class="katex"><span class="katex-mathml">11</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span></span></span></span> 到 <span class="katex"><span class="katex-mathml">nn</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span> 标号。
+		</p>
+		<p>
+			接下来 <span class="katex"><span class="katex-mathml">n−1n-1</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span> 行，每行三个正整数 <span class="katex"><span class="katex-mathml">a,b,ca, b, c</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mpunct">,</span><span class="mord mathit">b</span><span class="mpunct">,</span><span class="mord mathit">c</span></span></span></span>，表示 <span class="katex"><span class="katex-mathml">aa</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span> 和 <span class="katex"><span class="katex-mathml">bb</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">b</span></span></span></span> 之间有一条边权为 <span class="katex"><span class="katex-mathml">cc</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span></span></span></span> 的边。 接下来 <span class="katex"><span class="katex-mathml">QQ</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">Q</span></span></span></span> 行，每行两个数 <span class="katex"><span class="katex-mathml">u,eu, e</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">u</span><span class="mpunct">,</span><span class="mord mathit">e</span></span></span></span>，表示幽香在点 <span class="katex"><span class="katex-mathml">uu</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">u</span></span></span></span>上放了 <span class="katex"><span class="katex-mathml">ee</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">e</span></span></span></span>单位个军队（如果 <span class="katex"><span class="katex-mathml">e&lt;0e&lt;0</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord mathit">e</span><span class="mrel">&lt;</span><span class="mord mathrm">0</span></span></span></span>，就相当于是幽香在 <span class="katex"><span class="katex-mathml">uu</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">u</span></span></span></span> 上减少了 <span class="katex"><span class="katex-mathml">∣e∣|e|</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∣</span><span class="mord mathit">e</span><span class="mord mathrm">∣</span></span></span></span> 单位个军队，说白了就是 <span class="katex"><span class="katex-mathml">du←du+ed_u \leftarrow d_u+e</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">d</span><span class="vlist"><span><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;"></span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">u</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;"></span></span></span></span></span><span class="mrel">←</span><span class="mord"><span class="mord mathit">d</span><span class="vlist"><span><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;"></span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">u</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;"></span></span></span></span></span><span class="mbin">+</span><span class="mord mathit">e</span></span></span></span>）。数据保证任何时刻每个点上的军队数量都是非负的。
+		</p>
+	</div>
+</div></div><h2>Output</h2><div class=content><div class="ui bottom attached segment font-content">
+	<div>
+		<p>
+			对于幽香的每个操作，输出操作完成以后，每天的最小花费，也即如果幽香选择最优的补给点进行补给时的花费。
+		</p>
+	</div>
+</div></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>10 5
+1 2 1
+2 3 1
+2 4 1
+1 5 1
+2 6 1
+2 7 1 
+5 8 1
+7 9 1
+1 10 1
+3 1
+2 1
+8 1
+3 1
+4 1</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>0
+1
+4
+5
+6</span></pre><h2>HINT</h2>
+<div class=content><p><div class="ui bottom attached segment font-content"><br />
+	<div><br />
+		<p><br />
+			对于所有数据，<span class="katex"><span class="katex-mathml">1≤c≤1000,&nbsp;0≤∣e∣≤1000,&nbsp;n≤105,&nbsp;Q≤1051 \leq c \leq 1000, \ 0 \leq |e| \leq 1000, \ n \leq 10^5, \ Q \leq 10^5</span><span class="katex-html"><span class="strut"></span><span class="strut bottom" style="vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mrel">≤</span><span class="mord mathit">c</span><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mspace"> </span><span class="mord mathrm">0</span><span class="mrel">≤</span><span class="mord mathrm">∣</span><span class="mord mathit">e</span><span class="mord mathrm">∣</span><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mspace"> </span><span class="mord mathit">n</span><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;"></span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord mspace"> </span><span class="mord mathit">Q</span><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;"></span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;"></span></span></span></span></span></span></span></span> <br />
+		</p><br />
+	</div><br />
+</div></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=ZJOI2015'>ZJOI2015</a>&nbsp;<a href='problemset.php?search=NOIP'>NOIP</a>&nbsp;<a href='problemset.php?search=%E7%9C%81%E9%80%89'>省选</a>&nbsp;<a href='problemset.php?search=%E9%AB%98%E7%BA%A7'>高级</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=28496'>Submit</a>][<a href='problemstatus.php?id=28496'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=28496");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1687870942" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 22976 --多边形</title><center><h2>22976: 多边形</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>123&nbsp;&nbsp;<span class=green>Solved: </span>42<br>[<a href='submitpage.php?id=22976'>Submit</a>][<a href='problemstatus.php?id=22976'>Status</a>][<a href='bbs.php?pid=22976'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=22976'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=22976");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=22976'>下载测试数据1元</a>][52kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>
+	&nbsp; &nbsp; &nbsp; 多边形(Polygon)游戏是单人玩的游戏，开始的时候给定一个由N个顶点构成的多边形(图1所示的例子中，N=4)，每个顶点被赋予一个整数值，而每条边则被赋予一个符号：+(加法运算)或者*(乘法运算)，所有边依次用整数1到N标识。
+</p>
+<p>
+	<img src="/attached/image/20140531/20140531205102_82094.jpg" alt="" /> 
+</p>
+<p>
+	&nbsp; &nbsp; &nbsp;图1：一个多边形的图形表示<br />
+首次移动(first move)，允许将某条边删除；<br />
+接下来的每次顺序移动(subsequentmoves)，包括下面步骤：<br />
+1、选出一条边E，以及由E联接的顶点V1和V2；<br />
+2、用一个新的顶点，取代边E及其所联接的两个顶点V1和V2。新顶点要赋予新的值，这个值是对V1和V2，做由E所指定的运算，所得到的结果。<br />
+所有边都被删除后，只剩下一个顶点，游戏结束。游戏的得分就是该顶点的数值。<br />
+下面是一个游戏实例：<br />
+考虑图1中的多边形。<br />
+玩家第一步删除第3条边。结果如图2所示。
+</p>
+<p>
+	<img src="/attached/image/20140531/20140531205225_58941.jpg" alt="" /> 
+</p>
+<p>
+	<br />
+</p>
+<div style="border:solid white 1.0pt;padding:0cm 0cm 0cm 0cm;background:white;margin-left:7.5pt;">
+	<p class="MsoNormal" align="left">
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;图2 删除第3条边
+	</p>
+	<p class="MsoNormal" align="left">
+		之后，玩家删除第1条边
+	</p>
+</div>
+<img src="/attached/image/20140531/20140531205400_55140.jpg" alt="" /> 
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<p class="MsoNormal" align="left">
+	&nbsp; &nbsp; &nbsp;图3 删除第1条边
+</p>
+<p class="MsoNormal" align="left">
+	然后删除第4条边，
+</p>
+<p class="MsoNormal" align="left">
+	<img src="/attached/image/20140531/20140531205435_21746.jpg" alt="" /> 
+</p>
+<p class="MsoNormal" align="left">
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<div style="border:solid white 1.0pt;padding:0cm 0cm 0cm 0cm;background:white;margin-left:7.5pt;">
+	<p class="MsoNormal" align="left">
+		图4 删除第4条边
+	</p>
+	<p class="MsoNormal" align="left">
+		最后删除第2条边。得分是0.
+	</p>
+</div>
+<img src="/attached/image/20140531/20140531205526_46447.jpg" alt="" /><br />
+<div>
+	<br />
+</div>
+图5 删除第2条边<br />
+任务：<br />
+编写一个程序，对于任意给定的多边形，计算可能的最高得分，并且列举出所有的可以导致最高得分的被首次移动的边。
+<p>
+	<br />
+</p></div><h2>Input</h2><div class=content>文件POLYGON.IN给出的是，由N个顶点构成的多边形。文件包括2行：<br />
+第一行记录的是数值N(n&lt;=50)；<br />
+第二行包含所有边(1，…，N)分别被赋予的符号，以及嵌入到两条边之间的顶点的数值(第一个整数值对应于与1号、2号边同时相连的顶点；第二个整数对应于与2号、3号边同时相连的顶点；…；等等。最后一个数值对应于与N号、1号边同时相连的顶点)，符号和数值之间由一个空格分隔。边的符号有2种：字母t(对应于+)，字母x(对应于*)。</div><h2>Output</h2><div class=content>在文件POLYGON.OUT的第一行，你的程序必须输出在输入文件指定条件下可能得到的最高得分。<br />
+有些边如果在首次移动中被删除，可以导致最高得分。在输出文件的第二行，要求列举出所有这样的边，而且按照升序输出，其间用一个空格分开。</div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>4
+t -7 t 4 x 2 x 5</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>33
+1 2</span></pre><h2>HINT</h2>
+<div class=content><p><div style="border:solid white 1.0pt;padding:0cm 0cm 0cm 0cm;background:white;margin-left:7.5pt;"><br />
+	<p class="MsoNormal" align="left"><br />
+		样例输入对应于图1所示的多边形。第二行的第一个字符是1号边的符号。<br />
+	</p><br />
+</div></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E5%8C%BA%E5%9F%9F%E5%8A%A8%E8%A7%84'>动态规划-区域动规</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=22976'>Submit</a>][<a href='problemstatus.php?id=22976'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=22976");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

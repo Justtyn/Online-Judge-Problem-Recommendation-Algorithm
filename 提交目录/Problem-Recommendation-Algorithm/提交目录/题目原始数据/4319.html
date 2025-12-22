@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?370286238" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 4319 --乒乓球比赛</title><center><h2>4319: 乒乓球比赛</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=4319'>Submit</a>][<a href='problemstatus.php?id=4319'>Status</a>][<a href='bbs.php?pid=4319'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=4319'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=4319");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=4319'>下载测试数据1元</a>][152kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content>学校准备举办一次乒乓球男女混合双打比赛，由于时间紧迫，必须尽快将队员组队(一男一女组一队)，但学校又不想完全包办此事，现采取这样的方法：参赛选手排成m * n的方阵，每位选手可以选择所有前排和自己所在那行左边的异性选手为自己的队员。
+<img src=http://172.20.10.138:80/JudgeOnline/admin/../images/1333.bmp>
+如图，红色代表当前选手，其可以选择的选手一定只可能在蓝色的选手中
+行和列均从0开始计，则选手(0,0)在最左上角，选手(3,3)在他(她)的右后方
+每位选手都会选择可选择的实力最强大的选手作为队友，如果有多个符合条件的选手，他(她)会选择最靠前的，如果有多个符合条件的选手在最靠前的那一行，选择最靠左的。同时也会有一些选手没法选择自己的队友(比如最左前方的选手，或者某位选手左边和前边的异性选手已经被其他选手选择了)，那么他(她)只能等待被其他选手选择了。换言之，一个选手的组队关系一旦确定就不可变更。
+统计选手的组队关系是个很复杂的工作，本次比赛由XX同学负责组织，但他被这个问题难住了，由于你是编程高手，XX想请你帮忙写一个程序，给出m * n的选手方阵，统计出每位选手的队友是谁？
+</div><h2>Input</h2><div class=content>数据第一行是整数T，代表有T组测试数据。每组数据的第一行是整数m和n(用空格分隔)，代表方阵的规模，0<m, n<＝200。接下来的m行，每行有n个非零整数，代表选手的能力值，男生为正数，女生为负数(当然出于男女平等考虑，你也可以认为女生为正数，男生为负数)，能力值的绝对值越高，该选手实力越强，反之亦然。每个选手的能力值的绝对值不大于100。
+每组数据中接下来的每行数据都是两个整数r和c(用空格分隔)，代表现在要查询在第r行第c列的选手的队友是谁。当r=-1并且c=-1时，本组数据结束。
+</div><h2>Output</h2><div class=content>在每组数据输出的第一行是“Case #n：”，n表示当前是第n组数据。对于每组数据中的每次查询，输出在第r行第c列的选手的队友是谁。假设被查询的选手在第r1行第c1列，其队友在第r2行第c2列，他们的整体实力(他们各自能力值的绝对值之和)为a，那么你的输出格式应为：[(r1,c1)(r2,c2)]=a。假如该选手没有选到队友，则输出“NONE”。</div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>1
+5 5
+25	59	85	72	-88
+24	46	-12	91	-95
+35	-78	-6	98	-37
+79	30	51	-65	60
+61	59	-71	53	-93
+0 0
+1 2
+3 4
+1 1
+2 2
+2 1
+-1 -1
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>Case #1:
+NONE
+[(1,2)(0,3)]=84
+[(3,4)(4,4)]=153
+[(1,1)(2,2)]=52
+[(2,2)(1,1)]=52
+[(2,1)(0,1)]=137
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=BNUEP%E5%8D%8A%E6%9C%88%E8%B5%9B'>BNUEP半月赛</a>&nbsp;<a href='problemset.php?search=2008-05-24%2C'>2008-05-24,</a>&nbsp;<a href='problemset.php?search=BY'>BY</a>&nbsp;<a href='problemset.php?search=XX'>XX</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=4319'>Submit</a>][<a href='problemstatus.php?id=4319'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=4319");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

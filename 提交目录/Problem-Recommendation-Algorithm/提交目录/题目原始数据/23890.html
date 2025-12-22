@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1928679219" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 23890 --CCC 1996 05 Maximum Distance</title><center><h2>23890: CCC 1996 05 Maximum Distance</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=23890'>Submit</a>][<a href='problemstatus.php?id=23890'>Status</a>][<a href='bbs.php?pid=23890'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=23890'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=23890");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=23890'>下载测试数据1元</a>][28kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p style="margin:0cm;margin-bottom:.0001pt;text-indent:20.6pt;mso-char-indent-count:
+1.96;line-height:120%;layout-grid-mode:char"><span style="font-size:10.5pt;
+line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Courier New&quot;">考虑两个降序的整数序列</span><span lang="EN-US" style="font-size:10.5pt;line-height:120%;font-family:&quot;Courier New&quot;">X[0..<var>n</var>-1] </span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">和</span><span lang="EN-US" style="font-size:
+10.5pt;line-height:120%;font-family:&quot;Courier New&quot;"> Y[0..<var>n</var>-1] </span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">并且</span><span lang="EN-US" style="font-size:
+10.5pt;line-height:120%;font-family:&quot;Courier New&quot;"> X[<var>i</var>] &gt;= X[<var>i</var>+1] Y[<var>i</var>] &gt;= Y[<var>i</var>+1] </span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">而</span><span style="font-size:10.5pt;
+line-height:120%;font-family:&quot;Courier New&quot;"> </span><span style="font-size:
+10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+&quot;Courier New&quot;">对于所有的</span><span style="font-size:10.5pt;line-height:120%;
+font-family:&quot;Courier New&quot;"> <var><span lang="EN-US">i</span></var><span lang="EN-US">, 0 &lt;= <var>i</var> &lt; <var>n</var> - 1. </span></span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">两个元素之间的距离</span><span lang="EN-US" style="font-size:10.5pt;line-height:120%;font-family:&quot;Courier New&quot;">X[<var>i</var>] </span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">和</span><span lang="EN-US" style="font-size:
+10.5pt;line-height:120%;font-family:&quot;Courier New&quot;"> Y[<var>j</var>] </span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">由下式给出</span><span lang="EN-US" style="font-size:10.5pt;line-height:120%;font-family:&quot;Courier New&quot;">d(X[<var>i</var>], Y[<var>j</var>]) = <var>j</var> - <var>i</var> </span><span style="font-size:10.5pt;line-height:
+120%;mso-ascii-font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Courier New&quot;">如果</span><span style="font-size:10.5pt;line-height:120%;font-family:&quot;Courier New&quot;"> <var><span lang="EN-US">j</span></var><span lang="EN-US"> &gt;= <var>i</var> </span></span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">并且</span><span lang="EN-US" style="font-size:
+10.5pt;line-height:120%;font-family:&quot;Courier New&quot;"> Y[<var>j</var>] &gt;= X[<var>i</var>], </span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">否则为</span><span lang="EN-US" style="font-size:10.5pt;line-height:120%;font-family:&quot;Courier New&quot;">0</span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">。序列</span><span lang="EN-US" style="font-size:10.5pt;line-height:120%;font-family:&quot;Courier New&quot;">X</span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">与序列</span><span lang="EN-US" style="font-size:10.5pt;line-height:120%;font-family:&quot;Courier New&quot;">Y</span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">之间的距离被定义为</span><span lang="EN-US" style="font-size:10.5pt;line-height:120%;font-family:&quot;Courier New&quot;"> d(X, Y) = max{d(X[<var>i</var>], Y[<var>j</var>]) | 0 &lt;= <var>i</var> &lt; <var>n</var>, 0 &lt;= <var>j</var> &lt; <var>n</var>}</span><span style="font-size:
+10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+&quot;Courier New&quot;">，你可以假设</span><span lang="EN-US" style="font-size:10.5pt;
+line-height:120%;font-family:&quot;Courier New&quot;">0 &lt; <var>n</var> &lt; 1000. <o:p></o:p></span></p>
+<p style="margin:0cm;margin-bottom:.0001pt;text-indent:20.6pt;mso-char-indent-count:
+1.96;line-height:120%;layout-grid-mode:char"><span style="font-size:10.5pt;
+line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Courier New&quot;">例如</span><span lang="EN-US" style="font-size:10.5pt;line-height:120%;font-family:&quot;Courier New&quot;">, </span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Courier New&quot;">对于以下的序列</span><span lang="EN-US" style="font-size:10.5pt;line-height:120%;font-family:&quot;Courier New&quot;">X</span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">和</span><span lang="EN-US" style="font-size:
+10.5pt;line-height:120%;font-family:&quot;Courier New&quot;">Y, </span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">它们的最大的距离为是</span><span style="font-size:
+10.5pt;line-height:120%;font-family:&quot;Courier New&quot;"> <var><span lang="EN-US">i</span></var><span lang="EN-US">=2 </span></span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">并且</span><span style="font-size:10.5pt;
+line-height:120%;font-family:&quot;Courier New&quot;"> <var><span lang="EN-US">j</span></var><span lang="EN-US">=7</span></span><span style="font-size:10.5pt;line-height:120%;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-bidi-font-family:&quot;Courier New&quot;">的情况，因为</span><span lang="EN-US" style="font-size:10.5pt;line-height:120%;font-family:&quot;Courier New&quot;">d(X, Y)=d(X[2], Y[7])=5.&nbsp;</span></p>
+<p style="margin:0cm;margin-bottom:.0001pt;text-indent:20.6pt;mso-char-indent-count:
+1.96;line-height:120%;layout-grid-mode:char"></p>
+<p style="margin:0cm;margin-bottom:.0001pt;text-indent:20.6pt;mso-char-indent-count:
+1.96;line-height:120%;layout-grid-mode:char"></p>
+<p style="margin:0cm;margin-bottom:.0001pt;text-indent:20.6pt;mso-char-indent-count:
+1.96;line-height:120%;layout-grid-mode:char"><img src="/upload/pimg23890_1.jpg" width="317" height="162" alt="" /></p>
+<p style="margin:0cm;margin-bottom:.0001pt;text-indent:20.6pt;mso-char-indent-count:
+1.96;line-height:120%;layout-grid-mode:char"></p>
+<p style="margin:0cm;margin-bottom:.0001pt;text-indent:20.6pt;mso-char-indent-count:
+1.96;line-height:120%;layout-grid-mode:char"></p>
+<p style="margin:0cm;margin-bottom:.0001pt;text-indent:20.6pt;mso-char-indent-count:
+1.96;line-height:120%;layout-grid-mode:char"></p>
+<p style="margin:0cm;margin-bottom:.0001pt;text-indent:20.6pt;mso-char-indent-count:
+1.96;line-height:120%;layout-grid-mode:char"></p>
+<p style="margin:0cm;margin-bottom:.0001pt;text-indent:20.6pt;mso-char-indent-count:
+1.96;line-height:120%;layout-grid-mode:char"></p>
+<p style="margin:0cm;margin-bottom:.0001pt;text-indent:20.6pt;mso-char-indent-count:
+1.96;line-height:120%;layout-grid-mode:char"><span lang="EN-US" style="font-size:10.5pt;line-height:120%;font-family:&quot;Courier New&quot;"><o:p></o:p></span></p>
+<p></p></div><h2>Input</h2><div class=content><p style="margin:0cm;margin-bottom:.0001pt;text-indent:21.0pt;mso-char-indent-count:
+2.0;line-height:120%;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+layout-grid-mode:char"><span style="font-size:10.5pt;line-height:120%;
+color:#2B2B2B;background:#FAFAFA;mso-bidi-font-weight:bold">编写一个程序<span lang="EN-US">,</span>读若干组整数序列<span lang="EN-US">,</span>并分别打印这些序列之间的距离。每一组</span><span style="font-size: 10.5pt; line-height: 120%;">第一个是<span lang="EN-US">X</span>序列，第二是<span lang="EN-US">Y</span>序列。</span><span style="font-size:10.5pt;line-height:120%">你可以假设，序列递减且长度相等<span lang="EN-US">.</span>每一行序列之间的数由空格分隔。尝试写一个高效率的程序。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p></p></div><h2>Output</h2><div class=content></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>2
+9
+8 8 4 4 4 3 3 3 1
+9 9 8 8 6 5 5 4 3
+7
+6 5 4 4 4 4 4
+3 3 3 3 3 3 3</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>The maximum distance is 5
+ 
+The maximum distance is 0
+
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%2A%2A%3B'>**;</a>&nbsp;<a href='problemset.php?search=%E5%BE%AA%E7%8E%AF%3B'>循环;</a>&nbsp;<a href='problemset.php?search=%E6%95%B0%E7%BB%84'>数组</a>&nbsp;<a href='problemset.php?search='></a>&nbsp;<a href='problemset.php?search='></a>&nbsp;<a href='problemset.php?search='></a>&nbsp;<a href='problemset.php?search='></a>&nbsp;<a href='problemset.php?search='></a>&nbsp;<a href='problemset.php?search='></a>&nbsp;<a href='problemset.php?search='></a>&nbsp;<a href='problemset.php?search='></a>&nbsp;<a href='problemset.php?search='></a>&nbsp;<a href='problemset.php?search=-'>-</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=23890'>Submit</a>][<a href='problemstatus.php?id=23890'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=23890");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

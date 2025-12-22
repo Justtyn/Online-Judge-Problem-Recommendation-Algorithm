@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?220292980" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 25166 --【NOIP2011tg_Day2】观光公交</title><center><h2>25166: 【NOIP2011tg_Day2】观光公交</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>2&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='submitpage.php?id=25166'>Submit</a>][<a href='problemstatus.php?id=25166'>Status</a>][<a href='bbs.php?pid=25166'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=25166'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=25166");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=25166'>下载测试数据1元</a>][764kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<b>3</b><b>．观光公交<span></span></b>
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;">
+	<b>（<span>bus.cpp/c/pas</span>）</b>
+</p>
+<p class="MsoNormal">
+	<b>【问题描述】<span></span></b>
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	风景迷人的小城 Y 市，拥有 n 个美丽的景点。由于慕名而来的游客越来越多，Y 市特 意安排了一辆观光公交车，为游客提供更便捷的交通服务。观光公交车在第 0 分钟出现在 1 号景点，随后依次前往 2、3、4……n 号景点。从第 i 号景点开到第 i+1 号景点需要 Di 分钟。 任意时刻，公交车只能往前开，或在景点处等待。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	设共有 m 个游客，每位游客需要乘车 1 次从一个景点到达另一个景点，第 i 位游客在
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	Ti
+分钟来到景点 Ai，希望乘车前往景点 Bi（Ai&lt;Bi）。为了使所有乘客都能顺利到达目的地，<b>公交</b><b>车</b><b>在</b><b>每</b><b>站都</b><b>必</b><b>须</b><b>等</b><b>待需</b><b>要</b><b>从</b><b>该</b><b>景点</b><b>出</b><b>发</b><b>的</b><b>所有</b><b>乘</b><b>客</b><b>都</b><b>上车</b><b>后</b><b>才</b><b>能</b><b>出发</b><b>开</b><b>往</b><b>下</b><b>一景</b><b>点</b><b>。</b>假设乘客上下车不需要时间。<span></span>
+</p>
+<p class="MsoNormal" style="text-indent:21.3pt;">
+	<b>一个乘</b><b>客的旅行时间</b>，等于他到达目的地的时刻减去他来到出发地的时刻。因为只有一辆观光车，有时候还要停下来等其他乘客，乘客们纷纷抱怨旅行时间太长了。于是聪明的司
+机 ZZ 给公交车安装了 k 个氮气加速器，每使用一个加速器，可以使其中一个
+Di 减 1。对于 同一个 Di 可以重复使用加速器，<b>但是必须保证使用后 </b><b>D</b><b>i </b><b>大于等于 </b><b>0</b>。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	那么 ZZ 该如何安排使用加速器，才能使所有乘客的旅行时间总和最小？
+</p>
+<p class="MsoNormal" style="text-indent:28.0pt;">
+	&nbsp;
+</p>
+<p class="MsoNormal" style="text-align:justify;">
+	<b>【输入】</b><b></b>
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	输入文件名为 bus.in。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	第 1 行是 3 个整数 n, m, k，每两个整数之间用一个空格隔开。分别表示景点数、乘客数和氮气加速器个数。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	第 2 行是 n-1 个整数，每两个整数之间用一个空格隔开，第 i 个数表示从第 i 个景点开 往第 i+1 个景点所需要的时间，即 Di。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	第 3 行至 m+2 行每行 3 个整数 Ti, Ai, Bi，每两个整数之间用一个空格隔开。第 i+2 行表 示第 i 位乘客来到出发景点的时刻，出发的景点编号和到达的景点编号。
+</p>
+<p class="MsoNormal" style="text-indent:28.0pt;">
+	&nbsp;
+</p>
+<p class="MsoNormal" style="text-align:justify;">
+	<b>【输出】</b><b></b>
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	输出文件名为 bus.out。共一行，包含一个整数，表示最小的总旅行时间。
+</p>
+<p class="MsoNormal" style="text-indent:28.0pt;">
+	&nbsp;
+</p>
+<p class="MsoNormal" style="text-align:justify;">
+	<b>【输入输出样例】</b><b></b>
+</p>
+<p class="MsoNormal" style="text-indent:5.0pt;">
+	&nbsp;
+</p>
+<table class="MsoNormalTable ke-zeroborder" border="0" cellspacing="0" cellpadding="0">
+	<tbody>
+		<tr>
+			<td width="284" valign="top" style="border:solid black 1.0pt;">
+				<p class="MsoNormal" style="text-indent:21.0pt;">
+					<span style="font-size:10.5pt;font-family:&quot;">bus.in</span>
+				</p>
+			</td>
+			<td width="284" valign="top" style="border:solid black 1.0pt;">
+				<p class="MsoNormal" style="text-indent:21.0pt;">
+					<span style="font-size:10.5pt;font-family:&quot;">bus.out</span>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="284" valign="top" style="border:solid black 1.0pt;">
+				<p class="MsoNormal" style="text-indent:21.0pt;">
+					<span style="font-size:10.5pt;font-family:&quot;">3 3 2</span>
+				</p>
+				<p class="MsoNormal" style="text-indent:21.0pt;">
+					<span style="font-size:10.5pt;font-family:&quot;">1 4</span>
+				</p>
+				<p class="MsoNormal" style="text-indent:21.0pt;">
+					<span style="font-size:10.5pt;font-family:&quot;">0 1 3</span>
+				</p>
+				<p class="MsoNormal" style="text-indent:21.0pt;">
+					<span style="font-size:10.5pt;font-family:&quot;">1 1 2</span>
+				</p>
+				<p class="MsoNormal" style="text-indent:21.0pt;">
+					<span style="font-size:10.5pt;font-family:&quot;">5 2 3</span>
+				</p>
+			</td>
+			<td width="284" valign="top" style="border:solid black 1.0pt;">
+				<p class="MsoNormal" style="text-indent:21.0pt;">
+					<span style="font-size:10.5pt;font-family:&quot;">10</span>
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal">
+	<br />
+</p>
+<p class="MsoNormal">
+	<b>【输入输出样例说明】</b><b></b>
+</p>
+<p class="MsoNormal" style="text-align:justify;text-indent:21.0pt;">
+	对 D2 使用 2 个加速器，从 2 号景点到 3 号景点时间变为 2 分钟。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	公交车在第 1 分钟从 1 号景点出发，第 2 分钟到达 2 号景点，第 5 分钟从 2 号景点出发，第 7 分钟到达 3 号景点。
+</p>
+<p class="MsoNormal" style="text-align:justify;text-indent:21.0pt;">
+	第 1 个旅客旅行时间
+7-0 = 7 分钟。 第 2 个旅客旅行时间 2-1 = 1 分钟。 第 3 个旅客旅行时间 7-5 = 2 分钟。 总时间 7+1+2 = 10 分钟。
+</p>
+<p class="MsoNormal">
+	<br />
+</p>
+<p class="MsoNormal">
+	<b>【数据范围】</b><b></b>
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	对于 10%的数据，k=0； 对于 20%的数据，k=1；
+</p>
+<p class="MsoNormal" style="text-align:justify;text-indent:21.0pt;">
+	对于 40%的数据，2 ≤&nbsp;n ≤&nbsp;50，1 ≤&nbsp;m ≤&nbsp;1,000，0 ≤&nbsp;k ≤&nbsp;20，0 ≤&nbsp;Di ≤&nbsp;10，0 ≤&nbsp;Ti ≤&nbsp;500；
+</p>
+<p class="MsoNormal" style="text-align:justify;text-indent:21.0pt;">
+	对于 60%的数据，1 ≤&nbsp;n ≤&nbsp;100，1 ≤&nbsp;m ≤&nbsp;1,000，0 ≤&nbsp;k ≤&nbsp;100，0 ≤&nbsp;Di ≤&nbsp;100，0 ≤&nbsp;Ti ≤&nbsp;10,000；
+</p>
+<p class="MsoNormal" style="text-align:justify;text-indent:24.2pt;">
+	对于 100% 的数据，1 ≤ n ≤ 1,000 ，1 ≤ m ≤ 10,000 ，0 ≤ k ≤ 100,000 ，0 ≤ Di ≤ 100 ，0 ≤&nbsp;Ti ≤&nbsp;100,000。
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=NOIP%E6%8F%90%E9%AB%98%E7%BB%84-NOIP2011'>NOIP提高组-NOIP2011</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=25166'>Submit</a>][<a href='problemstatus.php?id=25166'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=25166");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

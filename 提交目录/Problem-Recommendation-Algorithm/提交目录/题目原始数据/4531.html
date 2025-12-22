@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1971173868" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 4531 --H(2013校内赛）</title><center><h2>4531: H(2013校内赛）</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=4531'>Submit</a>][<a href='problemstatus.php?id=4531'>Status</a>][<a href='bbs.php?pid=4531'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=4531'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=4531");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=4531'>下载测试数据1元</a>][36kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="p0" style="margin-top: 0pt; text-indent: 21pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">蕾蕾小朋友刚学完编译原理，马老师布置了一个作业，就是编写一个词法分析程序。</span><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; text-indent: 21pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">所谓的词法分析程序，就是对一个程序进行词法分析。词法规则可以用一个所谓的<font face="Calibri">DFA</font><font face="宋体">（确定性有限自动机）表示，</font><font face="Calibri">DFA</font><font face="宋体">是用来识别词法的单元（</font><font face="Calibri">Token</font><font face="宋体">）的工具。下图为一个</font><font face="Calibri">DFA</font><font face="宋体">示意图。</font></span><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'">&nbsp;</span><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; text-indent: 21pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">&ldquo;开始状态&rdquo;表示识别的开始，所有的分析都是从这里开始，而且当前的字符串（<font face="Calibri">Token</font><font face="宋体">）为空。然后进行状态转移，转移的方法有很多种。蕾蕾的词法分析器是建立在预测分析的基础上。所以只需要看下一个字符（</font><font face="Calibri">Lookahead</font><font face="宋体">）。如上图所示，如果</font><font face="Calibri">Lookahead</font><font face="宋体">是数字，就会转移到数字状态，并且把</font><font face="Calibri">Lookahead</font><font face="宋体">加入到</font><font face="Calibri">Token</font><font face="宋体">的尾部，然后</font><font face="Calibri">Lookahead</font><font face="宋体">指向下一个字符，继续进行分析；如果是字母，那么当前</font><font face="Calibri">Token</font><font face="宋体">就是一个由</font><font face="Calibri">Lookahead</font><font face="宋体">组成的字母。图中的多边形就表示了一个结束状态，每个</font><font face="Calibri">Token</font><font face="宋体">的分析都必须在结束状态结束（但到达结束状态并不意味着</font><font face="Calibri">Token</font><font face="宋体">分析一定结束）。如果当前状态对于当前读入的字符串无法匹配，也就是没有一个射出弧上的字母等于当前读入的字符，那么就表示当前的</font><font face="Calibri">Token</font><font face="宋体">分析结束，输出该</font><font face="Calibri">Token</font><font face="宋体">以及它的名称，并且返回开始状态进行处理（注意此时的</font><font face="Calibri">Lookahead</font><font face="宋体">是参与下一次识别）。</font></span><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; text-indent: 21pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">显然<font face="Calibri">DFA</font><font face="宋体">可以看成是一副有向图</font><font face="Calibri">G&lt;V,&nbsp;E&gt;</font><font face="宋体">，每个状态就是图上的顶点</font><font face="Calibri">V</font><font face="宋体">，每次识别的字符就是图上的边</font><font face="Calibri">E</font><font face="宋体">，而每次的状态转移就是从一个顶点到达相应下一个顶点的过程。</font></span><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; text-indent: 21pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">蕾蕾很有耐心，她把老师需要分析的程序的<font face="Calibri">DFA</font><font face="宋体">已经画了出来，现在请你读入她所写的</font><font face="Calibri">DFA</font><font face="宋体">，帮她进行语法分析。</font></span><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></div><h2>Input</h2><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">首先是一个整数<font face="Calibri">Tx</font><font face="宋体">（&le;</font><font face="Calibri">100</font><font face="宋体">），表示状态数。状态从</font><font face="Calibri">0</font><font face="宋体">开始，即</font><font face="Calibri">0</font><font face="宋体">，</font><font face="Calibri">1</font><font face="宋体">，</font><font face="Calibri">2</font><font face="宋体">，&hellip;</font><font face="Calibri">Tx-1</font><font face="宋体">，然后是</font><font face="Calibri">Tx</font><font face="宋体">行，每行是一个字符串（长度不大于</font><font face="Calibri">20</font><font face="宋体">），表示该状态所表示的</font><font face="Calibri">Token</font><font face="宋体">的名称（如果是终结状态），当为非终结状态，字符串为&ldquo;</font><font face="Calibri">-1</font><font face="宋体">&rdquo;，如果该状态不用显示，字符串为&ldquo;</font><font face="Calibri">-2</font><font face="宋体">&rdquo;。接着是</font><font face="Calibri">Tx</font><font face="宋体">，每行表示每个状态的转移，其中第一行规定为开始状态（即状态</font><font face="Calibri">0</font><font face="宋体">）。每一行第一个是一个数字，（</font><font face="Calibri">Ty&nbsp;&nbsp;</font><font face="宋体">&le;&nbsp;</font><font face="Calibri">100</font><font face="宋体">），表示当前状态的射出弧的条数，然后一共是</font><font face="Calibri">Ty</font><font face="宋体">个对，每个对分别由一个字符和一个数字组成，分别是每条弧的</font><font face="Calibri">Lookahead</font><font face="宋体">（任意非空白可显示字符），以及转移到的状态（</font><font face="Calibri">&lt;&nbsp;Tx</font><font face="宋体">）。每个字符与数字之间都有一个空格分隔。接着是只有一个</font><font face="Calibri">$</font><font face="宋体">的一行，表示需要分析的源程序的开始。然后就是需要分<span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">析的源程序。最后是一个只有一个<font face="Calibri">$</font><font face="宋体">的一行，表示分析结束。</font></span><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></font></span><!--EndFragment--></p>
+<!--EndFragment--></div><h2>Output</h2><div class=content><p class="p0" style="margin-top: 0pt; text-indent: 21pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">输出<font face="Calibri">Token</font><font face="宋体">名字和对应的</font><font face="Calibri">Token</font><font face="宋体">，中间由冒号和一个空格分隔。如果到达了一个非终止状态并且无法继续分析，显示一行</font><font face="Calibri">Lexer&nbsp;Error</font><font face="宋体">。并把</font><font face="Calibri">Token</font><font face="宋体">显示出来，然后回到初始状态，继续进行词法分析。所有的空白字符都强制为</font><font face="Calibri">Token</font><font face="宋体">的分隔符（空格，回车，制表符）。每个</font><font face="Calibri">Token</font><font face="宋体">的长度都不会超过</font><font face="Calibri">100</font><font face="宋体">。</font></span><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>3
+-1
+Digit
+Letter
+10 0 1 1 1 2 1 3 1 4 1 a 2 b 2 c 2 d 2 e 2
+0
+0
+$
+123 abc
+9
+e1
+$</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>Digit: 1
+Digit: 2
+Digit: 3
+Letter: a
+Letter: b
+Letter: c
+Lexer Error: 9
+Letter: e
+Digit:1
+9
+e1
+$ </span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E7%AC%AC%E5%8D%81%E5%B1%8AIT%E8%8A%82ACM%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E6%80%BB%E5%86%B3%E8%B5%9B'>第十届IT节ACM程序设计大赛总决赛</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=4531'>Submit</a>][<a href='problemstatus.php?id=4531'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=4531");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

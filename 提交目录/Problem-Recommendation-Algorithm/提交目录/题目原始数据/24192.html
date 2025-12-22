@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1870716561" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 24192 --Tribute (Editor)</title><center><h2>24192: Tribute (Editor)</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=24192'>Submit</a>][<a href='problemstatus.php?id=24192'>Status</a>][<a href='bbs.php?pid=24192'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=24192'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=24192");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=24192'>下载测试数据1元</a>][20kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>This problem is not about the greatest editor in the world; it is just a tribute.</p>
+<p>The <i>Tenacious eDitor</i> is an attempt to clone to power of a certain modal editor.  However, it is notoriously bug-ridden.  You've been asked to replace Kyle (who quit the devteam) and help with fixing some of the bugs.</p>
+<p>The main problem with the current release of <tt>td</tt>, as it is commonly referred to, is that it cannot differentiate between text on a line and commands.  Whenever a user wants to type an <tt>x</tt>, the editor interprets it as a command to delete the last character.  This is problematic.  Thankfully, commands are case-sensitive, and each letter is at most a single command (sometimes uppercase, sometimes lowercase), so one can manage to write any given line of text as long as it's allowed to look like something written by a fourteen-year-old hacker wannabe.</p>
+<p>Editing occurs in an <i>edit buffer</i>, which starts out empty. The cursor in <tt>td</tt> rests in <i>gaps</i>, locations surrounding each printed character.  When a non-command character is entered, the character is inserted to the right of the cursor's current location and the cursor moves to the gap to the right of the new character.  (This is the standard behavior of most editors.)  A line with no characters has a single gap. A line with a single printable character has two (one before and one after), a line with two printable characters has three, and so on.</p>
+<p>The currently-implemented commands are:
+<table border="1" align="center">
+    <tbody>
+        <tr>
+            <td>Command keys</td>
+            <td>Result</td>
+            <td>Cursor location after operation</td>
+        </tr>
+        <tr>
+            <td><tt>x</tt></td>
+            <td>Delete the character immediately to the left of the cursor</td>
+            <td>One gap to the left</td>
+        </tr>
+        <tr>
+            <td><tt>K</tt></td>
+            <td>Delete all non-spaces to the left of the cursor, stopping at the           first space encountered or the beginning of the line; if the           previous character is a space, delete nothing</td>
+            <td>The gap to the right of the &quot;stop&quot; character</td>
+        </tr>
+        <tr>
+            <td><tt>c</tt></td>
+            <td>Duplicate the character to the left of the cursor, inserting it to           the right of the cursor</td>
+            <td>The gap to the right of the duplicate character (one right)</td>
+        </tr>
+        <tr>
+            <td><tt>D</tt></td>
+            <td>Duplicate all non-spaces to the left of the cursor, stopping at the           first space encountered or the beginning of the line and inserting           them to the right of the cursor; if the previous character is a           space, duplicate nothing</td>
+            <td>The gap to the right of the rightmost duplicate character</td>
+        </tr>
+        <tr>
+            <td><tt>R</tt></td>
+            <td>Reverse all non-spaces to the left of the cursor, stopping at the           first space encountered or the beginning of the line; if the           previous character is a space, reverse nothing</td>
+            <td>No change</td>
+        </tr>
+        <tr>
+            <td><tt>p</tt></td>
+            <td>Delete all characters to the left of the cursor</td>
+            <td>Leftmost gap</td>
+        </tr>
+        <tr>
+            <td><tt>W</tt></td>
+            <td>Delete all characters to the right of the cursor</td>
+            <td>No change</td>
+        </tr>
+        <tr>
+            <td><tt>h</tt></td>
+            <td>Move the cursor one gap to the left</td>
+            <td>One gap to the left</td>
+        </tr>
+        <tr>
+            <td><tt>L</tt></td>
+            <td>Move the cursor one gap to the right</td>
+            <td>One gap to the right</td>
+        </tr>
+        <tr>
+            <td><tt>f</tt></td>
+            <td>Move the cursor to the first gap on the line</td>
+            <td>Leftmost gap</td>
+        </tr>
+        <tr>
+            <td><tt>G</tt></td>
+            <td>Move the cursor to the last gap on the line</td>
+            <td>Rightmost gap</td>
+        </tr>
+        <tr>
+            <td><i>any non-command character</i></td>
+            <td>Insert the character into the edit buffer to the right of the cursor</td>
+            <td>One gap to the right</td>
+        </tr>
+    </tbody>
+</table>
+For the purposes of this problem, the only characters are uppercase and lowercase characters, digits, and spaces.</p>
+<p>When a character is added internally to a line of text, all subsequent characters shift to the right (as in &quot;insert mode&quot;); when characters are deleted from anywhere other than the end of a line, all subsequent characters shift to the left.</p>
+<p>Any commands which cannot properly do anything (attempting to move past the first or last gap, deleting characters when none exist, and so on) do nothing.  They do <b>not</b> show up as printed characters.</p>
+<p>Each line represents a different session of <tt>td</tt>; at the beginning of a new session, the edit buffer is empty.</p>
+<p>Given a series of keystrokes by a user, can you determine what text actually results if it were entered in the current version of <tt>td</tt>?</p></div><h2>Input</h2><div class=content><p>Input to this problem will begin with a line containing a single integer <i>N</i> (1 &le; <i>N</i> &le; 100) indicating the number of data sets.  Each data set consists of a single line of characters, as defined above, with no leading or trailing whitespace.  There are no less than 1 and no more than 100 characters per line.  They represent the series of keystrokes entered by a user for a particular session of <tt>td</tt>. </p></div><h2>Output</h2><div class=content><p>For each data set, print the final state of the edit buffer from the sequence of characters  entered, with a carat (<tt>^</tt>) at the location of the cursor.</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>2
+Deletex bigdeleteKduPc bigduPD esreverR midinhhdleGxx midelletehhhxGfmoo
+THis ratHer obnoXious line oF CHaraCters surPrisingly triggers no Commands
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>moo^elet duPP bigduPbigduP reverse middle midelete
+THis ratHer obnoXious line oF CHaraCters surPrisingly triggers no Commands^
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=2008'>2008</a>&nbsp;<a href='problemset.php?search=ACM'>ACM</a>&nbsp;<a href='problemset.php?search=ICPC'>ICPC</a>&nbsp;<a href='problemset.php?search=South'>South</a>&nbsp;<a href='problemset.php?search=Central'>Central</a>&nbsp;<a href='problemset.php?search=USA'>USA</a>&nbsp;<a href='problemset.php?search=Regional'>Regional</a>&nbsp;<a href='problemset.php?search=Programming'>Programming</a>&nbsp;<a href='problemset.php?search=Contest'>Contest</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=24192'>Submit</a>][<a href='problemstatus.php?id=24192'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=24192");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

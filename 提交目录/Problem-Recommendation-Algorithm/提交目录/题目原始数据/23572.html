@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?450191051" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 23572 --【选择题】第12章：结构体和共用体 链表 共用体 枚举</title><center><h2>23572: 【选择题】第12章：结构体和共用体 链表 共用体 枚举</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>20&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='submitpage.php?id=23572'>Submit</a>][<a href='problemstatus.php?id=23572'>Status</a>][<a href='bbs.php?pid=23572'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=23572'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=23572");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=23572'>下载测试数据1元</a>][12kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="p0" style="margin-left:21.0000pt;text-indent:-21.0000pt;text-align:justify;">
+	1. 假定已建立以下链表结构，且指针p和q已指向如下图所示的结点：
+</p>
+<p class="p0" style="margin-left:21.0000pt;text-align:justify;">
+	<img src="/attached/image/20140716/20140716205159_60359.jpg" alt="" /> 
+</p>
+<p class="p0" style="text-align:justify;">
+	则以下选项中可将q所指的结点从链表中删除，并释放该结点的语句组是(&nbsp;&nbsp;&nbsp;&nbsp;)。
+</p>
+<p class="p0" style="text-align:justify;">
+	A．(*p).next=(*q).next;free(p);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B．p=q.&gt;next;&nbsp;free(q);&nbsp;
+</p>
+<p class="p0" style="text-align:justify;">
+	C．p=q;free(q);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D．p-&gt;next&nbsp;=q-&gt;next;&nbsp;free(q);&nbsp;
+</p>
+<p class="p0" style="text-align:justify;">
+	&nbsp;
+</p>
+<p class="p0" style="margin-left:21.0000pt;text-indent:-21.0000pt;text-align:justify;">
+	2. 下列程序的执行结果是（&nbsp;）。
+</p>
+<p class="p0" style="margin-left:31.5000pt;text-align:justify;">
+	#include&nbsp;"stdio.h"
+</p>
+<p class="p0" style="margin-left:31.5000pt;text-align:justify;">
+	union&nbsp;ss
+</p>
+<p class="p0" style="margin-left:31.5000pt;text-align:justify;">
+	{&nbsp;short&nbsp;&nbsp;n;
+</p>
+<p class="p0" style="margin-left:31.5000pt;text-align:justify;">
+	&nbsp;char&nbsp;c[2];
+</p>
+<p class="p0" style="margin-left:31.5000pt;text-align:justify;">
+	};
+</p>
+<p class="p0" style="margin-left:31.5000pt;text-align:justify;">
+	void&nbsp;main()
+</p>
+<p class="p0" style="margin-left:31.5000pt;text-align:justify;">
+	{&nbsp;&nbsp;union&nbsp;ss&nbsp;x;
+</p>
+<p class="p0" style="margin-left:31.5000pt;text-align:justify;">
+	&nbsp;&nbsp;&nbsp;x.n=11;
+</p>
+<p class="p0" style="margin-left:31.5000pt;text-align:justify;">
+	&nbsp;&nbsp;&nbsp;x.c[0]=1;
+</p>
+<p class="p0" style="margin-left:31.5000pt;text-align:justify;">
+	&nbsp;&nbsp;&nbsp;x.c[1]=0;
+</p>
+<p class="p0" style="margin-left:31.5000pt;text-align:justify;">
+	&nbsp;&nbsp;&nbsp;printf("%d",x.n);
+</p>
+<p class="p0" style="margin-left:31.5000pt;text-align:justify;">
+	}
+</p>
+<p class="p0" style="text-align:justify;">
+	A．&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;B．266&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C．&nbsp;256&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D．128
+</p>
+<p class="p0" style="text-align:justify;">
+	&nbsp;
+</p>
+<p class="p0" style="margin-left:21.0000pt;text-indent:-21.0000pt;text-align:justify;">
+	3. 当定义一个共用体变量时，系统分配给它的内存是(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)。
+</p>
+<p class="p0" style="text-align:justify;">
+	A.各成员所需内存量的总和&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B.成员中第一个成员所需内存量
+</p>
+<p class="p0" style="text-align:justify;">
+	C.成员中占内存量最大的容量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D.成员中最后一个成员所需内存
+</p>
+<p class="p0" style="text-align:justify;">
+	&nbsp;
+</p>
+<p class="p0" style="margin-left:21.0000pt;text-indent:-21.0000pt;text-align:justify;">
+	4. 若有以下程序段：
+</p>
+<p class="p0" style="margin-left:26.9000pt;text-indent:5.2500pt;text-align:justify;">
+	union&nbsp;data&nbsp;{&nbsp;int&nbsp;i&nbsp;;&nbsp;char&nbsp;c;&nbsp;float&nbsp;f;}&nbsp;a;
+</p>
+<p class="p0" style="margin-left:26.9000pt;text-indent:5.2500pt;text-align:justify;">
+	int&nbsp;n;
+</p>
+<p class="p0">
+	&nbsp;&nbsp;&nbsp;则以下语句正确的是(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)。
+</p>
+<p class="p0">
+	&nbsp;&nbsp;A.a=5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B.a={2,<span>’</span><span>a</span><span>’</span><span>,1.2}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C.printf(</span><span>“</span><span>%d</span><span>”</span><span>,a);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D.n=a;</span> 
+</p>
+<p class="p0">
+	&nbsp;
+</p>
+<p class="p0" style="margin-left:21.0000pt;text-indent:-21.0000pt;text-align:justify;">
+	5. 设有定义语句：enum&nbsp;t1&nbsp;{a1,&nbsp;a2&nbsp;=&nbsp;7,&nbsp;a3,&nbsp;a4&nbsp;=&nbsp;15}&nbsp;time；则枚举常量a2和a3的值分别为&nbsp;（&nbsp;&nbsp;&nbsp;&nbsp;）。
+</p>
+<p class="p0" style="text-align:justify;">
+	&nbsp;A.&nbsp;1和2	&nbsp;&nbsp;&nbsp;&nbsp;B.&nbsp;2和3&nbsp;	&nbsp;&nbsp;&nbsp;C.&nbsp;7和2	&nbsp;&nbsp;&nbsp;&nbsp;D.&nbsp;7和8
+</p>
+<p class="p0" style="text-align:justify;">
+	&nbsp;
+</p>
+<p class="p0" style="margin-left:21.0000pt;text-indent:-21.0000pt;text-align:justify;">
+	6.
+</p>
+<p class="p0" style="margin-left:21.0000pt;text-indent:-21.0000pt;text-align:justify;">
+	enum color{red,green,yellow=5,white,black}定义了一个枚举类型。编译程序为值表中各标识符分配的枚举值依次为（&nbsp;&nbsp;）。
+</p>
+<p class="p0" style="text-align:justify;">
+	&nbsp;A．&nbsp;1&nbsp;2&nbsp;3&nbsp;4&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B．&nbsp;0&nbsp;1&nbsp;5&nbsp;2&nbsp;3
+</p>
+<p class="p0" style="text-align:justify;">
+	&nbsp;C．0&nbsp;1&nbsp;5&nbsp;6&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D．3&nbsp;4&nbsp;5&nbsp;6&nbsp;7
+</p>
+<p class="p0" style="text-align:justify;">
+	&nbsp;
+</p>
+<p class="p0">
+	&nbsp;
+</p></div><h2>Input</h2><div class=content>#include&lt;stdio.h&gt;<br />
+#define N 7<br />
+<br />
+int main()<br />
+{<br />
+int i;<br />
+char cAnswer[N] = {"//将你的答案表示成字符串，注意中间不要有空格"};<br />
+//例： char cAnswer[N] = {"AAAAAA"};&nbsp;<br />
+//N的值为选择题的个数加1，如本次作业选择题的个数为6，则N的值为7&nbsp;<br />
+printf("%s", cAnswer);<br />
+return 0;<br />
+}&nbsp;<br />
+<br />
+请将上述提供的程序复制到提交代码的位置并作相应修改。<br /></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1I-%E7%AC%AC12%E7%AB%A0%EF%BC%9A%E7%BB%93%E6%9E%84%E4%BD%93%E5%92%8C%E5%85%B1%E7%94%A8%E4%BD%93%EF%BC%881%EF%BC%89'>高级语言程序设计I-第12章：结构体和共用体（1）</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=23572'>Submit</a>][<a href='problemstatus.php?id=23572'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=23572");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

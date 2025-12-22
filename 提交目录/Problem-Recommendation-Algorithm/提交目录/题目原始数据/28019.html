@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?2144261720" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 28019 --最小乘车费用</title><center><h2>28019: 最小乘车费用</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>1&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='submitpage.php?id=28019'>Submit</a>][<a href='problemstatus.php?id=28019'>Status</a>][<a href='bbs.php?pid=28019'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=28019'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=28019");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=28019'>下载测试数据1元</a>][68kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p><span style="font-size: medium;">某条街上每一公里就有一汽车站，乘车费用如下表：</span></p>
+<p style="text-align: left;"><span style="font-size: medium;"><img src="data:image/png;base64,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" alt="" height="50" width="501" /></span></p>
+<p><span style="font-size: medium;">而一辆汽车从不行驶超过10公里。某人想行驶n公里，假设他可以任意次换车，请你帮他找到一种乘车方案<br />
+使费用最小（10公里的费用比1公里小的情况是允许的）。</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium;">共两行，第一行为10个不超过100的整数，依次表示行驶1~10公里的费用，相邻两数间用空格隔开；第二行为某人想要行驶的公里数（&lt;=1000)。</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium;">仅包含一个整数，表示该测试点的最小费用。</span></p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>12 21 31 40 49 58 69 79 90 101
+15</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>147</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=HC'>HC</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=28019'>Submit</a>][<a href='problemstatus.php?id=28019'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=28019");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?464411740" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 4477 --曹操赤壁之战</title><center><h2>4477: 曹操赤壁之战</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=4477'>Submit</a>][<a href='problemstatus.php?id=4477'>Status</a>][<a href='bbs.php?pid=4477'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=4477'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=4477");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=4477'>下载测试数据1元</a>][3320kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;三国时期，曹操带领兵马在赤壁战周瑜和诸葛亮，
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曹操是著名的军事家，擅长排兵布阵，但赤壁之战，他知道对手周瑜和诸葛亮都是绝顶聪明的，曹操这次采用了一个新的战术，他将战场划分成50000列，每列依次编号为1, 2, …, 50000。然后，他把自己几十万的兵力也迅速均分为50000组(假设一定能均分)，同样也编号为1, 2, …, 50000，同时下命令，让编号为i的组迅速站在第i列(i = 1, 2, …, 50000)，形成了可怕的阵容。当周瑜，诸葛亮的兵力到达时，曹操会多次发命令，将大部分兵力集中在某几列上，集中兵力共同作战。合并指令为U i j，意思是让第i组现在所在的列中所有兵力作为一个整体接至第j组现在所在列的尾部。<ul><li>例如，假设现在i在第i列，j在第j列，Uij之后，i也在第j列了。
+ <li>再如：经过了很多合并后，假设现在i在a列，而j在b列，这时Uij后，整个a列(包括a列中除i组以外的其他组)就接到b列最后一组的后面(不一定是j组后面)。</ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然而，周瑜早已在战略上取得了主动。在此之前，他已经布下秘密间谍，现在他可以随时得到曹操的调动命令。在曹操命令合并兵力的同时，诸葛亮为了及时了解当前曹操的兵力分布情况，会问周瑜：Q i j，意思是说，问曹操的第i组兵和第j组兵当前是否在同一列中，如果在同一列中，那么在该列中，i组和j组之间共有多少组兵(包括i,j两组)。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可是周瑜没诸葛亮那么聪明，没法快速回答诸葛亮发出的询问，现在要你来编写一个程序，帮助周瑜快速回答诸葛亮的询问。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;赤壁之战，曹操失算了，主要是因为他发了一些让士兵不知所措的命令，就是已经在同一列的两组兵，曹操仍然发命令让他们合并，这时候士兵就乱了。所以，你的程序需要注意这点，不能让士兵出乱。
+</div><h2>Input</h2><div class=content>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;输入第一行为一个整数T,(1<=T<=500000),表示有T条命令。接下来T行，每行一条命令，命令有两种.<ul><li>曹操发出的命令，按顺序包含三个要素U,i,j ，中间用空格分隔，表示曹操下令让第i组所在列的所有兵力，按照头接尾的规则，接到第j组所在列的最后一个组后面。(最后一个组不一定是第j组，只是属于j现在所在的列的组)
+<li>诸葛亮询问周瑜的命令，按顺序包含三个要素，Q,i,j，中间用空格分隔，表示诸葛亮问周瑜现在曹操的兵力，第i组和第j组是否处于同一列。</ul>
+</div><h2>Output</h2><div class=content>曹操发的命令，你不需要输出任何内容。   
+对诸葛亮询问的命令，用单独的一行输出每条命令的结果。对于Qij,如果i,j已经在同一列，先输出YES，紧接着输出一个空格，然后输出在这列里，第i组和第j组之间有多少组兵(包括i组和j组)。如果i,j不在同一列，输出NO即可。
+</div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>4
+U 2 3
+Q 1 2
+U 2 4
+Q 4 2
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>NO
+YES 3
+</span></pre><h2>HINT</h2>
+<div class=content><p>由于数据规模巨大，注意效率。</p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%8C%97%E5%B8%88%E5%A4%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%8D%8A%E6%9C%88%E8%B5%9B%28%E4%B8%80%29'>北师大程序设计半月赛(一)</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=4477'>Submit</a>][<a href='problemstatus.php?id=4477'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=4477");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

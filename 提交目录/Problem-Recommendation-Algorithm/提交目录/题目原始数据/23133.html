@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?640707675" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 23133 --Fire Net</title><center><h2>23133: Fire Net</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>5&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='submitpage.php?id=23133'>Submit</a>][<a href='problemstatus.php?id=23133'>Status</a>][<a href='bbs.php?pid=23133'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=23133'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=23133");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=23133'>下载测试数据1元</a>][20kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">Suppose&nbsp;that&nbsp;we&nbsp;have&nbsp;a&nbsp;square&nbsp;city&nbsp;with&nbsp;straight&nbsp;streets.&nbsp;A&nbsp;map&nbsp;of&nbsp;a&nbsp;city&nbsp;is&nbsp;a&nbsp;squar</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">e&nbsp;board&nbsp;with&nbsp;n&nbsp;rows&nbsp;and&nbsp;n&nbsp;columns,&nbsp;each&nbsp;representing&nbsp;a&nbsp;street&nbsp;or&nbsp;a&nbsp;piece&nbsp;of&nbsp;wall.</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">A&nbsp;blockhouse&nbsp;is&nbsp;a&nbsp;small&nbsp;castle&nbsp;that&nbsp;has&nbsp;four&nbsp;openings&nbsp;through&nbsp;which&nbsp;to&nbsp;shoot.&nbsp;The&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">four&nbsp;openings&nbsp;are&nbsp;facing&nbsp;North,&nbsp;East,&nbsp;South,&nbsp;and&nbsp;West,&nbsp;respectively.&nbsp;There&nbsp;will&nbsp;be</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;one&nbsp;machine&nbsp;gun&nbsp;shooting&nbsp;through&nbsp;each&nbsp;opening.</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">Powerful&nbsp;as&nbsp;the&nbsp;bullet&nbsp;is,however,it&nbsp;can&nbsp;only&nbsp;run&nbsp;across&nbsp;two&nbsp;distance&nbsp;and&nbsp;destroy&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">a&nbsp;blockhouse&nbsp;on&nbsp;its&nbsp;way.</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;On&nbsp;the&nbsp;other&nbsp;hand,&nbsp;a&nbsp;wall&nbsp;is&nbsp;so&nbsp;strongly&nbsp;built&nbsp;that&nbsp;can&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">stop&nbsp;the&nbsp;bullets.</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">The&nbsp;goal&nbsp;is&nbsp;to&nbsp;place&nbsp;as&nbsp;</span><span style="font-style:italic;font-size:12.0000pt;font-family:'宋体';">many</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;blockhouses&nbsp;in&nbsp;a&nbsp;city&nbsp;as&nbsp;possible&nbsp;so&nbsp;that&nbsp;no&nbsp;two&nbsp;can&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">destroy&nbsp;each&nbsp;other.&nbsp;A&nbsp;configuration&nbsp;of&nbsp;blockhouses&nbsp;is&nbsp;</span><span style="font-weight:bold;font-style:italic;font-size:12.0000pt;font-family:'宋体';">legal</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;provided&nbsp;that&nbsp;no&nbsp;two&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">blockhouses&nbsp;are&nbsp;on&nbsp;the&nbsp;same&nbsp;horizontal&nbsp;row&nbsp;or&nbsp;vertical&nbsp;column&nbsp;in&nbsp;a&nbsp;map&nbsp;unless&nbsp;there</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;is&nbsp;at&nbsp;least&nbsp;one&nbsp;wall&nbsp;separating&nbsp;them.&nbsp;In&nbsp;this&nbsp;problem&nbsp;we&nbsp;will&nbsp;consider&nbsp;small&nbsp;square</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;cities&nbsp;(at&nbsp;most&nbsp;4x4)&nbsp;that&nbsp;contain&nbsp;walls&nbsp;through&nbsp;which&nbsp;bullets&nbsp;cannot&nbsp;run&nbsp;through.</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">The&nbsp;following&nbsp;image&nbsp;shows&nbsp;five&nbsp;pictures&nbsp;of&nbsp;the&nbsp;same&nbsp;board.&nbsp;The&nbsp;first&nbsp;picture&nbsp;is&nbsp;the&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">empty&nbsp;board,&nbsp;the&nbsp;second&nbsp;and&nbsp;third&nbsp;pictures&nbsp;show&nbsp;legal&nbsp;configurations,&nbsp;and&nbsp;the&nbsp;fourth</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;and&nbsp;fifth&nbsp;pictures&nbsp;show&nbsp;illegal&nbsp;configurations.&nbsp;For&nbsp;this&nbsp;board,&nbsp;the&nbsp;maximum&nbsp;number</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;of&nbsp;blockhouses&nbsp;in&nbsp;a&nbsp;legal&nbsp;configuration&nbsp;is&nbsp;5;&nbsp;the&nbsp;second&nbsp;picture&nbsp;shows&nbsp;one&nbsp;way&nbsp;to&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">do&nbsp;it,&nbsp;but&nbsp;there&nbsp;are&nbsp;several&nbsp;other&nbsp;ways.</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">Your&nbsp;task&nbsp;is&nbsp;to&nbsp;write&nbsp;a&nbsp;program&nbsp;that,&nbsp;given&nbsp;a&nbsp;description&nbsp;of&nbsp;a&nbsp;map,&nbsp;calculates&nbsp;the&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">maximum&nbsp;number&nbsp;of&nbsp;blockhouses&nbsp;that&nbsp;can&nbsp;be&nbsp;placed&nbsp;in&nbsp;the&nbsp;city&nbsp;in&nbsp;a&nbsp;legal&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">configuration.</span><span style="font-size:12.0000pt;font-family:'宋体';"></span><span style="font-size:12.0000pt;font-family:'宋体';"></span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+</p></div><h2>Input</h2><div class=content><p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">The&nbsp;input&nbsp;file&nbsp;contains&nbsp;one&nbsp;or&nbsp;more&nbsp;map&nbsp;descriptions,&nbsp;followed&nbsp;by&nbsp;a&nbsp;line&nbsp;containing</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;the&nbsp;number&nbsp;0&nbsp;that&nbsp;signals&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;file.&nbsp;Each&nbsp;map&nbsp;description&nbsp;begins&nbsp;with&nbsp;a</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;line&nbsp;containing&nbsp;a&nbsp;positive&nbsp;integer&nbsp;</span><span style="font-style:italic;font-size:12.0000pt;font-family:'宋体';">n</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;that&nbsp;is&nbsp;the&nbsp;size&nbsp;of&nbsp;the&nbsp;city;&nbsp;</span><span style="font-style:italic;font-size:12.0000pt;font-family:'宋体';">n</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;will&nbsp;be&nbsp;at&nbsp;most&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">4.&nbsp;The&nbsp;next&nbsp;</span><span style="font-style:italic;font-size:12.0000pt;font-family:'宋体';">n</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;lines&nbsp;each&nbsp;describe&nbsp;one&nbsp;row&nbsp;of&nbsp;the&nbsp;map,&nbsp;with&nbsp;a&nbsp;'.'&nbsp;indicating&nbsp;an&nbsp;open&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">space&nbsp;and&nbsp;an&nbsp;uppercase&nbsp;'X'&nbsp;indicating&nbsp;a&nbsp;wall.&nbsp;There&nbsp;are&nbsp;no&nbsp;spaces&nbsp;in&nbsp;the&nbsp;input&nbsp;file.</span> 
+</p></div><h2>Output</h2><div class=content><p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">For&nbsp;each&nbsp;test&nbsp;case,&nbsp;output&nbsp;one&nbsp;line&nbsp;containing&nbsp;the&nbsp;maximum&nbsp;number&nbsp;of&nbsp;blockhouses&nbsp;that</span>
+</p>
+<p class="p0">
+	<span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;can&nbsp;be&nbsp;placed&nbsp;in&nbsp;the&nbsp;city&nbsp;in&nbsp;a&nbsp;legal&nbsp;configuration.</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>2
+XX
+.X
+3
+.X.
+X.X
+.X.
+3
+...
+.XX
+.XX
+0</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>1
+5
+2</span></pre><h2>HINT</h2>
+<div class=content><p>作者：黄东杰</p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=GZU'>GZU</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=23133'>Submit</a>][<a href='problemstatus.php?id=23133'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=23133");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

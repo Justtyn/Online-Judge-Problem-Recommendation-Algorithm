@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?2027976499" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 3640 --NOIP2007提高组第4题 树网的核</title><center><h2>3640: NOIP2007提高组第4题 树网的核</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>4&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='submitpage.php?id=3640'>Submit</a>][<a href='problemstatus.php?id=3640'>Status</a>][<a href='bbs.php?pid=3640'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=3640'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=3640");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=3640'>下载测试数据1元</a>][92kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-family:宋体;">设</span><b><i><span style="font-family:&quot;">T=(V,
+E, W) </span></i></b><span style="font-family:宋体;">是一个无圈且连通的无向图（也称为无根树），每条边带有正整数的权，我们称</span><b><i><span style="font-family:&quot;">T</span></i></b><span style="font-family:宋体;">为树网（</span><i><span style="font-family:&quot;">treenetwork</span></i><span style="font-family:宋体;">），其中</span><b><i><span style="font-family:&quot;">V, E</span></i></b><span style="font-family:宋体;">分别表示结点与边的集合，</span><b><i><span style="font-family:&quot;">W</span></i></b><span style="font-family:宋体;">表示各边长度的集合，并设</span><b><i><span style="font-family:&quot;">T</span></i></b><span style="font-family:宋体;">有</span><i><span>n</span></i><span style="font-family:宋体;">个结点。</span><span style="font-family:&quot;"></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.75pt;">
+	<b><span style="font-family:宋体;">路径：</span></b><span style="font-family:宋体;">树网中任何两结点</span><b><i><span style="font-family:&quot;">a,b</span></i></b><span style="font-family:宋体;">都存在唯一的一条简单路径，用</span><b><i><span style="font-family:&quot;">d(a,b)</span></i></b><span style="font-family:宋体;">表示以</span><b><i><span style="font-family:&quot;">a,b</span></i></b><span style="font-family:宋体;">为端点的路径的长度，它是该路径上各边长度之和。我们称</span><b><i><span style="font-family:&quot;">d(a,b)</span></i></b><span style="font-family:宋体;">为</span><b><i><span style="font-family:&quot;">a,b</span></i></b><span style="font-family:宋体;">两结点间的距离。</span><span style="font-family:&quot;"></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.75pt;">
+	<span style="font-family:宋体;">一点</span><b><i><span style="font-family:&quot;">v</span></i></b><span style="font-family:宋体;">到一条路径</span><b><i><span style="font-family:&quot;">P</span></i></b><span style="font-family:宋体;">的距离为该点与</span><b><i><span style="font-family:&quot;">P</span></i></b><span style="font-family:宋体;">上</span><span style="font-family:宋体;">的最近的结点的距离：</span><span style="font-family:&quot;"></span> 
+</p>
+<p class="MsoNormal" style="text-align:center;" align="center">
+	<b><i><span style="font-family:&quot;">d(v</span></i></b><b><i><span style="font-family:宋体;">，</span></i></b><b><i><span style="font-family:&quot;">P)</span></i></b><b><span style="font-family:&quot;">=</span></b><span style="font-family:&quot;">min{<b><i>d(v</i></b></span><b><i><span style="font-family:宋体;">，</span></i></b><b><i><span style="font-family:&quot;">u)</span></i></b><b><i><span style="font-family:宋体;">，</span></i></b><b><i><span style="font-family:&quot;">u</span></i></b><span style="font-family:宋体;">为路径</span><b><i><span style="font-family:&quot;">P</span></i></b><span style="font-family:宋体;">上的结点</span><span style="font-family:&quot;">}</span><span style="font-family:宋体;">。</span><span style="font-family:&quot;"></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.75pt;">
+	<b><span style="font-family:宋体;">树网的直径：</span></b><span style="font-family:宋体;">树网中最长的路径称为树网的直径。对于给定的树网</span><b><i><span style="font-family:&quot;">T</span></i></b><span style="font-family:宋体;">，直径不一定是唯一的，但可以证明：各直径的中点（不一定恰好是某个结点，可能在某条边的内部）是唯一的，我们称该点为树网的中心。</span><span style="font-family:&quot;"></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.75pt;">
+	<b><span style="font-family:宋体;">偏心距</span></b><b><i><span style="font-family:&quot;">ECC(F)</span></i></b><span style="font-family:宋体;">：树网</span><b><i><span style="font-family:&quot;">T</span></i></b><span style="font-family:宋体;">中距路径</span><b><i><span style="font-family:&quot;">F</span></i></b><span style="font-family:宋体;">最远的结点到路径</span><b><i><span style="font-family:&quot;">F</span></i></b><span style="font-family:宋体;">的距离，即</span><span style="font-family:&quot;"></span> 
+</p>
+<p class="MsoNormal" style="text-align:center;" align="center">
+	<span style="font-family:&quot;"><span><img src="/attached/image/20130929/20130929220130_77624.jpg" alt="" /></span></span><span style="font-family:宋体;">。</span><span style="font-family:&quot;"></span> 
+</p>
+<p class="MsoNormal" style="text-indent:20.65pt;">
+	<b><span style="font-family:宋体;">任务：</span></b><span style="font-family:宋体;">对于给定的树网</span><b><i><span style="font-family:&quot;">T=(V, E,W)</span></i></b><span style="font-family:宋体;">和非负整数</span><i><span style="font-family:&quot;">s</span></i><span style="font-family:宋体;">，求一个路径</span><b><i><span style="font-family:&quot;">F</span></i></b><span style="font-family:宋体;">，它是某直径上的一段路径（该路径两端均为树网中的结点），其长度不超过</span><span style="font-family:&quot;">s</span><span style="font-family:宋体;">（可以等于</span><span style="font-family:&quot;">s</span><span style="font-family:宋体;">），使偏心距</span><b><i><span style="font-family:&quot;">ECC(F)</span></i></b><span style="font-family:宋体;">最小。我们称这个路径为树网</span><b><i><span style="font-family:&quot;">T=(V,E,W)</span></i></b><span style="font-family:宋体;">的<b>核（</b></span><b><i><span style="font-family:&quot;">Core</span></i></b><b><span style="font-family:宋体;">）</span></b><span style="font-family:宋体;">。必要时，</span><b><i><span style="font-family:&quot;">F</span></i></b><span style="font-family:宋体;">可以退化为某个结点。一般来说，在上述定义下，核不一定只有一个，但最小偏心距是唯一的。</span><span style="font-family:&quot;"></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.85pt;">
+	<span style="font-family:宋体;">下面的图给出了树网的一个实例。图中，</span><span>A-B</span><span style="font-family:宋体;">与</span><span>A-C</span><span style="font-family:宋体;">是两条直径，长度均为</span><span>20</span><span style="font-family:宋体;">。点</span><span>W</span><span style="font-family:宋体;">是树网的中心，</span><span>EF</span><span style="font-family:宋体;">边的长度为</span><span>5</span><span style="font-family:宋体;">。如果指定</span><i><span>s</span></i><span>=11</span><span style="font-family:宋体;">，则树网的核为路径</span><span>DEFG</span><span style="font-family:宋体;">（也可以取为路径</span><span>DEF</span><span style="font-family:宋体;">），偏心距为</span><span>8</span><span style="font-family:宋体;">。如果指定</span><i><span>s</span></i><span>=0</span><span style="font-family:宋体;">（或</span><i><span>s</span></i><span>=1</span><span style="font-family:宋体;">、</span><i><span>s</span></i><span>=2</span><span style="font-family:宋体;">），则树网的核为结点</span><span>F</span><span style="font-family:宋体;">，偏心距为</span><span>12</span><span style="font-family:宋体;">。</span><span></span> 
+</p>
+<p class="MsoNormal" style="text-align:center;" align="center">
+	<span><img src="/attached/image/20130929/20130929220236_60543.jpg" alt="" height="299" width="346" /></span><span style="line-height:150%;font-family:&quot;"></span> 
+</p></div><h2>Input</h2><div class=content><p class="MsoNormal" style="text-indent:5.25pt;">
+	<span style="font-family:宋体;">包含</span><i><span>n</span></i><span style="font-family:宋体;">行：</span><span style="font-family:&quot;"></span> 
+</p>
+<p class="MsoNormal" style="text-indent:26.25pt;">
+	<span style="font-family:宋体;">第</span><span>1</span><span style="font-family:宋体;">行，两个正整数</span><i><span>n</span></i><span style="font-family:宋体;">和</span><i><span>s</span></i><span style="font-family:宋体;">，中间用一个空格隔开。其中</span><i><span>n</span></i><span style="font-family:宋体;">为树网结点的个数，</span><i><span>s</span></i><span style="font-family:宋体;">为树网的核的长度的上界。设结点编号依次为</span><span>1, 2, ..., <i>n</i></span><span style="font-family:宋体;">。</span><span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-family:宋体;">从第</span><span>2</span><span style="font-family:宋体;">行到第</span><i><span>n</span></i><span style="font-family:宋体;">行，每行给出</span><span>3</span><span style="font-family:宋体;">个用空格隔开的正整数，依次表示每一条边的两个端点编号和长度。例如，</span><span>“2 4 7”</span><span style="font-family:宋体;">表示连接结点</span><span>2</span><span style="font-family:宋体;">与</span><span>4</span><span style="font-family:宋体;">的边的长度为</span><span>7</span><span style="font-family:宋体;">。</span><span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-family:宋体;">所给的数据都是正确的，不必检验。</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<br />
+<span style="font-family:宋体;"></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-family:宋体;"> </span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;">【限制】</span> 
+</p>
+<p class="MsoNormal">
+	<span><span>&nbsp;&nbsp;&nbsp; </span>40%</span><span style="font-family:宋体;">的数据满足：</span><span>5&lt;=<i>n</i>&lt;=15</span> 
+</p>
+<p class="MsoNormal">
+	<span><span>&nbsp;&nbsp;&nbsp; </span>70%</span><span style="font-family:宋体;">的数据满足：</span><span>5&lt;=<i>n</i>&lt;=80</span> 
+</p>
+<p class="MsoNormal">
+	<span><span>&nbsp;&nbsp;&nbsp; </span>100%</span><span style="font-family:宋体;">的数据满足：</span><span>5&lt;=<i>n</i>&lt;=300, 0&lt;=<i>s</i>&lt;=1000</span><span style="font-family:宋体;">。边长度为不超过</span><span>1000</span><span style="font-family:宋体;">的正整数</span> 
+</p>
+<br />
+<p>
+	<br />
+</p></div><h2>Output</h2><div class=content><p class="MsoNormal" style="text-indent:5.25pt;">
+	<span style="font-family:宋体;">&nbsp; 只有一个非负整数，为指定意义下的最小偏心距。</span><span style="font-family:&quot;"></span> 
+</p>
+<br /></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>5 2
+1 2 5
+2 3 2
+2 4 4
+2 5 3
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>5
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search='></a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=3640'>Submit</a>][<a href='problemstatus.php?id=3640'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=3640");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

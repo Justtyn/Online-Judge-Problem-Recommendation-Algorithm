@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?842702240" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 4528 --E</title><center><h2>4528: E</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=4528'>Submit</a>][<a href='problemstatus.php?id=4528'>Status</a>][<a href='bbs.php?pid=4528'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=4528'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=4528");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=4528'>下载测试数据1元</a>][32kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">&nbsp;&nbsp;&nbsp;&nbsp;天游同学在<font face="Calibri">ACM</font><font face="宋体">校队，有一个梦想就是举办一次盛大的舞会。每一对舞伴的跳舞结束后，都会由三位评委进行打分，这三位评委打分组成的三元组，将归为&ldquo;意外的评分&rdquo;和&ldquo;普通的评分两类&rdquo;。意外的评分是指：三个得分中出现至少两个数之差为</font><font face="Calibri">2</font><font face="宋体">。普通的评分是指：任意两两得分之差，为</font><font face="Calibri">0</font><font face="宋体">，或为</font><font face="Calibri">1</font><font face="宋体">。举个例子：（</font><font face="Calibri">8</font><font face="宋体">，</font><font face="Calibri">8</font><font face="宋体">，</font><font face="Calibri">8</font><font face="宋体">）和（</font><font face="Calibri">7</font><font face="宋体">，</font><font face="Calibri">8</font><font face="宋体">，</font><font face="Calibri">7</font><font face="宋体">）不是&ldquo;意外的&rdquo;。（</font><font face="Calibri">6</font><font face="宋体">，</font><font face="Calibri">7</font><font face="宋体">，</font><font face="Calibri">8</font><font face="宋体">）和（</font><font face="Calibri">6</font><font face="宋体">，</font><font face="Calibri">8</font><font face="宋体">，</font><font face="Calibri">8</font><font face="宋体">）是意外的。（</font><font face="Calibri">7</font><font face="宋体">，</font><font face="Calibri">6</font><font face="宋体">，</font><font face="Calibri">9</font><font face="宋体">）这种出现差值大于</font><font face="Calibri">2</font><font face="宋体">的情况的评分，不会在评分中出现。</font></span><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">现在，我们会拥有<font face="Calibri">N</font><font face="宋体">对舞伴中每一对舞伴跳舞之后得到的三个评分之总和。以及一个约束</font><font face="Calibri">s</font><font face="宋体">，</font><font face="Calibri">s</font><font face="宋体">是</font><font face="Calibri">N</font><font face="宋体">对舞伴中必定出现的&ldquo;意外评分的数量&rdquo;。并且我们定义一对舞伴的最高分，是三元组中分值最大的数。我们的目标是要求出一个最大数量值：这些数量的队伍获得的最高得分，都能够大于等于给定的阈值分数</font><font face="Calibri">p</font><font face="宋体">。</font></span><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">&nbsp;&nbsp;&nbsp;&nbsp;我们来举个例子，假设现在有<font face="Calibri">6</font><font face="宋体">对舞伴，他们分别拥有得分</font><font face="Calibri">29,20,8,18,18,21</font><font face="宋体">。有两队舞伴获得了意外的评分，你需要知道最多将有多少队伍他们的最高分达到甚至突破了</font><font face="Calibri">8</font><font face="宋体">分？</font></span><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">一个可能的例子是：</span><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'">10&nbsp;9&nbsp;10</span><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'">6&nbsp;6&nbsp;8&nbsp;(*)</span><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'">2&nbsp;3&nbsp;3</span><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'">6&nbsp;6&nbsp;6</span><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'">6&nbsp;6&nbsp;6</span><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'">6&nbsp;7&nbsp;8&nbsp;(*)</span><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: 'Calibri'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; text-indent: 21pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">标记为<font face="Calibri">*</font><font face="宋体">号的队伍是获得&ldquo;意外评分&rdquo;的队伍，这里面一共有</font><font face="Calibri">3</font><font face="宋体">支队伍的最高得分达到或者超过了</font><font face="Calibri">8</font><font face="宋体">分。由于在一系列的可能性中再也没有比</font><font face="Calibri">3</font><font face="宋体">支队伍更高的数量了，因此这一用例的答案为</font><font face="Calibri">3</font><font face="宋体">。</font></span><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></div><h2>Input</h2><div class=content><p class="p0" style="margin-top: 0pt; text-indent: 21pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">第一行给出整数<font face="Calibri">T(1&nbsp;</font><font face="宋体">&le;&nbsp;</font><font face="Calibri">T&nbsp;</font><font face="宋体">&le;&nbsp;</font><font face="Calibri">100)</font><font face="宋体">，代表将有</font><font face="Calibri">T</font><font face="宋体">组用例单元。紧接着将给出这</font><font face="Calibri">T</font><font face="宋体">组用例，对于每一组用例，占有一行。该行拥有多个被空格分隔的整数。第一个数字</font><font face="Calibri">N(1&nbsp;</font><font face="宋体">&le;&nbsp;</font><font face="Calibri">N&nbsp;</font><font face="宋体">&le;&nbsp;</font><font face="Calibri">100)</font><font face="宋体">，是队伍的数量；接着给出约束</font><font face="Calibri">S(0&nbsp;</font><font face="宋体">&le;&nbsp;</font><font face="Calibri">S&nbsp;</font><font face="宋体">&le;&nbsp;</font><font face="Calibri">N)</font><font face="宋体">，如上所述为获得意外得分的队伍的数量；第三个参数为阈值</font><font face="Calibri">p(0&nbsp;</font><font face="宋体">&le;&nbsp;</font><font face="Calibri">p&nbsp;</font><font face="宋体">&le;&nbsp;</font><font face="Calibri">10)</font><font face="宋体">。最后给出</font><font face="Calibri">N</font><font face="宋体">个队伍各自获得的得分总和。</font><font face="Calibri">0&nbsp;</font><font face="宋体">&le;&nbsp;</font><font face="Calibri">ti&nbsp;</font><font face="宋体">&le;&nbsp;</font><font face="Calibri">30</font></span><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></div><h2>Output</h2><div class=content><p class="p0" style="margin-top: 0pt; text-indent: 21pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'">对于每一组，输出一行格式串&ldquo;<font face="Calibri">Case&nbsp;#x:&nbsp;y</font><font face="宋体">&rdquo;，</font><font face="Calibri">x</font><font face="宋体">是以</font><font face="Calibri">1</font><font face="宋体">开始计数的用例序号，</font><font face="Calibri">y</font><font face="宋体">为所求的最大可能队伍数，使得最高得分大于或等于</font><font face="Calibri">p</font><font face="宋体">。</font></span><span style="font-family: '宋体'; font-size: 12pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>3 1 5 15 13 11
+3 0 8 23 22 21
+2 1 1 8 0
+6 2 8 29 20 8 18 18 2</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>Case #1: 3
+Case #2: 2
+Case #3: 1
+Case #4: 3</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E7%AC%AC%E5%8D%81%E5%B1%8AIT%E8%8A%82ACM%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E6%80%BB%E5%86%B3%E8%B5%9B'>第十届IT节ACM程序设计大赛总决赛</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=4528'>Submit</a>][<a href='problemstatus.php?id=4528'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=4528");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

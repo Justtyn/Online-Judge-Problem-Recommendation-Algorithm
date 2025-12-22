@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?160215800" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5303 --三元排序 2013年12月高一（2016届）励志杯T4</title><center><h2>5303: 三元排序 2013年12月高一（2016届）励志杯T4</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>32&nbsp;&nbsp;<span class=green>Solved: </span>6<br>[<a href='submitpage.php?id=5303'>Submit</a>][<a href='problemstatus.php?id=5303'>Status</a>][<a href='bbs.php?pid=5303'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5303'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5303");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5303'>下载测试数据1元</a>][988kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" style="text-align:center;">
+	<strong><span style="font-size:16px;">T4.三元排序(sort3.pas/c/cpp)</span></strong><strong><span style="font-size:16px;"></span></strong> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">问题描述</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp;&nbsp;&nbsp; </span><span style="font-size:16px;">一次交换操作是指将数列中的两个数位置对调。给出一个只有</span><span style="font-size:16px;">1</span><span style="font-size:16px;">、</span><span style="font-size:16px;">2</span><span style="font-size:16px;">、</span><span style="font-size:16px;">3</span><span style="font-size:16px;">三个元素的数列，你需要通过有限次交换使数列中的数从小到大排列。请求出最少需要的交换次数。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp;</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">输入格式</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp;&nbsp;&nbsp; </span><span style="font-size:16px;">输入数据保存在</span><span style="font-size:16px;">sort3.in</span><span style="font-size:16px;">中。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp;&nbsp;&nbsp; </span><span style="font-size:16px;">第一行读入一个数</span><span style="font-size:16px;">N</span><span style="font-size:16px;">，它代表数列的长度。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp;&nbsp;&nbsp; </span><span style="font-size:16px;">以下</span><span style="font-size:16px;">N</span><span style="font-size:16px;">行每行一个数。每个数都只可能是</span><span style="font-size:16px;">1</span><span style="font-size:16px;">、</span><span style="font-size:16px;">2</span><span style="font-size:16px;">、</span><span style="font-size:16px;">3</span><span style="font-size:16px;">中的一个。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp;</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">输出格式</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp;&nbsp;&nbsp; </span><span style="font-size:16px;">将最少的交换次数输出到文件</span><span style="font-size:16px;">sort3.out</span><span style="font-size:16px;">中。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp;</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">样例输入</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">9</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">2</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">2</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">1</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">3</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">3</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">3</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">2</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">3</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">1</span> 
+</p>
+<p class="MsoNormal">
+	<br />
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">样例输出</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">4</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp;</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">数据规模</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp;&nbsp;&nbsp; </span><span style="font-size:16px;">对于</span><span style="font-size:16px;">50%</span><span style="font-size:16px;">的数据，</span><span style="font-size:16px;">N&lt;=100</span><span style="font-size:16px;">；</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp;&nbsp;&nbsp; </span><span style="font-size:16px;">对于</span><span style="font-size:16px;">100%</span><span style="font-size:16px;">的数据，</span><span style="font-size:16px;">N&lt;=100 000</span><span style="font-size:16px;">。</span> 
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p class="MsoNormal" align="left"><br />
+	<b>分析<span></span></b> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	<b><span style="font-family:'Microsoft Yahei';font-size:14px;line-height:28px;background-color:#F5F5F5;">Way1</span><br /><br />
+</b> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	用<span>l[i]</span>记录<span>i(1,2,3)</span>出现的个数。排序后一定是<span>l[1]</span>个<span>1</span>，<span>l[2]</span>个<span>2</span>，<span>l[3]</span>个<span>3</span>这<span>3</span>段。<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	sn[i,j]记录在第<span>i</span>段中的<span>j</span>的个数。第<span>i</span>段中的<span>j</span>和第<span>j</span>段中的<span>i</span>交换，两个元素交换，只需要一次。所以取<span>sn[i,j]</span>和<span>sn[j,i]</span>中的较小数<span>s</span>，累加到总交换数中。<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	这样交换后，剩下的肯定是<span>3</span>段同时交换，最少需要<span>2</span>次。我们只需累加<span>(sn[1,2]+sn[1,3])</span>×<span>2</span>即可。<span> </span> <br />
+</p><br />
+<div class="MsoNormal" align="center" style="text-align:center;"><br />
+	<hr /><br />
+</div><br />
+<p class="MsoNormal" align="left"><br />
+	<strong>Way2</strong> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	这个题目的思路很简单<span>:</span>首先读入所有数<span>,</span>然后看原本的位置是’<span>1</span>′的里面有几个不是<span>1,</span>如果那几个不是<span>1</span>的数字在它原应该呆的位置中找到<span>1</span>的话就直接换<span>,</span>如果找不到就在另一堆中找…<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	比如说<span>3 1 2</span>三个数<span>,</span>第一个位置原应该是<span>1,</span>但是是<span>3,</span>那么就在原应该是<span>3</span>的位置中找<span>1,</span>但是是<span>2,</span>那么就在另一堆找<span>,</span>找到了<span>1,</span>那么把<span>3</span>跟<span>1</span>换一下…直到<span>1</span>全部到达自己的位置…然后在原应该是<span>2</span>的位置中找<span>,</span>如果碰到<span>3</span>就应该换一次…<span>.</span>就这样找完就行了…<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;for i:=1 to n do<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;begin<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;&nbsp; readln(a[i]);<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;&nbsp; if a[i]=1 then<br />
+inc(s[1,2])<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;&nbsp; else<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;&nbsp; if a[i]=2 then<br />
+inc(s[2,2]);<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;end;<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;s[2,1]:=s[1,2]+1;<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;s[2,2]:=s[2,2]+s[2,1]-1;<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;s[3,1]:=s[2,2]+1;<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	这段代码是记录位置的<span>,s[x,1]</span>是<span>x</span>的初始位置…<span> s[x,2]</span>是<span>x</span>的终点位置…<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	记录好位置之后就按照上面的流程去找就好了…实现起来应该是很简单的…<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;<br />
+</p><br />
+<div class="MsoNormal" align="center" style="text-align:center;"><br />
+	<hr /><br />
+</div><br />
+<p class="MsoNormal" align="left"><br />
+	<strong>Way3</strong> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	这是极其诡异的做法：<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;&nbsp; 只要类似与方法二，记录下本是<span>N</span>的位置却不是<span>N</span>的个数<span>A[N]</span>，表示<span>N</span>这个数有多少个不在自己的位置上。<span></span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;&nbsp; 然后，开一个数组<span>B,</span>存储排序后的序列。每次比较原数列<span>Data[i] </span>和<span> B[i]</span>，如果不相等<span>,</span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 则<span>dec(A[data[i]])</span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+dec(A[b[i]]);<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inc(Total)<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	本来只想着尝试这样的方法，没想到交上去后就<span>AC</span>了。莫名。。只是求最小次数的问题这样可以<span>AC</span>。。（本分版作者<span>rock_li1</span>）<span> </span> <br />
+</p><br />
+<div class="MsoNormal" align="center" style="text-align:center;"><br />
+	<hr /><br />
+</div><br />
+<p class="MsoNormal" align="left"><br />
+	<strong>Way4</strong> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	By Etfl<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	O(n)预处理，<span>O(1)</span>计算<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	（注：数字<span>i</span>该在的位置即排序后数字<span>i</span>所在的位置区间）<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	d[i,j]表示排序后数字<span>i</span>该在的位置中含有的数字<span>j</span>的个数。<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	那么<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;ans:=d[2,1]+d[3,1]+d[2,3]+max(0,d[1,3]-d[3,1]);<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	原理很简单，首先要把所有的<span>1</span>交换到最前面<span>:</span>用的次数是<span>d[2,1]+d[3,1]</span>。然后把所有的<span>3</span>交换到最后，这些<span>3</span>共两部分：一部分是在<span>2</span>该在的位置中的，这些需要<span>d[2,3]</span>次交换；另一部分是在<span>1</span>该在的位置中的，这些<span>3</span>中有一些是通过处理<span>1</span>已经回来了，还有一些可能在处理<span>1</span>的时候交换到了<span>2</span>该在的位置，就需要再交换一下。这部分交换总数是<span>max(0,d[1,3]-d[3,1])</span>。<span> </span> <br />
+</p><br />
+<div class="MsoNormal" align="center" style="text-align:center;"><br />
+	<hr /><br />
+</div><br />
+<p class="MsoNormal" align="left"><br />
+	我用的是这个方式的变形<span>: </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	&nbsp;ans:=d[1,2]+d[1,3]+max(d[2,3],d[3,2]);<br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	处理解释：<span> d[1,2]+d[1,3] </span>是所有占据<span> 1</span>位的<span>2</span>和<span>3</span>的数量，也就是不在正确位置的<span> 1</span>的数量（<span>d[2,1]+d[3,1]</span>），这两个加和是相同的。第一步求这个和，也就是让所有<span>1</span>归位。<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	此操作之后，存在两种情况。一：原序列中不存在<br />
+三值互换的现象，那么<span> d[2,3]</span>与<span>d[3,2]</span>应该是相同的。<span>max</span>算子不起作用。<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	二<span>:</span>原序列中存在<br />
+三值互换的现象。可知，<span>d[2,3]</span>与<span>d[3,2]</span>中必有一个不变，而另一个在增大，且增大的量在数值上等于原三值交换的次数。就是例如上段文字所说：这些<span>3</span>中还有一些可能在处理<span>1</span>的时候交换到了<span>2</span>该在的位置，这时增加的就是<span>d[2,3],</span>而<span>d[3,2]</span>不变。由于交换是相对的，变化后的<span>d'[2,3]</span>与<span>d'[3,2]</span>必相等，又由于其中有一个值没有变动，所以该值也就等于原<span>d[2,3]</span>与<span>d[3,2]</span>中的最大值。<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	然后取这个最大值就可以让<span> 2 3 </span>同时归位。问题得解<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	<b>补充一点<span></span></b> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	我们用<span>a[i,j]</span>表示在<span>i</span>的位置上<span>j</span>的个数，比如<span>a[2,1]=5</span>就表示排好序后，上面应该是<span>2</span>，但现在被<span>1</span>占领的位置数是<span>5</span>。先贪心到不能两值内部交换。<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	那么操作之后不会存在<span>a[2,1]&gt;0</span>和<span>a[2,3]&gt;0</span>同时成立的现象。<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	反证法<span>:</span>比如交换之后<span>a[2,1]&gt;0,</span>且<span>a[2,3]&gt;0</span>则在<span>1</span>的位置上只能有<span>3(1</span>和<span>2</span>能内部相抵的已经全部抵消了<span>),3</span>的位置上只能有<span>1(</span>同理<span>),</span>那么<span>1</span>和<span>3</span>又可以内部交换了，与假设矛盾。得证。<span> </span> <br />
+</p><br />
+<p class="MsoNormal" align="left"><br />
+	还有最后<span>3</span>值交换是乘<span>2</span>，而不是乘<span>3</span>。<span> </span> <br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%A8%A1%E6%8B%9F%E8%B5%9B-%E5%8A%B1%E5%BF%97%E6%9D%AF'>模拟赛-励志杯</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5303'>Submit</a>][<a href='problemstatus.php?id=5303'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5303");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

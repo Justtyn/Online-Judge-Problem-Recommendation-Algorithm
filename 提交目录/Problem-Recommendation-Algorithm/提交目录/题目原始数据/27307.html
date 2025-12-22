@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1225359079" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 27307 --动物园</title><center><h2>27307: 动物园</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>34&nbsp;&nbsp;<span class=green>Solved: </span>10<br>[<a href='submitpage.php?id=27307'>Submit</a>][<a href='problemstatus.php?id=27307'>Status</a>][<a href='bbs.php?pid=27307'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=27307'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=27307");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=27307'>下载测试数据1元</a>][13844kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="p" style="margin: 2.4pt 0pt; text-indent: 24pt;"><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">近日，园长发现动物园中好吃懒做的动物越来越多了。例如企鹅，只会卖萌向游客要吃的。为了整治动物园的不良风气，让动物们凭自己的真才实学向游客要吃的，园长决定开设算法班，让动物们学习算法。</span><span style="mso-spacerun:'yes'; font-family:Arial; mso-fareast-font-family:宋体; font-size:12.0000pt; mso-font-kerning:0.0000pt; "><o:p></o:p></span></p>
+<p class="p" style="margin: 2.4pt 0pt; text-indent: 24pt;"><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">某天，园长给动物们讲解</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">KMP</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">算法。</span><span style="mso-spacerun:'yes'; font-family:Arial; mso-fareast-font-family:宋体; font-size:12.0000pt; mso-font-kerning:0.0000pt; "><o:p></o:p></span></p>
+<p class="p" style="margin: 2.4pt 0pt; text-indent: 24pt;"><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">园长：&ldquo;对于一个字符串</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">S</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">，它的长度为</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">L</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">。我们可以在</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">O(L)</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">的时间内，求出一个名为</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">next</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">的数组。有谁预习了</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">next</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">数组的含义吗？&rdquo;</span><span style="mso-spacerun:'yes'; font-family:Arial; mso-fareast-font-family:宋体; font-size:12.0000pt; mso-font-kerning:0.0000pt; "><o:p></o:p></span></p>
+<p class="p" style="margin: 2.4pt 0pt; text-indent: 24pt;"><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">熊猫：&ldquo;对于字符串</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">S</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">的前</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">i</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">个字符构成的子串，既是它的后缀又是它的前缀的字符串中（它本身除外），最长的长度记作</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">next[i]</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">。&rdquo;</span><span style="mso-spacerun:'yes'; font-family:Arial; mso-fareast-font-family:宋体; font-size:12.0000pt; mso-font-kerning:0.0000pt; "><o:p></o:p></span></p>
+<p class="p" style="margin: 2.4pt 0pt; text-indent: 24pt;"><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">园长：&ldquo;非常好！那你能举个例子吗？&rdquo;</span><span style="mso-spacerun:'yes'; font-family:Arial; mso-fareast-font-family:宋体; font-size:12.0000pt; mso-font-kerning:0.0000pt; "><o:p></o:p></span></p>
+<p class="p" style="margin: 2.4pt 0pt; text-indent: 24pt;"><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">熊猫：&ldquo;例</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">S</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">为</span><span style="font-family: Arial; letter-spacing: 0pt; text-decoration: underline; font-size: 13.5pt; background: rgb(228, 240, 248);">abcababc</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">，则</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">next[5]=2</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">。因为</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">S</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">的前</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">5</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">个字符为</span><span style="font-family: Arial; letter-spacing: 0pt; text-decoration: underline; font-size: 13.5pt; background: rgb(228, 240, 248);">abcab</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">，</span><span style="font-family: Arial; letter-spacing: 0pt; text-decoration: underline; font-size: 13.5pt; background: rgb(228, 240, 248);">ab</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">既是它的后缀又是它的前缀，并且找不到一个更长的字符串满足这个性质。同理，还可得出</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">next[1]&nbsp;=&nbsp;next[2]&nbsp;=&nbsp;next[3]&nbsp;=&nbsp;0</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">，</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">next[4]&nbsp;=&nbsp;next[6]&nbsp;=&nbsp;1</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">，</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">next[7]&nbsp;=&nbsp;2</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">，</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">next[8]&nbsp;=&nbsp;3</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">。&rdquo;</span><span style="mso-spacerun:'yes'; font-family:Arial; mso-fareast-font-family:宋体; font-size:12.0000pt; mso-font-kerning:0.0000pt; "><o:p></o:p></span></p>
+<p class="p" style="margin: 2.4pt 0pt; text-indent: 24pt;"><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">园长表扬了认真预习的熊猫同学。随后，他详细讲解了如何在</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">O(L)</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">的时间内求出</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">next</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">数组。</span><span style="mso-spacerun:'yes'; font-family:Arial; mso-fareast-font-family:宋体; font-size:12.0000pt; mso-font-kerning:0.0000pt; "><o:p></o:p></span></p>
+<p class="p" style="margin: 2.4pt 0pt; text-indent: 24pt;"><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">下课前，园长提出了一个问题：&ldquo;</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">KMP</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">算法只能求出</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">next</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">数组。我现在希望求出一个更强大</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">num</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">数组一一对于字符串S的前i个字符构成的子串，既是它的后缀同时又是它的前缀，并且该后缀与该前缀不重叠，将这种字符串的数量记作</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">num[i]</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">。例如</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">S</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">为</span><span style="font-family: Arial; letter-spacing: 0pt; text-decoration: underline; font-size: 13.5pt; background: rgb(228, 240, 248);">aaaaa</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">，则</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">num[4]&nbsp;=&nbsp;2</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">。这是因为</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">S</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">的前</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">4</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">个字符为</span><span style="font-family: Arial; letter-spacing: 0pt; text-decoration: underline; font-size: 13.5pt; background: rgb(228, 240, 248);">aaaa</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">，其中</span><span style="font-family: Arial; letter-spacing: 0pt; text-decoration: underline; font-size: 13.5pt; background: rgb(228, 240, 248);">a</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">和</span><span style="font-family: Arial; letter-spacing: 0pt; text-decoration: underline; font-size: 13.5pt; background: rgb(228, 240, 248);">aa</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">都满足性质&lsquo;既是后缀又是前缀&rsquo;，同时保证这个后缀与这个前缀不重叠。而</span><span style="font-family: Arial; letter-spacing: 0pt; text-decoration: underline; font-size: 13.5pt; background: rgb(228, 240, 248);">aaa</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">虽然满足性质&lsquo;既是后缀又是前缀&rsquo;，但遗憾的是这个后缀与这个前缀重叠了，所以不能计算在内。同理，</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">num[1]&nbsp;=&nbsp;0,num[2]&nbsp;=&nbsp;num[3]&nbsp;=&nbsp;1,num[5]&nbsp;=&nbsp;2</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">。&rdquo;</span><span style="mso-spacerun:'yes'; font-family:Arial; mso-fareast-font-family:宋体; font-size:12.0000pt; mso-font-kerning:0.0000pt; "><o:p></o:p></span></p>
+<p class="p" style="margin: 2.4pt 0pt; text-indent: 24pt;"><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">最后，园长给出了奖励条件，第一个做对的同学奖励巧克力一盒。听了这句话，睡了一节课的企鹅立刻就醒过来了！但企鹅并不会做这道题，于是向参观动物园的你寻求帮助。你能否帮助企鹅写一个程序求出</span><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">num</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">数组呢？</span><span style="mso-spacerun:'yes'; font-family:Arial; mso-fareast-font-family:宋体; font-size:12.0000pt; mso-font-kerning:0.0000pt; "><o:p></o:p></span></p>
+<p class="p" style="margin: 2.4pt 0pt; text-indent: 24pt;"><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">特别地，为了避免大量的输出，你不需要输出</span><span style="font-family: timesnewroman; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">num[i]</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">分别是多少，你只需要输出</span><img width="144" height="36" src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\ksohtml\wps5402.tmp.png" alt="" /><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">对</span><span style="font-family: 'Times New Roman'; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">1,000,000,007</span><span style="font-family: 宋体; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">取模的结果即可。</span><span style="mso-spacerun:'yes'; font-family:Arial; mso-fareast-font-family:宋体; font-size:12.0000pt; mso-font-kerning:0.0000pt; "><o:p></o:p></span></p>
+<p class="MsoNormal"><img width="541" height="36" src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\ksohtml\wps5403.tmp.png" alt="" /></p>
+<p></p></div><h2>Input</h2><div class=content><p class="p" style="margin: 0pt;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">第<font face="Arial">1</font><font face="宋体">行仅包含一个正整数</font><font face="Arial">n&nbsp;</font><font face="宋体">，表示测试数据的组数。随后</font><font face="Arial">n</font><font face="宋体">行，每行描述一组测试数据。每组测试数据仅含有一个字符串</font><font face="Arial">S</font><font face="宋体">，</font><font face="Arial">S</font><font face="宋体">的定义详见题目描述。数据保证</font><font face="Arial">S&nbsp;</font><font face="宋体">中仅含小写字母。输入文件中不会包含多余的空行，行末不会存在多余的空格。</font></span><span style="mso-spacerun:'yes'; font-family:Arial; mso-fareast-font-family:宋体; font-size:12.0000pt; mso-font-kerning:0.0000pt; "><o:p></o:p></span></p>
+<p></p></div><h2>Output</h2><div class=content><p class="p" style="margin: 0pt;"><span style="font-family: Arial; letter-spacing: 0pt; font-size: 13.5pt; background: rgb(228, 240, 248);">包含&nbsp;<font face="Arial">n&nbsp;</font><font face="宋体">行，每行描述一组测试数据的答案，答案的顺序应与输入数据的顺序保持一致。对于每组测试数据，仅需要输出一个整数，表示这组测试数据的答案对&nbsp;</font><font face="Arial">1,000,000,007&nbsp;</font><font face="宋体">取模的结果。输出文件中不应包含多余的空行。</font></span><span style="mso-spacerun:'yes'; font-family:Arial; mso-fareast-font-family:宋体; font-size:12.0000pt; mso-font-kerning:0.0000pt; "><o:p></o:p></span></p>
+<p></p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>3
+aaaaa
+ab
+abcababc</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>36
+1
+32 </span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search='></a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=27307'>Submit</a>][<a href='problemstatus.php?id=27307'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=27307");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

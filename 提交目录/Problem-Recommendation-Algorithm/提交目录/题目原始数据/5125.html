@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?547448585" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5125 --借教室-NOIP2012TGD2T2</title><center><h2>5125: 借教室-NOIP2012TGD2T2</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>10&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='submitpage.php?id=5125'>Submit</a>][<a href='problemstatus.php?id=5125'>Status</a>][<a href='bbs.php?pid=5125'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5125'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5125");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5125'>下载测试数据1元</a>][74412kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>
+	<h3 style="font-family:'Microsoft Yahei';">
+		<span style="font-size:18px;">题目描述</span>
+	</h3>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">在大学期间，经常需要租借教室。大到院系举办活动，小到学习小组自习讨论，都需要向学校申请借教室。教室的大小功能不同，借教室人的身份不同，借教室的手续也不一样。</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">面对海量租借教室的信息，我们自然希望编程解决这个问题。</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">我们需要处理接下来n天的借教室信息，其中第i天学校有r</span><sub><span style="font-size:18px;">i</span></sub><span style="font-size:18px;">个教室可供租借。共有m份订单，每份订单用三个正整数描述，分别为d</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">, s</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">, t</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">，表示某租借者需要从第s</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">天到第t</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">天租借教室（包括第s</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">天和第t</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">天），每天需要租借d</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">个教室。</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">我们假定，租借者对教室的大小、地点没有要求。即对于每份订单，我们只需要每天提供d</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">个教室，而它们具体是哪些教室，每天是否是相同的教室则不用考虑。</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">借教室的原则是先到先得，也就是说我们要按照订单的先后顺序依次为每份订单分配教室。如果在分配的过程中遇到一份订单无法完全满足，则需要停止教室的分配，通知当前申请人修改订单。这里的无法满足指从第s</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">天到第t</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">天中有至少一天剩余的教室数量不足d</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">个。</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">现在我们需要知道，是否会有订单无法完全满足。如果有，需要通知哪一个申请人修改订单。</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<br />
+	</p>
+	<h3 style="font-family:'Microsoft Yahei';">
+		<span style="font-size:18px;">输入格式</span>
+	</h3>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">每组输入数据的第一行包含两个正整数n, m，表示天数和订单的数量。</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">第二行包含n个正整数，其中第i个数为r</span><sub><span style="font-size:18px;">i</span></sub><span style="font-size:18px;">，表示第i天可用于租借的教室数量。</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">接下来有m行，每行包含三个正整数d</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">, s</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">, t</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">，表示租借的数量，租借开始、结束分别在第几天。</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">每行相邻的两个数之间均用一个空格隔开。天数与订单均用从1开始的整数编号。</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<br />
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">数据规模：</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="line-height:1.5;font-size:18px;">对于10%的数据，有1≤n, m≤10；</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">对于30%的数据，有1≤n, m≤1000；</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">对于70%的数据，有1≤n, m≤105；</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">对于100%的数据，有1≤n, m≤10</span><sup><span style="font-size:18px;">6</span></sup><span style="font-size:18px;">，0≤r</span><sub><span style="font-size:18px;">i</span></sub><span style="font-size:18px;">, d</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">≤10</span><sup><span style="font-size:18px;">9</span></sup><span style="font-size:18px;">，1≤s</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">≤t</span><sub><span style="font-size:18px;">j</span></sub><span style="font-size:18px;">≤n。</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<br />
+	</p>
+	<h3 style="font-family:'Microsoft Yahei';">
+		<span style="font-size:18px;">输出</span>
+	</h3>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">如果所有订单均可满足，则输出只有一行，包含一个整数0。否则（订单无法完全满足）输出两行，第一行输出一个负整数-1，第二行输出需要修改订单的申请人编号。</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<br />
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">下面是对样例数据的解释：</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-size:18px;">第1份订单满足后，4天剩余的教室数分别为0，3，2，3。第2份订单要求第2天到第4天每天提供3个教室，而第3天剩余的教室数为2，因此无法满足。分配停止，通知第2个申请人修改订单。</span>
+	</p>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<br />
+	</p>
+	<h3 style="font-family:'Microsoft Yahei';">
+		<span style="font-size:18px;">样例输入</span>
+	</h3>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-family:'Lucida Console';"><span style="font-size:18px;">4&nbsp;3</span><br />
+<span style="font-size:18px;">2&nbsp;5&nbsp;4&nbsp;3</span><br />
+<span style="font-size:18px;">2&nbsp;1&nbsp;3</span><br />
+<span style="font-size:18px;">3&nbsp;2&nbsp;4</span><br />
+<span style="font-size:18px;">4&nbsp;2&nbsp;4</span></span>
+	</p>
+	<h3 style="font-family:'Microsoft Yahei';">
+		<span style="font-size:18px;">样例输出</span>
+	</h3>
+	<p style="font-family:'Microsoft Yahei';font-size:14px;">
+		<span style="font-family:'Lucida Console';"><span style="font-size:18px;">-1</span><br />
+<span style="font-size:18px;">2</span></span>
+	</p>
+<span style="font-size:18px;"></span>
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=NOIP%E5%8E%9F%E9%A2%98-NOIP2012'>NOIP原题-NOIP2012</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5125'>Submit</a>][<a href='problemstatus.php?id=5125'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5125");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

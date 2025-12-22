@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?283979771" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5147 --树网的核-NOIP2007TGT4</title><center><h2>5147: 树网的核-NOIP2007TGT4</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>38&nbsp;&nbsp;<span class=green>Solved: </span>17<br>[<a href='submitpage.php?id=5147'>Submit</a>][<a href='problemstatus.php?id=5147'>Status</a>][<a href='bbs.php?pid=5147'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5147'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5147");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5147'>下载测试数据1元</a>][84kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<b>4. </b><b>树网的核</b><b></b> 
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;">
+	<b>(core.pas/c/cpp)</b><b></b> 
+</p>
+<p class="MsoNormal">
+	【问题描述】<b></b> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	设<b><i>T=(V,
+E, W) </i></b>是一个无圈且连通的无向图（也称为无根树），每条边带有正整数的权，我们称<b><i>T</i></b>为树网（<i>treenetwork</i>），其中<b><i>V, E</i></b>分别表示结点与边的集合，<b><i>W</i></b>表示各边长度的集合，并设<b><i>T</i></b>有<i><span>n</span></i>个结点。
+</p>
+<p class="MsoNormal" style="text-indent:21.75pt;">
+	<b>路径：</b>树网中任何两结点<b><i>a,b</i></b>都存在唯一的一条简单路径，用<b><i>d(a,b)</i></b>表示以<b><i>a,b</i></b>为端点的路径的长度，它是该路径上各边长度之和。我们称<b><i>d(a,b)</i></b>为<b><i>a,b</i></b>两结点间的距离。
+</p>
+<p class="MsoNormal" style="text-indent:21.75pt;">
+	一点<b><i>v</i></b>到一条路径<b><i>P</i></b>的距离为该点与<b><i>P</i></b>上的最近的结点的距离：
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;">
+	<b><i>d(v</i></b><b><i>，</i></b><b><i>P)</i></b><b>=</b>min{<b><i>d(v</i></b><b><i>，</i></b><b><i>u)</i></b><b><i>，</i></b><b><i>u</i></b>为路径<b><i>P</i></b>上的结点}。
+</p>
+<p class="MsoNormal" style="text-indent:21.75pt;">
+	<b>树网的直径：</b>树网中最长的路径称为树网的直径。对于给定的树网<b><i>T</i></b>，直径不一定是唯一的，但可以证明：各直径的中点（不一定恰好是某个结点，可能在某条边的内部）是唯一的，我们称该点为树网的中心。
+</p>
+<p class="MsoNormal" style="text-indent:21.75pt;">
+	<b>偏心距</b><b><i>ECC(F)</i></b>：树网<b><i>T</i></b>中距路径<b><i>F</i></b>最远的结点到路径<b><i>F</i></b>的距离，即
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;">
+	。
+</p>
+<p class="MsoNormal" style="text-indent:20.65pt;">
+	<b>任务：</b>对于给定的树网<b><i>T=(V, E,W)</i></b>和非负整数<i>s</i>，求一个路径<b><i>F</i></b>，它是某直径上的一段路径（该路径两端均为树网中的结点），其长度不超过s（可以等于s），使偏心距<b><i>ECC(F)</i></b>最小。我们称这个路径为树网<b><i>T=(V,E,W)</i></b>的<b>核（</b><b><i>Core</i></b><b>）</b>。必要时，<b><i>F</i></b>可以退化为某个结点。一般来说，在上述定义下，核不一定只有一个，但最小偏心距是唯一的。
+</p>
+<p class="MsoNormal" style="text-indent:21.85pt;">
+	下面的图给出了树网的一个实例。图中，<span>A-B</span>与<span>A-C</span>是两条直径，长度均为<span>20</span>。点<span>W</span>是树网的中心，<span>EF</span>边的长度为<span>5</span>。如果指定<i><span>s</span></i><span>=11</span>，则树网的核为路径<span>DEFG</span>（也可以取为路径<span>DEF</span>），偏心距为<span>8</span>。如果指定<i><span>s</span></i><span>=0</span>（或<i><span>s</span></i><span>=1</span>、<i><span>s</span></i><span>=2</span>），则树网的核为结点<span>F</span>，偏心距为<span>12</span>。<span></span> 
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;">
+	<img src="/attached/image/20131203/20131203134343_39084.jpg" alt="" />
+</p>
+<p class="MsoNormal">
+	【输入】
+</p>
+<p class="MsoNormal" style="text-indent:5.25pt;">
+	&nbsp;&nbsp;&nbsp; 输入文件core.in包含<i><span>n</span></i>行：
+</p>
+<p class="MsoNormal" style="text-indent:26.25pt;">
+	第<span>1</span>行，两个正整数<i><span>n</span></i>和<i><span>s</span></i>，中间用一个空格隔开。其中<i><span>n</span></i>为树网结点的个数，<i><span>s</span></i>为树网的核的长度的上界。设结点编号依次为<span>1, 2, ..., <i>n</i></span>。<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	从第<span>2</span>行到第<i><span>n</span></i>行，每行给出<span>3</span>个用空格隔开的正整数，依次表示每一条边的两个端点编号和长度。例如，<span>“2 47”</span>表示连接结点<span>2</span>与<span>4</span>的边的长度为<span>7</span>。<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	所给的数据都是正确的，不必检验。
+</p>
+<p class="MsoNormal">
+	【输出】
+</p>
+<p class="MsoNormal" style="text-indent:5.25pt;">
+	&nbsp; 输出文件core.out只有一个非负整数，为指定意义下的最小偏心距。
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	【输入输出样例<span>1</span>】<span></span> 
+</p>
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border:none;">
+	<tbody>
+		<tr>
+			<td width="306" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<b><span style="font-family:&quot;">core.in</span></b> 
+				</p>
+			</td>
+			<td width="306" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<b><span style="font-family:&quot;">core.out</span></b> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="306" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">5 2</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">1 2 5</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">2 3 2</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">2 4 4</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">2 5 3</span> 
+				</p>
+			</td>
+			<td width="306" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">5</span> 
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	【输入输出样例<span>2</span>】<span></span> 
+</p>
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border:none;">
+	<tbody>
+		<tr>
+			<td width="306" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<b><span style="font-family:&quot;">core.in</span></b> 
+				</p>
+			</td>
+			<td width="306" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<b><span style="font-family:&quot;">core.out</span></b> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="306" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">8 6</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">1 3 2</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">2 3 2</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">3 4 6</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">4 5 3</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">4 6 4</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">4 7 2</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">7 8 3</span> 
+				</p>
+			</td>
+			<td width="306" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-family:&quot;">5</span> 
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal">
+	<span>&nbsp;</span> 
+</p>
+<p class="MsoNormal">
+	【限制】
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;&nbsp;&nbsp; 40%</span>的数据满足：<span>5&lt;=<i>n</i>&lt;=15</span> 
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;&nbsp;&nbsp; 70%</span>的数据满足：<span>5&lt;=<i>n</i>&lt;=80</span> 
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;&nbsp;&nbsp; 100%</span>的数据满足：<span>5&lt;=<i>n</i>&lt;=300, 0&lt;=<i>s</i>&lt;=1000</span>。边长度为不超过<span>1000</span>的正整数
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=NOIP%E5%8E%9F%E9%A2%98-NOIP2007'>NOIP原题-NOIP2007</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5147'>Submit</a>][<a href='problemstatus.php?id=5147'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5147");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

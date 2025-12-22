@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?278017600" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 24945 --Tantrix</title><center><h2>24945: Tantrix</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=24945'>Submit</a>][<a href='problemstatus.php?id=24945'>Status</a>][<a href='bbs.php?pid=24945'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=24945'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=24945");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=24945'>下载测试数据1元</a>][24kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><img src="/upload/pimg24945_1.png" align="right">
+Tantrix is a two player game played with 56 hexagonal tiles. Each tile contains three links in different colours. Both players have five tiles in hand and take turns in placing them on the playing field. The figure to the right shows how the game could have progressed after nine played tiles. 
+There are four different link colours: red, green, yellow and blue. No two tiles are identical, and no tile is rotation symmetric. A tile will be described in the input as a six letter string, specifying the link colours in clockwise direction. The uppercase letters 'R', 'G', 'Y' and 'B' will be used for red, green, yellow and blue, respectively. 
+
+In this problem, a move is defined as placing one of the tiles in hand somewhere on the playing field, subject to these rules: 
+<ol>
+<li>A tile must always be placed next to tiles already played. 
+<li>The links in all touching tiles must match colour. 
+<li>An empty space which is surrounded by three tiles is called a forced space. If the player can place one of his tiles in a forced space, he must do so. If there are several forced spaces, and several ways to place a tile in a forced space, he may select any of those. 
+<li>It's not allowed to place a tile so that a forced space is created containing three links of the same colour (since no tile could ever be placed there). 
+<li>The two sides along a forced space are called controlled sides. It's not allowed to place a tile along a controlled side. 
+</ol>
+If there are one or more forced spaces and the player can't place any of his tiles in hand in those spaces, he will have to play any other legal move. Note that a player may not be allowed to place a tile in a forced space due to rule 4. 
+The figure on the right illustrates these rules. There are three forced spaces. The interposed tile may not be placed in the lower left forced space, as that would create a new forced space with three red links. The dark gray spaces lie on controlled sides created by the forced spaces; no tiles may be placed there. If the player to move can't place a tile in any of the three forced spaces, he must place a tile in any of the white spaces. 
+
+Your task is to count the number of legal moves the player to move has, given the position and orientation of already played tiles and the tiles in hand for the player to move. If a tile can be placed at several locations, or in several orientations, each such combination is counted as a distinct move.
+</img></div><h2>Input</h2><div class=content><img src="Image/1036/2.png" align="right">
+The first line in the input will contain the number of cases (at most 50). 
+Each case begins with a single line containing an integer n (1 ≤ n ≤ 20), the number of tiles that have already been played. Then follow n lines containing the coordinates and description of these tiles. The first character in the tile description belongs to the link facing up; the remaining colours follow as per usual in clockwise direction. Then follows a line with the description of the five tiles in hand, the tile descriptions being separated with a single space. 
+
+The mapping between the spaces and the coordinates is shown in the figure below (note that the playing field is infinite and not restricted to these coordinates). All tiles in the input will be valid and distinct. The layout will represent a position that could have arisen from a legal game. One of the played tiles will have coordinates 0,0 
+</img><br clear=all></div><h2>Output</h2><div class=content>For each test case, output a single line containing an integer: the number of legal moves. 
+<img src="Image/1036/3.png"></img><br clear=all></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>2
+6
+0 0 BRYRBY
+1 0 GRGBRB
+-1 1 GGYBYB
+0 1 YYBBGG
+-2 2 YYBGBG
+-3 3 BYGYGB
+BBRRGG GBYBYG RBRBGG GYBGBY GRBBRG
+4
+0 0 BYYGBG
+-1 1 GRGBBR
+1 0 YRBRYB
+2 0 YGGRRY
+RBBRYY GBGYBY YBBRYR YBYBRR RBBRGG</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>46
+2</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search='></a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=24945'>Submit</a>][<a href='problemstatus.php?id=24945'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=24945");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

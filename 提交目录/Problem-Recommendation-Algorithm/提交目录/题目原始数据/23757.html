@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?320867053" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 23757 --IQ Test</title><center><h2>23757: IQ Test</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>25&nbsp;&nbsp;<span class=green>Solved: </span>7<br>[<a href='submitpage.php?id=23757'>Submit</a>][<a href='problemstatus.php?id=23757'>Status</a>][<a href='bbs.php?pid=23757'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=23757'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=23757");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=23757'>下载测试数据1元</a>][20kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p style="font-size:14px;color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;background-color:#FFFFFF;">
+	In the city of Ultima Thule job applicants are often offered an IQ test.
+</p>
+<p style="font-size:14px;color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;background-color:#FFFFFF;">
+	The test is as follows: the person gets a piece of squared paper with a&nbsp;<span class="tex-span" style="font-size:18px;font-family:'times new roman', sans-serif;">4 × 4</span>&nbsp;square painted on it. Some of the square's cells are painted black and others are painted white. Your task is to repaint&nbsp;<span class="tex-font-style-bf" style="font-weight:bold;">at most one</span>cell the other color so that the picture has a&nbsp;<span class="tex-span" style="font-size:18px;font-family:'times new roman', sans-serif;">2 × 2</span>&nbsp;square, completely consisting of cells of the same color. If the initial picture already has such a square, the person should just say so and the test will be completed.
+</p>
+<p style="font-size:14px;color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;background-color:#FFFFFF;">
+	Your task is to write a program that determines whether it is possible to pass the test. You cannot pass the test if either repainting any cell or no action doesn't result in a&nbsp;<span class="tex-span" style="font-size:18px;font-family:'times new roman', sans-serif;">2 × 2</span>&nbsp;square, consisting of cells of the same color.
+</p></div><h2>Input</h2><div class=content><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">Four lines contain four characters each: the&nbsp;</span><span class="tex-span" style="font-size:18px;font-family:'times new roman', sans-serif;color:#222222;line-height:19.59375px;background-color:#FFFFFF;"><i>j</i></span><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">-th character of the&nbsp;</span><span class="tex-span" style="font-size:18px;font-family:'times new roman', sans-serif;color:#222222;line-height:19.59375px;background-color:#FFFFFF;"><i>i</i></span><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">-th line equals "</span><span class="tex-font-style-tt" style="font-size:15px;font-family:'courier new', monospace;color:#222222;line-height:19.59375px;background-color:#FFFFFF;">.</span><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">" if the cell in the&nbsp;</span><span class="tex-span" style="font-size:18px;font-family:'times new roman', sans-serif;color:#222222;line-height:19.59375px;background-color:#FFFFFF;"><i>i</i></span><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">-th row and the&nbsp;</span><span class="tex-span" style="font-size:18px;font-family:'times new roman', sans-serif;color:#222222;line-height:19.59375px;background-color:#FFFFFF;"><i>j</i></span><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">-th column of the square is painted white, and "</span><span class="tex-font-style-tt" style="font-size:15px;font-family:'courier new', monospace;color:#222222;line-height:19.59375px;background-color:#FFFFFF;">#</span><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">", if the cell is black.</span></div><h2>Output</h2><div class=content><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">Print "</span><span class="tex-font-style-tt" style="font-size:15px;font-family:'courier new', monospace;color:#222222;line-height:19.59375px;background-color:#FFFFFF;">YES</span><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">" (without the quotes), if the test can be passed and "</span><span class="tex-font-style-tt" style="font-size:15px;font-family:'courier new', monospace;color:#222222;line-height:19.59375px;background-color:#FFFFFF;">NO</span><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">" (without the quotes) otherwise.</span></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>####
+.#..
+####
+....
+####
+....
+####
+....
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>YES
+NO
+</span></pre><h2>HINT</h2>
+<div class=content><p><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">In the first test sample it is enough to repaint the first cell in the second row. After such repainting the required&nbsp;</span><span class="tex-span" style="font-size:18px;font-family:'times new roman', sans-serif;color:#222222;line-height:19.59375px;background-color:#FFFFFF;">2 × 2</span><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">&nbsp;square is on the intersection of the&nbsp;</span><span class="tex-span" style="font-size:18px;font-family:'times new roman', sans-serif;color:#222222;line-height:19.59375px;background-color:#FFFFFF;">1</span><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">-st and&nbsp;</span><span class="tex-span" style="font-size:18px;font-family:'times new roman', sans-serif;color:#222222;line-height:19.59375px;background-color:#FFFFFF;">2</span><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">-nd row with the&nbsp;</span><span class="tex-span" style="font-size:18px;font-family:'times new roman', sans-serif;color:#222222;line-height:19.59375px;background-color:#FFFFFF;">1</span><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">-st and&nbsp;</span><span class="tex-span" style="font-size:18px;font-family:'times new roman', sans-serif;color:#222222;line-height:19.59375px;background-color:#FFFFFF;">2</span><span style="color:#222222;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:19.59375px;background-color:#FFFFFF;">-nd column.</span></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%95%99%E5%AD%A6%E9%A2%98'>教学题</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=23757'>Submit</a>][<a href='problemstatus.php?id=23757'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=23757");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

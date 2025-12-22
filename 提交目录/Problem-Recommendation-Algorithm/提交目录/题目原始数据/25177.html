@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?2000871816" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 25177 --Check The Check（将军）</title><center><h2>25177: Check The Check（将军）</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>7&nbsp;&nbsp;<span class=green>Solved: </span>6<br>[<a href='submitpage.php?id=25177'>Submit</a>][<a href='problemstatus.php?id=25177'>Status</a>][<a href='bbs.php?pid=25177'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=25177'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=25177");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=25177'>下载测试数据1元</a>][24kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p></p>
+<p>Your task is to write a program that reads a chess board configuration and answers if there's a king under attack (i.e. &quot;in check&quot;). A king is in check if it's in a square which is attacked by an oponnet's piece (i.e. it's in square which can be taken by an oponnet's piece in his next move).</p>
+<p>White pieces will be represented by uppercase letters whereas black pieces will be represented by lowercase letters. White side will always be on the bottom of the board and black side will always be on the top of the board.</p>
+<p>For those unfamiliar with chess, here are the movements of each piece:</p>
+<p>Pawn (p or P): can only move straight ahead, one square at a time. But it takes pieces diagonally (and that's what concerns to you in this problem). <br />
+Knight (n or N): have a special movement and it's the only piece that can jump over other pieces. The knight movement can be viewed as an &quot;L&quot;. See the example bellow. <br />
+Bishop (b or B): can move any number of squares diagonally (forward or backward). <br />
+Rook (r or R): can move any number of squares vertically or horizontally (forward or backward). <br />
+Queen (q or Q): can move any number of squares in any direction (diagonally, horizontally or vertically, forward or backward). <br />
+King (k or K): can move one square at a time, in any direction (diagonally, horizontally or vertically, forward or backward).</p>
+<p>Movements examples ('*' indicates where the piece can take another pieces):</p>
+<p></p>
+<table cellspacing="20" height="211" width="572">
+    <tbody>
+        <tr>
+            <td>
+            <pre>
+Pawn
+........
+........
+........
+........
+...p....
+..*.*...
+........
+........
+</pre>
+            </td>
+            <td>
+            <pre>
+Rook
+...*....
+...*....
+...*....
+...*....
+***r****
+...*....
+...*....
+...*....
+</pre>
+            </td>
+            <td>
+            <pre>
+Bishop
+.......*
+*.....*.
+.*...*..
+..*.*...
+...b....
+..*.*...
+.*...*..
+*.....*.
+</pre>
+            </td>
+            <td>
+            <pre>
+Queen
+...*...*
+*..*..*.
+.*.*.*..
+..***...
+***q****
+..***...
+.*.*.*..
+*..*..*.
+</pre>
+            </td>
+            <td>
+            <pre>
+King
+........
+........
+........
+..***...
+..*k*...
+..***...
+........
+........
+</pre>
+            </td>
+            <td>
+            <pre>
+Knight
+........
+........
+..*.*...
+.*...*..
+...n....
+.*...*..
+..*.*...
+........
+</pre>
+            </td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p>Remember that the knight is the only piece that can jumper over other pieces. The pawn movement will depend on its side. If it's a black pawn, it can only move one square diagonally down the board. If it's a white pawn, it can only move one square diagonally up the board. The example above is a black pawn as it's a lowercase p (we say &quot;move&quot; meaning the squares where the pawn can move to when it takes another piece).</p>
+<p></p>
+<pre></pre>
+<hr />
+<p><b>&copy; 2001 Universidade do Brasil (UFRJ). Internal Contest 2001. <br />
+</b></p>
+<p></p></div><h2>Input</h2><div class=content><p>There will be an arbitrary number of board configurations on the input. Each board will consist of 8 lines of 8 characters each. A '.' character will represent an empty square. Upper and lower case letters (as defined above) will represent the pieces. There will be no invalid characters (i.e. pieces) and there won't be a configuration where both kings are in check. You must read until you find an empty board (i.e. a board that is formed only of '.' characters) which should not be processed. There will be an empty line between each pair of board configurations. In all boards (except the last one which is empty) will appear both the white king and the black king (one, and only one of each).</p>
+<p></p></div><h2>Output</h2><div class=content><p>For each board configuration read you must output one of the following answers:</p>
+<pre>
+Game #d: white king is in check.
+Game #d: black king is in check.
+Game #d: no king is in check.
+</pre>
+<p>Where d stands for the game number (starting from 1).</p>
+<p></p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>..k.....
+ppp.pppp
+........
+.R...B..
+........
+........
+PPPPPPPP
+K.......
+
+rnbqkbnr
+pppppppp
+........
+........
+........
+........
+PPPPPPPP
+RNBQKBNR
+
+rnbqk.nr
+ppp..ppp
+....p...
+...p....
+.bPP....
+.....N..
+PP..PPPP
+RNBQKB.R
+
+........
+........
+........
+........
+........
+........
+........
+........
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>Game #1: black king is in check.
+Game #2: no king is in check.
+Game #3: white king is in check.</span></pre><h2>HINT</h2>
+<div class=content><p><p>/*<br /><br />
+&nbsp;&nbsp; &nbsp;1.6.7将军（Check the Check）UVa 10196 // PC 1101017 <br /><br />
+*/</p><br />
+<p>仅供学习研究</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search='></a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=25177'>Submit</a>][<a href='problemstatus.php?id=25177'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=25177");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

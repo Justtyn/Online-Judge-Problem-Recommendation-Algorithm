@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?230759953" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 25249 --会议（meeting）</title><center><h2>25249: 会议（meeting）</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>54&nbsp;&nbsp;<span class=green>Solved: </span>25<br>[<a href='submitpage.php?id=25249'>Submit</a>][<a href='problemstatus.php?id=25249'>Status</a>][<a href='bbs.php?pid=25249'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=25249'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=25249");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=25249'>下载测试数据1元</a>][92kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content>&nbsp; &nbsp; &nbsp;&nbsp;小姜摆逆天之阵救人最终功亏一篑，虽然救出了魔君父亲，但雨柔永远的离他而去。被救的魔君姜世离却丝毫没有动摇他吞并人魔两界的野心，他很快回到魔教大营，准备组织人马进攻蜀山夺取伏羲剑并复当年被封印之仇。但是由于魔教多年无人经营，各个护法和诸部众都分布在不同的地区，姜世离准备集结他们来计划进攻方案。<br />
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp;人界各地都已被蜀山布上伏魔法阵，这些法阵由一些魔法点组成，某两个魔法点之间有结界相连，不同结界不会相交，任意两个魔法点之间最多只有一道结界，人界的任意两个地区都可以通过一道或多道结界联通，这样，整个人界就被这些结界分成许多块地区。由于某些原因，现在魔界各精英在不同的魔法点处，但是每个魔法点最多有一个魔族。为了避免被蜀山发现而计划败露，姜世离把集结地点会定在某一个地区内，在前往集结地的过程中，魔族们不能经过魔法点，另一方面，他们通过结界也很麻烦，所以他们想经过最少的结界，为此，姜世离决定选择一个地区作为集结地，使所有魔族到达该地区需要穿过的结界数最少。
+</p>
+<p>
+	<img src="/attached/image/20141013/20141013100701_26022.png" alt="" /> 
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;假设一共有N 个魔法点，他们分别用1 到N 的整数来编号，在图1 中，各魔法点被表示为相应编号的顶点，而结界则被表示为连接顶点的直线段，假设共有三名魔教精英，分别在魔法点3,6 和9，那么最优的集结地区和各魔族的路线如图2 所示，按照这种方案，魔族们共要穿过2 道结界，魔法点9 的魔族要穿过魔法点2 和4 之间的结界，而魔法点6 的魔族则要穿过魔法点4 和7 之间的结界。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;魔君姜世离已经急于进攻而不屑于规划集结地点了，于是他想到了地牢中的你，他给了你魔法点，地区，魔族属地和结界情况等信息，让你求出最优集结点，并让你给出相应的所有成员需要穿过的结界总数，还答应如果你在一秒钟内解决问题就放了你，否则~~，你决定赶快解决问题，好在魔教进攻之前通知蜀山。
+</p></div><h2>Input</h2><div class=content>第一行是一个正整数M，表示地区个数。<br />
+第二行也是一个正整数N，表示魔法点的个数。<br />
+第三行还是一个正整数L，表示魔教精英人数。<br />
+第四行是L 个互异的整数，对应各个精英的所在魔法点编号，他们按升序排列。<br />
+接下来2M 行，两两成对，分别描述各个地区，前两行对应第一个地区，接下来<br />
+两行对应第二个地区，以此类推。<br />
+每两行中的前一行是一个整数I，I 是沿对应地区边界的城市数目，沿该地区边<br />
+界环行一周，将依次经过这I 个魔法点，后一行中给出了I 个整数，记录了按顺<br />
+时针方向环行依次所访问的魔法点编号。<br />
+最后两行对应的那个地区与众不同，它包围了所有的其他地区和所有的魔法点，<br />
+注意：这各地区边界上的魔法点编号，按照逆时针的环行方向依次给出。<br /></div><h2>Output</h2><div class=content>第一行一个整数，表示你找的所有成员需要穿过的结界总数的最小值。<br />
+第二行也是一个整数，表示可以进行集结的地区编号，存在多个时输出编号最小的即可。<br /></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>10
+10
+3
+3 6 9
+3
+1 2 3
+3
+1 3 7
+4
+2 4 7 3
+3
+4 6 7
+3
+4 8 6
+3
+6 8 7
+3
+4 5 8
+4
+7 8 10 9
+3
+5 10 8
+7
+7 9 10 5 4 2 1</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>2
+3</span></pre><h2>HINT</h2>
+<div class=content><p>【样例解释】<br /><br />
+样例即对应题目中描述的例子。<br /><br />
+【数据范围】<br /><br />
+2≤M≤200<br /><br />
+3≤N≤250<br /><br />
+1≤L≤30<br /><br />
+如果你看到这里，请用Adobe Acrobat X Pro 打开本题目。<br /></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%9B%BE%E8%AE%BA-%E6%9C%80%E7%9F%AD%E8%B7%AF'>图论-最短路</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=25249'>Submit</a>][<a href='problemstatus.php?id=25249'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=25249");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

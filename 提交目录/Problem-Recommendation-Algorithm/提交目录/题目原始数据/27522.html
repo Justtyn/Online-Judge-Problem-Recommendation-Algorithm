@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1018057329" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 27522 --血缘关系</title><center><h2>27522: 血缘关系</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>4&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=27522'>Submit</a>][<a href='problemstatus.php?id=27522'>Status</a>][<a href='bbs.php?pid=27522'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=27522'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=27522");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=27522'>下载测试数据1元</a>][2100kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">我们正在研究妖怪家族的血缘关系。每个妖怪都有相同数量的基因，但是不同的妖怪的基因可能是不同的。我们希望知道任意给定的两个妖怪之间究竟有多少相同的基因。由于基因数量相当庞大，直接检测是行不通的。但是，我们知道妖怪家族的家谱，所以我们可以根据家谱来估算两个妖怪之间相同基因的数量。</span></p>
+<p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">妖怪之间的基因继承关系相当简单：如果妖怪</span><span lang="EN-US">C</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">是妖怪</span><span lang="EN-US">A</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">B</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的孩子，则</span><span lang="EN-US">C</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的任意一个基因只能是继承</span><span lang="EN-US">A</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">或</span><span lang="EN-US">B</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的基因，继承</span><span lang="EN-US">A</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">或</span><span lang="EN-US">B</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的概率各占</span><span lang="EN-US">50</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">％。所有基因可认为是相互独立的，每个基因的继承关系不受别的基因影响。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">现在，我们来定义两个妖怪</span><span lang="EN-US">X</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">Y</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的基因相似程度。例如，有一个家族，这个家族中有两个毫无关系</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">没有相同基因</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的妖怪</span><span lang="EN-US">A</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span lang="EN-US">B</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，及它们的孩子</span><span lang="EN-US">C</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">D</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。那么</span><span lang="EN-US">C</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span lang="EN-US">D</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">相似程度是多少呢？因为</span><span lang="EN-US">C</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">D</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的基因都来自</span><span lang="EN-US">A</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span lang="EN-US">B</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，从概率来说，各占</span><span lang="EN-US">50</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">％。所以，依概率计算</span><span lang="EN-US">C</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">D</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">平均有</span><span lang="EN-US">50</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">％的相同基因，</span><span lang="EN-US">C</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">D</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的基因相似程度为</span><span lang="EN-US">50</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">％。需要注意的是，如果</span><span lang="EN-US">A</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">B</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">之间存在相同基因的话，</span><span lang="EN-US">C</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span lang="EN-US">D</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的基因相似程度就不再是</span><span lang="EN-US">50</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">％了。</span></p>
+<p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">你的任务是写一个程序，对于给定的家谱以及成对出现的妖怪，计算它们之间的基因相似程度。</span></p>
+<p></p></div><h2>Input</h2><div class=content><p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">第一行两个整数</span><span lang="EN-US">n</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">k</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。</span><span lang="EN-US">n</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">（</span><span lang="EN-US">2</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">&le;</span><span lang="EN-US">n</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span><span lang="EN-US">300</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">）表示家族中成员数，它们分别用</span><span lang="EN-US">1, 2, </span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">&hellip;&hellip;</span><span lang="EN-US">, n</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">来表示。</span><span lang="EN-US">k</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">（</span><span lang="EN-US">0</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span><span lang="EN-US">k</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">&le;</span><span lang="EN-US">n-2</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">）表示这个家族中有父母的妖怪数量（其他的妖怪没有父母，它们之间可以认为毫无关系，即没有任何相同基因）。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">接下来的</span><span lang="EN-US">k</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">行，每行三个整数</span><span lang="EN-US">a, b, c</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，表示妖怪</span><span lang="EN-US">a</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">是妖怪</span><span lang="EN-US">b</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的孩子。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">然后是一行一个整数</span><span lang="EN-US">m</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">（</span><span lang="EN-US">1</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span><span lang="EN-US">m</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span><span lang="EN-US">n</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">），表示需要计算基因相似程度的妖怪对数。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">接下来的</span><span lang="EN-US">m</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">行，每行两个整数，表示需要计算基因相似程度的两个妖怪。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">你可以认为这里给出的家谱总是合法的。具体来说就是，没有任何的妖怪会成为自己的祖先，并且你也不必担心会存在性别错乱问题。</span></p>
+<p></p></div><h2>Output</h2><div class=content><p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">共</span><span lang="EN-US">m</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">行。可</span><span lang="EN-US">k</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">行表示第</span><span lang="EN-US">k</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">对妖怪之间的基因相似程度。你必须按百分比输出，有多少精度就输出多少，但不允许出现多余的</span><span lang="EN-US">0</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">（注意，</span><span lang="EN-US">0.001</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的情况应输出</span><span lang="EN-US">0.1%</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，而不是</span><span lang="EN-US">.1%</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">）。具体格式参见样例。</span></p>
+<p></p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>7 4 
+4 1 2 
+5 2 3 
+6 4 5
+7 5 6 
+4
+1 2 
+2 6
+7 5
+3 3
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>0% 
+50%
+81.25% 
+100% 
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search='></a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=27522'>Submit</a>][<a href='problemstatus.php?id=27522'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=27522");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1933337402" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 21926 --数据结构/二叉树/创建与遍历</title><center><h2>21926: 数据结构/二叉树/创建与遍历</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>8 MB<br><span class=green>Submit: </span>60&nbsp;&nbsp;<span class=green>Solved: </span>10<br>[<a href='submitpage.php?id=21926'>Submit</a>][<a href='problemstatus.php?id=21926'>Status</a>][<a href='bbs.php?pid=21926'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=21926'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=21926");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=21926'>下载测试数据1元</a>][20kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>
+	实验原理：
+</p>
+<p>
+	　　二叉树是最重要的一类树型结构。二叉链表是二叉树的一种比较直观和灵活的存储结构。在二叉链表中的每个结点由三部分组成：左孩子指针、右孩子指针和结点数据。
+</p>
+<p>
+	　　其中左右孩子指针分别指向本结点的左右孩子结点，如果一个结点的左右孩子不存在，则对应的指针记录为空值，C语言用NULL表示，画图时用^表示。
+</p>
+<p>
+	　　结点数据的数据类型应该根据实际应用选择，在本次实验中，为了方便输入和输出，我们选用字符类型。
+</p>
+<p>
+	&nbsp;
+</p>
+<p>
+	　　输入创建原理：
+</p>
+<p>
+	　　二叉树虽然可以很复杂，但是创建二叉树可以用递归方式进行，代码只需要几行，下面我们用伪代码来描述创建流程：
+</p>
+<p>
+	　　１、结点* 创建结点函数(){
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定义结点数据;
+</p>
+<p>
+	　　　　　　输入结点数据;
+</p>
+<p>
+	　　　　　　如果　结点数据为空　则返回NULL;//这里比较重要，我们规定输入字符^表示本结点不创建
+</p>
+<p>
+	　　　　　　创建结点* node;
+</p>
+<p>
+	　　　　　　赋值node的数据为刚刚输入的结点数据;
+</p>
+<p>
+	　　　　　　node.左孩子=创建结点函数();
+</p>
+<p>
+	　　　　　　node.右孩子=创建结点函数();
+</p>
+<p>
+	　　　　　　返回 node;
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+</p>
+<p>
+	　　２、在需要创建整课二叉树的地方写上：
+</p>
+<p>
+	　　　　　　　二叉树根结点　＝　创建结点函数()；
+</p>
+<p>
+	&nbsp; 　 遍历原理：先根遍历、后根遍历、中根遍历原理，请自行补充，
+</p>
+<p>
+	&nbsp;
+</p>
+<p>
+	实验步骤：
+</p>
+<p>
+	　　１、定义二叉链表结点类型；
+</p>
+<p>
+	　　２、实现二叉链表创建方法；
+</p>
+<p>
+	　　３、实现二叉链表的三种遍历方法；
+</p>
+<p>
+	　　４、实现主函数
+</p>
+<p>
+	　　
+</p>
+<p>
+	思考题：
+</p>
+<p>
+	　　1：为什么很多数据结构会有遍历的需求？
+</p>
+<p>
+	　　2：如何干净地释放整棵二叉树动态申请的所有结点？
+</p>
+<p>
+	&nbsp;
+</p>
+<p>
+	程欣宇2014年4月
+</p></div><h2>Input</h2><div class=content><p>
+	每行一棵非空的二叉树，每棵二叉树按先序遍历形式，空指针用字符^占位，如图的一棵二叉树。
+</p>
+<p>
+	如果读到一行的第一个字符就是^，表示没有更多输入了，程序退出。
+</p>
+<p>
+	测试时，每棵树不会超过20个结点。
+</p>
+<p>
+	<img title="二叉树" alt="二叉树" src="/attached/image/20140413/20140413103750_35277.png" width="177" height="257" /> 
+</p>
+<p>
+	输入是：
+</p>
+<p>
+	AB^DE^^^C^^
+</p>
+<p>
+	^
+</p></div><h2>Output</h2><div class=content><p>
+	对于每个二叉树，分别进行先根遍历、中根遍历、后根遍历，每种遍历结果输出一行。
+</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>DL^^R^^
+AB^DE^^^C^^
+^</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>DLR
+LDR
+LRD
+ABDEC
+BEDAC
+EDBCA</span></pre><h2>HINT</h2>
+<div class=content><p><p><br />
+	1、主函数可以采用以下流程<br />
+</p><br />
+<p><br />
+	　　int main(){<br />
+</p><br />
+<p><br />
+	　　　　定义结点指针;<br />
+</p><br />
+<p><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do{<br />
+</p><br />
+<p><br />
+	　　　　　　结点指针=创建结点函数();<br />
+</p><br />
+<p><br />
+	　　　　　　if (结点指针非空){<br />
+</p><br />
+<p><br />
+	　　　　　　　　先根遍历;换行<br />
+</p><br />
+<p><br />
+	　　　　　　　　中根遍历;换行<br />
+</p><br />
+<p><br />
+	　　　　　　　　后根遍历;换行<br />
+</p><br />
+<p><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+</p><br />
+<p><br />
+	　　　　}while(结点指针非空);<br />
+</p><br />
+<p><br />
+	　　　　return 0;<br />
+</p><br />
+<p><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+</p><br />
+<p><br />
+	2、<br />
+</p><br />
+<p><br />
+	如果不采用一次输入一行字符串处理其中每个字符，而是采用每次输入一个字符处理，需要略过空白换行等字符，如下：<br />
+</p><br />
+<p><br />
+	char ch;<br /><br />
+do{<br /><br />
+&nbsp;scanf("%c",&amp;ch);<br /><br />
+}while(ch&lt;=32);//确保读到一个非空白非换行的字符<br />
+</p><br />
+<p><br />
+	&nbsp;<br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=21926'>Submit</a>][<a href='problemstatus.php?id=21926'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=21926");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

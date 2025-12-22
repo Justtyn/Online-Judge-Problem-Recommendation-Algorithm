@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1695656687" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 21694 --统计字符的个数</title><center><h2>21694: 统计字符的个数</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>16&nbsp;&nbsp;<span class=green>Solved: </span>14<br>[<a href='submitpage.php?id=21694'>Submit</a>][<a href='problemstatus.php?id=21694'>Status</a>][<a href='bbs.php?pid=21694'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=21694'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=21694");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=21694'>下载测试数据1元</a>][84kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>
+	<span style="font-size:14px;">　　从键盘中任意输入一行字符串。</span> 
+</p>
+<p>
+	<span style="font-size:14px;">　　请编程统计输入的字符中的大写字母，小写字母和数字字符的个数分别是多少?</span> 
+</p></div><h2>Input</h2><div class=content><span style="font-size:14px;">　　输入只有一行,包括一串字符。(长度小于50)</span></div><h2>Output</h2><div class=content><span style="font-size:14px;">　　输出只有一行（这意味着末尾有一个回车符号），包括3个整数。分别代表大写字符，小写字符和数字字符的个数。</span></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>daDSALDdcada3240#
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>5 7 4
+</span></pre><h2>HINT</h2>
+<div class=content><p><p><br />
+	参考程序：<br />
+</p><br />
+<p><br />
+	<img src="data:image/png;base64,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" alt="" /><br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%85%A5%E9%97%A8%E9%A2%98-5.%E5%AD%97%E7%AC%A6%E4%B8%B2'>入门题-5.字符串</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=21694'>Submit</a>][<a href='problemstatus.php?id=21694'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=21694");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

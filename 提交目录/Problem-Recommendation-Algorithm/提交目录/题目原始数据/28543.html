@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1913640493" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 28543 -- [ZJOI2008]Risk</title><center><h2>28543:  [ZJOI2008]Risk</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>2&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='submitpage.php?id=28543'>Submit</a>][<a href='problemstatus.php?id=28543'>Status</a>][<a href='bbs.php?pid=28543'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=28543'>下载FPS0元</a>][<a onclick='$(this).load("cart.php?add=28543");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=28543'>下载测试数据0元</a>][206kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>
+	经过连续若干年的推广，Risk这个游戏已经风靡全国，成为大众喜闻乐见的重要娱乐方式。Risk这个游戏可以理解为一种简易的策略游戏，游戏者的目的是占领所有的土地。由于游戏规则的规定，只要两个国家相邻，就认为两个国家有交战的可能性。我们现在希望知道在当前的局面下，哪些国家之间有交战的可能性。注意，我们认为只有当两个国家的国界线有公共边的时候才认为相邻，若两个国家的领土只有公共点，则认为两个国家不相邻。
+</p>
+<p>
+	每一个国家的边界由一系列线段组成，保证这个边界是一个简单多边形，即严格不自交。为了定位每个国家的位置，我们还给出每个国家最庞大的一支军队的位置，保证这个位置一定出现在某一个形内，而不是出现在某条边界上。
+</p>
+<h2>
+	输入输出格式
+</h2>
+<strong>输入格式：</strong><br />
+<p>
+	<br />
+</p>
+<p>
+	输入文件的第一行中包括两个整数n,m。分别表示地图上的国家数和描述国家的边界的线段的数量。1&lt;=n&lt;=600，1&lt;=m&lt;=4000。接下来n行，每行用一对数描述了某个国家的主力军队的坐标。接下来m行，每行有4个数x1,y1,x2,y2，（x1,y1）-(x2,y2)描述了一条国界线。所有点的坐标都是0-10000之间的整数。
+</p>
+<p>
+	保证输入的所有线段至多只会在线段交点处相交。整张地图上有且仅有一块面积无限的空白区域不属于任何国家。每一条国界线两侧的区域或者隶属于两个不同的国家，或者分隔了一个国家与那块无穷大的空白区域。即保证一条国界线两侧的区域不同时属于同一个国家或是同时都是空白区域。所有封闭区域内部包含且仅包含一支主力军队，表示了该区域的归属。
+</p>
+<p>
+	<img src="http://naive.hustoj.com:80/admin/../https://www.luogu.org/problemnew/show/https://cdn.luogu.org/upload/pic/1707.png" alt="" /> 
+</p>
+<p>
+	例如上图中第一行的数据是合法的。而第二行中的数据都是不合法的。左边的那幅图包含线段两侧都是空白区域；中间的图包含线段两侧区域同时属于同一个国家；右边的图中军队被布置在了国界线上，因此非法；此外若最右侧的图中若没有军队也是非法的。保证输入文件提供的数据都是合法的，你的程序不需要进行数据合法性的判定。
+</p>
+<p>
+	<br />
+</p>
+<strong>输出格式：</strong><br />
+<p>
+	<br />
+</p>
+<p>
+	输出文件包括n行，每行第一个数字x表示有x个国家可能与这个国家交战，接着在同一行中升序输出x个整数，表示可能与这个国家交战的国家的编号。国家按输入中给出的顺序从1到n编号。注意数字间严格以一个空格隔开，并且不要在行末输出多余的空白字符。
+</p>
+<p>
+	<br />
+</p>
+<h2>
+	输入输出样例
+</h2>
+<div class="am-g">
+	<div class="am-u-md-6 copy-region">
+		<strong>输入样例#1：</strong> <a class="am-badge am-radius lg-bg-orange sample-copy">复制</a> 
+<pre>4 12
+3 2
+11 8
+12 17
+1 19
+0 0 10 0
+10 0 20 0
+20 0 20 10
+20 10 20 20
+20 20 10 20
+10 20 0 20
+0 20 0 10
+0 10 0 0
+10 0 10 10
+0 10 10 10
+20 10 10 10
+10 20 10 10
+</pre>
+	</div>
+	<div class="am-u-md-6 copy-region">
+		<strong>输出样例#1：</strong> <a class="am-badge am-radius lg-bg-orange sample-copy">复制</a> 
+<pre>2 2 4
+2 1 3
+2 2 4
+2 1 3
+</pre>
+	</div>
+</div>
+<div class="am-g">
+	<div class="am-u-md-6 copy-region">
+		<strong>输入样例#2：</strong> <a class="am-badge am-radius lg-bg-orange sample-copy">复制</a> 
+<pre>4 16
+170 13
+24 88
+152 49
+110 130
+60 60 140 60
+140 60 140 140
+140 140 60 140
+60 140 60 60
+0 0 200 0
+200 0 200 200
+200 200 0 200
+0 200 0 0
+40 40 160 40
+160 40 160 160
+160 160 40 160
+40 160 40 40
+20 20 180 20
+180 20 180 180
+180 180 20 180
+20 180 20 20
+</pre>
+	</div>
+	<div class="am-u-md-6 copy-region">
+		<strong>输出样例#2：</strong> <a class="am-badge am-radius lg-bg-orange sample-copy">复制</a> 
+<pre>1 2
+2 1 3
+2 2 4
+1 3
+</pre>
+	</div>
+</div>
+<div class="lg-article-sub am-g" id="sub">
+</div></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=ZJOI2008'>ZJOI2008</a>&nbsp;<a href='problemset.php?search=%E7%9C%81%E9%80%89'>省选</a>&nbsp;<a href='problemset.php?search=%E9%AB%98%E7%BA%A7'>高级</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=28543'>Submit</a>][<a href='problemstatus.php?id=28543'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=28543");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

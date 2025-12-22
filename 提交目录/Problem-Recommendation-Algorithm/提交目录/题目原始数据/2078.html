@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1858982570" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 2078 --Jugs</title><center><h2>2078: Jugs</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>32 MB<br><span class=green>Submit: </span>45&nbsp;&nbsp;<span class=green>Solved: </span>4<br>[<a href='submitpage.php?id=2078'>Submit</a>][<a href='problemstatus.php?id=2078'>Status</a>][<a href='bbs.php?pid=2078'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=2078'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=2078");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=2078'>下载测试数据1元</a>][24kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p style="color:#333333;font-family:'MicroSoft Yahei', Helvetica, Arial, Georgia, Simsun;font-size:14px;">
+	In the movie "Die Hard 3", Bruce Willis and Samuel L. Jackson were confronted with the following puzzle. They were given a 3-gallon jug and a 5-gallon jug and were asked to fill the 5-gallon jug with exactly 4 gallons. This problem generalizes that puzzle.
+</p>
+<p style="color:#333333;font-family:'MicroSoft Yahei', Helvetica, Arial, Georgia, Simsun;font-size:14px;">
+	&nbsp;&nbsp;&nbsp; You have two jugs, A and B, and an infinite supply of water. There are three types of actions that you can use: (1) you can fill a jug, (2) you can empty a jug, and (3) you can pour from one jug to the other. Pouring from one jug to the other stops when the first jug is empty or the second jug is full, whichever comes first. For example, if A has 5 gallons and B has 6 gallons and a capacity of 8, then pouring from A to B leaves B full and 3 gallons in A.
+</p>
+<p style="color:#333333;font-family:'MicroSoft Yahei', Helvetica, Arial, Georgia, Simsun;font-size:14px;">
+	&nbsp;&nbsp;&nbsp; A problem is given by a triple (Ca,Cb,N), where Ca and Cb are the capacities of the jugs A and B, respectively, and N is the goal. A solution is a sequence of steps that leaves exactly N gallons in jug B. The possible steps are
+</p>
+<p style="color:#333333;font-family:'MicroSoft Yahei', Helvetica, Arial, Georgia, Simsun;font-size:14px;">
+	&nbsp;&nbsp;&nbsp; fill A&nbsp;<br />
+&nbsp;&nbsp;&nbsp; fill B&nbsp;<br />
+&nbsp;&nbsp;&nbsp; empty A&nbsp;<br />
+&nbsp;&nbsp;&nbsp; empty B&nbsp;<br />
+&nbsp;&nbsp;&nbsp; pour A B&nbsp;<br />
+&nbsp;&nbsp;&nbsp; pour B A&nbsp;<br />
+&nbsp;&nbsp;&nbsp; success
+</p>
+<p style="color:#333333;font-family:'MicroSoft Yahei', Helvetica, Arial, Georgia, Simsun;font-size:14px;">
+	&nbsp;&nbsp;&nbsp; where "pour A B" means "pour the contents of jug A into jug B", and "success" means that the goal has been accomplished.
+</p>
+<p style="color:#333333;font-family:'MicroSoft Yahei', Helvetica, Arial, Georgia, Simsun;font-size:14px;">
+	&nbsp;&nbsp;&nbsp; You may assume that the input you are given does have a solution.
+</p>
+<p>
+	<span id="1360921774759S">&nbsp;</span> 
+</p></div><h2>Input</h2><div class=content><p>
+	<span style="color:#333333;font-family:'MicroSoft Yahei', Helvetica, Arial, Georgia, Simsun;font-size:14px;line-height:25px;">Input to your program consists of a series of input lines each defining one puzzle. Input for each puzzle is a single line of three positive integers: Ca, Cb, and N. Ca and Cb are the capacities of jugs A and B, and N is the goal. You can assume 0 &lt; Ca &lt;= Cb and N &lt;= Cb &lt;=1000 and that A and B are relatively prime to one another.&nbsp;</span> 
+</p></div><h2>Output</h2><div class=content><p>
+	<span style="color:#333333;font-family:'MicroSoft Yahei', Helvetica, Arial, Georgia, Simsun;font-size:14px;line-height:25px;">Output from your program will consist of a series of instructions from the list of the potential output lines which will result in either of the jugs containing exactly N gallons of water. The last line of output for each puzzle should be the line "success". Output lines start in column 1 and there should be no empty lines nor any trailing spaces.</span> 
+</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>3 7 1
+9 32 6
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>fill B
+pour B A
+empty A
+pour B A
+success
+fill B
+pour B A
+empty A
+pour B A
+empty A
+pour B A
+empty A
+pour B A
+fill B
+pour B A
+empty A
+pour B A
+empty A
+pour B A
+empty A
+pour B A
+empty A
+pour B A
+fill B
+pour B A
+empty A
+pour B A
+empty A
+pour B A
+success</span></pre><h2>HINT</h2>
+<div class=content><p><p><br />
+	&nbsp;<strong>倒水问题的经典形式是这样的：</strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　“假设有一个池塘，里面有无穷多的水。现有2个空水壶，容积分别为5升和6升。问题是如何只用这2个水壶从池塘里取得3升的水。”</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　当然题外是有一些合理的限制的，比如从池塘里灌水的时候，不管壶里是不是已经有水了，壶一定要灌满，不能和另一个壶里的水位比照一下“毛估估”（我们可以假设壶是不透明的，而且形状也不同）；同样的，如果要把水从壶里倒进池塘里，一定要都倒光；如果要把水从一个壶里倒进另一个壶里，也要都倒光，除非在倒的过程中另一个壶已经满了；倒水的时候水没有损失（蒸发溢出什么的）等等等等。</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　事实上，要解决上面这题，你只要用两个壶中的其中一个从池塘里灌水，不断地倒到另一个壶里，当第二个壶满了的时候，把其中的水倒回池塘里，反复几次，就得到答案了。以5升壶(A)灌6升壶(B)为例：</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　　　　A　　B<br /><br />
+0　　0<br /><br />
+5　　0　　A→B<br /><br />
+0　　5<br /><br />
+5　　5　　A→B<br /><br />
+4　　6<br /><br />
+4　　0　　A→B<br /><br />
+0　　4<br /><br />
+5　　4　　A→B<br /><br />
+3　　6</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　现在我们问，如果是多于2只壶的情况怎么办（这样一来就不能用上面的循环倒水法了）？如何在倒水之前就知道靠这些壶是一定能（或一定不能）倒出若干升水来的？试举数例：<br /><br />
+1)　两个壶：65升和78升，倒38升和39升。<br /><br />
+2)　三个壶：6升，10升和45升，倒31升。</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　我们可以看到，在1)中，65=5×13，78=6×13，而39=3×13。所以如果把13升水看作一个单位的话（原题中的“升”是没有什么重要意义的，你可以把它换成任何容积单位，毫升，加仑——或者“13升”），这题和最初的题目是一样的。而38升呢？显然是不可能的，它不是13的倍数，而65升和78升的壶怎么也只能倒出13升的倍数来。也可以这样理解：这相当于在原题中要求用5升和6升的壶倒出38/39升来。</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　那么2)呢？你会发现，只用任何其中两个壶是倒不出31升水的，理由就是上面所说的，(6,10)=2，(6,45)=3，(10,45)=5，（这里(a,b)是a和b的最大公约数），而2，3，5均不整除31。可是用三个壶就可以倒出31升：用10升壶四次，6升壶一次灌45升壶，得到1升水，然后灌满10升壶三次得30升水，加起来为31升。</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　一般地我们有“灌水定理”：</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　“如果有n个壶容积分别为A1，A2，……，An（Ai均为大于0的整数）设w为另一大于0的整数。则用此n个壶可倒出w升水的充要条件为：<br /><br />
+1)　w小于等于A1+A2+......+An；<br /><br />
+2)　w可被(A1,A2,......,An)（这n个数的最大公约数）整除。”</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　这两个条件都显然是必要条件，如果1)不被满足的话，你连放这么多水的地方都没有。2)的道理和上面两个壶的情况完全一样，因为在任何步骤中，任何壶中永远只有(A1,A2,......,An)的倍数的水。</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　现在我们来看一下充分性。在中学里我们学过，如果两个整数a和b互素的话，那么存在两个整数u和v，使得ua+vb=1。证明的方法很简单：在对a和b做欧几里德辗转相除时，所有中间的结果，包括最后得到的结果显然都有ua+vb的形式（比如第一步，假设a小于b，记a除b的结果为s，余数为t，即b=sa+t，则t=(-s)a+b，即u=-s，v=1）。而两个数互素意味着欧几里德辗转相除法的最后一步的结果是1，所以1也可以记作ua+vb的形式。稍微推广一点，如果(a,b)=c，那么存在u和v使得ua+vb=c（两边都除以c就回到原来的命题）。</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　再推广一点，如果A1，A2，……，An是n个整数，(A1,A2,......,An)=s，那么存在整数U1，U2，……，Un，使得</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　　　　　　U1A1 + U2A2 + ...... + UnAn = s. 　　　(*)</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　在代数学上称此结果为“整数环是主理想环”。这也不难证，只要看到</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　　　(A1,A2,A3,A4,......,An) = ((((A1,A2),A3),A4),......,An).</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　也就是说，可以反复应用上一段中的公式：比如三个数a，b，c，它们的最大公约数是d。假设(a,b)=e，那么(e,c)=((a,b),c)=d。现在有u1，u2使得u1a+u2b=e，又有v1，v2使得v1e+v2c=d，那么</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　　　　　(v1u1)a+(v1u2)b+(v2)c=d.</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　好，让我们回头看“灌水定理”。w是(A1,A2,......,An)的倍数，根据上节的公式(*)，两边乘以这个倍数，我们就有整数V1，V2，……，Vn使得 V1A1 + V2A2 + ...... + VnAn = w.注意到Vi是有正有负的。</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　这就说明，只要分别把A1，A2，……，An壶，灌上V1，V2，……，Vn次（如果Vi是负的话，“灌上Vi次”要理解成“倒空-Vi次”），就可以得到w升水了。具体操作上，先求出各Vi，然后先往Vi是正数的壶里灌水，灌1次就把Vi减1。再把这些水到进Vi是负数的壶里，等某个壶灌满了，就把它倒空，然后给这个负的Vi加1，壶之间倒来倒去不变更各Vi的值。要注意的是要从池塘里灌水，一定要用空壶灌，要倒进池塘里的水，一定要是整壶的。这样一直到所有Vi都是0为止。</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　会不会发生卡住了，既不能灌水又不能倒掉的情况？不会的。如果有Vi仍旧是负数，而Ai壶却没满：那么如果有其它Vi是正的壶里有水的话，就都倒给它；如果有其它Vi是正的壶里没水，那么就拿那个壶打水来灌（别忘了给打水的壶的Vi减1）；如果根本没有任何Vi是正的壶了——这是不可能的，这意味着w是负的。有Vi仍旧是正数，而Ai壶却没满的情况和这类似，你会发现你要用到定理中的条件1)。</span></strong><br />
+</p><br />
+<p><br />
+	<strong><span>　　这样“灌水定理”彻底得证。当然，实际解题当中如果壶的数目和容积都比较大的话，手工来找(*)中的各Ui比较困难，不过可以写个程序，连倒水的步骤都算出来。最后要指出的一点是，(*)中的Ui不是唯一的，所以倒水的方式也不是唯一的。</span></strong><br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0'>算法笔记</a>&nbsp;<a href='problemset.php?search=%E5%90%8D%E6%A0%A1%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%80%83%E7%9C%9F%E9%A2%98-%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6'>名校复试机考真题-北京大学</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=2078'>Submit</a>][<a href='problemstatus.php?id=2078'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=2078");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?768923130" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 2614 --乌龟棋</title><center><h2>2614: 乌龟棋</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>65&nbsp;&nbsp;<span class=green>Solved: </span>43<br>[<a href='submitpage.php?id=2614'>Submit</a>][<a href='problemstatus.php?id=2614'>Status</a>][<a href='bbs.php?pid=2614'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=2614'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=2614");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=2614'>下载测试数据1元</a>][92kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><span id="__kindeditor_bookmark_start_13__"></span> 
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-family:宋体;font-size:14px;">小明过生日的时候，爸爸送给他一副乌龟棋当作礼物。</span><span> </span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-family:宋体;font-size:14px;">乌龟棋的棋盘是一行</span><span style="font-size:14px;"> N</span><span style="font-family:宋体;font-size:14px;">个格子，每个格子上一个分数（非负整数）</span> <span style="font-family:宋体;font-size:14px;">。棋盘第</span><span style="font-size:14px;"> 1 </span><span style="font-family:宋体;font-size:14px;">格是唯一的起点，第</span><span style="font-size:14px;"> N</span><span style="font-family:宋体;font-size:14px;">格是终点，游戏要求玩家控制一个乌龟棋子从起点出发走到终点。</span><span> </span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span><span><span style="font-size:14px;">&nbsp;</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAc8AAABrCAIAAACe4J4wAAAJ70lEQVR4nO3c20/U5xbG8fVX9IorLrzwwgsSExPTxJgYYxpieqExO93ZySYltVFi22i1sY2HmG48tFpBFKhuoxWlHlojbBEPqBiVUQooaIVBQSsqDCAMJ+ew9sUMMICIySzW7130+dz5kw7fF+FhGGZKDAAA04+8DgAA+FvA2gIAaMDaAgBowNoCAGjA2gIAaMDaAgBowNoCAGjA2gIAaMDaAgBowNoCAGjA2gIAaMDaAgBowNoCAGjA2gIAaMDaAgBowNoCAGjQWFsCALAv2SUU2dMp3gcAgH3JLqHInk7xPiRCdSBVnJVORqo6Q6fA2spDqjgrnYxUdYZOgbWVh1RxVjoZqeoMnQJrKw+p4qx0MlLVGToF1lYeUsVZ6WSkqjN0CqytPKSKs9LJSFVn6BRYW3lIFWelk5GqztApsLbykCrOSicjVZ2hU2Bt5SFVnJVORqo6Q6fA2spDqjgrnYxUdYZOgbWVh1RxVjoZqeoMnQJrKw+p4qx0MlLVGToF1lYeUsVZ6WSkqjN0CqytPKSKs9LJMzU19NJ3LKewvLkv8WK4o7o4p6DMHxxzMVDza25+6aNe8VtI/hRew9rKQ6o4K508M1PDdXmxt6W1lwLDFyP3DsQvrilvH3nTh4fnxC5mnHsuegvJn8J7WFt5SBVnpZNnZmr/7ez4LC4+0Tx8ccC3K35x3tHG4Yuh2tz4RSqsF72F5E/hPaytPKSKs9LJMzR1sKk4I5Vo0U5f9+jFIf/JzFlEC7Nvd41eDLWcXTWbaP7m6x1R2VtI/hSew9rKQ6o4K52MVHWGToG1lYdUcVY6GanqDJ0CaysPqeKsdDJS1Rk6BdZWHlLFWelkpKozdAqsrTykirPSyUhVZ+gUWFt5SBVnpZORqs7QKbC28pAqzkonI1WdoVNgbeUhVZyVTkaqOkOnwNrKQ6o4K52MVHWGToG1lYdUcVY6GanqDJ0CaysPqeKsdDJS1Rk6BdZWHlLFWelkpKozdAqsrTykirPSyUhVZ+gUWFt5SBVnpZORqs7QKbC28pAqzkonI1WdoVNgbeUhVZyVTkaqOkOnwNrKQ6o4K52MVHWGToG1lYdUcVY6GanqDJ0CaysPqeKsdDJS1Rk6BdZWHlLFWelkpKozdAqsrTykirPSyUhVZ+gUWFt5SBVnpZORqs7QKbC28pAqzkonI1WdoVNgbeUhVZyVTkaqOkOnwNrKQ6o4K52MVHWGToG1lYdUcVY6GanqDJ0CaysPqeKsdDJS1Rk6BdZWHlLFWelkpKozdAqsrTykirPSyUhVZ+gUWFt5SBVnpZORqs7QKbC28pAqzkonI1WdoVMYW1sAANOSXUKRPZ3ifQAA2JfsEorsKQAAvBvWFgBAA9YWAEAD1hYAQAPWFgBAA9YWAEAD1hYAQAPWFgBAA9YWAECD1bWNBJ9cy1/5/bVur0MmF2w6uzk9hYiI5mcdru4IeR00uYEnpRsXxl4tk7a66GGv1z3vJ9xy6p8098gjrzvepbsqb3WCrGP1g14nzSDtfxzP27Et5pCvc8Lf9/xZXpS/K/b3u/KLyv/s8SAygb21jfb4L//81SIiIlp7KeB1ziRe39iaMu5VfyuKmt54nfU2bxp/WTa29MNDDxz+1hAXajr2MRFRYb3XJZOLPjw8d8xHdkPFxEmAZIR7Gk+tnR3/AvO/5Qss3HFxA9HX5e1h/bjx7K0t9weD4WhbyWcOr22oJoeW7qj4a5CZOdzp2/sxEREtO93qddkE0ebiTzZVtEdif+i6vjmFiCinxvG5HWo4GPuG6/La9tzYQmvyy0bd/cvJ77fWRZ+cit1f+GBz5euJf/30zApHvvIMrm1MfYG7axu9X7DtZjDxSvDmNiKirAuvvGqaTP9j/4towp8Dl9YS0Y6qfs+K3sNATc7crLLKE0tcXtto4y8LHP0EnWkCl9cN//Tw7zOt4+/EtpVmZpa2eRI2jt21LXR3bUPt7eN/YOyv2k5Ejvyjv0t/1XbXf+Dtq9qesv5KJzcXu7y2sW+ws5auP3T1cW/E65qZLXB53eKiygtfEBHRnJ2+Mfd0sLbJc3lt32LAt5OI8u9Hp35TT/Xc2EKrz790OLPnxhbaVPma2em1jfqPL0l8wDb9p2qvfqEbeuk7llNY3tyXeDHcUV2cU1DmH7NL4UDNr7n5pY/G/5Y0+VuYZoHL6xafaOb+2n0LiIho5bnnCd/fsLZJs7W2kbr9REuLHzu8YsyRzjt7l1L67qpOd++KdV3dmLK9KvZl7/LaRoIv/A13K87kZi0cWVxPPlvDdXkT333k3oH4xTXl7SNv+vDwnNjFjHPPRW9h2sXXljnSVvI5EREt2Fc78lgY1jZppta279b3RDt9A153TK6tcuvy0SdRLD/ud/K3ZB2Xvpq3r3b4w+jy2iZ687z8u9hTE76p6NJ+5/23s+P/qLE9YmbmAd+u+MV5RxuHL4Zqc4f//cd8TJO/hWk3srbMHLzzQxoREX1x4VXszg3WNmmG1naoLi9tXm6tw1sbN/TSd+Bfsa+WT0uc+PRMFH3xv1VL/vtw9Lf6VtaWmbn3xtbxdwSVDDYVZ6QSLdrpS3goY8h/MnMW0cLs2wnzH2o5u2o20fzN1zuisrcw3RLXljn89LeM2MM3hx4MMtZWgJm17b31n9TMs88ceLbf++m+9i0RxR8adUhbyaeUsef30lH7s4iIsvaXlpZea3L+FRnd174z873BmrFry8w9N7elEhHR+iudWNvk2VjbUOuZjPSfG9y/W5sger+AiFaXOfZktfpCmpzjryhjZubW08uwttNjwtoyhx4Xf0JERCuKrpzG2ibJwNpGXpV9OTf7tmP3EafWVppJlFfn2L3x/o7WlrEqds8houyLLS0tz7vdf9nAoyNp9FO1+50GvWVtmbnr6sbh78ZY2+S4vraR9otfp6y/HBjz+FXwbsGpJq+K3tfgnR8MvJiMbT1uy2/u56ctP9Xi9JNSzOq4+OWi4/6J10delI61TUq4dp/+E03eW7itJIvog7SFHw1bsmhuKhHRgXtuPbsq8uTkClq8qcQfjO3A0NPfVtOcPdVOv5QszuG1bT29jChl5ZH67ggzhzpu/ZhOq0pfYGunR+PReZN9HgQurcPaJqHvceXpg9+kx55+8vmeE+cbHHvhU+eV9ZM8vJh66IHXceMM3d09LvGzokd9U/93LnB4bTsrNoz5qP7jQF03pnYa9PkrjufF/h9VH2btLTr/YOJrSAYbDn6EtQU3hF4/e1Bz9071/aa2XvcfPjAj1POs4Y/qe43Puoa8Tvm7i77uCDjxeDnWFgBAA9YWAEAD1hYAQAPWFgBAA9YWAEAD1hYAQAPWFgBAA9YWAEAD1hYAQAPWFgBAA9YWAEAD1hYAQAPWFgBAw/8Bk2dsG/39z14AAAAASUVORK5CYII=" alt="" height="104" width="449" /></span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-family:宋体;font-size:14px;">乌龟棋中</span><span style="font-size:14px;"> M </span><span style="font-family:宋体;font-size:14px;">张爬行卡片，分成</span><span style="font-size:14px;"> 4 </span><span style="font-family:宋体;font-size:14px;">种不同的类型（</span><span style="font-size:14px;">M </span><span style="font-family:宋体;font-size:14px;">张卡片中不一定包含所有</span><span style="font-size:14px;"> 4 </span><span style="font-family:宋体;font-size:14px;">种类型的卡片，见样例）</span> <span style="font-family:宋体;font-size:14px;">，每种类型的卡片上分别标有</span><span style="font-size:14px;"> 1</span><span style="font-family:宋体;font-size:14px;">、</span><span style="font-size:14px;">2</span><span style="font-family:宋体;font-size:14px;">、</span><span style="font-size:14px;">3</span><span style="font-family:宋体;font-size:14px;">、</span><span style="font-size:14px;">4 </span><span style="font-family:宋体;font-size:14px;">四个数字之一，表示使用这种卡</span><span style="font-size:14px;">=</span><span style="font-family:宋体;font-size:14px;">片后，乌龟棋子将向前爬行相应的格子数。游戏中，玩家每次需要从所有的爬行卡片中选择一张之前没有使用过的爬行卡片，</span> <span style="font-family:宋体;font-size:14px;">控制乌龟棋子前进相应的格子数，</span> <span style="font-family:宋体;font-size:14px;">每张卡片只能使用一次。游戏中，乌龟棋子自动获得起点格子的分数，并且在后续的爬行中每到达一个格子，就得到该格子相应的分数。</span> <span style="font-family:宋体;font-size:14px;">玩家最终游戏得分就是乌龟棋子从起点到终点过程中到过的所有格子的分数总和。</span><span> </span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-family:宋体;font-size:14px;">很明显，用不同的爬行卡片使用顺序会使得最终游戏的得分不同，小明想要找到一种卡片使用顺序使得最终游戏得分最多。</span><span> </span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-family:宋体;font-size:14px;">现在，告诉你棋盘上每个格子的分数和所有的爬行卡片，你能告诉小明，他最多能得到多少分吗？</span> 
+</p>
+<br /></div><h2>Input</h2><div class=content><p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-family:宋体;font-size:14px;">输入的每行中两个数之间用一个空格隔开。</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-family:宋体;font-size:14px;">第</span><span style="font-size:14px;"> 1 </span><span style="font-family:宋体;font-size:14px;">行</span><span style="font-size:14px;">2 </span><span style="font-family:宋体;font-size:14px;">个正整数</span><span style="font-size:14px;"> N</span><span style="font-family:宋体;font-size:14px;">和</span><span style="font-size:14px;"> M</span><span style="font-family:宋体;font-size:14px;">，分别表示棋盘格子数和爬行卡片数。</span><span> </span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-family:宋体;font-size:14px;">第</span><span style="font-size:14px;"> 2 </span><span style="font-family:宋体;font-size:14px;">行</span><span style="font-size:14px;"> N</span><span style="font-family:宋体;font-size:14px;">个非负整数，</span><span><span style="font-size:14px;">a<sub>1</sub>,
+a<sub>2</sub>,</span><span style="font-size:14px;">&nbsp; </span></span><span style="font-family:宋体;font-size:14px;">……</span><span style="font-size:14px;">, a<sub>N</sub></span><span style="font-family:宋体;font-size:14px;">，其中</span><span style="font-size:14px;"> a<sub>i </sub></span><span style="font-family:宋体;font-size:14px;">表示棋盘第</span><span style="font-size:14px;"> i </span><span style="font-family:宋体;font-size:14px;">个格子的分数。</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-family:宋体;font-size:14px;">第</span><span style="font-size:14px;"> 3 </span><span style="font-family:宋体;font-size:14px;">行</span><span style="font-size:14px;">M </span><span style="font-family:宋体;font-size:14px;">个整数，</span><span style="font-size:14px;">b<sub>1</sub>,b<sub>2</sub>, </span><span style="font-family:宋体;font-size:14px;">……</span><span style="font-size:14px;">, b<sub>M</sub></span><span style="font-family:宋体;font-size:14px;">，表示</span><span style="font-size:14px;"> M </span><span style="font-family:宋体;font-size:14px;">张爬行卡片上的数字。</span><span> </span> 
+</p>
+<p>
+	<span style="font-size:14px;font-family:&quot;"><span style="font-size:14px;">&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:14px;font-family:宋体;">输入数据保证到达终点时刚好用光</span><span style="font-size:14px;font-family:&quot;"> M </span><span style="font-size:14px;font-family:宋体;"><span style="font-size:14px;">张爬行卡片，即</span> <img src="data:image/png;base64,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" alt="" height="64" width="122" /></span> 
+</p>
+<p>
+	【数据范围】 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于 30%的数据有 1 ≤ N≤ 30，1 ≤M≤ 12。 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于 50%的数据有 1 ≤ N≤ 120，1 ≤M≤ 50，且 4 种爬行卡片，每种卡片的张数不会超过 20。 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于 100%的数据有 1 ≤ N≤ 350，1 ≤M≤ 120，且 4 种爬行卡片，每种卡片的张数不会超过 40；0 ≤ ai ≤ 100，1 ≤ i ≤ N；1 ≤ bi ≤ 4，1 ≤ i ≤M。
+</p>
+<p>
+	<br />
+<span style="font-size:14px;font-family:宋体;"></span><span style="font-size:10.5pt;font-family:&quot;"> </span> 
+</p></div><h2>Output</h2><div class=content>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一个整数，表示最多得分。</div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>9 5 
+6 10 14 2 8 8 18 5 17 
+1 3 1 2 1
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>73</span></pre><h2>HINT</h2>
+<div class=content><p><p><br />
+	dp<br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92'>动态规划</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=2614'>Submit</a>][<a href='problemstatus.php?id=2614'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=2614");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

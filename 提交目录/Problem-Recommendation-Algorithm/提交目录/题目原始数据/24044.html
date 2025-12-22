@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1074020101" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 24044 --[USACO 4.2.4]奶牛自行车</title><center><h2>24044: [USACO 4.2.4]奶牛自行车</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=24044'>Submit</a>][<a href='problemstatus.php?id=24044'>Status</a>][<a href='bbs.php?pid=24044'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=24044'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=24044");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=24044'>下载测试数据1元</a>][76kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>[读者请注意，原题中的一些词语已经被改成了有关奶牛的双关语。] 秀&middot;谢夫（小奶牛）在花花公子杂志上中了大奖，于是她从农村搬到了城郊的一座别墅中。可是她还常常怀念乡村的生活，总想回到原来的农村逛逛。为了环保，秀决定骑上为她量身定做的奶牛自行车（特殊的自行车，专门为牛蹄设计）。 秀大约有一吨重。同样的，秀在普通的奶牛自行车上，要想骑得平平稳稳，也不是一件容易的事。因此，调节奶牛自行车的变速器让秀心力交瘁。 帮助秀选择她的奶牛自行车前面 F （1 &lt;= F &lt;= 5）个齿轮和后面 R （1 &lt;= R &lt;= 10）个齿轮，使她的 F*R 奶牛自行车符合下面的标准： 前面齿轮的型号（齿的数量）必须在给定的范围内。 后面齿轮的型号（齿的数量）必须在给定的范围内。 在每一种齿轮组合中，传动比率就是前面齿轮的齿数除以后面齿轮的齿数所得的商。 最大的传动比率至少是最小的三倍。 齿轮组合（已排好序）相邻两项的差的的方差（见下面的例子） 应该达到最小。 按照下面的公式计算平均数与方差（xi 代表数据） ：</p>
+<center><img alt="" src="/upload/pimg24044_1.bmp" /></center>
+<p>计算并确定最佳齿轮组合（其中 F 个前齿轮，R 个后齿轮），使方差最小（传动比率至少是 3x）。</p></div><h2>Input</h2><div class=content><p>第一行是 F 和 R，表示前齿轮和后齿轮的数量。第二行包括 4 个数字：F1，F2（25 &lt;= F1 &lt; F2 &lt;= 80），R1，R2（5 &lt;= R1 &lt; R2 &lt;= 40）。从 F1 到 F2 型号的前齿轮都是可用的；从 R1 到 R2 型号的后齿轮都是可用的。至少会有一组合法的解。</p></div><h2>Output</h2><div class=content><p>在第一行从小到大输出前齿轮的型号，用空格分开。在第二行从小到大输出后齿轮的型号，同样用空格分开。当然，齿轮的齿数一定是整数。 如果有多个解，输出前齿轮齿数最小的那一个（第一个齿轮齿数最小的，若第一个齿轮齿数相等，输出第二个齿轮齿数最小的&hellip;&hellip;依此类推）。如果所有的前齿轮齿数都相等，照着上面的办法处理后齿轮（其实就是把第一个，第二个&hellip;&hellip;齿轮分别设为第一，第二&hellip;&hellip;个关键字来排序）。</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>2 5
+39 62 12 28</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>39 53
+12 13 15 23 27</span></pre><h2>HINT</h2>
+<div class=content><p><p>这个问题最大的挑战就是&ldquo;读懂题目&rdquo;。慢慢读，不要想一步登天。如果你读不懂题目，还是得一遍一遍的把它读进去。 问题要我们找出&ldquo;最佳齿轮组合&rdquo;，即传动比率最接近平均数的组合。考虑下面的测试数据： 2 5 39 62 12 28 这意味着有 2 个前齿轮，型号范围在 39..62 ；5个后齿轮，型号范围在 12..28。程序必须检查所有前齿轮组成的有序对（共 62-39+1=24 种齿轮），和所有后齿轮组成的五元组（共 28-12+1=17 种齿轮）。根据组合数学原理，总共有 24!/22!/2! x 17!/5!/12! = 656,880 种可能（我是这么认为的）。 对于每一种可能，做下面的计算。举个例子来说，对于枚举到的第一种情况：前齿轮是 39 和 40，后齿轮是 12，13，14，15 和 16。 首先，计算所有可能的传动比率： 39/12 = 3.25000000000000000000 39/13 = 3.00000000000000000000 39/14 = 2.78571428571428571428 39/15 = 2.60000000000000000000 39/16 = 2.43750000000000000000 40/12 = 3.33333333333333333333 40/13 = 3.07692307692307692307 40/14 = 2.85714285714285714285 40/15 = 2.66666666666666666666 40/16 = 2.50000000000000000000 然后，对它们进行排序： 39/16 = 2.43750000000000000000 40/16 = 2.50000000000000000000 39/15 = 2.60000000000000000000 40/15 = 2.66666666666666666666 39/14 = 2.78571428571428571428 40/14 = 2.85714285714285714285 39/13 = 3.00000000000000000000 40/13 = 3.07692307692307692307 39/12 = 3.25000000000000000000 40/12 = 3.33333333333333333333 然后，计算差的绝对值： 2.43750000000000000000 - 2.50000000000000000000 = 0.06250000000000000000 2.50000000000000000000 - 2.60000000000000000000 = 0.10000000000000000000 2.60000000000000000000 - 2.66666666666666666666 = 0.06666666666666666666 2.66666666666666666666 - 2.78571428571428571428 = 0.11904761904761904762 2.78571428571428571428 - 2.85714285714285714285 = 0.07142857142857142857 2.85714285714285714285 - 3.00000000000000000000 = 0.14285714285714285715 3.00000000000000000000 - 3.07692307692307692307 = 0.07692307692307692307 3.07692307692307692307 - 3.25000000000000000000 = 0.17307692307692307693 3.25000000000000000000 - 3.33333333333333333333 = 0.08333333333333333333 然后计算平均数和方差。平均数是（我是这么认为的）0.0995370370370370370366666.。方差大约是 0.00129798488416722。 找出使方差最小的齿轮组合。</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=USACO'>USACO</a>&nbsp;<a href='problemset.php?search=Train'>Train</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=24044'>Submit</a>][<a href='problemstatus.php?id=24044'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=24044");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

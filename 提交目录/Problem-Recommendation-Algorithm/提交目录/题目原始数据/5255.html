@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1262712213" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5255 --USACO教程</title><center><h2>5255: USACO教程</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>29&nbsp;&nbsp;<span class=green>Solved: </span>23<br>[<a href='submitpage.php?id=5255'>Submit</a>][<a href='problemstatus.php?id=5255'>Status</a>][<a href='bbs.php?pid=5255'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5255'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5255");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5255'>下载测试数据1元</a>][4kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p align="center" style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<strong><span style="font-size:16px;">一、Complete Search</span></strong> 
+</p>
+<p align="center" style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<strong><span style="font-size:16px;">枚举搜索</span></strong> 
+</p>
+<p align="center" style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<br />
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	抛砖引玉，欢迎各位大牛不吝赐教
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	思想：
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	写枚举搜索时应遵循KISS原则（Keep it simple stupid，译为“写最单纯愚蠢的程序”，意思是应把程序写得尽量简洁），竞赛时写程序的最终目标就是在限制时间内求出解，而不需太在意否还有更快的算法。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	枚举搜索具有强大的力量，他用直接面向答案并尝试所有方案的方法发现答案。这种算法几乎总是解题时你第一个想到的方法。如果它能在规定的时间与空间限制内找出解，那么它常常很容易编写与调试。这就意味着你可以有时间去解答其他难题，即那些不能显示枚举算法强大的题目。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	如果你面对一道可能状态小于两百万的题目，那么你可以考虑使用枚举搜索。尝试所有的状态，看看它们是否可行。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	小心！小心！
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	有时，题目不会直接要求你使用枚举算法。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<br />
+＊问题： 派对灯[IOI 98]
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	在一次IOI派对上有N个灯和4个灯开关，第一个开关可以使所有灯改变状态（关上开着的灯，开启关着的灯），第二个开关可以改变所有偶数位上灯的状态，第三个开关可以改变所有奇数位上灯的状态，第四个开关控制着灯1、4、7、10……（3n+1）。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	告诉你N的值和所有按开关的次数（小于10,000次）。并告诉你某些灯的状态（例如：7号灯是关着的，10号灯是开着的）请编程输出所有灯可能的最后状态。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<br />
+很明显，每次按开关你都要尝试4种可能。那么总共要试&nbsp;<span class="texhtml" style="font-family:serif;">4<sup>10000</sup></span>&nbsp;次（大约&nbsp;<span class="texhtml" style="font-family:serif;">10<sup>6020</sup></span>），那意味着你没有足够的时间去使用枚举搜索，但是我们将枚举方法改进一下，那就可以使用枚举了。因为无论有多少个灯，由于开关控制的特殊性，都会出现6个灯一次循环的情况，即1号灯的状态永远与7号灯，13号灯，19号灯……相同，2号灯的状态也永远与8号灯，14号灯，20号灯……相同。同样，无论你按了多少次开关，按同一个开关两次就相当于没有按该开关，那么每一个开关就只需要考虑按一次或没有按，那么这题的枚举量就很小了。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	＊第3个问题： 时钟[IOI 94]
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	一组九个时钟在3 x 3栅格中; 其中每一个被设置到12:00、3:00、6:00或者9:00。 您的目标是操作他们全部读12:00。 不幸地，您能操作时钟的唯一的方式是九种不同类型的转动之一，每一个转动使时钟的某一子集顺时针方向90度。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	找到把所有时钟拨到12:00的转动的最短序列。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	要做的“明显的”事是一种递归解答，检查看是否有转动1的解答， 转动2等等，直到它发现一种解答。 这将花费<span class="texhtml" style="font-family:serif;">9<sup><i>k</i></sup></span>时间， k是移动的数量。 因为k也许相当大，这不能在合理时间限制内运行完成。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	注意移动的顺序不重要。 这使时间降低下来到<span class="texhtml" style="font-family:serif;"><i>k</i><sup>9</sup></span>，不足以改善程序运行所花费的时间。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	然而，从做每个转动4次是和不做是一样的，您知道每个转动总的不会超过3次。 因此，只有<span class="texhtml" style="font-family:serif;">4<sup>9</sup></span>种可能性，也就是262,072；根据经验，在一秒钟内，运算次数可以超过10,000,000次（也就是一千万次）。 暴力求解，从这个角度看，是能够完美地胜任的。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	样例问题 ＊奶牛[USACO 1996年比赛]
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	给出挤奶日程表(农夫A 从300时间挤奶到1000时间，农夫B 从700到1200时间等等)，计算
+</p>
+<pre>  * 至少一头母牛被挤奶的最长时间
+  * 没有母牛被挤奶的最长时间
+</pre>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	完全母牛&amp;亲和母牛表兄弟[USACO 1995 Final Round]
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	完全数是真因子（即除了本身之外的约数）的和等于本身的数。 例如， 28 = 1 + 2 + 4 + 7 + 14。一对亲和数（又叫相亲数）是其中任一个数的所有真因数之和等于另一个数的一对数。当然，亲和数链（也叫相亲数链）就是第一个数的真因数之和等于第二个数，第二个数的真因数之和等于第三个……等等，直到最后一个数的真因数之和等于第一个数。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	农夫约翰的大农场里的每头母牛按顺序从1到32000有一个编号。一头编号是完全数的母牛就是完全母牛。 如果他们的编号形成了一个亲和数链，这些母牛就互相是亲和母牛表兄弟。 找出所有完全母牛和亲和母牛表兄弟。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<br />
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<br />
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<br />
+</p>
+<p style="text-align:center;font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<strong><span style="font-size:16px;">二、贪心算法：</span></strong> 
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	part1: 『样例问题：Barn Repair[1999 USACO Spring Open] 有一长列的牛棚，其中一些需要木板作为屋顶。你可以利用N(N&lt;=50)块木板，任何一块木板都可以覆盖任意长度的牛棚。覆盖所有的必须被覆盖的牛棚并且使覆盖的牛棚数最少。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	主要思想： 贪心算法的最基本思想便是利用小规模的解来得到大规模的解。不像其他的方法。然而，贪心算法只能依赖于所求出的最好的答案。因此，对于样例问题来说，要得到N=5时的答案，必须先求出当N=4时的最好的答案。然后通过这些解去得到N=5时的解。没有一个N=4的解是曾被考虑过的。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	问题： 贪心算法有两个基本的问题。（1、如何去构造贪心策略。2、证明贪心算法的正确性。）
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	如何去构造贪心策略 如何让一个大规模的解从小规模的解里得出？一般来说，这是一个问题的关键。对于样例问题来说，最明显的方法是在四块板到五块板的过程中，挑选一块板，然后去除这一块木板中间的一段，这样就相当于使一块木板变成了两块。你应该选择去除所有木板中有最大的一段覆盖了不需要覆盖木板的牛棚的木板。 为了去除一段已覆盖的牛棚，要选择一块覆盖了那些牛棚的木板，然后将它分成两块：一块覆盖了在分隔段前的牛棚，一块覆盖了在分隔段后的牛棚。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	贪心算法的正确性 事实上，真正的挑战在于贪心所得到的解并不一定正确。即使它们看上去得出了样例答案，随机答案，以及任何你能够想到的情况。但如果有一种情况不正确，那么在评测中至少会出现一个（如果不多）错误。 对于样例问题，来看一下上述描述的贪心算法是否正确，考虑如下： 假设答案不包含算法运行时所除去的最大的裂缝（即前文的分隔块），但是去除了比较小的裂缝。通过在最后结合两块木板在两种不同情况下所得到的答案。两种种情况使用的木板一样多，但其中一种却覆盖了更少的牛棚。覆盖更少牛棚的方案更优，所以假设错误，我们应该一直选择去除更大的裂缝。 如果答案不包含这个特殊的裂缝，而包含了另一个和这个裂缝一样大，做了相同变化，使答案也同样。那么这个新的选择也是正确的，我们可以任选一个。 因此，存在一个最佳答案包含了最大裂缝。所以，在每一步中，总存在一个最佳答案是一个最佳选择，从而可知，最终的答案一定是最佳的。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	结论 如果贪心算法存在，使用它，他们容易编写，容易调试，运行快速，而且使用更少的内存，在比赛环境中较好地编写一个正确算法。唯一缺少的元素便是正确性。如果贪心算法能够得到正确答案，那么就用它，但不要认为贪心算法适用于所有题目。』
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	类似问题：
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	三值排序问题 [IOI 1996]
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	有一个由N个数值均为1、2或3的数构成的序列（N&lt;= 1000），其值无序，现要求你用最少的交换次数将序列按升序顺序排列。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	算法：排序后的序列分为三个部分：排序后应存储1的部分，排序后应存储2的部分和排序后应存储3的部分，贪心排序法应交换尽量多的交换后位置正确的（2，1）、（3，1）和（3，2）数对。当这些数对交换完毕后，再交换进行两次交换后位置正确的（1，2，3）三个数。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	分析：很明显，每一次交换都可以改变两个数的位置，若经过一次交换以后，两个数的位置都由错误变为了正确，那么它必定最优。同时我们还可发现，经过两次交换后，我们可以随意改变3个数的位置。那么如果存在三个数恰好为1，2和3，且位置都是错误的，那么进行两次交换使它们位置正确也必定最优。有由于该题具有最优子结构性质，我们的贪心算法成立。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	货币系统 -- 一个反例 [已删节]
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	奶牛王国刚刚独立，王国中的奶牛们要求设立一个货币系统，使得这个货币系统最好。现在告诉你一个货币系统所包含的货币面额种类（假设全为硬币）以及所需要找的钱的大小，请给出用该货币系统找出该钱数，并且要求硬币数尽量少。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	算法：每次都选择面额不超过剩余钱数但却最大的一枚硬币。例如：有货币系统为{1，2，5，10}，要求找出16，那么第一次找出10，第二次找出5，第三次找出1，恰好为最优解。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	错误分析: 其实可以发现，这种算法并不是每一次都能构成最优解。反例如：货币系统{1，5，8，10}，同样找16，贪心的结果是10，5，1三枚，但用两枚8的硬币才是最优解。因为这样，贪心的性质不成立，如此解题也是错的。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	拓扑排序
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	给你一些物品的集合，然后给你一些这些物品的摆放顺序的约束，如"物品A应摆放在物品B前"，请给出一个这些物品的摆放方案，使得所有约束都可以得到满足。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	算法：对于给定的物品创建一个有向图，A到B的弧表示"物品A应摆放在物品B前”。以任意顺序对每个物品进行遍历。每当你找到一个物品，他的入度为0，那么贪心地将它放到当前序列的末尾，删除它所有的出弧，然后对它的出弧指向的所有结点进行递归，用同样的算法。如果这个算法遍历了所有的物品，但却没有把所有的物品排序，那就意味着没有满足条件的解。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<br />
+</p>
+<p style="text-align:center;font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;"><strong>三、</strong></span><span style="font-size:16px;"><strong>竞赛中的策略</strong></span> 
+</p>
+<p>
+	<br />
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	首先通读题目，然后写出它的算法、复杂度、数据规模、数据结构、程序细节……
+</p>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		想想所有可能的算法——然后选有效的中最笨的！
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		做数学计算！（时空复杂度，最坏的和期望的）
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		试着打破算法——利用特殊（让算法退化？）的测试数据（感觉是条件，但test cases就是测试数据）
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		做题的顺序：先做最简短的，根据你的情况（顺序（用时从短到长）：做过的、简单的、不常见的、难的）
+	</li>
+</ul>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	编写程序代码——每个程序一次解决：
+</p>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		定下算法
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		想出特殊的测试数据（最狡猾的）
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		写出数据结构
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		写input代码，调试（写额外的输出程序去检测，笔者猜是“对拍”吧？）（后译者注：原句write extra output routines to show data？个人认为意思是写额外的输出程序显示输入数据，估计目的为了确认输入处理正确——这个绝对有惨痛教训的。）（另一译者：另外一定要注意完成最终代码的时候删除这些输出语句！）
+	</li>
+</ul>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	（这句话的意思是，要满足题目规定的结果数据输出格式，比如两组数字之间是空格还是tab等等）
+</p>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		写output代码，调试
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		逐步完善：写注释，写出程序的思路
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		写出代码，一段一调试
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		运行&amp;查正确性（使用特殊的数据）
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		试着去break代码的正确性——使用特殊的测试数据
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		不断优化——根据需求（使用极端的测试数据来测试运行时间）
+	</li>
+</ul>
+<h2 style="background-color:#FFFFFF;font-weight:normal;font-size:19px;font-family:sans-serif;">
+	<span class="editsection" style="font-size:13px;">[<a href="http://www.nocow.cn/index.php?title=Translate:USACO/Winning_Solutions&amp;action=edit&amp;section=2">编辑</a>]</span><span class="mw-headline" id=".E6.97.B6.E9.97.B4.E6.8E.A7.E5.88.B6_.E5.92.8C_.E9.99.8D.E4.BD.8E.E6.8D.9F.E5.A4.B1_scenarios">时间控制 和 降低损失 scenarios</span> 
+</h2>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	当出现错误的时候，有一个调试的计划；想想程序是什么样的，你希望它有什么样的输出？重点问题是：“什么时候你要去查错，什么时候你要放弃去做下一道题？”思考这些问题：
+</p>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		你已经用了多长时间去查它的错？
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		看起来这是什么类型的错误？
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		是你的算法错误吗？
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		是不是你的数据结构需要变化？
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		你有没有一些线索，错误在哪？
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		短时间的查错（20分钟）比转去做别的题好；但是你可能用45分钟解决另一道题。
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		什么时候去回头看一些你已经放弃的问题？
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		当你已经花了很多时间去优化一道题，什么时候应该去看下一道题？
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		想到这——忘记之前，想想，从现在开始：怎样你才能在接下来的时间里得到最高的分数？
+	</li>
+</ul>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<br />
+有一个checklist，在交上你的代码之前：
+</p>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		在竞赛结束前5分钟停止对代码的修改。
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		停止维护。
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		停止调试性的输出。
+	</li>
+</ul>
+<h2 style="background-color:#FFFFFF;font-weight:normal;font-size:19px;font-family:sans-serif;">
+	<span class="editsection" style="font-size:13px;">[<a href="http://www.nocow.cn/index.php?title=Translate:USACO/Winning_Solutions&amp;action=edit&amp;section=3">编辑</a>]</span><span class="mw-headline" id=".E6.8A.80.E5.B7.A7.26.E8.AF.80.E7.AA.8D">技巧&amp;诀窍</span> 
+</h2>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		穷举，如果能这么做
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		保持简单，傻瓜 (KISS = Keep It Simple, Stupid)：简化就是聪明！
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		要点：注意限制条件（题目描述）
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		浪费内存空间吧，当它会让你的生活变得容易时。
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		不要删除你调试的额外输出，注释掉它。
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		不断优化，但是只要满足你的需求就可以了。
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		保留下所有的代码版本！
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		调试代码：
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		<ul>
+			<li>
+				空格是个好东西
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		<ul>
+			<li>
+				使用有实际意义的变量名
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		<ul>
+			<li>
+				不要重复使用变量
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		<ul>
+			<li>
+				逐步完善
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		<ul>
+			<li>
+				在代码之前写注释
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		可以的话，尽量避免指针
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		像避免灾难一样避免动态分配内存：静态分配所有变量。
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		试着不要去用浮点数 ；如果不得不用，在所有的地方去容差（不要用 == 判断相等）
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		对注释的评论：
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		<ul>
+			<li>
+				不要大段散文，只要简单的注释。
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		<ul>
+			<li>
+				解释高级的功能：++i; /* 把i自增 */ 写出这样的注释比没有任何注释还糟糕
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		<ul>
+			<li>
+				解释难懂的代码
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		<ul>
+			<li>
+				分割&amp;功能的模块化
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		<ul>
+			<li>
+				让聪明的人懂你的程序，而不是代码
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		<ul>
+			<li>
+				所有的事情你都要去思考
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		<ul>
+			<li>
+				对所有你第一次看到的东西，说“我怎么把它再做一遍？”
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		<ul>
+			<li>
+				总是去说明每个数组的意义
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		记录你每一次比赛的表现：优点、错误、哪些地方可以做得更好；用这些来重写一遍，改进你的比赛计划！
+	</li>
+</ul>
+<h2 style="background-color:#FFFFFF;font-weight:normal;font-size:19px;font-family:sans-serif;">
+	<span class="editsection" style="font-size:13px;">[<a href="http://www.nocow.cn/index.php?title=Translate:USACO/Winning_Solutions&amp;action=edit&amp;section=4">编辑</a>]</span><span class="mw-headline" id=".E5.A4.8D.E6.9D.82.E5.BA.A6">复杂度</span> 
+</h2>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<b>基础和命令符号 略</b> 
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<b>经验</b> 
+</p>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		当分析对于一个给定的数据，需要运行多长时间，首先一个常识是：现在（2004）计算机1s可以处理100M的内容。在一个时限5s的程序中，大概可以有500M的动作。好的优化可以让这个数字×2甚至×4。算法的复杂度大概只能到这个数的一半。现在的竞赛常常对很大的数据给出1s的时限。
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		最多用16M内存
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		2的10次方≈10的3次方
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		如果你在N次迭代中，每次有k层循环，那你的程序有O(N的k次方)的复杂度。
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		如果你有L level，每level有b层递归调用，那么复杂度是O(b的L次方)。
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		记住，N！是排列，2的n次方 是 子集 或 组合。
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		对N个元素排序的最好时间复杂度是O(N log N)。
+	</li>
+</ul>
+<ul style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<li>
+		<b>做数学计算！</b>Plug in the numbers.
+	</li>
+</ul>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<br />
+<b>算复杂度例子： 略</b> 
+</p>
+<h2 style="background-color:#FFFFFF;font-weight:normal;font-size:19px;font-family:sans-serif;">
+	<span class="editsection" style="font-size:13px;">[<a href="http://www.nocow.cn/index.php?title=Translate:USACO/Winning_Solutions&amp;action=edit&amp;section=5">编辑</a>]</span><span class="mw-headline" id=".E8.A7.A3.E5.86.B3.E9.97.AE.E9.A2.98.E4.BE.8B.E5.AD.90">解决问题例子</span> 
+</h2>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<b>直接生成 VS 爆搜</b> 
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	（原文：Generating vs. Filtering，直译：生成VS筛选，怪怪的）
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	计算出非常多可能的解然后选择一个正确的（比如八皇后问题）方法是爆搜，一开始就计算可行解的方法是直接生成。一般，爆搜比较容易写（写得也快）但运行得慢。估算以确定题目规模允许爆搜还是不得不需要找出一定的算法。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<br />
+<b>预运算</b> 
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	有的时候打表或用其他数据结构能够使结果可能更快地被找出。这叫做预运算（也可以说是用空间换时间）。你可以把计算好的结果写到程序中编译，也可以在程序开始运行时计算，也可以让程序记下之前运算的结果。比如说，一个必须把大写字母转换为小写字母的程序可以打出一张对应表。竞赛中经常需要用到素数——许多时候比较常见的方法是先运算一张素数表然后在其他地方调用。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<b>分解（在竞赛中最难做到）</b> 
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	虽然有少于20个基本算法在竞赛问题中用得到，但是解决由两个算法组合的问题是令人望而生畏的。试着把问题分割，让您可以结合循环或另一种算法来独立解决问题的不同部分。请注意，有时你可以在数据不同部分使用相同的算法两次（独立的!）来显著降低您的运行时间。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<br />
+<b>对称性</b> 
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	许多问题都有对称性（比如说，一对点间的距离从两种方向遍历是相同的）。对称性可以有两路、四路、八路甚至更多。试着利用对称性来降低程序运行时间。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	举例来说，利用四路对称，你只需解决四分之一的问题然后利用对称性写出其余答案。（当然，要注意一些自对称方案只需输出1次或2次）
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<br />
+<b>从前往后还是从后往前</b> 
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	令人惊奇的是，对于许多竞赛问题的测试数据中从后往前比从前往后运算要好很多。注意逆序处理数据或者构造一些常规数据以外的特别的顺序或题目中流行的测试数据。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<b>简化</b> 
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	有些问题是可以改写成一个有点不同的问题，让你认为就像解决新问题，你可能对原来的问题有或很容易想到解决方案。当然，你应该解决是两个中容易的。另外，对一些问题可以用归纳法，先做点改变解决一个小问题然后找到完整解法。
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<h1 id="firstHeading" class="firstHeading" style="text-align:center;font-weight:normal;font-size:24px;font-family:sans-serif;">
+		<span style="font-size:16px;"><strong>四、More Search Techniques</strong></span>
+	</h1>
+	<p>
+		<div id="contentSub" style="font-size:12px;margin:0px 0px 1.4em 1em;color:#7D7D7D;">
+		</div>
+		<p>
+			<p>
+				样例: n 皇后问题 [经典问题] 将 n 个皇后摆放在一个 n x n 的棋盘上，使得每一个皇后都无法攻击到其他皇后。
+			</p>
+			<p>
+				深度优先搜索 (DFS)
+			</p>
+			<p>
+				显而易见，最直接的方法就是把皇后一个一个地摆放在棋盘上的合法位置上，枚举所有可能寻找可行解。可以发现在棋盘上的每一行（或列）都存在且仅存在一个皇后，所以，在递归的每一步中，只需要在当前行(或列）中寻找合法格，选择其中一个格摆放一个皇后。
+			</p>
+<pre>                                            
+1 search(col)
+2     if filled all columns
+3          print solution and exit
+4     for each row
+5      if board(row, col) is not attacked
+6          place queen at (row, col)
+7          search(col+1)
+8          remove queen at (row, col)
+</pre>
+			<p>
+				<br />
+从search(0)开始搜索，由于在每一步中可选择的节点较少，该方法可以较快地求解： 当一定数量的皇后被摆放在棋盘上后那些不会被攻击到的节点的数量将迅速减少。
+			</p>
+			<p>
+				这是深度优先搜索的一个经典例题，该算法总是能尽可能快地抵达搜索树的底层：当 k 个皇后被摆放到棋盘上时，可以马上确定如何在棋盘上摆放下一个皇后，而不需要去考虑其他的顺序摆放皇后可能造成的影响（如当前情况是否为最优情况），该方法有时可以在找到可行解之前避免复杂的计算，这是十分值得的。
+			</p>
+			<p>
+				深度优先搜索具有一些特性，考虑下图的搜索树：&nbsp;<a href="http://www.nocow.cn/index.php/%E6%96%87%E4%BB%B6:Rec.tree1.gif" class="image"><img alt="Rec.tree1.gif" src="http://www.nocow.cn/images/f/fe/Rec.tree1.gif" width="375" height="210" /></a>
+			</p>
+			<p>
+				<br />
+			</p>
+			<p>
+				<br />
+			</p>
+			<p>
+				该算法用逐步加层的方法搜索并且适当时回溯，在每一个已被访问过的节点上标号，以便下次回溯时不会再次被搜索。绘画般地，搜索树将以如下顺序被遍历：
+			</p>
+			<p>
+				<a href="http://www.nocow.cn/index.php/%E6%96%87%E4%BB%B6:Rec2.gif" class="image"><img alt="Rec2.gif" src="http://www.nocow.cn/images/d/d4/Rec2.gif" width="318" height="281" /></a>
+			</p>
+			<p>
+				<br />
+			</p>
+			<p>
+				复杂度： 假设搜索树有 d 层（在样例中 d=n ，即棋盘的列数）。再假设每一个节点都有 c 个子节点（在样例中，同样 c=n ，即棋盘的行数，但最后一层没有子节点，除外）。那么整个搜索花去的时间将与&nbsp;<span class="texhtml" style="font-family:serif;"><i>c</i><sup><i>d</i></sup></span>成正比，是指数级的。但是其需要的空间较小，除了搜索树以外，仅需要用一个栈存储当前路径所经过的节点，其空间复杂度为&nbsp;<img class="tex" alt="\mathcal{O}(d)" src="http://www.nocow.cn/images/math/9/d/7/9d72f43fc991ce6601abddc0fd6b3c68.png" />&nbsp;。
+			</p>
+			<p>
+				样例：骑士覆盖问题[经典问题] 在一个 n x n 的棋盘中摆放尽量少的骑士，使得棋盘的每一格都会被至少一个骑士攻击到。但骑士无法攻击到它自己站的位置.
+			</p>
+			<p>
+				广度优先搜索 (BFS) 在这里，最好的方法莫过于先确定 k 个骑士能否实现后再尝试 k+1 个骑士，这就叫广度优先搜索。通常，广度优先搜索需用队列来帮助实现。
+			</p>
+<pre>1 process(state)
+2   for each possible next state from this one
+3       enqueue next state 
+
+4 search()
+5   enqueue initial state
+6   while&nbsp;!empty(queue)
+7       state = get state from queue
+8       process(state)
+</pre>
+			<p>
+				广度优先搜索得名于它的实现方式：每次都先将搜索树某一层的所有节点全部访问完毕后再访问下一层, 再利用先前的那颗搜索树，广度优先搜索以如下顺序遍历：
+			</p>
+			<p>
+				<a href="http://www.nocow.cn/index.php?title=%E7%89%B9%E6%AE%8A:%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6&amp;wpDestFile=Rec3.gif" class="new">文件:Rec3.gif</a>
+			</p>
+			<p>
+				<br />
+			</p>
+			<p>
+				首先访问根节点，而后是搜索树第一层的所有节点，之后第二层、第三层……以此类推。
+			</p>
+			<p>
+				复杂度： 广度优先搜索所需的空间与深度优先搜索所需的不同（ n 皇后问题的空间复杂度为&nbsp;<img class="tex" alt="\mathcal{O}(n)" src="http://www.nocow.cn/images/math/c/f/3/cf373ba944d0faa2f0ee7d828d18f610.png" />&nbsp;）,广度优先搜索的空间复杂取决于每层的节点数。如果搜索树有 k 层，每个节点有 c 个子节点，那么最后将可能有&nbsp;<span class="texhtml" style="font-family:serif;"><i>c</i><sup><i>k</i></sup></span>&nbsp;个数据被存入队列，这个复杂度无疑是巨大的。所以在使用广度优先搜索时，应小心处理空间问题。
+			</p>
+			<p>
+				迭代加深搜索 (ID) 广度优先搜索可以用迭代加深搜索代替。迭代加深搜索实质是限定下界的深度优先搜索，即首先允许深度优先搜索搜索 k 层搜索树，若没有发现可行解，再将 k+1 后再进行一次以上步骤，直到搜索到可行解。这个“模仿广度优先搜索”搜索法比起广搜是牺牲了时间，但节约了空间。
+			</p>
+<pre>1 truncated_dfsearch(hnextpos, depth)
+2   if board is covered
+3       print solution and exit 
+
+4   if depth == 0
+5       return 
+
+6   for i from nextpos to n*n
+7       put knight at i
+8       truncated_dfsearch(i+1, depth-1)
+9       remove knight at i 
+
+10 dfid_search
+11   for depth = 0 to max_depth
+12     truncated_dfsearch(0, depth)
+</pre>
+			<p>
+				复杂度： 　
+			</p>
+			<p>
+				ID时间复杂度与DFS的时间复杂度（<img class="tex" alt="\mathcal{O}(n)" src="http://www.nocow.cn/images/math/c/f/3/cf373ba944d0faa2f0ee7d828d18f610.png" />）不同，另一方面，它要更复杂，某次DFS若限界 k 层，则耗时&nbsp;<span class="texhtml" style="font-family:serif;"><i>c</i><sup><i>k</i></sup></span>&nbsp;。若搜索树共有 d 层，则一个完整的DFS-ID将耗时&nbsp;<span class="texhtml" style="font-family:serif;"><i>c</i><sup>0</sup>&nbsp;+&nbsp;<i>c</i><sup>1</sup>&nbsp;+&nbsp;<i>c</i><sup>2</sup>&nbsp;+ ... +&nbsp;<i>c</i><sup><i>d</i></sup></span>&nbsp;。如果 c = 2 ，那么式子的和是&nbsp;<span class="texhtml" style="font-family:serif;"><i>c</i><sup><i>d</i>&nbsp;+ 1</sup>&nbsp;− 1</span>&nbsp;，大约是同效BFS的两倍。当 c &gt; 2 时（子节点的数目大于2），差距将变小：ID的时间消耗不可能大于同效BFS的两倍。 所以，但数据较大时，ID-DFS并不比BFS慢，但是空间复杂度却与DFS相同，比BFS小得多。
+			</p>
+			<p>
+				算法选择： 当你已经知道某题是一道搜索题，那么选择正确的搜索方式是十分重要的。下面给你一些选择的依据。
+			</p>
+			<p>
+				简表：
+			</p>
+			<p>
+				搜索方式 时间 空间 使用情况
+			</p>
+			<p>
+				DFS&nbsp;<img class="tex" alt="\mathcal{O}(ck)" src="http://www.nocow.cn/images/math/2/3/2/232d18cb46389114ee1918a967f85db6.png" />&nbsp;<img class="tex" alt="\mathcal{O}(k)" src="http://www.nocow.cn/images/math/e/7/9/e79ea04722f88bc7f42ae16f249d6fe4.png" />&nbsp;必须遍历整棵树，要求出解的深度或经的过节点，或者你并不需要解的深度最小。
+			</p>
+			<p>
+				BFS&nbsp;<img class="tex" alt="\mathcal{O}(cd)" src="http://www.nocow.cn/images/math/a/7/d/a7d4c43998e1276ec963fc7d0bd31734.png" />&nbsp;<img class="tex" alt="\mathcal{O}(cd)" src="http://www.nocow.cn/images/math/a/7/d/a7d4c43998e1276ec963fc7d0bd31734.png" />&nbsp;了解到解十分靠近根节点，或者你需要解的深度最小。
+			</p>
+			<p>
+				DFS+ID&nbsp;<img class="tex" alt="\mathcal{O}(cd)" src="http://www.nocow.cn/images/math/a/7/d/a7d4c43998e1276ec963fc7d0bd31734.png" />&nbsp;<img class="tex" alt="\mathcal{O}(d)" src="http://www.nocow.cn/images/math/9/d/7/9d72f43fc991ce6601abddc0fd6b3c68.png" />&nbsp;需要做BFS，但没有足够的空间，时间却很充裕。
+			</p>
+			<p>
+				d ：解的深度 k ：搜索树的深度 d &lt;= k 记住每一种搜索法的优势。如果要求求出最接近根节点的解，则使用BFD或ID。而如果是其他的情况，DFS是一种很好的搜索方式。如果没有足够的时间搜出所有解。那么使用的方法应最容易搜出可行解，如果答案可能离根节点较近，那么就应该用BFS或ID，相反，如果答案离根节点较远，那么使用DFS较好。还有，请仔细小心空间的限制。如果空间不足以让你使用BFS，那么请使用迭代加深吧！
+			</p>
+			<p>
+				类似问题： 超级质数肋骨[USACO 1994 决赛] 一个数，如果它从右到左的一位、两位直到N位（N是）所构成的数都是质数，那么它就称为超级质数。例如：233、23、2都是质数，所以233是超级质数。要求：读入一个数N（N &lt;= 9），编程输出所有有N位的超级质数。
+			</p>
+			<p>
+				这题应使用DFS，因为每一个答案都有N层（最底层），所以DFS是最好的．
+			</p>
+			<p>
+				Betsy的旅行 [USACO 1995 资格赛] 一个正方形的小镇被分成 NxN (2 &lt;= N &lt;= 6）个小方格，Besty 要从左上角的方格到达左下角的方格，并且经过每一次方格都恰好经过一次。编程对于给定的 N 计算出 Besty 能采用的所有的旅行路线的数目。
+			</p>
+			<p>
+				这题要求求出解的数量，所以整颗搜索树都必须被遍历，这就与可行解的位置与出解速度没有关系了。所以这题可以使用BFS或DFS，又因为DFS需要的空间较少，所以DFS是较好的．
+			</p>
+			<p>
+				奶牛运输 [USACO 1995 决赛] 奶牛运输公司拥有一辆运输卡车与牧场 A ，运输公司的任务是在A，B，C，D，E，F和G七个农场之间运输奶牛。每两个农场之间的路程（可以用floyed改变）已给出。每天早晨，运输公司都必须确定一条运输路线，使得运输的总距离最短。但必须遵守以下规则：
+			</p>
+			<p>
+				农场 A 是公司的基地。每天的运输都必须从这开始并且在这结束。 卡车任何时刻都只能最多承载一头奶牛。 给出的数据是奶牛的原先位置与运输结束后奶牛所在的位置。 而你的任务是在上述规则内寻找最短的运输路线。
+			</p>
+			<p>
+				在发现最优解时必须比较所有可行解，所以必须遍历整棵搜索树。所以，可以用DFS解题．
+			</p>
+			<p>
+				横越沙漠 [1992 IOI] 一群沙漠探险者正尝试着让他们中的一部分人横渡沙漠。每一个探险者可以携带一定数量的水，同时他们每天也要喝掉一定量的水。已知每个探险者可携带的水量与每天需要的水量都不同。给出每个探险者能携带的水量与需要的水量与横渡沙漠所需的天数，请编程求出最多能有几个人能横渡沙漠。所有探险者都必须存活，所以有些探险者在中途必须返回，返回时也必须携带足够的水。当然，如果一个探险者返回时有剩余的水（除去返回所需的水以外），他可以把剩余的水送给他的一个同伴，如果它的同伴可以携带的话。
+			</p>
+			<p>
+				这题可以分成两个小问题，一个是如何为探险者分组，另一个是某些探险者应在何处返回。所以使用ID-DFS是可行的。首先尝试每一个探险者能否独自横渡，然后是两个人配合，三个人配合。直到结束。
+			</p>
+			<p>
+				<br />
+			</p>
+			<p>
+				<h2 style="text-align:center;background-color:#FFFFFF;font-weight:normal;font-size:19px;font-family:sans-serif;">
+					<span class="mw-headline" id=".E4.BA.8C.E8.BF.9B.E5.88.B6.E7.AE.97.E6.B3.95" style="font-size:16px;"><strong>五、二进制算法</strong></span>
+				</h2>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					---二进制数转换(基础)---
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					电脑以1和0为基础操作的，这些被称为'二进制位'(bit)。 1字节（Byte）内含有8位，例如：00110101。一个整型数据（int）在我的计算机上是4个字节，32位：10011010 11010101 10100010 10101011。其他数据类型的字节大小可能不同。
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					如你所见，32个1和0记录下来或阅读起来有点麻烦。 因此，按照惯例人们把数字分成几组，每组3或4位：
+				</p>
+<pre>  1001.1010.1101.0101.1010.0010.1010.1011
+  10.011.010.110.101.011.010.001.010.101.011 &lt; - (注意，从右往左开始计数3)
+</pre>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					这些分组，映射到数字，要么每4位表示一个16进制数（这里指个位数)或每3位表示一个8进制数。 很明显，需要一些新的十六进制数字（十进制的数字只有0 .. 9，我们还需要6个数字）。现在，字母'A'..'F'被用来表示这些新的数字：10 .. 15。 下面的这一张表，显而易见地表现了它们的转化方式：
+				</p>
+<pre>   替换：十六进制：
+  000 - &gt; 0  100 - &gt; 4  0000 - &gt; 0  0100 - &gt; 4  1000 - &gt; 8  1100 - &gt; C
+  001 - &gt; 1  101 - &gt; 5  0001 - &gt; 1  0101 - &gt; 5  1001 - &gt; 9  1101 - &gt; D
+  010 - &gt; 2  110 - &gt; 6  0010 - &gt; 2  0110 - &gt; 6  1010 - &gt; A  1110 - &gt; E
+  011 - &gt; 3  111 - &gt; 7  0011 - &gt; 3  0111 - &gt; 7  1011 - &gt; B  1111 - &gt; F
+</pre>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					所以现在我们很快地用C语言或其他语言表示以上陈述那些十六进制和八进制整数：
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					1001.1010.1101.0101.1010.0010.1010.1011
+				</p>
+<pre>    - &gt;  9     A    D    5    A    2    A    B- &gt; 0x9AD5A2AB
+</pre>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					（0x为在十六进制数前面的标志）
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					10.011.010.110.101.011.010.001.010.101.011
+				</p>
+<pre>         2 3 2 6 5 3 2 1 2 5 3 - &gt; 023265321253
+</pre>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					（这是前一个数字'0'） 八进制的优点是可以比较容易、快速地写下来，但十六进制字节的更容易分离（这是因为数字是成对的）。
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					<br />
+---位运算(进阶)---
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					有时为了效率将数字储存为位数字，而不是存储为整型。 比如在数组中记录选择（每个元素只可以是一个'是'或'不'的状态），用数组对选项进行标记（相同的状态，即'真'，每个位是'是'就是'假'），或者记录一些小的连续整数（例如对位元素0 .. 3）。 当然，有时问题其实包含'位串'。
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					在C/C++和其语言中，如果你知道它的八进制或十六进制表示形式，指定一个二进制数是很容易的： i= 0x9AD5A2AB;或	i= 023265321253; 更常见的是我们会用一个整数的权来记录状态。 比如下面这个例子：
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					i= 0x10000 + 0x100; 直到同一位上都是1之前它都是符合要求的： i= 0x100 + 0x100; 在这种情况下会发生进位，然后就得到了 0x200 而不是我们所希望得到的 0x100。（在此接着前辈的工作翻译下去，修改了前面一些翻译的和原文对比不准确的地方）而C/C++等语言中的'|'，即“按位或”操作，却能达到我们所希望的要求。“按位或”操作的规则如下：
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					0 | 0 - &gt; 0
+				</p>
+<pre>        0 | 1 - &gt; 1
+        1 | 0 - &gt; 1
+        1 | 1 - &gt; 1
+</pre>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					在C语言里'|'的操作称为'按位或'，以免与它的表兄'||'，即所谓的'逻辑或'或'or',混淆。 '||'运算符会计算其左侧的数，如果假（在C语言中为0），再判断其右侧的数。 如果任意一个不为零，那么'||'的结果为真（为1）。 这是将'|'和'+'操作区分开来的最终规则。有时候这样的操作符运算以如下真值表的形式给出：
+				</p>
+<pre>         | | 0  1
+       ---+------
+        0 | 0  1
+        1 | 1  1
+</pre>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					<br />
+显而易见，'按位或'的操作方式可以用来设置记录状态的整数。当任何一方或双方都是'1'时，输出结果为'1'。
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					最简单的查询方法是'逻辑与'（也称为'andif'）算子，记为'&amp;'。真值表如下：
+				</p>
+<pre>          &amp; | 0 1
+        ---+------
+         0 | 0 0
+         1 | 0 1
+</pre>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					只有当输入的两个值均为'1'时，输出值才为'1'。 因此，如果你想知道一个整数的0x100位是否为'1'，语句很简单：
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					if (a &amp; 0x100) { printf("yes, 0x100 is on\n"); }
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					C/C++以及其他语言还包含其他的操作符，比如“异或”，用'^'表示，真值表如下：
+				</p>
+<pre>          ^ | 0 1
+        ---+------
+         0 | 0 1
+         1 | 1 0
+</pre>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					“异或”有时表示成'xor'，为了打字时比较轻松。 当且仅当输入的两个值之一是'1'时，输出结果才为1。这个操作符能够很方便的来控制“开关”，即将数字的某一位由'1'变成'0'，或反之亦然。 例如以下这句代码：
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					a = a ^ 0x100; /* same as a ^= 0x100; */
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					在0x100位处将从0 - &gt; 1或从1 - &gt; 0，根据其当前的值。
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					将某个数置零等同于两个基本操作符的运算（译者按：事实上下面是在讲异或的置零功能，即一个数和它本身进行异或操作得到结果是0，例如xor ax,ax是将ax寄存器置零）。 我们新介绍一个一元运算符，它将一个数的每一位翻转，以创造一个数的“按位补”或者简称“补码”。这个运算符称为“按位取反”或者简称为“取反”，记为波浪符'~'。 下面是一个简单的例子：
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					char a, b;	/* eight bits, not 32 */
+				</p>
+<pre>       a = 0x4A;	/* 0100.1010 */
+       b = ~a;		/* flip every bit: 1011.0101 */
+       printf("b is 0x%X\n", b);
+</pre>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					最终得出了这样的结果：
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					b == 0xB5
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					所以，如果一个数我们只有一位是1（例如，0x100），那么~0x100将所有其他的'0'位置'1'而将该位置'0'，得到：0xFFFFFEFF（注意'E'处于右起第三位，和原数的'1'位相同）。
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					以下两个操作符将一个数完全置零：
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					a = a &amp; (~0x100);	/* swtch off the 0x100 bit */
+				</p>
+<pre>       /* same as a &amp;= ~0x100;
+</pre>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					因为取反后，原本所有为'0'的都变成了'1'，而所有为'1'的都变成了'0'，所以每一位都保证有0的存在再进行按位与操作后，所有的位数都变成了'0'。
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					总结
+				</p>
+				<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+					总之，这些操作符能够设置，清除，转换和查找整数中的任意一位二进制位：
+				</p>
+<pre>        a |= 0x20;		/* turn on bit 0x20 */
+       a &amp;= ~0x20;		/* turn off bit 0x20 */
+       a ^= 0x20;		/* toggle bit 0x20 */
+       if (a &amp; 0x20) {
+                               /* then the 0x20 bit is on */
+       }</pre>
+			</p>
+		</p>
+	</p>
+	<h1 id="firstHeading" class="firstHeading" style="text-align:center;font-weight:normal;font-size:24px;font-family:sans-serif;">
+		<strong><span style="font-size:16px;">六、Graph Theory</span></strong>
+	</h1>
+	<div id="bodyContent" style="font-family:sans-serif;font-size:13px;">
+		<div id="contentSub" style="font-size:12px;margin:0px 0px 1.4em 1em;color:#7D7D7D;">
+		</div>
+		<p>
+			<p>
+				什么是<strong>图</strong><em>(graph)</em>？
+			</p>
+			<p>
+				形式上来说，一个图是这样的：
+			</p>
+			<ul>
+				<li>
+					所有<strong>顶点</strong><em>(vertices)</em>&nbsp;V 的集合；<br />
+				</li>
+				<li>
+					所有<strong>边</strong><em>(edges)</em>&nbsp;E 的集合所构成的。每条边对应于一对顶点
+				</li>
+			</ul>
+			<p>
+				把顶点当做“地点”，那么所有顶点的集合就是所有地点的集合。按照这种比喻，边就可以看做连接每对地点之间的“路径”，所有边的集合就是所有路径的集合。
+			</p>
+			<p>
+				<br />
+<strong>表示</strong>
+			</p>
+			<p>
+				图通常被用那种类比的方法表示，顶点是点或者圆圈，边是连接它们的线。
+			</p>
+			<p>
+				<img src="http://ace.delos.com/usaco/TEXT/graph1.gif" alt="graph1.gif" /><br />
+在这个例图中，V = {1, 2, 3, 4, 5, 6} ，并且E = {(1,3), (1,6), (2,5), (3,4), (3,6)}。
+			</p>
+			<p>
+				每一个顶点是集合 V 的一个成员。一个顶点有时候被叫做<strong>节点</strong><em>(node)</em>。
+			</p>
+			<p>
+				每一条边是集合 E 的一个成员。注意，有些顶点并不会有边和其他的顶点相连。这样的顶点被称是“<strong>孤立</strong>”的。
+			</p>
+			<p>
+				有时候，边是与数值相关联的，比如说长度或费用；这样的图被称作<strong>边权图</strong><em>(edge-weighted graphs)</em>，或者<strong>带权图</strong><em>(weighted graphs)</em>，这些被边关联的数值叫做边的<strong>权</strong><em>(weight)</em>。类似地，我们还定义<strong>点权图</strong><em>(node-weighted graphs)</em>。
+			</p>
+			<p>
+				<br />
+<strong>图论的例题</strong>
+			</p>
+			<p>
+				奶牛的电信<em>(Telecowmunication，USACO Championship 1996)</em>
+			</p>
+			<p>
+				描述：给定一个电脑的集合，和连接所有电脑的电缆的集合，至少需要破坏多少台电脑，才能使给定的2台电脑不能连线？(给定的2台电脑不会被破坏。)<br />
+图：图的顶点对应电脑，边即对应着电缆。
+			</p>
+			<p>
+				骑马修栅栏<em>(Riding The Fences)</em><br />
+描述：农民约翰拥有大量的栅栏，他必须定期检查栅栏的完好。他时刻留意着栅栏们交点的位置，并记录了栅栏每个相交点的编号，以及与相交点相连的栅栏的编号。每一个栅栏与2个点相连。在某些交点，交点可能只是唯一一个栅栏的终点。<br />
+给定栅栏的布局，计算是否有一条路，能让农民约翰能骑马经过所有的栅栏，而不经过同一栅栏2次以上。农民约翰可以在任意一个地方开始和结束，但不能跨越它的场地（即，他唯一穿过2个交点的路只能沿着栅栏）。如果有这样的路径，就输出它。<br />
+图：农民约翰从交点出发，并经过所有栅栏一次。所以，图的顶点就是交点，边即栅栏。
+			</p>
+			<p>
+				<em>Knight moves</em><br />
+描述：给定一个8*8的棋盘，至少需要多少的骑士，使棋盘上的每一个点都可以被至少一个骑士攻击到。<br />
+图：这个图比较难以表述，棋盘上的每一格被看做一个顶点。如果一个骑士可以从一格攻击到另一格，则这2个格就可被称作有边相连。
+			</p>
+			<p>
+				穿越栅栏<em>(Overfencing [Kolstad &amp; Schrijvers, Spring 1999 USACO Open])</em><br />
+描述：农民约翰在田野上建造了一个巨大的迷宫，他在留出了2个栅栏作为迷宫的2个“出口”。这个迷宫是一个“完美”的迷宫；你可以在里面任意一个地方，寻找到一条走出迷宫的路径。<br />
+给定迷宫的布局，计算从一个最“糟糕”的点走出迷宫需要的步数（即从该点以最优的方式走到最近的出口，所需的步数仍然是最多的）。<br />
+一个 W=5，H=3 的迷宫如下所示：<br />
+<span>&nbsp;&nbsp;&nbsp;&nbsp; +-+-+-+-+-+<br />
+&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />
+&nbsp;&nbsp;&nbsp;&nbsp; +-+ +-+ + +<br />
+&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; | | |<br />
+&nbsp;&nbsp;&nbsp;&nbsp; + +-+-+ + +<br />
+&nbsp;&nbsp;&nbsp;&nbsp; | |&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; +-+ +-+-+-+</span><br />
+图：每一个格子都是一个顶点，如果相邻的2个格子之间，没有被墙分开，这2个格子就是有边相连。
+			</p>
+			<p>
+				<br />
+<strong>术语</strong>
+			</p>
+			<p>
+				让我们再看第一个例图。
+			</p>
+			<p>
+				<img src="http://ace.delos.com/usaco/TEXT/graph1.gif" alt="graph1.gif" />
+			</p>
+			<p>
+				如果一条边的起点和终点都是<strong>同一个顶点</strong><em>(form (u,u))</em>，这条边被称为<strong>环边</strong><em>(self-loop)</em>，此例图中没有环边。
+			</p>
+			<p>
+				<strong>简单</strong><em>(simple)</em><strong>&nbsp;图</strong>是指在边集 E 中，没有环图，且一条边不重复出现的图。如果图中多次包含了同一条边，或者包含环边，这种图被称作<strong>复杂图</strong><em>(multigraph)。</em>我们的讨论中，图都是简单图，例图就是一个简单图。
+			</p>
+			<p>
+				边(u, v)是<strong>连接</strong><em>(incident)</em>了顶点 u 和顶点 v。例如，边(1,3)连接了顶点3。
+			</p>
+			<p>
+				顶点的<strong>度</strong><em>(degree)</em>是连接到该顶点的边的个数，例图中，顶点3的度数是3，同时顶点4的度数是1。
+			</p>
+			<p>
+				如果顶点 u 和 v 被一条边相连，那么 u 和 v 就是<strong>相连</strong><em>(adjacent)</em><strong>的</strong>。例图中，顶点2与顶点5相连。
+			</p>
+			<p>
+				如果边的总数小于可能边的总数 ((N x (N-1))/2)，那么这个图是<strong>稀疏</strong><em>(sparse)</em><strong>的</strong>，否则就是<strong>稠密</strong><em>(dense)</em><strong>的</strong>。给定图是稠密的还是稀疏的，没有明确的界定。
+			</p>
+			<p>
+				<br />
+<strong>有向图<em>(Directed Graph)</em></strong>
+			</p>
+			<p>
+				上面所介绍的图都是<strong>无向</strong><em>(undirected)</em><strong>图</strong>，边都是“双向”的。如果我们能从顶点1到顶点3，那么我们也能从顶点3到顶点1。换句话说，如果边集中存在边(1, 3)，那么也存在边(3, 1)。
+			</p>
+			<p>
+				但有时候图是有向的，在这种情况下，边是有方向的，这种边也被称作<strong>弧</strong><em>(arcs)</em>。
+			</p>
+			<p>
+				有向图被带上箭号来表示方向。
+			</p>
+			<p>
+				<img src="http://ace.delos.com/usaco/TEXT/graph2.gif" alt="graph2.gif" /><br />
+每个顶点的<strong>出度</strong><em>(out-degree)</em>是从该顶点开始的弧的条数。每个顶点的<strong>入度</strong><em>(in-degree)</em>是在该顶点结束的弧的的条数。例图中，顶点6的入度数是2，出度数是1。
+			</p>
+			<p>
+				一个图被假定为无向图，除非特别要求说明是有向图。
+			</p>
+			<p>
+				<br />
+<strong>路径<em>(Paths)</em></strong>
+			</p>
+			<p class="p0">
+				<span style="font-size:10.5pt;">从顶点&nbsp;<span>u&nbsp;</span><span>到顶点&nbsp;</span><span>x</span><span>的</span></span><span style="font-size:10.5pt;font-weight:bold;">路径</span><span style="font-size:10.5pt;">被定义为：</span><span style="font-size:10.5pt;font-weight:bold;">顶点序列</span><span style="font-style:italic;font-size:10.5pt;">(v&nbsp;</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">0</span><span style="font-style:italic;font-size:10.5pt;">, v</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">&nbsp;1</span><span style="font-style:italic;font-size:10.5pt;">, ..., v&nbsp;</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">k</span><span style="font-style:italic;font-size:10.5pt;">)</span><span style="font-size:10.5pt;">，而且</span><span style="font-style:italic;font-size:10.5pt;">v&nbsp;</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">0</span><span style="font-style:italic;font-size:10.5pt;">&nbsp;= u</span><span style="font-size:10.5pt;">，</span><span style="font-style:italic;font-size:10.5pt;">v&nbsp;</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">k</span><span style="font-style:italic;font-size:10.5pt;">&nbsp;= x</span><span style="font-size:10.5pt;">，并且</span><span style="font-style:italic;font-size:10.5pt;">&nbsp;(v&nbsp;</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">0,</span><span style="font-style:italic;font-size:10.5pt;">&nbsp;v&nbsp;</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">1</span><span style="font-style:italic;font-size:10.5pt;">)</span><span style="font-size:10.5pt;">&nbsp;是图中的一条边，</span><span style="font-style:italic;font-size:10.5pt;">(v&nbsp;</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">1,&nbsp;</span><span style="font-style:italic;font-size:10.5pt;">v&nbsp;</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">2</span><span style="font-style:italic;font-size:10.5pt;">), (v&nbsp;</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">2</span><span style="font-style:italic;font-size:10.5pt;">, v&nbsp;</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">3</span><span style="font-style:italic;font-size:10.5pt;">)</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">&nbsp;</span><span style="font-size:10.5pt;">等等也是。这样路径的长度是&nbsp;</span><span style="font-style:italic;font-size:10.5pt;">k</span><span style="font-size:10.5pt;">。</span>
+			</p>
+			<p>
+				例如，在上面的无向图，(4, 3, 1, 6) 是一条路径。
+			</p>
+			<p>
+				<img src="http://ace.delos.com/usaco/TEXT/graph3.gif" alt="graph3.gif" />
+			</p>
+			<p>
+				这条路径是说<strong>包含</strong><em>(contain)</em>了顶点<span style="font-style:italic;font-size:10.5pt;">v&nbsp;</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">0</span><span style="font-size:10.5pt;">，</span><span style="font-style:italic;font-size:10.5pt;">v&nbsp;</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">1</span>等等，也包含了边<span style="font-style:italic;font-size:10.5pt;">(v&nbsp;</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">0,</span><span style="font-style:italic;font-size:10.5pt;">&nbsp;v&nbsp;</span><span style="font-style:italic;font-size:10.5pt;vertical-align:sub;">1</sp</div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=USACO-USACO%E9%98%B6%E6%A2%AF-%E7%AC%AC1%E7%AB%A0.%E5%85%A5%E9%97%A8'>USACO-USACO阶梯-第1章.入门</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5255'>Submit</a>][<a href='problemstatus.php?id=5255'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5255");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

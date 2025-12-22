@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1677803535" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 27085 --学习时间</title><center><h2>27085: 学习时间</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>4&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='submitpage.php?id=27085'>Submit</a>][<a href='problemstatus.php?id=27085'>Status</a>][<a href='bbs.php?pid=27085'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=27085'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=27085");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=27085'>下载测试数据1元</a>][12kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><div>晨晨学校要统计学生在周末的学习情况，让每位学生自己写下在家里面的学习时间</div>
+<div>段，带回学校。已知学校总共有 N (1 &lt;= N &lt;= 145)位学生参与调查，学生按照下面的格</div>
+<div>式来记录学习时间：整数 c（代表学生学号） 、一个关键字&quot;start&quot;或者&ldquo;stop&rdquo; （代表此信</div>
+<div>息是开始还是结束） 、两个整数 hh 和 mm（代表开始的小时和分钟，0 &lt;= HH &lt;= 23; 0 &lt;= MM</div>
+<div>&lt;= 59） 。每个学生只是记录一天的学习时间，而且保证信息都是完整的，也就是说一位学</div>
+<div>生有开始时间必然有相应的结束时间对应。</div>
+<div>你的任务就是帮助计算每一位学生一天花费在学习上的时间是多少。</div>
+<div>举一个例子：有下面信息：</div>
+<div>2 6</div>
+<div>1 START 9 0</div>
+<div>2 START 9 30</div>
+<div>1 STOP 10 0</div>
+<div>2 STOP 10 15</div>
+<div>1 START 17 0</div>
+<div>1 STOP 17 42</div>
+<div>其中第一行代表有 2 个学生提供了数据， 总共有 6 段时间在学习。 学生 1 在 9:00-10:00</div>
+<div>和 17:00-17:42 时间段在学习，总共花费了一小时 42 分在学习；学生 2 在 9:30-10:15 时</div>
+<div>间段学习，总共花费了 45 分钟。</div>
+<p>输入格式 ：<br />
+第一行：两个整数 n 和 Nlines（代表信息条数 1 &lt;= Nlines &lt;= 1,458）<br />
+第 2..Nlines+1 行：每一行为一条学生学习信息。<br />
+输出格式 ：<br />
+总共 n 行，每一行两个整数代表第 i 位花在学习的小时和分钟。</p></div><h2>Input</h2><div class=content><p>2 6<br />
+1 START 9 0<br />
+2 START 9 30<br />
+1 STOP 10 0<br />
+2 STOP 10 15<br />
+1 START 17 0<br />
+1 STOP 17 42</p></div><h2>Output</h2><div class=content><p>1 42<br />
+0 45</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>15 60
+10 START 2 31
+4 START 4 58
+6 START 5 0
+12 START 8 15
+3 START 8 37
+9 START 10 13
+3 STOP 11 28
+1 START 12 9
+13 START 12 34
+8 START 12 52
+12 STOP 13 46
+10 STOP 14 16
+11 START 14 45
+9 STOP 14 47
+2 START 14 49
+7 START 15 54
+13 STOP 16 4
+8 STOP 16 23
+5 START 17 8
+1 STOP 17 27
+15 START 17 48
+7 STOP 17 55
+1 START 18 6
+10 START 19 25
+13 START 19 30
+15 STOP 19 32
+11 STOP 20 2
+14 START 20 6
+5 STOP 20 27
+6 STOP 20 28
+8 START 20 34
+13 STOP 20 41
+11 START 20 52
+14 STOP 20 53
+9 START 20 54
+3 START 21 17
+12 START 21 20
+7 START 21 25
+11 STOP 21 41
+12 STOP 21 59
+10 STOP 22 7
+6 START 22 19
+15 START 22 38
+15 STOP 22 45
+9 STOP 22 53
+2 STOP 23 2
+3 STOP 23 2
+2 START 23 8
+6 STOP 23 9
+7 STOP 23 9
+4 STOP 23 22
+4 START 23 24
+2 STOP 23 32
+8 STOP 23 32
+1 STOP 23 35
+5 START 23 48
+14 START 23 48
+5 STOP 23 50
+14 STOP 23 50
+4 STOP 23 57
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>10 47
+8 37
+4 36
+18 57
+3 21
+16 18
+3 45
+6 29
+6 33
+14 27
+6 6
+6 10
+4 41
+0 49
+1 51
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E9%BB%84%E5%B2%90%E4%B8%AD%E5%BF%83%E5%B0%8F%E5%AD%A6'>黄岐中心小学</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=27085'>Submit</a>][<a href='problemstatus.php?id=27085'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=27085");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

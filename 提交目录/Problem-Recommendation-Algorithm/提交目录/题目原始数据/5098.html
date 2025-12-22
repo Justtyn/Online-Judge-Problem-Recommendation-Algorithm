@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?688576248" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5098 --火星人-NOIP2004PJT4</title><center><h2>5098: 火星人-NOIP2004PJT4</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>16&nbsp;&nbsp;<span class=green>Solved: </span>10<br>[<a href='submitpage.php?id=5098'>Submit</a>][<a href='problemstatus.php?id=5098'>Status</a>][<a href='bbs.php?pid=5098'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5098'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5098");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5098'>下载测试数据1元</a>][172kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><h3 style="text-align:center;font-family:'Microsoft Yahei';background-color:#F5F5F5;">
+	<span style="font-size:16px;">火星人</span> 
+</h3>
+<h3 style="text-align:center;font-family:'Microsoft Yahei';background-color:#F5F5F5;">
+	<span style="font-size:16px;">(</span><span style="font-size:16px;">martian.pas/c/cpp</span><span style="font-size:16px;">)</span><span style="font-size:16px;"></span><br />
+</h3>
+<h3 style="font-family:'Microsoft Yahei';background-color:#F5F5F5;">
+	题目描述
+</h3>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	&nbsp; 人类终于登上了火星的土地并且见到了神秘的火星人。人类和火星人都无法理解对方的语言，但是我们的科学家发明了一种用数字交流的方法。这种交流方法是这样的，首先，火星人把一个非常大的数字告诉人类科学家，科学家破解这个数字的含义后，再把一个很小的数字加到这个大数上面，把结果告诉火星人，作为人类的回答。
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	火星人用一种非常简单的方式来表示数字——掰手指。火星人只有一只手，但这只手上有成千上万的手指，这些手指排成一列，分别编号为<span>1</span>，<span>2</span>，<span>3……</span>。火星人的任意两根手指都能随意交换位置，他们就是通过这方法计数的。
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	一个火星人用一个人类的手演示了如何用手指计数。如果把五根手指——拇指、食指、中指、无名指和小指分别编号为<span>1</span>，<span>2</span>，<span>3</span>，<span>4</span>和<span>5</span>，当它们按正常顺序排列时，形成了<span>5</span>位数<span>12345</span>，当你交换无名指和小指的位置时，会形成<span>5</span>位数<span>12354</span>，当你把五个手指的顺序完全颠倒时，会形成<span>54321</span>，在所有能够形成的<span>120</span>个<span>5</span>位数中，<span>12345</span>最小，它表示<span>1</span>；<span>12354</span>第二小，它表示<span>2</span>；<span>54321</span>最大，它表示<span>120</span>。下表展示了只有<span>3</span>根手指时能够形成的<span>6</span>个<span>3</span>位数和它们代表的数字：
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	三进制数
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>123</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>132</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>213</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>231</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>312</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>321</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	代表的数字
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>1</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>2</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>3</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>4</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>5</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>6</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	现在你有幸成为了第一个和火星人交流的地球人。一个火星人会让你看他的手指，科学家会告诉你要加上去的很小的数。你的任务是，把火星人用手指表示的数与科学家告诉你的数相加，并根据相加的结果改变火星人手指的排列顺序。输入数据保证这个结果不会超出火星人手指能表示的范围。
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<br />
+</p>
+<h3 style="font-family:'Microsoft Yahei';background-color:#F5F5F5;">
+	输入格式
+</h3>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	输入文件<span>martian.in</span>包括三行，第一行有一个正整数<span>N</span>，表示火星人手指的数目（<span>1 &lt;= N &lt;= 10000</span>）。第二行是一个正整数<span>M</span>，表示要加上去的小整数（<span>1 &lt;= M &lt;= 100</span>）。下一行是<span>1</span>到<span>N</span>这<span>N</span>个整数的一个排列，用空格隔开，表示火星人手指的排列顺序。
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<br />
+</p>
+<h3 style="font-family:'Microsoft Yahei';background-color:#F5F5F5;">
+	输出
+</h3>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	输出文件<span>martian.out</span>只有一行，这一行含有<span>N</span>个整数，表示改变后的火星人手指的排列顺序。每两个相邻的数中间用一个空格分开，不能有多余的空格。
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<br />
+</p>
+<h3 style="font-family:'Microsoft Yahei';background-color:#F5F5F5;">
+	样例输入
+</h3>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span style="font-family:'Lucida Console';">5<br />
+3<br />
+1&nbsp;2&nbsp;3&nbsp;4&nbsp;5<br />
+</span> 
+</p>
+<h3 style="font-family:'Microsoft Yahei';background-color:#F5F5F5;">
+	样例输出
+</h3>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span style="font-family:'Lucida Console';">1&nbsp;2&nbsp;4&nbsp;5&nbsp;3<br />
+</span> 
+</p>
+<span style="font-family:'Microsoft Yahei';font-size:14px;line-height:28px;background-color:#F5F5F5;"></span><span id="isycs" style="font-family:'Microsoft Yahei';font-size:14px;line-height:28px;background-color:#F5F5F5;"><strong> 
+<div style="padding:0px;margin:0px;">
+	<p>
+		<br />
+	</p>
+</div>
+</strong> 
+<p>
+	对于<span>30%</span>的数据，<span>N&lt;=15</span>；
+</p>
+<p>
+	对于<span>60%</span>的数据，<span>N&lt;=50</span>；
+</p>
+<p>
+	对于全部的数据，<span>N&lt;=10000</span>；
+</p>
+</span></div><h2>Input</h2><div class=content><p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;">//该题题解因故不能加入提示中，故初次昨天略过此处</span>
+	</p>
+	<p>
+		<span style="font-size:14px;line-height:1.5;">字典序:一自然数N，设N为3，则关于N的字典序排列为123，132，213，232，312，321，也就是把一个整数和比它小的整数的全排列由小到大的列出。求一个字典序的算法就是要能找出已得到排列的下一个排列，下一个即最临近的一个，列如前面的123，它的下一个就是132。</span>
+	</p>
+	<p>
+		<span style="font-size:14px;">&nbsp; 具体的方法是有公式的，但是公式不易理解我就直接举列来说。如排列839647521，首先从最右端开始，找到第一个比它的右临位小的数字，即4，然后从该数字的右边找到比它大的最小的数字，即5，交换两数字，原排列变为839657421，最后将5位置右端的数字倒序排列，即变为839651247，这就是原排列的下一排列。于是我们的程序就只需要从1234……n，开始不停的找它的下一排列，直到不存在比他的右临位小的数字（n……4321）为止。</span>
+	</p>
+	<p>
+		<span style="font-size:14px;"><br />
+</span>
+	</p>
+	<p>
+		<span style="font-size:14px;"></span>
+	</p>
+	<p style="color:#454545;font-family:tahoma, helvetica, arial;font-size:14px;background-color:#FFFFFF;">
+		【字典序法生成全排列】
+	</p>
+	<p style="color:#454545;font-family:tahoma, helvetica, arial;font-size:14px;background-color:#FFFFFF;">
+		字典序列算法是一种非递归算法。而它正是STL中Next_permutation的实现算法。我们来看看他的思路吧：<br />
+它的整体思想是让排列成为可递推的数列，也就是说从前一状态的排列，可以推出一种新的状态，直到最终状态。比如说，最初状态是12345，最终状态是54321。其实我觉得这跟我们手动做全排列是一样的。首先是12345，然后12354，然后12435，12453....逐渐地从后往前递增。<br />
+看看算法描述：<br />
+&nbsp;&nbsp;&nbsp; 首先，将待排序列变成有序（升序）序列。然后，从后向前寻找，找到相邻的两个元素，Ti&lt;Tj，（j=i+1)。如果没有找到，则说明整个序列已经是降序排列了，也就是说到达最终状态54321了。此时，全排列结束。
+	</p>
+	<p style="color:#454545;font-family:tahoma, helvetica, arial;font-size:14px;background-color:#FFFFFF;">
+		&nbsp;&nbsp;&nbsp; 接着，如果没有结束，从后向前找到第一个元素Tk，使得Tk&gt;Ti(很多时候k=j)，找到它，交换Ti跟Tk，并且将Tj到Tn(Tn是最后一个元素)的子序列进行倒置操作。输出此序列。并回到第二步继续寻找ij.<br />
+例如839647521是数字1～9的一个排列。从它生成下一个排列的步骤如下：<br />
+自右至左找出排列中第一个比右边数字小的数字4&nbsp;&nbsp;&nbsp; 839647521<br />
+在该数字后的数字中找出比4大的数中最小的一个5&nbsp;&nbsp;&nbsp; 839647521<br />
+将5与4交换 839657421<br />
+将7421倒转 839651247<br />
+所以839647521的下一个排列是839651247。<br />
+839651247的下一个排列是839651274。<br />
+(注：何谓按字典序排列<br />
+对两个字符串，先按字典顺序比较第一个字符，第一个字符相同的，比较第二字符，依此类推。。。<br />
+例：字符集{1,2,3},较小的数字较先,这样按字典序生成的全排列是:123,132,213,231,312,321。）
+	</p>
+	<p style="color:#454545;font-family:tahoma, helvetica, arial;font-size:14px;background-color:#FFFFFF;">
+		<br />
+	</p>
+	<p style="color:#454545;font-family:tahoma, helvetica, arial;font-size:14px;background-color:#FFFFFF;">
+		参考程序
+	</p>
+	<p style="color:#454545;font-family:tahoma, helvetica, arial;font-size:14px;background-color:#FFFFFF;">
+		readln(n,m); &nbsp;<br />
+for i:=1 to n do read(a[i]);<br />
+for i:=1 to m do begin&nbsp;<br />
+&nbsp; &nbsp; &nbsp;j:=n-1; k:=n; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; while (a[j]&gt;a[j+1]) and (j&gt;0) do dec(j);&nbsp;<br />
+&nbsp; &nbsp; while (a[j]&gt;a[k]) and (k&gt;j) do dec(k); &nbsp;<br />
+&nbsp; &nbsp; t:=a[j]; a[j]:=a[k]; a[k]:=t; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; for k:=j+1 to j+(n-j) div 2 do begin &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;t:=a[k]; a[k]:=a[n-k+j+1]; a[n-k+j+1]:=t; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; end; &nbsp;&nbsp;<br />
+&nbsp; end; &nbsp;<br />
+for i:=1 to n- do write(a[i],' ');&nbsp;<br />
+writeln(a[n]);&nbsp;
+	</p>
+</p></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p><br />
+	<br /><br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=NOIP%E5%8E%9F%E9%A2%98-NOIP2004'>NOIP原题-NOIP2004</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5098'>Submit</a>][<a href='problemstatus.php?id=5098'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5098");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

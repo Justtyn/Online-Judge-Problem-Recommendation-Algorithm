@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1383085947" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 22897 --橱窗布置</title><center><h2>22897: 橱窗布置</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>9&nbsp;&nbsp;<span class=green>Solved: </span>8<br>[<a href='submitpage.php?id=22897'>Submit</a>][<a href='problemstatus.php?id=22897'>Status</a>][<a href='bbs.php?pid=22897'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=22897'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=22897");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=22897'>下载测试数据1元</a>][216kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="0" style="color:#333333;font-family:Arial;font-size:14px;text-align:justify;background-color:#FFFFFF;">
+	<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">假设你想以最美观的方式布置花店的橱窗。现在你有F束不同品种的花束，同时你也有</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFF00;"><span>至少</span></span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">同样数量的花瓶被按顺序摆成一行。这些花瓶的位置固定于架子上，并从1至V顺序编号，V是花瓶的数目，从左至右排列，则最左边的是花瓶1，最右边的是花瓶V。花束可以移动，并且每束花用1至F间的整数唯一标识。</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFF00;"><span>标识花束的整数决定了花束在花瓶中的顺序</span></span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">，如果I＜J，则令花束I必须放在花束J左边的花瓶中。<br />
+</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">&nbsp; 例如，假设一束杜鹃花的标识数为1，一束秋海棠的标识数为2，一束康乃馨的标识数为3，所有的花束在放入花瓶时必须保持其标识数的顺序，即：杜鹃花必须放在秋海棠左边的花瓶中，秋海棠必须放在康乃馨左边的花瓶中。如果花瓶的数目大于花束的数目。则多余的花瓶必须空置，且每个花瓶中只能放一束花。<br />
+</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">&nbsp;　每一个花瓶都具有各自的特点。因此，当各个花瓶中放入不同的花束时，会产生不同的美学效果，并以美学值（一个整数）来表示，空置花瓶的美学值为零。<br />
+</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">&nbsp;　在上述例子中，花瓶与花束的不同搭配所具有的美学值，如下表所示。</span><span style="font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;"></span> 
+</p>
+<table style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+	<tbody>
+		<tr>
+			<td valign="top" width="101" style="border:0.5pt solid #000000;">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">花</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">瓶1</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">瓶2</span><span style="font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">瓶3</span><span style="font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">瓶4</span><span style="font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">瓶5</span><span style="font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;"></span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">花&nbsp;1&nbsp;(杜鹃花)</span><span style="font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">7</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFF00;">23</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">-5</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">-24</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">16</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">花&nbsp;2&nbsp;(秋海棠)</span><span style="font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">5</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">21</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">-4</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFF00;">10</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">23</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">花&nbsp;3&nbsp;(康乃馨)</span><span style="font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">-21</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">5</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">-4</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">-20</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+			<td valign="top" width="101">
+				<p class="0" style="text-align:justify;">
+					<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFF00;">20</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span> 
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="0" style="color:#333333;font-family:Arial;font-size:14px;text-align:justify;background-color:#FFFFFF;">
+	<span style="font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;"></span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"> 例如，根据上表，杜鹃花放在花瓶2中，会显得非常好看；但若放在花瓶4中则显得十分难看。</span><span style="font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">为取得最佳美学效果，你必须在保持花束顺序的前提下，使花束的摆放取得最大的美学值。如果有不止一种的摆放方式具有最大的美学值，则其中任何一直摆放方式都可以接受，但你只要输出任意一种摆放方式。</span> 
+</p>
+<p class="0" style="color:#333333;font-family:Arial;font-size:14px;text-align:justify;background-color:#FFFFFF;">
+	<span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;"></span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">（2）假设条件</span><span style="font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;"></span> 
+</p>
+<p class="0" style="color:#333333;font-family:Arial;font-size:14px;text-align:justify;background-color:#FFFFFF;">
+	<span style="font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;"></span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">1≤F≤100，其中F为花束的数量，花束编号从1至F。</span><span style="font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;"><br />
+</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">F≤V≤100，其中V是花瓶的数量。</span><span style="font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;"><br />
+</span><span style="font-size:10.5pt;font-family:宋体;line-height:normal !important;">-50≤Aij≤50，其中Aij是花束i在花瓶j中的美学值。</span> 
+</p></div><h2>Input</h2><div class=content><span style="color:#333333;font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFFFF;"><span>输入文件是正文文件（text</span></span><span style="color:#333333;font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;background-color:#FFFFFF;">&nbsp;</span><span style="color:#333333;font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFFFF;">file<span>），文件名是</span></span><span style="color:#333333;font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFF00;">flower.in</span><span style="font-size:10.5pt;color:#0000FF;font-family:宋体;line-height:normal !important;background-color:#FFFF00;">p</span><span style="color:#333333;font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFFFF;"><span>。<br />
+</span></span><span style="color:#333333;font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFFFF;"><span>第一行包含两个数：F，V。</span></span><span style="color:#333333;font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;background-color:#FFFFFF;"><br />
+</span><span style="color:#333333;font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFFFF;"><span>随后的F行中，每行包含V个整数，Aij&nbsp;即为输入文件中第（i+1</span></span><span style="color:#333333;font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;background-color:#FFFFFF;">&nbsp;</span><span style="color:#333333;font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFFFF;"><span>）行中的第j个数。</span></span></div><h2>Output</h2><div class=content><span style="color:#333333;font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFFFF;"><span>输出文件必须是名为flower.out的正文文件，文件应包含两行：<br />
+&nbsp;&nbsp;</span></span><span style="color:#333333;font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFFFF;"><span>第一行是程序所产生摆放方式的美学值。</span></span><span style="color:#333333;font-size:10.5pt;font-family:'Times New Roman';line-height:normal !important;background-color:#FFFFFF;"><br />
+&nbsp;&nbsp; &nbsp;</span><span style="color:#333333;font-size:10.5pt;font-family:宋体;line-height:normal !important;background-color:#FFFFFF;"><span>第二行必须用F个数表示摆放方式，即该行的第K个数表示花束K所在的花瓶的编号。</span></span></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>3 5
+7 23 -5 -24 16
+5 21 -4 10 23
+-21 5 -4 -20 20
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>53
+2 4 5
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92'>基本算法-动态规划</a>&nbsp;<a href='problemset.php?search=%E4%B8%80%E6%9C%AC%E9%80%9A2018-%E7%AC%AC%E4%B9%9D%E7%AB%A0'>一本通2018-第九章</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=22897'>Submit</a>][<a href='problemstatus.php?id=22897'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=22897");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

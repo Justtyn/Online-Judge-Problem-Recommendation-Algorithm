@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1249560052" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 24186 --Filtration</title><center><h2>24186: Filtration</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=24186'>Submit</a>][<a href='problemstatus.php?id=24186'>Status</a>][<a href='bbs.php?pid=24186'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=24186'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=24186");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=24186'>下载测试数据1元</a>][28kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>Digital Signal Processing is used for such clever effects as the &quot;echo&quot; often heard in music, or that annoying modulation done with the voices of certain singers.  The field makes the use of</p>
+<i>Finite Impulse Response</i>
+<p>(FIR) filters to make these effects happen.</p>
+<p></p>
+<p>Consider an input stream of samples, represented as a series of integers between 0 and 255 inclusive.  (This is, you should not be surprised to discover, the range of an <i>8-bit</i> sample.)  These samples come in a very specific sequence, one after the other, as the digital representation of a given waveform.  A FIR mixer will take multiple streams and combine them into one, a FIR echo filter will take one input and provide a single output, and so on.</p>
+<p>A FIR filter can be represented as an equation, with the input signals on one side and the output on the other.  For example:</p>
+<pre>
+   Y = X[0] + X[-5]
+</pre>
+<p>represents an echo filter (more specifically, a post-echo filter); a given sample of Y is equal to the value of X at the same location in the input stream, plus the value of the sample that occurred five samples prior in X. Values that are not available (such as X[-5] for the first four samples of X) are set to 0.</p>
+<p>In this problem, all FIR equations obey the following Backus-Naur Form (BNF) grammar:</p>
+<p>
+<table border="0" align="center">
+    <tbody>
+        <tr>
+            <td><b><i>EQUATION</i></b></td>
+            <td><b><tt>::=</tt></b>&nbsp;</td>
+            <td><b><i>STREAM</i></b> &nbsp;__            &nbsp;&quot;<tt>=</tt>&quot;&nbsp; __&nbsp;           <b><i>EXPR</i></b></td>
+        </tr>
+        <tr>
+            <td><b><i>STREAM</i></b></td>
+            <td><b><tt>::=</tt></b></td>
+            <td>A single upper-case letter representing a sample stream, such as           <tt>A</tt> or <tt>X</tt></td>
+        </tr>
+        <tr>
+            <td><b><i>EXPR</i></b></td>
+            <td><b><tt>::=</tt></b>&nbsp;</td>
+            <td><b><i>VALUE</i></b> &nbsp;|&nbsp; <b><i>SAMPLE</i></b>           &nbsp;|&nbsp;           <b><i>EXPR</i></b>           &nbsp;__&nbsp;           <b><i>OPER</i></b>           &nbsp;__&nbsp;           <b><i>EXPR</i></b>           &nbsp;|&nbsp;           &quot;<tt>(</tt>&quot;           &nbsp;__&nbsp;           <b><i>EXPR</i></b>           &nbsp;__&nbsp;           &quot;<tt>)</tt>&quot;</td>
+        </tr>
+        <tr>
+            <td><b><i>VALUE</i></b></td>
+            <td><b><tt>::=</tt></b></td>
+            <td>A floating-point number, such as <tt>0.25</tt>, <tt>5</tt>,          or <tt>-1.5</tt></td>
+        </tr>
+        <tr>
+            <td><b><i>SAMPLE</i></b></td>
+            <td><b><tt>::=</tt></b>&nbsp;</td>
+            <td><b><i>STREAM</i></b>           &nbsp;&quot;<tt>[</tt>&quot;&nbsp; <b><i>OFFSET</i></b>           &nbsp;&quot;<tt>]</tt>&quot;</td>
+        </tr>
+        <tr>
+            <td><b><i>OFFSET</i></b></td>
+            <td><b><tt>::=</tt></b>&nbsp;</td>
+            <td>An integer representing the sample offset into the stream, such as           <tt>0</tt>, <tt>1</tt>, or <tt>-5</tt>, between <tt>-100</tt> and           <tt>100</tt> inclusive.</td>
+        </tr>
+        <tr>
+            <td><b><i>OPER</i></b></td>
+            <td><b><tt>::=</tt></b>&nbsp;</td>
+            <td>&quot;<tt>*</tt>&quot;&nbsp; | &nbsp;&quot;<tt>+</tt>&quot;&nbsp; |           &nbsp;&quot;<tt>-</tt>&quot;</td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<p>Operations are handled in the standard order of precedence (parentheses first, multiplication before addition and subtraction, otherwise left-to-right), and the resulting value is rounded <i>down</i> to the nearest integer between 0 and 255 only <i>after</i> all calculations (if any) are done by the FIR filter. The __ symbol in the above grammar specifies a series of one or more spaces. Note that whitespace in an equation is only allowed where explicitly specified by the above grammar.</p>
+<p>For example, a simple low-pass filter could be expressed as:</p>
+<pre>
+   Z = 0.5 * Y[0] + 0.25 * Y[-1] + 0.25 * Y[1]
+</pre>
+<p>Each output value of Z is based on the matching value in Y, modified by the nearest values of Y.  A simple mixer can be represented as follows:</p>
+<pre>
+   D = C[0] + B[0]
+</pre>
+<p>although the clipping problems that such a filter would have should be apparent.</p>
+<p>Obviously, for complicated effects, a number of filters can be connected together.  In this problem, this is represented by <i><b>STREAM</b></i>; any relevant stream will either be an input value (the source audio, for example) or the output of a single FIR filter.  However, a stream may be <i>used</i> as an input by more than one other filter.  This constitutes a <i>filter network</i>.</p>
+<p>Given a series of definitions of FIR filters and starting inputs, your task is to provide all of the outputs of the various filters.  No FIR filter will have more than 10 operators or more than ten pairs of parentheses, nor will its representation use more than 80 characters.  There will be at least one input stream and at least one output stream per data set, and all streams referenced in a filter equation will be defined in the same data set. All input streams and output streams will have the same number of samples, and there will be no &quot;feedback loops&quot; described by a filter network; that is, no filter will have input dependent on its output.</p>
+<p>Although they sure sound cool when Pete Townshend uses them.</p></div><h2>Input</h2><div class=content><p>Input to this problem will begin with a line containing a single integer</p>
+<i>D</i>
+<p>(1 &le;</p>
+<i>D</i>
+<p>&le; 100) indicating the number of data sets. Each data set consists of the following components:</p>
+<ul>
+    <li>A line containing a single integer <i>N</i> (2 &le; <i>N</i> &le; 26) indicating the number of streams in the data set;</li>
+    <li>A line containing a single integer <i>S</i> (1 &le; <i>S</i> &le; 100) indicating the number of samples in every stream of the data set;</li>
+    <li>A series of <i>N</i> lines, each representing one of the streams. There     will be no duplicate stream names in a data set, and each stream is one     of either:
+    <ul>
+        <li>an input stream, in which case its representation is of the form         &quot;<tt><i>STREAM</i> % <i>sam1 sam2 sam3 </i></tt><i>&hellip;<tt> samS</tt></i>&quot;, where         <tt><i>STREAM</i></tt> is a single capital letter, and <i>sam1</i> is the first         sample of the input stream, <i>sam2</i> is the second sample, and so         on. The individual samples and the <tt>%</tt> operator are         all separated with whitespace.</li>
+        <li>a FIR filter, in which case its representation is of the form         &quot;<tt><i>STREAM</i> = <i>EXPR</i></tt>&quot;, as described above.</li>
+    </ul>
+    </li>
+</ul></div><h2>Output</h2><div class=content><p>For each data set in the input, output the heading &quot;<tt>DATA SET #<i>k</i></tt>&quot; where <i>k</i> is 1 for the first data set, 2 for the second, and so on. Then print the output sample streams for every FIR filter in the data set, in alphabetical order, in the format &quot;<tt><i>STREAM</i> % <i>sam1 sam2 sam3 </i></tt><i>&hellip;<tt> samS</tt></i>&quot;.</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>3
+3
+5
+A % 10 20 30 20 10
+B = A[0] + A[-1]
+C = 0.5 * ( A[0] + B[0] )
+3
+5
+Z = 0.5 * Y[0] + 0.5 * B[0]
+Y % 50 10 50 10 50
+B % 10 50 10 50 15
+3
+5
+A % 1 2 3 4 5
+B = A[-2]
+C = B[2]
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>DATA SET #1
+B % 10 30 50 50 30
+C % 10 25 40 35 20
+DATA SET #2
+Z % 30 30 30 30 32
+DATA SET #3
+B % 0 0 1 2 3
+C % 1 2 3 0 0
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=2008'>2008</a>&nbsp;<a href='problemset.php?search=ACM'>ACM</a>&nbsp;<a href='problemset.php?search=ICPC'>ICPC</a>&nbsp;<a href='problemset.php?search=South'>South</a>&nbsp;<a href='problemset.php?search=Central'>Central</a>&nbsp;<a href='problemset.php?search=USA'>USA</a>&nbsp;<a href='problemset.php?search=Regional'>Regional</a>&nbsp;<a href='problemset.php?search=Programming'>Programming</a>&nbsp;<a href='problemset.php?search=Contest'>Contest</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=24186'>Submit</a>][<a href='problemstatus.php?id=24186'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=24186");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

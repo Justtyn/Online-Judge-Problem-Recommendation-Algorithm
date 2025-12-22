@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1459619061" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 24431 --【NOIP2013tg_Day2】花匠</title><center><h2>24431: 【NOIP2013tg_Day2】花匠</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>10&nbsp;&nbsp;<span class=green>Solved: </span>6<br>[<a href='submitpage.php?id=24431'>Submit</a>][<a href='problemstatus.php?id=24431'>Status</a>][<a href='bbs.php?pid=24431'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=24431'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=24431");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=24431'>下载测试数据1元</a>][1128kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align: center"><b>2．花匠</b></p>
+<p class="MsoNormal" align="center" style="text-align: center"><b>(flower.cpp/c/pas)</b></p>
+<p class="MsoNormal"><b>【问题描述】</b></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">花匠栋栋种了一排花，每株花都有自己的高度。花儿越长越大，也越来越挤。栋栋决定把这排中的一部分花移走，将剩下的留在原地，使得剩下的花能有空间长大，同时，栋栋希望剩下的花排列得比较别致。</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">具体而言，栋栋的花的高度可以看成一列整数ℎ1, ℎ2, &hellip; , ℎn。设当一部分花被移走后，剩下的花的高度依次为g<sub>1</sub>, g<sub>2</sub>, &hellip; , g<sub>m</sub>，则栋栋希望下面两个条件中至少有一个满足：</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">条件<span> A</span>：对于所有的<span>1</span><span>&le;</span>i<span>&le;</span><span>m/2</span><span>，</span><span>有g</span><sub>2</sub><sub>i </sub><span>&nbsp;&gt; g</span><sub>2i-1</sub><span>，同时对于所有的</span><span>1</span><span>&le;</span><span>i</span><span>&le;<span>m/2</span></span><span>，有g</span><sub>2</sub><sub>i </sub><span>&nbsp;&gt; g</span><sub>2i+1</sub><span>；</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt"></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">条件<span> B</span>：对于所有的<span>1</span><span>&le;</span>i<span>&le;<span>m/2</span></span>，有g<sub>2</sub><sub>i </sub>&nbsp;&lt; g<sub>2i-1</sub>，同时对于所有的<span>1</span><span>&le;</span>i<span>&le;<span>m/2</span></span>，有g<sub>2</sub><sub>i </sub>&nbsp;&lt; g<sub>2i+1</sub>。</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">注意上面两个条件在 m = 1时同时满足，当 m &gt; 1时最多有一个能满足。</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">请问，栋栋最多能将多少株花留在原地。</p>
+<p class="MsoNormal"><span>&nbsp;</span></p>
+<p class="MsoBodyText" style="margin-left: 0cm"><b>【输入】</b></p>
+<p class="MsoBodyText" style="margin-left: 0cm; text-indent: 20.6pt">输入文件为 flower.in。</p>
+<p class="MsoBodyText" style="margin-left: 0cm; text-indent: 20.6pt">输入的第一行包含一个整数，表示开始时花的株数。</p>
+<p class="MsoNormal" style="text-indent: 22pt">第二行包含个整数，依次为ℎ<span>1, </span>ℎ<span>2, &hellip; , </span>ℎn，表示每株花的高度。</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoBodyText" style="margin-left: 0cm"><b>【输出】</b></p>
+<p class="MsoBodyText" style="margin-left: 0cm; text-indent: 20.6pt">输出文件为 flower.out。</p>
+<p class="MsoBodyText" style="margin-left: 0cm; text-indent: 20.6pt">输出一行，包含一个整数，表示最多能留在原地的花的株数。</p>
+<p class="MsoBodyText" style="margin-left: 0cm"><span>&nbsp;</span></p>
+<p class="MsoBodyText" style="margin-left: 0cm"><b>【输入输出样例】</b></p>
+<div align="center">
+<table class="MsoNormalTable ke-zeroborder" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td valign="top" width="198" style="border-top: black 1pt solid; border-right: black 1pt solid; border-bottom: black 1pt solid; border-left: black 1pt solid">
+            <p class="TableParagraph" style="margin-left: 5.1pt"><b><span style="font-size: 10.5pt; font-family: &quot;">flower.in</span></b></p>
+            </td>
+            <td valign="top" width="199" style="border-top: black 1pt solid; border-right: black 1pt solid; border-bottom: black 1pt solid; border-left: black 1pt solid">
+            <p class="TableParagraph" style="margin-left: 5.1pt"><b><span style="font-size: 10.5pt; font-family: &quot;">flower.out</span></b></p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="198" style="border-top: black 1pt solid; border-right: black 1pt solid; border-bottom: black 1pt solid; border-left: black 1pt solid">
+            <p class="TableParagraph" style="margin-left: 5.1pt"><span style="font-size: 10.5pt; font-family: &quot;">5</span></p>
+            <p class="TableParagraph" style="margin-left: 5.1pt"><span style="font-size: 10.5pt; font-family: &quot;">5<span> </span>3<span> </span>2<span> </span>1<span> </span>2</span></p>
+            </td>
+            <td valign="top" width="199" style="border-top: black 1pt solid; border-right: black 1pt solid; border-bottom: black 1pt solid; border-left: black 1pt solid">
+            <p class="TableParagraph" style="margin-left: 5.1pt"><span style="font-size: 10.5pt; font-family: &quot;">3</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<p class="MsoBodyText" style="margin-left: 0cm">&nbsp;</p>
+<p class="MsoBodyText" style="margin-left: 0cm"><b>【输入输出样例说明】</b></p>
+<p class="MsoBodyText" style="margin-left: 0cm; text-indent: 20.6pt">有多种方法可以正好保留 3 株花，例如，留下第 1、4、5 株，高度分别为 5、1、2，满足条件 B。</p>
+<p class="MsoNormal"><span>&nbsp;</span></p>
+<p class="MsoNormal"><b>【数据范围】</b></p>
+<p class="MsoNormal" style="text-indent: 22pt">对于<span> 20%</span>的数据，<span>n &le; 10</span>；</p>
+<p class="MsoNormal" style="text-indent: 22pt">对于<span> 30%</span>的数据，<span>n &le; 25</span>；</p>
+<p class="MsoNormal" style="text-indent: 22pt">对于<span> 70%</span>的数据，<span>n &le; 1000</span>，<span>0 &le; </span>ℎ<span>n</span><span>&le; 1000</span>；</p>
+<p class="MsoNormal" style="text-indent: 22pt">对于<span> 100%</span>的数据，<span>1 &le; n &le; 100,000</span>，<span>0 &le; </span>ℎ<span>n</span><span>&le; 1,000,000</span>，所有的ℎ<span>n</span>随机生成，所有随机数服从某区间内的均匀分布。</p>
+<p class="MsoNormal" style="text-indent: 22pt"><span>&nbsp;</span></p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=NOIP%E6%8F%90%E9%AB%98%E7%BB%84'>NOIP提高组</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=24431'>Submit</a>][<a href='problemstatus.php?id=24431'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=24431");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

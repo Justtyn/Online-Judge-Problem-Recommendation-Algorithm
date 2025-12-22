@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1404839682" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5473 --荒岛野人-【2014暑期训练】T4Day2T2</title><center><h2>5473: 荒岛野人-【2014暑期训练】T4Day2T2</h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>21&nbsp;&nbsp;<span class=green>Solved: </span>7<br>[<a href='submitpage.php?id=5473'>Submit</a>][<a href='problemstatus.php?id=5473'>Status</a>][<a href='bbs.php?pid=5473'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5473'>下载FPS2元</a>][<a onclick='$(this).load("cart.php?add=5473");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5473'>下载测试数据2元</a>][84kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<strong><span style="font-size:18px;">荒岛野人</span></strong><b></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【问题描述】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;克里特岛以野人群居而著称。岛上有排列成环行的M个山洞。这些山洞顺时针编号为1,2,…,M。岛上住着N个野人，一开始依次住在山洞C1,C2,…,CN中，以后每年，第i个野人会沿顺时针向前走Pi个洞住下来。每个野人i有一个寿命值Li，即生存的年数。下面四幅图描述了一个有6个山洞，住有三个野人的岛上前四年的情况。三个野人初始的洞穴编号依次为1，2，3；每年要走过的洞穴数依次为3，7，2；寿命值依次为4，3，1。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">奇怪的是，虽然野人有很多，但没有任何两个野人在有生之年处在同一个山洞中，使得小岛一直保持和平与宁静，这让科学家们很是惊奇。他们想知道，至少有多少个山洞，才能维持岛上的和平呢？</span> 
+</p>
+<p class="MsoNormal" style="text-align:center;">
+	<span style="font-size:18px;">&nbsp;<img src="/attached/image/20140723/20140723114208_54349.jpg" alt="" /></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【输入文件】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">输入文件savage.in的第1行为一个整数N(1&lt;=N&lt;=15)，即野人的数目。第2行到第N+1每行为三个整数Ci, Pi, Li (1&lt;=Ci,Pi&lt;=100, 0&lt;=Li&lt;=10^6
+)，表示每个野人所住的初始洞穴编号，每年走过的洞穴数及寿命值。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【输出文件】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">输出文件savage.out仅包含一个数M，即最少可能的山洞数。输入数据保证有解，且M不大于10^6。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【样例输入】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">3</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1 &nbsp;3 &nbsp;4</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">2 &nbsp;7 &nbsp;3</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">3 &nbsp;2 &nbsp;1</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【样例输出】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">6</span> 
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p class="MsoNormal" style="text-align:center;"><br />
+	<span style="font-size:18px;"><img src="/attached/image/20140724/20140724114624_65014.jpg" alt="" /><br /><br />
+</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">同余方程及其在奥赛中的应用</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 程序设计中，恰如其分的数学方法往往有助于算法的设计，起到优化程序的作用。</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 同余方程及其解法是数论中的一个基本概念，有些试题表面看起来似乎属于盲目搜索类型，可一旦使用了同余方程等相关概念后，便可使求解过程既简便又高效。</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 一、 同余方程及其解法</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 同余方程，即：ax≡b(mod n) （n&gt;0），表示ax mod n=b mod n，其中a、b、n为整数常量，x为未知量。</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 求解同余方程式的根时，首先需了解：欧几里德（辗转相除法）推广算法。</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;</span><b><span style="font-size:18px;">&nbsp;&nbsp; </span></b><b><span style="font-size:18px;">欧几里德递归定理：</span></b><b><span style="font-size:18px;">gcd(a,b)=gcd(b,a mod b)</span></b><b><span style="font-size:18px;">，实现用辗转相除的方法求两个正整数</span></b><b><span style="font-size:18px;">a</span></b><b><span style="font-size:18px;">、</span></b><b><span style="font-size:18px;">b</span></b><b><span style="font-size:18px;">的最大公约数。欧几里德推广算法不仅能求出两个正整数</span></b><b><span style="font-size:18px;">a</span></b><b><span style="font-size:18px;">、</span></b><b><span style="font-size:18px;">b</span></b><b><span style="font-size:18px;">的最大公约数</span></b><b><span style="font-size:18px;">d</span></b><b><span style="font-size:18px;">，而且还能计算出满足下式的整系数</span></b><b><span style="font-size:18px;">x</span></b><b><span style="font-size:18px;">和</span></b><b><span style="font-size:18px;">y</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span style="font-size:18px;">&nbsp;&nbsp;&nbsp;<br />
+d=gcd(a,b)=ax+by&nbsp;&nbsp; (x</span></b><b><span style="font-size:18px;">与</span></b><b><span style="font-size:18px;">y</span></b><b><span style="font-size:18px;">可能为</span></b><b><span style="font-size:18px;">0</span></b><b><span style="font-size:18px;">或负数</span></b><b><span style="font-size:18px;">)</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span style="font-size:18px;">&nbsp;&nbsp;&nbsp; </span></b><b><span style="font-size:18px;">我们知道，若</span></b><b><span style="font-size:18px;">b=0</span></b><b><span style="font-size:18px;">，可以返回最大公约数为</span></b><b><span style="font-size:18px;">a</span></b><b><span style="font-size:18px;">，</span></b><b><span style="font-size:18px;">x=1</span></b><b><span style="font-size:18px;">，</span></b><b><span style="font-size:18px;">y=0</span></b><b><span style="font-size:18px;">；若</span></b><b><span style="font-size:18px;">b&lt;&gt;0</span></b><b><span style="font-size:18px;">，可设</span></b><b><span style="font-size:18px;">d'=gcd(b,a<br />
+mod b)=bx'+(a mod b)y'</span></b><b><span style="font-size:18px;">，则有：</span></b><b></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span style="font-size:18px;">d'= bx'+(a mod b)y'= bx'+(a-a div b*b)y'=ay'+b(x'-a<br />
+div b* y') </span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span style="font-size:18px;">∵</span></b><b><span style="font-size:18px;"> d=d'</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span style="font-size:18px;">∴</span></b><b><span style="font-size:18px;"> x=y'</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span style="font-size:18px;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;y= x'-a div b* y'</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span style="font-size:18px;">&nbsp;&nbsp;&nbsp; </span></b><b><span style="font-size:18px;">这样，用辗转相除法求两个正整数</span></b><b><span style="font-size:18px;">a</span></b><b><span style="font-size:18px;">、</span></b><b><span style="font-size:18px;">b</span></b><b><span style="font-size:18px;">的最大公约数</span></b><b><span style="font-size:18px;">d</span></b><b><span style="font-size:18px;">的同时也可以生成满足等式：</span></b><b></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span style="font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp; d=ax+by</span></b> <br />
+</p><br />
+<p class="MsoNormal" style="text-indent:27.0pt;"><br />
+	<b><span style="font-size:18px;">的整系数</span></b><b><span style="font-size:18px;">x</span></b><b><span style="font-size:18px;">和</span></b><b><span style="font-size:18px;">y</span></b><b><span style="font-size:18px;">了。（实现该算法的</span></b><b><span style="font-size:18px;">PASCAL</span></b><b><span style="font-size:18px;">程序，详见实例程序）</span></b><b></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">function<br />
+e_gcd(a,b:longint;var x,y:longint):longint;{欧几里德推广算法}</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;var t:longint;</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;begin if b=0 then</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin e_gcd:=a;x:=1;y:=0;end</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin e_gcd:=e_gcd(b,a mod b,x,y);</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t:=x;x:=y;y:=t-(a div b)*y</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;end;</span> <br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<span style="font-size:18px;">在</span><a href="http://zh.wikipedia.org/wiki/%E6%95%B0%E8%AE%BA"><span style="font-size:18px;">数论</span></a><span style="font-size:18px;">中，</span><b><span style="font-size:18px;">线性同余方程</span></b><span style="font-size:18px;">是最基本的同余方程，“线性”表示方程的</span><a href="http://zh.wikipedia.org/wiki/%E6%9C%AA%E7%9F%A5%E6%95%B0"><span style="font-size:18px;">未知数</span></a><span style="font-size:18px;">次数是一次，即形如：</span> <br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<br /><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<span style="font-size:18px;">的方程。此方程有解</span><a href="http://zh.wikipedia.org/wiki/%E5%BD%93%E4%B8%94%E4%BB%85%E5%BD%93"><span style="font-size:18px;">当且仅当</span></a><span style="font-size:18px;">&nbsp;</span><i><span style="font-size:18px;">b</span></i><span style="font-size:18px;">&nbsp;能够被&nbsp;</span><i><span style="font-size:18px;">a</span></i><span style="font-size:18px;">&nbsp;与&nbsp;</span><i><span style="font-size:18px;">n</span></i><span style="font-size:18px;">&nbsp;的</span><a href="http://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0"><span style="font-size:18px;">最大公约数</span></a><a href="http://zh.wikipedia.org/wiki/%E6%95%B4%E9%99%A4"><span style="font-size:18px;">整除</span></a><span style="font-size:18px;">（记作 gcd(</span><i><span style="font-size:18px;">a</span></i><span style="font-size:18px;">,</span><i><span style="font-size:18px;">n</span></i><span style="font-size:18px;">) |&nbsp;</span><i><span style="font-size:18px;">b</span></i><span style="font-size:18px;">）。这时，如果&nbsp;</span><i><span style="font-size:18px;">x</span><sub><span style="font-size:18px;">0</span></sub></i><span style="font-size:18px;">&nbsp;是方程的一个解，那么所有的解可以表示为：</span> <br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<img border="0" width="157" height="36" src="file://C:/DOCUME~1/zsb0001/LOCALS~1/Temp/msohtml1/01/clip_image002.gif" alt="\{x_0+k\frac{n}{d}\mid k\in\Bbb{Z}\}." /> <br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<span style="font-size:18px;">其中&nbsp;</span><i><span style="font-size:18px;">d</span></i><span style="font-size:18px;">&nbsp;是</span><i><span style="font-size:18px;">a</span></i><span style="font-size:18px;">&nbsp;与&nbsp;</span><i><span style="font-size:18px;">n</span></i><span style="font-size:18px;">&nbsp;的</span><a href="http://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0"><span style="font-size:18px;">最大公约数</span></a><span style="font-size:18px;">。在模 n 的</span><a href="http://zh.wikipedia.org/wiki/%E5%AE%8C%E5%85%A8%E5%89%A9%E4%BD%99%E7%B3%BB"><span style="font-size:18px;">完全剩余系</span></a><span style="font-size:18px;">&nbsp;{0,1,…,n-1} 中，恰有&nbsp;</span><i><span style="font-size:18px;">d</span></i><span style="font-size:18px;">&nbsp;个解。</span> <br />
+</p><br />
+<p class="MsoNormal" align="left" style="margin-left:19.2pt;text-indent:-18pt;background:white;"><br />
+	<span style="font-size:18px;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+在方程</span> <br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<span style="font-size:18px;">3</span><i><span style="font-size:18px;">x</span></i><span style="font-size:18px;">&nbsp;≡ 2 (</span><b><span style="font-size:18px;">mod</span></b><span style="font-size:18px;">&nbsp;6)</span> <br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<span style="font-size:18px;">中， d = gcd(3,6) = 3 ，3 不整除 2，因此方程无解。</span> <br />
+</p><br />
+<p class="MsoNormal" align="left" style="margin-left:38.4pt;text-indent:-18pt;background:white;"><br />
+	<span style="font-size:18px;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+在方程</span> <br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<span style="font-size:18px;">5</span><i><span style="font-size:18px;">x</span></i><span style="font-size:18px;">&nbsp;≡ 2 (</span><b><span style="font-size:18px;">mod</span></b><span style="font-size:18px;">&nbsp;6)</span> <br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<span style="font-size:18px;">中， d = gcd(5,6) = 1，1 整除 2，因此方程在{0,1,2,3,4,5} 中恰有一个解:&nbsp;</span><i><span style="font-size:18px;">x</span></i><span style="font-size:18px;">=4。</span> <br />
+</p><br />
+<p class="MsoNormal" align="left" style="margin-left:57.6pt;text-indent:-18pt;background:white;"><br />
+	<span style="font-size:18px;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+在方程</span> <br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<span style="font-size:18px;">4</span><i><span style="font-size:18px;">x</span></i><span style="font-size:18px;">&nbsp;≡ 2 (</span><b><span style="font-size:18px;">mod</span></b><span style="font-size:18px;">&nbsp;6)</span> <br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<span style="font-size:18px;">中， d = gcd(4,6) = 2，2 整除 2，因此方程在{0,1,2,3,4,5} 中恰有两个解:&nbsp;</span><i><span style="font-size:18px;">x</span></i><span style="font-size:18px;">=2以及</span><i><span style="font-size:18px;">x</span></i><span style="font-size:18px;">=5。</span> <br />
+</p><br />
+<p class="MsoNormal" style="text-indent:27.0pt;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 在欧几里德推广算法的基础上，我们可得同余方程ax≡b(mod n)的求解过程如下：</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 通过欧几里德推广算法求出：</span> <br />
+</p><br />
+<p class="MsoNormal" style="text-indent:14.0pt;"><br />
+	<span style="font-size:18px;">&nbsp;<br />
+d=gcd(a,n)和两个满足d=ax+ny的值x和y</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 若b mod d&lt;&gt;0，则该方程无解；否则有d个解。其中第1个解为：</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp; &nbsp;&nbsp;&nbsp;x0=x*(b div d) mod n</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 其余d-1个解为：</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp; &nbsp;xi=(x0+i*(n div d)) mod n&nbsp; (1≤i≤d-1)</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 同余方程ax＝b(mod n)的求解过程结束。</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;"> </span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	【题意分析】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp; 为了更好的理解题意，先举个简单的例子：有甲、乙两人在400米的环形跑道上顺时针跑步，甲的速度为V甲，乙的速度为V乙（V甲&gt;V乙），起跑时，终点线顺时针到甲的跑道长度为L甲、到乙的跑道长度为L乙，设甲追到乙所需的时间为x，则有：（V甲-V乙）*x mod 400= (L乙-L甲)<br />
+mod 400<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp; 同样，原题中，若Pi&gt;Pj且第i个野人与第j个野人过了x年会住在同一个山洞（假设寿命值无限），则必有：<br />
+</p><br />
+<p class="MsoNormal"><br />
+	（Pi-Pj）*x mod m=( Cj-Ci) mod m<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp; 也即同余方程<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （Pi-Pj）*x ≡ Cj-Ci （mod m）………………（1）<br />
+</p><br />
+<p class="MsoNormal"><br />
+	有解。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp; 当然，仅仅是同余方程（Pi-Pj）*x ≡ Cj-Ci （mod m）有解还不能说明第i个野人与第j个野人在有生之年就会同住一个洞。因为该方程的解集中，如果不存在既小于第i个野人的寿命值Li又小于第j个野人寿命值Lj的正整数解，他们就不可能在有生之年同住一个洞——至少有一方在还没相遇就死去了。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp; 这样，题意即可理解为：找一个最小的m，使得任意两个野人在有生之年内，同余方程式（1）无解。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp; 搜索这样的m，可用穷举法。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp; 【程序参考】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	const maxn=15;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	var<br />
+c,p,l:array[1..maxn] of longint;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp; m,i,n:longint;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp; fin,fout:text;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	function<br />
+e_gcd(a,b:longint;var x,y:longint):longint;{欧几里德推广算法}<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;var t:longint;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;begin if b=0 then<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin e_gcd:=a;x:=1;y:=0;end<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin e_gcd:=e_gcd(b,a mod b,x,y);<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t:=x;x:=y;y:=t-(a div b)*y<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;end;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	function<br />
+check:boolean;{判断当前的m是否合法}<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;var&nbsp;<br />
+i,j,a,b,d,x,y,answer, md:longint;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;begin<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp; check:=false;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp; for i:=1 to n do&nbsp;&nbsp; {判断任意两个野人的情况}<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp; for j:=i+1 to n do<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp; begin a:=p[i]-p[j];b:=c[j]-c[i];<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if a&lt;0 then begin<br />
+a:=-a;b:=-b;end;{辗转相除法用于非负整数}<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d:=e_gcd(a,m,x,y);<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if b mod d=0 then&nbsp; {同余方程有解的情况（无解即不可能冲突）}<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;answer:=(x*b div d) mod m;&nbsp; {第一个解}<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; md:=m div d; {其它解可由第一个解加上md的倍数构成}<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while answer&lt;0 do<br />
+answer:=answer+md; {寻找最小正整数解}<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while answer&gt;=md do<br />
+answer:=answer-md;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	if<br />
+(answer&lt;=l[i]) and (answer&lt;=l[j]) then exit;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	{条件成立，即第i个野人与第j个野人在有生之年会同住一个洞，不合法，退出本测试，继续m+1的测试}<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp; end;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp; check:=true;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;end;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	begin<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp; assign(fin,'savage.in');reset(fin);<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp; assign(fout,'savage.out');rewrite(fout);<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp; read(fin,n);<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp; m:=0;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp; for i:=1 to n do<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp; begin read(fin,c[i],p[i],l[i]);<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dec(c[i]);<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if c[i]&gt;m then m:=c[i];<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp; end;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp; m:=m+1;<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp; while not check do m:=m+1;{从小到大，直到找到合法的m为止}<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp; writeln(fout,m);<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp; close(fin);<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp; close(fout);<br />
+</p><br />
+<p class="MsoNormal"><br />
+	end.<br />
+</p><br />
+<br /><br />
+<p><br />
+	<br /><br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%A8%A1%E6%8B%9F%E8%B5%9B-2014%E6%9A%91%E6%9C%9F%E8%AE%AD%E7%BB%83'>模拟赛-2014暑期训练</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5473'>Submit</a>][<a href='problemstatus.php?id=5473'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5473");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

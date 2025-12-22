@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1608191366" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 24411 --山头狙击战</title><center><h2>24411: 山头狙击战</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>61&nbsp;&nbsp;<span class=green>Solved: </span>27<br>[<a href='submitpage.php?id=24411'>Submit</a>][<a href='problemstatus.php?id=24411'>Status</a>][<a href='bbs.php?pid=24411'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=24411'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=24411");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=24411'>下载测试数据1元</a>][572kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" style="text-align:left;text-indent:21.0pt;" align="left">
+	<span style="font-size:12.0pt;font-family:宋体;">Lucky </span><span style="font-size:12.0pt;font-family:宋体;">为了掩护大部队，单枪匹马同敌人周旋，后来被敌人包围在某山头<span>……</span>等等，为什么怎么听怎么像狼牙山五壮士！不过不用着急，这次<span>Lucky</span>携带了足够的弹 药，完全可以将涌上来的敌人一个一个干掉。<span>Lucky</span>是个神枪手，只要他的枪膛中有子弹，他就能将在他射程<span>m</span>（用从敌人位置到山头的直线距离算）以内的一 个敌人瞬间射杀。但如果在射程内没有敌人，出于节约子弹考虑和面子问题，<span>Lucky</span>会等待敌人靠近然后射击。<span></span></span>
+</p>
+<p class="MsoNormal" style="text-align:left;text-indent:21.0pt;" align="left">
+	<span style="font-size:12.0pt;font-family:宋体;">正当<span>Lucky</span>为自己的强大而自我膨胀时，他忽然发现了一个致命的失误：他携带的枪是单发枪，每射出一发子弹都必须花<span>k</span>秒钟的时间装子弹。而凶残的敌人才不 会花时间等你换子弹呢。他们始终在以<span>1m/s</span>的速度接近山头。而如果在一个敌人到达山头时<span>Lucky</span>无法将他击毙，那么我们可怜的<span>Lucky</span>就将牺牲在敌 人的刺刀下。现在<span>Lucky</span>用心灵感应向你发出求助：要保住自己的性命并且歼灭所有敌人，<span>Lucky</span>最多只能用多少时间给枪装上一发子弹？<span></span></span>
+</p>
+<p class="MsoNormal" style="text-align:left;text-indent:21.0pt;" align="left">
+	<span style="font-size:12.0pt;font-family:宋体;">说明：假设一开始<span>Lucky</span>的枪中就有一发子弹，并且一旦确定一个装弹时间，<span>Lucky</span>始终会用这个时间完成子弹的装卸。希望你能帮助<span>Lucky</span>脱离险境。<span></span></span>
+</p></div><h2>Input</h2><div class=content><p class="MsoNormal" style="text-align:left;text-indent:21.0pt;" align="left">
+	<span style="font-size:12.0pt;font-family:宋体;">针对每组输入数据，第一行有两个整数<span>n</span>和<span>m</span>，（<span>2≤n≤100,000;&nbsp;1≤m≤10,000,000</span>）<span>n</span>代表敌人个数，<span>m</span>代表<span>Lucky</span>的射程。<span><br />
+&nbsp;&nbsp;</span>接下来有<span>n</span>行，每行一个整数<span>mi,</span>（<span>1≤mi≤10,000,000</span>），代表每个敌人一开始相对山头的距离（单位为米）。<span></span></span>
+</p></div><h2>Output</h2><div class=content><p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+	<span style="font-size:12.0pt;font-family:宋体;">每组输出数据仅有一个整数，代表<span>Lucky</span>的换弹时间（单位为秒）。<span></span></span>
+</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>6 100
+236
+120
+120
+120
+120
+120</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>25
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95-%E5%88%86%E6%B2%BB'>基本算法-分治</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=24411'>Submit</a>][<a href='problemstatus.php?id=24411'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=24411");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

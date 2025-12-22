@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?718515631" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 25340 --动物园</title><center><h2>25340: 动物园</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>15&nbsp;&nbsp;<span class=green>Solved: </span>5<br>[<a href='submitpage.php?id=25340'>Submit</a>][<a href='problemstatus.php?id=25340'>Status</a>][<a href='bbs.php?pid=25340'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=25340'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=25340");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=25340'>下载测试数据1元</a>][8476kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+	<span style="font-size:12.0pt;font-family:宋体;">绝恋解决问题后成为动物园的<span>VIP*VIP</span>，他帮助的动物园包含一大圈围栏，每个围栏里有一种富有异国风情的动物。如下图所示：<span></span></span>
+</p>
+<p>
+	<img src="/attached/image/20141018/20141018112822_21627.jpg" alt="" />
+</p>
+<p>
+	<p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+		<span style="font-size:12.0pt;font-family:宋体;">绝恋准备带着自己的<span>MM</span>们去动物园看动物。他希望能让她们在动物园度过一段美好的时光。但这并不是一件容易的事——有些<span>MM</span>喜欢某些动物，而有些<span>MM</span>则害怕某些动物。例如，<span>Alex </span>喜欢可爱的猴子和考拉，而害怕张牙舞爪的狮子。而<span>Polly</span>会因狮子有美丽的鬃毛而喜欢它，但害怕有臭味的考拉。<span></span></span>
+	</p>
+	<p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+		<span style="font-size:12.0pt;font-family:宋体;">绝恋可以选择将一些动物从围栏中移走以使得<span>MM</span>不会害怕。但绝恋移走的动物也不能太多，否则留给<span>MM</span>们观赏的动物就所剩无几了。<span></span></span>
+	</p>
+	<p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+		<span style="font-size:12.0pt;font-family:宋体;">每个<span>MM</span>站在大围栏圈的外面，可以看到连续的<span>5</span>个围栏。绝恋得到了所有<span>MM</span>喜欢和害怕的动物信息。当出现下面两种情形之一时，<span>MM</span>就会高兴：<span></span></span>
+	</p>
+	<p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+		<span style="font-size:12.0pt;font-family:宋体;">①至少有一个她害怕的动物（从视线可见的范围内）被移走<span></span></span>
+	</p>
+	<p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+		<span style="font-size:12.0pt;font-family:宋体;">②至少有一个她喜欢的动物没有被（从视线可见的范围内）移走。<span></span></span>
+	</p>
+<span style="font-size:12.0pt;font-family:宋体;">例如，考虑下图中的<span>MM</span>和动物：</span>
+</p>
+<p>
+	<span style="font-size:12.0pt;font-family:宋体;"><img src="/attached/image/20141018/20141018112853_60911.jpg" alt="" /><br />
+</span>
+</p>
+<p>
+	<table class="MsoTableGrid" style="border-collapse:collapse;border:none;" border="1" cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">MM</span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">可见的围栏<span></span></span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">害怕的动物<span></span></span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">喜欢的动物<span></span></span>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">Alex</span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">2,3,4,5,6</span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">围栏<span>4</span></span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">围栏<span>2,6</span></span>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">Polly</span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">3,4,5,6,7</span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">围栏<span>6</span></span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">围栏<span>4</span></span>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">Chaitanya</span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">6,7,8,9,10</span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">围栏<span>9</span></span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">围栏<span>6,8</span></span>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">Hwan</span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">8,9,10,11,12</span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">围栏<span>9</span></span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">围栏<span>12</span></span>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">Ka-Shu</span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">12,13,14,1,2</span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">围栏<span>12,13, 2</span></span>
+					</p>
+				</td>
+				<td style="border:solid windowtext 1.0pt;" valign="top" width="142">
+					<p class="MsoNormal" style="text-align:center;" align="center">
+						<span style="font-size:12.0pt;font-family:宋体;">-</span>
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+		<span style="font-size:12.0pt;font-family:宋体;">假如绝恋将围栏<span>4</span>和<span>12</span>的动物移走。<span>Alex</span>和<span>Ka-Shu</span>将很高兴，因为至少有一个她们害怕的动物被移走了。这也会使<span>Chaitanya </span>高兴，因为她喜欢的围栏<span>6</span>和<span>8</span>中的动物都保留了。但是，<span>Polly</span>和<span>Hwan</span>将不高兴，因为她们看不到任何她们喜欢的动物，而她们害怕的动物都还在。这种安排方式使得三个<span>MM</span>高兴。<span></span></span>
+	</p>
+	<p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+		<span style="font-size:12.0pt;font-family:宋体;">现在换一种方法，如果绝恋将围栏<span>4</span>和<span>6</span>中的动物移走，<span>Alex</span>和<span>Polly</span>将很高兴，因为她们害怕的动物被移走了。<span>Chaitanya</span>也会高兴，因为虽然她喜欢的动物<span>6 </span>被移走了，她仍可以看到围栏<span>8</span>里面她喜欢的动物。同样的<span>Hwan</span>也会因可以看到自己喜欢的围栏<span>12</span>里的动物而高兴。唯一不高兴的只有<span>Ka-Shu</span>。<span></span></span>
+	</p>
+	<p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+		<span style="font-size:12.0pt;font-family:宋体;">如果绝恋只移走围栏<span>13</span>中的动物，<span>Ka-Shu</span>将高兴，因为有一个她害怕的动物被移走。<span>Alex, Polly, Chaitanya </span>和<span>Hwan </span>也会高兴，因为她们都可以看到至少一个她们喜<span></span></span>
+	</p>
+	<p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+		<span style="font-size:12.0pt;font-family:宋体;">欢的动物。所以<span>5</span>个<span>MM</span>会高兴。这种方法使得最多的<span>MM</span>高兴。<span></span></span>
+	</p>
+</p></div><h2>Input</h2><div class=content><p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+	<span style="font-size:12.0pt;font-family:宋体;">输入的第一行包含两个整数<span>N, C</span>，用空格分隔。<span>N</span>是围栏数，<span>C </span>是<span>MM</span>的个数。围栏按照顺时针的方向编号为<span>1,2,3,</span>…<span>,N</span>。接下来的<span>C </span>行，每行描述一个<span>MM</span>的信息，以下面的形式给出：<span></span></span>
+</p>
+<p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+	<span style="font-size:12.0pt;font-family:宋体;">E F
+L X1 X2 </span><span style="font-size:12.0pt;font-family:宋体;">…<span> XF Y1 Y2 </span>…<span> YL</span></span>
+</p>
+<p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+	<span style="font-size:12.0pt;font-family:宋体;">其中：<span>E</span>表示这个<span>MM</span>可以看到的第一个围栏的编号，换句话说，该<span>MM</span>可以看到的围栏为<span>E,E+1,E+2,E+3,E+4</span>。注意，如果编号超过<span>N </span>将继续从<span>1</span>开始算。如：当<span>N=14,
+E=13</span>时，这个<span>MM</span>可以看到的围栏为<span>13,14,1,2</span>和<span>3</span>。<span>F</span>表示该<span>MM</span>害怕的动物数。<span>L</span>表示该<span>MM</span>喜欢的动物数。围栏<span>X1,X2,</span>…<span>,XF </span>中包含该<span>MM</span>害怕的动物。<span></span></span>
+</p>
+<p class="MsoNormal" style="text-align:left;text-indent:24.0pt;" align="left">
+	<span style="font-size:12.0pt;font-family:宋体;">围栏<span>Y1, Y2, </span>…<span>, YL </span>中包含该<span>MM</span>喜欢的动物。<span>X1, X2, </span>…<span>, XF, Y1, Y2, </span>…<span>, YL </span>是两两不同的整数，而且所表示的围栏都是该<span>MM</span>可以看到的。<span></span></span>
+</p>
+<p>
+	<span style="font-size:12.0pt;font-family:宋体;">MM</span><span style="font-size:12.0pt;font-family:宋体;">已经按照她们可以看到的第一个围栏的编号从小到大的顺序排好了<span>(</span>这样最小的<span>E</span>对应的<span>MM</span>排在第一个，最大的<span>E</span>对应的<span>MM</span>排在最后一个<span>)</span>。注意可能有多于一个<span>MM</span>对应的<span>E</span>是相同的。</span>
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<p class="MsoNormal" style="text-align:left;" align="left">
+		<span style="font-size:12.0pt;font-family:宋体;">【数据范围】<span></span></span>
+	</p>
+	<p class="MsoNormal" style="text-align:left;" align="left">
+		<span style="font-size:12.0pt;font-family:宋体;">10</span><span style="font-size:12.0pt;font-family:宋体;">≤<span>N</span>≤<span>10000</span></span>
+	</p>
+	<p class="MsoNormal" style="text-align:left;" align="left">
+		<span style="font-size:12.0pt;font-family:宋体;">1</span><span style="font-size:12.0pt;font-family:宋体;">≤<span>C</span>≤<span>50000</span></span>
+	</p>
+	<p class="MsoNormal" style="text-align:left;" align="left">
+		<span style="font-size:12.0pt;font-family:宋体;">1</span><span style="font-size:12.0pt;font-family:宋体;">≤<span>E</span>≤<span>N</span></span>
+	</p>
+<span style="font-size:12.0pt;font-family:宋体;"></span>
+</p></div><h2>Output</h2><div class=content><span style="font-size:12.0pt;font-family:宋体;">仅输出一个数，表示最多可以让多少个<span>MM</span>高兴。</span></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>14 5
+2 1 2 4 2 6
+3 1 1 6 4
+6 1 2 9 6 8
+8 1 1 9 12
+12 3 0 12 13 2
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>5
+</span></pre><h2>HINT</h2>
+<div class=content><p><span style="font-size:12.0pt;font-family:宋体;">上面的样例<span>1</span>给出了前面描述的示例情形。它使得所有<span>MM</span>（<span>C=5</span>）高兴<span>.</span>样例<span>2</span>给出了这样的情形，要使得所有<span>MM</span>（<span>C=7</span>）都高兴是不可能的。</span></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9%E5%8A%A8%E8%A7%84'>动态规划-状态压缩动规</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=25340'>Submit</a>][<a href='problemstatus.php?id=25340'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=25340");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

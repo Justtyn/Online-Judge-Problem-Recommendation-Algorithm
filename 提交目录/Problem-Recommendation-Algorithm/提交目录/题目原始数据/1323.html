@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1649287627" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 1323 --算法2-1：集合union</title><center><h2>1323: 算法2-1：集合union</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>32 MB<br><span class=green>Submit: </span>3392&nbsp;&nbsp;<span class=green>Solved: </span>770<br>[<a href='submitpage.php?id=1323'>Submit</a>][<a href='problemstatus.php?id=1323'>Status</a>][<a href='bbs.php?pid=1323'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=1323'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=1323");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=1323'>下载测试数据1元</a>][68kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><div>
+	假设利用两个线性表LA和LB分别表示两个集合A和B（即：线性表中的数据元素即为集合中的成员），现要求一个新的集合A=A∪B。这就要求对线性表做如下操作：扩大线性表LA，将存在于线性表LB中而不存在于线性表LA中的数据元素插入到线性表LA中去。只要从线性表LB中依次取得每个元素，并依值在线性表LA中进行查访，若不存在，则插入之。上述操作过程可用下列算法描述之。
+</div>
+<div align="center" style="text-align:center;">
+	<img width="578" height="204" alt="" src="/upload/pimg1323_1.jpg" />
+</div>
+<div align="center" style="text-align:center;">
+	图：将两个列表合并的算法（C/C++描述）
+</div>
+<p>
+	<span style="font-size:10.5pt;">上图算法中，在第</span><span style="font-size:10.5pt;">8</span><span style="font-size:10.5pt;">行取得集合</span><span style="font-size:10.5pt;">B</span><span style="font-size:10.5pt;">中的元素，然后再在第</span><span style="font-size:10.5pt;">10</span><span style="font-size:10.5pt;">行插入到集合</span><span style="font-size:10.5pt;">A</span><span style="font-size:10.5pt;">中。你的任务是先输出集合</span><span style="font-size:10.5pt;">A</span><span style="font-size:10.5pt;">和集合</span><span style="font-size:10.5pt;">B</span><span style="font-size:10.5pt;">中的元素，每个集合在一行中输出。然后每次在将集合</span><span style="font-size:10.5pt;">B</span><span style="font-size:10.5pt;">中的元素取出插入到集合</span><span style="font-size:10.5pt;">A</span><span style="font-size:10.5pt;">尾部后输出集合</span><span style="font-size:10.5pt;">A</span><span style="font-size:10.5pt;">中的元素。当然你的代码可以和上面的代码不一样，只要有相同的输出即可。</span>
+</p></div><h2>Input</h2><div class=content><p>
+	<span style="font-size:10.5pt;">有多组测试数据，每组测试数据占两行。第一行是集合</span><span style="font-size:10.5pt;">A</span><span style="font-size:10.5pt;">，第一个整数</span><span style="font-size:10.5pt;">m</span><span style="font-size:10.5pt;">（</span><span style="font-size:10.5pt;">0&lt;m&lt;=100</span><span style="font-size:10.5pt;">）代表集合</span><span style="font-size:10.5pt;">A</span><span style="font-size:10.5pt;">起始有</span><span style="font-size:10.5pt;">m</span><span style="font-size:10.5pt;">个元素，后面有</span><span style="font-size:10.5pt;">m</span><span style="font-size:10.5pt;">个整数，代表</span><span style="font-size:10.5pt;">A</span><span style="font-size:10.5pt;">中的元素。第二行是集合</span><span style="font-size:10.5pt;">B</span><span style="font-size:10.5pt;">，第一个整数</span><span style="font-size:10.5pt;">n(0&lt;n&lt;=100)</span><span style="font-size:10.5pt;">代表集合</span><span style="font-size:10.5pt;">B</span><span style="font-size:10.5pt;">起始有</span><span style="font-size:10.5pt;">n</span><span style="font-size:10.5pt;">个元素，后面有</span><span style="font-size:10.5pt;">n</span><span style="font-size:10.5pt;">个整数，代表</span><span style="font-size:10.5pt;">B</span><span style="font-size:10.5pt;">中的元素。每行中整数之间用一个空格隔开。</span>
+</p></div><h2>Output</h2><div class=content><p>
+	<span style="font-size:10.5pt;">每组测试数据输出</span><span style="font-size:10.5pt;">n+2</span><span style="font-size:10.5pt;">行：前两行分别输出集合</span><span style="font-size:10.5pt;">A</span><span style="font-size:10.5pt;">、集合</span><span style="font-size:10.5pt;">B</span><span style="font-size:10.5pt;">中的数据，后面</span><span style="font-size:10.5pt;">n</span><span style="font-size:10.5pt;">行是每次从</span><span style="font-size:10.5pt;">B</span><span style="font-size:10.5pt;">中取出元素插入到</span><span style="font-size:10.5pt;">A</span><span style="font-size:10.5pt;">尾部后的集合</span><span style="font-size:10.5pt;">A</span><span style="font-size:10.5pt;">。每行整数之间用一个空格隔开，每组测试数据之间用一行空行隔开。</span>
+</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>5 1 5 2 6 3
+3 1 7 9
+1 3
+2 2 7
+4 2 5 1 4
+4 1 2 4 5
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>1 5 2 6 3
+1 7 9
+1 5 2 6 3
+1 5 2 6 3 7
+1 5 2 6 3 7 9
+
+3
+2 7
+3 2
+3 2 7
+
+2 5 1 4
+1 2 4 5
+2 5 1 4
+2 5 1 4
+2 5 1 4
+2 5 1 4
+</span></pre><h2>HINT</h2>
+<div class=content><p><div style="text-indent:21.0pt;text-autospace:none"><b><span style="Courier New&quot;;Courier New&quot;;color:blue">提示：</span></b></div><br />
+<div style="margin-left:0cm;text-indent:21.0pt;<br />
+text-autospace:none">1、使用数组时，给集合 A 分配的空间不小于200。因为将 B 中的元素添加到 A 中时，可能会超过 100 了。</div><br />
+<div style="margin-left:0cm;text-indent:21.0pt;<br />
+text-autospace:none">2、利用 scanf(&quot;%d&quot;,&amp;m) != EOF 来判断是否还有输入数据。</div><br />
+<div style="margin-left:0cm;text-indent:21.0pt;<br />
+text-autospace:none">3、一个细节问题就是题目要求输出的格式是每行中元素之间用一个空格隔开，每组输出间用一个空行隔开。也就是说4个元素间只有3个空格，2组输出间只有1个空行。处理方法都一样。两种方法：一是除了第一个元素，后面的每个元素之前输出个空格；二是除了最后一个元素，前面的每个元素之后都输出一个空格。我往往采用第一种方式，因为许多编程语言中的数组都是从0开始的，而0正是判断语句中的&ldquo;假&rdquo;（当然Java中不是这样的）。</div><br />
+<div style="text-indent:21.0pt;text-autospace:none"><b><span style="Courier New&quot;;Courier New&quot;;color:blue">总结：</span></b></div><br />
+<div style="text-indent:21.0pt;text-autospace:none">本题考查的是线性表的基本操作。实际上只考察了遍历和添加操作。虽然算法中使用的是&ldquo;插入&rdquo;，然而本题只要求插入到链表的尾部，因而只是添加而已。线性表按存储结构分为顺序表和链表。顺序表在插入时往往需要移动某些元素，而移动元素需要消耗大量时间。如果插入操作次数很多的话，采用链表会好些。但由于只是插入到线性表的尾部，因而也不必移动元素。所以采用顺序表解本题也不失为一个好方法。</div><br />
+<div style="text-indent:21.0pt;text-autospace:none">如果采用顺序表，事先需要分配足够的内存。题目中 m 和 n 都是不大于100的，是不是给两个顺序表（数组实现）分配100的内存就够了呢？答案是否定的。因为将集合 B 添加到集合 A 中很可能就超过100个元素了。</div><br />
+<div style="text-indent:21.0pt;text-autospace:none">还有，题目没有给定多少组测试数据，我们的方法就是判断是否读到了文件结尾。利用 scanf(&quot;%d&quot;,&amp;m) != EOF 来作判断即可。</div><br />
+<div><span style="font-size: 10.5pt; ">&nbsp; &nbsp; &nbsp; 对于解本题的算法，题目描述中已经有了，我就不再赘述。除了基本操作以外，还要看怎么输出。实际上就是在每次插入后使用一个循环将集合</span><span style="font-size: 10.5pt; "> A </span><span style="font-size: 10.5pt; ">中的所有元素输出即可。</span></div></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%AB%98%E5%88%86%E7%AC%94%E8%AE%B0'>数据结构高分笔记</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=1323'>Submit</a>][<a href='problemstatus.php?id=1323'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=1323");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

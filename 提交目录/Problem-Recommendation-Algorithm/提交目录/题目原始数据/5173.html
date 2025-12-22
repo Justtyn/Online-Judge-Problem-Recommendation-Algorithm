@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?665725020" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5173 --2.1.1 The Castle城堡</title><center><h2>5173: 2.1.1 The Castle城堡</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>48&nbsp;&nbsp;<span class=green>Solved: </span>12<br>[<a href='submitpage.php?id=5173'>Submit</a>][<a href='problemstatus.php?id=5173'>Status</a>][<a href='bbs.php?pid=5173'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5173'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5173");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5173'>下载测试数据1元</a>][76kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p style="text-align:center;font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;"><strong>2.1.1 The Castle城堡</strong><strong></strong><br />
+</span>
+</p>
+<p style="text-align:center;font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;"><strong>(</strong><span style="font-family:sans-serif;font-size:16px;line-height:24px;background-color:#FFFFFF;"><strong>castle.pas/c/cpp</strong></span><strong></strong><strong>)</strong></span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">我们憨厚的USACO主人公农夫约翰(Farmer John)以无法想象的运气,在他生日那天收到了一份特别的礼物：一张“幸运爱尔兰”（一种彩票）。结果这张彩票让他获得了这次比赛唯一的奖品——坐落于爱尔兰郊外的一座梦幻般的城堡！</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">喜欢吹嘘的农夫约翰立刻回到有着吹嘘传统的威斯康辛老家开始吹嘘了, 农夫约翰想要告诉他的奶牛们关于他城堡的一切。他需要做一些吹嘘前的准备工作：比如说知道城堡有多少个房间，每个房间有多大。另外，农夫约翰想要把一面单独的墙（指两个单位间的墙）拆掉以形成一个更大的房间。 你的工作就是帮农夫约翰做以上的准备，算出房间数与房间的大小。</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">城堡的平面图被划分成M*N(1 &lt;=M,N&lt;=50）个正方形的单位，一个这样的单位可以有0到4面墙环绕。城堡周围一定有外墙环绕以遮风挡雨。（就是说平面图的四周一定是墙。）</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<br />
+<span style="font-size:16px;">请仔细研究下面这个有注解的城堡平面图：</span>
+</p>
+<pre>     1   2   3   4   5   6   7
+   #############################
+ 1 #   |   #   |   #   |   |   #
+   #####---#####---#---#####---#   
+ 2 #   #   |   #   #   #   #   #
+   #---#####---#####---#####---#
+ 3 #   |   |   #   #   #   #   #   
+   #---#########---#####---#---#
+ 4 # -&gt;#   |   |   |   |   #   #   
+   #############################
+
+
+ # =墙壁    -,| = 没有墙壁
+ -&gt; =指向一面墙，这面墙推掉的话我们就有一间最大的新房间
+</pre>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">友情提示，这个城堡的平面图是7×4个单位的。一个“房间”的是平面图中一个由“#”、“-”、“|”围成的格子（就是图里面的那一个个的格子）。比如说这个样例就有5个房间。（大小分别为9、7、3、1、8个单位（排名不分先后））</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">移去箭头所指的那面墙，可以使2个房间合为一个新房间，且比移去其他墙所形成的房间都大。（原文为：Removing the wall marked by the arrow merges a pair of rooms to make the largest possible room that can be made by removing a single wall. ）</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">城堡保证至少有2个房间，而且一定有一面墙可以被移走。</span>
+</p>
+<h2 style="background-color:#FFFFFF;font-weight:normal;font-size:19px;font-family:sans-serif;">
+	<span class="mw-headline" id=".E6.A0.BC.E5.BC.8F" style="font-size:16px;">格式</span>
+</h2>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<b><span style="font-size:16px;">PROGRAM NAME</span></b><span style="font-size:16px;">: castle</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<b><span style="font-size:16px;">INPUT FORMAT</span></b><span style="font-size:16px;">: 第一行有两个整数：M和N 城堡的平面图用一个由数字组成的矩阵表示，一个数字表示一个单位，矩阵有N行M列。输入与样例的图一致。</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">每一个单位的数字告诉我们这个单位的东西南北是否有墙存在。每个数字是由以下四个整数的某个或某几个或一个都没有加起来的。</span>
+</p>
+<pre>1: 在西面有墙
+2: 在北面有墙
+4: 在东面有墙
+8: 在南面有墙
+</pre>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">城堡内部的墙会被规定两次。比如说（1，1）南面的墙，亦会被标记为（2，1）北面的墙。</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<br />
+<b><span style="font-size:16px;">OUTPUT FORMAT</span></b><span style="font-size:16px;">:</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">(file castle.out)</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">输出包含如下4行:</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">第 1 行: 城堡的房间数目。</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">第 2 行: 最大的房间的大小</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">第 3 行: 移除一面墙能得到的最大的房间的大小</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">第 4 行: 移除哪面墙可以得到面积最大的新房间。</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">选择最佳的墙来推倒。有多解时选最靠西的，仍然有多解时选最靠南的。同一格子北边的墙比东边的墙更优先。</span>
+</p>
+<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+	<span style="font-size:16px;">用该墙的南邻单位的北墙或西邻单位的东墙来表示这面墙，方法是输出邻近单位的行数、列数和墙的方位（"N"（北）或者"E"（东））。</span>
+</p>
+<h2 style="background-color:#FFFFFF;font-weight:normal;font-size:19px;font-family:sans-serif;">
+	<span class="mw-headline" id="SAMPLE_INPUT" style="font-size:16px;">SAMPLE INPUT</span>
+</h2>
+<pre>7 4
+11 6 11 6 3 10 6
+7 9 6 13 5 15 5
+1 10 12 7 13 7 5
+13 11 10 8 10 12 13
+</pre>
+<h2 style="background-color:#FFFFFF;font-weight:normal;font-size:19px;font-family:sans-serif;">
+	<span class="mw-headline" id="SAMPLE_OUTPUT" style="font-size:16px;">SAMPLE OUTPUT</span>
+</h2>
+<pre>5
+9
+16
+4 1 E</pre></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=USACO-USACO%E9%98%B6%E6%A2%AF-%E7%AC%AC2%E7%AB%A0.%E6%9B%B4%E5%A4%A7%E7%9A%84%E6%8C%91%E6%88%98'>USACO-USACO阶梯-第2章.更大的挑战</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5173'>Submit</a>][<a href='problemstatus.php?id=5173'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5173");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

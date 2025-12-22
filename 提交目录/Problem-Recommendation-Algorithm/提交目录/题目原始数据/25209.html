@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?26144221" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 25209 --安慰奶牛</title><center><h2>25209: 安慰奶牛</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>170&nbsp;&nbsp;<span class=green>Solved: </span>64<br>[<a href='submitpage.php?id=25209'>Submit</a>][<a href='problemstatus.php?id=25209'>Status</a>][<a href='bbs.php?pid=25209'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=25209'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=25209");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=25209'>下载测试数据1元</a>][4500kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">Farmer John</span><span style="font-family:宋体;font-size:10.5pt;">变得非常懒</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">, </span><span style="font-family:宋体;font-size:10.5pt;">他不想再继续维护供奶牛之间供通行的道路</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">. </span><span style="font-family:宋体;font-size:10.5pt;">道路被用来连接</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">N </span><span style="font-family:宋体;font-size:10.5pt;">个牧场</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">, </span><span style="font-family:宋体;font-size:10.5pt;">牧场被连续地编号为</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">1..N. </span><span style="font-family:宋体;font-size:10.5pt;">每一个牧场都是一个奶牛的家</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">. FJ</span><span style="font-family:宋体;font-size:10.5pt;">计划除去</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">P</span><span style="font-family:宋体;font-size:10.5pt;">条道路中尽可能多的道路</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">, </span><span style="font-family:宋体;font-size:10.5pt;">但是还要保持牧场之间的连通性</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">. </span><span style="font-family:宋体;font-size:10.5pt;">你首先要决定那些道路是需要保留的</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">N-1</span><span style="font-family:宋体;font-size:10.5pt;">条道路</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">. </span><span style="font-family:宋体;font-size:10.5pt;">第</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">j</span><span style="font-family:宋体;font-size:10.5pt;">条双向道路连接了牧场</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">S_j</span><span style="font-family:宋体;font-size:10.5pt;">和</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">E_j , </span><span style="font-family:宋体;font-size:10.5pt;">而且走完它需要</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">L_j </span><span style="font-family:宋体;font-size:10.5pt;">的时间</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">. </span><span style="font-family:宋体;font-size:10.5pt;">没有两个牧场是被一条以上的道路所连接</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">. </span><span style="font-family:宋体;font-size:10.5pt;">奶牛们非常伤心</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">, </span><span style="font-family:宋体;font-size:10.5pt;">因为她们的交通系统被削减了</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">. </span><span style="font-family:宋体;font-size:10.5pt;">你需要到每一个奶牛的住处去安慰她们</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">. </span><span style="font-family:宋体;font-size:10.5pt;">每次你到达第</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">i</span><span style="font-family:宋体;font-size:10.5pt;">个牧场的时候</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">(</span><span style="font-family:宋体;font-size:10.5pt;">即使你已经到过</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">), </span><span style="font-family:宋体;font-size:10.5pt;">你必须花去</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">C_i</span><span style="font-family:宋体;font-size:10.5pt;">的时间和奶牛交谈</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">. </span><span style="font-family:宋体;font-size:10.5pt;">你每个晚上都会在同一个牧场</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">(</span><span style="font-family:宋体;font-size:10.5pt;">这是供你选择的</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">)</span><span style="font-family:宋体;font-size:10.5pt;">过夜</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">, </span><span style="font-family:宋体;font-size:10.5pt;">直到奶牛们都从悲伤中缓过神来</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">. </span><span style="font-family:宋体;font-size:10.5pt;">在早上起来和晚上回去睡觉的时候</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">, </span><span style="font-family:宋体;font-size:10.5pt;">你都需要和在你睡觉的牧场的奶牛交谈一次</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">. </span><span style="font-family:宋体;font-size:10.5pt;">这样你才能完成你的交谈任务</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">. </span><span style="font-family:宋体;font-size:10.5pt;">假设</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">Farmer John</span><span style="font-family:宋体;font-size:10.5pt;">采纳了你的建议</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">, </span><span style="font-family:宋体;font-size:10.5pt;">请计算出使所有奶牛都被安慰的最少时间。</span></div><h2>Input</h2><div class=content><p>
+	&nbsp;<span style="font-family:宋体;">第</span><span> 1 </span><span style="font-family:宋体;">行</span><span>: </span><span style="font-family:宋体;">用空格隔开的两个整数</span><span>N</span><span style="font-family:宋体;">和</span><span>P </span>
+</p>
+<p>
+	<span></span><span style="font-family:宋体;">第</span><span> 2..N+1 </span><span style="font-family:宋体;">行</span><span>: </span><span style="font-family:宋体;">第</span><span>i+1</span><span style="font-family:宋体;">行包含了一个整数</span><span>: C_i</span><span style="font-family:宋体;font-size:10.5pt;">第</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;"> N+2..N+P+1 </span><span style="font-family:宋体;font-size:10.5pt;">行</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">: </span>
+</p>
+<p>
+	<span style="font-family:'Times New Roman','serif';font-size:10.5pt;"></span><span style="font-family:宋体;font-size:10.5pt;">第</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;"> N+j+1 </span><span style="font-family:宋体;font-size:10.5pt;">行包含用空格隔开的三个整数</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">: S_j, E_j </span><span style="font-family:宋体;font-size:10.5pt;">和</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;"> L_j</span>
+</p></div><h2>Output</h2><div class=content><span style="font-family:宋体;font-size:10.5pt;">第</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;"> 1 </span><span style="font-family:宋体;font-size:10.5pt;">行</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">: </span><span style="font-family:宋体;font-size:10.5pt;">一个整数</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">, </span><span style="font-family:宋体;font-size:10.5pt;">所需要的总时间</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">(</span><span style="font-family:宋体;font-size:10.5pt;">包含和在你所在的牧场的奶牛的两次谈话时间</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">).</span></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>5 7
+10
+10
+20
+6
+30
+1 2 5
+2 3 5
+2 4 12
+3 4 17
+2 5 15
+3 5 6
+4 5 12
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>176
+</span></pre><h2>HINT</h2>
+<div class=content><p>&nbsp;<span style="font-family:宋体;">【样例解释】</span><span></span> <br />
+<p class="MsoNormal"><br />
+	<span><span>&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;">从牧场</span><span>4</span><span style="font-family:宋体;">起床</span><span>, </span><span style="font-family:宋体;">然后按照</span><span> 4, 5, 4, 2, 3, 2, 1, 2, 4 </span><span style="font-family:宋体;">的顺序来访问奶牛们</span><span>, </span><span style="font-family:宋体;">总共</span><span></span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-family:宋体;">需要</span><span>176</span><span style="font-family:宋体;">个单位的时间</span><span>.</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-family:宋体;">【数据范围及约定】</span><span></span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-family:宋体;">对于</span><span>100%</span><span style="font-family:宋体;">的数据：</span><span></span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>5 &lt;= N &lt;= 10000</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>N-1 &lt;= P &lt;= 100000</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>1 &lt;= S_j &lt;= N<span>&nbsp; </span>1 &lt;= E_j &lt;= N<span>&nbsp; </span>S_j &lt;&gt;E_j</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>0 &lt;= L_j &lt;= 1,000</span><br />
+</p><br />
+<span style="font-family:'Times New Roman','serif';font-size:10.5pt;">1 &lt;= C_i &lt;= 1,000</span></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%9B%BE%E8%AE%BA-%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91'>图论-最小生成树</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=25209'>Submit</a>][<a href='problemstatus.php?id=25209'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=25209");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

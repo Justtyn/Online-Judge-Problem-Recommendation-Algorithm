@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1342137102" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 28552 --Kakuro</title><center><h2>28552: Kakuro</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>1&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='submitpage.php?id=28552'>Submit</a>][<a href='problemstatus.php?id=28552'>Status</a>][<a href='bbs.php?pid=28552'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=28552'>下载FPS0元</a>][<a onclick='$(this).load("cart.php?add=28552");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=28552'>下载测试数据0元</a>][260kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>
+	首先介绍一下Kakuro(カックロ) 这个游戏。<br />
+游戏规则为：<br />
+• 方形空格中填入1 ~ 9 的整数。<br />
+• 被斜线分开的方格中，右上角的数字等于其右侧邻接之连续方格<br />
+中数字之和，左下角的数字等于其下方邻接之连续方格中数字之<br />
+和。<br />
+• 无论是横向还是纵向，连续方格中的数字不能重复。
+</p>
+<p>
+	<img src="/admin/../upload/pimg28552_1.png" alt="" /><br />
+左边为一个Kakuro 游戏，右边为这个游戏的唯一解。<br />
+我们称一开始给出的数字为线索，称需要填入数字的地方为空格。如<br />
+果一个格子包含线索那么就不需要填入数字。我们约定所有的谜题都非空，<br />
+即至少有一个空格需要被填入。<br />
+注意：在以下题目中的游戏规则可能会有所不同，请认真阅读在每个<br />
+题目下的规则。<br />
+--------------------------------------------------------------------------------------------------------------------------------
+</p>
+<p>
+	游戏规则：
+</p>
+• 空格中填入正整数。<br />
+• 被斜线分开的方格中，右上角的数字等于其右侧邻接之连续方格中数字之和，左下角的数字等于其下方邻<br />
+接之连续方格中数字之和。<br />
+Apia 给了Rimbaud 一个Kakuro 谜题。心不灵手不巧的Rimbaud 根本不会做Kakuro，所以只在空格里面<br />
+填上了一些随机的数字，称这个为一个局面，即包含了谜题一开始给出的线索和后面填入的数字。<br />
+现在Rimbaud 希望能修改这个局面使得她的答案是一个合法解。这个局面中有些数字(包括一开始的给出线<br />
+索和后面填入的数字) 是可以修改的。每个数字都有个特定的代价，将这个数字加1 或者减1 都得付出这个数字对<br />
+应的代价。注意对于一组合法解，必须满足游戏规则，也就是空格中填的数字必须是正整数并且满足和的条件，但<br />
+是不要求不重复。<br />
+Rimbaud 希望用最少的代价让这个局面变得合法，如果不可能那么输出-1。<br /></div><h2>Input</h2><div class=content>第一行，两个正整数表示n;m 表示这个游戏的行和列。<br />
+接下来n 行，每行包含m 个0 到4 的数字，第i 行第j 列表示第i 行第j 列格子的种类。<br />
+• 0 表示这个格子既不是空格也不是线索。<br />
+• 1 表示这个格子左下角包含线索，右上角没有线索。<br />
+• 2 表示这个格子右上角包含线索，左下角没有线索。<br />
+• 3 表示这个格子左下角右上角都包含线索。<br />
+• 4 表示这个格子为空格。<br />
+输入保证这个从格式上来说一定是个合法的Kakuro 谜题，即每一段连续的空格的左边或者上面的格子包含线<br />
+索。<br />
+接下来n 行，每行包含若干个正整数，按从左往右的顺序给出初始局面中的每个数字。特别地如果这个格子<br />
+的种类为3，那么先给出左下角的线索，再给出右上角的线索。<br />
+接下来n 行，每行包含若干个整数，按从左往右的顺序给出初始局面中的每个数字对应的代价。如果代价为<br />
+-1 表示这个格子不能修改，否则代价为非负整数。注意3 号格子的两个线索有着两个不同的代价。<br />
+样例1 给出了上面的谜题的输入，请在做题前阅读样例1 确保你理解了输入格式。<br /></div><h2>Output</h2><div class=content>一个整数表示最小的代价，如果不可能输出-1。</div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>8 8
+0 1 1 0 0 1 1 1
+2 4 4 0 3 4 4 4
+2 4 4 3 4 4 4 4
+2 4 4 4 4 4 1 0
+0 2 4 4 3 4 4 1
+0 1 3 4 4 4 4 4
+2 4 4 4 4 2 4 4
+2 4 4 4 0 2 4 4
+23 30 27 12 16
+16 9 7 17 24 8 7 9
+17 8 9 15 29 8 9 5 7
+35 6 8 5 9 7 12
+7 6 1 7 8 2 6 7
+11 10 16 4 6 1 3 2
+21 8 9 3 1 5 1 4
+6 3 1 2 3 2 1
+-1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>0</span></pre><h2>HINT</h2>
+<div class=content><p>对于5% 的数据，保证所有的代价都为-1。<br /><br />
+对于20% 的数据，保证所有空格中的数字代价都为-1。<br /><br />
+对于另外30% 的数据，保证所有代表线索的数字的代价都为-1。<br /><br />
+对于另外20% 的数据，保证只有第一行第一列包含线索，剩下的地方全都是空格。<br /><br />
+对于100% 的数据，保证3 &lt;= n;m <span>&lt;=</span> 30，保证初始局面中的每个数字不超过10^6，保证每个数字的代价不超过<br /><br />
+10^6。<br /></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=BJWC2018'>BJWC2018</a>&nbsp;<a href='problemset.php?search=%E9%AB%98%E7%BA%A7'>高级</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=28552'>Submit</a>][<a href='problemstatus.php?id=28552'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=28552");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

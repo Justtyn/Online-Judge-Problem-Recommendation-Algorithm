@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?325664192" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 24757 --【USACO2014JANBronze】Ski Course Design</title><center><h2>24757: 【USACO2014JANBronze】Ski Course Design</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>7&nbsp;&nbsp;<span class=green>Solved: </span>7<br>[<a href='submitpage.php?id=24757'>Submit</a>][<a href='problemstatus.php?id=24757'>Status</a>][<a href='bbs.php?pid=24757'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=24757'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=24757");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=24757'>下载测试数据1元</a>][4kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><span style="font-size:18px;">Problem 1: Ski Course Design [Brian Dean, 2014]</span><br />
+<br />
+<span style="font-size:18px;">Farmer John has N hills on his farm (1 &lt;= N &lt;= 1,000), each with an</span><br />
+<span style="font-size:18px;">integer elevation in the range 0 .. 100. &nbsp;In the winter, since there is</span><br />
+<span style="font-size:18px;">abundant snow on these hills, FJ routinely operates a ski training camp.</span><br />
+<br />
+<span style="font-size:18px;">Unfortunately, FJ has just found out about a new tax that will be assessed</span><br />
+<span style="font-size:18px;">next year on farms used as ski training camps. &nbsp;Upon careful reading of the</span><br />
+<span style="font-size:18px;">law, however, he discovers that the official definition of a ski camp</span><br />
+<span style="font-size:18px;">requires the difference between the highest and lowest hill on his property</span><br />
+<span style="font-size:18px;">to be strictly larger than 17. &nbsp;Therefore, if he shortens his tallest hills</span><br />
+<span style="font-size:18px;">and adds mass to increase the height of his shorter hills, FJ can avoid</span><br />
+<span style="font-size:18px;">paying the tax as long as the new difference between the highest and lowest</span><br />
+<span style="font-size:18px;">hill is at most 17. &nbsp;</span><br />
+<br />
+<span style="font-size:18px;">If it costs x^2 units of money to change the height of a hill by x units,</span><br />
+<span style="font-size:18px;">what is the minimum amount of money FJ will need to pay? &nbsp;FJ is only</span><br />
+<span style="font-size:18px;">willing to change the height of each hill by an integer amount.</span><br />
+<br />
+<span style="font-size:18px;">PROBLEM NAME: skidesign</span><br />
+<br />
+<span style="font-size:18px;">INPUT FORMAT:</span><br />
+<br />
+<span style="font-size:18px;">* Line 1: The integer N.</span><br />
+<br />
+<span style="font-size:18px;">* Lines 2..1+N: Each line contains the elevation of a single hill.</span><br />
+<br />
+<span style="font-size:18px;">SAMPLE INPUT (file skidesign.in):</span><br />
+<br />
+<span style="font-size:18px;">5</span><br />
+<span style="font-size:18px;">20</span><br />
+<span style="font-size:18px;">4</span><br />
+<span style="font-size:18px;">1</span><br />
+<span style="font-size:18px;">24</span><br />
+<span style="font-size:18px;">21</span><br />
+<br />
+<span style="font-size:18px;">INPUT DETAILS:</span><br />
+<br />
+<span style="font-size:18px;">FJ's farm has 5 hills, with elevations 1, 4, 20, 21, and 24.</span><br />
+<br />
+<span style="font-size:18px;">OUTPUT FORMAT:</span><br />
+<br />
+<span style="font-size:18px;">* Line 1: The minimum amount FJ needs to pay to modify the elevations</span><br />
+<span style="font-size:18px;">&nbsp; &nbsp; &nbsp; &nbsp; of his hills so the difference between largest and smallest is</span><br />
+<span style="font-size:18px;">&nbsp; &nbsp; &nbsp; &nbsp; at most 17 units.</span><br />
+<br />
+<span style="font-size:18px;">SAMPLE OUTPUT (file skidesign.out):</span><br />
+<br />
+<span style="font-size:18px;">18</span><br />
+<br />
+<span style="font-size:18px;">OUTPUT DETAILS:</span><br />
+<br />
+<span style="font-size:18px;">FJ keeps the hills of heights 4, 20, and 21 as they are. &nbsp;He adds mass to the</span><br />
+<span style="font-size:18px;">hill of height 1, bringing it to height 4 (cost = 3^2 = 9). &nbsp;He shortens</span><br />
+<span style="font-size:18px;">the hill of height 24 to height 21, also at a cost of 3^2 = 9.</span><br /></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p style="font-family:Simsun;font-size:medium;"><br />
+	<b><span style="font-size:18px;">Analysis: Ski Course Design by Fatih Gelgi</span></b><br />
+</p><br />
+<hr /><br />
+<p style="font-family:Simsun;font-size:medium;"><br />
+	<span style="font-size:18px;">The problem can be solved with different approaches. A simple idea is of course brute-force -- try all possible elevations and find the minimum amount. We can try all possible values as follows: try the modification for elevation interval (0,17) then (1,18), (2,19), ..., (83,100). For each elevation interval (i,i+17), we need to calculate the cost for each hill j:</span><br />
+</p><br />
+<ol style="font-family:Simsun;font-size:medium;"><br />
+	<li><br />
+		<span style="font-size:18px;">If the elevation of hill j, say hill[j], is in the interval (i,i+17) then there is no cost.</span><br />
+	</li><br />
+	<li><br />
+		<span style="font-size:18px;">If it is less than i then the cost increases by (i-hill[j])^2</span><br />
+	</li><br />
+	<li><br />
+		<span style="font-size:18px;">If it is greater than i+17 then the cost increases by (hill[j]-(i+17))^2</span><br />
+	</li><br />
+</ol><br />
+<p style="font-family:Simsun;font-size:medium;"><br />
+	<span style="font-size:18px;">The total cost for that interval will be the sum of the costs of modifying all hills.</span><br />
+</p><br />
+<p style="font-family:Simsun;font-size:medium;"><br />
+	<span style="font-size:18px;">For the sample input:</span><br />
+</p><br />
+<pre>hill			elevation intervals and cost<br />
+height (0,17)  (1,18)  (2,19)  (3,20)  (4,21)  (5,22)  (6,23)  (7,24) ....<br />
+------ ---------------------------------------------------------------<br />
+ 1	0	0	1	4	9	16	25	36	<br />
+ 4	0	0	0	0	0	1	4	9<br />
+20	9	4	1	0	0	0	0	0<br />
+21	16	9	4	1	0	0	0	0<br />
+24	49	36	25	16	9	4	1	0<br />
+	-------------------------------------------------------------<br />
+total	74	49	31	21	*18*	21	30	45<br />
+</pre><br />
+<p style="font-family:Simsun;font-size:medium;"><br />
+	<span style="font-size:18px;">As you observed, it is unnecessary to try elevation intervals after (7,24) since the maximum height is 24. You may want to modify the solution to eliminate these type of redundancies although it is not necessary.</span><br />
+</p><br />
+<p style="font-family:Simsun;font-size:medium;"><br />
+	<span style="font-size:18px;">For each interval, scanning through all hill elevations require O(N) time. Since we try all possible intervals, the total time is O(NM) where M is the size of the elevation range. Since N=1000 and M=100 are very small, this brute-force approach is sufficient. A sample code is provided below:</span><br />
+</p><br />
+<pre>#include &lt;fstream&gt;<br />
+<br />
+using namespace std;<br />
+<br />
+int n,hills[1000];<br />
+<br />
+int main()<br />
+{<br />
+	ifstream fin("skidesign.in");<br />
+	fin &gt;&gt; n;<br />
+	for (int i=0; i&lt;n; i++)<br />
+		fin &gt;&gt; hills[i];<br />
+	fin.close();<br />
+<br />
+	// brute-force search<br />
+	// try all elevation intervals from (0,17) to (83,100)<br />
+	int mincost=1000000000;<br />
+	for (int i=0; i&lt;=83; i++)<br />
+	{<br />
+		// calculate the cost for elevation interval (i,i+17)<br />
+		int cost=0,x;<br />
+		for (int j=0; j&lt;n; j++)<br />
+		{<br />
+			// if hill is below the interval<br />
+			if (hills[j]&lt;i)<br />
+				x=i-hills[j];<br />
+			// if hill is above the interval<br />
+			else if (hills[j]&gt;i+17)<br />
+				x=hills[j]-(i+17);<br />
+			// if hill is int the interval<br />
+			else<br />
+				x=0;<br />
+			cost+=x*x;<br />
+		}<br />
+		// update the minimum cost<br />
+		mincost=min(mincost,cost);<br />
+	}<br />
+<br />
+	ofstream fout("skidesign.out");<br />
+	fout &lt;&lt; mincost &lt;&lt; "\n";<br />
+	fout.close();<br />
+}</pre></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=USACO-USACO%E6%9C%88%E8%B5%9B'>USACO-USACO月赛</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=24757'>Submit</a>][<a href='problemstatus.php?id=24757'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=24757");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

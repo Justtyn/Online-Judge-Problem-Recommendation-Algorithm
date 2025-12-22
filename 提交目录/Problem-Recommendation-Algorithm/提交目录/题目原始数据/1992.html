@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?760299728" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 1992 --Graduate Admission</title><center><h2>1992: Graduate Admission</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>32 MB<br><span class=green>Submit: </span>48&nbsp;&nbsp;<span class=green>Solved: </span>6<br>[<a href='submitpage.php?id=1992'>Submit</a>][<a href='problemstatus.php?id=1992'>Status</a>][<a href='bbs.php?pid=1992'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=1992'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=1992");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=1992'>下载测试数据1元</a>][20kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>
+	<!--[if gte mso 9]><![endif]-->
+</p>
+<p>
+	<!--[if gte mso 9]>Normal07.8 磅02falsefalsefalseEN-USZH-CNX-NONE<![endif]--><!--[if gte mso 9]><![endif]--><!--[if gte mso 10]>
+<![endif]-->
+</p>
+<p align="left" style="text-align:left;text-indent:24.0pt;" class="MsoNormal">
+	<span style="font-size:12.0pt;font-family:&quot;color:#333333;background:white;">It is said that in 2011, there are about 100 graduate schools ready to proceed over 40,000 applications in Zhejiang Province. It would help a lot if you could write a program to automate the admission procedure.<br />
+&nbsp;&nbsp;&nbsp; <span>&nbsp;</span>Each applicant will have to provide two grades: the national entrance exam grade GE, and the interview grade GI. The final grade of an applicant is (GE + GI) / 2. The admission rules are:</span>
+</p>
+<p align="left" style="margin-left:36.0pt;text-align:left;" class="MsoNormal">
+	<span style="font-size:12.0pt;font-family:&quot;color:#333333;background:white;">&nbsp;&nbsp;&nbsp; • The applicants are ranked according to their final grades, and will be admitted one by one from the top of the rank list.<br />
+&nbsp;&nbsp;&nbsp; • If there is a tied final grade, the applicants will be ranked according to their national entrance exam grade GE. If still tied, their ranks must be the same.<br />
+&nbsp;&nbsp;&nbsp; • Each applicant may have K choices and the admission will be done according to his/her choices: if according to the rank list, it is one's turn to be admitted; and if the quota of one's most preferred shcool is not exceeded, then one will be admitted to this school, or one's other choices will be considered one by one in order. If one gets rejected by all of preferred schools, then this unfortunate applicant will be rejected.<br />
+&nbsp;&nbsp;&nbsp; • If there is a tied rank, and if the corresponding applicants are applying to the same school, then that school must admit all the applicants with the same rank, even if its quota will be exceeded.</span>
+</p>
+<p>
+	<br />
+</p></div><h2>Input</h2><div class=content><p>
+	<!--[if gte mso 9]><![endif]-->
+</p>
+<p>
+	<!--[if gte mso 9]>Normal07.8 磅02falsefalsefalseEN-USZH-CNX-NONE<![endif]--><!--[if gte mso 9]><![endif]--><!--[if gte mso 10]>
+<![endif]-->
+</p>
+<p style="text-align:justify;text-indent:24.0pt;" class="MsoNormal">
+	<span style="font-size:12.0pt;font-family:&quot;color:#333333;background:white;">Each input file may contain more than&nbsp;one test case.<br />
+&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;</span>Each case starts with a line containing three positive integers: N (≤40,000), the total number of applicants; M (≤100), the total number of graduate schools; and K (≤5), the number of choices an applicant may have.<br />
+&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;</span>In the next line, separated by a space, there are M positive integers. The i-th integer is the quota of the i-th graduate school respectively.<br />
+&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;</span>Then N lines follow, each contains 2+K integers separated by a space. The first 2 integers are the applicant's GE and GI, respectively. The next K integers represent the preferred schools. For the sake of simplicity, we assume that the schools are numbered from 0 to M-1, and the applicants are numbered from 0 to N-1.</span>
+</p>
+<p>
+	<br />
+</p></div><h2>Output</h2><div class=content><p>
+	<!--[if gte mso 9]><![endif]-->
+</p>
+<p>
+	<!--[if gte mso 9]>Normal07.8 磅02falsefalsefalseEN-USZH-CNX-NONE<![endif]--><!--[if gte mso 9]><![endif]--><!--[if gte mso 10]>
+<![endif]-->
+</p>
+<p style="text-align:justify;text-indent:24.0pt;" class="MsoNormal">
+	<span style="font-size:12.0pt;font-family:&quot;color:#333333;background:white;">For each test case you should output the admission results for all the graduate schools. The results of each school must occupy a line, which contains the applicants' numbers that school admits. The numbers must be in increasing order and be separated by a space. There must be no extra space at the end of each line. If no applicant is admitted by a school, you must output an empty line correspondingly.</span>
+</p>
+<p>
+	<br />
+</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>11 6 3
+2 1 2 2 2 3
+100 100 0 1 2
+60 60 2 3 5
+100 90 0 3 4
+90 100 1 2 0
+90 90 5 1 3
+80 90 1 0 2
+80 80 0 1 2
+80 80 0 1 2
+80 70 1 3 2
+70 80 1 2 3
+100 100 0 2 4
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>0 10
+3
+5 6 7
+2 8
+
+1 4
+</span></pre><h2>HINT</h2>
+<div class=content><p><p><!--[if gte mso 9]><xml><br />
+<o:OfficeDocumentSettings><br />
+<o:AllowPNG /><br />
+</o:OfficeDocumentSettings><br />
+</xml><![endif]--></p><br />
+<p><!--[if gte mso 9]><xml><br />
+<w:WordDocument><br />
+<w:View>Normal</w:View><br />
+<w:Zoom>0</w:Zoom><br />
+<w:TrackMoves /><br />
+<w:TrackFormatting /><br />
+<w:PunctuationKerning /><br />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing><br />
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery><br />
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery><br />
+<w:ValidateAgainstSchemas /><br />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid><br />
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent><br />
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText><br />
+<w:DoNotPromoteQF /><br />
+<w:LidThemeOther>EN-US</w:LidThemeOther><br />
+<w:LidThemeAsian>ZH-CN</w:LidThemeAsian><br />
+<w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript><br />
+<w:Compatibility><br />
+<w:SpaceForUL /><br />
+<w:BalanceSingleByteDoubleByteWidth /><br />
+<w:DoNotLeaveBackslashAlone /><br />
+<w:ULTrailSpace /><br />
+<w:DoNotExpandShiftReturn /><br />
+<w:AdjustLineHeightInTable /><br />
+<w:BreakWrappedTables /><br />
+<w:SnapToGridInCell /><br />
+<w:WrapTextWithPunct /><br />
+<w:UseAsianBreakRules /><br />
+<w:DontGrowAutofit /><br />
+<w:SplitPgBreakAndParaMark /><br />
+<w:EnableOpenTypeKerning /><br />
+<w:DontFlipMirrorIndents /><br />
+<w:OverrideTableStyleHps /><br />
+<w:UseFELayout /><br />
+</w:Compatibility><br />
+<m:mathPr><br />
+<m:mathFont m:val="Cambria Math" /><br />
+<m:brkBin m:val="before" /><br />
+<m:brkBinSub m:val="&#45;-" /><br />
+<m:smallFrac m:val="off" /><br />
+<m:dispDef /><br />
+<m:lMargin m:val="0" /><br />
+<m:rMargin m:val="0" /><br />
+<m:defJc m:val="centerGroup" /><br />
+<m:wrapIndent m:val="1440" /><br />
+<m:intLim m:val="subSup" /><br />
+<m:naryLim m:val="undOvr" /><br />
+</m:mathPr></w:WordDocument><br />
+</xml><![endif]--><!--[if gte mso 9]><xml><br />
+<w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"<br />
+DefSemiHidden="true" DefQFormat="false" DefPriority="99"<br />
+LatentStyleCount="267"><br />
+<w:LsdException Locked="false" Priority="0" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="Normal" /><br />
+<w:LsdException Locked="false" Priority="9" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="heading 1" /><br />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" /><br />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" /><br />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" /><br />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" /><br />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" /><br />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" /><br />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" /><br />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" /><br />
+<w:LsdException Locked="false" Priority="39" Name="toc 1" /><br />
+<w:LsdException Locked="false" Priority="39" Name="toc 2" /><br />
+<w:LsdException Locked="false" Priority="39" Name="toc 3" /><br />
+<w:LsdException Locked="false" Priority="39" Name="toc 4" /><br />
+<w:LsdException Locked="false" Priority="39" Name="toc 5" /><br />
+<w:LsdException Locked="false" Priority="39" Name="toc 6" /><br />
+<w:LsdException Locked="false" Priority="39" Name="toc 7" /><br />
+<w:LsdException Locked="false" Priority="39" Name="toc 8" /><br />
+<w:LsdException Locked="false" Priority="39" Name="toc 9" /><br />
+<w:LsdException Locked="false" Priority="0" Name="header" /><br />
+<w:LsdException Locked="false" Priority="0" Name="footer" /><br />
+<w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" /><br />
+<w:LsdException Locked="false" Priority="10" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="Title" /><br />
+<w:LsdException Locked="false" Priority="0" Name="Default Paragraph Font" /><br />
+<w:LsdException Locked="false" Priority="11" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="Subtitle" /><br />
+<w:LsdException Locked="false" Priority="22" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="Strong" /><br />
+<w:LsdException Locked="false" Priority="20" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="Emphasis" /><br />
+<w:LsdException Locked="false" Priority="59" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Table Grid" /><br />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" /><br />
+<w:LsdException Locked="false" Priority="1" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="No Spacing" /><br />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light Shading" /><br />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light List" /><br />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light Grid" /><br />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Shading 1" /><br />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Shading 2" /><br />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium List 1" /><br />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium List 2" /><br />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 1" /><br />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 2" /><br />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 3" /><br />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Dark List" /><br />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful Shading" /><br />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful List" /><br />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful Grid" /><br />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light Shading Accent 1" /><br />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light List Accent 1" /><br />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light Grid Accent 1" /><br />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" /><br />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" /><br />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium List 1 Accent 1" /><br />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" /><br />
+<w:LsdException Locked="false" Priority="34" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" /><br />
+<w:LsdException Locked="false" Priority="29" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="Quote" /><br />
+<w:LsdException Locked="false" Priority="30" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" /><br />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium List 2 Accent 1" /><br />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" /><br />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" /><br />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" /><br />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Dark List Accent 1" /><br />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful Shading Accent 1" /><br />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful List Accent 1" /><br />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful Grid Accent 1" /><br />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light Shading Accent 2" /><br />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light List Accent 2" /><br />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light Grid Accent 2" /><br />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" /><br />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" /><br />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium List 1 Accent 2" /><br />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium List 2 Accent 2" /><br />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" /><br />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" /><br />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" /><br />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Dark List Accent 2" /><br />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful Shading Accent 2" /><br />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful List Accent 2" /><br />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful Grid Accent 2" /><br />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light Shading Accent 3" /><br />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light List Accent 3" /><br />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light Grid Accent 3" /><br />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" /><br />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" /><br />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium List 1 Accent 3" /><br />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium List 2 Accent 3" /><br />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" /><br />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" /><br />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" /><br />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Dark List Accent 3" /><br />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful Shading Accent 3" /><br />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful List Accent 3" /><br />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful Grid Accent 3" /><br />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light Shading Accent 4" /><br />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light List Accent 4" /><br />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light Grid Accent 4" /><br />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" /><br />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" /><br />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium List 1 Accent 4" /><br />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium List 2 Accent 4" /><br />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" /><br />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" /><br />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" /><br />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Dark List Accent 4" /><br />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful Shading Accent 4" /><br />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful List Accent 4" /><br />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful Grid Accent 4" /><br />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light Shading Accent 5" /><br />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light List Accent 5" /><br />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light Grid Accent 5" /><br />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" /><br />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" /><br />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium List 1 Accent 5" /><br />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium List 2 Accent 5" /><br />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" /><br />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" /><br />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" /><br />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Dark List Accent 5" /><br />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful Shading Accent 5" /><br />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful List Accent 5" /><br />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful Grid Accent 5" /><br />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light Shading Accent 6" /><br />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light List Accent 6" /><br />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Light Grid Accent 6" /><br />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" /><br />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" /><br />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium List 1 Accent 6" /><br />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium List 2 Accent 6" /><br />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" /><br />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" /><br />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" /><br />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Dark List Accent 6" /><br />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful Shading Accent 6" /><br />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful List Accent 6" /><br />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"<br />
+UnhideWhenUsed="false" Name="Colorful Grid Accent 6" /><br />
+<w:LsdException Locked="false" Priority="19" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" /><br />
+<w:LsdException Locked="false" Priority="21" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" /><br />
+<w:LsdException Locked="false" Priority="31" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" /><br />
+<w:LsdException Locked="false" Priority="32" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" /><br />
+<w:LsdException Locked="false" Priority="33" SemiHidden="false"<br />
+UnhideWhenUsed="false" QFormat="true" Name="Book Title" /><br />
+<w:LsdException Locked="false" Priority="37" Name="Bibliography" /><br />
+<w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" /><br />
+</w:LatentStyles><br />
+</xml><![endif]--><!--[if gte mso 10]><br />
+<style><br />
+/* Style Definitions */<br />
+table.MsoNormalTable<br />
+{mso-style-name:普通表格;<br />
+mso-tstyle-rowband-size:0;<br />
+mso-tstyle-colband-size:0;<br />
+mso-style-noshow:yes;<br />
+mso-style-priority:99;<br />
+mso-style-parent:"";<br />
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;<br />
+mso-para-margin:0cm;<br />
+mso-para-margin-bottom:.0001pt;<br />
+mso-pagination:widow-orphan;<br />
+font-size:10.0pt;<br />
+font-family:"Times New Roman","serif";}<br />
+</style><br />
+<![endif]--><br />
+<p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;<br />
+mso-hansi-font-family:&quot;Times New Roman&quot;">这一题是解决学校录取考生的问题。只要对考生按一定的顺序排序，然后依次判断考生能否进入自己所选择的学校。</span></p><br />
+<p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;<br />
+mso-hansi-font-family:&quot;Times New Roman&quot;">排序是按统考分数</span><span lang="EN-US">GE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:<br />
+&quot;Times New Roman&quot;">与面试分数</span><span lang="EN-US">GI</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:<br />
+&quot;Times New Roman&quot;">的均分非递增进行的，如果均分相同则按统考分数</span><span lang="EN-US">GE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:<br />
+&quot;Times New Roman&quot;">非递减进行排序。每个学校都有一定的名额限制，如果有考生与最后一名的排名相同（均分及统考分均相同）则学校需要扩招。</span></p><br />
+<p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;<br />
+mso-hansi-font-family:&quot;Times New Roman&quot;">解题步骤如下：</span></p><br />
+<p style="margin-left:0cm;text-indent:0cm;mso-list:l0 level1 lfo1" class="MsoNormal"><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;"><span style="mso-list:Ignore">1）</span></span><span style="font-family:<br />
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">读取考生信息，注意记录考生均分及序号；</span></p><br />
+<p style="margin-left:0cm;text-indent:0cm;mso-list:l0 level1 lfo1" class="MsoNormal"><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;"><span style="mso-list:Ignore">2）</span></span><span style="font-family:<br />
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">对考生进行排序；</span></p><br />
+<p style="margin-left:0cm;text-indent:0cm;mso-list:l0 level1 lfo1" class="MsoNormal"><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;"><span style="mso-list:Ignore">3）</span></span><span style="font-family:<br />
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">对每位考生进行遍历，判断该考生是否能够被自己所选择的学校录取，如果能够录取则对相应的学校添加记录；</span></p><br />
+<p style="margin-left:0cm;text-indent:0cm;mso-list:l0 level1 lfo1" class="MsoNormal"><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;"><span style="mso-list:Ignore">4）</span></span><span style="font-family:<br />
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">输出每个学校的信息，按考生的序号非递增输出。</span></p><br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%90%8D%E6%A0%A1%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%80%83%E7%9C%9F%E9%A2%98-%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6'>名校复试机考真题-浙江大学</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=1992'>Submit</a>][<a href='problemstatus.php?id=1992'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=1992");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

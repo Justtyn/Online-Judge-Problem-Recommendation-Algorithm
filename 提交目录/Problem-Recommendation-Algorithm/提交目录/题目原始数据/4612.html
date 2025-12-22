@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1604615257" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 4612 --大话骰</title><center><h2>4612: 大话骰</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=4612'>Submit</a>][<a href='problemstatus.php?id=4612'>Status</a>][<a href='bbs.php?pid=4612'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=4612'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=4612");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=4612'>下载测试数据1元</a>][20kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-family: 宋体;">大话骰是酒吧</span><span lang="EN-US" style="font-family: Arial, sans-serif;">,</span><span style="font-family: 宋体;">夜场非常普遍的休闲游戏。是一款考验酒量，胆识，逻辑力，算术的游戏。每一位参加者有一个藏有五颗骰子的骰盅，大话骰的玩法跟叫法有很多种，这里为了简化问题，就只介绍</span><span style="font-family: 宋体;">叫骰</span><span style="font-family: 宋体;">，&ldquo;</span><span style="font-family: 宋体;">斋&rdquo;与开骰：</span><span lang="EN-US" style="font-family: Arial, sans-serif;"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 42pt;"><span style="font-family: 宋体;">叫骰：类似扑克游戏的</span><span lang="EN-US" style="font-family: Arial, sans-serif;">&ldquo;</span><span style="font-family: 宋体;">出牌</span><span lang="EN-US" style="font-family: Arial, sans-serif;">&rdquo;</span><span style="font-family: 宋体;">。喊法</span><span lang="EN-US" style="font-family: Arial, sans-serif;">&ldquo;X</span><span style="font-family: 宋体;">个</span><span lang="EN-US" style="font-family: Arial, sans-serif;">Y&rdquo;</span><span lang="EN-US" style="font-size:12.0pt;
+font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="margin-left: 73.5pt; text-indent: -52.5pt;"><span style="font-family: 宋体;">　　斋：通常骰子的</span><span lang="EN-US" style="font-family: Arial, sans-serif;">&ldquo;1&rdquo;</span><span style="font-family: 宋体;">点是通用的，可以变成任何点数。但如果&ldquo;</span><span style="font-family: 宋体;">斋&rdquo;</span><span lang="EN-US" style="font-family: Arial, sans-serif;">Y</span><span style="font-family: 宋体;">，即</span><span lang="EN-US" style="font-family: Arial, sans-serif;">&ldquo;1&rdquo;</span><span style="font-family: 宋体;">点便不再通用。</span><span lang="EN-US" style="font-family: Arial, sans-serif;"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="margin-left: 73.5pt; text-indent: -52.5pt;"><span lang="EN-US" style="font-family: Arial, sans-serif;">&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体;">开骰：开骰盅清点所有参加者骰子中</span><span lang="EN-US" style="font-family: Arial, sans-serif;">Y</span><span style="font-family: 宋体;">的数量</span><span lang="EN-US" style="font-family: Arial, sans-serif;">a</span><span style="font-family: 宋体;">与叫骰者所喊的</span><span lang="EN-US" style="font-family: Arial, sans-serif;">X</span><span style="font-family: 宋体;">。如果</span><span lang="EN-US" style="font-family: Arial, sans-serif;">a</span><span style="font-family: 宋体;">大于或等于</span><span lang="EN-US" style="font-family: Arial, sans-serif;">X</span><span style="font-family: 宋体;">开骰者输，否则被开骰者输。</span><span lang="EN-US" style="font-family: Arial, sans-serif;"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 26.25pt;"><span style="mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt">假如有</span><span lang="EN-US">N</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">个参加者，</span><span lang="EN-US">N</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">个参加者轮流叫骰，在叫骰过程中，参加者必须遵守一个规则：</span><span style="font-family: 宋体;">喊</span><span lang="EN-US" style="font-family: Arial, sans-serif;">&ldquo;X</span><span style="font-family: 宋体;">个</span><span lang="EN-US" style="font-family: Arial, sans-serif;">Y&rdquo;</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">，</span><span lang="EN-US">X</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">必须大于或等于</span><span lang="EN-US">N</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">，如果</span><span lang="EN-US">X</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">等于</span><span lang="EN-US">N</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">，</span><span lang="EN-US">Y</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">只能等于</span><span lang="EN-US">1 </span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">（叫错了叫骰者立即输），如果</span><span lang="EN-US">X</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">等于</span><span lang="EN-US">N+1</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">，</span><span lang="EN-US">Y</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">只能是&ldquo;斋&rdquo;</span><span lang="EN-US">Y</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">，如果</span><span lang="EN-US">X</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">大于</span><span lang="EN-US">N+1</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">，</span><span lang="EN-US">Y</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">就不可能是&ldquo;斋&rdquo;</span><span lang="EN-US">Y</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">。</span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 26.25pt;"><span style="mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt">在每一轮游戏中，每一个参加者都有可能被开骰，请你试试编写一个程序来判断每一个参加者如果被开骰能否胜出。</span><span lang="EN-US"><o:p></o:p></span></p>
+<p></p></div><h2>Input</h2><div class=content><p class="MsoNormal" align="left"><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">有若干组数据，每一组数据第一行有一个</span><span lang="EN-US">N</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">（</span><span lang="EN-US">2 &lt;= N &lt;= 100</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt">）代表有</span><span lang="EN-US">N</span><span style="mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt">位参加者，接下来</span><span lang="EN-US">N</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">行，每行有五个整数</span><span lang="EN-US">a1</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">，</span><span lang="EN-US">a2&hellip;.a5,(1 &lt;= ai &lt;= 6)</span><span style="mso-bidi-font-size:10.5pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt">代表每位参加者的骰子点数，再接下来</span><span lang="EN-US">N</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">行，每行有两个整数</span><span lang="EN-US">X,Y</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">（</span><span lang="EN-US">X &gt;= N</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">，</span><span lang="EN-US">1 &lt;= Y &lt;= 6 </span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt">）代表第</span><span lang="EN-US">K</span><span style="mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt">个参加者叫骰&ldquo;</span><span lang="EN-US">X</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">个</span><span lang="EN-US">Y</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">&rdquo;。</span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left"><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">当</span><span lang="EN-US">N</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">等于</span><span lang="EN-US">0</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">时，程序结束。</span><span lang="EN-US"><o:p></o:p></span></p>
+<p></p></div><h2>Output</h2><div class=content><p class="MsoNormal" align="left"><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">每一组数据输出</span><span lang="EN-US">N</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">行，如果参加者胜出游戏，输出&ldquo;</span><span lang="EN-US">Win</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">！&rdquo;，反之输出&ldquo;</span><span lang="EN-US">Lose</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">&rdquo;。每两组数据间输出一个空行。</span><span lang="EN-US"><o:p></o:p></span></p>
+<p></p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>2
+1 2 3 4 5 
+1 2 3 4 6
+3 3
+4 4
+3
+1 1 2 3 5
+1 2 3 4 4
+1 2 3 3 3
+3 1
+4 1
+10 2
+0
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>Lose
+Win!
+
+Win!
+Win!
+Lose
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search='></a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=4612'>Submit</a>][<a href='problemstatus.php?id=4612'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=4612");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

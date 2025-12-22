@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?587944261" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 4178 --教室占位问题</title><center><h2>4178: 教室占位问题</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=4178'>Submit</a>][<a href='problemstatus.php?id=4178'>Status</a>][<a href='bbs.php?pid=4178'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=4178'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=4178");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=4178'>下载测试数据1元</a>][3992kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><div><span style="font-size: medium"><span style="font-family: Arial">来大学之后，由于没有固定座位，大家都应该有过帮同学占位，或者同学帮你占位的经历。</span></span></div>
+<div></div>
+<div><span style="font-size: medium"><span style="font-family: Arial">假设教室里有N&times;M个座位，如图，每个座位有一个&ldquo;舒适值&rdquo;，这个&ldquo;舒适值&rdquo;为一个非负整数，当然，有一部分椅子可能是坏的，如果椅子是坏的，则无&ldquo;舒适值&rdquo;可言，该位置&ldquo;舒适值&rdquo;为-1。</span></span></div>
+<p><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-font-family: 宋体; mso-no-proof: yes"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">&nbsp;<img alt="" width="576" height="120" src="/upload/pimg4178_1.jpg" /></v:shapetype></span>
+<p></p>
+</p>
+<p>
+<p></p>
+</p>
+<p><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-font-family: 宋体; mso-no-proof: yes">
+<div><span style="font-size: medium"><span style="font-family: Arial">由于每位同学对于位置的需求有些许差异：</span></span></div>
+<div><span style="font-size: medium"><span style="font-family: Arial">&nbsp;</span></span></div>
+<div><span style="font-size: medium"><span style="font-family: Arial">1、&nbsp;第1部分同学认为，教室前N/3（取整）行座位&ldquo;舒适度&rdquo;较高，若一个座位在前N/3行，行号为n，该座位的原有&ldquo;舒适值&rdquo;为e，则在这部分同学看来，该座位的&ldquo;舒适值&rdquo;为e+(N/3-n+1)。同时，他们比较鄙视后面N/3（取整）行座位，若一个座位在后N/3行，行号为n，该座位的原有&ldquo;舒适值&rdquo;为e，则在这部分同学看来，该座位的&ldquo;舒适值&rdquo;为e-(N/3-(N-n))。</span></span></div>
+<div></div>
+<div></div>
+<div><span style="font-size: medium"><span style="font-family: Arial">2、&nbsp;第2部分同学认为，教室后N/3（取整）行座位&ldquo;舒适度&rdquo;较高，若一个座位在后N/3行，行号为n，该座位的原有&ldquo;舒适值&rdquo;为e，则在这部分同学看来，该座位的&ldquo;舒适值&rdquo;为e+(N/3-(N-n))。同时，他们比较鄙视前面N/3（取整）行座位，若一个座位在前N/3行，行号为n，该座位的原有&ldquo;舒适值&rdquo;为e，则在这部分同学看来，该座位的&ldquo;舒适值&rdquo;为e-( N/3-n+1)。</span></span></div>
+<div></div>
+<div></div>
+<div><span style="font-size: medium"><span style="font-family: Arial">3、&nbsp;第3部分同学认为，教室哪个位子都差不多，所以不加任何个人需求因素，按实际教室座位的&ldquo;舒适度&rdquo;找位子。</span></span></div>
+<div><span style="font-size: medium"><span style="font-family: Arial">&nbsp;</span></span></div>
+<div><span style="font-size: medium"><span style="font-family: Arial">现在，有一些同学来到该教室，每个同学表示为m:s，q，e。m:s表示该同学来到教室的时间，q表示该同学需要占位的个数(1&lt;=m&lt;=100)，其中，第一个位是为自己占的，q-1个位是为同学占的。</span></span></div>
+<div></div>
+<div><span style="font-size: medium"><span style="font-family: Arial">占位过程如下，首先该同学会寻找有q个在同一行的座位（&ldquo;舒适值&rdquo;小于0，则算断开，因为没有人愿意坐），并且该同学坐在找到的q个座位的最左边（即第一个），若寻找到多于1种符合要求，则该同学会寻找自己位置&ldquo;舒适度&rdquo;最高的q个连续座位占座。若没有找到连续的q个位置，则放弃帮同学占位，给自己寻找一个&ldquo;舒适度&rdquo;最高的座位。若所有座位都已被占或者剩下的座位&ldquo;舒适度&rdquo;均为负值，则选择离开教室。</span></span></div>
+<div></div>
+</span></p>
+<p></p>
+<p></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium"><span style="font-family: Arial">每组测试数据首先有一行N M K(1&lt;=N,M&lt;=50,0&lt;=K&lt;=100)，表示这教室有N行M列，后面有K个学生来占座。</span></span></p>
+<p><span style="font-size: medium"><span style="font-family: Arial">接下来N行，每行有M个数，表示每个座位的&ldquo;舒适度&rdquo;。</span></span></p>
+<p><span style="font-size: medium"><span style="font-family: Arial">最后K行，表示有K个同学来占座，每行为</span></span></p>
+<p><span style="font-size: medium"><span style="font-family: Arial">&ldquo;m:s q e&rdquo;(0&lt;=m,s&lt;=59,1&lt;=q&lt;=100,1&lt;=e&lt;=3)，</span></span></p>
+<p><span style="font-size: medium"><span style="font-family: Arial">表示该同学在m分钟，s秒来到教室，保证每个同学到教室时间不重合，需要占q个座位，e表示该同学为题目所描述的1，2，3中的一类。</span></span></p>
+<p><span style="font-size: medium"><span style="font-family: Arial">当N,M,K都为0时，结束程序。</span></span></p>
+<p></p></div><h2>Output</h2><div class=content><div><span style="font-size: medium"><span style="font-family: Arial">请按题目输入的顺序输出他们找到座位的坐标，若找不到座位离开教室则输出&ldquo;Ort&rdquo;。</span></span></div>
+<div></div></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>3 3 3
+1 2 3
+4 5 6
+7 8 9
+09:01 2 1
+09:03 2 2
+09:02 1 3
+0 0 0
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>3 2
+2 2
+3 1
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=LCC'>LCC</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=4178'>Submit</a>][<a href='problemstatus.php?id=4178'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=4178");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

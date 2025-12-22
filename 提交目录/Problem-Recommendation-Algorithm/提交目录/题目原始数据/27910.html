@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?779399845" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 27910 --斜线迷宫</title><center><h2>27910: 斜线迷宫</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=27910'>Submit</a>][<a href='problemstatus.php?id=27910'>Status</a>][<a href='bbs.php?pid=27910'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=27910'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=27910");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=27910'>下载测试数据1元</a>][56kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp; 利用斜线</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 'Helvetica Neue', Helvetica, Arial, sans-serif; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">(/)</span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">与反斜线</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 'Helvetica Neue', Helvetica, Arial, sans-serif; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">(\)</span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">可用来产生一组迷宫，如下图所示：</span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="245" height="153" alt="" src="/upload/201612/pimg1387_1.jpg" /></p>
+<p><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px"><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp; 本题着重在探讨迷宫中的封闭路径，计算封闭路径总数及其中最长的路径长度，如上图中有两个封闭路径，路径长度是以小方格的数目来做计算。上图中的最长路径长度为</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 'Helvetica Neue', Helvetica, Arial, sans-serif; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">16</span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">，最短的路径长度为</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 'Helvetica Neue', Helvetica, Arial, sans-serif; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">4</span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">。</span></span></p>
+<p><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px"><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px"><span style="widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; display: inline !important; font: 200 large/31px 'Helvetica Neue', Helvetica, Arial, sans-serif; white-space: normal; float: none; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp; （来源：</span><a href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=105&amp;page=show_problem&amp;problem=646" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; outline-style: none; outline-color: invert; outline-width: 0px; font: 200 large/31px 'Helvetica Neue', Helvetica, Arial, sans-serif; white-space: normal; letter-spacing: normal; color: rgb(42,100,150); word-spacing: 0px; text-decoration: underline; -webkit-text-stroke-width: 0px">UVa705</a><span style="widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; display: inline !important; font: 200 large/31px 'Helvetica Neue', Helvetica, Arial, sans-serif; white-space: normal; float: none; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">）</span></span></span></p></div><h2>Input</h2><div class=content><p><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp; 输入资料会包含多组迷宫资讯，每组迷宫的第一行有两个整数</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 'Helvetica Neue', Helvetica, Arial, sans-serif; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">w<span class="Apple-converted-space">&nbsp;</span></span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">与</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 'Helvetica Neue', Helvetica, Arial, sans-serif; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">h (1 &lt;= w, h &lt;= 75)</span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">，表示迷宫的宽度与长度。接下来的</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 'Helvetica Neue', Helvetica, Arial, sans-serif; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">h<span class="Apple-converted-space">&nbsp;</span></span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">行，每行有</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 'Helvetica Neue', Helvetica, Arial, sans-serif; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">w<span class="Apple-converted-space">&nbsp;</span></span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">个</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 'Helvetica Neue', Helvetica, Arial, sans-serif; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">'/'</span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">或</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 'Helvetica Neue', Helvetica, Arial, sans-serif; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">'\'</span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">字元表示迷宫。当</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 'Helvetica Neue', Helvetica, Arial, sans-serif; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">w = h = 0<span class="Apple-converted-space">&nbsp;</span></span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/27px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">表示测试资料结束。</span></p></div><h2>Output</h2><div class=content><p><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">&nbsp;&nbsp;&nbsp; 请对每组测试资料输出一行</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 'Times New Roman'; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">&quot;Maze #n:&quot;</span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">，其中</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 'Times New Roman'; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">n</span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">表示迷宫编号，接下来输出</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 'Times New Roman'; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">&quot;k Cycles; the longest has length l.&quot;</span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">，其中</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 'Times New Roman'; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">k</span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">表示封闭路径数，</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 'Times New Roman'; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">l</span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">表示最长封闭路径长度。若迷宫中没有任何封闭路径，请输出</span><span lang="EN-US" style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 'Times New Roman'; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">&quot;There are no cycles.&quot;</span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">。</span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 'Times New Roman'; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px"><span class="Apple-converted-space">&nbsp;</span></span><span style="box-sizing: border-box; widows: 1; text-transform: none; background-color: rgb(238,238,238); text-indent: 0px; font: 200 large/25px 宋体; white-space: normal; letter-spacing: normal; color: rgb(51,51,51); word-spacing: 0px; -webkit-text-stroke-width: 0px">请在每组输出资料后多输出一空白行。</span></p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>6 4
+\//\\/
+\///\/
+//\\/\
+\/\///
+3 3
+///
+\//
+\\\
+0 0
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>Maze #1:
+2 Cycles; the longest has length 16.
+
+Maze #2:
+There are no cycles.
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=UvaOJ'>UvaOJ</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=27910'>Submit</a>][<a href='problemstatus.php?id=27910'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=27910");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

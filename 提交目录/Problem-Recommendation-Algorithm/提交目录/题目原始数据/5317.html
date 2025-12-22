@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?515221131" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5317 --长方形-训练套题T3T3</title><center><h2>5317: 长方形-训练套题T3T3</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>3&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=5317'>Submit</a>][<a href='problemstatus.php?id=5317'>Status</a>][<a href='bbs.php?pid=5317'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5317'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5317");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5317'>下载测试数据1元</a>][3636kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal">
+	<br />
+</p>
+<p class="MsoNormal" align="center" style="margin-left:22.5pt;text-align:center;text-indent:-22.5pt;">
+	<b><span style="font-size:16px;">3.</span></b><b><span style="font-size:16px;">长方形</span></b><b><span style="font-size:16px;">(rectangle.pas/c/cpp)</span></b> 
+</p>
+<p>
+	<br />
+</p>
+<p class="MsoNormal">
+	【问题描述】
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	Simo想从一张用过的纸中剪出一个长方形，规则如下：
+</p>
+<p class="MsoNormal" style="margin-left:48.0pt;text-indent:-37.5pt;">
+	（1）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 这张纸的长度、宽度、分别为n，m。可以将这张纸看成是n*m个格子组成，在剪的时候，只能沿着格子边缘剪。
+</p>
+<p class="MsoNormal" style="margin-left:48.0pt;text-indent:-37.5pt;">
+	（2）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Simo以前在这张纸上画过画，剪出来的长方形不能含有画过的地方；
+</p>
+<p class="MsoNormal" style="margin-left:48.0pt;text-indent:-37.5pt;">
+	（3）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 剪出来的长方形的大小没有限制。
+</p>
+<p class="MsoNormal" style="margin-left:10.5pt;">
+	请问有多少种不同的剪法。
+</p>
+<p class="MsoNormal">
+	【输入格式】
+</p>
+<p class="MsoNormal">
+	&nbsp; 第一行两个正整数，n，m，表示这张纸的长度和宽度。
+</p>
+<p class="MsoNormal">
+	&nbsp; 接下来有n行，每行m个字符，每个字符为“*”或“.”,分别表示画过和没画过。
+</p>
+<p class="MsoNormal">
+	【输出格式】
+</p>
+<p class="MsoNormal">
+	一个整数，表示方案数。
+</p>
+<p class="MsoNormal">
+	【输入样例】
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	6 4
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	....
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	.***
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	.*..
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	.***
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	...*
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	.***
+</p>
+<p class="MsoNormal">
+	【输出样例】
+</p>
+<p class="MsoNormal">
+	&nbsp; 38
+</p>
+<p class="MsoNormal">
+	【问题规模】
+</p>
+<p class="MsoNormal">
+	&nbsp; 对于10%的数据，满足1&lt;=n,m&lt;=10
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	对于30%的数据，满足1&lt;=n,m&lt;=50
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	对于60%的数据，满足1&lt;=n,m&lt;=200
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	对于100%的数据，满足1&lt;=n,m&lt;=1000
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	最后一个数据所有的字符都为“.”
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p class="MsoNormal"><br />
+	长方形<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>【题目大意】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>在一个<span>n</span>·<span>m</span>的方格内，问有多少种不同的方法放一个长方形。某些指定的位置不能放。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>【解法一】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>最朴素的穷举法。先穷举长方形的四条边，时间为<span>O(n^4)</span>，然后再判断是否可放，时<br />
+</p><br />
+<p class="MsoNormal"><br />
+	间为<span>O(n^2)</span>。总的时间复杂度为<span>O(n^6)</span>。预计得分为<span>10</span>。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>【解法二】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>在解法一的基础上，改进判断能不能放的方法。先预处理出<span>s</span>数组，<span>s[i][j]</span>表示左<br />
+</p><br />
+<p class="MsoNormal"><br />
+	上方<span>i*j</span>大小的格子中有多少个字符为<span>’*’</span>。那么如果要判断从第<span>i</span>行到第<span>j</span>行，从第<span>k</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	列到第<span>1</span>列的长方形中有没有字符<span>’*’</span>，就可以通过计算<span>s[j][1]+s[i-1][k-1]-s[j][k-1]-s[i-1][1]</span>而得到。如果这个值大于<span>0</span>，那么说明不可以放，如果等于<span>0</span>，那么可以放。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	判断的时间被成功地降为<span>O(1)</span>。总的时间复杂度为<span>O(n^4)</span>。预计得分为<span>30</span>。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>【解法三】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>在解法二的基础上，继续改进。先穷举长方形的上下两条边，然后用解法二的方法，判<br />
+</p><br />
+<p class="MsoNormal"><br />
+	断出在这两条边之间的每一列是否能放。然后从左到右扫一遍，对于某一段连续的能放的列，如果有<span>k</span>列，那么有<span>k* (k+1)</span>／<span>2</span>种不同的放法。穷举的时间为<span>O(n^2)</span>，统计的时间为<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>O(n)</span>，总时间为<span>O(n^3)</span>。预计得分为<span>60</span>。<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:21.0pt;"><br />
+	【解法四】<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:10.5pt;"><br />
+	解法四比较复杂，要用到数据结构栈。这里就不详细介绍了。如果选手有兴趣，可以先<br />
+</p><br />
+<p class="MsoNormal"><br />
+	看<span>2 006</span>年的国家集训队论文悠本数据结构在信息学竞赛中的应用》。本题由论文中的一<br />
+</p><br />
+<p class="MsoNormal"><br />
+	题改编而成，做法大同小异。此做法时间复杂度为<span>O(n^2)</span>，预计得分<span>100</span>。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>【出题人的意图】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>本题的原形是求面积最大的长方形。笔者稍作改变，变成求长方形的个数。解法一很<br />
+</p><br />
+<p class="MsoNormal"><br />
+	容易想到，但是效率不高，只给<span>1<br />
+O</span>分。解法二是在解法一的基础上作了一个很经典的优<br />
+</p><br />
+<p class="MsoNormal"><br />
+	化，给<span>3 0</span>分。解法三没有完全穷举，只穷举了上下两条边，然后通过计算而得到答案，此做法得<span>6 O</span>分。解法四不易想到。本题的做法比较多，欢迎有想法的选手积极讨论，也希望选手能有更好的做法。<br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%A8%A1%E6%8B%9F%E8%B5%9B-%E8%AE%AD%E7%BB%83%E5%A5%97%E9%A2%98'>模拟赛-训练套题</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5317'>Submit</a>][<a href='problemstatus.php?id=5317'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5317");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

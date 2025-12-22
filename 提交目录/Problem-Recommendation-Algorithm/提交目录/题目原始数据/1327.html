@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?741800885" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 1327 --算法2-13~2-16：静态链表</title><center><h2>1327: 算法2-13~2-16：静态链表</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>32 MB<br><span class=green>Submit: </span>406&nbsp;&nbsp;<span class=green>Solved: </span>93<br>[<a href='submitpage.php?id=1327'>Submit</a>][<a href='problemstatus.php?id=1327'>Status</a>][<a href='bbs.php?pid=1327'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=1327'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=1327");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=1327'>下载测试数据1元</a>][28kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><div>
+	静态链表是使用顺序存储结构来实现的链表。严蔚敏《数据结构（C语言版）》在介绍静态链表时使用的是一个姓氏列表。
+</div>
+<div>
+	图1是书本上的静态链表示例，图（a）是初始化后插入了8个姓氏的链表，图（b）是在第5个元素前插入了“SHI”而删除了“WANG”的结果。
+</div>
+<div style="text-align:center;" align="center">
+	<img alt="" width="305" height="268" src="/upload/pimg1327_1.jpg" />
+</div>
+<div>
+	&nbsp;
+</div>
+<div style="text-align:center;" align="center">
+	图1：静态链表示例
+</div>
+<div style="text-align:center;" align="center">
+	（a）修改前的状态；（b）修改后的状态
+</div>
+<div>
+	现在，我们就来实现一下这个静态链表。实际上静态链表与一般含有指针的链表没有太大的差别，只是静态链表的结点存放的空间不是在使用时临时分配的，而是在一开始就分配了固定的一些，一般是用数组。同时一般的链表使用指针来指向下一个结点而在静态链表中则使用数组下标了。大家如果看严蔚敏的书会发现书上的算法还是有些问题的。下面我就直接给大家展示一种静态链表的实现算法。
+</div>
+<div>
+	最重要的是模拟系统分配内存的过程。可以预先定义一个全局数组（space）作为后面分配的空间，然后再初始化这个数组，为以后分配做准备，如图2。初始化后，这个数组中的状态应该如图3(a)一样。这样，数组的第0个节点就是用来标识哪个结点可用来存储数据的。那么如果是含有头结点的静态链表，则一般开始时数组的第1个节点就是用来存放头结点的，此时数组第0个结点标识第2个结点可以用来存储数据，而第1个结点（静态链表的头结点）的下一个结点下标为0，标识着这个静态链表为空，如图3(b)。静态链表的初始化以及插入删除各种算法与一般的链表是相似的。具体描述如下：
+</div>
+<div style="text-align:center;" align="center">
+	<img alt="" width="555" height="403" src="/upload/pimg1327_2.jpg" />
+</div>
+<div style="text-align:center;" align="center">
+	图2：类型定义、用来模拟内存的数组定义以及初始化
+</div>
+<div style="text-align:center;" align="center">
+	<img alt="" width="346" height="300" src="/upload/pimg1327_3.jpg" />
+</div>
+<div style="text-align:center;" align="center">
+	图3：模拟内存的数组状态。(a)初始化后的状态，(b)给静态链表分配头结点后的状态
+</div>
+<div style="text-align:center;" align="center">
+	<img alt="" width="485" height="160" src="/upload/pimg1327_4.jpg" />
+</div>
+<div style="text-align:center;" align="center">
+	图4：在静态链表中查找元素在space中的位置（相当于地址）
+</div>
+<div style="text-align:center;" align="center">
+	<img alt="" width="475" height="123" src="/upload/pimg1327_5.jpg" />
+</div>
+<div style="text-align:center;" align="center">
+	图5：给静态链表中的结点分配存储空间，实际上返回的是数组中可用的结点下标
+</div>
+<div style="text-align:center;" align="center">
+	<img alt="" width="342" height="89" src="/upload/pimg1327_6.jpg" />
+</div>
+<div style="text-align:center;" align="center">
+	图6：释放静态链表中结点的存储空间
+</div></div><h2>Input</h2><div class=content><p>
+	<span style="font-family:宋体;font-size:10.5pt;">静态链表的存储空间（图</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">2</span><span style="font-family:宋体;font-size:10.5pt;">中的</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">space</span><span style="font-family:宋体;font-size:10.5pt;">）始终只有</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">11</span><span style="font-family:宋体;font-size:10.5pt;">个节点，起始为空表。</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">insert a e</span><span style="font-family:宋体;font-size:10.5pt;">代表在第</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">a</span><span style="font-family:宋体;font-size:10.5pt;">个姓氏前插入姓氏</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">e</span><span style="font-family:宋体;font-size:10.5pt;">；</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">delete a</span><span style="font-family:宋体;font-size:10.5pt;">代表删除第</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">a</span><span style="font-family:宋体;font-size:10.5pt;">个姓氏；</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">search e</span><span style="font-family:宋体;font-size:10.5pt;">代表查找姓氏</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">e</span><span style="font-family:宋体;font-size:10.5pt;">的位置；</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">show</span><span style="font-family:宋体;font-size:10.5pt;">代表输出静态链表存储空间的状态。输入保证操作都合法。</span>
+</p></div><h2>Output</h2><div class=content><p>
+	<span style="font-family:宋体;font-size:10.5pt;">只遇到</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">search</span><span style="font-family:宋体;font-size:10.5pt;">和</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">show</span><span style="font-family:宋体;font-size:10.5pt;">时才输出。当遇到</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">search</span><span style="font-family:宋体;font-size:10.5pt;">时输出姓氏</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">e</span><span style="font-family:宋体;font-size:10.5pt;">在</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">space</span><span style="font-family:宋体;font-size:10.5pt;">中的位置；当遇到</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">show</span><span style="font-family:宋体;font-size:10.5pt;">时输出这</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">11</span><span style="font-family:宋体;font-size:10.5pt;">个结点的状态。姓氏占</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">8</span><span style="font-family:宋体;font-size:10.5pt;">个字符而数字占</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">2</span><span style="font-family:宋体;font-size:10.5pt;">个字符，姓氏左对齐。每个指令输出后面跟着含有</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">20</span><span style="font-family:宋体;font-size:10.5pt;">个星号的行。</span>
+</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>show
+insert 1 ZHAO
+show
+insert 2 QIAN
+show
+insert 3 SUN
+show
+insert 4 LI
+insert 5 ZHOU
+insert 6 WU
+insert 7 ZHENG
+insert 8 WANG
+show
+insert 1 ZHANG
+show
+search LI
+show</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>         2
+         0
+         3
+         4
+         5
+         6
+         7
+         8
+         9
+        10
+         0
+********************
+         3
+         2
+ZHAO     0
+         4
+         5
+         6
+         7
+         8
+         9
+        10
+         0
+********************
+         4
+         2
+ZHAO     3
+QIAN     0
+         5
+         6
+         7
+         8
+         9
+        10
+         0
+********************
+         5
+         2
+ZHAO     3
+QIAN     4
+SUN      0
+         6
+         7
+         8
+         9
+        10
+         0
+********************
+        10
+         2
+ZHAO     3
+QIAN     4
+SUN      5
+LI       6
+ZHOU     7
+WU       8
+ZHENG    9
+WANG     0
+         0
+********************
+         0
+        10
+ZHAO     3
+QIAN     4
+SUN      5
+LI       6
+ZHOU     7
+WU       8
+ZHENG    9
+WANG     0
+ZHANG    2
+********************
+ 5
+********************
+         0
+        10
+ZHAO     3
+QIAN     4
+SUN      5
+LI       6
+ZHOU     7
+WU       8
+ZHENG    9
+WANG     0
+ZHANG    2
+********************</span></pre><h2>HINT</h2>
+<div class=content><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><b><span style="font-family: 宋体; color: blue; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">提示：</span><span lang="EN-US" style="color: blue"><o:p></o:p></span></b></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="mso-bidi-font-weight: bold">1</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">、怎样将字符串类型定义为</span><span lang="EN-US" style="mso-bidi-font-weight: bold">ElemType</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">呢？形如</span><span lang="EN-US" style="mso-bidi-font-weight: bold">typedef int num</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">一样，数组或者指针可以放在定义的类型名后面，例如将具有</span><span lang="EN-US" style="mso-bidi-font-weight: bold">8</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">个字符的姓氏定义为</span><span lang="EN-US" style="mso-bidi-font-weight: bold">ElemType</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">可以这样定义：</span><span lang="EN-US" style="mso-bidi-font-weight: bold">typedef char ElemType[8]</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">。</span><span lang="EN-US" style="mso-bidi-font-weight: bold"><o:p></o:p></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="mso-bidi-font-weight: bold">2</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">、题目和书中给的算法描述还缺少静态链表的插入、删除以及显示，都需要自己写。</span><span lang="EN-US" style="mso-bidi-font-weight: bold"><o:p></o:p></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="mso-bidi-font-weight: bold">3</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">、要求每个指令输出后跟一个空行，别忘了。</span><span lang="EN-US" style="mso-bidi-font-weight: bold"><o:p></o:p></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="mso-bidi-font-weight: bold">4</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">、姓氏占</span><span lang="EN-US" style="mso-bidi-font-weight: bold">8</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">个字符，数字占</span><span lang="EN-US" style="mso-bidi-font-weight: bold">2</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">个字符，姓氏左对齐，可以这样输出</span><span lang="EN-US" style="mso-bidi-font-weight: bold">printf(&quot;%-8s%2d&quot;);</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">对于指令</span><span lang="EN-US" style="mso-bidi-font-weight: bold">search</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">也要输出占</span><span lang="EN-US" style="mso-bidi-font-weight: bold">2</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">个字符的数字。</span><span lang="EN-US" style="mso-bidi-font-weight: bold"><o:p></o:p></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="mso-bidi-font-weight: bold">5</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">、静态链表初始化时将所有内存设为空，可以在</span><span lang="EN-US" style="mso-bidi-font-weight: bold">InitSpace_SL</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-weight: bold">中使用下面的方法：</span><span lang="EN-US" style="mso-bidi-font-weight: bold"><o:p></o:p></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="mso-bidi-font-weight: bold">memset(space, 0 ,sizeof(space));<o:p></o:p></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><b><span style="font-family: 宋体; color: blue; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">总结：</span><span lang="EN-US" style="color: blue"><o:p></o:p></span></b></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-family: 'Courier New'; color: black; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 'Courier New'">静态链表与一般链表极为相似：使用数组来模拟内存，使用数组下表来模拟内存中的地址。<span lang="EN-US" style="background: white; mso-highlight: white"><o:p></o:p></span></span></p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%AB%98%E5%88%86%E7%AC%94%E8%AE%B0'>数据结构高分笔记</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=1327'>Submit</a>][<a href='problemstatus.php?id=1327'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=1327");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

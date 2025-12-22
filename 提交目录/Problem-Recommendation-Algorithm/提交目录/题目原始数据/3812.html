@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1174719870" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 3812 --2009_p4 道路游戏(game.pas/c/cpp)</title><center><h2>3812: 2009_p4 道路游戏(game.pas/c/cpp)</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>2&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='submitpage.php?id=3812'>Submit</a>][<a href='problemstatus.php?id=3812'>Status</a>][<a href='bbs.php?pid=3812'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=3812'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=3812");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=3812'>下载测试数据1元</a>][2716kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="p0" style="text-align:center;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">4．道路游戏</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">(game.pas/c/cpp)</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">【问题描述】&nbsp;&nbsp;小新正在玩一个简单的电脑游戏。游戏中有一条环形马路，马路上有&nbsp;n&nbsp;个机器人工厂，两个相邻机器人工厂之间由一小段马路连接。小新以某个机器人工厂为起点，按顺时针顺序依次将这n个机器人工厂编号为1~n，因为马路是环形的，所以第n个机器人工厂和第1个机器人工厂是由一段马路连接在一起的。小新将连接机器人工厂的这n段马路也编号为1~n，并规定第i段马路连接第i个机器人工厂和第i+1个机器人工厂（1≤i≤n-1），第n段马路连接第n个机器人工厂和第&nbsp;1个机器人工厂。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">游戏过程中，每个单位时间内，每段马路上都会出现一些金币，金币的数量会随着时间发生变化，即不同单位时间内同一段马路上出现的金币数量可能是不同的。小新需要机器人的帮助才能收集到马路上的金币。所需的机器人必须在机器人工厂用一些金币来购买，机器人一旦被购买，便会沿着环形马路按顺时针方向一直行走，在每个单位时间内行走一次，即从当前所在的机器人工厂到达相邻的下一个机器人工厂，并将经过的马路上的所有金币收集给小新，例如，小新在i（1≤i≤n）号机器人工厂购买了一个机器人，这个机器人会从i号机器人工厂开始，顺时针在马路上行走，第一次行走会经过i号马路，到达i+1号机器人工厂（如果i=n，机器人会到达第1个机器人工厂），并将i号马路上的所有金币收集给小新。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">游戏中，环形马路上不能同时存在2个或者2个以上的机器人，并且每个机器人最多能够在环形马路上行走p次。小新购买机器人的同时，需要给这个机器人设定行走次数，行走次数可以为1~p&nbsp;之间的任意整数。当马路上的机器人行走完规定的次数之后会自动消失，小新必须立刻在任意一个机器人工厂中购买一个新的机器人，并给新的机器人设定新的行走次数。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">以下是游戏的一些补充说明：</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">1.</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"> </span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">游戏从小新第一次购买机器人开始计时。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">2.</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"> </span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">购买机器人和设定机器人的行走次数是瞬间完成的，不需要花费时间。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">3.</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"> </span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">购买机器人和机器人行走是两个独立的过程，机器人行走时不能购买机器人，购买完机器人并且设定机器人行走次数之后机器人才能行走。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">4.</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"> </span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">在同一个机器人工厂购买机器人的花费是相同的，但是在不同机器人工厂购买机器人的花费不一定相同。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">5.</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"> </span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">购买机器人花费的金币，在游戏结束时再从小新收集的金币中扣除，所以在游戏过程中小新不用担心因金币不足，无法购买机器人而导致游戏无法进行。也因为如此，游戏结束后，收集的金币数量可能为负。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">现在已知每段马路上每个单位时间内出现的金币数量和在每个机器人工厂购买机器人需要的花费，请你告诉小新，经过m个单位时间后，扣除购买机器人的花费，小新最多能收集到多少金币。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">【输入】输入文件名为&nbsp;game.in。第一行&nbsp;3&nbsp;个正整数，n，m，p，意义如题目所述。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">接下来的&nbsp;n&nbsp;行，每行有&nbsp;m&nbsp;个正整数，每两个整数之间用一个空格隔开，其中第&nbsp;i&nbsp;行描述了i号马路上每个单位时间内出现的金币数量（1≤金币数量≤100），即第i行的第j（1≤j≤m）个数表示第j个单位时间内i号马路上出现的金币数量。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">最后一行，有&nbsp;n&nbsp;个整数，每两个整数之间用一个空格隔开，其中第&nbsp;i&nbsp;个数表示在&nbsp;i&nbsp;号机器人工厂购买机器人需要花费的金币数量（1≤金币数量≤100）。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">【输出】输出文件game.out共一行，包含1个整数，表示在m个单位时间内，扣除购买机器人花费的金币之后，小新最多能收集到多少金币。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">【输入输出样例】</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">game.</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">in</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">&nbsp;</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"> </span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"> </span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">game.out</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">2&nbsp;3&nbsp;2</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"> </span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"> </span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"> </span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">5</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">1&nbsp;2&nbsp;3</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">2&nbsp;3&nbsp;4</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">1&nbsp;2</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">【数据范围】</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">&nbsp;</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">对于&nbsp;40%的数据，2&nbsp;≤&nbsp;n&nbsp;≤&nbsp;40，1&nbsp;≤&nbsp;m&nbsp;≤&nbsp;40。&nbsp;</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">对于&nbsp;90%的数据，2&nbsp;≤&nbsp;n&nbsp;≤&nbsp;200，1&nbsp;≤&nbsp;m&nbsp;≤&nbsp;200。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="color:#000000;font-size:10.5000pt;font-family:'宋体';">对于&nbsp;100%的数据，2&nbsp;≤&nbsp;n&nbsp;≤&nbsp;1000，1&nbsp;≤&nbsp;m&nbsp;≤&nbsp;1000，1&nbsp;≤&nbsp;p&nbsp;≤&nbsp;m。</span><span style="color:#000000;font-size:10.5000pt;font-family:'宋体';"></span>
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=NOIP%E5%A4%8D%E8%B5%9B-2009'>NOIP复赛-2009</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=3812'>Submit</a>][<a href='problemstatus.php?id=3812'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=3812");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

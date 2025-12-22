@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?484359044" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 26099 --高校录取</title><center><h2>26099: 高校录取</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>2&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='submitpage.php?id=26099'>Submit</a>][<a href='problemstatus.php?id=26099'>Status</a>][<a href='bbs.php?pid=26099'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=26099'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=26099");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=26099'>下载测试数据1元</a>][5468kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">【问题描述】</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">高三全省联合模拟考试刚刚结束，经过各科老师的努力，各个学科的改卷工作终于结束了，每位同学的各科分数也已经结算完毕。此时，老师们开始模拟各个高校录取情况。</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">每个大学有自己的录取范围。例如，清华、北大招生约为理科全省前<span>100</span><span>名，复旦、上海交大在全省理科</span><span>101</span><span>至</span><span>300</span><span>名。老师们想要知道哪些同学可以进入某个名校。</span></span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">可是，统计软件突然失灵，查询和比对工作也无法进行，只有事先已经得到的理科每位同学的各科成绩。现在请你帮助老师编写一个程序，显示出可以进入某高校的名单。</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">此次考试理科排名规则：</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">1.<span>按照语文、数学、外语、理科综合四门科目</span></span><span style="font-weight:bold;text-decoration:underline;font-size:10.5000pt;font-family:'宋体';">总分由高到低排名</span><span style="font-size:10.5000pt;font-family:'宋体';">；</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">2.<span>若总分相同，则按照</span></span><span style="font-weight:bold;text-decoration:underline;font-size:10.5000pt;font-family:'宋体';">数学</span><span style="font-size:10.5000pt;font-family:'宋体';">成绩由高到低排名；</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">3.<span>若总分和数学成绩都相同，按照</span></span><span style="font-weight:bold;text-decoration:underline;font-size:10.5000pt;font-family:'宋体';">理科综合</span><span style="font-size:10.5000pt;font-family:'宋体';">成绩由高到低排名；</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">4.<span>若总分、数学、理科综合都相同，按照</span></span><span style="font-weight:bold;text-decoration:underline;font-size:10.5000pt;font-family:'宋体';">语文</span><span style="font-size:10.5000pt;font-family:'宋体';">成绩由高到低排名；</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">5.<span>若总分、数学、理科综合、语文成绩都相同，则按照</span></span><span style="font-weight:bold;text-decoration:underline;font-size:10.5000pt;font-family:'宋体';">报名序号</span><span style="font-size:10.5000pt;font-family:'宋体';">从</span><span style="font-weight:bold;text-decoration:underline;font-size:10.5000pt;font-family:'宋体';">小到大排序</span><span style="font-size:10.5000pt;font-family:'宋体';">（这里</span><span style="font-weight:bold;text-decoration:underline;font-size:10.5000pt;font-family:'宋体';">报名序号为输入顺序</span><span style="font-size:10.5000pt;font-family:'宋体';">，第<span>1</span><span>个输入就是</span><span>1</span><span>号，第</span><span>100</span><span>个输入就是</span><span>100</span><span>号）。</span></span><span style="color:#1111CC;font-size:9.0000pt;font-family:'Arial';">朗读</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"></span>
+</p>
+<p class="p0" style="text-align:left;vertical-align:;">
+	<span style="color:#777777;font-size:9.0000pt;font-family:'Lucida Sans Unicode';">Gabiluso&nbsp;shì&nbsp;tā&nbsp;de&nbsp;guójiā&nbsp;de&nbsp;zuì&nbsp;wěidà&nbsp;de&nbsp;jiàndié&nbsp;zhī&nbsp;yī.&nbsp;Xiànzài,&nbsp;tā&nbsp;shìtú&nbsp;wánchéng&nbsp;yīgè&nbsp;“bù&nbsp;kěnéng”&nbsp;de&nbsp;shǐmìng,&nbsp;shǐ&nbsp;qí&nbsp;huǎnmàn-----wèi&nbsp;chéngshì&nbsp;Colugu&nbsp;jūnduì&nbsp;dàodá&nbsp;jīchǎng.&nbsp;Shì&nbsp;Colugu&nbsp;yǒu&nbsp;n&nbsp;gè&nbsp;gōnggòng&nbsp;qìchē&nbsp;zhàn&nbsp;hé&nbsp;mǐ&nbsp;de&nbsp;dàolù.&nbsp;Měi&nbsp;tiáo&nbsp;dàolù&nbsp;zhíjiē&nbsp;liánjiē&nbsp;liǎng&nbsp;gè&nbsp;bāshì&nbsp;zhàn,&nbsp;suǒyǒu&nbsp;de&nbsp;dàolù&nbsp;shì&nbsp;yītiáo&nbsp;lù&nbsp;jiēdào.&nbsp;Wèile&nbsp;bǎochí&nbsp;kōngqì&nbsp;jiéjìng,&nbsp;zhèngfǔ&nbsp;jìnzhǐ&nbsp;suǒyǒu&nbsp;jūnyòng&nbsp;chēliàng.&nbsp;Yīncǐ,&nbsp;jūnduì&nbsp;bìxū&nbsp;chéng&nbsp;dā&nbsp;bāshì&nbsp;qù&nbsp;jīchǎng.&nbsp;Kěnéng&nbsp;yǒu&nbsp;yīgè&nbsp;yǐshàng&nbsp;de&nbsp;liǎng&nbsp;gè&nbsp;bāshì&nbsp;zhàn&nbsp;de&nbsp;dàolù.&nbsp;Rúguǒ&nbsp;yīgè&nbsp;gōnggòng&nbsp;qìchē&nbsp;zhàn&nbsp;bèi&nbsp;pòhuài&nbsp;shí,&nbsp;suǒyǒu&nbsp;dàolù&nbsp;liánjiē&nbsp;gāi&nbsp;zhàn&nbsp;jiāng&nbsp;chéngwéi&nbsp;méiyǒu&nbsp;yòng&nbsp;de.&nbsp;Shénme&nbsp;Gabiluso&nbsp;xūyào&nbsp;zuò&nbsp;de&nbsp;shì&nbsp;cuīhuǐ&nbsp;le&nbsp;yīxiē&nbsp;gōnggòng&nbsp;qìchē&nbsp;zhàn,&nbsp;shǐ&nbsp;jūnduì&nbsp;wúfǎ&nbsp;dàodá&nbsp;jīchǎng&nbsp;zài&nbsp;K&nbsp;fēnzhōng.&nbsp;Tā&nbsp;xūyào&nbsp;yī&nbsp;liàng&nbsp;gōngjiāo&nbsp;chē&nbsp;gānghǎo&nbsp;yī&nbsp;fēnzhōng&nbsp;de&nbsp;shíjiān&nbsp;tōngguò&nbsp;rènhé&nbsp;dàolù.&nbsp;Suǒyǒu&nbsp;bāshì&nbsp;zhàn&nbsp;de&nbsp;biānhào&nbsp;cóng&nbsp;1&nbsp;dào&nbsp;n&nbsp;1&nbsp;Hào&nbsp;bāshì&nbsp;zhàn&nbsp;shì&nbsp;zài&nbsp;jūnyíng&nbsp;hé&nbsp;dì&nbsp;n&nbsp;zhàn&nbsp;jīchǎng.&nbsp;Jūnduì&nbsp;shǐzhōng&nbsp;shèzhì&nbsp;cóng&nbsp;dì&nbsp;yí&nbsp;zhàn.</span><span style="color:#777777;font-size:9.0000pt;font-family:'Lucida Sans Unicode';"><br />
+</span><span style="color:#777777;font-size:9.0000pt;font-family:'Lucida Sans Unicode';">Dì&nbsp;yí&nbsp;zhàn&nbsp;hé&nbsp;dì&nbsp;n&nbsp;zhàn&nbsp;kěyǐ&nbsp;bù&nbsp;bèi&nbsp;pòhuài&nbsp;shì&nbsp;yóuyú&nbsp;dàliàng&nbsp;de&nbsp;hòuwèi.&nbsp;Dāngrán&nbsp;yě&nbsp;méiyǒu&nbsp;cóng&nbsp;dì&nbsp;yí&nbsp;zhàn&nbsp;dào&nbsp;dì&nbsp;n&nbsp;zhàn&nbsp;de&nbsp;dàolù.</span><span style="color:#777777;font-size:9.0000pt;font-family:'Lucida Sans Unicode';"><br />
+</span><span style="color:#777777;font-size:9.0000pt;font-family:'Lucida Sans Unicode';"><br />
+</span><span style="color:#777777;font-size:9.0000pt;font-family:'Lucida Sans Unicode';"><br />
+</span><span style="color:#777777;font-size:9.0000pt;font-family:'Lucida Sans Unicode';">Qǐng&nbsp;bāngzhù&nbsp;Gabiluso&nbsp;lái&nbsp;jìsuàn&nbsp;zuìdī&nbsp;shùmù&nbsp;dì&nbsp;bāshì&nbsp;zhàn,&nbsp;tā&nbsp;bìxū&nbsp;xiāohuǐ,&nbsp;wánchéng&nbsp;tā&nbsp;de&nbsp;shǐmìng.</span><span style="color:#777777;font-size:9.0000pt;font-family:'Lucida Sans Unicode';"></span>
+</p>
+<p class="p0" style="text-align:left;vertical-align:;">
+	<span style="color:#888888;font-size:9.0000pt;font-family:'Arial';">字典&nbsp;<span>-&nbsp;</span></span><span><a href="http://www.google.com/dictionary?source=translation&amp;hl=zh-CN&amp;q=&amp;langpair=en|zh-CN"><span style="color:#4272DB;font-size:9.0000pt;font-family:'Arial';">查看字典详细内容</span></a></span><span style="color:#888888;font-size:9.0000pt;font-family:'Arial';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">【输入】</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">第一行三个整数<span>n</span><span>，</span><span>a</span><span>和</span><span>b</span><span>，分别表示参加考试的人数和某高校的录取名次范围（从名次</span><span>a</span><span>到名次</span><span>b</span><span>）。</span></span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">接下来<span>n</span><span>行，每行</span><span>4</span><span>个整数，表示每位同学的每门学科的成绩。依次为语文、数学、英语、综合。成绩</span><span>0&lt;=x&lt;=300</span><span>。</span></span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">【输出】</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">输出<span>b-a+1</span><span>行，排名在</span><span>a~b</span><span>名的同学信息。</span></span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">每行两个整数，分别为报名序号和总分（报名序号看题目描述），中间用空格分开。</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">&nbsp;</span>
+</p>
+<p class="p0" style="text-indent:21.0000pt;">
+	<span style="font-size:10.5000pt;font-family:'宋体';">&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">【输出输出样例<span>1</span><span>】</span></span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<table class="MsoNormalTable" style="border-collapse:collapse;width:426.1000pt;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;">
+	<tbody>
+		<tr>
+			<td style="border:0.5000pt solid #000000;" valign="center" width="284">
+				<p class="p0">
+					<span style="font-weight:bold;font-size:10.5000pt;font-family:'Courier New';">range.in</span><span style="font-weight:bold;font-size:10.5000pt;font-family:'Courier New';"></span>
+				</p>
+			</td>
+			<td style="border:0.5000pt solid #000000;" valign="center" width="284">
+				<p class="p0">
+					<span style="font-weight:bold;font-size:10.5000pt;font-family:'Courier New';">range</span><span style="font-weight:bold;font-size:10.5000pt;font-family:'宋体';">.out</span><span style="font-weight:bold;font-size:10.5000pt;font-family:'Courier New';"></span>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border:0.5000pt solid #000000;" valign="center" width="284">
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'宋体';">6&nbsp;3&nbsp;5</span><span style="font-size:12.0000pt;font-family:'宋体';"></span>
+				</p>
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'Courier New';">118</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">139</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">130</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;2</span><span style="font-size:12.0000pt;font-family:'Courier New';">86</span><span style="font-size:12.0000pt;font-family:'Courier New';"></span>
+				</p>
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'Courier New';">105</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">130</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">129</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;2</span><span style="font-size:12.0000pt;font-family:'Courier New';">96</span><span style="font-size:12.0000pt;font-family:'Courier New';"></span>
+				</p>
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'Courier New';">113</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">138</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">123</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;2</span><span style="font-size:12.0000pt;font-family:'Courier New';">91</span><span style="font-size:12.0000pt;font-family:'Courier New';"></span>
+				</p>
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'Courier New';">104</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">133</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">119</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;2</span><span style="font-size:12.0000pt;font-family:'Courier New';">83</span><span style="font-size:12.0000pt;font-family:'Courier New';"></span>
+				</p>
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'Courier New';">89</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">139</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">116</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;2</span><span style="font-size:12.0000pt;font-family:'Courier New';">87</span><span style="font-size:12.0000pt;font-family:'Courier New';"></span>
+				</p>
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'Courier New';">103</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">127</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">118</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;2</span><span style="font-size:12.0000pt;font-family:'Courier New';">88</span><span style="font-size:12.0000pt;font-family:'宋体';"></span>
+				</p>
+			</td>
+			<td style="border:0.5000pt solid #000000;" valign="top" width="284">
+				<p class="p0">
+					<span style="font-size:10.5000pt;font-family:'宋体';">2&nbsp;660</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+				</p>
+				<p class="p0">
+					<span style="font-size:10.5000pt;font-family:'宋体';">4&nbsp;639</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+				</p>
+				<p class="p0">
+					<span style="font-size:10.5000pt;font-family:'宋体';">6&nbsp;636</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">【样例<span>1</span><span>解释】</span></span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">排序后由高到低</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">序号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;总分</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'Times New Roman';">1</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">118</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">139</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">130</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">286</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">673</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'Times New Roman';">3</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">113</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">138</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">123</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">291</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">665</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'Times New Roman';">2</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">105</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">130</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">129</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">296</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">660</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'Times New Roman';">4</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">104</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">133</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">119</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">283</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">639</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">6</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">103</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">127</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">118</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">288</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">636</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'Times New Roman';">5</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">89</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">139</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">116</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">287</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">631</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">输出<span>3~5</span><span>名的序号和总分</span></span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">【输出输出样例<span>2</span><span>】</span></span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<table class="MsoNormalTable" style="border-collapse:collapse;width:426.1000pt;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;">
+	<tbody>
+		<tr>
+			<td style="border:0.5000pt solid #000000;" valign="center" width="284">
+				<p class="p0">
+					<span style="font-weight:bold;font-size:10.5000pt;font-family:'Courier New';">range.in</span><span style="font-weight:bold;font-size:10.5000pt;font-family:'Courier New';"></span>
+				</p>
+			</td>
+			<td style="border:0.5000pt solid #000000;" valign="center" width="284">
+				<p class="p0">
+					<span style="font-weight:bold;font-size:10.5000pt;font-family:'Courier New';">range</span><span style="font-weight:bold;font-size:10.5000pt;font-family:'宋体';">.out</span><span style="font-weight:bold;font-size:10.5000pt;font-family:'Courier New';"></span>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border:0.5000pt solid #000000;" valign="center" width="284">
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'宋体';">7&nbsp;3&nbsp;5</span><span style="font-size:12.0000pt;font-family:'宋体';"></span>
+				</p>
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'Courier New';">118</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">139</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">130</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;2</span><span style="font-size:12.0000pt;font-family:'Courier New';">86</span><span style="font-size:12.0000pt;font-family:'Courier New';"></span>
+				</p>
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'Courier New';">105</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">130</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">129</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;2</span><span style="font-size:12.0000pt;font-family:'Courier New';">96</span><span style="font-size:12.0000pt;font-family:'Courier New';"></span>
+				</p>
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'Courier New';">113</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">138</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">123</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;2</span><span style="font-size:12.0000pt;font-family:'Courier New';">91</span><span style="font-size:12.0000pt;font-family:'Courier New';"></span>
+				</p>
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'Courier New';">105</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">130</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">129</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;2</span><span style="font-size:12.0000pt;font-family:'Courier New';">96</span><span style="font-size:12.0000pt;font-family:'Courier New';"></span>
+				</p>
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'Courier New';">89</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">139</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">116</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;2</span><span style="font-size:12.0000pt;font-family:'Courier New';">87</span><span style="font-size:12.0000pt;font-family:'Courier New';"></span>
+				</p>
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'Courier New';">107</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">127</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">116</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;2</span><span style="font-size:12.0000pt;font-family:'Courier New';">86</span><span style="font-size:12.0000pt;font-family:'Courier New';"></span>
+				</p>
+				<p class="p0" style="text-align:left;">
+					<span style="font-size:12.0000pt;font-family:'Courier New';">103</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">127</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;</span><span style="font-size:12.0000pt;font-family:'Courier New';">118</span><span style="font-size:12.0000pt;font-family:'宋体';">&nbsp;2</span><span style="font-size:12.0000pt;font-family:'Courier New';">88</span><span style="font-size:12.0000pt;font-family:'宋体';"></span>
+				</p>
+			</td>
+			<td style="border:0.5000pt solid #000000;" valign="top" width="284">
+				<p class="p0">
+					<span style="font-size:10.5000pt;font-family:'宋体';">2&nbsp;660</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+				</p>
+				<p class="p0">
+					<span style="font-size:10.5000pt;font-family:'宋体';">4&nbsp;660</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+				</p>
+				<p class="p0">
+					<span style="font-size:10.5000pt;font-family:'宋体';">7&nbsp;636</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">【样例<span>2</span><span>解释】</span></span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">排序后由高到低</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">序号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;总分</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'Times New Roman';">1</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">118</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">139</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">130</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">286</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">673</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'Times New Roman';">3</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">113</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">138</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">123</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">291</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">665</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'Times New Roman';">2</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">105</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">130</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">129</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">296</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">660</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'Times New Roman';">4</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">105</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">130</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">129</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">296</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">660</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'Times New Roman';">7</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">103</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">127</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">118</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">288</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">636</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'Times New Roman';">6</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">107</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">127</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">116</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">286</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">636</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'Times New Roman';">5</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">89</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">139</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">116</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">287</span><span style="font-size:10.5000pt;font-family:'Times New Roman';"> </span><span style="font-size:10.5000pt;font-family:'Times New Roman';">631</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">7<span>号和</span><span>6</span><span>号同为</span><span>636</span><span>分，数学分数又相同，理科综合分数</span><span>7</span><span>号较高，因此排在</span><span>6</span><span>号前面。</span></span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">2<span>号和</span><span>4</span><span>号所有成绩都相同，只能按照序号排序，</span><span>2</span><span>号在</span><span>4</span><span>号之前</span></span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">&nbsp;</span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">【数据范围】</span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">对于<span>40%</span><span>的数据，</span><span>1&lt;=a&lt;=b&lt;=n&lt;=100</span><span>，且保证每个人的总分都不相同。</span></span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">对于<span>70%</span><span>的数据，</span><span>1&lt;=a&lt;=b&lt;=n&lt;=300</span><span>。</span></span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0">
+	<span style="font-size:10.5000pt;font-family:'宋体';">对于<span>100%</span><span>的数据，</span><span>1&lt;=a&lt;=b&lt;=n&lt;=100000</span><span>。</span></span><span style="font-size:10.5000pt;font-family:'宋体';"></span>
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E4%BD%99%E5%A7%9A%E7%AB%9E%E8%B5%9B-2013'>余姚竞赛-2013</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=26099'>Submit</a>][<a href='problemstatus.php?id=26099'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=26099");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

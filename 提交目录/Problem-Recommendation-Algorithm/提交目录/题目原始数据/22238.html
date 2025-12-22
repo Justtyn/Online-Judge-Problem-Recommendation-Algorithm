@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?2039089548" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 22238 --Rank and File</title><center><h2>22238: Rank and File</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=22238'>Submit</a>][<a href='problemstatus.php?id=22238'>Status</a>][<a href='bbs.php?pid=22238'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=22238'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=22238");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=22238'>下载测试数据1元</a>][20kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><i>Note: The chess piece images below were created by Colin M.L. Burnett and are used under the auspices of the BSD license, the text of which follows the problem statement.</i>
+<p>Programs and algorithms for playing the game of chess have been around as long as computers themselves, with the first chess playing program being developed in the 50's by Alan Turing. Computer chess has come a long way since then, and in 1997 IBM's Deep Blue defeated chess grandmaster Garry Kasparov. One thing all these chess programs have in common though is a need to determine when the winning move, or <i>checkmate</i>, is reached. Your goal for this problem is to implement an algorithm such that, given the current layout of the chessboard, it will detect if a checkmate has occurred during that turn.</p>
+<p>Chess is played on a board divided into a 8x8 grid of 64 squares. On a real chessboard, the 64 squares have alternating light and dark colors. For this problem the individual square colors are irrelevant and the entire board is simply treated as a uniform 8x8 grid.</p>
+<p>The game is played by two opposing sides, white and black, with each side controlling up to six kinds of pieces: a <i>king</i>, <i>queen</i>, <i>rook</i>, <i>bishop</i>, <i>knight</i>, and one or more <i>pawn</i>s. For simplicity's sake, however, this problem will only consider the first five and not make any use of the pawn chess piece. The two players take turns moving one piece at a time on every turn. It is up to each player to decide which piece they wish to move on their turn, but it is not possible for a player to &quot;skip&quot; or &quot;pass&quot;; each player <b>must</b> move one of their pieces in some fashion.</p>
+<p>Each kind of chess piece moves in a distinct way as explained in the list below, and <i>Figure 1</i> gives an example using an X to show each square that a chess piece can move to.</p>
+<ul class="example">
+    <li><i>Rook</i>: The rook moves in a straight line by any number of squares in any of the four cardinal (horizontal and vertical) directions.</li>
+    <li><i>Bishop</i>: The bishop moves in a line by any number of squares in any of the four diagonal directions.</li>
+    <li><i>Queen</i>: The queen can move in a line by any number of squares in any of the eight cardinal and diagonal directions. As such, it is considered to be the most powerful piece in the game.</li>
+    <li><i>Knight</i>: The knight always moves by &quot;jumping&quot; two squares in one cardinal direction and one square in a direction perpendicular to the first. There are 8 possible squares that a knight can move to from a given position, and these are shown in the figure below.</li>
+    <li><i>King</i>: The king can move in any of the eight cardinal and diagonal directions but by one square only. Put another way, the king can only move into the eight immediately adjacent squares. As such, this makes the king one of the weakest pieces on the board.</li>
+</ul>
+<table border="0" align="center" class="example">
+    <tbody>
+        <tr>
+            <td><img src="/upload/pimg22238_1.png" alt="" /> <br />
+            <i>Rook</i></td>
+            <td><img src="/upload/pimg22238_2.png" alt="" /> <br />
+            <i>Bishop</i></td>
+            <td><img src="/upload/pimg22238_3.png" alt="" /> <br />
+            <i>Queen</i></td>
+            <td><img src="/upload/pimg22238_4.png" alt="" /> <br />
+            <i>Knight</i></td>
+            <td><img src="/upload/pimg22238_5.png" alt="" /> <br />
+            <i>King</i></td>
+        </tr>
+    </tbody>
+    <caption> <b>Figure 1:</b> Valid moves for each kind of chess piece </caption>
+</table>
+<p>On every turn, a chess piece may be moved either into a vacant square or into a square already occupied by an opposing piece. In the latter case, the opposing chess piece is said to be</p>
+<i>captured</i>
+<p>and is permanently removed from the game. However, a chess piece</p>
+<b>may not</b>
+<p>move into a square already occupied by another friendly piece, because each square can be occupied by at most one piece at a time. Most chess pieces move by &quot;sliding&quot; across vacant squares on the board. In other words, any other chess piece (be it friendly or foe) in the path of the moving piece will block any further movement of that piece. The only exception to this rule is the knight which &quot;jumps&quot; directly to its final destination square, and therefore its movement cannot be blocked  by any surrounding pieces between it and the destination square. See</p>
+<i>Figure 2</i>
+<p>for an example: image (a) shows a white rook's movement blocked by two other pieces, and image (b) shows the same white rook capturing a black bishop (the rook's previous position before the capture is shown as a white outline).</p>
+<p>
+<table border="0" align="center" class="example">
+    <tbody>
+        <tr>
+            <td><img src="/upload/pimg22238_6.png" alt="" /> <br />
+            <i>(a)</i></td>
+            <td><img src="/upload/pimg22238_7.png" alt="" /> <br />
+            <i>(b)</i></td>
+        </tr>
+    </tbody>
+    <caption> <b>Figure 2:</b> (a) rook's movement blocked by other pieces; (b) rook capturing the black bishop </caption>
+</table>
+Although the king may be one of the weakest pieces on the board, it is also the most important. A king cannot be captured directly by another piece but it can be threatened. When the king is threatened, or <i>checked</i>, it means that on the <b>next</b> turn, the opposing side would be able to capture the king. Putting a king in check forces the checked side to defend their king by moving the king out of harm's way, blocking the threat with another piece, or capturing the threatening piece. If the checked player has no valid move that they can make to protect the king, then the king is in fact <i>checkmated</i>, and that player has lost the game. Also note that a player may never put their own king in check. <i>Figure 3</i> shows the difference between a check and checkmate. In image (a), the imminent capture of the white king can still be avoided by either moving the king out of the way or by capturing the black queen. Image (b) shows an example of checkmate, where no valid moves exist for the white side that would eliminate the threat to the king.</p>
+<p>
+<table border="0" align="center" class="example">
+    <tbody>
+        <tr>
+            <td><img src="/upload/pimg22238_8.png" alt="" /> <br />
+            <i>Check</i></td>
+            <td><img src="/upload/pimg22238_9.png" alt="" /> <br />
+            <i>Checkmate</i></td>
+        </tr>
+    </tbody>
+    <caption> <b>Figure 3:</b> Example of white king in (a) check and (b) checkmate </caption>
+</table>
+The rules laid out above are the only ones that should be considered for the purposes of this problem. Any other special rules or moves present in a real game of chess, such as <i>castling</i>, are <b>not</b> considered valid in the context of this problem. For the chessboard layout in each data set, you may assume it will contain exactly one white king and exactly one black king, although either side may have any number of rooks, bishops, queens, and knights.</p></div><h2>Input</h2><div class=content><p>Input to this problem will begin with a line containing a single integer <i>D</i> (1 &le; <i>D</i> &le; 100) indicating the number of data sets. Each data set consists of the following components:</p>
+<ul>
+    <li>A line containing a single lower case &quot;<tt>w</tt>&quot; or upper case &quot;<tt>B</tt>&quot; indicating which side is to be analyzed for a check or checkmate (and which side is about to move on this turn), with &quot;<tt>w</tt>&quot; specifying the white side and &quot;<tt>B</tt>&quot; specifying black.</li>
+    <li>A series of eight lines, with each line containing eight characters. These lines specify the state of the chessboard to be analyzed in this data set. The characters used on these eight lines are:
+    <ul>
+        <li>A &quot;<tt>.</tt>&quot; (period) to indicate an empty square</li>
+        <li>The lower case letters &quot;<tt>r</tt>&quot;, &quot;<tt>b</tt>&quot;, &quot;<tt>q</tt>&quot;, &quot;<tt>n</tt>&quot;, and &quot;<tt>k</tt>&quot;, to respectively indicate the <b>white</b> side's rook, bishop, queen, knight, and king pieces</li>
+        <li>The capital letters &quot;<tt>R</tt>&quot;, &quot;<tt>B</tt>&quot;, &quot;<tt>Q</tt>&quot;, &quot;<tt>N</tt>&quot;, and &quot;<tt>K</tt>&quot;, to indicate the same respective pieces but for the <b>black</b> side</li>
+    </ul>
+    </li>
+</ul>
+<p></p></div><h2>Output</h2><div class=content><p>For each data set in the input, print a single line.  Begin the line with either &quot;<tt>WHITE IS </tt>&quot; or &quot;<tt>BLACK IS </tt>&quot; depending on which side was analyzed in the data set. Finally, complete the line with &quot;<tt>CHECKED</tt>&quot; or &quot;<tt>CHECKMATED</tt>&quot; if either is detected, or complete the line with &quot;<tt>SAFE</tt>&quot; if neither condition holds.  If both check and checkmate are detected, print &quot;<tt>CHECKMATED</tt>&quot;.</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>3
+w
+........
+........
+........
+.Qk.K...
+........
+........
+........
+........
+B
+........
+........
+........
+.qK.k...
+........
+........
+........
+.r......
+w
+........
+..k.....
+........
+.Q..K...
+........
+........
+........
+........
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>WHITE IS CHECKED
+BLACK IS CHECKMATED
+WHITE IS SAFE
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=2008'>2008</a>&nbsp;<a href='problemset.php?search=ACM'>ACM</a>&nbsp;<a href='problemset.php?search=ICPC'>ICPC</a>&nbsp;<a href='problemset.php?search=South'>South</a>&nbsp;<a href='problemset.php?search=Central'>Central</a>&nbsp;<a href='problemset.php?search=USA'>USA</a>&nbsp;<a href='problemset.php?search=Regional'>Regional</a>&nbsp;<a href='problemset.php?search=Programming'>Programming</a>&nbsp;<a href='problemset.php?search=Contest'>Contest</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=22238'>Submit</a>][<a href='problemstatus.php?id=22238'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=22238");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

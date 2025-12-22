@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1201804412" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 25196 --卡农</title><center><h2>25196: 卡农</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>83&nbsp;&nbsp;<span class=green>Solved: </span>23<br>[<a href='submitpage.php?id=25196'>Submit</a>][<a href='problemstatus.php?id=25196'>Status</a>][<a href='bbs.php?pid=25196'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=25196'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=25196");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=25196'>下载测试数据1元</a>][27880kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content>&nbsp;<span style="font-family:宋体;">在音乐中，卡农是一种对位的谱曲法</span> <span style="font-family:宋体;">，它把同一个旋律</span> <span style="font-family:宋体;">以一定的间隔多次重复</span> <span style="font-family:宋体;">。在卡农中，最先出现的旋律是导句</span> <span style="font-family:宋体;">，以后重复的是答句</span> <span style="font-family:宋体;">。答句必须完全复制导句的节奏和音程，或者其他的一些东西</span> <span style="font-family:宋体;">。所有声音都一模一样的重复的卡农</span> <span style="font-family:宋体;">，叫做轮唱</span> <span style="font-family:宋体;">。《划船</span> <span style="font-family:宋体;">曲》《两只老虎》都是例子</span> <span style="font-family:宋体;">。</span><span> </span> 
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;">今天我们最熟悉</span> <span style="font-family:宋体;">的卡农作</span> <span style="font-family:宋体;">品是</span> <span style="font-family:宋体;">帕赫贝</span> <span style="font-family:宋体;">尔的《</span><span>D</span><span style="font-family:宋体;">大调卡农》</span> <span style="font-family:宋体;">，也称作《帕赫贝尔的卡农》。其曲谱例子如图</span><span>(1)</span><span style="font-family:宋体;">所示</span> <span style="font-family:宋体;">。</span><span> </span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<img alt="" src="/attached/image/20141008/20141008140631_34951.jpg" />
+</p>
+&nbsp;
+<p class="MsoNormal">
+	<span>Figure 1: </span><span style="font-family:宋体;">帕赫贝尔的卡农。在曲谱中，第一行（</span><span>Violin 1</span><span style="font-family:宋体;">）是导句，我们称它为首声部；第二行（</span><span>Violin 2</span><span style="font-family:宋体;">）是答句，我们称它为二声部；第三行（</span><span>Violin 3</span><span style="font-family:宋体;">）是另一个答句，我们称它为三声部</span> <span style="font-family:宋体;">。三把小提琴形成三个声部间隔八拍先后加入。小提琴全部拉奏完全相同旋律，音乐悦耳动听。</span><span></span>
+</p>
+<p class="MsoNormal">
+	<span><span>&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;">柳德米拉也想谱一曲优美的卡农，在聚会的时候不停地演奏。她写了一个旋律，然后尝试把它变成卡农。柳德米拉写的曲子很简单，都是由四分音符构成的（这样每个音的持续的时间都一样，另外一个四分音符的音长就是一拍）。由于她不会转调等比较复杂的技法，她就希望她的音乐的导句和若干答句一模一样，都是她谱写的旋律的不断重复，只不过每个答句形成的声部比前一个进入的声部</span> <span style="font-family:宋体;">（导句或答句）晚若干拍开始。当然，每个答句都要在导句奏完第一遍旋律之前开始。</span><span></span>
+</p>
+<p class="MsoNormal">
+	<span><span>&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;">柳德米拉发现，虽然她写的旋律很动听，但是将它随意变成一个卡农后，就不是很优美了。她苦思冥想，觉得是这样一个因素作怪</span> <span style="font-family:宋体;">。</span><span> </span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;">如果某个时刻，有两个及以上的音在响，有些音的组合很和谐，而有些就不和谐。柳德米拉发现，如果两个声部，在相同时刻演奏的音高的差，全都是</span><span>a</span><span style="font-family:宋体;">的倍数，或者全都是</span><span>b</span><span style="font-family:宋体;">的倍数，那么它们就是优美组合。</span><span></span>
+</p>
+<span style="font-family:'Times New Roman','serif';font-size:10.5pt;"><span>&nbsp;</span></span><span style="font-family:宋体;font-size:10.5pt;">进一步的研究表明，多个声部一起演奏不会显得难听，当且仅当任何两个声部</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;"> </span><span style="font-family:宋体;font-size:10.5pt;">，它们都是优美组合。柳德米拉做了一些实验，得到了神奇的数字</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">a</span><span style="font-family:宋体;font-size:10.5pt;">和</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">b</span><span style="font-family:宋体;font-size:10.5pt;">。现在就请你为她得出她的卡农吧</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;"> </span><span style="font-family:宋体;font-size:10.5pt;">！</span> 
+<p style="text-indent:21pt;" class="MsoNormal">
+	&nbsp;
+</p>
+<span></span></div><h2>Input</h2><div class=content><span style="font-family:宋体;">第一行是测试数据组数</span><span>t</span><span style="font-family:宋体;">。对于每组数据，第一行是整数</span><span>n,a,b</span><span style="font-family:宋体;">，代表柳德米拉谱写的旋律的音符数，神奇的数字。接下来一行</span><span>n</span><span style="font-family:宋体;">个整数</span><span>h</span><span style="font-family:宋体;">，表示旋律中第</span><span>i</span><span style="font-family:宋体;">个音符的音高。</span><span></span></div><h2>Output</h2><div class=content>&nbsp;<span style="font-family:宋体;">对每组测试数据，输出一行，为她谱出的卡农最多有几个声部。如果不能谱出卡农，输</span><span> </span><span style="font-family:宋体;font-size:10.5pt;">出</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">0</span><span style="font-family:宋体;font-size:10.5pt;">。</span></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>2
+3 1 1
+1 2 3
+5 2 6
+1 4 7 4 1
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>3
+0
+</span></pre><h2>HINT</h2>
+<div class=content><p>&nbsp;<br />
+<p class="MsoNormal"><br />
+	<span style="font-family:宋体;">【样例解释】</span><span></span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span><span>&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;">在第一组数据中，第一个答句在导句演奏完</span><span>1</span><span style="font-family:宋体;">拍后开始，第二个答句在导句演奏完</span><span>2</span><span style="font-family:宋体;">拍后开始。可以发现，对于任意两个声部，它们同时演奏的时候，音高差都是</span><span>1</span><span style="font-family:宋体;">的倍数。又因为每个答句都要在导句奏完第一遍旋律之前开始，所以</span><span>3</span><span style="font-family:宋体;">就是最大值。</span><span> </span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-family:宋体;">谱出的曲子表示如下：</span><span> </span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-family:宋体;">首声部</span><span><span>&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;">（导句）：</span><span><span>&nbsp;&nbsp;&nbsp; </span>1 2 3 1 2 3. . . </span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-family:宋体;">二声部</span><span><span>&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;">（答句）：</span><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1 2 3 1 2 3. . . </span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-family:宋体;">三声部</span><span><span>&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;">（答句）：</span><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1 2 3 1 2 3. . . </span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-family:宋体;">【数据范围及约定】</span><span></span><br />
+</p><br />
+<p style="text-indent:21pt;" class="MsoNormal"><br />
+	<span style="font-family:宋体;">对于</span><span>20%</span><span style="font-family:宋体;">的数据，</span><span>n&lt;=16</span><br />
+</p><br />
+<p style="text-indent:21pt;" class="MsoNormal"><br />
+	<span style="font-family:宋体;">对于</span><span>40%</span><span style="font-family:宋体;">的数据，</span><span>n&lt;=100</span><br />
+</p><br />
+<p style="text-indent:21pt;" class="MsoNormal"><br />
+	<span style="font-family:宋体;">对于</span><span>60%</span><span style="font-family:宋体;">的数据，</span><span>n&lt;=1000</span><br />
+</p><br />
+<p style="text-indent:21pt;" class="MsoNormal"><br />
+	<span style="font-family:宋体;">对于</span><span>80%</span><span style="font-family:宋体;">的数据，</span><span>n&lt;=10^5</span><br />
+</p><br />
+<p style="text-indent:21pt;" class="MsoNormal"><br />
+	<span style="font-family:宋体;">有</span><span>50%</span><span style="font-family:宋体;">的数据，</span><span>a=b</span><br />
+</p><br />
+<span style="font-family:宋体;font-size:10.5pt;">对于</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">100%</span><span style="font-family:宋体;font-size:10.5pt;">的数据，</span><span style="font-family:'Times New Roman','serif';font-size:10.5pt;">1&lt;=n&lt;=10^6,1&lt;=a,b&lt;=10^9,0&lt;=h[i]&lt;=10^9,0&lt;=t&lt;=3</span></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%95%B0%E8%AE%BA'>数论</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=25196'>Submit</a>][<a href='problemstatus.php?id=25196'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=25196");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

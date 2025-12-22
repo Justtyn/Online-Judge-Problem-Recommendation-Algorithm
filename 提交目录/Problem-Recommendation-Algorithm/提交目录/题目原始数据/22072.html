@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?225257051" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 22072 --SF</title><center><h2>22072: SF</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>32 MB<br><span class=green>Submit: </span>3&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='submitpage.php?id=22072'>Submit</a>][<a href='problemstatus.php?id=22072'>Status</a>][<a href='bbs.php?pid=22072'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=22072'>下载FPS3元</a>][<a onclick='$(this).load("cart.php?add=22072");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=22072'>下载测试数据3元</a>][20kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal">
+	<span style="font-family:宋体;">现有一条单向公路，在路的一侧种有</span><span>N</span><span style="font-family:宋体;">（</span><span>2&lt;=N&lt;=25</span><span style="font-family:宋体;">）颗特殊花种（</span><span>SF</span><span style="font-family:宋体;">），由于天气原因，</span><span><span>Tom</span></span><span></span><span></span><span style="font-family:宋体;">只有</span><span>h</span><span style="font-family:宋体;">小时</span><span>(1&lt;=h&lt;=16)</span><span style="font-family:宋体;">的时间收集</span><span>SF</span><span style="font-family:宋体;">的种子，这是因为</span><span>SF</span><span style="font-family:宋体;">种子被雨淋后将失去研究价值。现在，</span><span>Tom</span><span style="font-family:宋体;">位于第</span><span>1</span><span style="font-family:宋体;">株</span><span>SF</span><span style="font-family:宋体;">的位置，他可以采摘任意一株</span><span>SF</span><span style="font-family:宋体;">的种子。从第</span><span>i</span><span style="font-family:宋体;">株</span><span>SF</span><span style="font-family:宋体;">到达第</span><span>i+1</span><span style="font-family:宋体;">株的位置，需要花费的时间单元个数为</span><span>t</span><span style="font-family:宋体;">（此处时间单元为</span><span>5</span><span style="font-family:宋体;">分钟），即表示花费时间</span><span>Ti=5*t</span><span style="font-family:宋体;">（其中</span><span>i=0..n-1,0&lt;Ti&lt;=960,</span><span style="font-family:宋体;">如</span><span>t=4</span><span style="font-family:宋体;">，</span><span>T5=t*5=20,</span><span style="font-family:宋体;">表示从第</span><span>4</span><span style="font-family:宋体;">株</span><span>SF</span><span style="font-family:宋体;">到达第</span><span>5</span><span style="font-family:宋体;">株</span><span>SF</span><span style="font-family:宋体;">需要花费</span><span>20</span><span style="font-family:宋体;">分钟）。</span><span>Tom</span><span style="font-family:宋体;">可有选择地收集途径过程</span><span>SF</span><span style="font-family:宋体;">的种子，但由于收集难度，每</span><span>5</span><span style="font-family:宋体;">分钟，他只能收集</span><span>Fi</span><span style="font-family:宋体;">颗</span><span>SF</span><span style="font-family:宋体;">的种子（很苦哈）。天气越来较差，使得</span><span>Tom</span><span style="font-family:宋体;">在收集</span><span>SF</span><span style="font-family:宋体;">的种子过程中会掉落部分种子（更苦了，收集效率还下降），假设</span><span>Tom</span><span style="font-family:宋体;">每</span><span>1</span><span style="font-family:宋体;">个时间单元掉落个数增加</span><span>Di</span><span style="font-family:宋体;">（掉落的没有收集价值，如果某</span><span>SF</span><span style="font-family:宋体;">的</span><span>Fi</span><span style="font-family:宋体;">小于等于</span><span>Di,5</span><span style="font-family:宋体;">分钟后，每一时间单元可收集种子个数将为</span><span>0</span><span style="font-family:宋体;">）。</span> 
+</p>
+<p class="MsoNormal">
+	<span>Tom</span><span style="font-family:宋体;">为了使损失最小，尽量多地收集种子，</span><span>Tom</span><span style="font-family:宋体;">需要进行简单的规划。现在请你帮他设计一程序，求取在</span><span>SF</span><span style="font-family:宋体;">种子收集数最大的前提下，</span><span>Tom</span><span style="font-family:宋体;">在每个</span><span>SF</span><span style="font-family:宋体;">停留的时间。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;">注意：在每个</span><span>SF</span><span style="font-family:宋体;">停留的时间，均为</span><span>5</span><span style="font-family:宋体;">的倍数。SF种子满足方案要求，即可认为种子数目极多。</span> 
+</p></div><h2>Input</h2><div class=content><p class="MsoNormal">
+	<span style="font-family:宋体;">每组数据第</span><span>1</span><span style="font-family:宋体;">行为</span><span>N</span><span style="font-family:宋体;">，</span><span>h</span><span style="font-family:宋体;">，之后的</span><span>3</span><span style="font-family:宋体;">行为</span><span>i</span><span style="font-family:宋体;">处收集</span><span>SF</span><span style="font-family:宋体;">种子的详细情况。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;">第</span><span>(1</span><span style="font-family:宋体;">）行为每一个时间单元</span><span>,</span><span style="font-family:宋体;">可收集第</span><span>i</span><span style="font-family:宋体;">株</span><span>SF</span><span style="font-family:宋体;">种子数</span><span>Fi</span><span style="font-family:宋体;">（</span><span>i=1..N</span><span style="font-family:宋体;">）</span><span>,</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;">第</span><span>(2) </span><span style="font-family:宋体;">行为</span><span>Tom</span><span style="font-family:宋体;">在收集第</span><span>i</span><span style="font-family:宋体;">株</span><span>SF</span><span style="font-family:宋体;">种子的过程中，每一个时间单元掉落SF种子个数的增加量</span><span>Di</span><span style="font-family:宋体;">（</span><span>i=1..N</span><span style="font-family:宋体;">）</span><span>,</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;">第</span><span>(3) </span><span style="font-family:宋体;">行为</span><span>Tom</span><span style="font-family:宋体;">从第</span><span>i</span><span style="font-family:宋体;">株</span><span>SF</span><span style="font-family:宋体;">走到第</span><span>i+1</span><span style="font-family:宋体;">株所需要花费的时间（</span><span>i=1..N-1</span><span style="font-family:宋体;">）。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"> </span>
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;">数据的输入以</span><span>0</span><span style="font-family:宋体;">结束。</span> 
+</p>
+<br />
+<p>
+	<br />
+</p></div><h2>Output</h2><div class=content><p class="MsoNormal">
+	<span style="font-family:宋体;">每组数据输出</span><span>2</span><span style="font-family:宋体;">行，</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;">第</span><span>1</span><span style="font-family:宋体;">行输出在</span><span>Tom</span><span style="font-family:宋体;">需在每个</span><span>SF</span><span style="font-family:宋体;">停留的时间，</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;">第</span><span>2</span><span style="font-family:宋体;">行输出</span><span>Tom</span><span style="font-family:宋体;">可收集到最大种子数。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;">如果方案存在，尽可能地多的停留在第</span><span>1</span><span style="font-family:宋体;">株</span><span>SF</span><span style="font-family:宋体;">处</span><span>(</span><span style="font-family:宋体;">人懒哈</span><span>)</span><span style="font-family:宋体;">，如果还有方案与其平局，需尽可能地停留在第</span><span>2</span><span style="font-family:宋体;">株</span><span>SF</span><span style="font-family:宋体;">处，依次类推。</span> 
+</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>2 1
+10 1
+2 5
+2
+
+4 4
+10 15 20 17
+0 3 4 3
+1 2 3
+
+4 4
+10 15 50 30
+0 3 4 3
+1 2 3
+
+0
+
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>45, 5
+Number of seeds collected: 31
+240, 0, 0, 0
+Number of seeds collected: 480
+115, 10, 50, 35
+Number of seeds collected: 724
+
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E8%BF%9B%E9%98%B6%E9%A2%98-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95'>进阶题-贪心算法</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=22072'>Submit</a>][<a href='problemstatus.php?id=22072'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=22072");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

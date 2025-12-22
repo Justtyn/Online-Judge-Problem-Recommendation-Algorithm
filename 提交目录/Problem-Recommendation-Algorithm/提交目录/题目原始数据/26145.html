@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1095572659" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 26145 --斯诺克</title><center><h2>26145: 斯诺克</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>10&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='submitpage.php?id=26145'>Submit</a>][<a href='problemstatus.php?id=26145'>Status</a>][<a href='bbs.php?pid=26145'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=26145'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=26145");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=26145'>下载测试数据1元</a>][164kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="p0" style="text-align:left;">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';">【题目描述】&nbsp;</span><span style="color:#000000;font-size:16.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">镇海中学开设了很多校本选修课程，有体育类、音乐类、美术类、无线电测向、航空航海航天模型制作等，力争使每位学生高中毕业后，能学到一门拿得出手的</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">兴趣爱好，为将来的终身发展打下基础</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">。</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">在</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">体育类的校本选修课程中，有一门课程是斯诺克台球。</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">斯诺克台球比赛中有<span>21</span><span>个球</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">，其中有</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">15<span>个红球</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">，</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">6<span>个彩球（黄、绿、棕、蓝、粉、黑）。甲乙二人轮流打球。打一个红球得</span><span>1</span><span>分，打一个彩球</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">的得分如下：</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:60.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">黄</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">球：<span>2</span><span>分；&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">绿</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">球：<span>3</span><span>分；&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">棕</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">球：<span>4</span><span>分；</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:60.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">蓝</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">球：<span>5</span><span>分；&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">粉</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">球：<span>6</span><span>分；&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">黑</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">球：<span>7</span><span>分；</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">最后以得分高者为胜。</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">简化后的打球规则如下：</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:36.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">1<span>．如果有红球，第</span></span><span style="color:#FF0000;font-weight:bold;font-size:12.0000pt;font-family:'宋体';">奇数次</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">必须打红球，打过的红球从桌面上拿走；</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:36.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">2<span>．每打一个红球后，可以任意选一个彩球打，打红球后接着打的彩球不从桌面上拿走；</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:36.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">3.&nbsp;<span>如果桌面上已经没有红球可打了，那么按照分值从小到大的次序打彩球，这时候每打一个彩球都从桌面上拿走。</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">打球时犯规的判罚如下：</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">&nbsp;&nbsp;1.&nbsp;<span>没有打中球，给对方加</span><span>4</span><span>分；</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">&nbsp;&nbsp;2<span>．没有按照打球规则打该打的球，即打中了错误的球时：</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:42.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">（<span>1</span><span>）如果这个错误的球的分值大于</span><span>4</span><span>，那么给对方加等于这个球的分值；</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:42.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">（<span>2</span><span>）如果这个错误的球的分值不大于</span><span>4</span><span>，那么给对方加</span><span>4</span><span>分；</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:42.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">打中的错误球不从桌面上拿走。</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">请统计某局比赛进行到现在为止的比分。&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p0" style="text-align:left;">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';">【输入】&nbsp;</span><span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">输入文件<span>snooker.in</span><span>的第一行有</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">二</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">个整数<span>n</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">和<span>m</span><span>，表示甲打了</span><span>n</span><span>个球，乙打了</span><span>m</span><span>个球</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">。</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">n<span>和</span><span>m</span><span>之间以一个空格分隔。</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">第二行，有<span>n</span><span>个以空格分隔的整数，表示甲</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">的<span>n</span><span>次连续打</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">球情况。</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">第</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">三</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">行，有</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">m</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">个以空格分隔的整数，表示</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">乙的<span>m</span><span>次连续打</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">球情况。</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">第二行和第三行中：</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">（</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">1</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">）<span>1</span><span>至</span><span>7</span><span>的整数表示打</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">了</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">相应分值的球；</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">（</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">2</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">）</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">最后一个数字是</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">0</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">,</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">表示没有打中球</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">犯规，<span>0</span><span>只会出现在这二行的最后一个数字处</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">；</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">（</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">3</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">）</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">打了错误球的犯规也只会出现在这二行最后一个数字处</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">；</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">输入数据保证</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">是</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">正确，</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">不会出现打到桌面上不存在的球的情况，数据</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">不必检验。</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p0" style="text-align:left;">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';">【输出】&nbsp;</span><span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">输出文件<span>snooker.out</span><span>中</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">只</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">有一行，该行有二个整数<span>(</span><span>互相之间以一个空格分隔</span><span>)</span><span>，表示比赛进行到现在为止甲乙二人的得分（先打的甲在前）。</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';">【样例输入<span>1</span><span>】&nbsp;</span></span><span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">4&nbsp;3</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">1&nbsp;7&nbsp;1&nbsp;6&nbsp;</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">1&nbsp;7&nbsp;1</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';">【样例输出<span>1</span><span>】&nbsp;</span></span><span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">15&nbsp;9</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';">【样例说明<span>1</span><span>】&nbsp;</span></span><span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">甲依次打了红球、黑球、红球、粉球，甲得<span>15</span><span>分（</span><span>1+7+1+6</span><span>）；</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">乙依次打了红球、黑球、红球，乙得<span>9</span><span>分（</span><span>1+7+1</span><span>）；</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'宋体';">&nbsp;</span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';">【样例输入<span>2</span><span>】&nbsp;</span></span><span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p18">
+	<span style="font-size:12.0000pt;font-family:'宋体';">11&nbsp;24</span><span style="font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p18">
+	<span style="font-size:12.0000pt;font-family:'Verdana';">1&nbsp;7&nbsp;1&nbsp;7&nbsp;1&nbsp;7&nbsp;1&nbsp;7&nbsp;1&nbsp;7&nbsp;1&nbsp;</span><span style="font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p18">
+	<span style="font-size:12.0000pt;font-family:'Verdana';">1&nbsp;7&nbsp;1&nbsp;7&nbsp;1&nbsp;7&nbsp;1&nbsp;7&nbsp;1&nbsp;7&nbsp;1&nbsp;7&nbsp;1&nbsp;7&nbsp;1&nbsp;7&nbsp;1&nbsp;7&nbsp;2&nbsp;3&nbsp;4&nbsp;5&nbsp;6&nbsp;7</span><span style="font-size:12.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';">【样例输出<span>2</span><span>】&nbsp;</span></span><span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">41</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">&nbsp;</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">99</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';">【样例说明<span>2</span><span>】&nbsp;</span></span><span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">甲每</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">打</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">一个红球后打一个黑球</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">（共打了<span>5</span><span>次），最后打的是红球，</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">得<span>4</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">1</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">分<span>:</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:72.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">5</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">*(1+7)+</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">1</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">=4</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">1</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">；</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">；</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">乙</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">每</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">打</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">一个红球后打一个黑球</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">，打完所有红球</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">后</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">，按规则</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">依次将黄、绿、棕、蓝、粉、黑球全部打进，得</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">99</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">分<span>:</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">9</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">*(1+7)+2+3+4+5+6+7=</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">99</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">；</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'宋体';">&nbsp;</span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';">【样例输入<span>3</span><span>】&nbsp;</span></span><span style="color:#000000;font-size:16.0000pt;font-family:'宋体';">&nbsp;</span><span style="color:#FF0000;font-weight:bold;font-size:16.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">4&nbsp;4</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">&nbsp;</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">1&nbsp;7&nbsp;1&nbsp;1</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">1&nbsp;4&nbsp;1&nbsp;0</span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';">【样例输出<span>3</span><span>】&nbsp;</span></span><span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">13&nbsp;1</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';">0</span><span style="color:#000000;font-size:12.0000pt;font-family:'宋体';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';">【样例说明<span>3</span><span>】&nbsp;</span></span><span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">甲依次打进了红球、黑球、红球，然后应该打红球以外的彩球，但误中红球，甲得<span>9</span><span>分（</span><span>1+7+1</span><span>），甲犯规乙得</span><span>4</span><span>分；</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';">乙依次打进了红球、棕球、红球，然后未打中任何球，乙得<span>6</span><span>分（</span><span>1+4+1</span><span>），乙犯规甲得</span><span>4</span><span>分；</span></span><span style="color:#000000;font-size:12.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p18">
+	<span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';">【数据说明】</span><span style="color:#000000;font-size:16.0000pt;font-family:'Verdana';"></span>
+</p>
+<p class="p0" style="text-indent:24.0000pt;text-align:left;">
+	<span style="color:#000000;font-weight:bold;font-size:12.0000pt;font-family:'Verdana';">80%<span>的数据，</span></span><span style="color:#000000;font-weight:bold;font-size:12.0000pt;font-family:'宋体';">每次</span><span style="color:#0000FF;font-weight:bold;font-size:12.0000pt;font-family:'宋体';">总是打中球</span><span style="color:#000000;font-weight:bold;font-size:12.0000pt;font-family:'宋体';">的，并且每次打中的球</span><span style="color:#0000FF;font-weight:bold;font-size:12.0000pt;font-family:'宋体';">总是正确的</span><span style="color:#000000;font-weight:bold;font-size:12.0000pt;font-family:'宋体';">，</span><span style="color:#000000;font-weight:bold;font-size:12.0000pt;font-family:'Verdana';">没有犯规情况。</span><span style="color:#000000;font-weight:bold;font-size:12.0000pt;font-family:'Verdana';"></span>
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%AE%81%E6%B3%A2%E7%AB%9E%E8%B5%9B-2011'>宁波竞赛-2011</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=26145'>Submit</a>][<a href='problemstatus.php?id=26145'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=26145");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

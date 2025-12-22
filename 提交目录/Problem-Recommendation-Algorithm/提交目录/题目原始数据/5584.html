@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1288059137" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5584 --[动归基础]飙车</title><center><h2>5584: [动归基础]飙车</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>19&nbsp;&nbsp;<span class=green>Solved: </span>8<br>[<a href='submitpage.php?id=5584'>Submit</a>][<a href='problemstatus.php?id=5584'>Status</a>][<a href='bbs.php?pid=5584'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5584'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5584");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5584'>下载测试数据1元</a>][84kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<b><span style="font-size:18px;">飙车</span></b><b><span style="font-size:18px;">[nfs.pas/c/cpp]</span></b>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">[</span><span style="font-size:18px;">题目描述</span><span style="font-size:18px;">]</span>
+</p>
+<p class="MsoNormal" style="text-indent:15.75pt;">
+	<span style="font-size:18px;">已知公路总长</span><span style="font-size:18px;">L</span><span style="font-size:18px;">米</span><span style="font-size:18px;">,</span><span style="font-size:18px;">一共有</span><span style="font-size:18px;">K</span><span style="font-size:18px;">个赛道</span><span style="font-size:18px;">,</span><span style="font-size:18px;">你的赛车总是和公路上其他的普通的车走相反的方向</span><span style="font-size:18px;">,</span><span style="font-size:18px;">并且所有的车每秒沿赛道行驶</span><span style="font-size:18px;">1m(</span><b><span style="font-size:18px;">具体看图</span></b><span style="font-size:18px;">)</span><span style="font-size:18px;">问题是</span><span style="font-size:18px;">:</span><span style="font-size:18px;">跑到终点最少撞多少次车</span><span style="font-size:18px;">?</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;</span>
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	<span style="font-size:18px;">我们简化一下模型</span><span style="font-size:18px;">,</span><span style="font-size:18px;">画一个</span><span style="font-size:18px;">(L+1)*K</span><span style="font-size:18px;">的网格</span><span style="font-size:18px;">,</span><span style="font-size:18px;">设所有的车都是点</span><span style="font-size:18px;">,</span><span style="font-size:18px;">并且每秒末都会出现在这个网格的某个顶点上</span><span style="font-size:18px;">.</span><span style="font-size:18px;">公路上其他的车都以固定的</span><span style="font-size:18px;">1m/s</span><span style="font-size:18px;">的速度自上而下行驶</span><span style="font-size:18px;">,</span><span style="font-size:18px;">而你的跑车自下而上行驶</span><span style="font-size:18px;">,</span><span style="font-size:18px;">并且每秒可以从一个点行驶到它上方</span><span style="font-size:18px;">\</span><span style="font-size:18px;">左上方</span><span style="font-size:18px;">\</span><span style="font-size:18px;">右上方的点</span><span style="font-size:18px;">(</span><span style="font-size:18px;">假设飘移不浪费时间</span><span style="font-size:18px;">,</span><b><span style="font-size:18px;">具体请看图</span></b><span style="font-size:18px;">).</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;</span>
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	<span style="font-size:18px;">我们假设</span><span style="font-size:18px;">,</span><span style="font-size:18px;">撞车不会使车损坏</span><span style="font-size:18px;">,</span><span style="font-size:18px;">不会使车减速</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">对于撞车的设定</span><span style="font-size:18px;">:</span><span style="font-size:18px;">当每秒末你的车和另外一辆车处在同一点上时</span><span style="font-size:18px;">,</span><span style="font-size:18px;">算撞车</span><span style="font-size:18px;">;</span><span style="font-size:18px;">你的车和另一辆车迎面开过来</span><span style="font-size:18px;">,</span><span style="font-size:18px;">算撞车</span><span style="font-size:18px;">.</span><span style="font-size:18px;">具体请看下图</span><span style="font-size:18px;">:</span>
+</p>
+<p class="MsoNormal" style="text-align:center;">
+	<img src="/attached/image/20140612/20140612092827_58698.jpg" alt="" />
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">假设一开始你可以选择任意一个赛道开始比赛</span><span style="font-size:18px;">,</span><span style="font-size:18px;">要求你写一个程序</span><span style="font-size:18px;">,</span><span style="font-size:18px;">计算到达终点至少要撞多少次车</span><span style="font-size:18px;">.</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">对于上边的例子</span><span style="font-size:18px;">,</span><span style="font-size:18px;">只要开始选择第三赛道开始跑</span><span style="font-size:18px;">,</span><span style="font-size:18px;">然后一路向北</span><span style="font-size:18px;">,</span><span style="font-size:18px;">就可以不撞车而到达终点</span><span style="font-size:18px;">.</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">[</span><span style="font-size:18px;">输入</span><span style="font-size:18px;">][nfs.in]</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">首行两个数</span><span style="font-size:18px;">,L,K,</span><span style="font-size:18px;">表示赛道距离</span><span style="font-size:18px;">,</span><span style="font-size:18px;">以及有几个赛道</span><span style="font-size:18px;">.</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">接下来</span><span style="font-size:18px;">L</span><span style="font-size:18px;">行</span><span style="font-size:18px;">,</span><span style="font-size:18px;">每行</span><span style="font-size:18px;">K</span><span style="font-size:18px;">个字符</span><span style="font-size:18px;">,</span><span style="font-size:18px;">第</span><span style="font-size:18px;">i</span><span style="font-size:18px;">行第</span><span style="font-size:18px;">j</span><span style="font-size:18px;">个字符表示公路距终点距离为</span><span style="font-size:18px;">i-1</span><span style="font-size:18px;">的第</span><span style="font-size:18px;">j</span><span style="font-size:18px;">个赛道的初始状态</span><span style="font-size:18px;">:0</span><span style="font-size:18px;">表示该点没有车</span><span style="font-size:18px;">,1</span><span style="font-size:18px;">表示该点有车</span><span style="font-size:18px;">.</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">铭记一点</span><span style="font-size:18px;">:</span><span style="font-size:18px;">初始时你的车在第</span><span style="font-size:18px;">L+1</span><span style="font-size:18px;">行</span><span style="font-size:18px;">,</span><span style="font-size:18px;">你可以指定一个第</span><span style="font-size:18px;">L+1</span><span style="font-size:18px;">行的位置为你的车的初始位置</span><span style="font-size:18px;">,</span><span style="font-size:18px;">而第</span><span style="font-size:18px;">L+1</span><span style="font-size:18px;">行是不在输入文件里的</span><span style="font-size:18px;">.</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">[</span><span style="font-size:18px;">输出</span><span style="font-size:18px;">][nfs.out]</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">一个数</span><span style="font-size:18px;">ans,</span><span style="font-size:18px;">表示最少撞车次数</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">[</span><span style="font-size:18px;">样例输入</span><span style="font-size:18px;">1]</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">4 4</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1000</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">0100</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">0001</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">0000</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">[</span><span style="font-size:18px;">样例输出</span><span style="font-size:18px;">1]</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">0</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">[</span><span style="font-size:18px;">样例输入</span><span style="font-size:18px;">2]</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">6 4</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1111</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1111</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1111</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">0000</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1111</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">0000</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">[</span><span style="font-size:18px;">样例输出</span><span style="font-size:18px;">2]</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">3</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">[</span><span style="font-size:18px;">对样例</span><span style="font-size:18px;">2</span><span style="font-size:18px;">的说明</span><span style="font-size:18px;">]</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:18px;">初始 第一秒
+第二秒 第三秒</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">距终点</span><span style="font-size:18px;">0m&nbsp; 1111 </span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">距终点</span><span style="font-size:18px;">1m&nbsp; 1111 &nbsp;1111</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">距终点</span><span style="font-size:18px;">2m&nbsp; 1111 &nbsp;1111
+&nbsp;1111</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">距终点</span><span style="font-size:18px;">3m&nbsp; 0000 &nbsp;1111
+&nbsp;1111 &nbsp;1P11</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">距终点</span><span style="font-size:18px;">4m&nbsp; 1111 &nbsp;0000
+&nbsp;P111 &nbsp;1111</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">距终点</span><span style="font-size:18px;">5m&nbsp; 0000 &nbsp;P111
+&nbsp;0000 &nbsp;1111</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">距终点</span><span style="font-size:18px;">6m&nbsp; C</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">C</span><span style="font-size:18px;">代表该点只有你的车</span><span style="font-size:18px;">,P</span><span style="font-size:18px;">代表该点既有你的车又有其他的车</span><span style="font-size:18px;">.</span><span style="font-size:18px;">最优方案为第一秒直走</span><span style="font-size:18px;">,</span><span style="font-size:18px;">与一辆车相撞</span><span style="font-size:18px;">,</span><span style="font-size:18px;">第二秒直走</span><span style="font-size:18px;">,</span><span style="font-size:18px;">又与一辆车相撞</span><span style="font-size:18px;">,</span><span style="font-size:18px;">第三秒斜向右走</span><span style="font-size:18px;">,</span><span style="font-size:18px;">又与一辆车相撞</span><span style="font-size:18px;">,</span><span style="font-size:18px;">总共三次</span><span style="font-size:18px;">.</span><span style="font-size:18px;">如果第三秒直走</span><span style="font-size:18px;">,</span><span style="font-size:18px;">将与两辆车相撞</span><span style="font-size:18px;">,</span><span style="font-size:18px;">那么就撞了四次</span><span style="font-size:18px;">,</span><span style="font-size:18px;">所以三次最优</span><span style="font-size:18px;">.</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">[</span><span style="font-size:18px;">样例输入</span><span style="font-size:18px;">3]</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">4 4</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1111</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1111</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1111</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1111</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">[</span><span style="font-size:18px;">样例输出</span><span style="font-size:18px;">3]</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">2</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">[</span><span style="font-size:18px;">对样例</span><span style="font-size:18px;">3</span><span style="font-size:18px;">的说明</span><span style="font-size:18px;">]</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">不停地斜着走</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">[</span><span style="font-size:18px;">数据范围</span><span style="font-size:18px;">]1&lt;=n&lt;=100,1&lt;=k&lt;=10</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;</span>
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92'>动态规划</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5584'>Submit</a>][<a href='problemstatus.php?id=5584'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5584");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

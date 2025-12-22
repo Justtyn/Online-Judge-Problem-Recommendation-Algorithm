@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?2084675962" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5330 --表达式  -训练套题T6T4</title><center><h2>5330: 表达式  -训练套题T6T4</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=5330'>Submit</a>][<a href='problemstatus.php?id=5330'>Status</a>][<a href='bbs.php?pid=5330'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5330'>下载FPS3元</a>][<a onclick='$(this).load("cart.php?add=5330");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5330'>下载测试数据3元</a>][84kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<b><span style="font-size:16px;">4. </span></b><b><span style="font-size:16px;">表达式</span></b><b> </b><b><span style="font-size:16px;">（</span></b><b><span style="font-size:16px;">express.pas/c/cpp</span></b><b><span style="font-size:16px;">）</span></b><b><span></span></b> 
+</p>
+<p class="MsoNormal">
+	【问题描述】
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	“#”这个操作符被定义为一个双目运算符，且两个运算对象为正整数，对于整数X、Y，“#”号运算定义为（X#Y）=（X各位数字和）*（Y各位数字中最大数字）+（Y各位数字中最小数字）。例：
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	（9#30）=9*3+0=27
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	（30#9）=3*9+9=36
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	关于表达式，我们约定或是一个正整数或是（表达式#表达式），一个表达式中只有相同的正整数。以下表达式是合法的表达式：
+</p>
+<p class="MsoNormal" style="text-indent:26.25pt;">
+	A
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	（A#A）
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	（（A#A）#A）
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	（A#（A#A）#（A#A）#A）
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	对于给定的十进制正数A和表达式的值K，计算具有K值的表达式中“#”的个数。具有K值的表达式可能有许多，并且具有不同的“#”个数，只需输出最小个数。
+</p>
+<p class="MsoNormal">
+	【输入】
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	本题有多组数据。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	输入文件第一行一个正整数T表示数据组数，接下来依次给出每组数据。
+</p>
+<p class="MsoNormal">
+	每组数据包含两行，第一行只包含一个正整数描述A，第二行只包含一个非负整数描述K。
+</p>
+<p class="MsoNormal">
+	【输出】
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	输出文件包含T行，每行一个非负整数表示相应数据组的答案，若无解这一行就输出-1。
+</p>
+<p class="MsoNormal">
+	【输入输出样例】<span></span> 
+</p>
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border:none;">
+	<tbody>
+		<tr>
+			<td width="284" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">express.in</span> 
+				</p>
+			</td>
+			<td width="284" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">express.out</span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="284" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span>3</span> 
+				</p>
+				<p class="MsoNormal">
+					<span>2</span> 
+				</p>
+				<p class="MsoNormal">
+					<span>6</span> 
+				</p>
+				<p class="MsoNormal">
+					<span>3</span> 
+				</p>
+				<p class="MsoNormal">
+					<span>7</span> 
+				</p>
+				<p class="MsoNormal">
+					<span>1</span> 
+				</p>
+				<p class="MsoNormal">
+					<span>87</span><span style="font-size:10.5pt;font-family:&quot;"></span> 
+				</p>
+			</td>
+			<td width="284" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">1</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">2</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">16</span> 
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<pre><b><span style="font-size:9.0pt;">&nbsp;</span></b></pre>
+<p class="MsoNormal">
+	【数据范围】
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	T ≤ 100
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	A ≤ 2 000 000 000
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	K ≤ 2 000 000 000
+</p>
+<pre><b><span style="font-size:9.0pt;">&nbsp;</span></b></pre></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><h2><br />
+	表达式<br />
+</h2><br />
+<p class="MsoNormal"><br />
+	【题目大意】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>定义双目运算符<span>#</span>：（<span>X # Y</span>）<span>=</span>（<span>X</span>各位数字和）<span>*</span>（<span>Y</span>各位数字中最大数字）<span>+</span>（<span>Y</span>各位数字中最小数字）。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>求一个只包含数字<span>A</span>和运算符<span>#</span>的表达式，使得运算结果为<span>K</span>，并且使用的<span>#</span>个数最少。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>保证数据组数不大于<span>100</span>，<span>A </span>≤<span> 2 000 000 000</span>、<span>K </span>≤<span> 2 000 000 000</span>。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	【算法分析】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>这道题目最容易想到的思路就是广搜，但是题目给出的数据范围非常大，因此，压缩冗余、分析状态性质是本题的关键。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	状态数：<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>根据题设，（<span>X # Y</span>）<span>=</span>（<span>X</span>各位数字和）<span>*</span>（<span>Y</span>各位数字中最大数字）<span>+</span>（<span>Y</span>各位数字中最小数字），注意到：<br />
+</p><br />
+<p class="a" style="margin-left:21.0pt;text-indent:-21.0pt;"><br />
+	Ø&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+（<span>X</span>各位数字和）<span>&lt;= 1 + 9 * 9 = 82</span> <br />
+</p><br />
+<p class="a" style="margin-left:21.0pt;text-indent:-21.0pt;"><br />
+	Ø&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+（<span>Y</span>各位数字中最大数字）<span>&lt;= 9</span> <br />
+</p><br />
+<p class="a" style="margin-left:21.0pt;text-indent:-21.0pt;"><br />
+	Ø&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+（<span>Y</span>各位数字中最小数字）<span>&lt;= 9</span> <br />
+</p><br />
+<p class="MsoNormal" style="text-indent:21.0pt;"><br />
+	所以<span>X # Y</span>的结果一定是一个<span>0 ~ 82 * 9 + 9 =<br />
+747</span>以内的整数。认识到这一点，在这个范围内进行广度优先搜索，已经可以解决大部分数据了。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	优化冗余：<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>考虑<span>X # Y</span>的定义，对<span>X</span>而言，只有所有数字的<b>和</b>有意义；对于<span>Y</span>而言，只有<b>最大的数字</b>和<b>最小的数字</b>有意义。那么，我们只需要保存这些重要的信息就可以了。<br />
+</p><br />
+<p class="a" style="margin-left:21.0pt;text-indent:-21.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+以<span>minCostToX[SX]</span>表示最小费用，使得结果为所有数字的和为<span>SX</span>的数字<span>X</span>；<br />
+</p><br />
+<p class="a" style="margin-left:21.0pt;text-indent:-21.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+以<span>minCostToY[maxY][minY]</span>表示最小费用，使得结果为最大数字为<span>maxY</span>且最小数字为<span>minY</span>的数字<span>Y</span>；<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:21.0pt;"><br />
+	因为<span>SX &lt;= 92</span>且<span>maxY * minY<br />
+&lt;= 81</span>，状态总数下降为<span>173</span>。通过广搜可以计算出每个状态的最小费用，同时也可以计算出到<span>K</span>的最小费用。<br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%A8%A1%E6%8B%9F%E8%B5%9B-%E8%AE%AD%E7%BB%83%E5%A5%97%E9%A2%98'>模拟赛-训练套题</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5330'>Submit</a>][<a href='problemstatus.php?id=5330'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5330");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

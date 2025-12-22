@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?2130082164" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 28429 --骑士问题(knight)</title><center><h2>28429: 骑士问题(knight)</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=28429'>Submit</a>][<a href='problemstatus.php?id=28429'>Status</a>][<a href='bbs.php?pid=28429'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=28429'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=28429");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=28429'>下载测试数据1元</a>][76kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>在一个标准8&times;8的国际象棋棋盘上，棋盘中有些格子可能是有障碍物的。已知骑士的初始位置和目标位置，你的任务是计算出骑士最少需要多少步可以从初始位置到达目标位置。有障碍物的格子当然不可以到达。<br />
+标准的8&times;8的国际象棋棋盘中每一个格子可以用唯一的编号确定。行用1～8这8个数字依次表示，列用a～h这8个字母依次表示。例如图中的骑士所在位置（图中有n的格子）的编号为&ldquo;d4&rdquo;（注意d和4之间没有空格）。<br />
+<img alt="" src="http://acm.upc.edu.cn:80/admin/../data:image/png;base64,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" /><br />
+我们知道国际象棋中的骑士可以按&ldquo;L&rdquo;路线移动（一个方向走2个格子，接着垂直方向走1个格子）。因此，图中的骑士（位于d4），可以到达位置c2、b3、b5、c6、e6、f5、f3和e2（图中有&ldquo;x&rdquo;标记的格子）。此外，骑士不能移出棋盘。<br />
+骑士可以按照移动规则自由地在棋盘上没有障碍物的格子中移动，图中给出了一个骑士移动的例子。初始格子用&ldquo;n&rdquo;标记，目标格子用&ldquo;N&rdquo;标记，有障碍物的格子用&ldquo;b&rdquo;标记。一个可行的移动序列在图中用数字标记出来(al，b3，a5，c6，e5，94，h2，fl)，总共需要7步才能完成。事实上，这也就是最小的步数了。<br />
+</p></div><h2>Input</h2><div class=content><p>输入文件包括1个或多个测试数据。<br />
+每1个测试数据的第1行是一个整数b(-1&le;b&le;62)，表示棋盘中有障碍物的格子数目，当b=-1时，输入文件结束；<br />
+第2行含b个不同的有障碍物的格子编号，用空格隔开。当b=0 时，此行为空行；<br />
+第3行是骑士的初始格子和目标格子的编号，也是用空格隔开。初始格子和目标格子是不同的，且都没有障碍物。<br />
+</p></div><h2>Output</h2><div class=content><p>对于每个数据，输出1行。格式：Board n：m moves，其中n表示数据的序号（从1开始），m表示骑士所用的最小的步数。如果骑士无法到达目标格子，输出：Board n:not reachable。<br />
+</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>10
+cl dl d5 c2 c3 c4 d2 d3 d4 c5
+al fl
+0
+
+cl b3
+2
+b3 c2
+al b2
+―1
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>Board 1: 7 moves
+Board 2: l moves
+Board 3: not reachable
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search='></a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=28429'>Submit</a>][<a href='problemstatus.php?id=28429'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=28429");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

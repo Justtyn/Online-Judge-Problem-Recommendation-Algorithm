@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1321055559" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 24432 --【NOIP2013tg_Day2】华容道</title><center><h2>24432: 【NOIP2013tg_Day2】华容道</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>1&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='submitpage.php?id=24432'>Submit</a>][<a href='problemstatus.php?id=24432'>Status</a>][<a href='bbs.php?pid=24432'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=24432'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=24432");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=24432'>下载测试数据1元</a>][212kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align: center"><b>3．华容道</b></p>
+<p class="MsoNormal" align="center" style="text-align: center"><b>(puzzle.cpp/c/pas)</b></p>
+<p class="MsoNormal"><b>【问题描述】</b></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">小<span> B </span>最近迷上了华容道，可是他总是要花很长的时间才能完成一次。于是，他想到用编程来完成华容道：给定一种局面，华容道是否根本就无法完成，如果能完成，最少需要多少时间。</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">小 B 玩的华容道与经典的华容道游戏略有不同，游戏规则是这样的：</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">1.&nbsp; 在一个 n*m 棋盘上有 n*m 个格子，其中有且只有一个格子是空白的，其余 n*m-1个格子上每个格子上有一个棋子，每个棋子的大小都是 1*1 的；</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">2.&nbsp; 有些棋子是固定的，有些棋子则是可以移动的；</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">3.&nbsp; 任何与空白的格子相邻（有公共的边）的格子上的棋子都可以移动到空白格子上。游戏的目的是把某个指定位置可以活动的棋子移动到目标位置。</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">给定一个棋盘，游戏可以玩<span> q </span>次，当然，每次棋盘上固定的格子是不会变的，但是棋盘上空白的格子的初始位置、指定的可移动的棋子的初始位置和目标位置却可能不同。第<span> i </span>次玩的时候，空白的格子在第<span> EX<sub>i</sub> </span>行第<span> EY<sub>i</sub> </span>列，指定的可移动棋子的初始位置为第<span> SX<sub>i</sub> </span>行第<span> SY<sub>i</sub> </span>列，目标位置为第<span> TX<sub>i</sub> </span>行第<span> TY<sub>i</sub> </span>列。</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">假设小 B 每秒钟能进行一次移动棋子的操作，而其他操作的时间都可以忽略不计。请你告诉小<span> B </span>每一次游戏所需要的最少时间，或者告诉他不可能完成游戏。</p>
+<p class="MsoBodyText"><b>【输入】</b></p>
+<p class="MsoBodyText" style="text-align: justify; margin-left: 0cm; text-indent: 20.6pt">输入文件为 puzzle.in。</p>
+<p class="MsoBodyText" style="text-align: justify; margin-left: 0cm; text-indent: 20.8pt">第一行有 <span>3 </span>个整数，每两个整数之间用一个空格隔开，依次表示 n、<span>m</span> 和 <span>q</span>；</p>
+<p class="MsoBodyText" style="text-align: justify; margin-left: 0cm; text-indent: 20.8pt">接下来的 <span>n </span>行描述一个 n*m 的棋盘，每行有 <span>m </span>个整数，每两个整数之间用一个空格隔开，每个整数描述棋盘上一个格子的状态，<span>0</span> 表示该格子上的棋子是固定的，<span>1</span> 表示该格子上的棋子可以移动或者该格子是空白的。</p>
+<p class="MsoBodyText" style="text-align: justify; margin-left: 0cm; text-indent: 20.8pt">接下来的 <span>q </span>行，每行包含 <span>6 </span>个整数依次是 EXi、<span>EYi</span>、<span>SXi</span>、<span>SYi</span>、<span>TXi</span>、<span>TYi</span>，每两个整数之间用一个空格隔开，表示每次游戏空白格子的位置，指定棋子的初始位置和目标位置。</p>
+<p class="MsoBodyText" style="margin-left: 0cm">&nbsp;</p>
+<p class="MsoBodyText" style="margin-left: 0cm"><b>【输出】</b></p>
+<p class="MsoNormal" style="text-indent: 22pt">输出文件名为<span> puzzle.out</span>。</p>
+<p class="MsoNormal" style="text-indent: 22pt">输出有<span> q </span>行，每行包含<span> 1 </span>个整数，表示每次游戏所需要的最少时间，如果某次游戏无法完成目标则输出<span>&minus;1</span>。</p>
+<p class="MsoBodyText" style="margin-left: 0cm">&nbsp;</p>
+<p class="MsoBodyText" style="margin-left: 0cm"><b>【输入输出样例】</b></p>
+<div align="center">
+<table class="MsoNormalTable" cellspacing="0" cellpadding="0" border="1" style="border-top: medium none; border-right: medium none; border-bottom: medium none; border-left: medium none">
+    <tbody>
+        <tr>
+            <td valign="top" width="202" style="border-top: black 1pt solid; border-right: black 1pt solid; border-bottom: black 1pt solid; border-left: black 1pt solid">
+            <p class="TableParagraph" style="margin-left: 5.1pt"><b><span style="font-size: 10.5pt; font-family: &quot;">puzzle.in</span></b></p>
+            </td>
+            <td valign="top" width="203" style="border-top: black 1pt solid; border-right: black 1pt solid; border-bottom: black 1pt solid; border-left: black 1pt solid">
+            <p class="TableParagraph" style="margin-left: 5.1pt"><b><span style="font-size: 10.5pt; font-family: &quot;">puzzle.out</span></b></p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="202" style="border-top: black 1pt solid; border-right: black 1pt solid; border-bottom: black 1pt solid; border-left: black 1pt solid">
+            <p class="MsoNormal"><span style="font-size: 10.5pt; font-family: 宋体">3 4 2</span></p>
+            <p class="MsoNormal"><span style="font-size: 10.5pt; font-family: 宋体">0 1 1 1</span></p>
+            <p class="MsoNormal"><span style="font-size: 10.5pt; font-family: 宋体">0 1 1 0</span></p>
+            <p class="MsoNormal"><span style="font-size: 10.5pt; font-family: 宋体">0 1 0 0</span></p>
+            <p class="MsoNormal"><span style="font-size: 10.5pt; font-family: 宋体">3 2 1 2 2 2</span></p>
+            <p class="MsoNormal"><span style="font-size: 10.5pt; font-family: 宋体">1 2 2 2 3 2</span></p>
+            </td>
+            <td valign="top" width="203" style="border-top: black 1pt solid; border-right: black 1pt solid; border-bottom: black 1pt solid; border-left: black 1pt solid">
+            <p class="TableParagraph" style="margin-left: 5.1pt"><span style="font-size: 10.5pt; font-family: 宋体">2</span></p>
+            <p class="TableParagraph" style="margin-left: 5.1pt"><span style="font-size: 10.5pt; font-family: 宋体">-1</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<p class="MsoBodyText" style="margin-left: 0cm">&nbsp;</p>
+<p class="MsoBodyText" style="margin-left: 0cm"><b>【输入输出样例说明】</b><b> </b></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">棋盘上划叉的格子是固定的，红色格子是目标位置，圆圈表示棋子，其中绿色圆圈表示目标棋子。</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">1. 第一次游戏，空白格子的初始位置是<span>&nbsp; (3,&nbsp; 2)</span>（图中空白所示），游戏的目标是将初始位置在<span>(1, 2)</span>上的棋子（图中绿色圆圈所代表的棋子）移动到目标位置<span>(2, 2)</span>（图中红色的格子）上。</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">移动过程如下：</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt"><span>&nbsp; &nbsp; &nbsp; &nbsp; 初始状态</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>第一步之后</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>第二步之后</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt"><span><img alt="" width="400" height="96" src="/attached/image/20140917/20140917112143_10219.png" /></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt"><span><br />
+</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">2.&nbsp; 第二次游戏，空白格子的初始位置是（<span>1, 2</span>）（图中空白所示），游戏的目标是将初始位置在（<span>2, 2</span>）上的棋子（图中绿色圆圈所示）移动到目标位置<span>&nbsp; (3, 2)</span>上。</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">初始状态</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt"><img alt="" width="120" height="96" src="/attached/image/20140917/20140917112309_43522.png" /></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">要将指定块移入目标位置，必须先将空白块移入目标位置，空白块要移动到目标位置，必然是从位置（<span>2</span>，<span> 2</span>）上与当前图中目标位置上的棋子交换位置，之后能与空白块交换位置的只有当前图中目标位置上的那个棋子，因此目标棋子永远无法走到它的目标位置，游戏无法完成。</p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify"><b>【数据范围】</b></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">对于<span> 30%</span>的数据，<span>1 </span>&le;<span> n, m </span>&le;<span> 10</span>，<span>q = 1</span>；</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">对于<span> 60%</span>的数据，<span>1 </span>&le;<span> n, m </span>&le;<span> 30</span>，<span>q </span>&le;<span> 10</span>；</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">对于<span> 100%</span>的数据，<span>1 </span>&le;<span> n, m </span>&le;<span> 30</span>，<span>q </span>&le;<span> 500</span>。</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 21pt">&nbsp;</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=NOIP%E6%8F%90%E9%AB%98%E7%BB%84'>NOIP提高组</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=24432'>Submit</a>][<a href='problemstatus.php?id=24432'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=24432");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?285606349" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5327 --单词默写-训练套题T6T1</title><center><h2>5327: 单词默写-训练套题T6T1</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>16&nbsp;&nbsp;<span class=green>Solved: </span>7<br>[<a href='submitpage.php?id=5327'>Submit</a>][<a href='problemstatus.php?id=5327'>Status</a>][<a href='bbs.php?pid=5327'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5327'>下载FPS3元</a>][<a onclick='$(this).load("cart.php?add=5327");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5327'>下载测试数据3元</a>][1420kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<b><span style="font-size:16px;">1. </span></b><b><span style="font-size:16px;">单词默写 </span></b><b><span style="font-size:16px;">(engzam.pas/c/cpp)</span></b><b></b> 
+</p>
+<p class="MsoNormal">
+	【问题描述】
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	小D前一段日子刚刚参加了一次非常苛刻的英语考试。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	考试不仅包括了听力、选择、填空等基本题型，还包括了一种特殊的单词默写题。这类题目都是按照以下形式给出的：
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	在本学期你所学的所有前缀是B的单词中，在课本中出现次数不少于L的有多少个。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	例如小D这个学期只学过三个单词a、ab、bc，它们出现的次数分别是1、2、3；若给出询问（B = a，L = 2），那么前缀为a的单词一共有两个，是a和ab，其中频率不少于2的只有一个，是ab。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	这个学期小 D学过的单词非常多，而考试给出的这类询问也非常多。这么困难的任务小D当然不可能解决，于是这个问题被交给了你。
+</p>
+<p class="MsoNormal">
+	【输入】
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	输入文件第一行包含两个用空格隔开的整数N、M，分别表示小D本学期学过的单词数和考试中出现的询问数。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	接下来N行，每行包含用空格隔开的一个单词A和一个整数P，描述小D本学期学过的一个单词A以及其出现的次数P。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	接下来M行，每行包含用空格隔开的一个单词B和一个整数L，描述考试中给出的一个询问。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	你可以假定所有单词均由小写字母组成，且长度不超过10。
+</p>
+<p class="MsoNormal">
+	【输出】
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	输出文件一共包含M行。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	对于每个考试的询问输出一行一个整数，表示该问题的答案。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	&nbsp;
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	&nbsp;
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	&nbsp;
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	【输入输出样例】
+</p>
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border:none;">
+	<tbody>
+		<tr>
+			<td width="284" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">engzam.in</span> 
+				</p>
+			</td>
+			<td width="284" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">engzam.out</span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="284" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">3 3</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">a 1</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">ab 2</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">bc 3</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">a 2</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">a 1</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">a 3</span> 
+				</p>
+			</td>
+			<td width="284" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">1</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">2</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:10.5pt;font-family:&quot;">0</span> 
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal">
+	【输入输出样例说明】
+</p>
+<p class="MsoNormal">
+	&nbsp;&nbsp;&nbsp; 前缀为a的单词一共有两个，是a和ab，出现次数分别为1和2。
+</p>
+<p class="MsoNormal">
+	【数据规模】
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	对于50%的测试数据，满足N、M ≤ 1 000
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	对于100%的测试数据，满足N、M ≤ 100 000，P、L ≤ 100 000
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p class="MsoNormal"><br />
+	<b>Trie</b><b>树（</b><b>pascal</b><b>版）</b><b></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>Trie</span>树就是字符树，其核心思想就是空间换时间。<span><br /><br />
+</span>举个简单的例子。<span><br /><br />
+</span>给你<span>100000</span>个长度不超过<span>10</span>的单词。对于每一个单词，我们要判断他出没出现过，如果出现了，第一次出现第几个位置。<span><br /><br />
+</span>这题当然可以用<span>hash</span>来，但是我要介绍的是<span>trie</span>树。在某些方面它的用途更大。比如说对于某一个单词，我要询问它的前缀是否出现过。这样<span>hash</span>就不好搞了，而用<span>trie</span>还是很简单。<span><br /><br />
+</span>现在回到例子中，如果我们用最傻的方法，对于每一个单词，我们都要去查找它前面的单词中是否有它。那么这个算法的复杂度就是<span>O(n^2)</span>。显然对于<span>100000</span>的范围难以接受。现在我们换个思路想。假设我要查询的单词是<span>abcd</span>，那么在他前面的单词中，以<span>b</span>，<span>c</span>，<span>d</span>，<span>f</span>之类开头的我显然不必考虑。而只要找以<span>a</span>开头的中是否存在<span>abcd</span>就可以了。同样的，在以<span>a</span>开头中的单词中，我们只要考虑以<span>b</span>作为第二个字母的<span>……</span>这样一个树的模型就渐渐清晰了<span>……<br /><br />
+</span>假设有<span>b</span>，<span>abc</span>，<span>abd</span>，<span>bcd</span>，<span>abcd</span>，<span>efg</span>，<span>hii</span>这<span>6</span>个单词，我们构建的树就是这样的。<span><br /><br />
+</span><br />
+</p><br />
+<div style="text-align:center;"><br />
+	<img src="/attached/image/20140318/20140318155849_53189.jpg" alt="" /> <br />
+</div><br />
+对于每一个节点，从根遍历到他的过程就是一个单词，如果这个节点被标记为红色，就表示这个单词存在，否则不存在。<span><br /><br />
+</span>那么，对于一个单词，我只要顺着他从跟走到对应的节点，再看这个节点是否被标记为红色就可以知道它是否出现过了。把这个节点标记为红色，就相当于插入了这个单词。<span><br /><br />
+</span>这样一来我们询问和插入可以一起完成，所用时间仅仅为单词长度，在这一个样例，便是<span>10</span>。<span><br /><br />
+</span>我们可以看到，<span>trie</span>树每一层的节点数是<span>26^i</span>级别的。所以为了节省空间。我们用动态链表，或者用数组来模拟动态。空间的花费，不会超过单词数<span>×</span>单词长度。<span><br /><br />
+</span>程序非常好实现，区区几行，我就不写了，自己琢磨吧。<span><br /><br />
+</span>如果还是不懂请留言。<span><br /><br />
+<br /><br />
+</span>下面提供一个查找单词是否在给定的字典中的标程：<span><br /><br />
+program trie;<br /><br />
+type<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;rec=record<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;Got:boolean;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;next:array['a'..'z'] of Longint;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;end;<br /><br />
+var<br /><br />
+&nbsp;&nbsp; n,i,j,Now,Tn:Longint;<br /><br />
+&nbsp;&nbsp; s:string;<br /><br />
+&nbsp;&nbsp; T:array[1..1000] of rec;<br /><br />
+&nbsp;&nbsp; flag:boolean;<br /><br />
+begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; Readln(n);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; Tn:=1;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; T[1].Got:=False;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; fillchar(T[1].next,sizeof(T[1].next),0);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; for i:=1 to n do<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; readln(s);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Now:=1;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for j:=1 to<br />
+length(s) do<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if T[now].Next[s[j]]&lt;&gt;0<br />
+then now:=t[now].next[s[j]] else<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inc(Tn);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T[tn].Got:=false;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fillchar(T[tn].next,sizeof(T[tn].next),0);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T[Now].next[s[j]]:=Tn;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now:=Tn;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T[now].Got:=true;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; end;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; readln(s);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; while s&lt;&gt;'exit' do<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now:=1;flag:=true;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for j:=1 to<br />
+length(s) do<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if<br />
+T[now].Next[s[j]]&lt;&gt;0 then now:=t[now].next[s[j]] else<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flag:=false;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if flag then<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+if T[now].Got=false then flag:=false;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if flag then<br />
+writeln('the word is in the tree') else<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writeln('can''t<br />
+find it!');<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Readln(s);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; end;<br /><br />
+end.<br /><br />
+<br /><br />
+</span>一个单词前缀树的题，但是我却用<span>trie</span>树<span>+bm</span>算法简化版做的<span><br /><br />
+<br /><br />
+</span>密码破译<span><br /><br />
+</span>【问题描述】<span><br /><br />
+</span>由于最近功课过于繁忙，<span>Tim</span>竟然忘记了自己电脑的密码，幸运的是<span>Tim</span>在设计电脑密码的时候，用了一个非常特殊的方法记录下了密码。这个方法是：<span>Tim</span>把密码和其它的一些假密码共同记录在了一个本子上面。为了能够从这些字符串中找出正确的密码，<span>Tim</span>又在另外一个本子上面写了一个很长的字符串，而正确的密码就是在这个字符串中出现次数最多的一个密码。例如串<span>ababa</span>，假若密码是<span>abab</span>和<span>aba</span>，那么正确的密码是<span>aba</span>，因为<span>aba</span>在这个字符串中出现了<span>2</span>次。<span><br /><br />
+</span>现在你得到了<span>Tim</span>的这两个本子，希望你能够编写一个程序帮助<span>Tim</span>找出正确的密码。<span><br /><br />
+</span>【输入】<span><br /><br />
+</span>输入由两个部分组成。其中第一部分由若干行组成，每一行记录了一个密码，密码的均长度小于等于<span>255</span>位，并且都由小写字母组成。然后一个空行，第二部分记录了一个很长的字符串，并且以<span>’.’</span>结束，其中只包含了小写字母。<span><br /><br />
+<br /><br />
+</span>【输出】<span><br /><br />
+</span>输出文件名为<span>Pass.out</span>。输出文件由仅有一行，为一个整数，表示正确密码在字符串中出现的次数。如果这个出现次数为<span>0</span>，输出<span>“No find”</span>。<span><br /><br />
+<br /><br />
+</span>【样例】：<span><br /><br />
+Pass.in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pass.out<br /><br />
+ab&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6<br /><br />
+abc<br /><br />
+bdc<br /><br />
+abcd<br /><br />
+<br /><br />
+abcabcabcdbdabcbabdbcabdbdbdbd.<br /><br />
+<br /><br />
+program pass;<br /><br />
+const<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; filein='pass.in';<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; fileout='pass.out';<br /><br />
+type<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;rec=record<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;which:Longint;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;Next:array['a'..'z'] of Longint;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;end;<br /><br />
+var<br /><br />
+&nbsp;&nbsp; o,now,i,Tn,Dn,temp,Ans:Longint;<br /><br />
+&nbsp;&nbsp; s:string;<br /><br />
+&nbsp;&nbsp; c:char;<br /><br />
+&nbsp;&nbsp; T:array[1..1000000] of REc;<br /><br />
+&nbsp;&nbsp; data:array[1..5000] of string;<br /><br />
+&nbsp;&nbsp; dLong:array[1..5000] of longint;<br /><br />
+&nbsp;&nbsp; use:array[1..5000] of boolean;<br /><br />
+&nbsp;&nbsp; d:array[1..3000000] of char;<br /><br />
+&nbsp;&nbsp; Appear:array['a'..'z'] of Longint;<br /><br />
+&nbsp;&nbsp; Long:Longint;<br /><br />
+&nbsp;&nbsp; f:boolean;<br /><br />
+function Compare(x:Longint):Longint;<br /><br />
+var<br /><br />
+&nbsp;&nbsp; s,i,Now,L,temp:Longint;<br /><br />
+begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; s:=0;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; fillchar(appear,sizeof(appear),0);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; L:=length(data[x]);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; for i:=1 to L do<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; Appear[data[x][i]]:=i;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; Now:=L;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; while NOw&lt;=Long do<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if<br />
+D[now]&lt;&gt;data[x][L] then Inc(now,L-Appear[D[now]]) else<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+temp:=L-1;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+while (temp&gt;0) and (Data[x][temp]=d[Now-(L-temp)]) do dec(temp);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+if temp=0 then Inc(s);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+Inc(Now);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; end;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; Compare:=S;<br /><br />
+end;<br /><br />
+procedure sort(l,r:Longint);<br /><br />
+var<br /><br />
+&nbsp;&nbsp; i,j,x:Longint;<br /><br />
+&nbsp;&nbsp; sy:string;<br /><br />
+&nbsp;&nbsp; ly:Longint;<br /><br />
+begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; i:=l;j:=r;x:=dLong[(l+r) div 2];<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; repeat<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while<br />
+dLong[i]&lt;x do inc(i);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while<br />
+dlong[j]&gt;x do dec(j);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if i&lt;=j then<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sy:=data[i];<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data[i]:=data[j];<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data[j]:=sy;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ly:=dlong[i];<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dlong[i]:=dlong[j];<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dlong[j]:=ly;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inc(i);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec(j);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; until i&gt;j;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; if i&lt;r then sort(i,r);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; if j&gt;l then sort(l,j);<br /><br />
+end;<br /><br />
+begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; fillchar(use,sizeof(use),true);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; fillchar(t,sizeof(t),0);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; Assign(input,filein);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; Assign(output,fileout);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; rewrite(output);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; reset(input);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; tn:=1;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; readln(s);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; Dn:=0;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; while s&lt;&gt;'' do<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inc(dn);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data[dn]:=s;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dLong[dn]:=length(s);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;readln(s);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; end;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; sort(1,Dn);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; for o:=1 to Dn do<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s:=data[o];<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NOw:=1;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f:=true;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for i:=1 to<br />
+Length(s) do<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if<br />
+t[now].Next[s[i]]&lt;&gt;0 then<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now:=t[now].next[s[i]];<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if<br />
+t[now].which&lt;&gt;0 then<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+f:=false;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+break<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end else<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+Inc(tn);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+t[now].next[s[i]]:=tn;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+now:=tn;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if f then<br />
+t[now].which:=o;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if not f then<br />
+use[o]:=false;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; end;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; Long:=0;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; repeat<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; read(c);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if c&lt;&gt;'.'<br />
+then<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inc(Long);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d[Long]:=c;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; until c='.';<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; for i:=1 to Dn do<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if use[i] then<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+temp:=Compare(i);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+if temp&gt;ans then ans:=temp;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; end;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; if ans=0 then writeln('No find') else<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; writeln(Ans);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; close(input);<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; close(output);<br /><br />
+end.</span> <br />
+<p><br />
+	<br /><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;</span> <br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%A8%A1%E6%8B%9F%E8%B5%9B-%E8%AE%AD%E7%BB%83%E5%A5%97%E9%A2%98'>模拟赛-训练套题</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5327'>Submit</a>][<a href='problemstatus.php?id=5327'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5327");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

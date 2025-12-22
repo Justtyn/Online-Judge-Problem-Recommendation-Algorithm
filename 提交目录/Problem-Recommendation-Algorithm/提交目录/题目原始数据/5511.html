@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?176514880" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5511 --[数值问题]大整数开方</title><center><h2>5511: [数值问题]大整数开方</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>28&nbsp;&nbsp;<span class=green>Solved: </span>13<br>[<a href='submitpage.php?id=5511'>Submit</a>][<a href='problemstatus.php?id=5511'>Status</a>][<a href='bbs.php?pid=5511'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5511'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5511");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5511'>下载测试数据1元</a>][44kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal">
+	<b> </b> 
+</p>
+<div style="padding:0px;margin:0px;font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;text-align:center;">
+	<b><span><span style="font-size:16px;">大整数开方（highsqrt/c/cpp）</span>&nbsp;</span> </b> 
+</div>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<b><span>【问题描述】&nbsp;</span> </b> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<b><span> </span></b> 
+</p>
+<p class="MsoNormal">
+	<b>输入一个正整数n（1≤n＜10<sup>100</sup>），试用二分法计算它的平方根的整数部分。</b> 
+</p>
+<b> 
+<p>
+	<br />
+</p>
+<span style="font-family:'Microsoft Yahei';font-size:14px;line-height:28px;background-color:#F5F5F5;"><span>【输入格式】highsqrt.in</span></span><span style="font-family:'Microsoft Yahei';font-size:14px;line-height:28px;background-color:#F5F5F5;"></span><span style="font-family:'Microsoft Yahei';font-size:14px;line-height:28px;background-color:#F5F5F5;"></span><span style="font-family:'Microsoft Yahei';font-size:14px;line-height:28px;background-color:#F5F5F5;"></span> 
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>输入共一行，表示n。</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>【输出格式】highsqrt.out</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>输出共一行，表示该数平方根的整数部分</span><span>。</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>【输入样例1】&nbsp;</span><span><br />
+12345678901234567890<br />
+</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>【输出样例1】</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	3513641828
+</p>
+<div>
+	<b> 
+	<p>
+		<br />
+	</p>
+</b> 
+</div>
+<p>
+	<br />
+</p>
+</b> 
+<p>
+	<br />
+</p>
+<p class="MsoNormal">
+	<sup></sup> 
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p><br />
+	<span style="color:#E53333;font-size:32px;">//友情提示！使用复制粘贴，你将永远不能进步，此代码仅供参考！</span> <br />
+</p><br />
+<p><br />
+	<span style="line-height:48px;">//警告，复制粘贴行为将被删号！</span> <br />
+</p><br />
+<p><br />
+	Const<br />
+</p><br />
+<span>&nbsp; &nbsp; Size = 200;</span><br /><br />
+<br /><br />
+<span>Type</span><br /><br />
+<span>&nbsp; &nbsp; hugeint = Record</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; len : Integer;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; num : Array[1..Size]Of Integer;</span><br /><br />
+<span>&nbsp; &nbsp; End;</span><br /><br />
+<span>&nbsp; &nbsp; //len表示大整数的位数;num[1]表示个位、num[2]表示十位,以此类推</span><br /><br />
+<br /><br />
+<span>Var</span><br /><br />
+<span>&nbsp; &nbsp; s : String;</span><br /><br />
+<span>&nbsp; &nbsp; i : Integer;</span><br /><br />
+<span>&nbsp; &nbsp; target, left, middle, right : hugeint;</span><br /><br />
+<br /><br />
+<span>Function times(a, b : hugeint) : hugeint;</span><br /><br />
+<span>// 计算大整数 a 和 b 的乘积</span><br /><br />
+<span>&nbsp; &nbsp; Var</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; i, j : Integer;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; ans : hugeint;</span><br /><br />
+<span>&nbsp; &nbsp; Begin</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; FillChar(ans, SizeOf(ans), 0);</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; For i := 1 To a.len Do</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For j := 1 To b.len Do</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ans.num[i + j - 1] := ans.num[i + j - 1] + a.num[i] * b.num[j];</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; For i := 1 To a.len + b.len Do</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Begin</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ans.num[i + 1] := ans.num[i + 1] + ans.num[i] DIV 10;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ans.num[i] := ans.num[i] mod 10 &nbsp; ;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; If ans.num[a.len + b.len] &gt; 0</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Then ans.len := a.len + b.len</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Else ans.len := a.len + b.len - 1;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; End;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; times := ans;</span><br /><br />
+<span>&nbsp; &nbsp; End;</span><br /><br />
+<br /><br />
+<span>Function add(a, b : hugeint) : hugeint;</span><br /><br />
+<span>// 计算大整数 a 和 b 的和</span><br /><br />
+<span>&nbsp; &nbsp; Var</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; i : Integer;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; ans : hugeint;</span><br /><br />
+<span>&nbsp; &nbsp; Begin</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; FillChar(ans.num, SizeOf(ans.num), 0);</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; If a.len &gt; b.len</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Then ans.len := a.len</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Else ans.len := b.len;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; For i := 1 To ans.len Do</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Begin</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ans.num[i] := &nbsp;ans.num[i] + a.num[i] + b.num[i] &nbsp; &nbsp;;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ans.num[i + 1] := ans.num[i + 1] + ans.num[i] DIV 10;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ans.num[i] := ans.num[i] MOD 10;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; End;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; If ans.num[ans.len + 1] &gt; 0</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Then Inc(ans.len);</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; add := ans;</span><br /><br />
+<span>&nbsp; &nbsp; End;</span><br /><br />
+<br /><br />
+<span>Function average(a, b : hugeint) : hugeint;</span><br /><br />
+<span>// 计算大整数 a 和 b 的平均数的整数部分</span><br /><br />
+<span>&nbsp; &nbsp; Var</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; i : Integer;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; ans : hugeint;</span><br /><br />
+<span>&nbsp; &nbsp; Begin</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; ans := add(a, b);</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; For i := ans.len DownTo 2 Do</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Begin</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ans.num[i - 1] := ans.num[i - 1] + ( ans.num[i] mod 2 ) * 10;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ans.num[i] := ans.num[i] DIV 2;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; End;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; ans.num[1] := ans.num[1] DIV 2;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; If ans.num[ans.len] = 0</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Then Dec(ans.len);</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; average := ans;</span><br /><br />
+<span>&nbsp; &nbsp; End;</span><br /><br />
+<br /><br />
+<span>Function plustwo(a : hugeint) : hugeint;</span><br /><br />
+<span>// 计算大整数 a 加 2 后的结果</span><br /><br />
+<span>&nbsp; &nbsp; Var</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; i : Integer;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; ans : hugeint;</span><br /><br />
+<span>&nbsp; &nbsp; Begin</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; ans := a;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; ans.num[1] := ans.num[1] + 2;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; i := 1;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; While (i &lt;= ans.len) AND (ans.num[i] &gt;= 10) Do</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; Begin</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ans.num[i + 1] := ans.num[i + 1] + ans.num[i] DIV 10;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ans.num[i] := ans.num[i] MOD 10;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Inc(i);</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; End;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; If ans.num[ans.len + 1] &gt; 0</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Then &nbsp; &nbsp; inc(ans.len) &nbsp; ;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; plustwo := ans;</span><br /><br />
+<span>&nbsp; &nbsp; End;</span><br /><br />
+<br /><br />
+<span>Function over(a, b : hugeint) : Boolean;</span><br /><br />
+<span>// 若大整数 a &gt; b 则返回 1, 否则返回 0</span><br /><br />
+<span>&nbsp; &nbsp; Var</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; i : Integer;</span><br /><br />
+<span>&nbsp; &nbsp; Begin</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; If ( a.len&lt;b.len ) Then</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Begin</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; over := FALSE;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Exit;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; End;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; If a.len &gt; b.len Then</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Begin</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; over := TRUE;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Exit;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; End;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; For i := a.len DownTo 1 Do</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Begin</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; If a.num[i] &lt; b.num[i] Then</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Begin</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; over := FALSE;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Exit;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; End;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; If a.num[i] &gt; b.num[i] Then</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Begin</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; over := TRUE;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Exit;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; End;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; End;</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; over := FALSE;</span><br /><br />
+<span>&nbsp; &nbsp; End;</span><br /><br />
+<span>procedure datain;</span><br /><br />
+<span>&nbsp;Begin</span><br /><br />
+<span>&nbsp; &nbsp; assign(input,'highsqrt.in'); &nbsp; assign(output,'highsqrt.out');</span><br /><br />
+<span>&nbsp; &nbsp; reset(input); &nbsp; rewrite(output);</span><br /><br />
+<span>&nbsp; &nbsp; Readln(s);</span><br /><br />
+<span>&nbsp; &nbsp; FillChar(target.num, SizeOf(target.num), 0);</span><br /><br />
+<span>&nbsp; &nbsp; target.len := Length(s);</span><br /><br />
+<span>&nbsp; &nbsp; For i := 1 To target.len Do</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; target.num[i] := Ord(s[target.len - i + 1]) - ord('0') &nbsp; &nbsp;;</span><br /><br />
+<span>&nbsp; &nbsp; FillChar(left.num, SizeOf(left.num), 0);</span><br /><br />
+<span>end;</span><br /><br />
+<span>procedure work;</span><br /><br />
+<span>&nbsp; begin</span><br /><br />
+<span>&nbsp; &nbsp; left.len := 1;</span><br /><br />
+<span>&nbsp; &nbsp; left.num[1] := 1;</span><br /><br />
+<span>&nbsp; &nbsp; right := target;</span><br /><br />
+<span>&nbsp; &nbsp; Repeat</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; middle := average(left, right);</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; If over( &nbsp;times(middle, middle), target &nbsp;)</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Then right := middle</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Else &nbsp;left := middle;</span><br /><br />
+<span>&nbsp; &nbsp; Until over(plustwo(left), right);</span><br /><br />
+<span>&nbsp; &nbsp; For i := left.len DownTo 1 Do</span><br /><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; Write(left.num[i]);</span><br /><br />
+<span>&nbsp; &nbsp; Writeln;</span><br /><br />
+<span>&nbsp; &nbsp; close(input); close(output);</span><br /><br />
+<span>&nbsp; end;</span><br /><br />
+<span>begin</span><br /><br />
+<span>&nbsp;datain;</span><br /><br />
+<span>&nbsp;work;</span><br /><br />
+<span>End.</span></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%85%A5%E9%97%A8%E5%BF%85%E5%81%9A-%E5%9F%BA%E7%A1%80%E9%97%AE%E9%A2%98'>入门必做-基础问题</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5511'>Submit</a>][<a href='problemstatus.php?id=5511'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5511");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

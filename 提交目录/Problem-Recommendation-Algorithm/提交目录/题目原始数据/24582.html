@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?100555348" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 24582 --Reading阅览室【浙江省选2002】</title><center><h2>24582: Reading阅览室【浙江省选2002】</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>1&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='submitpage.php?id=24582'>Submit</a>][<a href='problemstatus.php?id=24582'>Status</a>][<a href='bbs.php?pid=24582'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=24582'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=24582");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=24582'>下载测试数据1元</a>][4kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<span style="font-size:16px;">Reading阅览室</span><span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-size:16px;">一个阅览室每天都要接待大批读者。阅览室开门时间是</span><span style="font-size:16px;">0</span><span style="font-size:16px;">，关门时间是</span><span style="font-size:16px;">T</span><span style="font-size:16px;">。每位读者的到达时间都不一样，并且想要阅读的刊物不超过</span><span style="font-size:16px;">5</span><span style="font-size:16px;">本。每位读者心里对自己想看的刊物都有一个排位，到达之后他会先去找自己最想看的刊物，如果找不到则去找其次想看的刊物。如果找不到任何他想看的刊物，他会开始等待，直到有一本以上的他想看的刊物被人放回原处。当然，他会先去拿其中自己最想看的刊物。当他看完某一本刊物后，就把它放回原处，接着去找自己没看过的最想看的刊物。如此下去，直到看完所有他想看的刊物为止。矛盾出现在两个人同时想要拿同一本刊物的时候。阅览室为了避免读者之间出现争执，作了一个规定，读者每次在开始等待时先去服务台做一次登记。如果两个人都同时想要一本刊物，那么先登记的读者将得到这本刊物。如果两个人同时登记，那么先到达阅览室的读者将得到刊物。没得到的人就只能去找其他的刊物看。阅览室关门时，所有读者都将被强迫离开阅览室，不再允许继续阅读。</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-size:16px;">现在阅览室想做一个统计调查，你被要求写一个程序来模拟这个过程计算出所有刊物被阅读的总次数。当某个读者开始阅读某本刊物时，该刊物的被阅读次数就加</span><span style="font-size:16px;">1</span><span style="font-size:16px;">，无论这本刊物最后有没有被读完。</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-size:16px;">输入包括了多个测试数据。每个测试数据开头是两个整数</span><span style="font-size:16px;">T</span><span style="font-size:16px;">和</span><span style="font-size:16px;">n</span><span style="font-size:16px;">（</span><span style="font-size:16px;">1&lt;=n&lt;=100</span><span style="font-size:16px;">），分别表示图书馆关门时间和读者总数。接下来按照读者的到达时间先后依次给出了每位读者的具体描述。每个读者描述开头是一个整数</span><span style="font-size:16px;">t</span><span style="font-size:16px;">（</span><span style="font-size:16px;">0&lt;=t&lt;T</span><span style="font-size:16px;">），表示该读者到达时间。接下来一行开头是一个整数</span><span style="font-size:16px;">k</span><span style="font-size:16px;">（</span><span style="font-size:16px;">1&lt;=k&lt;=5</span><span style="font-size:16px;">），表示该读者想要看的刊物数目。之后跟着</span><span style="font-size:16px;">2k</span><span style="font-size:16px;">个整数按照读者想要阅读的刊物的顺序依次给出了刊物的描述。其中第</span><span style="font-size:16px;">2i-1</span><span style="font-size:16px;">个整数表示刊物的编号</span><span style="font-size:16px;">s</span><span style="font-size:16px;">（</span><span style="font-size:16px;">0&lt;=s&lt;1000</span><span style="font-size:16px;">），第</span><span style="font-size:16px;">2i</span><span style="font-size:16px;">个整数表示该读者读完这本刊物所需的时间。</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-size:16px;">对于每个测试数据，在单独一行里输出所有刊物被阅读的总次数。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp;</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">输入样例：</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">10 4</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">1</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">2 1 4 2 5</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">3</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">1 2 4</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">7 </span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">3 2 2 1 3 3 2</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">9</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">1 4 2</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">输出样例：</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">5</span> 
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E7%9C%81%E9%98%9F%E9%80%89%E6%8B%94-%E5%A4%A7%E6%B5%99%E6%B1%9F'>省队选拔-大浙江</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=24582'>Submit</a>][<a href='problemstatus.php?id=24582'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=24582");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

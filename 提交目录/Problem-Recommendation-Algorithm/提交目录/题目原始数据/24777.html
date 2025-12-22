@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1006723764" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 24777 --【USACO2014OPEN】牛像展览{gold题1}</title><center><h2>24777: 【USACO2014OPEN】牛像展览{gold题1}</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=24777'>Submit</a>][<a href='problemstatus.php?id=24777'>Status</a>][<a href='bbs.php?pid=24777'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=24777'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=24777");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=24777'>下载测试数据1元</a>][5840kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<b><span style="font-size:16px;">3. </span></b><b><span style="font-size:16px;">牛像展览</span></b><b><span style="font-size:16px;">{gold</span></b><b><span style="font-size:16px;">题</span></b><b><span style="font-size:16px;">1}</span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">【问题描述】 </span><span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:26.25pt;">
+	<span style="font-size:16px;">农民约翰的N（1 &lt;= N &lt;=
+100,000)头牛正站排成一行拍照。第i头牛站在位置x_i(0..1,000,000,000的整数)，每头牛用一个整数b_i（1..8的整数）表示它的品种。没有两头牛站在同一个位置。</span> 
+</p>
+<p class="MsoNormal" style="text-indent:26.25pt;">
+	<span style="font-size:16px;">农民约翰希望拍摄一个连续区间里的牛，以便参加展览。为了公平起见，他希望该区间内的各品种的牛的数量是相同的，同时至少包含K (K &gt;= 2)个品种的牛，请计算满足条件的照片的最大长度，最大长度即为该区间的长度。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">【文件输入】 </span><span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-size:16px;">第一行，两个用空格隔开的整数，分别表示N和K。</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-size:16px;">第2到第N+1行，每行两个整数，分别表示第i头牛的位置和品种。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">【文件输出】 </span><span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp;&nbsp;&nbsp; 共一行，一个整数，表示照片的最大长度。如果无解则输出-1。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">【输入样例1】 </span><span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">9 2</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">1 1</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">5 1</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">6 1</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">9 1</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">100 1</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">2 2</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">7 2</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">3 3</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">8 3</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">【输出样例1】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">6</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">【样例1说明】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">区间[2..8]包含3种牛（分别1,2,3号），数量都为2。</span> 
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p style="font-family:Simsun;font-size:medium;"><br />
+	<b>Analysis: Fair Photography [gold] by Bruce Merry</b><br />
+</p><br />
+<hr /><br />
+<p style="font-family:Simsun;font-size:medium;"><br />
+	Let T(b, p) be the number of cows of breed b in the photo to the left of point p. If the left and right end-points are L and R, then the photo is valid if there is some subset A of the breeds (with |A| &gt;= K) such that<br />
+</p><br />
+<ul style="font-family:Simsun;font-size:medium;"><br />
+	<li><br />
+		T(b, R) = T(b, L) + c for each b in A<br />
+	</li><br />
+	<li><br />
+		T(b, R) = T(b, L) for each b not in A<br />
+	</li><br />
+</ul><br />
+<p style="font-family:Simsun;font-size:medium;"><br />
+	For a given A and p, we can create a "signature" S(A, p) which consists of<br />
+</p><br />
+<ul style="font-family:Simsun;font-size:medium;"><br />
+	<li><br />
+		T(b, p) - T(b0, p) for each b in A, where b0 is the first element in A<br />
+	</li><br />
+	<li><br />
+		T(b, p) for each b not in A<br />
+	</li><br />
+</ul><br />
+<p style="font-family:Simsun;font-size:medium;"><br />
+	With a little work, one can show that if S(A, L) = S(A, R) and L &lt; R, then the photo from L to R is valid.<br />
+</p><br />
+<p style="font-family:Simsun;font-size:medium;"><br />
+	Now let us consider each possible right endpoint R, and consider how to find a matching L. We do not need to consider all subsets A: imaging starting with no cows in the photo, and gradually extending the left edge to include more cows. At some points a new breed will enter a photo, but no breed will ever disappear from the photo, so there can be at most O(B) distinct subsets of breeds in the photo. We can efficiently compute these subsets by keeping track of the rightmost point at which each breed appeared before the current point.<br />
+</p><br />
+<p style="font-family:Simsun;font-size:medium;"><br />
+	Now that we've picked R and A, and computed the signature S(A, R), how do we find a matching L? We precompute all values of S(A, L), and store them in a lookup table (such as a hash table, balanced tree or sorted list). We then just consult the table to find the corresponding minimum value of L. Similarly to before, we only need to consider O(B) possible values of A for each L.<br />
+</p><br />
+<p style="font-family:Simsun;font-size:medium;"><br />
+	The runtime for this is O(B^2N) for a hash table or O(B^2N (log N + log B)) for a sorted list: there are O(BN) precomputations and queries, and each signature has O(B) size. I found that the run time of both was very similar in practise.<br />
+</p><br />
+<p style="font-family:Simsun;font-size:medium;"><br />
+	An alternative is to consider all O(2^B) valid values for A in an outer loop. If one indexes not by the full signature but by a 64-bit hash of it, then the runtime becomes O(2^BN), but in the unlikely event of two different signatures hashing to the same 64-bit value, the answer may be incorrect or must be verified. Many who wrote exponential solutions in B received time outs; on occasion a low constraint is a red herring and hides an easily implemented more efficient solution.<br />
+</p><br />
+<p style="font-family:Simsun;font-size:medium;"><br />
+	Below is Mark Gordon's solution that implements the O(B^2N) algorithm described above.<br />
+</p><br />
+<pre>#include &lt;iostream&gt;<br />
+#include &lt;vector&gt;<br />
+#include &lt;algorithm&gt;<br />
+#include &lt;cstring&gt;<br />
+#include &lt;cstdio&gt;<br />
+#include &lt;cassert&gt;<br />
+#include &lt;map&gt;<br />
+<br />
+using namespace std;<br />
+<br />
+#define MAXN 100010<br />
+#define GROUPS 8<br />
+<br />
+int MB[MAXN][GROUPS];<br />
+int MF[MAXN][GROUPS];<br />
+int PS[MAXN][GROUPS];<br />
+<br />
+int main() {<br />
+  freopen("fairphoto.in", "r", stdin);<br />
+  freopen("fairphoto.out", "w", stdout);<br />
+<br />
+  int N, K; cin &gt;&gt; N &gt;&gt; K;<br />
+  vector&lt;pair&lt;int, int&gt; &gt; A(N);<br />
+  for(int i = 0; i &lt; N; i++) {<br />
+    cin &gt;&gt; A[i].first &gt;&gt; A[i].second;<br />
+    A[i].second--;<br />
+  }<br />
+  sort(A.begin(), A.end());<br />
+<br />
+  /* Construct backstep masks */<br />
+  for(int i = 0; i &lt; GROUPS; i++) {<br />
+    MB[0][i] = 1 &lt;&lt; A[0].second;<br />
+  }<br />
+  for(int i = 1; i &lt; N; i++) {<br />
+    int bt = 1 &lt;&lt; A[i].second;<br />
+<br />
+    MB[i][0] = bt;<br />
+    for(int j = 1; j &lt; GROUPS; j++) {<br />
+      if(MB[i - 1][j] &amp; bt) {<br />
+        MB[i][j] = MB[i - 1][j];<br />
+      } else {<br />
+        MB[i][j] = bt | MB[i - 1][j - 1];<br />
+      }<br />
+    }<br />
+  }<br />
+<br />
+  /* Construct forward step masks */<br />
+  for(int i = 0; i &lt; GROUPS; i++) {<br />
+    MF[N - 1][i] = 1 &lt;&lt; A[N - 1].second;<br />
+  }<br />
+  for(int i = N - 2; i &gt;= 0; i--) {<br />
+    int bt = 1 &lt;&lt; A[i].second;<br />
+<br />
+    MF[i][0] = bt;<br />
+    for(int j = 1; j &lt; GROUPS; j++) {<br />
+      if(MF[i + 1][j] &amp; bt) {<br />
+        MF[i][j] = MF[i + 1][j];<br />
+      } else {<br />
+        MF[i][j] = bt | MF[i + 1][j - 1];<br />
+      }<br />
+    }<br />
+  }<br />
+<br />
+  /* Construct partial sums */<br />
+  for(int i = 0; i &lt; N; i++) {<br />
+    memcpy(PS[i + 1], PS[i], sizeof(PS[i]));<br />
+    ++PS[i + 1][A[i].second];<br />
+  }<br />
+<br />
+  int result = -1;<br />
+  for(int j = K - 1; j &lt; GROUPS; j++) {<br />
+    vector&lt;int&gt; V(1 + GROUPS);<br />
+    map&lt;vector&lt;int&gt;, int&gt; cost_map;<br />
+<br />
+    /* Compute the earliest starts for given masks<br />
+     * and normalized partial sums. */<br />
+    for(int i = N - 1; i &gt;= 0; i--) {<br />
+      int base = -1;<br />
+      int m = V[GROUPS] = MF[i][j];<br />
+      if(__builtin_popcount(m) &lt;= j) continue;<br />
+      for(int k = 0; k &lt; GROUPS; k++) {<br />
+        if(m &amp; 1 &lt;&lt; k) {<br />
+          if(base == -1) {<br />
+            base = PS[i][k];<br />
+          }<br />
+          V[k] = PS[i][k] - base;<br />
+        } else {<br />
+          V[k] = PS[i][k];<br />
+        }<br />
+      }<br />
+      cost_map[V] = A[i].first;<br />
+    }<br />
+<br />
+    /* Find best start points for each ending position. */<br />
+    for(int i = 0; i &lt; N; i++) {<br />
+      int base = -1;<br />
+      int m = V[GROUPS] = MB[i][j];<br />
+      if(__builtin_popcount(m) &lt;= j) continue;<br />
+      for(int k = 0; k &lt; GROUPS; k++) {<br />
+        if(m &amp; 1 &lt;&lt; k) {<br />
+          if(base == -1) {<br />
+            base = PS[i + 1][k];<br />
+          }<br />
+          V[k] = PS[i + 1][k] - base;<br />
+        } else {<br />
+          V[k] = PS[i + 1][k];<br />
+        }<br />
+      }<br />
+<br />
+      map&lt;vector&lt;int&gt;, int&gt;::iterator it = cost_map.find(V);<br />
+      if(it != cost_map.end() &amp;&amp; it-&gt;second &lt; A[i].first) {<br />
+        result = max(result, A[i].first - it-&gt;second);<br />
+      }<br />
+    }<br />
+  }<br />
+<br />
+  cout &lt;&lt; result &lt;&lt; endl;<br />
+  return 0;<br />
+}</pre></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=USACO-USACO%E6%9C%88%E8%B5%9B'>USACO-USACO月赛</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=24777'>Submit</a>][<a href='problemstatus.php?id=24777'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=24777");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

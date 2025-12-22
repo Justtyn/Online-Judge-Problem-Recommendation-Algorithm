@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1673507429" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5476 --修剪花卉-【2014暑期训练】T5Day1T2</title><center><h2>5476: 修剪花卉-【2014暑期训练】T5Day1T2</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>32 MB<br><span class=green>Submit: </span>18&nbsp;&nbsp;<span class=green>Solved: </span>9<br>[<a href='submitpage.php?id=5476'>Submit</a>][<a href='problemstatus.php?id=5476'>Status</a>][<a href='bbs.php?pid=5476'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5476'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5476");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5476'>下载测试数据1元</a>][652kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<b><span style="font-size:18px;">修剪花卉</span></b><b></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【问题描述】 </span><span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">ZZ 对数学饱有兴趣，并且是个勤奋好学的学生，总是在课后留在教室向老师请教一些问题。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">一天他早晨骑车去上课，路上见到一个老伯正在修剪花花草草，顿时想到了一个有关修剪花卉的问题。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 于是当日课后，ZZ 就向老师提出了这个问题：</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 一株奇怪的花卉，上面共连有N 朵花，共有N-1 条枝干将花儿连在一起，并且未修剪时每朵花都不是孤立的。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 每朵花都有一个“美丽指数”，该数越大说明这朵花越漂亮，也有“美丽指数”为负数的，说明这朵花看着都让人恶心。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 所谓“修剪”，意为：去掉其中的一条枝条，这样一株花就成了两株，扔掉其中一株。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 经过一系列“修剪“之后，还剩下最后一株花 （也可能是一朵）。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 老师的任务就是：通过一系列“修剪”（也可以什么“修剪”都不进行）， 剩下的那株（那 朵）花卉上所有花朵的“美丽指数”之和最大。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 老师想了一会儿，给出了正解（交大的老师是很牛的~）。ZZ 见问题被轻易攻破，相当不爽，于是又拿来问你。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【文件输入】 </span><span style="font-size:18px;">makeup.in</span> 
+</p>
+<p class="MsoNormal" style="text-indent:24.0pt;">
+	<span style="font-size:18px;">第一行一个整数N(1 ≤N ≤16000)。表示原始的那株花卉上共N 朵花。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 第二行有N 个整数，第I 个整数表示第I 朵花的美丽指数。</span> 
+</p>
+<p class="MsoNormal" style="margin-left:24.0pt;text-indent:-24.0pt;">
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 接下来N-1 行每行两个整数a,b，表示存在一条连接第a 朵花和第b 朵花的枝条。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【文件输出】 </span><span style="font-size:18px;">makeup.out</span> 
+</p>
+<p class="MsoNormal" style="text-indent:24.0pt;">
+	<span style="font-size:18px;">一个数，表示一系列“修剪”之后所能得到的“美丽指数”之和的最大值。保证绝对值不超过2147483647。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【输入样例】 </span><span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">7</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">-1 -1 -1 1 1 1 0</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">5 6</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1 4</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">2 5</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">3 6</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">4 7</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">5 7</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">6 7</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【输出样例】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">3</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【数据规模】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">对于60%的数据，保证N ≤1,000 ；</span> 
+</p>
+<span style="font-size:18px;">对于100%的数据，保证N ≤16,000。</span></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p class="MsoNormal" align="left" style="text-align:center;vertical-align:middle;background:white;"><br />
+	<strong><span style="font-size:18px;">深度理解链式前</span></strong><strong><span style="font-size:18px;"></span></strong><strong><span style="font-size:18px;">向星</span></strong><br />
+</p><br />
+<p class="MsoNormal" align="right" style="text-align:right;background:white;"><br />
+	<br /><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">我们首先来看一下什么是前向星</span></b><b><span style="font-size:18px;">.</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<span style="font-size:18px;">&nbsp;</span><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">前向星是一种特殊的边集数组</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">我们把边集数组中的每一条边按照起点从小到大排序</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">如果起点相同就按照终点从小到大排序</span></b><b><span style="font-size:18px;">,</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">并记录下以某个点为起点的所有边在数组中的起始位置和存储长度</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">那么前向星就构造好了</span></b><b><span style="font-size:18px;">.</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<span style="font-size:18px;">&nbsp;</span><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">用</span></b><b><span style="font-size:18px;">len[i]</span></b><b><span style="font-size:18px;">来记录所有以</span></b><b><span style="font-size:18px;">i</span></b><b><span style="font-size:18px;">为起点的边在数组中的存储长度</span></b><b><span style="font-size:18px;">.</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">用</span></b><b><span style="font-size:18px;">head[i]</span></b><b><span style="font-size:18px;">记录以</span></b><b><span style="font-size:18px;">i</span></b><b><span style="font-size:18px;">为边集在数组中的第一个存储位置</span></b><b><span style="font-size:18px;">.</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<span style="font-size:18px;">&nbsp;</span><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">那么对于下图</span></b><b><span style="font-size:18px;">:</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<img src="/attached/image/20140725/20140725081027_21326.jpg" alt="" /><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">我们输入边的顺序为</span></b><b><span style="font-size:18px;">:</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">1 2</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">2 3</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">3 4</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">1 3</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">4 1</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">1 5</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">4 5</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">那么排完序后就得到</span></b><b><span style="font-size:18px;">:</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">编号</span></b><b><span style="font-size:18px;">:<br />
+&nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp;<br />
+&nbsp;4 &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp;6 &nbsp; &nbsp; &nbsp;7</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">起点</span></b><b><span style="font-size:18px;">u:<br />
+&nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp;<br />
+&nbsp;2 &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp;4</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">终点</span></b><b><span style="font-size:18px;">v:<br />
+&nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp;<br />
+&nbsp;3 &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;5</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">得到</span></b><b><span style="font-size:18px;">:</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">head[1] = 1<br />
+&nbsp; &nbsp;len[1] = 3</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">head[2] = 4<br />
+&nbsp; &nbsp;len[2] = 1</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">head[3] = 5<br />
+&nbsp; &nbsp;len[3] = 1</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">head[4] = 6<br />
+&nbsp; &nbsp;len[4] = 2</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">但是利用前向星会有排序操作</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">如果用快排时间至少为</span></b><b><span style="font-size:18px;">O(nlog(n))</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">如果用链式前向星</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">就可以避免排序</span></b><b><span style="font-size:18px;">.</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">我们建立边结构体为</span></b><b><span style="font-size:18px;">:</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">struct Edge</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">{</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">&nbsp;<br />
+&nbsp; &nbsp;int next;</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">&nbsp;<br />
+&nbsp; &nbsp;int to;</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">&nbsp;<br />
+&nbsp; &nbsp;int w;</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">};</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">其中</span></b><b><span style="font-size:18px;">edge[i].to</span></b><b><span style="font-size:18px;">表示第</span></b><b><span style="font-size:18px;">i</span></b><b><span style="font-size:18px;">条边的终点</span></b><b><span style="font-size:18px;">,edge[i].next</span></b><b><span style="font-size:18px;">表示与第</span></b><b><span style="font-size:18px;">i</span></b><b><span style="font-size:18px;">条边同起点的下一条边的存储位置</span></b><b><span style="font-size:18px;">,edge[i].w</span></b><b><span style="font-size:18px;">为边权值</span></b><b><span style="font-size:18px;">.</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">另外还有一个数组</span></b><b><span style="font-size:18px;">head[],</span></b><b><span style="font-size:18px;">它是用来表示以</span></b><b><span style="font-size:18px;">i</span></b><b><span style="font-size:18px;">为起点的第一条边存储的位置</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">实际上你会发现这里的第一条边存储的位置其实</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">在以</span></b><b><span style="font-size:18px;">i</span></b><b><span style="font-size:18px;">为起点的所有边的最后输入的那个编号</span></b><b><span style="font-size:18px;">.</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">head[]</span></b><b><span style="font-size:18px;">数组一般初始化为</span></b><b><span style="font-size:18px;">-1,</span></b><b><span style="font-size:18px;">对于加边的</span></b><b><span style="font-size:18px;">add</span></b><b><span style="font-size:18px;">函数是这样的</span></b><b><span style="font-size:18px;">:</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:#F8F8F8;"><br />
+	<b><b><span style="font-size:18px;">[cpp]</span></b><span style="font-size:18px;">&nbsp;</span><span style="font-size:18px;">view plain</span><span style="font-size:18px;">copy</span><a href="https://code.csdn.net/snippets/78760" target="_blank"><img border="0" width="12" height="12" src="file://C:/DOCUME~1/zsb0001/LOCALS~1/Temp/msohtml1/01/clip_image003.gif" alt="在CODE上查看代码片" /></a><a href="https://code.csdn.net/snippets/78760/fork" target="_blank"><img border="0" width="12" height="12" src="file://C:/DOCUME~1/zsb0001/LOCALS~1/Temp/msohtml1/01/clip_image004.gif" alt="派生到我的代码片" /></a></b><br />
+</p><br />
+<div style="border:none;padding:0cm 0cm 0cm 0cm;background:white;margin-left:18.0pt;"><br />
+	<p class="MsoNormal" align="left" style="margin-left:18pt;text-indent:-18pt;"><br />
+		<b><span style="font-size:18px;">1.&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span style="font-size:18px;">void</span></b><span style="font-size:18px;">&nbsp;add(</span><b><span style="font-size:18px;">int</span></b><span style="font-size:18px;">&nbsp;u,</span><b><span style="font-size:18px;">int</span></b><span style="font-size:18px;">&nbsp;v,</span><b><span style="font-size:18px;">int</span></b><span style="font-size:18px;">&nbsp;w)&nbsp;&nbsp;</span></b><br />
+	</p><br />
+	<p class="MsoNormal" align="left" style="margin-left:18pt;text-indent:-18pt;background:#F8F8F8;"><br />
+		<b><span style="font-size:18px;">2.&nbsp;&nbsp;&nbsp;&nbsp;<br />
+{&nbsp;&nbsp;</span></b><br />
+	</p><br />
+	<p class="MsoNormal" align="left" style="margin-left:18pt;text-indent:-18pt;"><br />
+		<b><span style="font-size:18px;">3.&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;edge[cnt].w&nbsp;=&nbsp;w;&nbsp;&nbsp;</span></b><br />
+	</p><br />
+	<p class="MsoNormal" align="left" style="margin-left:18pt;text-indent:-18pt;background:#F8F8F8;"><br />
+		<b><span style="font-size:18px;">4.&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;edge[cnt].to&nbsp;=&nbsp;v;&nbsp;&nbsp;</span></b><br />
+	</p><br />
+	<p class="MsoNormal" align="left" style="margin-left:18pt;text-indent:-18pt;"><br />
+		<b><span style="font-size:18px;">5.&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;edge[cnt].next&nbsp;=&nbsp;head[u];&nbsp;&nbsp;</span></b><br />
+	</p><br />
+	<p class="MsoNormal" align="left" style="margin-left:18pt;text-indent:-18pt;background:#F8F8F8;"><br />
+		<b><span style="font-size:18px;">6.&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;head[u]&nbsp;=&nbsp;cnt++;&nbsp;&nbsp;</span></b><br />
+	</p><br />
+	<p class="MsoNormal" align="left" style="margin-left:18pt;text-indent:-18pt;"><br />
+		<b><span style="font-size:18px;">7.&nbsp;&nbsp;&nbsp;&nbsp;<br />
+}&nbsp;&nbsp;</span></b><br />
+	</p><br />
+</div><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><br /><br />
+<b><span style="font-size:18px;">初始化</span></b><b><span style="font-size:18px;">cnt = 0,</span></b><b><span style="font-size:18px;">这样</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">现在我们还是按照上面的图和输入来模拟一下</span></b><b><span style="font-size:18px;">:</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">edge[0].to =<br />
+2; &nbsp; &nbsp; edge[0].next = -1; &nbsp; &nbsp; &nbsp;head[1] = 0;</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">edge[1].to =<br />
+3; &nbsp; &nbsp; edge[1].next = -1; &nbsp; &nbsp; &nbsp;head[2] = 1;</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">edge[2].to =<br />
+4; &nbsp; &nbsp; edge[2],next = -1; &nbsp; &nbsp; &nbsp;head[3] = 2;</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">edge[3].to =<br />
+3; &nbsp; &nbsp; edge[3].next = 0; &nbsp; &nbsp; &nbsp; head[1] = 3;</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">edge[4].to =<br />
+1; &nbsp; &nbsp; edge[4].next = -1; &nbsp; &nbsp; &nbsp;head[4] = 4;</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">edge[5].to =<br />
+5; &nbsp; &nbsp; edge[5].next = 3; &nbsp; &nbsp; &nbsp; head[1] = 5;</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">edge[6].to =<br />
+5; &nbsp; &nbsp; edge[6].next = 4; &nbsp; &nbsp; &nbsp; head[4] = 6;</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">很明显</span></b><b><span style="font-size:18px;">,head[i]</span></b><b><span style="font-size:18px;">保存的是以</span></b><b><span style="font-size:18px;">i</span></b><b><span style="font-size:18px;">为起点的所有边中编号最大的那个</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">而把这个当作顶点</span></b><b><span style="font-size:18px;">i</span></b><b><span style="font-size:18px;">的第一条起始边的位置</span></b><b><span style="font-size:18px;">.</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">这样在遍历时是倒着遍历的</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">也就是说与输入顺序是相反的</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">不过这样不影响结果的正确性</span></b><b><span style="font-size:18px;">.</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">比如以上图为例</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">以节点</span></b><b><span style="font-size:18px;">1</span></b><b><span style="font-size:18px;">为起点的边有</span></b><b><span style="font-size:18px;">3</span></b><b><span style="font-size:18px;">条</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">它们的编号分别是</span></b><b><span style="font-size:18px;">0,3,5<br />
+&nbsp; </span></b><b><span style="font-size:18px;">而</span></b><b><span style="font-size:18px;">head[1] = 5</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">我们在遍历以</span></b><b><span style="font-size:18px;">u</span></b><b><span style="font-size:18px;">节点为起始位置的所有边的时候是这样的</span></b><b><span style="font-size:18px;">:</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">for(int<br />
+i=head[u];~i;i=edge[i].next)</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">那么就是说先遍历编号为</span></b><b><span style="font-size:18px;">5</span></b><b><span style="font-size:18px;">的边</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">也就是</span></b><b><span style="font-size:18px;">head[1],</span></b><b><span style="font-size:18px;">然后就是</span></b><b><span style="font-size:18px;">edge[5].next,</span></b><b><span style="font-size:18px;">也就是编号</span></b><b><span style="font-size:18px;">3</span></b><b><span style="font-size:18px;">的边</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">然后继续</span></b><b><span style="font-size:18px;">edge[3].next,</span></b><b><span style="font-size:18px;">也</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;">就是编号</span></b><b><span style="font-size:18px;">0</span></b><b><span style="font-size:18px;">的边</span></b><b><span style="font-size:18px;">,</span></b><b><span style="font-size:18px;">可以看出是逆序的</span></b><b><span style="font-size:18px;">.</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<b><b><span style="font-size:18px;"><br /><br />
+</span></b></b><br />
+</p><br />
+<p class="MsoNormal" align="left" style="background:white;"><br />
+	<img src="/attached/image/20140725/20140725081226_57586.jpg" alt="" /><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span style="font-size:18px;">&nbsp;</span></b><br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%A8%A1%E6%8B%9F%E8%B5%9B-2014%E6%9A%91%E6%9C%9F%E8%AE%AD%E7%BB%83'>模拟赛-2014暑期训练</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5476'>Submit</a>][<a href='problemstatus.php?id=5476'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5476");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

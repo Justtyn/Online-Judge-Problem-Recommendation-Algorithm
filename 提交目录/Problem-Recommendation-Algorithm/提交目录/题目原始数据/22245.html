@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?160183084" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 22245 --No Wormholes Were Harmed...</title><center><h2>22245: No Wormholes Were Harmed...</h2><span class=green>Time Limit: </span>40 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=22245'>Submit</a>][<a href='problemstatus.php?id=22245'>Status</a>][<a href='bbs.php?pid=22245'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=22245'>下载FPS40元</a>][<a onclick='$(this).load("cart.php?add=22245");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=22245'>下载测试数据40元</a>][20kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>As director of the Causality Infraction Agency, your primary objective is track down and arrest unscrupulous individuals attempting to alter the course of history.</p>
+<p>Although your mission briefings include the exact year that a time agent must travel to, the physics of time travel don't make it quite so simple. Time travel can only be done by moving through wormholes that connect two specific instances of time together. As a result, an agent must travel through several wormholes in sequence to reach his or her destination time. In addition, an agent may have to spend some time living in the past or future while waiting for the next wormhole to appear. Traveling through a wormhole also isn't as simple as it might seem: moving forward in time through a wormhole will instanteously age the user by a certain number of years and moving backwards through one will instanteously make the traveller slightly younger.</p>
+<p>Because the agency pays its agents based on how many years they've aged since joining the service, you are required to minimize the &quot;aging process&quot; as much as possible for every agent. Your goal therefore is to write a program that finds the optimal itinerary of wormhole jumps for each agent's mission and then reports the total number of years each agent will age after completing their assignment.</p>
+<p>For agency accounting purposes, the formulas for computing total years aged on a mission are as follows:</p>
+<p></p>
+<ul class="example">
+    <li>When starting from some year of <i>origin</i> and simply waiting until some <i>destination</i> year, the age a body accumulates in years equals:
+    <p align="center"><i>destination</i> - <i>origin</i></p>
+    <p>In other words, if you were currently in the year 1785 and had to wait until the year 1793, then you will have aged 8 years.</p>
+    </li>
+    <li>When traveling forward in time through a wormhole that connects one year of <i>departure</i> with a later year of <i>arrival</i>, then the number of years a body ages is equal to:
+    <p align="center">floor((<i>arrival</i> - <i>departure</i>) / 2)</p>
+    <p>Put in another way, you will age half the number of years (rounded down) you normally would have had you instead waited for the equivalent number of years to pass by. Note that when traveling over a small enough time difference, the years aged may be rounded down to zero for accounting purposes.</p>
+    </li>
+    <li>When traveling backward in time through a wormhole that connects one year of <i>departure</i> with an earlier year of <i>arrival</i>, then the number of years a body &quot;gains back&quot; by becoming younger is equal to:
+    <p align="center">floor((<i>departure</i> - <i>arrival</i>) / 4)</p>
+    In other words, you gain back a quarter of the difference between the two years (rounded down). Note that when traveling over a small enough time difference, the years &quot;gained back&quot; may be rounded down to zero for accounting purposes.</li>
+    <li>A wormhole that starts and ends at the same year is possible, but causes no     aging or time travel, and as such serves little purpose other than to     confound the scientists.</li>
+</ul>
+<p>Each dataset to this problem will contain a starting year from which all agents begin their travels and a list of mission assignments, one for each agent. Every mission assignment includes a final destination year that the agent must travel to. The mission can only be completed if the agent is able to make a round trip by traveling from the starting year to the mission's destination year and then traveling back to the initial starting year again. If such a round trip cannot be completed, then that particular mission is invalid. For the purposes of this problem, you also do not have to consider the maximum lifespan of any given agent. A mission is considered valid as long as a round trip is possible regardless of how high the count of years aged will be.</p></div><h2>Input</h2><div class=content><p>Input to this problem will begin with a line containing a single integer <i>N</i> (1 &le; <i>N</i> &le; 100) indicating the number of data sets. Each data set consists of the following components:</p>
+<ul>
+    <li>A line containing a single integer <i>W</i> (1 &le; <i>W</i> &le; 100) specifying the number of wormholes present for this dataset.</li>
+    <li>A series of <i>W</i> lines of the form &quot;<i>D</i> <i>A</i>&quot; (1 &le; <i>D</i>, <i>A</i> &le; 9999), each of which describes a single wormhole. The numbers <i>D</i> and <i>A</i> respectively specify the <i>departure</i> and <i>arrival</i> years of the wormhole's two endpoints in time. A wormhole is unidirectional allowing travel only from its departure year to its arrival year, but not vice-versa.</li>
+    <li>A line containing a single integer <i>S</i> (1 &le; <i>S</i> &le; 9999) which is the starting year for all agents.</li>
+    <li>A line containing a single integer <i>M</i> (1 &le; <i>M</i> &le; 100) indicating the number of missions to be analyzed.</li>
+    <li>A series of <i>M</i> lines, each containing a single integer <i>F</i> (1 &le; <i>F</i> &le; 9999) which specifies the final destination year for each of the <i>M</i> missions.</li>
+</ul>
+<br /></div><h2>Output</h2><div class=content><p>For each data set in the input, output the heading &quot;<tt>DATA SET #<i>k</i></tt>&quot; where <i>k</i> is 1 for the first data set, 2 for the second, and so on. Then print <i>M</i> lines showing the results of each of the <i>M</i> missions from the input and in the same relative order as the input. Each of the <i>M</i> lines should contain either a single integer indicating the number of years aged by that respective agent or the words &quot;<tt>IMPOSSIBLE</tt>&quot; if that particular mission cannot be completed (either because the destination is unreachable or a return trip is not possible).</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>1
+2
+2011 1956
+1975 2005
+2008
+3
+1969
+2012
+1982
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>DATA SET #1
+27
+IMPOSSIBLE
+42
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=2008'>2008</a>&nbsp;<a href='problemset.php?search=ACM'>ACM</a>&nbsp;<a href='problemset.php?search=ICPC'>ICPC</a>&nbsp;<a href='problemset.php?search=South'>South</a>&nbsp;<a href='problemset.php?search=Central'>Central</a>&nbsp;<a href='problemset.php?search=USA'>USA</a>&nbsp;<a href='problemset.php?search=Regional'>Regional</a>&nbsp;<a href='problemset.php?search=Programming'>Programming</a>&nbsp;<a href='problemset.php?search=Contest'>Contest</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=22245'>Submit</a>][<a href='problemstatus.php?id=22245'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=22245");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

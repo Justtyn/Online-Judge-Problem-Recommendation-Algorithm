@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1138060884" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5319 --覆盖牛棚-训练套题T4T1</title><center><h2>5319: 覆盖牛棚-训练套题T4T1</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>1&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=5319'>Submit</a>][<a href='problemstatus.php?id=5319'>Status</a>][<a href='bbs.php?pid=5319'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5319'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5319");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5319'>下载测试数据1元</a>][7668kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<b>1. </b><b>覆盖牛棚</b><b>[corral.pas/ c/cpp]</b> 
+</p>
+<p class="MsoNormal">
+	【问题描述】<span></span> 
+</p>
+<pre><span style="font-size:10.5pt;">奶牛们非常羞涩，他们要求<span>Farmer John</span>在他们的圆形牛棚周围建造围栏。牛棚的周长为<span>c(1 &lt;= C &lt;= 1,000,000,000)</span>，现在，<span>FJ</span>希望从一些有固定起点和终点的栏杆的集合里选出一些栏杆。<span></span></span></pre>
+<pre><span style="font-size:10.5pt;">栏杆<span> i </span>的起点可以被建造在一个整数位置<span> x_i(</span>相距围栏起点<span>i</span>个长度<span>) (0 &lt;= x_i &lt; C),</span></span></pre>
+<pre><span style="font-size:10.5pt;">并且，这个栏杆有一个整数长度<span>l_i(1 &lt;= l_i &lt;= C)</span>。<span></span></span></pre>
+<pre><span style="font-size:10.5pt;">FJ </span><span style="font-size:10.5pt;">希望最小化栏杆的数量，从而达到覆盖整个牛棚的外圈。<span></span></span></pre>
+<pre><span style="font-size:10.5pt;">考虑一个周长为<span>5</span>的牛棚，下图所示的是一些连接的线段，同样的两个点<span> '0'</span>表示牛棚上的同样的位置。<span></span></span></pre>
+<pre><span style="font-size:10.5pt;">下列有<span>3</span>个可以建造的栏杆：<span></span></span></pre>
+<pre><span style="font-size:10.5pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;">起点<span>&nbsp;&nbsp;&nbsp;&nbsp; </span>长度<span></span></span></pre>
+<pre><span style="font-size:10.5pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i&nbsp;&nbsp;&nbsp;&nbsp; x_i&nbsp;&nbsp;&nbsp;&nbsp; l_i</span></pre>
+<pre><span style="font-size:10.5pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 </span></pre>
+<pre><span style="font-size:10.5pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 </span></pre>
+<pre><span style="font-size:10.5pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 </span></pre>
+<pre><span style="font-size:10.5pt;">&nbsp;</span></pre>
+<pre><span style="font-size:10.5pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 1&nbsp;&nbsp; 2&nbsp;&nbsp; 3&nbsp;&nbsp; 4&nbsp;&nbsp; 0&nbsp;&nbsp; 1&nbsp;&nbsp; 2&nbsp;&nbsp; 3&nbsp; ... </span></pre>
+<pre><span style="font-size:10.5pt;">牛棚外圈<span>:&nbsp; +---+---+---+---+--:+---+---+---+- ...</span></span></pre>
+<pre><span style="font-size:10.5pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11111&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1111</span></pre>
+<pre><span style="font-size:10.5pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22222222&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22222222</span></pre>
+<pre><span style="font-size:10.5pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3333333333333333</span></pre>
+<pre><span style="font-size:10.5pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;|..................|</span></pre>
+<pre><span style="font-size:10.5pt;">&nbsp;</span></pre>
+<pre><span style="font-size:10.5pt;">&nbsp;</span></pre>
+<pre><span style="font-size:10.5pt;">如上所示，建造<span>2</span>号和<span>3</span>号栏杆可以覆盖整个牛棚外圈共<span>5</span>个单位长度。<span>FJ </span>认为不同栏杆之间可以相互重叠。<span></span></span></pre>
+<p class="MsoNormal">
+	【输入数据】<span></span> 
+</p>
+<pre><span style="font-size:10.5pt;">* </span><span style="font-size:10.5pt;">第一行<span> : </span>用空格隔开的两个整数<span>C</span>和<span>M </span>（<span>M&lt;=100000</span>）<span></span></span></pre>
+<pre><span style="font-size:10.5pt;">* </span><span style="font-size:10.5pt;">第二行到<span>M+1</span>行<span>: </span>第<span>i+1</span>行为两个用空格分开的整数<span> x_i</span>和<span>l_i</span></span></pre>
+<p class="MsoNormal">
+	【输出数据】<span></span> 
+</p>
+<pre><span style="font-size:10.5pt;">&nbsp;* </span><span style="font-size:10.5pt;">第一行<span>: </span>单独一个整数表示最少的围栏数，从而能够覆盖整个牛棚的外圈<span></span></span></pre>
+<p class="MsoNormal">
+	【输入样例】<span></span> 
+</p>
+<pre><span style="font-size:10.5pt;">5 3</span></pre>
+<pre><span style="font-size:10.5pt;">0 1</span></pre>
+<pre><span style="font-size:10.5pt;">1 2</span></pre>
+<pre><span style="font-size:10.5pt;">3 3</span></pre>
+<p class="MsoNormal">
+	【输出样例】<span></span> 
+</p>
+<p class="MsoNormal">
+	2
+</p></div><h2>Input</h2><div class=content><p class="MsoNormal">
+	<br />
+</p></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p class="MsoNormal"><br />
+	<b>1</b><b>．覆盖牛棚</b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;．算法分析：<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;本题可以用倍增思想去解决。首先，我们要把一些多余的栏杆去掉，对于栏杆i和栏<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;杆j,如果wood[i].x i≤wood[j].x i且wood[i].x i+wood[i].lii≥wood[j].x i+wood [j].1i，那么栏杆j被栏杆i完全覆盖，栏&nbsp;&nbsp;杆j是多余的，应该去掉，因为如果最后的最&nbsp;&nbsp;优方案里含有栏杆j，我们完全可以用栏杆i去替代它，结果不会变差。那么剩下的栏杆的形状如下所示：<br />
+</p><br />
+<p class="MsoNormal" align="center" style="text-align:center;"><br />
+	<br /><br />
+</p><br />
+<p class="MsoNormal" style="text-align:center;"><br />
+	&nbsp;<img src="http://jhyzh.acmclub.com/attached/image/20140313/20140313142842_74730.jpg" alt="" /> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;剩下的这些栏杆中，任意相邻的两个栏&nbsp;&nbsp;杆之间不会有空隙。设上图中，从上而下，四<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;根栏杆分别是a，b，c，d。我们通过分析还可以&nbsp;&nbsp;发现，对于栏杆a来说，它的后面可以连接栏 杆b或c。但显然连接c肯定不比连接b差，因为c的末端比b的末端要远。因此，对栏杆i来说，它后面紧跟着的栏杆肯定是末端点最远的栏杆j，当然栏杆j必须跟栏杆i能接得上，即栏杆i和栏杆j之间不能有空隙。我们用nex t[i]来表示紧跟在栏杆i后面的那根栏杆。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;分析至此，我们可以枚举第i根栏杆(1≤i≤n)为最优方案的第一根栏杆，然后，从第i根栏杆出发，向后扫描，直到遇到的栏杆与第i根栏杆的长度的差大于等于题目给出的牛棚的周长c，此时检查用到的栏杆数量能否更新答案。此种想法的时间复杂度是O (n^2)，显然会超时。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;能否优化呢?上述算法慢的原因在于：每次从第i根栏杆出发，都要向后一根接一根地扫描，耗费了大量的时间。其实我们可以尝试二分答案。从第i根栏杆出发，后面总共连接了x根栏杆，假设被连接的最后一根栏杆是j，如果第j根栏杆与第i根栏杆的长度的差大于牛棚的周长c，那么我们可以尝试减少x的值，否则，我们可以尝试增加x的值。这样二分下去，直到产生一个x才停下来，使得第i根栏杆后面如果总共连接x个栏杆，那么周长就大于等于c。如果第i根栏杆后面总共连接x一1个栏杆，那么周长就小于c。<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:21.75pt;"><br />
+	现在的问题就变成了：第i根栏杆后面连接的第x根栏杆到底是哪根栏杆?我们只有知道了这个，才能计算它们之间的长度差是否达到了牛棚的周长c，才能在二分答案时进行决策到底是减少x还是增加x。对于这个问题，我们可以用倍增思想来处理，我们用数组<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:21.75pt;"><br />
+	nex t[i][0．．k]在&nbsp;&nbsp;保存第i根栏杆后面连接的第2^k根栏杆分别是哪根栏杆，这样问题就解决了。这个步骤的时间复杂度是：O(NLogN)。<br />
+</p><br />
+<span>那么，枚举从栏杆i开始，再二分答案，总的时间复杂度还是：O(NLogN)。由于是一个环，我们可以复制多一份数据。</span></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%A8%A1%E6%8B%9F%E8%B5%9B-%E8%AE%AD%E7%BB%83%E5%A5%97%E9%A2%98'>模拟赛-训练套题</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5319'>Submit</a>][<a href='problemstatus.php?id=5319'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5319");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

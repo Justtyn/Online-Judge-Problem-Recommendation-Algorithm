@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?104833733" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5316 --打砖块-训练套题T3T2</title><center><h2>5316: 打砖块-训练套题T3T2</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>12&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='submitpage.php?id=5316'>Submit</a>][<a href='problemstatus.php?id=5316'>Status</a>][<a href='bbs.php?pid=5316'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5316'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5316");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5316'>下载测试数据1元</a>][2024kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><span id="__kindeditor_bookmark_start_0__"></span> 
+<p class="MsoNormal" align="center" style="margin-left:22.5pt;text-align:center;text-indent:-22.5pt;">
+	<b>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b><b>game.pas/c/cpp)</b> 
+</p>
+<p class="MsoNormal">
+	【问题描述】
+</p>
+<p class="MsoNormal">
+	&nbsp;&nbsp; 打砖块游戏规则如下：
+</p>
+<p class="MsoNormal">
+	&nbsp;&nbsp; 刚开始时有n行m列的砖块，有k发子弹，每次可以用一发子弹，打碎处于某一列最下面的一块砖，并且得到相应的得分。
+</p>
+<p class="MsoNormal">
+	&nbsp; 某些砖块在打碎后还可能得到一发子弹的奖励。最后当所有砖块都打碎了或者没有子弹了，游戏结束。
+</p>
+<p class="MsoNormal">
+	&nbsp; 在游戏开始前，就知道每一块砖的得分、有没有奖励子弹。现在要知道最大得分。
+</p>
+<p class="MsoNormal">
+	<span style="font-family:&quot;"><span></span><span>&nbsp;<img src="/attached/image/20140227/20140227194846_40972.bmp" alt="" /></span></span> 
+</p>
+<p>
+	<br />
+</p>
+<p class="MsoNormal">
+	【输入格式】
+</p>
+<p class="MsoNormal">
+	&nbsp; 第一行有3个正整数，n，m，k
+</p>
+<p class="MsoNormal">
+	&nbsp; 接下来有n行，每行的格式如下：
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	f1 c1 f2 c2 f3 c3...fm
+cm
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	其中fi为正整数，表示这一行的第i列的砖块的得分，ci为一个字符，Y表示有子弹奖励，N表示没有。
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	所有数与字符之间用一个空格隔开。
+</p>
+<p class="MsoNormal">
+	【输出格式】
+</p>
+<p class="MsoNormal">
+	&nbsp;一个正整数，表示最大的得分。
+</p>
+<p class="MsoNormal">
+	【输入样例】
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	3 4 2
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	9 N 5 N 1 N 8 N
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	5 N 5 Y 5 N 5 N
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	6 N 2 N 4 N 3 N
+</p>
+<p class="MsoNormal">
+	【输出样例】
+</p>
+<p class="MsoNormal">
+	&nbsp; 13
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	【问题规模】
+</p>
+<p class="MsoNormal">
+	&nbsp; 对于20%的数据，满足1&lt;=n,m&lt;=5,1&lt;=k&lt;=10,所有的字符c都为N
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	对于50%的数据，满足1&lt;=n,m&lt;=200,1&lt;=k&lt;=200,所有的字符c都为N
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	对于100%的数据，满足1&lt;=n,m&lt;=200,1&lt;=k&lt;=200,字符c可能为Y
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	对于100%的数据，所有的f值满足1&lt;=f&lt;=10000
+</p>
+<br /></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p class="MsoNormal" style="text-indent:15.75pt;"><br />
+	打砖块<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp; </span>【题目大意】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp; </span>给定<span>k</span>发子弹，要求得到最大的得分。在打碎某些砖块后，可能有一发子弹的奖励。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>【解法一】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>不考虑奖励的子弹，那么本题为一道简单的动态规划：<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:21.75pt;"><br />
+	设<span>b[i][j]</span>表示对着前<span>i</span>列的砖块打<span>j</span>发子弹，能达到的最大得分。<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:21.75pt;"><br />
+	考虑对着第<span>i</span>列发多少发子弹，可以得到状态转移方程为：<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:21.75pt;"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span><span>b[i][j]=max(b[i-1][j-k]+s[i][k])</span>，<span>&nbsp;&nbsp;&nbsp; (0</span>≤<span>k</span>，<span>k</span>≤<span> j</span>，<span>k</span>≤<span>n)</span> <br />
+</p><br />
+<p class="MsoNormal" style="text-indent:21.75pt;"><br />
+	其中<span>s[i][k]</span>表示对着第<span>i</span>列打<span>k</span>．发子弹的得分。这个数组可以在<span>O(nm)</span>时间内预处理出来。<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:21.75pt;"><br />
+	<span>&nbsp;</span>最终答案为<span>b[m][k]</span>。时间复杂度为<span>Ol(mnk)</span>。预计得分<span>50</span>。<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:21.75pt;"><br />
+	【解法二】<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:21.75pt;"><br />
+	<span>&nbsp;</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	解法一的缺陷在于没有考虑能否得到一发奖励的子弹。对于一个能打到的砖块，如果有奖励子弹，那么能打肯定打，因为打了以后，不仅有得分，而且子弹也没有减少。所以解法一中的<span>b[i][j]</span>的定义稍作修改，<span>b[i][j]</span>表示对着前<span>i</span>列的砖块打<span>j</span>发自己的子弹<span>(</span>不包括奖励的子弹<span>)</span>，能达到的最大得分。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>考虑对着第<span>i</span>列发多少发子弹，同样可以得到状态转移方程为：<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp; </span><span>b[i][j]=ma x(b[i-1][j-k]+s[i][k]&nbsp;&nbsp;&nbsp;&nbsp; (0</span>≤<span>k</span>，<span>k</span>≤<span>j</span>，<span>k</span>≤<span>n)</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>其中<span>s[i][k]</span>表示对着第<span>i</span>列打<span>k</span>发子弹的得分，如果在这个过程中有奖励子弹，那么奖励的子弹也对着这一列打。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>这又产生了一个新的问题，对着第<span>i</span>列的砖打了<span>k</span>发子弹后，可能这一列现在处于最<br />
+</p><br />
+<p class="MsoNormal"><br />
+	下方的砖是有奖励子弹的，那么这一块砖的得分算不算在<span>s[i][k]</span>呢<span>?</span> <br />
+</p><br />
+<p class="MsoNormal" style="text-indent:21.0pt;"><br />
+	这需要分情况讨论：够最后一发子弹打的那一列不能算，而其余的都要算上。因为对<br />
+</p><br />
+<p class="MsoNormal"><br />
+	于别的列，可以借这最后一发的子弹先打砖块，然后用奖励的子弹归还。所以<span>b</span>数组要改<br />
+</p><br />
+<p class="MsoNormal"><br />
+	变两个：<span>by[i][j]</span>表示对着前<span>i</span>列的砖块打<span>j</span>发自己的子弹，且最后一发子弹不是对着前<span>i</span>列发，能达到的最大得分；<span>by[i][j]</span>表示对着前<span>i</span>列的砖块打<span>j</span>发自己的子弹，且最后一发子弹对着前<span>i</span>列发，能达到的最大得分。<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:21.0pt;"><br />
+	递推的时候要讨论当前对着第<span>i</span>列的子弹是不是最后发的。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>时间复杂度仍为<span>O(mnk)</span>。预计得分<span>100</span>。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>【出题人的意图】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>本题是这次模拟赛的第<span>2</span>题。因为基本上每年的<span>NO I P</span>都有一道动态规划的题目，所<br />
+</p><br />
+<p class="MsoNormal"><br />
+	以决定本题考动态规划。开始时想到了没有奖励子弹的模型，后来想加大一点难度，所以<br />
+</p><br />
+<p class="MsoNormal"><br />
+	就改成了奖励一发子弹的情形。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>解法二中，如果没有分情况考虑，那么会失去一部分的分数。如果认为一定算在内，那<br />
+</p><br />
+<p class="MsoNormal"><br />
+	么失<span>50</span>分，如果认为一定不算在内，那么失<span>40</span>分。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;</span> <br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%A8%A1%E6%8B%9F%E8%B5%9B-%E8%AE%AD%E7%BB%83%E5%A5%97%E9%A2%98'>模拟赛-训练套题</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5316'>Submit</a>][<a href='problemstatus.php?id=5316'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5316");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

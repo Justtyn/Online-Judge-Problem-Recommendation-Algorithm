@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?334939573" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5318 --收费站-训练套题T3T4</title><center><h2>5318: 收费站-训练套题T3T4</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>13&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='submitpage.php?id=5318'>Submit</a>][<a href='problemstatus.php?id=5318'>Status</a>][<a href='bbs.php?pid=5318'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5318'>下载FPS3元</a>][<a onclick='$(this).load("cart.php?add=5318");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5318'>下载测试数据3元</a>][2480kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="margin-left:22.5pt;text-align:center;text-indent:-22.5pt;">
+	<b><span style="font-size:16px;">4.</span></b><b><span style="font-size:16px;">收费站（</span></b><b><span style="font-size:16px;">cost.pas/c/cpp</span></b><b><span style="font-size:16px;">）</span></b><b></b> 
+</p>
+<p class="MsoNormal">
+	【问题描述】
+</p>
+<p class="MsoNormal">
+	&nbsp; 某个国家有n个城市，编号为1，2，3，...n,这个国家修建了m条双向的公路。每条公路连接两个城市。沿着某天公路，开车从一个城市到另一个城市，需要花费一定的汽油。
+</p>
+<p class="MsoNormal">
+	&nbsp; 开车每经过一个城市，都会被收取一定的费用（包括起点和终点城市）。所有收费站都在城市中，在城市间的公路上没有任何的收费站。
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	现在要开车从城市u到城市v（1&lt;=u,v&lt;=n）,汽车最多可以装下s升的汽油。在出发的时候，车的油箱是满的，并且在路上不能加油。
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	在能到达目的地的前提下，收费站交费中最多的一次最少是多少。
+</p>
+<p class="MsoNormal">
+	【输入格式】
+</p>
+<p class="MsoNormal">
+	&nbsp; 第一行5个正整数，n,m,u,v,s
+</p>
+<p class="MsoNormal">
+	&nbsp;&nbsp;接下来n行，每行一个正整数fi，表示城市i收费站的收费
+</p>
+<p class="MsoNormal">
+	&nbsp; 再接下来m行，每行3个正整数，ai，bi，ci（1&lt;=ai,bi&lt;=n）,表示城市ai和bi之间有一条公路，ci表示该公路花费的汽油量。
+</p>
+<p class="MsoNormal">
+	【输出格式】
+</p>
+<p class="MsoNormal">
+	&nbsp; 一个整数，表示交费最多的一次的最小值。
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	如果无法到达目的地，输出-1.
+</p>
+<p class="MsoNormal">
+	【输入样例】
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	4 4 2 3 8
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	8
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	5
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	6
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	10
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	2 1 2
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	2 4 1
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	1 3 4
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	3 4 3
+</p>
+<p class="MsoNormal">
+	【输出样例】
+</p>
+<p class="MsoNormal">
+	&nbsp; 8
+</p>
+<p class="MsoNormal">
+	【问题规模】
+</p>
+<p class="MsoNormal">
+	&nbsp; 对于60%的数据，满足n&lt;=200,m&lt;=10000,s&lt;=200
+</p>
+<p class="MsoNormal">
+	&nbsp; 对于100%的数据，满足n&lt;=10000,m&lt;=50000,s&lt;=1000000000
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	对于100%的数据，满足ci&lt;=1000000000,fi&lt;=1000000000,
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	可能有两条边连接着相同的城市。
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p class="MsoNormal"><br />
+	收费站<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>【题目大意】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>给定一个无向图，求从<span>u</span>到<span>v</span>，在总长不超过<span>s</span>的情况下，在所有经过的点中，<span>f</span>值的<br />
+</p><br />
+<p class="MsoNormal"><br />
+	最大值的最小值是多少。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>【解法一】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>动态规划。设<span>b[i][j]</span>表示从<span>u</span>出发，用<span>i</span>升汽油，到点<span>j</span>，在所有的交费中，最大值是<br />
+</p><br />
+<p class="MsoNormal"><br />
+	多少。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>然后按<span>b[0]</span>，<span>b[1]</span>，<span>b[2]</span>…．，<span>b[s]</span>的顺序递推。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>程序比较简单，可以不用链表，只需用一个二维数组保存这个图。本做法应该算是一<br />
+</p><br />
+<p class="MsoNormal"><br />
+	个性价比很高的做法。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>时间复杂度为<span>O(n</span>奉<span>n</span>木<span>s)</span>。预计得分为<span>60</span>。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>【解法二】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp; </span>先二分答案，把原题变成判定性问题。对于某一个值，要判断能不能做到就容易多了。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	可以先将收费超过当前答案的点去掉，然后求<span>u</span>到<span>v</span>的最短路。如果这个最短路不大于<span>s</span>，说明此答案可以做到，否则不行。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>二分答案的时间为<span>O(log maxlongint)</span>。求最短路用经过堆优化的<span>d i j k s t r a</span>，时间为<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>O(m*logn)</span>。总时间为<span>O(m*logn*log maxlongint)</span>。预计得分<span>100</span>。<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>【出题人的意图】<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp;&nbsp; </span>本题考查最短路算法，但是果直接考最短路，又显得太直接，所以就饶饶弯子，需要二分答案，再求最短路。本题的编程复杂度比较高，图需用链表保存，<span>d i jk s t ra</span>算法需要用堆进行优化。所以笔者在做测试数据的时候，设计了<span>6</span>个数据较小的点，让动态规划的做法能得<span>60</span>分。如果选手在比赛场上，没有足够的时间做此题，或者是对二分答案、最短路算法、堆不是很熟悉，那么可以考虑写一个简单的动态规划，拿<span>60</span>分也是一个不错的选择。另外，如果先二分答案，但是<span>d i j k s t ra</span>算法并没有使用堆进行优化，可以得<span>70</span>～<span>8 0</span>分。<br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%A8%A1%E6%8B%9F%E8%B5%9B-%E8%AE%AD%E7%BB%83%E5%A5%97%E9%A2%98'>模拟赛-训练套题</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5318'>Submit</a>][<a href='problemstatus.php?id=5318'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5318");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

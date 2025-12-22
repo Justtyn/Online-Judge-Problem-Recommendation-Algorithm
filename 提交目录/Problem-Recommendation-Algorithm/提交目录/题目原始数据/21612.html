@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?904982745" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 21612 --判断三角形形状</title><center><h2>21612: 判断三角形形状</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>56&nbsp;&nbsp;<span class=green>Solved: </span>39<br>[<a href='submitpage.php?id=21612'>Submit</a>][<a href='problemstatus.php?id=21612'>Status</a>][<a href='bbs.php?pid=21612'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=21612'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=21612");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=21612'>下载测试数据1元</a>][36kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><span style="font-size:14px;">　　输入三角形三边的边长，判断三角形的形状。</span><br />
+<span style="font-size:14px;">　　锐角三角形</span><span style="font-size:14px;">输出数字1</span><br />
+<span style="font-size:14px;">　　直角三角形输出数字2</span> 
+<p>
+	<span style="font-size:14px;">　　钝角三角形<span style="font-size:14px;">输出数字3</span></span> 
+</p>
+<blockquote>
+	<p>
+		<br />
+	</p>
+</blockquote></div><h2>Input</h2><div class=content><blockquote>
+	<span style="font-size:14px;">只有一行，三个正整数，空格隔开。</span>（输入保证数据正确性）<br />
+</blockquote></div><h2>Output</h2><div class=content><span style="font-size:14px;"></span> 
+<blockquote>
+	一行，输出相应数字。<br />
+</blockquote></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>3 4 5
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>2
+</span></pre><h2>HINT</h2>
+<div class=content><p><p><br />
+	参考程序(C++)：<br />
+</p><br />
+<p><br />
+	<img src="data:image/png;base64,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" alt="" /> <br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%85%A5%E9%97%A8%E9%A2%98-2.%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84'>入门题-2.分支结构</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=21612'>Submit</a>][<a href='problemstatus.php?id=21612'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=21612");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

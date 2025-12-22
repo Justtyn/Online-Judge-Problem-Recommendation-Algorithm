@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?670938953" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 24736 --【USACO2013JAN】栅栏油漆{silver题1}</title><center><h2>24736: 【USACO2013JAN】栅栏油漆{silver题1}</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>8&nbsp;&nbsp;<span class=green>Solved: </span>5<br>[<a href='submitpage.php?id=24736'>Submit</a>][<a href='problemstatus.php?id=24736'>Status</a>][<a href='bbs.php?pid=24736'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=24736'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=24736");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=24736'>下载测试数据1元</a>][2436kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<b><span style="font-size:16px;">2. </span></b><b><span style="font-size:16px;">栅栏油漆</span></b><b><span style="font-size:16px;">{silver</span></b><b><span style="font-size:16px;">题</span></b><b><span style="font-size:16px;">1}</span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">【问题描述】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp;&nbsp; 农民约翰在奶牛贝西的身上栓了一个油漆桶，并绑上一个刷子，命令他沿着栅栏的边缘跑动，以此来给栅栏油漆。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">&nbsp; 栅栏看成一条一维的线段，贝西一开始位于位置0，他将收到N条命令 (1 &lt;= N &lt;= 100,000)，每条命令形如："10 L":向左移动10个单位，"15 R"：向右移动15个单位。对于给定的命令序列，农民约翰想知道，多少个单位长度的栅栏至少被刷了K次油漆。贝西最多会离开开始位置1,000,000,000个单位。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">【文件输入】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">第一行，两个整数N和K。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">接下来2到N+1行，描述N条命令</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">【文件输出】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">一个整数，表示被至少刷K次的栅栏的数量。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">【输入样例】 </span><span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">6 2</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">2 R</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">6 L</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">1 R</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">8 L</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">1 R</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">2 R</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">【输出样例】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">6</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:16px;">【样例说明】</span> 
+</p>
+<span style="font-size:16px;">6个单位长度的栅栏至少被刷2次油漆，分别是[-11,-8], [-4,-3],[0,2].</span></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p class="MsoNormal" style="text-indent:10.5pt;"><br />
+	按输入，初始化出区间，排序后，离散化，构成新的区间，被记录区间的长度。<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:10.5pt;"><br />
+	线段树维护区间被覆盖次数。<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:10.5pt;"><br />
+	另巧妙姐夫，区间左端点标记<span>+1</span>，尾端点标记<span>-1</span>，将所有端点重新到大排序。从左往右扫描，累计标记的值，若某端点大于等于<span>K</span>，则在答案中累加该端点和前一端点间的值。<br />
+</p><br />
+<p class="MsoNormal" style="text-indent:10.5pt;"><br />
+	<p class="MsoNormal" align="left"><br />
+		<b>Analysis: Painting the Fence by Jonathan Paulson</b><br />
+	</p><br />
+	<div class="MsoNormal" align="center" style="text-align:center;"><br />
+		<hr /><br />
+	</div><br />
+	<p class="MsoNormal" align="left"><br />
+		If we knew the area Bessie was going to<br />
+paint were small, this would be easy; we could just explicitly keep track of<br />
+how many coats of paint each unit of fence had. Unfortunately, we don't.<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		But...Bessie only stops on at most 100,001 different<br />
+points (one per move). So these are the only "interesting<br />
+coordinates". In particular, any two points between two "interesting<br />
+coordinates" will have the same number of coats of paint (this idea is a<br />
+generally useful trick（技巧） called "coordinate compression（坐标压缩，离散化）", and it's worth knowing). So it's<br />
+enough to keep track of the number of coats of paint along each of these<br />
+100,002 segments.<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		This still might not be fast enough; each move could<br />
+cover all 100,002 segments, so this algorithm still looks quadratic（平方级）. So we can apply another useful trick,<br />
+which is just keeping track of the deltas introduced by each of Bessie's moves.<br />
+Each of Bessie's moves is a segment (on our coordinate-compressed line), and at<br />
+the beginning of the segment we write down "+1 coats of paint" and at<br />
+the end of the segment we write down "-1 coats of paint". Then if we<br />
+scan from left to right, we can add up the deltas as we go, and keep track of<br />
+the number of coats on each segment.<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		This gives an O(n lg n) solution (to "scan from left<br />
+to right", we need to sort the segments). It was a bit of a winding<br />
+logical path to get here, so the final solution may not be quite clear. Take a<br />
+look at Travis Hance's solution, which presents the idea quite elegantly: (and<br />
+remember coordinate compression and deltas-for-segments for later!)<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		#include &lt;cstdio&gt;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		#include &lt;algorithm&gt;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		using namespace std;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		#define NMAX 100005<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		struct Event {<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int<br />
+x;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int<br />
+inc;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool<br />
+operator&lt;(Event const&amp; e) const {<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return<br />
+x &lt; e.x;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		};<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		Event events[2*NMAX];<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		int main() {<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; freopen("paint.in","r",stdin);<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; freopen("paint.out","w",stdout);<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int n, k;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; scanf("%d", &amp;n);<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; scanf("%d",<br />
+&amp;k);<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int<br />
+x = 0;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for<br />
+(int i = 0; i &lt; n; i++) {<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int<br />
+dist;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; scanf("%d",<br />
+&amp;dist);<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char<br />
+c;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do<br />
+{ c = fgetc(stdin); } while (c != 'L' &amp;&amp; c != 'R');<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int<br />
+x1 = x + dist * (c == 'L' ? -1 : 1);<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; events[2*i].x<br />
+= min(x, x1);<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; events[2*i].inc<br />
+= 1;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; events[2*i+1].x<br />
+= max(x, x1);<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; events[2*i+1].inc<br />
+= -1;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x<br />
+= x1;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sort(events,<br />
+events + (2*n));<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int<br />
+nCoats = 0;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int<br />
+answer = 0;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for<br />
+(int i = 0; i &lt; 2*n; i++) {<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if<br />
+(i &gt; 0 &amp;&amp; nCoats &gt;= k) {<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; answer<br />
++= events[i].x - events[i-1].x;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nCoats<br />
++= events[i].inc;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;<br />
+	</p><br />
+	<p class="MsoNormal" align="left"><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("%d\n",<br />
+answer);<br />
+	</p><br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=USACO-USACO%E6%9C%88%E8%B5%9B'>USACO-USACO月赛</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=24736'>Submit</a>][<a href='problemstatus.php?id=24736'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=24736");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?10522956" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 28147 --Traditional BINGO</title><center><h2>28147: Traditional BINGO</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>1&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='submitpage.php?id=28147'>Submit</a>][<a href='problemstatus.php?id=28147'>Status</a>][<a href='bbs.php?pid=28147'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=28147'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=28147");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=28147'>下载测试数据1元</a>][24kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>Traditional BINGO is played in person in a large hall. Players meet at the hall, pay a fee to get in, then the games begin. A night of BINGO consists of many BINGO games played continuously, one after another.</p>
+<p>A single BINGO game proceeds like this: Each player has a number of BINGO cards (players can usually play any number of cards). Each BINGO card has 5 rows and 5 columns thus providing 25 spaces.</p>
+<p>The columns are labeled from left to right with the letters: 'B', 'I', 'N', 'G', 'O'. With one exception (the center space is &quot;free&quot;) the spaces in the card are assigned values as follows:</p>
+<ul>
+    <li>Each space in the 'B' column contains a number from 1 - 15.</li>
+    <li>Each space in the 'I' column contains a number from 16 - 30.</li>
+    <li>Each space in the 'N' column contains a number from 31 - 45.</li>
+    <li>Each space in the 'G' column contains a number from 46 - 60.</li>
+    <li>Each space in the 'O' column contains a number from 61 - 75.</li>
+</ul>
+<p>Furthermore, a number can appear only once on a single card.</p>
+<p>Here's a sample BINGO card:</p>
+<p>
+<table border="1" cellpadding="5">
+    <tbody>
+        <tr align="center">
+            <td><font size="5">B</font></td>
+            <td><font size="5">I</font></td>
+            <td><font size="5">N</font></td>
+            <td><font size="5">G</font></td>
+            <td><font size="5">O</font></td>
+        </tr>
+        <tr align="center">
+            <td>10</td>
+            <td>17</td>
+            <td>39</td>
+            <td>49</td>
+            <td>64</td>
+        </tr>
+        <tr align="center">
+            <td>12</td>
+            <td>21</td>
+            <td>36</td>
+            <td>55</td>
+            <td>62</td>
+        </tr>
+        <tr align="center">
+            <td>14</td>
+            <td>25</td>
+            <td><font size="1">FREE<br />
+            SPACE</font></td>
+            <td>52</td>
+            <td>70</td>
+        </tr>
+        <tr align="center">
+            <td>7</td>
+            <td>19</td>
+            <td>32</td>
+            <td>56</td>
+            <td>68</td>
+        </tr>
+        <tr align="center">
+            <td>5</td>
+            <td>24</td>
+            <td>34</td>
+            <td>54</td>
+            <td>71</td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<p>The number of unique BINGO cards is very large and can be calculated with this equation:</p>
+<pre>
+// the B, I, G, and O columns * the N column
+(15 * 14 * 13 * 12 * 11) ^ 4 * (15 * 14 * 13 * 12)
+</pre>
+<p>While perhaps interesting to a statistician, the number of possible BINGO cards has nothing to do with player's</p>
+<a href="http://acm.student.cs.uwaterloo.ca/%7Eacm00/050205/E.html#CHANCES">chances of winning</a>
+<p>.</p>
+<p>You will note that there are 75 possible BINGO numbers:</p>
+<blockquote>
+<pre>
+B1, B2, B3, ... B15, I16, I17, I18, ... I30, N31, N32, ... O74, O75.
+</pre>
+</blockquote>
+<p>Each of these numbers is represented by a ball in a large rotating bin. Each ball is painted with its unique BINGO number. An announcer spins the bin, reaches in a selects a ball, and a announces it to the room. The players check all of their cards to see if that number appears on their card. If it is, they mark it.  A player may mark the centre FREE SPACE at any time.</p>
+<p>When a player has a BINGO (5 marks in a row, column, or diagonal), he or she calls out BINGO. The game pauses while the card is verified. If indeed a winner, the game stops and a new game begins. If the card wasn't a winner, the game proceeds where it left off. Each BINGO game proceeds until someone wins (there's always a winner).</p>
+<p>The first line of input contains <i>n</i>, the number of BINGO games that you will analyze.  <i>n</i> game descriptions follow.  Each game description specifies a card to be played followed by a sequence of BINGO numbers.  You are to determine, when the holder of the card will win the game, assuming the player has just this one card and there are no other players.</p>
+<p>Each card description consists of five lines, giving the numbers on the card row by row.  All but the 3rd row contain 5 numbers; the 3rd contains 4 because of the free space.  One or more lines follow that represent some ordering of all 75 bingo numbers.  All bingo numbers are simply integers between 1 and 75 - the one-letter prefix is redundant.  For each game, ouput the line &quot;BINGO after <i>n</i> numbers announced&quot; as appropriate. <a name="CHANCES">
+<h4>Chances of Winning</h4>
+</a></p>
+<p>Every BINGO game has a winning card, so a player's chances of winning depend on the number of cards in the game and how many cards s/he is playing. For example, if a player has 12 cards in a game with 1200 cards,  the chances of winning for that player is 1 in 100.</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>1
+10 17 39 49 64
+12 21 36 55 62
+14 25 52 70
+7 19 32 56 68
+5 24 34 54 71
+1 2 3 4 5 6 7 8 9 10
+11 12 13 14 15 16 17 18 19 20
+21 22 23 24 25 26 27 28 29 30
+31 32 33 34 35 36 37 38 39 40
+41 42 43 44 45 46 47 48 49 50
+51 52 53 54 55 56 57 58 59 60
+61 62 63 64 65 66 67 68 69 70
+71 72 73 74 75
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>BINGO after 14 numbers announced
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=Waterloo'>Waterloo</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=28147'>Submit</a>][<a href='problemstatus.php?id=28147'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=28147");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

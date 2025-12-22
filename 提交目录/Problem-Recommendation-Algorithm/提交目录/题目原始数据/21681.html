@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1212542475" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 21681 --求圆周率的值</title><center><h2>21681: 求圆周率的值</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>23&nbsp;&nbsp;<span class=green>Solved: </span>22<br>[<a href='submitpage.php?id=21681'>Submit</a>][<a href='problemstatus.php?id=21681'>Status</a>][<a href='bbs.php?pid=21681'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=21681'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=21681");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=21681'>下载测试数据1元</a>][8kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>
+	<span style="font-size:16px;">　　求圆周率的近似值，精确1/n<sup>2</sup>到10<sup>-10</sup></span> 
+</p>
+<p>
+	<span style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="data:image/png;base64,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" alt="" height="63" width="379" /><br />
+</span> 
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content><blockquote>
+	<span style="font-size:14px;">一行，输出圆周率，小数点后保留3位。</span> 
+</blockquote></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%85%A5%E9%97%A8%E9%A2%98-3.%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84'>入门题-3.循环结构</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=21681'>Submit</a>][<a href='problemstatus.php?id=21681'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=21681");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?303795112" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5308 --牛宫-训练套题T1T2</title><center><h2>5308: 牛宫-训练套题T1T2</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>19&nbsp;&nbsp;<span class=green>Solved: </span>10<br>[<a href='submitpage.php?id=5308'>Submit</a>][<a href='problemstatus.php?id=5308'>Status</a>][<a href='bbs.php?pid=5308'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5308'>下载FPS5元</a>][<a onclick='$(this).load("cart.php?add=5308");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5308'>下载测试数据5元</a>][1508kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<b><span style="font-size:16px;">2. </span></b><b><span style="font-size:16px;">牛宫</span></b><b><span style="font-size:16px;">[long.pas/
+long.c/ long.cpp]</span></b> 
+</p>
+<p class="MsoNormal">
+	【问题描述】<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span>AP</span>神牛准备给自己盖一座很华丽的矩形宫殿。于是，他看中了一块<span>N*M</span>的矩形空地。空地中每个格子都有自己的海拔高度。<span>AP</span>想让他的宫殿的平均海拔在海平面之上<span>&gt;=0</span>（假设海平面的高度是<span>0</span>，平均数都会算吧？）。而且，<span>AP</span>希望他的宫殿尽量大，能够容纳更多的人来膜拜他。请问<span>AP</span>的宫殿最后会有多大。
+</p>
+<p class="MsoNormal">
+	【输入数据】<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	第一行为<span>N</span>和<span>M</span>。之后<span>N</span>行，每行<span>M</span>个数，描述的空地的海拔。
+</p>
+<p class="MsoNormal">
+	【输出数据】<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	输出一行<span>,</span>表示宫殿最大面积。<span></span> 
+</p>
+<p class="MsoNormal">
+	【输入样例】<span></span> 
+</p>
+<pre><span style="font-size:10.5pt;font-family:&quot;">3 2</span></pre>
+<pre><span style="font-size:10.5pt;font-family:&quot;">4 0</span></pre>
+<pre><span style="font-size:10.5pt;font-family:&quot;">-10 8</span></pre>
+<pre><span style="font-size:10.5pt;font-family:&quot;">-2 -2</span></pre>
+<p class="MsoNormal">
+	【输出样例】<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	4
+</p>
+<p class="MsoNormal">
+	【数据规模】<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	对于<span>30%</span>的数据，<span>N,M</span>≤<span>50;</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	对于<span>100%</span>的数据，<span>N,M</span>≤<span>200</span>；<span></span> 
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p><br />
+	<br /><br />
+</p><br />
+<div><br />
+	<b>题意简述 </b> <br />
+</div><br />
+<div><br />
+	<b> </b> <br />
+</div><br />
+<p><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 求一个矩阵中平均数大等于0的最大子矩阵的面积。<br />
+</p><br />
+<p><br />
+	<br /><br />
+</p><br />
+<div class="O"><br />
+	<div><br />
+		<b>解题思路 </b> <br />
+	</div><br />
+	<div><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 首先，平均数大于等于0等价于和大于等于0，这样便于处理。<br />
+	</div><br />
+	<div><br />
+		方法1：O（N^6）枚举获得部分分。<br />
+	</div><br />
+	<div><br />
+		方法2：针对问题特点改进<br />
+	</div><br />
+	<div><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二维问题常常可以转为一维来处理，对于一维问题就比较容易思考。<br />
+	</div><br />
+	<div><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 注意到题目要求的是“和”，因此如果将连续若干行的每列分别相加求和变为一行，并不会影响到求解。<br />
+	</div><br />
+	<div><br />
+	</div><br />
+</div><br />
+<div class="O"><br />
+	<div><br />
+		枚举连续行的组合，将二维矩阵压缩为了一维的数列。即将问题转化为在一行数中找出连续和大等于0的最长的一段。<br />
+	</div><br />
+	<div><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如何快速求得一行数中连续和大等于0的最长的一段？<br />
+	</div><br />
+	<div><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 常用的连续和计算方法：是先预处理出前i个数的和sum[i]，则sum[i,j]=sum[j]-sum[i-1]。<br />
+	</div><br />
+	<div><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 由于条件是sum[i,j]&gt;=0，不妨尝试把sum数组计算出来，再对它进行研究。<br />
+	</div><br />
+</div><br />
+<div class="O"><br />
+	<div><br />
+		假设已知最优区间是从第一个数开始，我们要找出它的右边界。则以i为右边界的区间的和即为sum[i]。易知当sum[i]&gt;=0时状态合法，而i最大则为最优。<br />
+	</div><br />
+	<div><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 当然，最优区间不一定是从第一个数开始的。假设最优区间的左边界为t，则此时以i为右边界的区间的和即为sum[i]-sum[t-1]，枚举i与t，从其中找出大等于0的最长的区间（长度为i-t+1）。<br />
+	</div><br />
+	<div><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 尽管效率提高至o(n^4)，但还是不够优？没有用好题目中只需大等于0的条件。<br />
+	</div><br />
+	<div><br />
+	</div><br />
+</div><br />
+<div class="O"><br />
+	<div><br />
+		再一次注意观察sum数组。考虑固定右界i，如果左界t与t+1的sum值均为合法解，则t+1的合法解时必然不如t优（因为左边界不断往右移动，而右边界不变，区间变短）。反之，对于固定的左界t，只需找到sum(i)&gt;=sum(t)的最大右界值即可，这就具有了某种意义上的单调性。能否利用呢？<br />
+	</div><br />
+	<div><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 将sum按照从大到小排序（注意需要保留原始位置的信息），并且设定一个头指针指向排序后的sum数组队头。枚举左边界，即每次移动左边界后，右界通过检查指针指向的sum值。<br />
+	</div><br />
+	<div><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果指向的sum值减去左界的sum值合法了，则不断向后移，直到相减&lt;0。<br />
+	</div><br />
+	<div><br />
+	</div><br />
+</div><br />
+<div class="O"><br />
+	<div><br />
+		在移动过程中找出原始位置最后面的，看是否能够更新最优值。（注意需要将区间长度乘以压缩的行数才是面积）至此，问题得到比较好的解决。<br />
+	</div><br />
+	<div><br />
+		<b>&nbsp;&nbsp; </b><b>算法简述 </b> <br />
+	</div><br />
+	<div><br />
+		&nbsp;&nbsp; 1、枚举连续行，压缩为一维 ；<br />
+	</div><br />
+	<div><br />
+		&nbsp;&nbsp; 2、在一维区间中求出sum数组（sum[i]=sum[i-1]+num[i],sum[0]=0），并且记下每个sum值的原始位置；<br />
+	</div><br />
+	<div><br />
+		&nbsp;&nbsp; 3、将sum快排（注意需要保留原始位置的信息），形成队列，设head=1；<br />
+	</div><br />
+	<div><br />
+		&nbsp;&nbsp; 4、从0至n-1枚举left，while sum[head]-sum[left]&gt;=0 do inc(head)。并且记下过程中最大的原始位置值，看是否能够更新最优解。<br />
+	</div><br />
+</div><br />
+<p><br />
+	<br /><br />
+</p><br />
+<p><br />
+	<br /><br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%A8%A1%E6%8B%9F%E8%B5%9B-%E8%AE%AD%E7%BB%83%E5%A5%97%E9%A2%98'>模拟赛-训练套题</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5308'>Submit</a>][<a href='problemstatus.php?id=5308'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5308");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

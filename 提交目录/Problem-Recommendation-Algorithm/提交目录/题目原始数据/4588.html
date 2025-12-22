@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?64941705" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 4588 --D、保龄球计分</title><center><h2>4588: D、保龄球计分</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=4588'>Submit</a>][<a href='problemstatus.php?id=4588'>Status</a>][<a href='bbs.php?pid=4588'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=4588'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=4588");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=4588'>下载测试数据1元</a>][36kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>&nbsp;保龄球是一种持球者把球朝着球道上排成正三角形的十个球瓶用滚动的方式击倒的运动。</p>
+<div>保龄球记分单位是局，每局共有十个计分格。</div>
+<div>除了第十个计分格，每个计分格最多有两次投球的机会。</div>
+<div>若第一次投球就打倒全部球瓶，那该次的记分格就记strike（全倒，用X记录），结束该计分格。</div>
+<div>如果击出strike，则该计分格的分数为10分再加上后面两次丢球所打倒的球瓶个数。</div>
+<div>若第一次没有全倒，则可以再投第二次，第二次投球结束后，结束该计分格。第二次投球可能出现下面三种情况：</div>
+<div>一、把剩下的球瓶都击倒就记spare（补中，用/表示），如第一次打中3个，第二次将余下的7个球瓶打倒，则记分格记为3/；第一次打中0个，第二次全中则记为0/。如果击出spare，则该计分格的分数为10分再加上后面一次丢球所打倒的球瓶个数。</div>
+<div>二、只击倒一部分球，如第一次打中0个球瓶，第二次打中9个，则记09。</div>
+<div>三、一个也没有击中，记录符号为-，如第一次打中8个球瓶，第二次打中0个，则记8-。</div>
+<div>凡是没有补中，则该计分格的所得分数为两次丢球共击倒瓶子个数。</div>
+<div>第十个计分格与前九个计分格不同：</div>
+<div>若首次丢球打出全中，则可以追加两次丢球，追加的第一次丢球若打出全中，则追加的第二次丢球依然可以尝试打十个球。追加的第一次若投球没有打出全中，则追加的第二次只能尝试打第一次追加丢球后剩下的瓶子。</div>
+<div>若打出补中，则只可以追加一次丢球。</div>
+<div>若没有补中，第十个计分格得分为两次丢球共击倒球瓶个数。</div>
+<div>追加丢的球仅仅是为了第十个计分格的得分可以像之前的计分格得分的计算方法得到，不单独计分。</div>
+<div>你的任务就是根据一局击球的记录串，求得该局比赛的最终总分，就是每个计分格的得分总和。</div></div><h2>Input</h2><div class=content><p>&nbsp;输入若干行，每行为一个运动员在一局比赛中投球的符号记录。保证输入的记录串是合法的，不必再检查，串中只会出现0到9的数字、减号（-）、左斜杠（/）、大写X，按次给出，不分格子。输入的串长度最多为21。当输入为END时，结束程序。</p></div><h2>Output</h2><div class=content><p>&nbsp;对应每一行输入的记录串，输出一个小于等于300的正整数，为一局比赛总得分。</p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>XXXXXXXXXXXX
+0-0-0-0-0-0-0-0-0-0-
+0-0-0-0-0-0-0-0-0-XXX
+7/3-0-0-0-0-0-0-0-0-
+END</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>300
+0
+30
+16</span></pre><h2>HINT</h2>
+<div class=content><p><p>&nbsp;要注意&ldquo;次&rdquo;与&ldquo;格&rdquo;的区别。</p><br />
+<p><img src="http://eol.bnuep.com/eol/common/privateres/download.jsp?fileid=108304&resid=4721" alt="" /></p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=2012%E5%B9%B4%E6%A0%A1%E5%86%85%E8%B5%9B'>2012年校内赛</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=4588'>Submit</a>][<a href='problemstatus.php?id=4588'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=4588");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

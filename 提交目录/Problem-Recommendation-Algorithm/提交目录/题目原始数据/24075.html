@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?354200412" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 24075 --极品飞车</title><center><h2>24075: 极品飞车</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=24075'>Submit</a>][<a href='problemstatus.php?id=24075'>Status</a>][<a href='bbs.php?pid=24075'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=24075'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=24075");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=24075'>下载测试数据1元</a>][20kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><div style="text-indent:21.0pt;">为了即将到来的MARS汽车大奖赛，彤彤正在精心检修她的赛车, 除此以外，她还想再买一些配件来提升赛车的性能。如果给她的赛车增添一个重量为M (1 &lt;= M &lt;= 1,000)的配件，则动力可以提升F(1 &lt;= F &lt;= 1,000,000)个单位。赛车配件商店现有N (1 &lt;= N &lt;= 20) 种配件，分别标上序号1..N。彤彤可以随意挑选其中的任意一种或多种，不过同种配件只能买1个。</div>
+<div style="text-indent:21.0pt;">第 P_i 个配件能为赛车增加动力 F_i (1 &lt;= F_i &lt;= 1,000,000) ，但是赛车的重量将M_i (1 &lt;= M_i &lt;= 1,000)。牛顿第二定律告诉我们F = MA, F为动力, M是重量, A是加速度. 如果彤彤想最大限度提升它的赛车的性能（且增加重量最小），她需要选择哪些配件。</div>
+<div style="text-indent:21.0pt;">赛车目前的配置是F=1500 ，M=100 。有四种配件可供选择，它们的基本配置如下：</div>
+<div style="text-indent:21.0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i &nbsp; F_i &nbsp; &nbsp;M_i</div>
+<div style="text-indent:21.0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 250&nbsp;&nbsp; 25</div>
+<div style="text-indent:21.0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 150&nbsp;&nbsp;&nbsp; 9</div>
+<div style="text-indent:21.0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp; 120&nbsp;&nbsp;&nbsp; 5</div>
+<div style="text-indent:21.0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp; 200&nbsp;&nbsp;&nbsp; 8</div>
+<div style="text-indent:21.0pt;">如果添加第2个配件，那么加速度则为</div>
+<div style="text-indent:21.0pt;">(1500+150)/(100+9)=1650/109=15.13761。</div>
+<div style="text-indent:21.0pt;">下面是一个图表,显示了4种配件选或不选所有可能情况下的加速度（在第1列中，1表示添加配件，0表示不添加配件）。</div>
+<div style="text-indent:21.0pt;">配件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 配置&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;配置&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div style="text-indent:21.0pt;">1234&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; M &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F/M</div>
+<div style="text-indent:21.0pt;">0000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp; 15.0000</div>
+<div style="text-indent:21.0pt;">0001&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1700&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 108&nbsp;&nbsp;&nbsp; 15.7407</div>
+<div style="text-indent:21.0pt;">0010&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1620&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 105&nbsp;&nbsp;&nbsp; 15.4286</div>
+<div style="text-indent:21.0pt;">0011&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1820&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 113&nbsp;&nbsp;&nbsp; 16.1062</div>
+<div style="text-indent:21.0pt;">0100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1650&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 109&nbsp;&nbsp;&nbsp; 15.1376</div>
+<div style="text-indent:21.0pt;">0101&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1850&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;117&nbsp;&nbsp;&nbsp; 15.8120</div>
+<div style="text-indent:21.0pt;">0110&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1770&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 114&nbsp;&nbsp;&nbsp; 15.5263</div>
+<div style="text-indent:21.0pt;">0111&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1970&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 122&nbsp;&nbsp;&nbsp; 16.1475 &lt;-- highest F/M</div>
+<div style="text-indent:21.0pt;">1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1750&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 125&nbsp;&nbsp;&nbsp; 14.0000</div>
+<div style="text-indent:21.0pt;">1001&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1950&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 133&nbsp;&nbsp;&nbsp; 14.6617</div>
+<div style="text-indent:21.0pt;">1010&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1870&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 130&nbsp;&nbsp;&nbsp; 14.3846</div>
+<div style="text-indent:21.0pt;">1011&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2070&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 138&nbsp; &nbsp;&nbsp;15.0000</div>
+<div style="text-indent:21.0pt;">1100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1900&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 134&nbsp;&nbsp;&nbsp; 14.1791</div>
+<div style="text-indent:21.0pt;">1101&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 142&nbsp;&nbsp;&nbsp; 14.7887</div>
+<div style="text-indent:21.0pt;">1110&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 139&nbsp;&nbsp;&nbsp; 14.5324</div>
+<div style="text-indent:21.0pt;">1111&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2220&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 147&nbsp;&nbsp;&nbsp; 15.1020</div>
+<div style="text-indent:21.0pt;">如上图所示，最佳的配置组合方案是 2, 3, 4。</div>
+<p></p></div><h2>Input</h2><div class=content><p>* 第 1 行: 3个用空格隔开的整数 F, M, N<br />
+* 第 2..N+1 行: 第 i+1 行包含2个用空格隔开的整数： F_i，M_i</p>
+<p></p></div><h2>Output</h2><div class=content><p>* 若干行，表示需要添加的配件编号，每行1个。注意请把这些编号按照从小到大的顺序输出。如果不需要添加配件，则输出'NONE' 。</p>
+<p></p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>1500 100 4
+250 25
+150 9
+120 5
+200 8
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>2
+3
+4
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search='></a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=24075'>Submit</a>][<a href='problemstatus.php?id=24075'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=24075");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?828212537" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5313 --计数-训练套题T2T3</title><center><h2>5313: 计数-训练套题T2T3</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>5&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='submitpage.php?id=5313'>Submit</a>][<a href='problemstatus.php?id=5313'>Status</a>][<a href='bbs.php?pid=5313'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5313'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5313");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5313'>下载测试数据1元</a>][84kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<b><span style="font-size:16px;">3.</span></b><b><span style="font-size:16px;">计数</span></b><b> <span style="font-size:16px;">[DigitalCounter.pas/ c/cpp]</span></b> 
+</p>
+<p class="MsoNormal">
+	【问题描述】<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	我们有一个<span>N</span>位数字的电子表，当时间到达<span>10^N-1</span>时，下一秒就归<span>0</span>。下面我们给出数字<span>0 </span>到<span> 9</span>的模拟图。<span></span> 
+</p>
+<pre><span style="color:windowtext;">&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp; +---+&nbsp;&nbsp; +---+&nbsp;&nbsp; +&nbsp;&nbsp; +&nbsp;&nbsp; +---+</span></pre>
+<pre><span style="color:windowtext;">&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |</span></pre>
+<pre><span style="color:windowtext;">&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp; +---+&nbsp;&nbsp; +---+&nbsp;&nbsp; +---+&nbsp;&nbsp; +---+</span></pre>
+<pre><span style="color:windowtext;">&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</span></pre>
+<pre><span style="color:windowtext;">&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp; +---+&nbsp;&nbsp; +---+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp; +---+</span></pre>
+<pre><span style="color:windowtext;">&nbsp;</span></pre>
+<pre><span style="color:windowtext;">+---+&nbsp;&nbsp; +---+&nbsp;&nbsp; +---+&nbsp;&nbsp; +---+&nbsp;&nbsp; +---+</span></pre>
+<pre><span style="color:windowtext;">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |</span></pre>
+<pre><span style="color:windowtext;">+---+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp; +---+&nbsp;&nbsp; +---+&nbsp;&nbsp; +&nbsp;&nbsp; +</span></pre>
+<pre><span style="color:windowtext;">|&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |</span></pre>
+<pre><span style="color:windowtext;">+---+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp; +---+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp; +---+</span></pre>
+<p class="MsoNormal" style="text-indent:15.75pt;">
+	对于每个数字，相邻两个<span>+</span>之间会有一根电子管，当显示该数字时，这些电子管就会发亮。如上图所示：数字<span>0</span>到<span>9</span>，它们的电子管数量分别是：<span>6</span>、<span>2</span>、<span> 5</span>、<span> 5</span>、<span> 4</span>、<span> 5</span>、<span> 6</span>、<span> 3</span>、<span> 7</span>、<span> 5</span>。<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	设现在的时刻是<span>X, </span>那么可以算出该时有多少根电子管是亮的。比如：现在时刻是：<span>99</span>，那么共有<span>5 + 5= 10</span>根电子管是亮的。假如从现在时刻开始，再过<span>Y</span>秒后，时刻显示为<span>Z, </span>我们的问题是：求最小的<span>Y</span>，使得时刻<span>Z</span>发亮的电子管数量与时刻<span>X</span>发亮的电子管数量相等。如：现在<span>X = 99 </span>，那么再过<span>Y = 5 </span>秒后<span>, </span>时刻变成了<span>Z = 04, </span>而时刻<span>Z</span>发亮的电子管数量<span> = 6 + 4 = 10</span>。于是<span>Y = 5</span>就是你要求的数。<span></span> 
+</p>
+<p class="MsoNormal">
+	【输入数据】<span></span> 
+</p>
+<p class="MsoNormal">
+	第一行：一个整数<span>N</span>，表示电子表是<span>10^N</span>进制的。<span>1 &lt;= N &lt;= 15</span>。<span></span> 
+</p>
+<p class="MsoNormal">
+	对于<span>30%</span>数据，<span>N &lt; 7.</span> 
+</p>
+<p class="MsoNormal">
+	第二行：一个整数<span>X, </span>表示现在的时刻，可能有前导<span>0</span>。<span>X</span>有<span>N</span>位数字。<span></span> 
+</p>
+<p class="MsoNormal">
+	【输出数据】<span></span> 
+</p>
+<p class="MsoNormal">
+	一行：最小的整数<span>Y, </span>表示从现在<span>X</span>时刻开始，再过<span>Y</span>秒，得到的时刻<span>Z</span>发亮的电子管数量与时刻<span>X</span>发亮的电子管数量相等。<span></span> 
+</p>
+<p class="MsoNormal">
+	【输入样例】<span></span> 
+</p>
+<p class="MsoNormal">
+	3
+</p>
+<p class="MsoNormal">
+	007
+</p>
+<p class="MsoNormal">
+	【输出样例】<span></span> 
+</p>
+<p class="MsoNormal">
+	11
+</p>
+<p class="MsoNormal">
+	【样例说明】<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:10.5pt;">
+	因为数字<span>007</span>有<span>6+6+3
+=15</span>根电子管发亮，所以过<span>11</span>秒后，电子表显示数字<span>018</span>时，才能满足发亮的电子管数量相等。<span>018</span>时刻发亮的电子管数量<span> = 6 + 2 + 7 = 15</span> 
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p class="MsoNormal"><br />
+	<b>计数<span> DigitalCounter </span></b> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+数字<span>0</span>到<span>9</span>，它们的电子管数量分别是：<span>6</span>、<span>2</span>、<span> 5</span>、<span> 5</span>、<span> 4</span>、<span> 5</span>、<span> 6</span>、<span> 3</span>、<span> 7</span>、<span> 5</span>。<br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+设现在的时刻是<span>X, </span>那么可以算出该时有多少根电子管是亮的。<span> </span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+假如从现在时刻开始，再过<span>Y</span>秒后，时刻显示为<span>Z, </span>我们的问题是：求最小的<span>Y</span>，使得时刻<span>Z</span>发亮的电子管数量与时刻<span>X</span>发亮的电子管数量相等。<br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+统计一个数<span>X</span>有多少根电子管是亮的很容易<span></span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+如果每次<span>1</span>秒增加，模拟现实过程，则因为最多有<span>15</span>位数，显然要超时。<span>(1 &lt;= N &lt;= 15)</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+怎样做呢？<span><br /><br />
+</span>二分法？<span><br /><br />
+</span>找规律？<span><br /><br />
+</span>递推或<span>DP</span>？<span></span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+没有单调性，不能二分。<span></span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+找规律也好像不可能。<span></span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+递推之类的？<span><br /><br />
+</span>不能按时间，那样会超时<span><br /><br />
+</span>按什么呢？<span></span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+题目中的其它可能<span>“</span>变量<span>”</span>：<span><br /><br />
+1</span>）数<span>X</span>的位数<span>len---15</span>位<span><br /><br />
+2</span>）亮的电子管个数<span>light---</span>也不大<span>&lt;=15*7</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+设函数<span>f(a)</span>表示数<span>a</span>的有多少电子管是亮的。<span></span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+初始数是<span>X</span>，则要找<span>Y</span>，使<span>f(Y)=f(X)</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+假设<span>Y&gt;X</span>，则<span>Y</span>尽量小：<span><br /><br />
+1</span>）开头数<span>dig</span>尽量小<span><br /><br />
+3</span>）开头数也一样？比较第二位数<span><br /><br />
+…..</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+问题与长度、开头数、电子管数的判断有关。<span></span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+工具函数<span>g( len,&nbsp; light) </span>判断问题。（没<span>dig?</span>）<br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>g(<br />
+len, light) </span>函数推算：<span></span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>g(len,<br />
+light) = or&nbsp; g(len-1,light-f(i) )&nbsp; i=0~9</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span><br /><br />
+</span>即开头数字是<span>0~9</span>中任何一个成立都可以。<span></span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+显然个<span>g</span>数组比较容易<span>DP</span>出来。<br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>g(<br />
+len, light) </span>函数推算：<span></span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;g[0,0]:=true;</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for i:=1 to N do</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for j:=1 to 120 do</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for k:=0 to 9 do</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g[ i,j ] := g[i,j] or g[i-1,</span><span> </span><span>j - c[k] ];</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+有了<span>g( len, light) </span>要求最接近<span>X</span>的<span>Y</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+先看<span>Y&gt;X</span>的情况<span>:</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+考察例子：<span>X =98675&nbsp; f(x) = 26</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp; 1</span>）先看最后一位：<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp; y<br />
+= 98676~98679&nbsp; </span>看有没有<span>f(y)=26</span>的<br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp; 2</span>）再看第二位：<span></span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp;&nbsp; y =9868*~9869*&nbsp;&nbsp; </span>如果有<span>f(y)=26</span>，再定<span>*</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span>&nbsp; 3</span>）同理看<span> y=987**~989** </span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+即先从低位到高位，从小到大，先看能否有一个类似：<span> 988**</span>成立，再推算最小的数<span>**</span>。<span></span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+什样推算？<span><br /><br />
+</span>例如<span>: 988**</span>中，如果<span>**</span>还要<span>7</span>个电子管发亮，则只要从高位到低位试，看：<span>0*~9*</span>那些可行，比如<span>1*</span>可行，则看<span>*</span>中电子管为<span>7-f(1)=7-2=5</span>的，即<span>0~9</span>中选最小的电子管是<span>5</span>的数字<span>2</span>即可。最后答案为<span>98812</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>Y&lt;=X</span>的情况只要推算最小的<span>*****</span>即可。<br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>function getBig( var len, dig<br />
+:integer) :boolean;</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>begin</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fx:=0;</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for i:=1&nbsp;<br />
+to N do&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span>从低位到高位<br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fx := fx + c[ d[ i ]&nbsp; ];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+//</span>原<span>X</span>的前<span>i</span>位电子管数<br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp; &nbsp;&nbsp;for j:=d[ i ]+1 to 9<br />
+do&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;//</span>比原<span>X</span>第<span>i</span>位大的数，从小到大<br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;if (fx&gt;=c[j]) and (g[<br />
+i-1, fx - c[ j ] ] ) then </span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin&nbsp; len:=i; dig:=j;&nbsp; exit( true);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span>找到最小的<br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit (false);</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>end;</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>procedure getMin(len,<br />
+fx:integer);</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>begin</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;for i:=len downto 1 do&nbsp;&nbsp;&nbsp; //</span>从高位到低位<br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;begin</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for j:=0 to 9 do&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span>尽量小数字<br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp; (fx&gt;=c[j]) and (g[ i -1, fx - c[j] ] )<br />
+then </span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp; &nbsp;&nbsp;ans[ i ] := j;</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp; &nbsp;&nbsp;fx := fx-c[j];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span>后面还有多少电子管<br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>&nbsp;&nbsp;&nbsp;&nbsp;end;</span> <br />
+</p><br />
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt;"><br />
+	n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>end;</span> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>procedure calc();</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>var&nbsp;<br />
+len, dig :integer;</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>begin</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;<br />
+ans:=d;</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;<br />
+if getBig(len,dig) then</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;<br />
+begin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span></b><b>如果在<span>&gt;X</span></b><b>的<span>Y</span></b><b>，即不“环绕”<span></span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+ans[len]:=dig;</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+getMin(len-1, fx-c[dig]);</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; yy:=0;</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; for i:=N downto 1 do yy := yy*10 + ans[i];</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Y:= yy - X;</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;<br />
+end</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;<br />
+else &nbsp;begin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span></b><b>如果“环绕”了<span></span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; getMin(N, fx);&nbsp;&nbsp; //</span></b><b>求一个尽量小的<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yy:=0; Y:=1;</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; for i:=N downto&nbsp; 1 do begin </span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yy := yy*10 + ans[i];</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y := Y*10;&nbsp;&nbsp;&nbsp; //</span></b><b>求<span>10^N</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; end;</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Y:= Y-X + yy;</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>&nbsp;&nbsp;&nbsp;&nbsp;<br />
+end;</span></b> <br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span>end;</span></b> <br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%A8%A1%E6%8B%9F%E8%B5%9B-%E8%AE%AD%E7%BB%83%E5%A5%97%E9%A2%98'>模拟赛-训练套题</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5313'>Submit</a>][<a href='problemstatus.php?id=5313'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5313");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

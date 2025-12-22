@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1389189475" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5097 --FBI树-NOIP2004PJT3</title><center><h2>5097: FBI树-NOIP2004PJT3</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>17&nbsp;&nbsp;<span class=green>Solved: </span>13<br>[<a href='submitpage.php?id=5097'>Submit</a>][<a href='problemstatus.php?id=5097'>Status</a>][<a href='bbs.php?pid=5097'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5097'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5097");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5097'>下载测试数据1元</a>][84kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><h3 style="text-align:center;font-family:'Microsoft Yahei';background-color:#F5F5F5;">
+	<span style="font-size:16px;">FBI树</span> 
+</h3>
+<h3 style="text-align:center;font-family:'Microsoft Yahei';background-color:#F5F5F5;">
+	<span style="font-size:16px;">(</span><span style="font-size:16px;">fbi.pas/c/cpp</span><span style="font-size:16px;">)</span><span style="font-size:16px;"></span><br />
+</h3>
+<h3 style="font-family:'Microsoft Yahei';background-color:#F5F5F5;">
+	题目描述
+</h3>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	&nbsp; 我们可以把由“<span>0”</span>和“<span>1”</span>组成的字符串分为三类：全“<span>0”</span>串称为<span>B</span>串，全“<span>1”</span>串称为<span>I</span>串，既含“<span>0”</span>又含“<span>1”</span>的串则称为<span>F</span>串。
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>FBI</span>树是一种二叉树<span>[1]</span>，它的结点类型也包括<span>F</span>结点，<span>B</span>结点和<span>I</span>结点三种。由一个长度为<span>2N</span>的“<span>01”</span>串<span>S</span>可以构造出一棵<span>FBI</span>树<span>T</span>，递归的构造方法如下：
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>1) T</span>的根结点为<span>R</span>，其类型与串<span>S</span>的类型相同；
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>2)&nbsp;</span>若串<span>S</span>的长度大于<span>1</span>，将串<span>S</span>从中间分开，分为等长的左右子串<span>S1</span>和<span>S2</span>；由左子串<span>S1</span>构造<span>R</span>的左子树<span>T1</span>，由右子串<span>S2</span>构造<span>R</span>的右子树<span>T2</span>。
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	现在给定一个长度为<span>2N</span>的“<span>01”</span>串，请用上述构造方法构造出一棵<span>FBI</span>树，并输出它的后序遍历<span>[2]</span>序列。
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>[1]&nbsp;</span>二叉树：二叉树是结点的有限集合，这个集合或为空集，或由一个根结点和两棵不相交的二叉树组成。这两棵不相交的二叉树分别称为这个根结点的左子树和右子树。
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span>[2]&nbsp;</span>后序遍历：后序遍历是深度优先遍历二叉树的一种方法，它的递归定义是：先后序遍历左子树，再后序遍历右子树，最后访问根。
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<br />
+</p>
+<h3 style="font-family:'Microsoft Yahei';background-color:#F5F5F5;">
+	输入格式
+</h3>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	输入文件<span>fbi.in</span>的第一行是一个整数<span>N</span>（<span>0 &lt;= N &lt;= 10</span>），第二行是一个长度为<span>2N</span>的“<span>01”</span>串。
+</p>
+<h3 style="font-family:'Microsoft Yahei';background-color:#F5F5F5;">
+	输出
+</h3>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	输出文件<span>fbi.out</span>包括一行，这一行只包含一个字符串，即<span>FBI</span>树的后序遍历序列。
+</p>
+<h3 style="font-family:'Microsoft Yahei';background-color:#F5F5F5;">
+	样例输入
+</h3>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span style="font-family:'Lucida Console';">3<br />
+10001011<br />
+</span> 
+</p>
+<h3 style="font-family:'Microsoft Yahei';background-color:#F5F5F5;">
+	样例输出
+</h3>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span style="font-family:'Lucida Console';">IBFBBBFIBFIIIFF</span> 
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;background-color:#F5F5F5;">
+	<span style="font-family:'Lucida Console';"><br />
+</span> 
+</p>
+<span id="isycs" style="font-family:'Microsoft Yahei';font-size:14px;line-height:28px;background-color:#F5F5F5;"> 
+<p>
+	<br />
+</p>
+</span></div><h2>Input</h2><div class=content><p style="font-family:'Microsoft Yahei';font-size:14px;">
+	对于40%的数据，N &lt;= 2；
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	对于全部的数据，N &lt;= 10。
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<br />
+</p>
+<div>
+</div></div><h2>Output</h2><div class=content><p style="font-family:'Microsoft Yahei';font-size:14px;">
+	<span style="background-color:#F5F5F5;">//该题题解因故不能加入提示中，故初次昨天略过此处</span>
+</p>
+<p style="font-family:'Microsoft Yahei';font-size:14px;">
+	第三题：fbi；
+</p>
+<div style="text-align:center;">
+	<span style="line-height:1.5;">&nbsp;</span><img src="http://jhyzh.acmclub.com/attached/image/20131205/20131205150149_20458.bmp" alt="" />
+</div>
+<span>【算法分析】</span><br />
+<span>&nbsp; &nbsp; 此题的后序遍历适合用递归算法完成。由题目可知，输入数据给出的字符为所要遍历的fbi树的叶结点代码，又因为字符串的长度为2的整数次幂，故此fbi树为完全二叉树。由于题中明确规定：子符串中的字符都是‘0’，为B串；都是‘1’，为I串；既有‘0’又有‘1’，为F串。即：二叉树的子结点都是B，父结点为B；子结点都是I，父结点为I；既有I又有B，父结点为F。因此，根据树的子结点可以求出父结点。我们要做的是根据子结点后序遍历二叉树。基本算法为：</span><br />
+<span>procedure bianli（x，y：integer）；//遍历过程；x，y：为子结点在数组a中的位置。</span><br />
+<span>&nbsp;begin</span><br />
+<span>&nbsp; if x=y then 输出叶结点 &nbsp; &nbsp; &nbsp; &nbsp; //结束递归条件，结点为一个字符。</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else begin</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;求出父结点；</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;遍历左子树； &nbsp;&nbsp;</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;遍历右子树；</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;输出父结点；</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end；</span><br />
+<span>&nbsp;end； &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //递归算法，详情请参阅程序清单。</span><br />
+<span>【数据结构】</span><br />
+<span>var a:array[1..10000]of '0'..'1';</span><br />
+<span>【程序清单】</span><br />
+<span>program fbi;</span><br />
+<span>var a:array[1..10000]of '0'..'1';</span><br />
+<span>&nbsp; &nbsp; n,i,l:integer;</span><br />
+<span>&nbsp; &nbsp; f1,f2:text;</span><br />
+<span>&nbsp; &nbsp; treeb,treei:boolean;</span><br />
+<span>&nbsp; &nbsp; tree:char;</span><br />
+<span>procedure bianli(x,y:integer); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {递归过程，x,y为所要遍历的树的叶结点在数组a中位置}</span><br />
+<span>&nbsp;begin</span><br />
+<span>&nbsp; if x=y then case a[x] of</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'0':write(f2,'B');</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'1':write(f2,'I');</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{输出叶结点}</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else begin</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;bianli(x,x+(y-x+1) div 2-1); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{遍历左子树}</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;bianli(x+(y-x+1)div 2,y); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {遍历右子树}</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;treei:=false;treeb:=false;</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;for i:=x to y do if a[i]='0' then treeb:=true else treei:=true; {求出树的父结点}</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if treei and treeb then tree:='F'</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else begin</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if treei then tree:='I';</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if treeb then tree:='B' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{输出父结点}</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;end;</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;write(f2,tree);</span><br />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end</span><br />
+<span>&nbsp;end;</span><br />
+<span>begin</span><br />
+<span>&nbsp;assign(f1,'fbi.in'); reset(f1); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {输入文件名"fbi,in"}</span><br />
+<span>&nbsp;assign(f2,'fbi.out');rewrite(f2); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{输出文件名"fbi.out"}</span><br />
+<span>&nbsp;readln(f1,n);l:=1;</span><br />
+<span>&nbsp;for i:=1 to n do l:=l*2;</span><br />
+<span>&nbsp;for i:=1 to l do read(f1,a[i]); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {读入数据,l为字符串长度}</span><br />
+<span>&nbsp;bianli(1,l);writeln(f2);</span><br />
+<span>&nbsp;close(f1); close(f2)</span><br />
+<span>end.</span>
+<div>
+	<span><br />
+</span>
+</div></div><h2>HINT</h2>
+<div class=content><p><div><br />
+	<br /><br />
+</div></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=NOIP%E5%8E%9F%E9%A2%98-NOIP2004'>NOIP原题-NOIP2004</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5097'>Submit</a>][<a href='problemstatus.php?id=5097'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5097");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

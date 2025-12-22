@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?788385913" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 25575 --乐乐的礼物</title><center><h2>25575: 乐乐的礼物</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>2&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='submitpage.php?id=25575'>Submit</a>][<a href='problemstatus.php?id=25575'>Status</a>][<a href='bbs.php?pid=25575'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=25575'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=25575");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=25575'>下载测试数据1元</a>][112kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content>&nbsp;
+<p class="MsoNormal">
+	<b><span style="font-size:12pt;font-family:宋体;">问题描述：</span></b><b><span style="font-size:12pt;"></span></b>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:12pt;"><span>&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:12pt;font-family:宋体;">圣诞节到了，乐乐所在的班准备搞一个圣诞晚会，晚会的其中一个环节是全班同学互送礼物。已知每个同学都准备了一些钱来送礼物，而这些钱将会被平均分给那些将收到他的礼物的人。有些人准备了较多的钱，有些人准备了较少的钱。现在乐乐想知道晚会结束后哪些同学收到的礼物的总价值最大（包含无法送出的钱）。</span><span style="font-size:12pt;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-size:12pt;font-family:宋体;">输入格式：</span></b><b><span style="font-size:12pt;"></span></b>
+</p>
+<p class="MsoNormal" style="text-indent:24pt;">
+	<span style="font-size:12pt;font-family:宋体;">第</span><span style="font-size:12pt;">1</span><span style="font-size:12pt;font-family:宋体;">行一个整数</span><span style="font-size:12pt;">n</span><span style="font-size:12pt;font-family:宋体;">，表示乐乐所在的班的人数（</span><span style="font-size:12pt;">2&lt;=n&lt;=100</span><span style="font-size:12pt;font-family:宋体;">）；</span><span style="font-size:12pt;"></span>
+</p>
+<p class="MsoNormal" style="text-indent:24pt;">
+	<span style="font-size:12pt;font-family:宋体;">第</span><span style="font-size:12pt;">2..n+1</span><span style="font-size:12pt;font-family:宋体;">行（</span><span style="font-size:12pt;">n</span><span style="font-size:12pt;font-family:宋体;">行），按班里的学号顺序给出每个同学的姓名。（姓名只包含大写或小写字母，姓名的长度不超过</span><span style="font-size:12pt;">10</span><span style="font-size:12pt;font-family:宋体;">个字母）；</span><span style="font-size:12pt;"></span>
+</p>
+<p class="MsoNormal" style="text-indent:24pt;">
+	<span style="font-size:12pt;font-family:宋体;">第</span><span style="font-size:12pt;">n+2..2*n+2</span><span style="font-size:12pt;font-family:宋体;">行（</span><span style="font-size:12pt;">n</span><span style="font-size:12pt;font-family:宋体;">行），按学号顺序给出每个同学送礼物的信息：第一个是整数</span><span style="font-size:12pt;">m(0&lt;=m&lt;=5000)</span><span style="font-size:12pt;font-family:宋体;">，表示该同学准备用来送礼的钱；第二个是整数</span><span style="font-size:12pt;">k(0&lt;=k&lt;=20)</span><span style="font-size:12pt;font-family:宋体;">，表示该同学准备把钱平均分给</span><span style="font-size:12pt;">k</span><span style="font-size:12pt;font-family:宋体;">个好朋友（给每个朋友的钱都是整数，并尽量全部用完，剩下无办法再分的钱自己保留）；接着是</span><span style="font-size:12pt;">k</span><span style="font-size:12pt;font-family:宋体;">个姓名，每个姓名之间用一个空格分开，表示要分给哪</span><span style="font-size:12pt;">k</span><span style="font-size:12pt;font-family:宋体;">个朋友。</span><span style="font-size:12pt;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-size:12pt;font-family:宋体;">输出格式：</span></b><b><span style="font-size:12pt;"></span></b>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:12pt;"><span>&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:12pt;font-family:宋体;">输出文件有</span><span style="font-size:12pt;">n</span><span style="font-size:12pt;font-family:宋体;">行，按最后的钱数从大到小的顺序输出每个同学的姓名和钱数。如果钱数相同的按学号顺序从小到大输出。</span><span style="font-size:12pt;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-size:12pt;font-family:宋体;">输入样例：</span></b><b><span style="font-size:12pt;"></span></b>
+</p>
+<p class="MsoNormal" style="text-align:left;" align="left">
+	<span style="font-size:12pt;font-family:宋体;">5</span>
+</p>
+<p class="MsoNormal" style="text-align:left;" align="left">
+	<span style="font-size:12pt;font-family:宋体;">Dave</span>
+</p>
+<p class="MsoNormal" style="text-align:left;" align="left">
+	<span style="font-size:12pt;font-family:宋体;">laura</span>
+</p>
+<p class="MsoNormal" style="text-align:left;" align="left">
+	<span style="font-size:12pt;font-family:宋体;">owen</span>
+</p>
+<p class="MsoNormal" style="text-align:left;" align="left">
+	<span style="font-size:12pt;font-family:宋体;">vick</span>
+</p>
+<p class="MsoNormal" style="text-align:left;" align="left">
+	<span style="font-size:12pt;font-family:宋体;">amr</span>
+</p>
+<p class="MsoNormal" style="text-align:left;" align="left">
+	<span style="font-size:12pt;font-family:宋体;">200 3 laura owen vick</span>
+</p>
+<p class="MsoNormal" style="text-align:left;" align="left">
+	<span style="font-size:12pt;font-family:宋体;">500 1 Dave</span>
+</p>
+<p class="MsoNormal" style="text-align:left;" align="left">
+	<span style="font-size:12pt;font-family:宋体;">150 2 vick laura</span>
+</p>
+<p class="MsoNormal" style="text-align:left;" align="left">
+	<span style="font-size:12pt;font-family:宋体;">600 1 amr</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:12pt;font-family:宋体;">0 0</span><span style="font-size:12pt;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-size:12pt;font-family:宋体;">输出样例：</span></b><b><span style="font-size:12pt;"></span></b>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:12pt;">amr 600</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:12pt;">Dave 502</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:12pt;">laura 141</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:12pt;">vick 141</span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:12pt;">owen 66</span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-size:12pt;font-family:宋体;">样例解释：</span></b><b><span style="font-size:12pt;"></span></b>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:12pt;">Dave</span><span style="font-size:12pt;font-family:宋体;">的</span><span style="font-size:12pt;">200</span><span style="font-size:12pt;font-family:宋体;">元分给了</span><span style="font-size:12pt;">3</span><span style="font-size:12pt;font-family:宋体;">人，每人</span><span style="font-size:12pt;">66</span><span style="font-size:12pt;font-family:宋体;">元，剩下</span><span style="font-size:12pt;">2</span><span style="font-size:12pt;font-family:宋体;">元，还收到了</span><span style="font-size:12pt;">2</span><span style="font-size:12pt;font-family:宋体;">号给他的</span><span style="font-size:12pt;">500</span><span style="font-size:12pt;font-family:宋体;">元，因此他最后有</span><span style="font-size:12pt;">502</span><span style="font-size:12pt;font-family:宋体;">元。</span><span style="font-size:12pt;"></span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:12pt;">laura</span><span style="font-size:12pt;font-family:宋体;">的</span><span style="font-size:12pt;">500</span><span style="font-size:12pt;font-family:宋体;">元给了同学，收到</span><span style="font-size:12pt;">1</span><span style="font-size:12pt;font-family:宋体;">号给他的</span><span style="font-size:12pt;">66</span><span style="font-size:12pt;font-family:宋体;">元和</span><span style="font-size:12pt;">3</span><span style="font-size:12pt;font-family:宋体;">号给他的</span><span style="font-size:12pt;">75</span><span style="font-size:12pt;font-family:宋体;">元，他最后有</span><span style="font-size:12pt;">141</span><span style="font-size:12pt;font-family:宋体;">元。</span><span style="font-size:12pt;"></span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:12pt;">owen</span><span style="font-size:12pt;font-family:宋体;">的</span><span style="font-size:12pt;">150</span><span style="font-size:12pt;font-family:宋体;">元给了</span><span style="font-size:12pt;">2</span><span style="font-size:12pt;font-family:宋体;">人，每人</span><span style="font-size:12pt;">75</span><span style="font-size:12pt;font-family:宋体;">元，收到</span><span style="font-size:12pt;">1</span><span style="font-size:12pt;font-family:宋体;">号给他的</span><span style="font-size:12pt;">66</span><span style="font-size:12pt;font-family:宋体;">元，他最后有</span><span style="font-size:12pt;">66</span><span style="font-size:12pt;font-family:宋体;">元。</span><span style="font-size:12pt;"></span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:12pt;">vick</span><span style="font-size:12pt;font-family:宋体;">的</span><span style="font-size:12pt;">600</span><span style="font-size:12pt;font-family:宋体;">元给了同学，收到</span><span style="font-size:12pt;">1</span><span style="font-size:12pt;font-family:宋体;">号给他的</span><span style="font-size:12pt;">66</span><span style="font-size:12pt;font-family:宋体;">元和</span><span style="font-size:12pt;">3</span><span style="font-size:12pt;font-family:宋体;">号给他的</span><span style="font-size:12pt;">75</span><span style="font-size:12pt;font-family:宋体;">元，他最后有</span><span style="font-size:12pt;">141</span><span style="font-size:12pt;font-family:宋体;">元。</span><span style="font-size:12pt;"></span>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:12pt;">amr</span><span style="font-size:12pt;font-family:宋体;">没钱给人，收到</span><span style="font-size:12pt;">5</span><span style="font-size:12pt;font-family:宋体;">号给他的</span><span style="font-size:12pt;">600</span><span style="font-size:12pt;font-family:宋体;">元，他最后有</span><span style="font-size:12pt;">600</span><span style="font-size:12pt;font-family:宋体;">元。</span><span style="font-size:12pt;"></span>
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E5%A4%8D%E8%B5%9B%E6%A8%A1%E6%8B%9F-9'>复赛模拟-9</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=25575'>Submit</a>][<a href='problemstatus.php?id=25575'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=25575");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

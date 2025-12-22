@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?481432959" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 21887 --射击游戏</title><center><h2>21887: 射击游戏</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=21887'>Submit</a>][<a href='problemstatus.php?id=21887'>Status</a>][<a href='bbs.php?pid=21887'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=21887'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=21887");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=21887'>下载测试数据1元</a>][20kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p><!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:PunctuationKerning />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:SpaceForUL />
+<w:BalanceSingleByteDoubleByteWidth />
+<w:DoNotLeaveBackslashAlone />
+<w:ULTrailSpace />
+<w:DoNotExpandShiftReturn />
+<w:AdjustLineHeightInTable />
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:UseFELayout />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:普通表格;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+table.MsoTableSimple1
+{mso-style-name:"简明型 1";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+border-top:solid green 1.5pt;
+border-left:none;
+border-bottom:solid green 1.5pt;
+border-right:none;
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:Times;
+mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+table.MsoTableSimple1FirstRow
+{mso-style-name:"简明型 1";
+mso-table-condition:first-row;
+mso-tstyle-border-bottom:.75pt solid green;
+mso-tstyle-diagonal-down:0cm none windowtext;
+mso-tstyle-diagonal-up:0cm none windowtext;}
+table.MsoTableSimple1LastRow
+{mso-style-name:"简明型 1";
+mso-table-condition:last-row;
+mso-tstyle-border-top:.75pt solid green;
+mso-tstyle-diagonal-down:0cm none windowtext;
+mso-tstyle-diagonal-up:0cm none windowtext;}
+</style>
+<![endif]--></p>
+<p style="text-indent:20.0pt;mso-char-indent-count:2.0" class="MsoNormal"><span lang="EN-US" style="mso-fareast-language:ZH-CN">A</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">和</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">B</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">在玩一个射击游戏，战场由若干单位正方形积木组成。积木占据了连续的若干列，且图形周长等于它最小包围矩形的周长。下图</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-fareast-language:ZH-CN">(a)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-fareast-language:
+ZH-CN">是一个合法的战场，但</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-fareast-language:ZH-CN">(b)</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">和</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-fareast-language:ZH-CN">(c)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-fareast-language:
+ZH-CN">都不是：</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-fareast-language:ZH-CN">(b)</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">中有空列；</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-fareast-language:ZH-CN">(c)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-fareast-language:
+ZH-CN">的图形周长为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-fareast-language:ZH-CN">14</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">，而最小包围矩形（用虚线画出）的周长为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:宋体;
+mso-fareast-language:ZH-CN">12</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">。受重力影响，每个积木的正下方要么是地面，要么是另一个积木。</span><span style="font-family:宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">为了让战场看上去错落有致、玩着更刺激，它不能恰好是一个矩形（即：不能每列积木都一样高）。</span></p>
+<p style="text-indent:20.0pt;mso-char-indent-count:2.0" class="MsoNormal"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-fareast-language:ZH-CN">&nbsp;</span></p>
+<p align="center" style="text-align:center" class="MsoNormal"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-fareast-language:ZH-CN"><img src="/upload/pimg21887_1.jpg" alt="" /></span></p>
+<p style="text-indent:20.0pt;mso-char-indent-count:2.0" class="MsoNormal"><span lang="EN-US" style="font-family:宋体;mso-bidi-font-family:宋体">游戏规则如下：</span></p>
+<p style="margin-left:18.0pt;text-align:justify;text-justify:
+inter-ideograph;text-indent:-18.0pt;mso-pagination:none;mso-list:l0 level1 lfo1;
+tab-stops:list 18.0pt" class="MsoNormal"><span lang="EN-US" style="mso-fareast-language:
+ZH-CN"><span style="mso-list:Ignore">1、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span><span lang="EN-US" style="mso-fareast-language:
+ZH-CN">A</span><span style="font-family:宋体;mso-bidi-font-family:宋体;mso-fareast-language:
+ZH-CN">和</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">B</span><span style="font-family:宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">轮流射击，</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">A</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">先射击。</span></p>
+<p style="margin-left:18.0pt;text-align:justify;text-justify:
+inter-ideograph;text-indent:-18.0pt;mso-pagination:none;mso-list:l0 level1 lfo1;
+tab-stops:list 18.0pt" class="MsoNormal"><span lang="EN-US"><span style="mso-list:Ignore">2、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span><span style="font-family:宋体;mso-bidi-font-family:
+宋体;mso-fareast-language:ZH-CN">每次射击时，首先选择一行（该行必须至少有一个积木），以及</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">&ldquo;</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">左</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">&rdquo;</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">和</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">&ldquo;</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">右</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">&rdquo;</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">中的一个方向，然后往这个方向开火。子弹的威力为</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">1~3</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">的均匀随机整数（即：威力为</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">1</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">、</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">2</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">、</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">3</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">的概率各为</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">1/3</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">），表示子弹能打掉的积木个数，被打掉的积木将</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-fareast-language:
+ZH-CN">直接从战场中消失</span><span style="font-family:宋体;mso-bidi-font-family:宋体;
+mso-fareast-language:ZH-CN">。如果该行的积木个数小于威力值，则子弹将在打掉该行所有积木后消失。</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-fareast-language:
+ZH-CN">例如，若选择往右射击从下往上数第</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-fareast-language:ZH-CN">3</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">行，且威力为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-fareast-language:ZH-CN">2</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-fareast-language:
+ZH-CN">，且这一行一共有</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:宋体;mso-fareast-language:ZH-CN">4</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-fareast-language:
+ZH-CN">个积木，则最左边的两个积木将被打掉。注意：这两个积木可以不连续。</span></p>
+<p style="margin-left:18.0pt;text-align:justify;text-justify:
+inter-ideograph;text-indent:-18.0pt;mso-pagination:none;mso-list:l0 level1 lfo1;
+tab-stops:list 18.0pt" class="MsoNormal"><span lang="EN-US" style="mso-fareast-language:
+ZH-CN"><span style="mso-list:Ignore">3、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span><span style="font-family:宋体;mso-bidi-font-family:
+宋体;mso-fareast-language:ZH-CN">每次射击完成后，悬空的积木垂直往下落。所有积木不再下落后，下一位选手才能开始射击。</span></p>
+<p style="margin-left:18.0pt;text-align:justify;text-justify:
+inter-ideograph;text-indent:-18.0pt;mso-pagination:none;mso-list:l0 level1 lfo1;
+tab-stops:list 18.0pt" class="MsoNormal"><span lang="EN-US" style="mso-fareast-language:
+ZH-CN"><span style="mso-list:Ignore">4、<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span><span style="font-family:宋体;mso-bidi-font-family:
+宋体;mso-fareast-language:ZH-CN">谁打掉了最后一个积木，谁就获胜。</span></p>
+<p class="MsoNormal"><span lang="EN-US" style="mso-fareast-language:ZH-CN">&nbsp;</span></p>
+<p style="text-indent:20.0pt;mso-char-indent-count:2.0" class="MsoNormal"><span style="font-family:宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">假定开局是</span><span lang="EN-US" style="font-family:宋体;mso-bidi-font-family:宋体"><img width="19" height="15" src="http://oj.zjicm.acm.zj.cn:80/admin/../file:///D:\temp\msohtml1\01\clip_image004.jpg" alt="" /></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">，</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">根据规则</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">1</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">，</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">A</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">先开火。</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-fareast-language:
+ZH-CN">射击后，</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-fareast-language:ZH-CN">B</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">可能面临的后续局面中的其中三个如下表：</span></p>
+<p style="text-indent:20.0pt;mso-char-indent-count:2.0" class="MsoNormal"><span lang="EN-US" style="mso-fareast-language:ZH-CN">&nbsp;</span></p>
+<div align="center">
+<table cellspacing="0" cellpadding="0" border="1" style="margin-left:-34.8pt;border-collapse:collapse;border:none;mso-border-top-alt:
+    solid green 1.5pt;mso-border-bottom-alt:solid green 1.5pt;mso-yfti-tbllook:
+    480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt" class="MsoTableSimple1">
+    <tbody>
+        <tr style="mso-yfti-irow:-1;mso-yfti-firstrow:yes">
+            <td width="160" style="width:119.65pt;border-top:solid green 1.5pt;border-left:
+            none;border-bottom:solid green 1.0pt;border-right:none;mso-border-top-alt:
+            solid green 1.5pt;mso-border-bottom-alt:solid green .75pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center;mso-yfti-cnfc:1" class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-family:黑体;mso-hansi-font-family:
+            宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">行编号（从下往上数）</span></b></p>
+            </td>
+            <td width="107" style="width:79.9pt;border-top:solid green 1.5pt;border-left:
+            none;border-bottom:solid green 1.0pt;border-right:none;mso-border-top-alt:
+            solid green 1.5pt;mso-border-bottom-alt:solid green .75pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center;mso-yfti-cnfc:1" class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-family:黑体;mso-hansi-font-family:
+            宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">子弹前进方向</span></b></p>
+            </td>
+            <td width="139" style="width:104.2pt;border-top:solid green 1.5pt;border-left:
+            none;border-bottom:solid green 1.0pt;border-right:none;mso-border-top-alt:
+            solid green 1.5pt;mso-border-bottom-alt:solid green .75pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center;mso-yfti-cnfc:1" class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-family:黑体;mso-hansi-font-family:
+            宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">威力（随机值）</span></b></p>
+            </td>
+            <td width="113" style="width:3.0cm;border-top:solid green 1.5pt;border-left:
+            none;border-bottom:solid green 1.0pt;border-right:none;mso-border-top-alt:
+            solid green 1.5pt;mso-border-bottom-alt:solid green .75pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center;mso-yfti-cnfc:1" class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-family:黑体;mso-hansi-font-family:
+            宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">刚射击后</span></b></p>
+            </td>
+            <td width="134" style="width:100.35pt;border-top:solid green 1.5pt;border-left:
+            none;border-bottom:solid green 1.0pt;border-right:none;mso-border-top-alt:
+            solid green 1.5pt;mso-border-bottom-alt:solid green .75pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center;mso-yfti-cnfc:1" class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-family:黑体;mso-hansi-font-family:
+            宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">积木稳定后</span></b></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:0">
+            <td width="160" style="width:119.65pt;border:none;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center" class="MsoNormal"><span lang="EN-US" style="font-family:Times;mso-fareast-font-family:宋体;mso-bidi-font-family:
+            &quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">2</span></p>
+            </td>
+            <td width="107" style="width:79.9pt;border:none;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center" class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:Times;mso-hansi-font-family:Times;
+            mso-fareast-language:ZH-CN">从右往左</span></p>
+            </td>
+            <td width="139" style="width:104.2pt;border:none;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center" class="MsoNormal"><span lang="EN-US" style="font-family:Times;mso-fareast-font-family:宋体;mso-bidi-font-family:
+            &quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">1</span></p>
+            </td>
+            <td width="113" style="width:3.0cm;border:none;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center" class="MsoNormal"><span lang="EN-US" style="font-family:Times;mso-bidi-font-family:&quot;Times New Roman&quot;"><img width="128" height="76" src="/upload/pimg21887_2.jpg" alt="" /></span></p>
+            </td>
+            <td width="134" style="width:100.35pt;border:none;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center" class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:Times;mso-hansi-font-family:Times;
+            mso-fareast-language:ZH-CN">（同左图）</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:1">
+            <td width="160" style="width:119.65pt;border:none;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center" class="MsoNormal"><span lang="EN-US" style="font-family:Times;mso-fareast-font-family:宋体;mso-bidi-font-family:
+            &quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">1</span></p>
+            </td>
+            <td width="107" style="width:79.9pt;border:none;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center" class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:Times;mso-hansi-font-family:Times;
+            mso-fareast-language:ZH-CN">从右往左</span></p>
+            </td>
+            <td width="139" style="width:104.2pt;border:none;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center" class="MsoNormal"><span lang="EN-US" style="font-family:Times;mso-fareast-font-family:宋体;mso-bidi-font-family:
+            &quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">2</span></p>
+            </td>
+            <td width="113" style="width:3.0cm;border:none;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center" class="MsoNormal"><span lang="EN-US" style="font-family:Times;mso-bidi-font-family:&quot;Times New Roman&quot;"><img src="/upload/pimg21887_3.jpg" alt="" /></span></p>
+            </td>
+            <td width="134" style="width:100.35pt;border:none;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center" class="MsoNormal"><span lang="EN-US" style="font-family:Times;mso-bidi-font-family:&quot;Times New Roman&quot;"><img src="/upload/pimg21887_4.jpg" alt="" /></span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:2;mso-yfti-lastrow:yes">
+            <td width="160" style="width:119.65pt;border-top:solid green 1.0pt;border-left:
+            none;border-bottom:solid green 1.5pt;border-right:none;mso-border-top-alt:
+            solid green .75pt;mso-border-bottom-alt:solid green 1.5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center;mso-yfti-cnfc:2" class="MsoNormal"><span lang="EN-US" style="font-family:Times;mso-fareast-font-family:宋体;mso-bidi-font-family:
+            &quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">1</span></p>
+            </td>
+            <td width="107" style="width:79.9pt;border-top:solid green 1.0pt;border-left:
+            none;border-bottom:solid green 1.5pt;border-right:none;mso-border-top-alt:
+            solid green .75pt;mso-border-bottom-alt:solid green 1.5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center;mso-yfti-cnfc:2" class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:Times;mso-hansi-font-family:Times;
+            mso-fareast-language:ZH-CN">从左往右</span></p>
+            </td>
+            <td width="139" style="width:104.2pt;border-top:solid green 1.0pt;border-left:
+            none;border-bottom:solid green 1.5pt;border-right:none;mso-border-top-alt:
+            solid green .75pt;mso-border-bottom-alt:solid green 1.5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center;mso-yfti-cnfc:2" class="MsoNormal"><span lang="EN-US" style="font-family:Times;mso-fareast-font-family:宋体;mso-bidi-font-family:
+            &quot;Times New Roman&quot;;mso-fareast-language:ZH-CN">3</span></p>
+            </td>
+            <td width="113" style="width:3.0cm;border-top:solid green 1.0pt;border-left:
+            none;border-bottom:solid green 1.5pt;border-right:none;mso-border-top-alt:
+            solid green .75pt;mso-border-bottom-alt:solid green 1.5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center;mso-yfti-cnfc:2" class="MsoNormal"><span lang="EN-US" style="font-family:Times;mso-bidi-font-family:&quot;Times New Roman&quot;"><img src="/upload/pimg21887_5.jpg" alt="" /></span></p>
+            </td>
+            <td width="134" style="width:100.35pt;border-top:solid green 1.0pt;border-left:
+            none;border-bottom:solid green 1.5pt;border-right:none;mso-border-top-alt:
+            solid green .75pt;mso-border-bottom-alt:solid green 1.5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p align="center" style="text-align:center;mso-yfti-cnfc:2" class="MsoNormal"><span lang="EN-US" style="font-family:Times;mso-bidi-font-family:&quot;Times New Roman&quot;"><img src="/upload/pimg21887_6.jpg" alt="" /></span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<p style="text-indent:20.0pt;mso-char-indent-count:2.0" class="MsoNormal"><span lang="EN-US" style="font-family:宋体;mso-bidi-font-family:宋体;mso-fareast-language:
+ZH-CN">&nbsp;</span></p>
+<p style="text-indent:20.0pt;mso-char-indent-count:2.0" class="MsoNormal"><span style="font-family:宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">假定</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">A</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">和</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">B</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">都足够聪明，采取让自己获胜概率尽量高的策略，你的任务是计算出</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">A</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">获胜的概率。</span></p>
+<p class="MsoNormal"><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-fareast-language:ZH-CN">&nbsp;</span></p>
+<h1><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:黑体;
+mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">输入</span></h1>
+<p style="text-indent:20.0pt;mso-char-indent-count:2.0" class="MsoNormal"><span style="font-family:宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">输入文件最多包含</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">25</span><span style="font-family:
+宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">组测试数据，每个数据仅包含两行，第一行是整数</span><i><span lang="EN-US" style="mso-fareast-language:ZH-CN">n</span></i><span style="font-family:宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">（</span><span lang="EN-US" style="mso-fareast-language:ZH-CN">1&lt;=<i>n</i>&lt;=6</span><span style="font-family:宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">），即积木的列数。第二行包含</span><i><span lang="EN-US" style="mso-fareast-language:ZH-CN">n</span></i><span style="font-family:宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">个正整数</span><i><span lang="EN-US" style="mso-fareast-language:ZH-CN">h</span></i><sub><span lang="EN-US" style="mso-fareast-language:ZH-CN">1</span></sub><span lang="EN-US" style="mso-fareast-language:ZH-CN">, <i>h</i><sub>2</sub>,..., <i>h<sub>n</sub></i>(1&lt;=<i>h<sub>i</sub></i>&lt;=6)</span><span style="font-family:宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">，表示从左往右数第</span><i><span lang="EN-US" style="mso-fareast-language:ZH-CN">i</span></i><span style="font-family:宋体;mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">列的高度。积木的排列方式保证符合题目描述（即：图形周长等于它最小包围矩形的周长，且各列的高度不全相同）。</span><i><span lang="EN-US" style="mso-fareast-language:ZH-CN">n</span></i><span lang="EN-US" style="mso-fareast-language:ZH-CN">=0</span><span style="font-family:宋体;
+mso-bidi-font-family:宋体;mso-fareast-language:ZH-CN">表示输入结束，你的程序不应当处理这一行。</span></p>
+<p style="line-height:normal" class="MsoFooter"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:
+ZH-CN">&nbsp;</span></p>
+<h1><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:黑体;
+mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">输出</span></h1>
+<span style="font-size:10.0pt;font-family:宋体;mso-bidi-font-family:宋体;
+mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">对于每组数据，输出仅一行，即</span><span lang="EN-US" style="font-size:10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA">A</span><span style="font-size:10.0pt;font-family:
+宋体;mso-bidi-font-family:宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA">获胜的概率，四舍五入保留六位小数。</span></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>3
+2 1 1
+0
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>0.555556</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%B9%96%E5%8D%97%E7%9C%81%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%A4%A7%E5%AD%A6%E7%94%9F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B'>湖南省第六届大学生计算机程序设计竞赛</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=21887'>Submit</a>][<a href='problemstatus.php?id=21887'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=21887");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1355795167" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5238 --5.2.1 Snail Trail (snail)</title><center><h2>5238: 5.2.1 Snail Trail (snail)</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=5238'>Submit</a>][<a href='problemstatus.php?id=5238'>Status</a>][<a href='bbs.php?pid=5238'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5238'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5238");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5238'>下载测试数据1元</a>][4kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p style="text-align:center;">
+	<span style="font-size:16px;"><strong>5.2.1 Snail Trail (snail)</strong></span>
+</p>
+<p style="text-align:center;">
+	<span style="font-size:16px;"><strong>(</strong></span><span style="font-size:16px;"><strong>snail.pas/c/cpp)</strong></span>
+</p>
+<p>
+	<span>
+	<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+		<span style="font-size:16px;">萨丽·斯内尔（Sally Snail，蜗牛）喜欢在 N x N 的棋盘上闲逛（1 &lt; n &lt;= 120）。她总是从棋盘的左上角出发。棋盘上有空的格子（用“.”来表示）和 B 个路障（用“#”来表示）。下面是这种表示法的示例棋盘：</span>
+	</p>
+<pre>          A B C D E F G H
+       1 S . . . . . # .
+       2 . . . . # . . .
+       3 . . . . . . . .
+       4 . . . . . . . .
+       5 . . . . . # . .
+       6 # . . . . . . .
+       7 . . . . . . . .
+       8 . . . . . . . .
+</pre>
+	<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+		<span style="font-size:16px;">萨丽总是垂直（向上或者向下）或水平（向左或者向右）地走。她可以从出发地（总是记作 A1 ）向下或者向右走。 一旦萨丽选定了一个方向，她就会一直走下去。如果她遇到棋盘边缘或者路障，她就停下来，并且转过 90 度。她不可能离开棋盘，或者走进路障当中。并且，萨丽从不跨过她已经经过的格子。当她再也不能走的时候，她就停止散步。</span>
+	</p>
+	<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+		<span style="font-size:16px;">这里是上面的棋盘上的一次散步路线图示：</span>
+	</p>
+<pre>          A B C D E F G H
+       1 S---------+ # .
+       2 . . . . # | . .
+       3 . . . . . | . .
+       4 . . . . . +---+
+       5 . . . . . # . |
+       6 # . . . . . . |
+       7 +-----------+ |
+       8 +-------------+
+</pre>
+	<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+		<br />
+	</p>
+	<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+		<span style="font-size:16px;">萨丽向右走，再向下，向右，向下，然后向左，再向上，最后向右走。这时她遇到了一个她已经走过的格子，她就停下来了。但是，如果她在 F5 格遇到路障后选择另外一条路——向我们看来是左边的方向转弯，情况就不一样了。</span>
+	</p>
+	<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+		<span style="font-size:16px;">你的任务是计算并输出，如果萨丽聪明地选择她的路线的话，她所能够经过的最多格子数。</span>
+	</p>
+	<h2 style="background-color:#FFFFFF;font-weight:normal;font-size:19px;font-family:sans-serif;">
+		<br />
+	</h2>
+	<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+		<b><span style="font-size:16px;">PROGRAM NAME:</span></b><span style="font-size:16px;">&nbsp;snail</span>
+	</p>
+	<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+		<b><span style="font-size:16px;">INPUT FORMAT</span></b>
+	</p>
+	<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+		<span style="font-size:16px;">输入的第一行包括 N ——棋盘的大小，和 B ——路障的数量（1 &lt;= B &lt;= 200）。接下来的 B 行包含着路障的位置信息。下面的样例输入对应着上面的示例棋盘。下面的输出文件表示问题的解答。注意，当 N 〉26 时，输入文件就不能表示 Z 列以后的路障了。(ps:这句话的理解请参见题解 //from Error)</span>
+	</p>
+	<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+		<b><span style="font-size:16px;">OUTPUT FORMAT</span></b>
+	</p>
+	<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+		<span style="font-size:16px;">输出文件应该只由一行组成，即萨丽能够经过的最多格子数。</span>
+	</p>
+	<h2 style="background-color:#FFFFFF;font-weight:normal;font-size:19px;font-family:sans-serif;">
+		<span class="mw-headline" id="SAMPLE_INPUT_.28file_snail.in.29" style="font-size:16px;">SAMPLE INPUT (file snail.in)</span>
+	</h2>
+<pre>8 4
+E2
+A6
+G1
+F5
+</pre>
+	<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+		<br />
+	</p>
+	<h2 style="background-color:#FFFFFF;font-weight:normal;font-size:19px;font-family:sans-serif;">
+		<span class="mw-headline" id="SAMPLE_OUTPUT_.28file_snail.out.29" style="font-size:16px;">SAMPLE OUTPUT (file snail.out)</span>
+	</h2>
+<pre>33
+</pre>
+	<p style="font-family:sans-serif;font-size:13px;background-color:#FFFFFF;">
+		<span style="font-size:16px;">样例说明</span>
+	</p>
+<pre>          A B C D E F G H
+       1 S . . . . . # .
+       2 | . . . # . . .
+       3 | . . . +-----+
+       4 | . . . | . . |
+       5 +-------+ # . |
+       6 # . . . . . . |
+       7 +------------ |
+       8 +-------------+</pre>
+<span style="font-size:16px;"></span><br />
+</span>
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=USACO-USACO%E9%98%B6%E6%A2%AF-%E7%AC%AC5%E7%AB%A0.%E4%B8%A5%E5%B3%BB%E7%9A%84%E6%8C%91%E6%88%98'>USACO-USACO阶梯-第5章.严峻的挑战</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5238'>Submit</a>][<a href='problemstatus.php?id=5238'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5238");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

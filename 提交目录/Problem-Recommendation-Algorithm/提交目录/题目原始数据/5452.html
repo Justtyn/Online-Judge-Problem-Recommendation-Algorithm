@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?645764262" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5452 --矿工-【2014暑期训练】T1Day1T3</title><center><h2>5452: 矿工-【2014暑期训练】T1Day1T3</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>57&nbsp;&nbsp;<span class=green>Solved: </span>30<br>[<a href='submitpage.php?id=5452'>Submit</a>][<a href='problemstatus.php?id=5452'>Status</a>][<a href='bbs.php?pid=5452'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5452'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5452");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5452'>下载测试数据1元</a>][172kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<b><span style="font-size:18px;">3. </span></b><b><span style="font-size:18px;">矿工</span></b><b></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【问题描述】</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-size:18px;">假设有一个宝藏，这个宝藏的制造者为了掩盖世人耳目,宝藏是没有出口,只有入口,不少建造宝藏的人都死在里面.现在知道宝藏总共有N个分岔口,在分岔口处是有财宝的,每个宝藏点都有一个财富值.XX只带了M个人来,而且为了安全起见,在每个分岔口,必须至少留一个人下来,这个留下来的人可以挖宝藏(每个人只能挖一个地方的宝藏),这样才能保证不会迷路,而且这个迷宫有个特点,任意两点间有且只有一条路可通.鸟为食亡，人为财死，XX当然要尽可能地多挖些宝藏回去.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【输入】</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-size:18px;">第1行：两个正整数N,M .N表示宝藏点的个数,M表示狗狗带去的人数(XX他是一个懒汉，自己可不做事)。(m&lt;=100)</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-size:18px;">第2行：N个整数,第i个整数表示第i个宝藏的财富值.(保证|wi|&lt;maxint)</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-size:18px;">第N+2行：两个非负整数A和B，表示A通向B,当A=0,表示A是入口.（保证A,B&lt;=n）。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【输出】</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-size:18px;">输出仅包括一行，XX能带回去的宝藏的价值。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【输入输出样例】</span> 
+</p>
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border:none;">
+	<tbody>
+		<tr>
+			<td width="284" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-size:18px;font-family:'';">mining.in</span> 
+				</p>
+			</td>
+			<td width="284" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-size:18px;font-family:'';">mining.out</span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="284" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-size:18px;font-family:'';">4 3</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:18px;font-family:'';">5 6 2 4</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:18px;font-family:'';">1 2</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:18px;font-family:'';">0 1</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:18px;font-family:'';">2 3</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:18px;font-family:'';">3 4</span><span style="font-family:宋体;"></span> 
+				</p>
+			</td>
+			<td width="284" valign="top" style="border:solid windowtext 1.0pt;">
+				<p class="MsoNormal">
+					<span style="font-size:18px;font-family:'';">13</span> 
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【数据规模】</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-size:18px;">对于10%的数据，n&lt;=40000</span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span style="font-size:18px;">对于100%的数据，n&lt;=100000</span> 
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><h3><br />
+	<span style="font-size:18px;">矿工 解题报告</span><br />
+</h3><br />
+<p class="MsoNormal"><br />
+	<b><span style="font-size:18px;">题目分析</span><span style="font-size:18px;">:</span></b><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">这道题的模型就是典型的树型</span><span style="font-size:18px;">DP.</span><span style="font-size:18px;">不知道大家是否看懂了题目</span><span style="font-size:18px;">,</span><span style="font-size:18px;">出题人蛤蟆本人觉得题意是清楚的</span><span style="font-size:18px;">,</span><span style="font-size:18px;">给了几位大牛们看了</span><span style="font-size:18px;">,</span><span style="font-size:18px;">都能理解题意</span><span style="font-size:18px;">.</span><span style="font-size:18px;">如果确实看不懂的也不要埋怨</span><span style="font-size:18px;">,NOIP2006</span><span style="font-size:18px;">提高组的第三题</span><span style="font-size:18px;">,</span><span style="font-size:18px;">就是一个典型</span><span style="font-size:18px;">,</span><span style="font-size:18px;">为了备战</span><span style="font-size:18px;">NOIP,</span><span style="font-size:18px;">请各位选手锻炼一下自己的阅读能力</span><span style="font-size:18px;">.</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">然后就从题目分析</span><span style="font-size:18px;">,</span><span style="font-size:18px;">题目中有句话说</span><span style="font-size:18px;">: </span><span style="font-size:18px;">任意两点间有且只有一条路可通</span><span style="font-size:18px;">,</span><span style="font-size:18px;">也就是说这是一棵树</span><span style="font-size:18px;">,</span><span style="font-size:18px;">一棵以入口为根的树</span><span style="font-size:18px;">,</span><span style="font-size:18px;">这样数据结构就搞定了</span><span style="font-size:18px;">. </span><span style="font-size:18px;">”每个人只能挖一个地方的宝藏”这句话说明每个人只能覆盖一个结点</span><span style="font-size:18px;">,</span><span style="font-size:18px;">那么</span><span style="font-size:18px;">M</span><span style="font-size:18px;">个就最多能覆盖</span><span style="font-size:18px;">M</span><span style="font-size:18px;">个结点</span><span style="font-size:18px;">.</span><span style="font-size:18px;">而且这</span><span style="font-size:18px;">M</span><span style="font-size:18px;">个点连成的也是一棵树</span><span style="font-size:18px;">.</span><span style="font-size:18px;">而且这棵树的所有结点的权和必须最大</span><span style="font-size:18px;">.</span><span style="font-size:18px;">这样一来我们最容易想到的就是动态规划</span><span style="font-size:18px;">.</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span style="font-size:18px;">算法分析</span><span style="font-size:18px;">:</span></b><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">题目中没准确说明这是一棵二叉树</span><span style="font-size:18px;">,</span><span style="font-size:18px;">所以这个宝藏应该是一棵多叉树</span><span style="font-size:18px;">.</span><span style="font-size:18px;">由于” 在每个分岔口</span><span style="font-size:18px;">,</span><span style="font-size:18px;">必须至少留一个人下来”这句话</span><span style="font-size:18px;">,</span><span style="font-size:18px;">说明要取一个点的子结点</span><span style="font-size:18px;">,</span><span style="font-size:18px;">就必须先取这个点</span><span style="font-size:18px;">.</span><span style="font-size:18px;">而取了这个点</span><span style="font-size:18px;">,</span><span style="font-size:18px;">总的</span><span style="font-size:18px;">M</span><span style="font-size:18px;">个人就会变成</span><span style="font-size:18px;">M-1</span><span style="font-size:18px;">个人</span><span style="font-size:18px;">,</span><span style="font-size:18px;">我们用</span><span style="font-size:18px;">f(i,j)</span><span style="font-size:18px;">表示取</span><span style="font-size:18px;">j</span><span style="font-size:18px;">个人到了第</span><span style="font-size:18px;">i</span><span style="font-size:18px;">个结点能够取到的最优值</span><span style="font-size:18px;">.f(0,m)</span><span style="font-size:18px;">就是答案</span><span style="font-size:18px;">.</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">但是如果直接</span><span style="font-size:18px;">DP</span><span style="font-size:18px;">一棵多叉树</span><span style="font-size:18px;">,</span><span style="font-size:18px;">是有问题的</span><span style="font-size:18px;">,(</span><span style="font-size:18px;">出题人太水</span><span style="font-size:18px;">,</span><span style="font-size:18px;">不会</span><span style="font-size:18px;">).</span><span style="font-size:18px;">所以我就先把多叉树转化为二叉树</span><span style="font-size:18px;">,</span><span style="font-size:18px;">按照左儿子右兄弟转化</span><span style="font-size:18px;">.</span><span style="font-size:18px;">就把一棵多叉树转化成二叉树了</span><span style="font-size:18px;">.</span><span style="font-size:18px;">然后这个问题就变得非常极其十分简单了</span><span style="font-size:18px;">.</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">方程</span><span style="font-size:18px;">:f(i,j):=max{max{f(tree[i].l,k)+f(tree[i].r,j-1-k)}(0&lt;=k&lt;=j-1),f(tree[i].r,j)}</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<b><span style="font-size:18px;">数据分析</span><span style="font-size:18px;">:</span></b><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">数据给定的规模是</span><span style="font-size:18px;">N&lt;=1000,M&lt;=100,DP</span><span style="font-size:18px;">的时间复杂度和空间复杂度都是没问题的</span><span style="font-size:18px;">.</span><span style="font-size:18px;">一开始输入的一棵树</span><span style="font-size:18px;">,</span><span style="font-size:18px;">应该怎样存储</span><span style="font-size:18px;">?</span><span style="font-size:18px;">应该</span><span style="font-size:18px;">N&lt;=1000,</span><span style="font-size:18px;">所以直接用邻接表是没问题</span><span style="font-size:18px;">,</span><span style="font-size:18px;">但如果</span><span style="font-size:18px;">N&lt;=10000</span><span style="font-size:18px;">呢</span><span style="font-size:18px;">?(</span><span style="font-size:18px;">其实出题人本来是想出</span><span style="font-size:18px;">N&lt;=10000,M&lt;=100</span><span style="font-size:18px;">的</span><span style="font-size:18px;">,</span><span style="font-size:18px;">就算这样</span><span style="font-size:18px;">DP</span><span style="font-size:18px;">的时间复杂也不会有问题</span><span style="font-size:18px;">,</span><span style="font-size:18px;">但一开始多叉树的存储就可能会出问题</span><span style="font-size:18px;">)</span><span style="font-size:18px;">如果</span><span style="font-size:18px;">N=10000,</span><span style="font-size:18px;">那普通的邻接表显然会空间溢出</span><span style="font-size:18px;">,</span><span style="font-size:18px;">这里介绍一种压缩邻接表的存储方法</span><span style="font-size:18px;">,</span><span style="font-size:18px;">压缩邻接表就是一个一维的数据</span><span style="font-size:18px;">,</span><span style="font-size:18px;">外加一个</span><span style="font-size:18px;">N</span><span style="font-size:18px;">大的数组作标记</span><span style="font-size:18px;">,</span><span style="font-size:18px;">标记第</span><span style="font-size:18px;">i</span><span style="font-size:18px;">个结点从哪位开始</span><span style="font-size:18px;">,a[i+1]-1</span><span style="font-size:18px;">就是第</span><span style="font-size:18px;">i</span><span style="font-size:18px;">个结点结束的位置</span><span style="font-size:18px;">,</span><span style="font-size:18px;">这样空间就可以压缩了</span><span style="font-size:18px;">.10000</span><span style="font-size:18px;">个点都没问题</span><span style="font-size:18px;">.</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">大家看题时要看清</span><span style="font-size:18px;">,</span><span style="font-size:18px;">每个点的财富值是</span><span style="font-size:18px;">|wi|&lt;maxint,</span><span style="font-size:18px;">也就是说会有负值出现</span><span style="font-size:18px;">.</span><span style="font-size:18px;">看不清也没什么大问题</span><span style="font-size:18px;">!</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">数据有点弱</span><span style="font-size:18px;">,</span><span style="font-size:18px;">有</span><span style="font-size:18px;">20</span><span style="font-size:18px;">分的数据是送的</span><span style="font-size:18px;">,</span><span style="font-size:18px;">这两个数据一个全是</span><span style="font-size:18px;">1,</span><span style="font-size:18px;">一个全是</span><span style="font-size:18px;">-1.</span><span style="font-size:18px;">还有第一个数据是</span><span style="font-size:18px;">N&lt;10</span><span style="font-size:18px;">的小数据</span><span style="font-size:18px;">.</span><br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%A8%A1%E6%8B%9F%E8%B5%9B-2014%E6%9A%91%E6%9C%9F%E8%AE%AD%E7%BB%83'>模拟赛-2014暑期训练</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5452'>Submit</a>][<a href='problemstatus.php?id=5452'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5452");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

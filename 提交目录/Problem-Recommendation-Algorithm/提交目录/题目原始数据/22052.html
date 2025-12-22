@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1511697808" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 22052 --Rebellion of robots</title><center><h2>22052: Rebellion of robots</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>8&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='submitpage.php?id=22052'>Submit</a>][<a href='problemstatus.php?id=22052'>Status</a>][<a href='bbs.php?pid=22052'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=22052'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=22052");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=22052'>下载测试数据1元</a>][32kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p>
+	With the invention of quantum computer, scientists achieved lots of advancement in the field of Artificial Intelligence. Millions of robots walk into common families serving their lives.
+</p>
+<p>
+	However, just as the worry of most people, would robots always be loyal to human? Would they rebel?
+</p>
+<p>
+	Sadly, this worry turned into reality disaster.
+</p>
+<p>
+	All the robots in City R hijacked the human citizens and declared independence.
+</p>
+<p>
+	General Wang had N armies around, and he decided to send one special force unit from each army to rescue our citizens.
+</p>
+<p>
+	Given the time needed to move from one city to another, can you tell General Wang that which special force unit would arrive first?
+</p>
+<p>
+	<img src="data:image/png;base64,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" alt="" /><br />
+Notice: There might be more than on path from one city to another.
+</p></div><h2>Input</h2><div class=content><p>
+	There are several cases.
+</p>
+<p>
+	The first line of each case are four integers N, M, P, Q (1 &lt;= N &lt;= 100, N &lt;= M &lt;= 1000, M-1 &lt;= P &lt;= 100000).N is the number of special force units, M represents the number of cities, P is the number of total paths between cities, and Q is the index of city that robots rebelled.
+</p>
+<p>
+	The following line consists of N numbers, which were the index of city that had one army resided.
+</p>
+<p>
+	Then there are the P lines followed, each line consists of 3 positive integers a, b, t (1 &lt;= a, b &lt;= M, 1 &lt;= t &lt;= 100), representing that time t was needed to move from city a to b.
+</p>
+Data sets ensure that the city in which robots rebelled was always reachable.</div><h2>Output</h2><div class=content>For each case, output the time used by the special force unit that reached city Q first.<br /></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>3 8 9 8
+1 2 3
+1 2 1
+2 3 2
+1 4 2
+2 5 3
+3 6 2
+4 7 1
+5 7 3
+5 8 2
+6 8 2
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>4
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E8%BF%9B%E9%98%B6%E9%A2%98-%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95'>进阶题-图论算法</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=22052'>Submit</a>][<a href='problemstatus.php?id=22052'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=22052");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

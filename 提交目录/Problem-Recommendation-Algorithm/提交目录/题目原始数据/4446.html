@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?9043126" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 4446 --哈夫曼的贪婪</title><center><h2>4446: 哈夫曼的贪婪</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=4446'>Submit</a>][<a href='problemstatus.php?id=4446'>Status</a>][<a href='bbs.php?pid=4446'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=4446'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=4446");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=4446'>下载测试数据1元</a>][128kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content>In the following we define the basic terminology of trees. A tree is defined inductively: It has a root which is either an external node (a leaf), or an internal node having a sequence of trees as its children. An internal node is also called the parent of the roots of its child trees. The level of a node in a tree is defined inductively: The root has level 0, and the level of a node is 1 more than the level of its parent node. 
+
+Every internal node of a binary tree has precisely two children, its left sub-tree and its right sub-tree. Every internal node of a labelled binary tree is additionally marked with a string, its label. A binary search tree is a labelled binary tree where every internal node t satisfies the following condition: All labels of nodes in the left sub-tree of t are less than the label of t which is, in turn, less than all labels of nodes in the right sub-tree of t. For this condition, we assume lexicographic, i.e., alphabetic order on the strings. 
+
+An inorder traversal of a tree is defined recursively: A leaf is just visited, and for an internal node first its left sub-tree is traversed inorder, then the node itself is visited, finally its right sub-tree is traversed inorder. It follows that an inorder traversal of a binary search tree yields the labels in lexicographic order. Note that binary search trees whose shapes differ may nevertheless yield the same sequence of strings while being traversed inorder. 
+
+When a given string s is looked for in a binary search tree, we compare s to the label l of the root. We are done if s=l, otherwise if s<l we continue to search in the left sub-tree, and if s>l in the right sub-tree. If a leaf is reached, we know that s is not in the tree. 
+
+The number of comparisons performed in such a search procedure depends on s and the actual shape of the search tree. Therefore, there is an interest in constructing binary search trees that store a given sequence of strings but provide as efficient access as possible. Of course, we don't know in advance which strings will be looked up in the tree, so we need to make some assumptions. 
+<P>Let <I>n</I> be the number of strings that are to be stored in the binary 
+search tree. Let <I>K<SUB>1</SUB>,...,K<SUB>n</SUB></I> be these strings in 
+lexicographic order. Let <I>p<SUB>1</SUB>,...,p<SUB>n</SUB></I> and 
+<I>q<SUB>0</SUB>,...,q<SUB>n</SUB></I> be <I>2n+1</I> non-negative real numbers 
+such that <I>∑<SUB>i=1..n</SUB> p<SUB>i</SUB> + ∑<SUB>i=0..n</SUB> q<SUB>i</SUB> 
+= 1</I>. The interpretation of these numbers is: 
+<UL>
+  <LI><I>p<SUB>i</SUB></I> = probability that the search argument <I>s</I> is 
+  <I>K<SUB>i</SUB></I>. 
+  <LI><I>q<SUB>i</SUB></I> = probability that <I>s</I> lies (lexicographically) 
+  strictly between <I>K<SUB>i</SUB></I> and <I>K<SUB>i+1</SUB></I>. </LI></UL>By 
+convention, <I>q<SUB>0</SUB></I> is the probability that <I>s</I> is less than 
+<I>K<SUB>1</SUB></I>, and <I>q<SUB>n</SUB></I> is the probability that <I>s</I> 
+is greater than <I>K<SUB>n</SUB></I>. We want to find a binary search tree 
+containing nodes with labels <I>K<SUB>1</SUB>,...,K<SUB>n</SUB></I> that 
+minimises the expected number of comparisons in the search, namely 
+<CENTER><I>cost = ∑<SUB>i=1..n</SUB> p<SUB>i</SUB>*(1 + level of internal node K<SUB>i</SUB>) + ∑<SUB>i=0..n</SUB> q<SUB>i</SUB>*(level of leaf between K<SUB>i</SUB> and K<SUB>i+1</SUB>)</I>. </CENTER>The leaf between <I>K<SUB>i</SUB></I> and <I>K<SUB>i+1</SUB></I> is that leaf reached in the earch for a string <I>s</I> that lies (lexicographically) strictly between <I>K<SUB>i</SUB></I> and <I>K<SUB>i+1</SUB></I>. Adhere to the convention stated 
+above for the border cases. 
+<P>The following figure illustrates the first test case of the sample input. It 
+shows the two possible binary search trees, the probabilities and the associated 
+costs. 
+<P>
+<CENTER><img src="http://172.20.10.138:80/JudgeOnline/admin/../images/1150.gif"> </CENTER></div><h2>Input</h2><div class=content>The input contains several test cases. Every test case starts with an integer n. You may assume that 1<=n<=200. Then follow 2n+1 non-negative integers denoting frequencies. Let s be the sum of all frequencies. You may assume that 1<=s<=1000000. The probabilities <I>p<SUB>1</SUB>,...,p<SUB>n</SUB></I> and <I>q<SUB>0</SUB>,...,q<SUB>n</SUB></I>are calculated in this order by dividing the frequencies by s. The last test case is followed by a zero. </div><h2>Output</h2><div class=content>For each test case devise a binary search tree whose cost is minimal for the specified probabilities. Output the integer cost*s for such a tree. </div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>2
+20 15 15 25 25
+35
+142 35 58 5 20 5 10 9 15 23 129 4 52 5 38 18 9 7 2 4 266 93 5 18 18 27 5 10 11 180 4 32 21 3 21
+0 55 27 36 85 31 58 3 334 0 98 27 113 89 180 0 62 12 0 37 0 3 64 70 0 277 0 0 0 170 0 18 76 27 3 29
+0
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>160
+13637
+</span></pre><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=University'>University</a>&nbsp;<a href='problemset.php?search=of'>of</a>&nbsp;<a href='problemset.php?search=Ulm'>Ulm</a>&nbsp;<a href='problemset.php?search=Local'>Local</a>&nbsp;<a href='problemset.php?search=Contest'>Contest</a>&nbsp;<a href='problemset.php?search=2004'>2004</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=4446'>Submit</a>][<a href='problemstatus.php?id=4446'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=4446");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

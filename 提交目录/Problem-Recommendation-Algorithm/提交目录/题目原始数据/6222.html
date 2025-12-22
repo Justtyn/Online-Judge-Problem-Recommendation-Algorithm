@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?705197854" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 6222 --视野覆盖问题</title><center><h2>6222: 视野覆盖问题</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>12&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='submitpage.php?id=6222'>Submit</a>][<a href='problemstatus.php?id=6222'>Status</a>][<a href='bbs.php?pid=6222'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=6222'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=6222");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=6222'>下载测试数据1元</a>][8596kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p><!--[if gte mso 9]><xml><w:WordDocument><w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel><w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery><w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery><w:DocumentKind>DocumentNotSpecified</w:DocumentKind><w:DrawingGridVerticalSpacing>7.8</w:DrawingGridVerticalSpacing><w:View>Normal</w:View><w:Compatibility><w:DontGrowAutofit /></w:Compatibility><w:Zoom>0</w:Zoom></w:WordDocument></xml><![endif]--></p>
+<p><!--[if gte mso 9]><xml><w:LatentStyles DefLockedState="false"  DefUnhideWhenUsed="true"  DefSemiHidden="true"  DefQFormat="false"  DefPriority="99"  LatentStyleCount="156" ><w:LsdException Locked="false"  Priority="99"  Name="Normal" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 7" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 8" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 9" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 7" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 8" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 9" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 7" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 8" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 9" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Normal Indent" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="footnote text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="annotation text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="header" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="footer" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index heading" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="caption" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="table of figures" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="envelope address" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="envelope return" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="footnote reference" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="annotation reference" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="line number" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="page number" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="endnote reference" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="endnote text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="table of authorities" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="macro" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toa heading" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Title" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Closing" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Signature" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Default Paragraph Font" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text Indent" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Message Header" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Subtitle" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Salutation" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Date" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text First Indent" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text First Indent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Note Heading" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text Indent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text Indent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Block Text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Hyperlink" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="FollowedHyperlink" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Strong" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Emphasis" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Document Map" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Plain Text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="E-mail Signature" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Normal (Web)" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Acronym" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Address" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Cite" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Code" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Definition" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Keyboard" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Preformatted" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Sample" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Typewriter" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Variable" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Normal Table" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="annotation subject" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="No List" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Balloon Text" ></w:LsdException></w:LatentStyles></xml><![endif]--></p>
+<p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-autospace:ideograph-other; vertical-align:; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'微软雅黑'; ">小D发现一个新鲜的问题。假如一个平面上有N个点，从原点引两条射线，一条为始边，一条为终边，介于之间的区域都会被覆盖。问：最少需要多少角度才能覆盖N个点。</span></p>
+<p></p></div><h2>Input</h2><div class=content><p><!--[if gte mso 9]><xml><w:WordDocument><w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel><w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery><w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery><w:DocumentKind>DocumentNotSpecified</w:DocumentKind><w:DrawingGridVerticalSpacing>7.8</w:DrawingGridVerticalSpacing><w:View>Normal</w:View><w:Compatibility><w:DontGrowAutofit /></w:Compatibility><w:Zoom>0</w:Zoom></w:WordDocument></xml><![endif]--></p>
+<p><!--[if gte mso 9]><xml><w:LatentStyles DefLockedState="false"  DefUnhideWhenUsed="true"  DefSemiHidden="true"  DefQFormat="false"  DefPriority="99"  LatentStyleCount="156" ><w:LsdException Locked="false"  Priority="99"  Name="Normal" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 7" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 8" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 9" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 7" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 8" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 9" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 7" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 8" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 9" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Normal Indent" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="footnote text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="annotation text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="header" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="footer" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index heading" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="caption" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="table of figures" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="envelope address" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="envelope return" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="footnote reference" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="annotation reference" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="line number" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="page number" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="endnote reference" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="endnote text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="table of authorities" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="macro" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toa heading" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Title" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Closing" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Signature" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Default Paragraph Font" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text Indent" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Message Header" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Subtitle" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Salutation" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Date" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text First Indent" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text First Indent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Note Heading" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text Indent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text Indent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Block Text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Hyperlink" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="FollowedHyperlink" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Strong" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Emphasis" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Document Map" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Plain Text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="E-mail Signature" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Normal (Web)" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Acronym" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Address" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Cite" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Code" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Definition" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Keyboard" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Preformatted" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Sample" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Typewriter" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Variable" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Normal Table" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="annotation subject" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="No List" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Balloon Text" ></w:LsdException></w:LatentStyles></xml><![endif]--></p>
+<p class="p0" style="text-indent:21.0000pt; margin-bottom:0pt; margin-top:0pt; text-autospace:ideograph-other; vertical-align:; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'微软雅黑'; ">有T组数据。（T&nbsp;&lt;=&nbsp;50)</span></p>
+<p class="p0" style="text-indent:21.0000pt; margin-bottom:0pt; margin-top:0pt; text-autospace:ideograph-other; vertical-align:; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'微软雅黑'; ">每组数据都有一个N，（N&nbsp;&lt;=&nbsp;100,000)&nbsp;表示在平面有N个点。接着有N行，每行有两个整数，x,&nbsp;y.&nbsp;（-1000&nbsp;&lt;=&nbsp;x,&nbsp;y&nbsp;&lt;=&nbsp;1000)</span></p>
+<p></p></div><h2>Output</h2><div class=content><p><!--[if gte mso 9]><xml><w:WordDocument><w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel><w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery><w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery><w:DocumentKind>DocumentNotSpecified</w:DocumentKind><w:DrawingGridVerticalSpacing>7.8</w:DrawingGridVerticalSpacing><w:View>Normal</w:View><w:Compatibility><w:DontGrowAutofit /></w:Compatibility><w:Zoom>0</w:Zoom></w:WordDocument></xml><![endif]--></p>
+<p><!--[if gte mso 9]><xml><w:LatentStyles DefLockedState="false"  DefUnhideWhenUsed="true"  DefSemiHidden="true"  DefQFormat="false"  DefPriority="99"  LatentStyleCount="156" ><w:LsdException Locked="false"  Priority="99"  Name="Normal" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 7" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 8" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="heading 9" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 7" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 8" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index 9" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 1" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 6" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 7" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 8" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toc 9" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Normal Indent" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="footnote text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="annotation text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="header" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="footer" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="index heading" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="caption" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="table of figures" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="envelope address" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="envelope return" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="footnote reference" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="annotation reference" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="line number" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="page number" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="endnote reference" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="endnote text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="table of authorities" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="macro" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="toa heading" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Bullet 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Number 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Title" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Closing" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Signature" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Default Paragraph Font" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text Indent" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue 4" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="List Continue 5" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Message Header" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Subtitle" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Salutation" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Date" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text First Indent" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text First Indent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Note Heading" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text Indent 2" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Body Text Indent 3" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Block Text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Hyperlink" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="FollowedHyperlink" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Strong" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Emphasis" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Document Map" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Plain Text" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="E-mail Signature" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Normal (Web)" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Acronym" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Address" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Cite" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Code" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Definition" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Keyboard" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Preformatted" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Sample" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Typewriter" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="HTML Variable" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Normal Table" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="annotation subject" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="No List" ></w:LsdException><w:LsdException Locked="false"  Priority="99"  Name="Balloon Text" ></w:LsdException></w:LatentStyles></xml><![endif]--></p>
+<p class="p0" style="text-indent:21.0000pt; margin-bottom:0pt; margin-top:0pt; text-autospace:ideograph-other; vertical-align:; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'微软雅黑'; ">对每组数据输出一个最小覆盖的角度，结果保留2位小数。</span></p>
+<p></p></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>4
+2
+0 2
+2 0
+3
+2 0
+0 2
+-2 2
+4
+2 0
+0 2
+-2 0
+0 -2
+2
+2 1
+1 2</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>90.00
+135.00
+270.00
+36.87</span></pre><h2>HINT</h2>
+<div class=content><p><p><!--[if gte mso 9]><xml><br />
+<w:WordDocument><br />
+<w:View>Normal</w:View><br />
+<w:Zoom>0</w:Zoom><br />
+<w:PunctuationKerning /><br />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing><br />
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery><br />
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery><br />
+<w:ValidateAgainstSchemas /><br />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid><br />
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent><br />
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText><br />
+<w:Compatibility><br />
+<w:SpaceForUL /><br />
+<w:BalanceSingleByteDoubleByteWidth /><br />
+<w:DoNotLeaveBackslashAlone /><br />
+<w:ULTrailSpace /><br />
+<w:DoNotExpandShiftReturn /><br />
+<w:AdjustLineHeightInTable /><br />
+<w:BreakWrappedTables /><br />
+<w:SnapToGridInCell /><br />
+<w:WrapTextWithPunct /><br />
+<w:UseAsianBreakRules /><br />
+<w:DontGrowAutofit /><br />
+<w:UseFELayout /><br />
+</w:Compatibility><br />
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel><br />
+</w:WordDocument><br />
+</xml><![endif]--></p><br />
+<p><!--[if gte mso 9]><xml><br />
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156"><br />
+</w:LatentStyles><br />
+</xml><![endif]--><!--[if gte mso 10]><br />
+<style><br />
+/* Style Definitions */<br />
+table.MsoNormalTable<br />
+{mso-style-name:普通表格;<br />
+mso-tstyle-rowband-size:0;<br />
+mso-tstyle-colband-size:0;<br />
+mso-style-noshow:yes;<br />
+mso-style-parent:"";<br />
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;<br />
+mso-para-margin:0cm;<br />
+mso-para-margin-bottom:.0001pt;<br />
+mso-pagination:widow-orphan;<br />
+font-size:10.0pt;<br />
+font-family:"Times New Roman";<br />
+mso-fareast-font-family:"Times New Roman";<br />
+mso-ansi-language:#0400;<br />
+mso-fareast-language:#0400;<br />
+mso-bidi-language:#0400;}<br />
+</style><br />
+<![endif]--><br />
+<p class="MsoNormal"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;<br />
+font-family:宋体">第一组数据：<img src="/upload/pimg6222_1.gif" alt="" /></span></p><br />
+<p class="MsoNormal"><!--[if gte mso 9]><xml><br />
+<w:WordDocument><br />
+<w:View>Normal</w:View><br />
+<w:Zoom>0</w:Zoom><br />
+<w:PunctuationKerning /><br />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing><br />
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery><br />
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery><br />
+<w:ValidateAgainstSchemas /><br />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid><br />
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent><br />
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText><br />
+<w:Compatibility><br />
+<w:SpaceForUL /><br />
+<w:BalanceSingleByteDoubleByteWidth /><br />
+<w:DoNotLeaveBackslashAlone /><br />
+<w:ULTrailSpace /><br />
+<w:DoNotExpandShiftReturn /><br />
+<w:AdjustLineHeightInTable /><br />
+<w:BreakWrappedTables /><br />
+<w:SnapToGridInCell /><br />
+<w:WrapTextWithPunct /><br />
+<w:UseAsianBreakRules /><br />
+<w:DontGrowAutofit /><br />
+<w:UseFELayout /><br />
+</w:Compatibility><br />
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel><br />
+</w:WordDocument><br />
+</xml><![endif]--></p><br />
+</p><br />
+<p class="MsoNormal"><!--[if gte mso 9]><xml><br />
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156"><br />
+</w:LatentStyles><br />
+</xml><![endif]--><!--[if gte mso 10]><br />
+<style><br />
+/* Style Definitions */<br />
+table.MsoNormalTable<br />
+{mso-style-name:普通表格;<br />
+mso-tstyle-rowband-size:0;<br />
+mso-tstyle-colband-size:0;<br />
+mso-style-noshow:yes;<br />
+mso-style-parent:"";<br />
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;<br />
+mso-para-margin:0cm;<br />
+mso-para-margin-bottom:.0001pt;<br />
+mso-pagination:widow-orphan;<br />
+font-size:10.0pt;<br />
+font-family:"Times New Roman";<br />
+mso-fareast-font-family:"Times New Roman";<br />
+mso-ansi-language:#0400;<br />
+mso-fareast-language:#0400;<br />
+mso-bidi-language:#0400;}<br />
+</style><br />
+<![endif]--><br />
+<p class="MsoNormal"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;<br />
+font-family:宋体">第二组数据：<img src="/upload/pimg6222_2.gif" alt="" /></span></p><br />
+</p><br />
+<p class="MsoNormal"><!--[if gte mso 9]><xml><br />
+<w:WordDocument><br />
+<w:View>Normal</w:View><br />
+<w:Zoom>0</w:Zoom><br />
+<w:PunctuationKerning /><br />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing><br />
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery><br />
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery><br />
+<w:ValidateAgainstSchemas /><br />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid><br />
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent><br />
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText><br />
+<w:Compatibility><br />
+<w:SpaceForUL /><br />
+<w:BalanceSingleByteDoubleByteWidth /><br />
+<w:DoNotLeaveBackslashAlone /><br />
+<w:ULTrailSpace /><br />
+<w:DoNotExpandShiftReturn /><br />
+<w:AdjustLineHeightInTable /><br />
+<w:BreakWrappedTables /><br />
+<w:SnapToGridInCell /><br />
+<w:WrapTextWithPunct /><br />
+<w:UseAsianBreakRules /><br />
+<w:DontGrowAutofit /><br />
+<w:UseFELayout /><br />
+</w:Compatibility><br />
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel><br />
+</w:WordDocument><br />
+</xml><![endif]--></p><br />
+<p class="MsoNormal"><!--[if gte mso 9]><xml><br />
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156"><br />
+</w:LatentStyles><br />
+</xml><![endif]--><!--[if gte mso 10]><br />
+<style><br />
+/* Style Definitions */<br />
+table.MsoNormalTable<br />
+{mso-style-name:普通表格;<br />
+mso-tstyle-rowband-size:0;<br />
+mso-tstyle-colband-size:0;<br />
+mso-style-noshow:yes;<br />
+mso-style-parent:"";<br />
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;<br />
+mso-para-margin:0cm;<br />
+mso-para-margin-bottom:.0001pt;<br />
+mso-pagination:widow-orphan;<br />
+font-size:10.0pt;<br />
+font-family:"Times New Roman";<br />
+mso-fareast-font-family:"Times New Roman";<br />
+mso-ansi-language:#0400;<br />
+mso-fareast-language:#0400;<br />
+mso-bidi-language:#0400;}<br />
+</style><br />
+<![endif]--><br />
+<p class="MsoNormal"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;<br />
+font-family:宋体">第三组数据：<img src="/upload/pimg6222_3.gif" alt="" /></span></p><br />
+</p><br />
+<p class="MsoNormal"><!--[if gte mso 9]><xml><br />
+<w:WordDocument><br />
+<w:View>Normal</w:View><br />
+<w:Zoom>0</w:Zoom><br />
+<w:PunctuationKerning /><br />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing><br />
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery><br />
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery><br />
+<w:ValidateAgainstSchemas /><br />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid><br />
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent><br />
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText><br />
+<w:Compatibility><br />
+<w:SpaceForUL /><br />
+<w:BalanceSingleByteDoubleByteWidth /><br />
+<w:DoNotLeaveBackslashAlone /><br />
+<w:ULTrailSpace /><br />
+<w:DoNotExpandShiftReturn /><br />
+<w:AdjustLineHeightInTable /><br />
+<w:BreakWrappedTables /><br />
+<w:SnapToGridInCell /><br />
+<w:WrapTextWithPunct /><br />
+<w:UseAsianBreakRules /><br />
+<w:DontGrowAutofit /><br />
+<w:UseFELayout /><br />
+</w:Compatibility><br />
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel><br />
+</w:WordDocument><br />
+</xml><![endif]--></p><br />
+<p class="MsoNormal"><!--[if gte mso 9]><xml><br />
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156"><br />
+</w:LatentStyles><br />
+</xml><![endif]--><!--[if gte mso 10]><br />
+<style><br />
+/* Style Definitions */<br />
+table.MsoNormalTable<br />
+{mso-style-name:普通表格;<br />
+mso-tstyle-rowband-size:0;<br />
+mso-tstyle-colband-size:0;<br />
+mso-style-noshow:yes;<br />
+mso-style-parent:"";<br />
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;<br />
+mso-para-margin:0cm;<br />
+mso-para-margin-bottom:.0001pt;<br />
+mso-pagination:widow-orphan;<br />
+font-size:10.0pt;<br />
+font-family:"Times New Roman";<br />
+mso-fareast-font-family:"Times New Roman";<br />
+mso-ansi-language:#0400;<br />
+mso-fareast-language:#0400;<br />
+mso-bidi-language:#0400;}<br />
+</style><br />
+<![endif]--><br />
+<p class="MsoNormal"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;<br />
+font-family:宋体">第四组数据：<img src="/upload/pimg6222_4.gif" alt="" /></span></p><br />
+</p><br />
+<p></p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search='></a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=6222'>Submit</a>][<a href='problemstatus.php?id=6222'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=6222");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

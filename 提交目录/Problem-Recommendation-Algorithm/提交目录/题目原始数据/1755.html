@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?2127810017" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 1755 --算法5-4：采用十字链表存储的稀疏矩阵</title><center><h2>1755: 算法5-4：采用十字链表存储的稀疏矩阵</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>32 MB<br><span class=green>Submit: </span>108&nbsp;&nbsp;<span class=green>Solved: </span>69<br>[<a href='submitpage.php?id=1755'>Submit</a>][<a href='problemstatus.php?id=1755'>Status</a>][<a href='bbs.php?pid=1755'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=1755'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=1755");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=1755'>下载测试数据1元</a>][68kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><div>
+	当矩阵的非零元个数和位置在操作过程中变化较大时，就不宜采用顺序存储的结构来表示三元组的线性表了。因此，在这种情况下，采用链式存储结构表示三元组更为恰当。十字链表就是能够实现这样功能的一种数据结构。
+</div>
+<div>
+	在十字链表中，每个非零元可以用一个包含5个域的结点表示。其中i、j和e这3个域分别表示该非零元所在的行、列和非零元的值，向右域right用来链接同一行中下一个非零元，而向下域down用来链接同一列中下一个非零元。同一行的非零元通过right域链接成一个线性链表，同一列的非零元通过down域链接成一个线性链表。每个非零元既是某个行链表中的一个结点，又是某个列链表中的一个结点，整个矩阵通过这样的结构形成了一个十字交叉的链表。
+</div>
+<div>
+	稀疏矩阵的十字链表类型可以描述如下：
+</div>
+<div>
+	<img src="/upload/pimg1755_1.png" width="636" height="162" alt="" />
+</div>
+<div>
+	<span style="font-family:宋体;">下面是建立稀疏矩阵十字链表的算法描述：</span>
+</div>
+<div>
+	<img src="/upload/pimg1755_2.png" width="608" height="576" alt="" />
+</div>
+<div>
+	<span style="font-family:宋体;">给出一个稀疏矩阵，请将其存储到一个十字链表中，并将存储完毕的矩阵输出。</span>
+</div>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span></span>
+</p>
+<div>
+</div>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<span></span>
+</p>
+<div>
+</div></div><h2>Input</h2><div class=content><div>
+	输入的第一行是两个整数r和c（r&lt;200, c&lt;200, r*c &lt;= 12500），分别表示一个包含很多0的稀疏矩阵的行数和列数。接下来有r行，每行有c个整数，用空格隔开，表示稀疏矩阵的各个元素。
+</div></div><h2>Output</h2><div class=content><div>
+	输出读入的矩阵。输出共有r行，每行有c个整数，每个整数后输出一个空格。请注意行尾输出换行。
+</div></div><h2>Sample Input</h2>
+<pre class=content><span class=sampledata>5 6
+0 18 0 0 0 0
+0 0 67 0 0 0
+0 0 0 0 0 41
+0 0 47 62 0 0
+0 0 0 0 0 35
+</span></pre><h2>Sample Output</h2>
+<pre class=content><span class=sampledata>0 18 0 0 0 0 
+0 0 67 0 0 0 
+0 0 0 0 0 41 
+0 0 47 62 0 0 
+0 0 0 0 0 35 
+</span></pre><h2>HINT</h2>
+<div class=content><p><div><b><span style="color: blue; background-position: initial initial; background-repeat: initial initial;">提示：</span></b></div><br />
+<div style="text-indent:21.0pt;">对于m行n列且有t个非零元的稀疏矩阵，算法5.4的执行时间为O(t&times;s)，其中s=max(m,n)。这是由于每建立一个非零元结点时，都需要通过遍历查询它所在的行表和列表中的插入位置。这是因为我们采用的算法实际上对于非零元的输入先后次序并没有要求，而如果能够保证非零元是按照以行序为主序的顺序输入的话，则可以将十字链表的建立过程修改为O(t)复杂度的。</div><br />
+<div style="margin: 0cm 0cm 0.0001pt; background-position: initial initial; background-repeat: initial initial;"><b><span style="font-size:10.5pt;color:blue">总结：</span></b></div><br />
+<div style="margin: 0cm 0cm 0.0001pt; text-indent: 21pt; background-position: initial initial; background-repeat: initial initial;"><span style="font-size: 10.5pt;">采用十字链表存储的稀疏矩阵适用于矩阵中的非零元个数和位置经常发生变化或变化较大的情况，链式结构使得数据的插入、修改和删除变得十分容易。</span></div><br />
+<p></p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%95%99%E5%AD%A6%E9%A2%98-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>教学题-数据结构</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=1755'>Submit</a>][<a href='problemstatus.php?id=1755'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=1755");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

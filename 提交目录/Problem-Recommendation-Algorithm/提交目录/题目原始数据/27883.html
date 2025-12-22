@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?1193010716" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 27883 --【NOIP2015pj】求和</title><center><h2>27883: 【NOIP2015pj】求和</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>0&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='submitpage.php?id=27883'>Submit</a>][<a href='problemstatus.php?id=27883'>Status</a>][<a href='bbs.php?pid=27883'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=27883'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=27883");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=27883'>下载测试数据1元</a>][5028kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoBodyText" style="margin: 0cm 0cm 0pt"><b style="mso-bidi-font-weight: normal"><span style="mso-fareast-language: ZH-CN"><font size="3"><font face="宋体">【问题<span style="letter-spacing: -0.15pt">描</span>述】<span lang="EN-US"><o:p></o:p></span></font></font></span></b></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt 11pt"><font size="3"><font face="宋体"><span lang="EN-US" style="letter-spacing: -0.15pt; mso-fareast-language: ZH-CN"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </span></span><span style="letter-spacing: -0.15pt; mso-fareast-language: ZH-CN">一条狭长的纸带被均匀划分出了<span lang="EN-US">n</span>个格子，格子编号从<span lang="EN-US">1</span>到<span lang="EN-US">n</span>。每个格子上都染了一种颜色<span lang="EN-US">color<sub>i</sub></span>用<span lang="EN-US">[1</span>，<span lang="EN-US">m]</span>当中的一个整数表示），并且写了一个数字<span lang="EN-US">number<sub>i</sub></span>。<span lang="EN-US"><o:p></o:p></span></span></font></font></p>
+<p>
+<table class="MsoNormalTable" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-layout-alt: fixed; mso-yfti-tbllook: 480; mso-padding-alt: 0cm 0cm 0cm 0cm">
+    <tbody>
+        <tr style="height: 38pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-height-rule: exactly">
+            <td valign="top" width="118" colspan="2" style="border-top: #f0f0f0; height: 38pt; border-right: #f0f0f0; width: 88.4pt; background: #538dd3; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; mso-height-rule: exactly">
+            <p class="TableParagraph" align="right" style="text-align: right; margin: 2.75pt 18.9pt 0pt 0cm"><b><span lang="EN-US" style="font-size: 12pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑; mso-font-width: 95%">5</span></b><span lang="EN-US" style="font-size: 12pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑"><o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="60" style="border-top: #538dd3 1pt solid; height: 38pt; border-right: #f0f0f0; width: 45.25pt; background: #538dd3; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; mso-height-rule: exactly; mso-border-top-alt: solid #538DD3 .25pt">
+            <p class="TableParagraph" align="center" style="text-align: center; margin: 2.75pt 0cm 0pt"><b><span lang="EN-US" style="font-size: 12pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑">5</span></b><span lang="EN-US" style="font-size: 12pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑"><o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="60" style="border-top: red 1pt solid; height: 38pt; border-right: #f0f0f0; width: 44.65pt; background: red; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; mso-height-rule: exactly; mso-border-top-alt: solid red .25pt">
+            <p class="TableParagraph" align="center" style="text-align: center; margin: 2.75pt 0cm 0pt 0.05pt"><b><span lang="EN-US" style="font-size: 12pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑">3</span></b><span lang="EN-US" style="font-size: 12pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑"><o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="59" style="border-top: red 1pt solid; height: 38pt; border-right: #f0f0f0; width: 44.6pt; background: red; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; mso-height-rule: exactly; mso-border-top-alt: solid red .25pt">
+            <p class="TableParagraph" align="center" style="text-align: center; margin: 2.75pt 0.1pt 0pt 0cm"><b><span lang="EN-US" style="font-size: 12pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑">2</span></b><span lang="EN-US" style="font-size: 12pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑"><o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="60" style="border-top: #538dd3 1pt solid; height: 38pt; border-right: #f0f0f0; width: 44.65pt; background: #538dd3; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; mso-height-rule: exactly; mso-border-top-alt: solid #538DD3 .25pt">
+            <p class="TableParagraph" align="center" style="text-align: center; margin: 2.75pt 0.05pt 0pt 0cm"><b><span lang="EN-US" style="font-size: 12pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑">2</span></b><span lang="EN-US" style="font-size: 12pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑"><o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="59" style="border-top: red 1pt solid; height: 38pt; border-right: #f0f0f0; width: 43.9pt; background: red; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; mso-height-rule: exactly; mso-border-top-alt: solid red .25pt">
+            <p class="TableParagraph" align="center" style="text-align: center; margin: 2.75pt 0cm 0pt 0.65pt"><b><span lang="EN-US" style="font-size: 12pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑">2</span></b><span lang="EN-US" style="font-size: 12pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑"><o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr style="height: 16.05pt; mso-yfti-irow: 1; mso-height-rule: exactly; mso-yfti-lastrow: yes">
+            <td valign="top" width="59" style="border-top: #f0f0f0; height: 16.05pt; border-right: #f0f0f0; width: 43.95pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly">
+            <p class="TableParagraph" style="margin: 0cm 0cm 0pt 11.5pt; line-height: 13.65pt; mso-line-height-rule: exactly"><span lang="EN-US" style="font-size: 9pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑">编号<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="59" style="border-top: #f0f0f0; height: 16.05pt; border-right: #f0f0f0; width: 44.45pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly">
+            <p class="TableParagraph" align="center" style="text-align: center; margin: 0cm 0.75pt 0pt 0cm; line-height: 13.65pt; mso-line-height-rule: exactly"><span lang="EN-US" style="font-size: 9pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑">1<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="60" style="border-top: #f0f0f0; height: 16.05pt; border-right: #f0f0f0; width: 45.25pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly">
+            <p class="TableParagraph" align="center" style="text-align: center; margin: 0cm 0cm 0pt; line-height: 13.65pt; mso-line-height-rule: exactly"><span lang="EN-US" style="font-size: 9pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑">2<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="60" style="border-top: #f0f0f0; height: 16.05pt; border-right: #f0f0f0; width: 44.65pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly">
+            <p class="TableParagraph" align="center" style="text-align: center; margin: 0cm 0cm 0pt 0.1pt; line-height: 13.65pt; mso-line-height-rule: exactly"><span lang="EN-US" style="font-size: 9pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑">3<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="59" style="border-top: #f0f0f0; height: 16.05pt; border-right: #f0f0f0; width: 44.6pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly">
+            <p class="TableParagraph" align="center" style="text-align: center; margin: 0cm 0.05pt 0pt 0cm; line-height: 13.65pt; mso-line-height-rule: exactly"><span lang="EN-US" style="font-size: 9pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑">4<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="60" style="border-top: #f0f0f0; height: 16.05pt; border-right: #f0f0f0; width: 44.65pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly">
+            <p class="TableParagraph" align="center" style="text-align: center; margin: 0cm 0cm 0pt; line-height: 13.65pt; mso-line-height-rule: exactly"><span lang="EN-US" style="font-size: 9pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑">5<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="59" style="border-top: #f0f0f0; height: 16.05pt; border-right: #f0f0f0; width: 43.9pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly">
+            <p class="TableParagraph" align="center" style="text-align: center; margin: 0cm 0cm 0pt 0.7pt; line-height: 13.65pt; mso-line-height-rule: exactly"><span lang="EN-US" style="font-size: 9pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: 微软雅黑">6<o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="59" style="border-top: #f0f0f0; border-right: #f0f0f0; border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent"></td>
+            <td width="59" style="border-top: #f0f0f0; border-right: #f0f0f0; border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent"></td>
+            <td width="60" style="border-top: #f0f0f0; border-right: #f0f0f0; border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent"></td>
+            <td width="60" style="border-top: #f0f0f0; border-right: #f0f0f0; border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent"></td>
+            <td width="59" style="border-top: #f0f0f0; border-right: #f0f0f0; border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent"></td>
+            <td width="60" style="border-top: #f0f0f0; border-right: #f0f0f0; border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent"></td>
+            <td width="59" style="border-top: #f0f0f0; border-right: #f0f0f0; border-bottom: #f0f0f0; border-left: #f0f0f0; background-color: transparent"></td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt 11pt"><span lang="EN-US" style="mso-fareast-language: ZH-CN"><o:p><font size="3" face="宋体">&nbsp;</font></o:p></span></p>
+<p class="Default" style="margin: 0cm 0cm 0pt"><font face="宋体"><span lang="EN-US" style="font-size: 10.5pt"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 10.5pt">定义一种特殊的三元组：</span></font><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Times New Roman&quot;,serif">(x, y, z)</span><span style="font-size: 10.5pt"><font face="宋体">，其中</font></span><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Times New Roman&quot;,serif">x</span><span style="font-size: 10.5pt"><font face="宋体">，</font></span><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Times New Roman&quot;,serif">y</span><span style="font-size: 10.5pt"><font face="宋体">，</font></span><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Times New Roman&quot;,serif">z</span><span style="font-size: 10.5pt"><font face="宋体">都代表纸带上格子的编号，这里的三元组要求满足以下两个条件：<span lang="EN-US"><o:p></o:p></span></font></span></p>
+<p class="Default" style="margin: 0cm 0cm 0pt"><span style="font-size: 10.5pt"><font face="宋体">组要求满足以下两个条件：<span lang="EN-US"><o:p></o:p></span></font></span></p>
+<p class="Default" style="margin: 0cm 0cm 0pt"><font face="宋体"><span lang="EN-US" style="font-size: 10.5pt">1.<span style="mso-spacerun: yes">&nbsp; </span>xyz</span><span style="font-size: 10.5pt">是整数<span lang="EN-US">,x&lt;y&lt;z</span>，<span lang="EN-US">y-x=z-y<o:p></o:p></span></span></font></p>
+<p class="Default" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 10.5pt"><font face="宋体">2.<span style="mso-spacerun: yes">&nbsp; </span>color<sub>x</sub>=color<sub>z</sub><o:p></o:p></font></span></p>
+<p class="Default" style="margin: 0cm 0cm 0pt"><font face="宋体"><span lang="EN-US" style="font-size: 10.5pt"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 10.5pt">满足上述条件的三元组的分数规定为<span lang="EN-US">(x+z)*(number<sub>x</sub>+number<sub>z</sub>)</span>。整个纸带的分数规定为所有满足条件的三元组的分数的和。这个分数可能会很大，你只要输出整个纸带的分数除以<span lang="EN-US">10,007</span>所得的余数即可。<span lang="EN-US"><o:p></o:p></span></span></font></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 14pt; font-family: &quot;Calibri&quot;,sans-serif; mso-fareast-language: ZH-CN"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt"><b style="mso-bidi-font-weight: normal"><span style="mso-fareast-language: ZH-CN"><font face="宋体"><font size="3">【输<span style="letter-spacing: -0.05pt">入</span><span style="letter-spacing: -0.15pt">格</span>式】<span lang="EN-US"><o:p></o:p></span></font></font></span></b></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt 11pt"><font size="3"><span style="mso-fareast-language: ZH-CN"><font face="宋体">输入文<span style="letter-spacing: -0.15pt">件</span>名为<span style="letter-spacing: -2.75pt"> </span></font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; letter-spacing: -0.1pt; mso-fareast-language: ZH-CN">s</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; mso-fareast-language: ZH-CN">u<span style="letter-spacing: -0.2pt">m</span>.in</span><span style="mso-fareast-language: ZH-CN"><font face="宋体">。<span lang="EN-US"><o:p></o:p></span></font></span></font></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt 11pt"><span style="mso-fareast-language: ZH-CN"><font face="宋体"><font size="3">第一行是用一个空格隔开的两个正整数<span lang="EN-US">n</span>和<span lang="EN-US">m</span>，<span lang="EN-US">n</span>表纸带上格子的个数，<span lang="EN-US">m</span>表纸带上颜色的种类数。<span lang="EN-US"><o:p></o:p></span></font></font></span></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt 11pt"><span style="mso-fareast-language: ZH-CN"><font face="宋体"><font size="3">第二行有<span lang="EN-US">n</span>用空格隔开的正整数，第<span lang="EN-US">i</span>数字<span lang="EN-US">number</span>表纸带上编号为<span lang="EN-US">i</span>格子上面写的数字。<span lang="EN-US"><o:p></o:p></span></font></font></span></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt 11pt"><span style="mso-fareast-language: ZH-CN"><font face="宋体"><font size="3">第三行有<span lang="EN-US">n</span>用空格隔开的正整数，第<span lang="EN-US">i</span>数字<span lang="EN-US">color</span>表纸带上编号为<span lang="EN-US">i</span>格子染的颜色。<span lang="EN-US"><o:p></o:p></span></font></font></span></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt 11pt"><span lang="EN-US" style="letter-spacing: -0.15pt; mso-fareast-language: ZH-CN"><o:p><font size="3" face="宋体">&nbsp;</font></o:p></span></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt"><b style="mso-bidi-font-weight: normal"><span style="letter-spacing: -0.15pt; mso-fareast-language: ZH-CN"><font face="宋体"><font size="3">【输出格式】<span lang="EN-US"><o:p></o:p></span></font></font></span></b></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt 32pt; line-height: 16.45pt; mso-line-height-rule: exactly"><font size="3"><span style="mso-fareast-language: ZH-CN"><font face="宋体">输出文<span style="letter-spacing: -0.15pt">件</span>名为<span style="letter-spacing: -2.75pt"> </span></font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; letter-spacing: -0.1pt; mso-fareast-language: ZH-CN">s</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; mso-fareast-language: ZH-CN">u<span style="letter-spacing: -0.2pt">m</span>.ou<span style="letter-spacing: 0.05pt">t</span></span><span style="mso-fareast-language: ZH-CN"><font face="宋体">。<span lang="EN-US"><o:p></o:p></span></font></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 32pt; line-height: 15.35pt; mso-line-height-rule: exactly"><span style="font-size: 10.5pt; font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">共一<span style="letter-spacing: -0.15pt">行</span>，<span style="letter-spacing: -0.15pt">一</span>个<span style="letter-spacing: -0.15pt">整</span>数<span style="letter-spacing: -0.15pt">，</span>表<span style="letter-spacing: -0.15pt">示</span>所求<span style="letter-spacing: -0.15pt">的</span>纸<span style="letter-spacing: -0.15pt">带</span>分<span style="letter-spacing: -0.15pt">数除</span>以<span style="letter-spacing: -2.65pt"> </span></span><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Times New Roman&quot;,serif; mso-fareast-language: ZH-CN">10,<span style="letter-spacing: -0.15pt">00</span>7 </span><span style="font-size: 10.5pt; font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">所<span style="letter-spacing: -0.15pt">得</span>的<span style="letter-spacing: -0.15pt">余</span>数。</span><span lang="EN-US" style="font-size: 10.5pt; font-family: 宋体; mso-hansi-font-family: Calibri; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0.4pt 0cm 0pt; line-height: 14pt; mso-line-height-rule: exactly"><span lang="EN-US" style="font-size: 14pt; mso-fareast-language: ZH-CN"><o:p><font face="Calibri">&nbsp;</font></o:p></span></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt"><font size="3"><b style="mso-bidi-font-weight: normal"><span lang="EN-US"><font face="宋体">【输入<span style="letter-spacing: -0.15pt">输</span>出样例<span style="letter-spacing: -2.9pt"> </span></font></span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif">1</span><span lang="EN-US"><font face="宋体">】<o:p></o:p></font></span></b></font></p>
+<p class="MsoNormal" style="margin: 0.4pt 0cm 0pt; line-height: 1pt; mso-line-height-rule: exactly"><span lang="EN-US" style="font-size: 2pt"><o:p><font face="Calibri">&nbsp;</font></o:p></span></p>
+<p>
+<table class="MsoNormalTable" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; margin: auto auto auto 0.25pt; mso-table-layout-alt: fixed; mso-yfti-tbllook: 480; mso-padding-alt: 0cm 0cm 0cm 0cm">
+    <tbody>
+        <tr style="height: 16.1pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-height-rule: exactly">
+            <td valign="top" width="284" colspan="6" style="border-top: black 1pt solid; height: 16.1pt; border-right: black 1pt solid; width: 213.05pt; border-bottom: black 1pt solid; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: black 1pt solid; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.45pt 0cm 0pt 5.1pt"><font size="3"><b><span lang="EN-US" style="font-family: &quot;Courier New&quot;; letter-spacing: -0.05pt; mso-fareast-font-family: &quot;Times New Roman&quot;">sum.in</span></b><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></font></p>
+            </td>
+            <td valign="top" width="284" style="border-top: black 1pt solid; height: 16.1pt; border-right: black 1pt solid; width: 213.15pt; border-bottom: black 1pt solid; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-alt: solid black .5pt; mso-border-left-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.45pt 0cm 0pt 5.1pt"><font size="3"><b><span lang="EN-US" style="font-family: &quot;Courier New&quot;; letter-spacing: -0.05pt; mso-fareast-font-family: &quot;Times New Roman&quot;">sum.out</span></b><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></font></p>
+            </td>
+        </tr>
+        <tr style="height: 16.35pt; mso-yfti-irow: 1; mso-height-rule: exactly">
+            <td valign="top" width="20" style="border-top: #f0f0f0; height: 16.35pt; border-right: #f0f0f0; width: 14.95pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: black 1pt solid; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-left-alt: solid black .5pt; mso-border-top-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.85pt 0cm 0pt 5.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">6<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="17" style="border-top: #f0f0f0; height: 16.35pt; border-right: #f0f0f0; width: 12.65pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-top-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.85pt 0cm 0pt 3.15pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">2<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="17" style="border-top: #f0f0f0; height: 16.35pt; border-right: #f0f0f0; width: 12.6pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-top-alt: solid black .5pt">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US"><o:p><font size="3" face="Calibri">&nbsp;</font></o:p></span></p>
+            </td>
+            <td valign="top" width="17" style="border-top: #f0f0f0; height: 16.35pt; border-right: #f0f0f0; width: 12.6pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-top-alt: solid black .5pt">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US"><o:p><font size="3" face="Calibri">&nbsp;</font></o:p></span></p>
+            </td>
+            <td valign="top" width="17" style="border-top: #f0f0f0; height: 16.35pt; border-right: #f0f0f0; width: 12.6pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-top-alt: solid black .5pt">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US"><o:p><font size="3" face="Calibri">&nbsp;</font></o:p></span></p>
+            </td>
+            <td valign="top" width="197" style="border-top: #f0f0f0; height: 16.35pt; border-right: black 1pt solid; width: 147.7pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-top-alt: solid black .5pt; mso-border-right-alt: solid black .5pt">
+            <p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US"><o:p><font size="3" face="Calibri">&nbsp;</font></o:p></span></p>
+            </td>
+            <td valign="top" rowspan="3" width="284" style="border-top: #f0f0f0; height: 16.35pt; border-right: black 1pt solid; width: 213.15pt; border-bottom: black 1pt solid; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-alt: solid black .5pt; mso-border-left-alt: solid black .5pt; mso-border-top-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.6pt 0cm 0pt 5.1pt"><font size="3"><span lang="EN-US" style="font-family: &quot;Courier New&quot;; letter-spacing: -0.05pt; mso-fareast-font-family: &quot;Times New Roman&quot;">82</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></font></p>
+            </td>
+        </tr>
+        <tr style="height: 15.5pt; mso-yfti-irow: 2; mso-height-rule: exactly">
+            <td valign="top" width="20" style="border-top: #f0f0f0; height: 15.5pt; border-right: #f0f0f0; width: 14.95pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: black 1pt solid; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-left-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.4pt 0cm 0pt 5.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">5<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="17" style="border-top: #f0f0f0; height: 15.5pt; border-right: #f0f0f0; width: 12.65pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly">
+            <p class="TableParagraph" style="margin: 1.4pt 0cm 0pt 3.15pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">5<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="17" style="border-top: #f0f0f0; height: 15.5pt; border-right: #f0f0f0; width: 12.6pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly">
+            <p class="TableParagraph" style="margin: 1.4pt 0cm 0pt 3.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">3<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="17" style="border-top: #f0f0f0; height: 15.5pt; border-right: #f0f0f0; width: 12.6pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly">
+            <p class="TableParagraph" style="margin: 1.4pt 0cm 0pt 3.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">2<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="17" style="border-top: #f0f0f0; height: 15.5pt; border-right: #f0f0f0; width: 12.6pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly">
+            <p class="TableParagraph" style="margin: 1.4pt 0cm 0pt 3.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">2<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="197" style="border-top: #f0f0f0; height: 15.5pt; border-right: black 1pt solid; width: 147.7pt; border-bottom: #f0f0f0; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-right-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.4pt 0cm 0pt 3.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">2<o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr style="height: 31.15pt; mso-yfti-irow: 3; mso-height-rule: exactly; mso-yfti-lastrow: yes">
+            <td valign="top" width="20" style="border-top: #f0f0f0; height: 31.15pt; border-right: #f0f0f0; width: 14.95pt; border-bottom: black 1pt solid; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: black 1pt solid; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-left-alt: solid black .5pt; mso-border-bottom-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.5pt 0cm 0pt 5.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">2<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="17" style="border-top: #f0f0f0; height: 31.15pt; border-right: #f0f0f0; width: 12.65pt; border-bottom: black 1pt solid; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-bottom-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.5pt 0cm 0pt 3.15pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">2<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="17" style="border-top: #f0f0f0; height: 31.15pt; border-right: #f0f0f0; width: 12.6pt; border-bottom: black 1pt solid; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-bottom-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.5pt 0cm 0pt 3.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">1<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="17" style="border-top: #f0f0f0; height: 31.15pt; border-right: #f0f0f0; width: 12.6pt; border-bottom: black 1pt solid; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-bottom-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.5pt 0cm 0pt 3.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">1<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="17" style="border-top: #f0f0f0; height: 31.15pt; border-right: #f0f0f0; width: 12.6pt; border-bottom: black 1pt solid; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-bottom-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.5pt 0cm 0pt 3.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">2<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="197" style="border-top: #f0f0f0; height: 31.15pt; border-right: black 1pt solid; width: 147.7pt; border-bottom: black 1pt solid; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-right-alt: solid black .5pt; mso-border-bottom-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.5pt 0cm 0pt 3.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">1<o:p></o:p></span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt 32pt; line-height: 14.1pt; mso-line-height-rule: exactly"><font size="3"><span lang="EN-US"><font face="宋体">见选手<span style="letter-spacing: -0.15pt">目</span>录下的<span style="letter-spacing: -2.85pt"> </span></font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif">su<span style="letter-spacing: -0.2pt">m</span>/su<span style="letter-spacing: -0.05pt">m</span>1.in </span><span lang="EN-US"><font face="宋体">和<span style="letter-spacing: -2.9pt"> </span></font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif">su<span style="letter-spacing: -0.2pt">m</span>/su<span style="letter-spacing: -0.15pt">m</span>1.ans</span><span lang="EN-US"><font face="宋体">。<o:p></o:p></font></span></font></p>
+<p class="MsoNormal" style="margin: 0.2pt 0cm 0pt; line-height: 6pt; mso-line-height-rule: exactly"><span lang="EN-US" style="font-size: 6pt"><o:p><font face="Calibri">&nbsp;</font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; line-height: 10pt; mso-line-height-rule: exactly"><span lang="EN-US" style="font-size: 10pt"><o:p><font face="Calibri">&nbsp;</font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 20.85pt 0pt 0cm; line-height: 15.6pt; mso-line-height-rule: exactly"><b style="mso-bidi-font-weight: normal"><span style="font-size: 10.5pt; font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">【输<span style="letter-spacing: -0.15pt">入</span>输<span style="letter-spacing: -0.15pt">出样</span>例<span style="letter-spacing: -2.65pt"> </span></span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Times New Roman&quot;,serif; mso-fareast-language: ZH-CN">1 </span></b><b style="mso-bidi-font-weight: normal"><span style="font-size: 10.5pt; font-family: 宋体; letter-spacing: -0.15pt; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">说</span></b><b style="mso-bidi-font-weight: normal"><span style="font-size: 10.5pt; font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">明】<span lang="EN-US"><o:p></o:p></span></span></b></p>
+<p class="MsoNormal" style="margin: 0cm 21pt 0pt 0cm; line-height: 15.6pt; text-indent: 21pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0"><span style="font-size: 10.5pt; font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">纸带<span style="letter-spacing: -0.15pt">如</span>题<span style="letter-spacing: -0.15pt">目</span>描<span style="letter-spacing: -0.15pt">述</span>中<span style="letter-spacing: -0.15pt">的</span>图<span style="letter-spacing: -0.15pt">所</span>示。</span><span lang="EN-US" style="font-size: 10.5pt; font-family: 宋体; mso-hansi-font-family: Calibri; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 21pt 0pt 0cm; line-height: 15.6pt; text-indent: 21pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0"><span style="font-size: 10.5pt; font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">所有<span style="letter-spacing: -0.15pt">满</span>足<span style="letter-spacing: -0.15pt">条</span>件<span style="letter-spacing: -0.15pt">的</span>三<span style="letter-spacing: -0.15pt">元</span>组<span style="letter-spacing: -0.15pt">为</span>：</span><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Cambria Math&quot;,serif; letter-spacing: 0.05pt; mso-fareast-language: ZH-CN; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Cambria Math&quot;">(</span><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Cambria Math&quot;,serif; mso-fareast-language: ZH-CN; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Cambria Math&quot;">1,<span style="letter-spacing: -0.8pt"> </span>3,<span style="letter-spacing: -0.65pt"> </span>5<span style="letter-spacing: 0.05pt">)</span>,<span style="letter-spacing: -0.65pt"> </span><span style="letter-spacing: 0.05pt">(</span><span style="letter-spacing: -0.1pt">4</span>,<span style="letter-spacing: -0.65pt"> </span>5,<span style="letter-spacing: -0.65pt"> </span>6<span style="letter-spacing: -0.1pt">)</span></span><span style="font-size: 10.5pt; font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">。</span><span lang="EN-US" style="font-size: 10.5pt; font-family: 宋体; mso-hansi-font-family: Calibri; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 21pt 0pt 0cm; line-height: 15.6pt; text-indent: 21pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0"><span style="font-size: 10.5pt; font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">所以<span style="letter-spacing: -0.15pt">纸</span>带<span style="letter-spacing: -0.15pt">的</span>分<span style="letter-spacing: -0.15pt">数为</span></span><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Cambria Math&quot;,serif; letter-spacing: 0.05pt; mso-fareast-language: ZH-CN; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Cambria Math&quot;">(</span><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Cambria Math&quot;,serif; mso-fareast-language: ZH-CN; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Cambria Math&quot;">1<span style="letter-spacing: -0.15pt"> </span>+ 5)<span style="letter-spacing: -0.1pt"> </span>&lowast; <span style="letter-spacing: 0.05pt">(</span>5<span style="letter-spacing: -0.15pt"> </span>+ 2)<span style="letter-spacing: -0.1pt"> </span>+ <span style="letter-spacing: 0.05pt">(</span>4<span style="letter-spacing: -0.15pt"> </span>+ 6)<span style="letter-spacing: -0.1pt"> </span>&lowast; <span style="letter-spacing: 0.05pt">(</span>2<span style="letter-spacing: -0.15pt"> </span>+ 2)<span style="letter-spacing: 0.5pt"> </span>=<span style="letter-spacing: 0.6pt"> </span>42<span style="letter-spacing: -0.15pt"> </span>+ 40<span style="letter-spacing: 0.5pt"> </span>=<span style="letter-spacing: 0.6pt"> </span>8<span style="letter-spacing: -0.1pt">2</span></span><span style="font-size: 10.5pt; font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">。</span><span lang="EN-US" style="font-size: 10.5pt; font-family: 宋体; mso-hansi-font-family: Calibri; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0.05pt 0cm 0pt 11pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="margin: 0.05pt 0cm 0pt"><b style="mso-bidi-font-weight: normal"><span style="font-size: 10.5pt; font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">【输<span style="letter-spacing: -0.15pt">入</span>输<span style="letter-spacing: -0.15pt">出样</span>例<span style="letter-spacing: -2.65pt"> </span></span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Times New Roman&quot;,serif; mso-fareast-language: ZH-CN">2</span></b><b style="mso-bidi-font-weight: normal"><span style="font-size: 10.5pt; font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">】</span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 10.5pt; font-family: 宋体; mso-hansi-font-family: Calibri; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin: 0.15pt 0cm 0pt; line-height: 1.5pt; mso-line-height-rule: exactly"><span lang="EN-US" style="font-size: 2pt; mso-fareast-language: ZH-CN"><o:p><font face="Calibri">&nbsp;</font></o:p></span></p>
+<p>
+<table class="MsoNormalTable" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; margin: auto auto auto 0.25pt; mso-table-layout-alt: fixed; mso-yfti-tbllook: 480; mso-padding-alt: 0cm 0cm 0cm 0cm">
+    <tbody>
+        <tr style="height: 16.1pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-height-rule: exactly">
+            <td valign="top" width="276" style="border-top: black 1pt solid; height: 16.1pt; border-right: black 1pt solid; width: 207.05pt; border-bottom: black 1pt solid; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: black 1pt solid; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.85pt 0cm 0pt 5.1pt"><b><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">su<span style="letter-spacing: -0.15pt">m</span>.<span style="letter-spacing: -0.1pt">i</span>n</span></b><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="277" style="border-top: black 1pt solid; height: 16.1pt; border-right: black 1pt solid; width: 207.85pt; border-bottom: black 1pt solid; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-alt: solid black .5pt; mso-border-left-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.85pt 0cm 0pt 5.1pt"><b><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">su<span style="letter-spacing: -0.1pt">m</span>.<span style="letter-spacing: -0.1pt">o</span>ut</span></b><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr style="height: 62.9pt; mso-yfti-irow: 1; mso-height-rule: exactly; mso-yfti-lastrow: yes">
+            <td valign="top" width="276" style="border-top: #f0f0f0; height: 62.9pt; border-right: black 1pt solid; width: 207.05pt; border-bottom: black 1pt solid; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: black 1pt solid; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-alt: solid black .5pt; mso-border-top-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.75pt 0cm 0pt 5.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">15<span style="letter-spacing: -0.05pt"> </span>4<o:p></o:p></span></p>
+            <p class="TableParagraph" style="margin: 3.7pt 0cm 0pt 5.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">5<span style="letter-spacing: 0.05pt"> </span><span style="letter-spacing: -0.1pt">1</span>0<span style="letter-spacing: -0.05pt"> </span>8<span style="letter-spacing: -0.05pt"> </span>2<span style="letter-spacing: -0.05pt"> </span>2<span style="letter-spacing: -0.05pt"> </span>2<span style="letter-spacing: -0.05pt"> </span>9<span style="letter-spacing: -0.05pt"> </span>9<span style="letter-spacing: -0.05pt"> </span>7<span style="letter-spacing: -0.05pt"> </span>7<span style="letter-spacing: 0.05pt"> </span>5<span style="letter-spacing: -0.1pt"> </span>6<span style="letter-spacing: -0.05pt"> </span>4<span style="letter-spacing: -0.05pt"> </span>2<span style="letter-spacing: -0.05pt"> </span>4<o:p></o:p></span></p>
+            <p class="TableParagraph" style="margin: 3.7pt 0cm 0pt 5.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">2<span style="letter-spacing: 0.05pt"> </span>2<span style="letter-spacing: -0.1pt"> </span>3<span style="letter-spacing: -0.05pt"> </span>3<span style="letter-spacing: -0.05pt"> </span>4<span style="letter-spacing: -0.05pt"> </span>3<span style="letter-spacing: -0.05pt"> </span>3<span style="letter-spacing: -0.05pt"> </span>2<span style="letter-spacing: -0.05pt"> </span>4<span style="letter-spacing: -0.05pt"> </span>4<span style="letter-spacing: -0.05pt"> </span>4<span style="letter-spacing: -0.05pt"> </span>4<span style="letter-spacing: -0.05pt"> </span>1<span style="letter-spacing: -0.05pt"> </span>1<span style="letter-spacing: -0.05pt"> </span>1<o:p></o:p></span></p>
+            </td>
+            <td valign="top" width="277" style="border-top: #f0f0f0; height: 62.9pt; border-right: black 1pt solid; width: 207.85pt; border-bottom: black 1pt solid; padding-bottom: 0cm; padding-top: 0cm; padding-left: 0cm; border-left: #f0f0f0; padding-right: 0cm; background-color: transparent; mso-height-rule: exactly; mso-border-alt: solid black .5pt; mso-border-left-alt: solid black .5pt; mso-border-top-alt: solid black .5pt">
+            <p class="TableParagraph" style="margin: 1.75pt 0cm 0pt 5.1pt"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Courier New&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;">13<span style="letter-spacing: -0.1pt">8</span>8<o:p></o:p></span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<p class="MsoBodyText" style="margin: 0cm 0.2pt 0pt 11pt; line-height: 14.1pt; mso-line-height-rule: exactly"><font size="3"><span lang="EN-US"><font face="宋体">见选手<span style="letter-spacing: -0.15pt">目</span>录下的<span style="letter-spacing: -2.85pt"> </span></font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif">su<span style="letter-spacing: -0.2pt">m</span>/su<span style="letter-spacing: -0.05pt">m</span>2.in </span><span lang="EN-US"><font face="宋体">和<span style="letter-spacing: -2.9pt"> </span></font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif">su<span style="letter-spacing: -0.2pt">m</span>/su<span style="letter-spacing: -0.2pt">m</span>2.ans</span><span lang="EN-US"><font face="宋体">。<o:p></o:p></font></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 14pt"><o:p><font face="Calibri">&nbsp;</font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 10.5pt; font-family: 宋体; mso-bidi-font-family: 宋体">【输<span style="letter-spacing: -0.15pt">入</span>输<span style="letter-spacing: -0.15pt">出样</span>例<span style="letter-spacing: -2.65pt"> </span></span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Times New Roman&quot;,serif">3</span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 10.5pt; font-family: 宋体; mso-bidi-font-family: 宋体">】<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 11pt"><font size="3"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">见选手<span style="letter-spacing: -0.15pt">目</span>录下的</span><span lang="EN-US" style="letter-spacing: -2.85pt"><font face="Calibri"> </font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif">su<span style="letter-spacing: -0.2pt">m</span>/su<span style="letter-spacing: -0.05pt">m</span>3.in </span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">和</span><span lang="EN-US" style="letter-spacing: -2.9pt"><font face="Calibri"> </font></span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif">su<span style="letter-spacing: -0.2pt">m</span>/su<span style="letter-spacing: -0.2pt">m</span>3.ans</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">。</span><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 10.5pt; font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-family: 宋体"><o:p></o:p></span></b></font></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 14pt; font-family: &quot;Calibri&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt"><font face="宋体"><font size="3"><b style="mso-bidi-font-weight: normal"><span lang="EN-US">【数据<span style="letter-spacing: -0.15pt">说</span>明】</span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="mso-fareast-language: ZH-CN"><o:p></o:p></span></b></font></font></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt 11pt"><span style="mso-fareast-language: ZH-CN"><font face="宋体"><font size="3">对于第<span lang="EN-US"> 1 </span>组至第<span lang="EN-US"> 2 </span>组数据，<span lang="EN-US"> 1 </span>&le;<span lang="EN-US"> n </span>&le;<span lang="EN-US"> 100, 1 </span>&le;<span lang="EN-US"> m </span>&le;<span lang="EN-US"> 5</span>；<span lang="EN-US"><o:p></o:p></span></font></font></span></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt 11pt"><span style="mso-fareast-language: ZH-CN"><font face="宋体"><font size="3">对于第<span lang="EN-US"> 3 </span>组至第<span lang="EN-US"> 4 </span>组数据，<span lang="EN-US"> 1 </span>&le;<span lang="EN-US"> n </span>&le;<span lang="EN-US"> 3000, 1 </span>&le;<span lang="EN-US"> m </span>&le;<span lang="EN-US"> 100</span>；<span lang="EN-US"><o:p></o:p></span></font></font></span></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt 11pt"><span style="mso-fareast-language: ZH-CN"><font face="宋体"><font size="3">对于第<span lang="EN-US"> 5 </span>组至第<span lang="EN-US"> 6 </span>组数据，<span lang="EN-US"> 1 </span>&le;<span lang="EN-US"> n </span>&le;<span lang="EN-US"> 100000, 1 </span>&le;<span lang="EN-US"> m </span>&le;<span lang="EN-US"> 100000</span>，且不存在出现次数超过<span lang="EN-US"> 20 </span>的颜色；<span lang="EN-US"><o:p></o:p></span></font></font></span></p>
+<p class="MsoBodyText" style="margin: 0cm 0cm 0pt 11pt"><span style="mso-fareast-language: ZH-CN"><font face="宋体"><font size="3">对 于 全 部<span lang="EN-US"> 10 </span>组 数 据 ，<span lang="EN-US"> 1 </span>&le;<span lang="EN-US"> n </span>&le;<span lang="EN-US"> 100000, 1 </span>&le;<span lang="EN-US"> m </span>&le;<span lang="EN-US"> 100000, 1 </span>&le;<span lang="EN-US"> color<sub>i</sub> </span>&le;<span lang="EN-US"> m</span>，<span lang="EN-US">1</span>&le;<span lang="EN-US">number<sub>i</sub></span>&le;<span lang="EN-US">100000<o:p></o:p></span></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; line-height: 29.95pt; mso-line-height-rule: exactly"><span lang="EN-US" style="mso-fareast-language: ZH-CN"><o:p><font size="3" face="Calibri">&nbsp;</font></o:p></span></p>
+<p></p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=NOIP2016%E6%99%AE%E5%8F%8A%E7%BB%84'>NOIP2016普及组</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=27883'>Submit</a>][<a href='problemstatus.php?id=27883'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=27883");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->

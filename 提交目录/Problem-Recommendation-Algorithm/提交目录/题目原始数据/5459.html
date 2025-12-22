@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ACM NOIP 信息学竞赛 测试数据 下载 大全">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>TK题库</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/white.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/katex.min.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/mathjax.css">
+<link rel="stylesheet" href="http://cdn.hustoj.com/template/bs3/semantic.min.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">TK题库</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <!--              <li ><a href="bbs.php">Web Board</a></li>-->
+              <li ><a href="faqs.php"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> F.A.Qs</a></li>
+              <li class='btn-primary' ><a style='color:white' href="problemset.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> ProblemSet</a></li>
+              <li class='btn-success'><a  style='color:white'  href="problemset.php?search=free"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> 免费专区</a></li>
+              <li class='btn-danger'><a  style='color:white' href="problemset.php?hot"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门下载</a></li>
+              <li class='btn-warning'><a  style='color:white' href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Source/Category</a></li>
+              <li class='btn-info'><a  style='color:white' href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Status</a></li>
+ <!--             <li ><a href="ranklist.php">Ranklist</a></li>
+              <li ><a href="recent-contest.php">Recent</a></li>
+              <li ><a href="contest.php">Contest</a></li>
+	-->
+		<li><a > 题目数据全能下，右上角注册充值，支持微信! </a></li>
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/tk/profile.php?542123910" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	
+<title>Problem 5459 --间谍网络-【2014暑期训练】T2Day1T3</title><center><h2>5459: 间谍网络-【2014暑期训练】T2Day1T3</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>25&nbsp;&nbsp;<span class=green>Solved: </span>10<br>[<a href='submitpage.php?id=5459'>Submit</a>][<a href='problemstatus.php?id=5459'>Status</a>][<a href='bbs.php?pid=5459'>Web Board</a>][Creator:<span id='creator'></span>][<a href='pay.php?pid=5459'>下载FPS1元</a>][<a onclick='$(this).load("cart.php?add=5459");'>添加到购物车</a>][<a href='pay.php?fmt=zipdata&pid=5459'>下载测试数据1元</a>][448kb]</center><!--StartMarkForVirtualJudge--><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center;">
+	<b><span style="font-size:18px;">间谍网络</span></b><b></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【问题描述】 </span><span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:12.0pt;">
+	<span style="font-size:18px;">由于外国间谍的大量渗入，国家安全正处于高度的危机之中。如果A间谍手中掌握着关于B间谍的犯罪证据，则称A可以揭发B。有些间谍收受贿赂，只要给他们一定数量的美元，他们就愿意交出手中掌握的全部情报。所以，如果我们能够收买一些间谍的话，我们就可能控制间谍网中的每一分子。因为一旦我们逮捕了一个间谍，他手中掌握的情报都将归我们所有，这样就有可能逮捕新的间谍，掌握新的情报。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 我们的反间谍机关提供了一份资料，色括所有已知的受贿的间谍，以及他们愿意收受的具体数额。同时我们还知道哪些间谍手中具体掌握了哪些间谍的资料。假设总共有n个间谍(n不超过3000)，每个间谍分别用1到3000的整数来标识。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;&nbsp;&nbsp; 请根据这份资料，判断我们是否有可能控制全部的间谍，如果可以，求出我们所需要支付的最少资金。否则，输出不能被控制的一个编号最小的间谍。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【文件输入】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;line-height:1.5;">输入文件age.in。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;line-height:1.5;">第一行只有一个整数n。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">第二行是整数p。表示愿意被收买的人数，1≤p≤n。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">接下来的p行，每行有两个整数，第一个数是一个愿意被收买的间谍的编号，第二个数表示他将会被收买的数额。这个数额不超过20000。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">紧跟着一行只有一个整数r，1≤r≤8000。然后r行，每行两个正整数，表示数对(A, B)，A间谍掌握B间谍的证据。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【文件输出】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;line-height:1.5;">输出文件age.out。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">如果可以控制所有间谍，第一行输出YES，并在第二行输出所需要支付的贿金最小值。否则输出NO，并在第二行输出不能控制的间谍中，编号最小的间谍编号。</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【输入样例1】 </span><span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">3</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">2</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1 10</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">2 100</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">2</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1 3</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">2 3</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">&nbsp;</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【输出样例1】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">YES</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">110</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;"><br />
+</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【输入样例2】 </span><span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">4</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">2</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1 100</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">4 200</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">2</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">1 2</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">3 4</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;"><br />
+</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">【输出样例2】</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">NO</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;">3</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:18px;"><br />
+</span> 
+</p></div><h2>Input</h2><div class=content></div><h2>Output</h2><div class=content></div><h2>HINT</h2>
+<div class=content><p><p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;根据题中给出的间谍的相互控制关系，建立有向图。找出有向图中的所有强连通分量，用每个强连通分量中最便宜的点（需支付最少贿金的间谍）来代替这些强连通分量，将强连通分量收缩为单个节点。收缩强连通分量后的图中，入度为0的节点即代表需要贿赂的间谍。</span><br />
+</p><br />
+<p class="MsoNormal"><br />
+	<span style="font-size:18px;">&nbsp;</span><br />
+</p><br />
+<h4><br />
+	<span style="font-size:18px;">算法学习：有向图的强连通分量</span><br />
+</h4><br />
+<p><br />
+	<strong><u><span style="font-size:18px;">DFS</span></u></strong><br /><br />
+<span style="font-size:18px;"> DFS就是深度优先搜索，裸的DFS是很启蒙的一个东西，所以就不废话了，直接给出它的程序：</span><br /><br />
+<span style="font-size:18px;"> procedure dfs(x:longint);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;var j:longint;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;begin</span><br /><br />
+<span style="font-size:18px;"> &nbsp; flag[x]:=1;</span><br /><br />
+<span style="font-size:18px;"> &nbsp; for j:=1 to n do</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp; if (a[x,j]=1)and(flag[j]=0) then</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp; dfs(j);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;end;</span><br /><br />
+<span style="font-size:18px;"> 其中flag是是否遍历过的标记，a是邻接矩阵。</span><br /><br />
+<span style="font-size:18px;"> 当然，在主程序中需要有这一句：</span><br /><br />
+<span style="font-size:18px;"> for i:=1 to n do</span><br /><br />
+<span style="font-size:18px;"> &nbsp;if flag[i]=0 then dfs(i);</span><br /><br />
+<span style="font-size:18px;"> 而不是直接的dfs(1)，因为节点1并不一定能到达所有节点。这是初学者（我？）常犯的一个错误。</span><br /><br />
+<span style="font-size:18px;"> 当然，DFS进行的顺序并不一定是按节点编号顺序。一般按节点编号顺序DFS只是为了方便，有时我们必须以不同的顺序进行DFS（比如下面将要谈到的Kosaraju算法）。</span><br />
+</p><br />
+<p><br />
+	<strong><u><span style="font-size:18px;">时间戳与点的分类</span></u></strong><br /><br />
+<span style="font-size:18px;"> 设置全局变量time，初始值为0，当遇到一个事件点的时候就+1。时间点分为两种：发现某一节点和结束某一节点（即在DFS过程的开头和结尾）。发现节点x时，发现时间戳d[x]=time；结束节点x时，结束时间戳f[x]=time。</span><br /><br />
+<span style="font-size:18px;"> 根据时间戳状态的不同可以将节点进行分类：</span><br /><br />
+<span style="font-size:18px;"> 白点==没有时间戳的节点==未遍历的节点</span><br /><br />
+<span style="font-size:18px;"> 灰点==仅有发现时间戳的节点==正在遍历以此节点为根的子树的节点</span><br /><br />
+<span style="font-size:18px;"> 黑点==有发现时间戳和结束时间戳的节点==完成的节点</span><br /><br />
+<span style="font-size:18px;"> 注意：点的分类随time增长而变化，且DFS结束后所有点都是黑点，所以用一个全局变量保存点的分类没有意义。DFS过程中可以直接通过时间戳得知点的分类。</span><br />
+</p><br />
+<p><br />
+	<strong><u><span style="font-size:18px;">边的分类</span></u></strong><br /><br />
+<span style="font-size:18px;"> 在DFS过程中所有顶点和经过的边形成了一棵DFS树。根据图中的边在DFS树中的位置和发现此边时入节点的分类（这里说的是有向图，每条边有出节点和入节点）将边分为四类：</span><br /><br />
+<span style="font-size:18px;"> 树枝==DFS树中的边==入节点为白点</span><br /><br />
+<span style="font-size:18px;"> 反向边==某一节点x到其DFS树中祖先y的边==入节点为灰点</span><br /><br />
+<span style="font-size:18px;"> 正向边==某一节点x到其DFS树中后代y的边==入节点为黑点==d[x]&gt;d[y]</span><br /><br />
+<span style="font-size:18px;"> 横叉边==某一节点x到DFS树中另一子树上节点y的边==入节点为黑点==d[x]&lt;d[y]</span><br /><br />
+<span style="font-size:18px;"> 如下图：</span><br /><br />
+<!--[if gte vml 1]><![endif]--><!--[if !vml]--><img width="286" height="130" src="file://C:/DOCUME~1/zsb0001/LOCALS~1/Temp/msohtml1/01/clip_image002.jpg" /><!--[endif]--><br /><br />
+<span style="font-size:18px;"> 若以节点序号顺序进行DFS，则形成下面一棵DFS树（粗边是树枝，其他类型的边在旁边有说明）</span><br /><br />
+<!--[if gte vml 1]><![endif]--><!--[if !vml]--><img width="276" height="344" src="file://C:/DOCUME~1/zsb0001/LOCALS~1/Temp/msohtml1/01/clip_image004.jpg" /><!--[endif]--><br />
+</p><br />
+<p><br />
+	<span style="font-size:18px;">横叉边在图中是只能向左的，通过DFS的过程可以知道这一点。这对我们设计算法很有帮助。</span><br /><br />
+<span style="font-size:18px;"> 注意，边的分类与点的分类完全不同。点的分类随着时间变化，而边的分类是不变的。所以我们需要用一个全局变量保存边的分类。在后面的程序中，我们用kl[i,j]表示i到j的边的分类，树枝、反向边、正向边、横叉边分别用1/2/3/4表示。</span><br />
+</p><br />
+<p><br />
+	<strong><u><span style="font-size:18px;">强连通分量</span></u></strong><br /><br />
+<span style="font-size:18px;"> 一个有向图中，如果节点i能够通过一些边到达节点j，就简写成i能到达j。如果对于任意两个节点i,j均有i能到达j或j能到达i，则说此图是连通的。如果对于任意两个节点i,j均有i能到达j且j能到达i，则说此图是强连通的。</span><br /><br />
+<span style="font-size:18px;"> 对于一个无向图，说强联通没有意义，因为此时强连通就是连通。而对于一个有向图，它不一定是强连通的，但可以分为几个极大的强连通子图（“极大”的意思是再加入任何一个顶点就不满足强连通了）。这些子图叫做这个有向图的强连通分量。在上图中，强连通分量是A{1},B{2,4},C{3,5,6,7}。</span><br /><br />
+<span style="font-size:18px;"> 在一个强连通分量中的节点由于有着相似的拓扑性质，所以我们可以将其紧缩为一个节点（这让我想到了什么？化学里的“族”），于是就大大减小了图的规模。比如上图紧缩为A,B,C三个节点后，整个图就成为了B←A→C的简单形式。所以强连通分量是一个很有意义的东西。然而如果根据定义，对每个节点进行一次O(n</span><sup><span style="font-size:18px;">2</span></sup><span style="font-size:18px;">)的DFS以求出它所能到达的顶点的话，整个算法的时间复杂度就是迟钝的O(n</span><sup><span style="font-size:18px;">3</span></sup><span style="font-size:18px;">)。下面将介绍两种用O(n</span><sup><span style="font-size:18px;">2</span></sup><span style="font-size:18px;">)求强连通分量的算法：Kosaraju算法和Tarjan算法。</span><br />
+</p><br />
+<p><br />
+	<strong><u><span style="font-size:18px;">Kosaraju</span></u></strong><strong><u><span style="font-size:18px;">算法</span></u></strong><br /><br />
+<span style="font-size:18px;"> Kosaraju算法基于以下思想：强连通分量一定是某种DFS形成的DFS树森林。Kosaraju算法给出了更具体的方式：</span><br /><br />
+<span style="font-size:18px;"> ①任意进行一次DFS，记录下每个节点的结束时间戳f[i]。</span><br /><br />
+<span style="font-size:18px;"> ②按f[i]的大小对节点进行排序（从小到大）。</span><br /><br />
+<span style="font-size:18px;"> ③以②的排序结果为顺序再进行一次DFS，所得的DFS树森林即为强连通分量。这次DFS可以用Floodfill进行，把每个强连通分量标上不同序号。</span><br /><br />
+<span style="font-size:18px;"> （这就是OI界传说中的“求强连两遍DFS的算法”）</span><br /><br />
+<span style="font-size:18px;"> 比如上图，我们可以得到：</span><br /><br />
+<span style="font-size:18px;"> d[1]=1&nbsp; f[1]=14</span><br /><br />
+<span style="font-size:18px;"> d[2]=2&nbsp; f[2]=5</span><br /><br />
+<span style="font-size:18px;"> d[3]=6&nbsp; f[3]=13</span><br /><br />
+<span style="font-size:18px;"> d[4]=3&nbsp; f[4]=4</span><br /><br />
+<span style="font-size:18px;"> d[5]=7&nbsp; f[5]=8</span><br /><br />
+<span style="font-size:18px;"> d[6]=9&nbsp; f[6]=12</span><br /><br />
+<span style="font-size:18px;"> d[7]=10 f[7]=11</span><br /><br />
+<span style="font-size:18px;"> 根据f[i]排序得：④②⑤⑦⑥③①（发现了什么？就是后序遍历），再按照这个顺序进行DFS即可。</span><br /><br />
+<span style="font-size:18px;"> 程序：</span><br /><br />
+<span style="font-size:18px;"> var<br />
+a:array[1..1000,1..1000]of longint;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp; b,flag:array[1..1000]of longint;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp; n,i,j,m,k:longint;</span><br />
+</p><br />
+<p><br />
+	<span style="font-size:18px;">procedure dfs(x:longint);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;var j:longint;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;begin</span><br /><br />
+<span style="font-size:18px;"> &nbsp; flag[x]:=1;</span><br /><br />
+<span style="font-size:18px;"> &nbsp; for j:=1 to n do</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp; if (flag[j]=0)and(a[x,j]&gt;0) then dfs(j);</span><br /><br />
+<span style="font-size:18px;"> &nbsp; inc(m);</span><br /><br />
+<span style="font-size:18px;"> &nbsp; b[m]:=x;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;end;</span><br />
+</p><br />
+<p><br />
+	<span style="font-size:18px;">procedure<br />
+fill(x,k:longint);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;var j:longint;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;begin</span><br /><br />
+<span style="font-size:18px;"> &nbsp; flag[x]:=k;</span><br /><br />
+<span style="font-size:18px;"> &nbsp; for j:=n downto 1 do</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp; if (flag[b[j]]=0)and(a[b[j],x]&gt;0) then fill(b[j],k);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;end;</span><br />
+</p><br />
+<p><br />
+	<span style="font-size:18px;">begin</span><br />
+</p><br />
+<p><br />
+	<span style="font-size:18px;">&nbsp;readln(n);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;for i:=1 to n do</span><br /><br />
+<span style="font-size:18px;"> &nbsp; begin</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp; for j:=1 to n do read(a[i,j]);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp; readln;</span><br /><br />
+<span style="font-size:18px;"> &nbsp; end;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;m:=0;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;fillchar(flag,sizeof(flag),0);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;for i:=1 to n do</span><br /><br />
+<span style="font-size:18px;"> &nbsp; if flag[i]=0 then dfs(i);</span><br />
+</p><br />
+<p><br />
+	<b><span style="font-size:18px;">&nbsp;fillchar(flag,sizeof(flag),0);</span></b><br /><br />
+<span style="font-size:18px;"> &nbsp;k:=0;</span><br /><br />
+<b><span style="font-size:18px;">&nbsp;for i:=n<br />
+downto 1 do</span></b><br /><br />
+<span style="font-size:18px;"> &nbsp; if flag[b[i]]=0 then</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp; begin</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp; inc(k);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp; fill(b[i],k);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp; end;</span><br />
+</p><br />
+<p><br />
+	<span style="font-size:18px;">&nbsp;for i:=1 to k do</span><br /><br />
+<span style="font-size:18px;"> &nbsp; begin</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp; for j:=1 to n do</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp; if flag[j]=i then write(j,' ');</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp; writeln;</span><br /><br />
+<span style="font-size:18px;"> &nbsp; end;</span><br />
+</p><br />
+<p><br />
+	<span style="font-size:18px;">end.</span><br />
+</p><br />
+<p><br />
+	<strong><u><span style="font-size:18px;">Tarjan</span></u></strong><strong><u><span style="font-size:18px;">算法</span></u></strong><br /><br />
+<span style="font-size:18px;"> Tarjan算法只要一遍DFS，效率高于Kosaraju。它在技术上有了很大改进。它基于的思想是：强连通分量是DFS树中的子树（无论你如何进行DFS）。</span><br /><br />
+<span style="font-size:18px;"> Tarjan算法的过程是：</span><br /><br />
+<span style="font-size:18px;"> ①在DFS树中，设low[x]是x或x的后代能够达到的最高的祖先。初始化时low[x]设为x。</span><br /><br />
+<span style="font-size:18px;"> ②进行DFS，在结束节点x时计算low[x]。计算的方法是：找出x能够到达的所有节点i，应保证low[i]是x的祖先，即low[i]是灰点。low[x]=highest(low[i])，即d[low[i]]最小。</span><br /><br />
+<span style="font-size:18px;"> ③若low[x]=x，则以x为根的子树就是一个强连通分量，输出并将其从树中删去。</span><br /><br />
+<span style="font-size:18px;"> 比如上图（又是上图。。没办法，图片空间有限制），我们依次得出：</span><br /><br />
+<span style="font-size:18px;"> low[4]=low[2]=2</span><br /><br />
+<span style="font-size:18px;"> low[2]=low[4]=2&nbsp;&nbsp; //{4,2}为强连通分量</span><br /><br />
+<span style="font-size:18px;"> low[5]=low[3]=3</span><br /><br />
+<span style="font-size:18px;"> low[7]=low[5]=3</span><br /><br />
+<span style="font-size:18px;"> low[6]=low[7]=3</span><br /><br />
+<span style="font-size:18px;"> low[3]=low[6]=3&nbsp;&nbsp; //{5,7,6,3}为强连通分量</span><br /><br />
+<span style="font-size:18px;"> low[1]=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //{1}为强连通分量</span><br /><br />
+<span style="font-size:18px;"> 在实际编写中，我利用了不断输出，发现强连通分量换行的技术，使程序更加简单。</span><br /><br />
+<span style="font-size:18px;"> 程序：</span><br /><br />
+<span style="font-size:18px;"> var a,kl:array[1..1000,1..1000]of longint;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp; d,f,low:array[1..1000]of longint;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp; i,j,n,time:longint;</span><br />
+</p><br />
+<p><br />
+	<span style="font-size:18px;">procedure<br />
+dfs(x:longint);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;var i:longint;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;begin</span><br /><br />
+<span style="font-size:18px;"> &nbsp; inc(time);</span><br /><br />
+<span style="font-size:18px;"> &nbsp; d[x]:=time;</span><br /><br />
+<span style="font-size:18px;"> &nbsp; for i:=1 to n do</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp; if a[x,i]&gt;0 then</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp; begin</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp;&nbsp; if d[i]=0 then</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; kl[x,i]:=1;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dfs(i);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp;&nbsp; if (d[i]&gt;0)and(f[i]=0) then kl[x,i]:=2;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp;&nbsp; if f[i]&gt;0 then</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if d[x]&gt;d[i] then kl[x,i]:=3 else<br />
+kl[x,i]:=4;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp; end;</span><br /><br />
+<span style="font-size:18px;"> &nbsp; inc(time);</span><br /><br />
+<span style="font-size:18px;"> &nbsp; f[x]:=time;</span><br /><br />
+<span style="font-size:18px;"> &nbsp; write(x,' ');</span><br /><br />
+<span style="font-size:18px;"> &nbsp; for i:=1 to n do</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp; if a[x,i]&gt;0 then</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp; if (f[low[i]]=0)and(d[low[i]]&lt;d[low[x]]) then</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp;&nbsp; low[x]:=low[i];</span><br /><br />
+<span style="font-size:18px;"> &nbsp; if low[x]=x then writeln;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;end;</span><br />
+</p><br />
+<p><br />
+	<span style="font-size:18px;">begin</span><br />
+</p><br />
+<p><br />
+	<span style="font-size:18px;">&nbsp;readln(n);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;for i:=1 to n do</span><br /><br />
+<span style="font-size:18px;"> &nbsp; begin</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp; for j:=1 to n do read(a[i,j]);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;&nbsp; readln;</span><br /><br />
+<span style="font-size:18px;"> &nbsp; end;</span><br />
+</p><br />
+<p><br />
+	<span style="font-size:18px;">&nbsp;fillchar(d,sizeof(d),0);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;fillchar(d,sizeof(d),0);</span><br /><br />
+<span style="font-size:18px;"> &nbsp;for i:=1 to n do low[i]:=i;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;time:=0;</span><br /><br />
+<span style="font-size:18px;"> &nbsp;for i:=1 to n do</span><br /><br />
+<span style="font-size:18px;"> &nbsp; if d[i]=0 then dfs(i);</span><br />
+</p><br />
+<p><br />
+	<span style="font-size:18px;">end.</span><br />
+</p></p></div><h2>Source</h2><div class=content><p><a href='problemset.php?search=%E6%A8%A1%E6%8B%9F%E8%B5%9B-2014%E6%9A%91%E6%9C%9F%E8%AE%AD%E7%BB%83'>模拟赛-2014暑期训练</a>&nbsp;</p></div><center><!--EndMarkForVirtualJudge-->[<a href='submitpage.php?id=5459'>Submit</a>][<a href='problemstatus.php?id=5459'>Status</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.hustoj.com/template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.hustoj.com/template/bs3/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<div style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p style=\"text-align:center;\">\r\n\t<span style=\"color:#24292E;font-family:-apple-system&#44; bl<x>inkMacSystemFont&#44; &quot;font-size:16px;background-color:#FFFFFF;\">\u5e86\u795dhustoj\u5728\u9996\u5c4a\u6df1\u5ea6\u8f6f\u4ef6\u5f00\u53d1\u5927\u8d5b\u4e2d\u83b7\u5f97\u4e09\u7b49\u5956\uff0c\u5145\u503c100\u900120\u3002<\/span>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u672c\u7cfb\u7edf\u652f\u6301\u4e24\u79cd\u683c\u5f0f\u6570\u636e\u4e0b\u8f7d\uff0cfps\/xm<x>l\u683c\u5f0f\u542b\u9898\u9762\u56fe\u7247\u6570\u636e\u6807\u7a0b\u652f\u6301hustoj\u7cfb\u7edf\u76f4\u63a5\u5bfc\u5165\uff0czip\u683c\u5f0f\u4ec5\u542b\u6570\u636e\u4e0d\u542b\u9898\u9762\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u91cd\u590d\u4e0b\u8f7d\u4e0d\u91cd\u590d\u8ba1\u8d39\u3002\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u5982\u9047\u5145\u503c\u4e0d\u80fd\u5230\u8d26&#44;\u8bf7\u8054\u7cfbQQ:10982766\u63d0\u4f9b\u7528\u6237\u540d\u548c\u652f\u4ed8\u5355\u53f7\u8fdb\u884c\u6838\u5bf9\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t\u7ecf\u8d39\u4e0d\u8db3\u7684\u8001\u5e08\u540c\u5b66\u8bf7\u5148\u770b <br \/>\r\n<span class=\"btn-success\"> <a href=\"problemset.php?search=free\"><span> \u514d\u8d39\u4e13\u533a<\/span><\/a> <\/span>\r\n<br \/>"+"</div>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	
+<script>
+function phpfm(pid){
+        //alert(pid);
+        $.post("admin/phpfm.php",{'frame':3,'pid':pid,'pass':''},function(data,status){
+                if(status=="success"){
+                        document.location.href="admin/phpfm.php?frame=3&pid="+pid;
+                }
+        });
+}
+$(document).ready(function(){
+	$("#creator").load("problem-ajax.php?pid=5459");
+});
+</script>	  
+  </body>
+</html>
+<!--not cached-->
