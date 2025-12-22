@@ -248,6 +248,30 @@ def plot_model_f1_compare(metrics: pd.DataFrame, out_dir: Path) -> None:
     plt.close()
 
 
+def plot_model_metrics_compare(metrics: pd.DataFrame, out_dir: Path) -> None:
+    """将 Accuracy/Precision/Recall/F1 画在一张对比图里。"""
+    out_dir.mkdir(parents=True, exist_ok=True)
+    fig, axes = plt.subplots(2, 2, figsize=(10, 8))
+    metrics_map = [
+        ("accuracy", "Accuracy"),
+        ("precision", "Precision"),
+        ("recall", "Recall"),
+        ("f1", "F1"),
+    ]
+
+    for ax, (col, label) in zip(axes.ravel(), metrics_map):
+        ax.bar(metrics["model"], metrics[col])
+        ax.set_title(label)
+        ax.set_ylim(0, 1)
+        ax.set_xlabel("模型")
+        ax.set_ylabel(label)
+
+    fig.suptitle("模型指标对比（时间切分）")
+    plt.tight_layout()
+    fig.savefig(out_dir / "fig_模型指标对比.png", dpi=200)
+    plt.close(fig)
+
+
 def main() -> None:
     # 1) 读取训练样本
     X, y, submission_id, feature_cols = load_train_samples(DATA)
@@ -275,6 +299,7 @@ def main() -> None:
     # 5) 产出可视化：混淆矩阵 + F1 对比图
     plot_confusion_matrices(models=models, X_test=X_test, y_test=y_test, out_dir=OUT_DIR)
     plot_model_f1_compare(metrics=metrics, out_dir=OUT_DIR)
+    plot_model_metrics_compare(metrics=metrics, out_dir=OUT_DIR)
 
 
 if __name__ == "__main__":
