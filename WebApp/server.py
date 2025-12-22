@@ -8,7 +8,7 @@ import os
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs, unquote, urlparse
 
 os.environ.setdefault("XDG_CACHE_HOME", str(Path(".cache").resolve()))
 os.environ.setdefault("MPLCONFIGDIR", str(Path(".cache/matplotlib").resolve()))
@@ -1324,6 +1324,20 @@ FIG_INFO: dict[str, dict[str, object]] = {
             "柱越高表示在测试窗口更稳定；差距很小通常说明特征决定了上限。",
         ],
     },
+    "fig_模型指标对比.png": {
+        "title": "模型指标对比（多维度评估）",
+        "name": "模型指标对比",
+        "section": "B",
+        "tags": ["模型评估", "指标对比"],
+        "summary": "从多个指标维度对比模型优劣，避免只看单一 F1 导致误判。",
+        "how": [
+            "常见指标包括 Accuracy / Precision / Recall / F1 / AUC 等（以图中实际指标为准）。",
+            "某模型可能 F1 高但 Recall 低，说明更“保守”；反之更“激进”。",
+        ],
+        "tips": [
+            "指标差距很小往往是特征上限问题，可考虑加入更有效的用户/题目特征。",
+        ],
+    },
     # C. 推荐评估
     "fig_命中率曲线.png": {
         "title": "Hit@K 对比曲线（多策略）",
@@ -1923,7 +1937,7 @@ refresh();
 
         # Serve Images
         if p.path.startswith("/reports/"):
-            rel = p.path.removeprefix("/reports/").lstrip("/")
+            rel = unquote(p.path.removeprefix("/reports/").lstrip("/"))
             rel_path = Path(rel)
             if rel_path.is_absolute() or ".." in rel_path.parts or rel_path.suffix.lower() != ".png":
                 self._send(404, b"not found", "text/plain; charset=utf-8")
